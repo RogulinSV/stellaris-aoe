@@ -1,0 +1,20 @@
+music = {
+    name = "Clemens Christian Poetzsch - Rufe"
+    file = "stellaris_01_clemens_christian_poetzsch_rufe.ogg"
+    volume = 0.50
+}
+music = {
+    name = "Clemens Christian Poetzsch - Echos"
+    file = "stellaris_02_clemens_christian_poetzsch_echos.ogg"
+    volume = 0.50
+}
+music = {
+    name = "Hans Zimmer - The Docking Scene"
+    file = "stellaris_03_hans_zimmer_the_docking_scene.ogg"
+    volume = 0.50
+}
+music = {
+    name = "Hans Zimmer - Time"
+    file = "stellaris_04_hans_zimmer_the_docking_time.ogg"
+    volume = 0.50
+}

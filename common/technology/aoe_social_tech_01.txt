@@ -1,0 +1,307 @@
+tech_advanced_terraforming = {
+    cost = @technology_low_cost
+    area = society
+    tier = 2
+    category = { new_worlds }
+    prerequisites = {
+        "tech_colonization_2"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_advanced_terraforming_title"
+            desc = "tech_advanced_terraforming_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            is_machine_empire = no
+            has_civic = civic_machine_assimilator
+            has_civic = civic_machine_servitor
+        }
+        OR = {
+            has_country_flag = flags_aoe_science_ascension
+            has_global_flag = flags_aoe_science_ascension
+        }
+    }
+
+    modifier = {
+        pop_environment_tolerance = 0.05
+        planet_colony_development_speed_mult = 0.10
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_colonization_fever"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 3
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_colonization_fever"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 3
+        }
+    }
+}
+
+tech_supreme_terraforming = {
+    cost = @technology_medium_cost
+    area = society
+    tier = 3
+    category = { new_worlds }
+    prerequisites = {
+        "tech_advanced_terraforming"
+        "tech_colonization_3"
+    }
+    weight = @tier3weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_supreme_terraforming_title"
+            desc = "tech_supreme_terraforming_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            is_machine_empire = no
+            has_civic = civic_machine_assimilator
+            has_civic = civic_machine_servitor
+        }
+        OR = {
+            has_country_flag = flags_aoe_science_ascension
+            has_global_flag = flags_aoe_science_ascension
+        }
+    }
+
+    modifier = {
+        pop_environment_tolerance = 0.10
+        planet_colony_development_speed_mult = 0.20
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_a_new_life"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 4
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_a_new_life"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 4
+        }
+    }
+}
+
+tech_transcendence_terraforming = {
+    cost = @technology_high_cost
+    area = society
+    tier = 4
+    category = { new_worlds }
+    prerequisites = {
+        "tech_supreme_terraforming"
+        "tech_colonization_4"
+    }
+    weight = @tier4weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_transcendence_terraforming_title"
+            desc = "tech_transcendence_terraforming_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            is_machine_empire = no
+            has_civic = civic_machine_assimilator
+            has_civic = civic_machine_servitor
+        }
+        OR = {
+            has_country_flag = flags_aoe_science_ascension
+            has_global_flag = flags_aoe_science_ascension
+        }
+    }
+
+    modifier = {
+        pop_environment_tolerance = 0.15
+        planet_colony_development_speed_mult = 0.30
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 1.10
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 5
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_mastery_of_nature"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 5
+        }
+    }
+}
+
+tech_cleaning_molten_rock = {
+    cost = @technology_ultralow_cost
+    area = society
+    tier = 2
+    category = { new_worlds }
+    prerequisites = {
+        "tech_colonization_1"
+    }
+    weight = @tier2weight2
+
+    weight_groups = {
+        deposit_blockers
+    }
+    mod_weight_if_group_picked = {
+        deposit_blockers = 0.5
+    }
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_cleaning_molten_rock_title"
+            desc = "tech_cleaning_molten_rock_desc"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 2
+            has_technology = "tech_advanced_terraforming"
+        }
+        modifier = {
+            factor = 2
+            has_technology = "tech_supreme_terraforming"
+        }
+        modifier = {
+            factor = 2
+            has_technology = "tech_transcendence_terraforming"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_expansion_adopt"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_expansion_colonization_fever"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_expansion_a_new_life"
+        }
+        modifier = {
+            factor = 4
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = "d_melted_streams"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 1
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = "d_melted_streams"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+    }
+}

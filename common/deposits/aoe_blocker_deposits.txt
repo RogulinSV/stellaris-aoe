@@ -1,0 +1,730 @@
+d_melted_streams = {
+    icon = d_melted_streams
+    time = 400
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    blocker_swap_types = {
+        d_fertile_lands
+        d_great_river
+    }
+
+    potential = {
+        planet_size >= 10
+        is_dry = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 500
+            minerals = 300
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_terraforming"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 200
+                        minerals = 300
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_terraforming"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 300
+                        minerals = 450
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_terraforming"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 400
+                        minerals = 600
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_medium_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_desert
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_cleaning_molten_rock"
+    }
+}
+
+d_melted_rivers = {
+    icon = d_melted_rivers
+    time = 600
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        is_dry = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 750
+            minerals = 500
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_terraforming"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 200
+                        minerals = 300
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_terraforming"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 300
+                        minerals = 600
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_terraforming"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 400
+                        minerals = 900
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_desert
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_cleaning_molten_rock"
+    }
+}
+
+d_magmatic_lakes = {
+    icon = d_magmatic_lakes
+    time = 900
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        is_dry = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 900
+            minerals = 700
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_terraforming"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 200
+                        minerals = 400
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_terraforming"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 300
+                        minerals = 800
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_terraforming"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 400
+                        minerals = 1200
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_savannah
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_cleaning_molten_rock"
+    }
+}
+
+d_impassable_woods = {
+    icon = d_impassable_woods
+    time = 500
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_wet = yes
+            is_planet_class = pc_gaia
+        }
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 500
+            minerals = 300
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    drop_weight = {
+        weight = @blocker_medium_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_tropical
+        }
+        modifier = {
+            factor = 1.5
+            is_planet_class = pc_continental
+        }
+        modifier = {
+            factor = 1.25
+            is_planet_class = pc_gaia
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = { "tech_dense_jungle" }
+}
+
+d_electrostatic_maelstroms = {
+    icon = d_electrostatic_maelstroms
+    time = 1000
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        is_wet = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 1300
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_ocean
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    # prerequisites = { "tech_dense_jungle" }
+}
+
+d_sandy_marshes = {
+    icon = d_sandy_marshes
+    time = 1000
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        is_dry = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 1000
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_desert
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    # prerequisites = { "tech_dense_jungle" }
+}
+
+d_arachnid_colonies = {
+    icon = d_arachnid_colonies
+    time = 1000
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_planet_class = pc_continental
+            is_planet_class = pc_tropical
+            is_planet_class = pc_gaia
+        }
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 1100
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_tropical
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    # prerequisites = { "tech_dense_jungle" }
+}
+
+d_slug_colonies = {
+    icon = d_slug_colonies
+    time = 1000
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_planet_class = pc_continental
+            is_planet_class = pc_ocean
+            is_planet_class = pc_tropical
+            is_planet_class = pc_gaia
+        }
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 750
+            minerals = 750
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_tropical
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    # prerequisites = { "tech_dense_jungle" }
+}
+
+d_daedra_colonies = {
+    icon = d_daedra_colonies
+    time = 1000
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_wet = yes
+            is_planet_class = pc_alpine
+            is_planet_class = pc_gaia
+        }
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 1500
+            minerals = 500
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_tropical
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_alpine
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    # prerequisites = { "tech_dense_jungle" }
+}
+
+d_water_worms = {
+    icon = d_water_worms
+    time = 1000
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_wet = yes
+            is_cold = yes
+            is_planet_class = pc_gaia
+        }
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 1000
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_ocean
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    # prerequisites = { "tech_dense_jungle" }
+}
+
+d_sand_worms = {
+    icon = d_sand_worms
+    time = 1000
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        is_dry = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 1000
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_desert
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    # prerequisites = { "tech_dense_jungle" }
+}
+
+d_frozen_gas_geysers = {
+    icon = d_frozen_gas_geysers
+    time = 1000
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        is_cold = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 1500
+            minerals = 500
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_arctic
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    # prerequisites = { "tech_dense_jungle" }
+}

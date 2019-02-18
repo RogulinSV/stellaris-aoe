@@ -1,0 +1,210 @@
+namespace = aoe_begin_actions
+
+country_event = {
+    id = aoe_begin_actions.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        solar_system = {
+            has_star_flag = flags_aoe_homeworld
+        }
+    }
+
+    immediate = {
+        solar_system = {
+            set_name = "NAME_Anthem_Of_Eternity_System_A"
+        }
+        capital_scope = {
+            set_name = "NAME_Anthem_Of_Eternity_Planet_A3"
+        }
+
+        country_event = {
+            id = aoe_begin_actions.10
+            days = 2
+        }
+    }
+}
+
+country_event = {
+    id = aoe_begin_actions.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+    }
+
+    immediate = {
+        country_event = {
+            id = aoe_begin_actions.11
+            days = 3
+        }
+        country_event = {
+            id = aoe_begin_actions.12
+            days = 4
+        }
+        country_event = {
+            id = aoe_begin_actions.13
+            days = 5
+        }
+    }
+}
+
+country_event = {
+    id = aoe_begin_actions.10
+    title = aoe_begin_actions.10.title
+    desc = aoe_begin_actions.10.desc
+    picture = GFX_aoe_actions_initializer
+    show_sound = event_sensor_ping
+    hide_window = no
+    is_triggered_only = yes
+
+    trigger = {
+        # has_global_flag = planetarydiversity
+    }
+
+    option = {
+        name = aoe_begin_actions.10.a
+        custom_tooltip = aoe_begin_actions.10.a.tooltip
+        hidden_effect = {
+            solar_system = {
+                spawn_system = {
+                    min_distance >= 20
+                    max_distance <= 50
+                    initializer = "anthem_of_eternity_neighbor_a"
+                }
+                spawn_system = {
+                    min_distance >= 30
+                    max_distance <= 50
+                    initializer = "anthem_of_eternity_neighbor_b"
+                }
+                spawn_system = {
+                    min_distance >= 30
+                    max_distance <= 50
+                    initializer = "anthem_of_eternity_neighbor_c"
+                }
+                spawn_system = {
+                    min_distance >= 40
+                    max_distance <= 60
+                    initializer = "anthem_of_eternity_neighbor_d"
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_begin_actions.11
+    title = aoe_begin_actions.11.title
+    desc = aoe_begin_actions.11.desc
+    picture = GFX_aoe_actions_economic_ascension
+    show_sound = event_administrative_work
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = aoe_begin_actions.11.a
+        custom_tooltip = aoe_begin_actions.11.a.tooltip
+        add_resource = {
+            minerals = 2000
+            energy = 2000
+            food = 1000
+            influence = 1000
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = pc_gaia
+                effects_set_planet_size_50 = yes
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_begin_actions.12
+    title = aoe_begin_actions.12.title
+    desc = aoe_begin_actions.12.desc
+    picture = GFX_aoe_actions_military_ascension
+    show_sound = event_ship_thrusters
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = aoe_begin_actions.12.a
+        custom_tooltip = aoe_begin_actions.12.a.tooltip
+        hidden_effect = {
+            create_leader = {
+                class = admiral
+                species = owner_main_species
+                name = random
+                skill = 3
+                leader_age_min = 25
+                leader_age_max = 45
+                traits = {
+                    trait = leader_trait_mercenary_warrior
+                    trait = random_trait
+                }
+            }
+            create_fleet = {
+                effect = {
+                    set_owner = root
+                    while = {
+                        count = 17
+                        create_ship = {
+                            name = random
+                            random_existing_design = corvette
+                            graphical_culture = root
+                        }
+                    }
+                    assign_leader = last_created_leader
+                    set_location = {
+                        target = root.capital_scope
+                        distance = 45
+                        angle = random
+                    }
+                }
+                settings = {
+                    uses_naval_capacity = yes
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_begin_actions.13
+    title = aoe_begin_actions.13.title
+    desc = aoe_begin_actions.13.desc
+    picture = GFX_aoe_actions_science_ascension
+    show_sound = event_laboratory_sound
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = aoe_begin_actions.13.a
+        custom_tooltip = aoe_begin_actions.13.a.tooltip
+        hidden_effect = {
+            set_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+    option = {
+        name = aoe_begin_actions.13.b
+        custom_tooltip = aoe_begin_actions.13.b.tooltip
+        hidden_effect = {
+            set_country_flag = "flags_aoe_science_ascension"
+        }
+    }
+    option = {
+        name = aoe_begin_actions.decline
+    }
+}

@@ -1,0 +1,26 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_aoe_actions_initializer"
+        texturefile = "gfx/event_pictures/actions_initializer.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_actions_economic_ascension"
+        texturefile = "gfx/event_pictures/actions_economic_ascension.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_actions_military_ascension"
+        texturefile = "gfx/event_pictures/actions_military_ascension.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_actions_science_ascension"
+        texturefile = "gfx/event_pictures/actions_science_ascension.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+}

@@ -1,0 +1,497 @@
+effects_add_rich_resources_star = {
+    clear_deposits = yes
+
+    random_list = {
+        10 = {
+            add_deposit = d_energy_100
+        }
+        25 = {
+            add_deposit = d_energy_50
+            add_deposit = d_zro_deposit_3
+            add_deposit = d_dark_matter_deposit_1
+        }
+        75 = {
+            add_deposit = d_alloys_10
+            add_deposit = d_energy_25
+            add_deposit = d_unity_10
+            add_deposit = d_dark_matter_deposit_3
+            add_deposit = d_living_metal_deposit
+        }
+    }
+}
+
+effects_add_rich_resources_black_hole = {
+    clear_deposits = yes
+
+    add_deposit = d_alloys_10
+    add_deposit = d_energy_25
+    add_deposit = d_unity_10
+    add_deposit = d_dark_matter_deposit_3
+    add_deposit = d_living_metal_deposit
+}
+
+effects_add_rich_resources_asteroid = {
+    clear_deposits = yes
+
+    random_list = {
+        10 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_5
+        }
+        10 = {
+            add_deposit = d_energy_5
+            add_deposit = d_minerals_10
+        }
+        10 = {
+            add_deposit = d_energy_10
+            add_deposit = d_physics_5
+        }
+        10 = {
+            add_deposit = d_minerals_10
+            add_deposit = d_physics_5
+        }
+        10 = {
+            add_deposit = d_minerals_5
+            add_deposit = d_energy_5
+            add_deposit = d_physics_10
+        }
+        10 = {
+            add_deposit = d_energy_10
+            add_deposit = d_engineering_5
+        }
+        10 = {
+            add_deposit = d_minerals_10
+            add_deposit = d_engineering_5
+        }
+        10 = {
+            add_deposit = d_minerals_5
+            add_deposit = d_energy_5
+            add_deposit = d_engineering_10
+        }
+        10 = {
+            add_deposit = d_physics_5
+            add_deposit = d_engineering_5
+            add_deposit = d_alloys_5
+        }
+        5 = {
+            add_deposit = d_alloys_10
+        }
+        5 = {
+            add_deposit = d_null_deposit
+        }
+    }
+}
+
+effects_add_rich_resources_ice_asteroid = {
+    clear_deposits = yes
+
+    random_list = {
+        10 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_5
+        }
+        10 = {
+            add_deposit = d_energy_5
+            add_deposit = d_minerals_10
+        }
+        10 = {
+            add_deposit = d_energy_10
+            add_deposit = d_physics_5
+        }
+        10 = {
+            add_deposit = d_minerals_10
+            add_deposit = d_physics_5
+        }
+        10 = {
+            add_deposit = d_minerals_5
+            add_deposit = d_energy_5
+            add_deposit = d_physics_10
+        }
+        10 = {
+            add_deposit = d_energy_10
+            add_deposit = d_engineering_5
+        }
+        10 = {
+            add_deposit = d_minerals_10
+            add_deposit = d_engineering_5
+        }
+        10 = {
+            add_deposit = d_minerals_5
+            add_deposit = d_energy_5
+            add_deposit = d_engineering_10
+        }
+        10 = {
+            add_deposit = d_physics_5
+            add_deposit = d_engineering_5
+            add_deposit = d_alloys_5
+        }
+        5 = {
+            add_deposit = d_alloys_10
+        }
+        5 = {
+            add_deposit = d_null_deposit
+        }
+    }
+}
+
+effects_add_rich_resources_molten_planet = {
+    clear_deposits = yes
+
+    random_list = {
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+        }
+        20 = {
+            add_deposit = d_energy_5
+            add_deposit = d_minerals_5
+            add_deposit = d_alloys_5
+        }
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+            add_deposit = d_physics_10
+        }
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+            add_deposit = d_engineering_10
+        }
+        5 = {
+            add_deposit = d_energy_5
+            add_deposit = d_minerals_10
+            add_deposit = d_volatile_motes_5
+        }
+        5 = {
+            add_deposit = d_minerals_20
+            add_deposit = d_volatile_motes_5
+        }
+        5 = {
+            add_deposit = d_energy_5
+            add_deposit = d_minerals_25
+            add_deposit = d_volatile_motes_5
+        }
+        5 = {
+            add_deposit = d_minerals_5
+            add_deposit = d_unity_5
+            add_deposit = d_volatile_motes_5
+        }
+    }
+}
+
+effects_add_rich_resources_barren_planet = {
+    clear_deposits = yes
+
+    random_list = {
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+        }
+        20 = {
+            add_deposit = d_energy_5
+            add_deposit = d_minerals_5
+            add_deposit = d_alloys_5
+        }
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+            add_deposit = d_physics_10
+        }
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+            add_deposit = d_engineering_10
+        }
+        5 = {
+            add_deposit = d_energy_5
+            add_deposit = d_minerals_10
+            add_deposit = d_volatile_motes_5
+        }
+        5 = {
+            add_deposit = d_minerals_20
+            add_deposit = d_volatile_motes_5
+        }
+        5 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_25
+            add_deposit = d_volatile_motes_5
+        }
+        5 = {
+            add_deposit = d_minerals_10
+            add_deposit = d_unity_5
+            add_deposit = d_volatile_motes_5
+        }
+    }
+}
+
+effects_add_rich_resources_barren_cold_planet = {
+    clear_deposits = yes
+
+    random_list = {
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+        }
+        20 = {
+            add_deposit = d_energy_5
+            add_deposit = d_minerals_5
+            add_deposit = d_alloys_5
+        }
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+            add_deposit = d_physics_10
+        }
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+            add_deposit = d_engineering_10
+        }
+        5 = {
+            add_deposit = d_energy_10
+            add_deposit = d_volatile_motes_5
+        }
+        5 = {
+            add_deposit = d_minerals_10
+            add_deposit = d_volatile_motes_5
+        }
+        5 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+            add_deposit = d_volatile_motes_5
+        }
+        5 = {
+            add_deposit = d_minerals_10
+            add_deposit = d_unity_5
+            add_deposit = d_volatile_motes_5
+        }
+    }
+}
+
+# Habitable planets
+effects_add_rich_resources_habitable_planet = {
+    switch = {
+        trigger = planet_size
+        50 > {
+            set_variable = {
+                which = get_planet_deposits_count
+                value = 47
+            }
+        }
+        45 > {
+            set_variable = {
+                which = get_planet_deposits_count
+                value = 42
+            }
+        }
+        40 > {
+            set_variable = {
+                which = get_planet_deposits_count
+                value = 37
+            }
+        }
+        35 > {
+            set_variable = {
+                which = get_planet_deposits_count
+                value = 32
+            }
+        }
+        30 > {
+            set_variable = {
+                which = get_planet_deposits_count
+                value = 27
+            }
+        }
+        25 > {
+            set_variable = {
+                which = get_planet_deposits_count
+                value = 22
+            }
+        }
+        20 > {
+            set_variable = {
+                which = get_planet_deposits_count
+                value = 17
+            }
+        }
+        15 > {
+            set_variable = {
+                which = get_planet_deposits_count
+                value = 12
+            }
+        }
+        10 > {
+            set_variable = {
+                which = get_planet_deposits_count
+                value = 7
+            }
+        }
+        0 > {
+            set_variable = {
+                which = get_planet_deposits_count
+                value = 0
+            }
+        }
+    }
+
+    while = {
+        limit = {
+            check_variable = {
+                which = get_planet_deposits_count
+                value > 0
+            }
+        }
+
+        effects_add_planet_deposit = yes
+
+        change_variable = {
+            which = get_planet_deposits_count
+            value = -1
+        }
+    }
+}
+
+effects_add_rich_resources_desert_planet = {
+    clear_deposits = yes
+    effects_add_rich_resources_habitable_planet = yes
+}
+
+effects_add_rich_resources_arid_planet = {
+    clear_deposits = yes
+    effects_add_rich_resources_habitable_planet = yes
+}
+
+effects_add_rich_resources_savannah_planet = {
+    clear_deposits = yes
+    effects_add_rich_resources_habitable_planet = yes
+}
+
+effects_add_rich_resources_tropical_planet = {
+    clear_deposits = yes
+    effects_add_rich_resources_habitable_planet = yes
+}
+
+effects_add_rich_resources_continental_planet = {
+    clear_deposits = yes
+    effects_add_rich_resources_habitable_planet = yes
+}
+
+effects_add_rich_resources_gaia_planet = {
+    clear_deposits = yes
+    effects_add_rich_resources_habitable_planet = yes
+}
+
+effects_add_rich_resources_alpine_planet = {
+    clear_deposits = yes
+    effects_add_rich_resources_habitable_planet = yes
+}
+
+effects_add_rich_resources_tundra_planet = {
+    clear_deposits = yes
+    effects_add_rich_resources_habitable_planet = yes
+}
+
+effects_add_rich_resources_arctic_planet = {
+    clear_deposits = yes
+    effects_add_rich_resources_habitable_planet = yes
+}
+
+effects_add_rich_resources_ocean_planet = {
+    clear_deposits = yes
+    effects_add_rich_resources_habitable_planet = yes
+}
+
+# Inhabitable planets
+effects_add_rich_resources_gas_giant = {
+    clear_deposits = yes
+
+    random_list = {
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_volatile_motes_5
+        }
+        20 = {
+            add_deposit = d_minerals_10
+            add_deposit = d_volatile_motes_5
+        }
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+            add_deposit = d_volatile_motes_5
+        }
+        20 = {
+            add_deposit = d_unity_5
+            add_deposit = d_volatile_motes_5
+        }
+        20 = {
+            add_deposit = d_volatile_motes_10
+            add_deposit = d_exotic_gases_10
+        }
+    }
+}
+
+effects_add_rich_resources_toxic_planet = {
+    clear_deposits = yes
+
+    random_list = {
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_volatile_motes_5
+            add_deposit = d_trade_value_10
+        }
+        20 = {
+            add_deposit = d_minerals_10
+            add_deposit = d_volatile_motes_5
+            add_deposit = d_trade_value_10
+        }
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+            add_deposit = d_volatile_motes_5
+            add_deposit = d_trade_value_5
+        }
+        20 = {
+            add_deposit = d_unity_5
+            add_deposit = d_volatile_motes_10
+            add_deposit = d_trade_value_10
+        }
+        20 = {
+            add_deposit = d_volatile_motes_5
+            add_deposit = d_trade_value_15
+            add_deposit = d_exotic_gases_15
+        }
+    }
+}
+
+effects_add_rich_resources_frozen_planet = {
+    clear_deposits = yes
+
+    random_list = {
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_volatile_motes_5
+            add_deposit = d_trade_value_10
+        }
+        20 = {
+            add_deposit = d_minerals_10
+            add_deposit = d_volatile_motes_5
+            add_deposit = d_trade_value_10
+        }
+        20 = {
+            add_deposit = d_energy_10
+            add_deposit = d_minerals_10
+            add_deposit = d_volatile_motes_5
+            add_deposit = d_trade_value_5
+        }
+        20 = {
+            add_deposit = d_unity_5
+            add_deposit = d_volatile_motes_10
+            add_deposit = d_trade_value_10
+        }
+        20 = {
+            add_deposit = d_volatile_motes_5
+            add_deposit = d_trade_value_15
+            add_deposit = d_exotic_gases_15
+        }
+    }
+}

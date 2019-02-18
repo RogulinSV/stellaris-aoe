@@ -1,0 +1,8 @@
+on_press_begin = {
+    events = {
+        # Solar System Event
+        aoe_begin_actions.1
+        # Economic and Military Event
+        aoe_begin_actions.2
+    }
+}

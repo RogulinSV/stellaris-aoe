@@ -1,0 +1,9 @@
+@blocker_low_drop_weight = 3
+@blocker_medium_drop_weight = 5
+@blocker_high_drop_weight = 8
+
+@technology_ultralow_cost = 2000
+@technology_low_cost = 5000
+@technology_medium_cost = 10000
+@technology_high_cost = 25000
+@technology_ultrahigh_cost = 50000

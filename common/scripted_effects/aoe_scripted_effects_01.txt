@@ -1,0 +1,707 @@
+# Scope: planet
+effects_add_planet_blocker = {
+    # City District blockers
+    if = {
+        limit = {
+            num_free_districts = {
+                type = district_city
+                value > 2
+            }
+        }
+
+        switch = {
+            trigger = is_planet_class
+            pc_arid = {
+                random_list = {
+                    10 = {
+                        add_deposit = d_sandy_marshes
+                    }
+                    10 = {
+                        add_deposit = d_melted_streams
+                    }
+                    10 = {
+                        add_deposit = d_melted_rivers
+                    }
+                    10 = {
+                        add_deposit = d_magmatic_lakes
+                    }
+                    10 = {
+                        add_deposit = d_sand_worms
+                    }
+                    5 = {
+                        add_deposit = d_quicksand_basin
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_mountain_range
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_active_volcano
+                    }
+                    1 = {
+                        add_deposit = d_sinkhole_subterraneans
+                    }
+                }
+            }
+            pc_desert = {
+                random_list = {
+                    10 = {
+                        add_deposit = d_sandy_marshes
+                    }
+                    10 = {
+                        add_deposit = d_melted_streams
+                    }
+                    10 = {
+                        add_deposit = d_melted_rivers
+                    }
+                    10 = {
+                        add_deposit = d_magmatic_lakes
+                    }
+                    10 = {
+                        add_deposit = d_sand_worms
+                    }
+                    5 = {
+                        add_deposit = d_deep_sinkhole
+                    }
+                    5 = {
+                        add_deposit = d_quicksand_basin
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_mountain_range
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_active_volcano
+                    }
+                    1 = {
+                        add_deposit = d_sinkhole_subterraneans
+                    }
+                }
+            }
+            pc_savannah = {
+                random_list = {
+                    10 = {
+                        add_deposit = d_melted_streams
+                    }
+                    10 = {
+                        add_deposit = d_magmatic_lakes
+                    }
+                    10 = {
+                        add_deposit = d_sand_worms
+                    }
+                    5 = {
+                        add_deposit = d_deep_sinkhole
+                    }
+                    5 = {
+                        add_deposit = d_quicksand_basin
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_mountain_range
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_active_volcano
+                    }
+                    1 = {
+                        add_deposit = d_sinkhole_subterraneans
+                    }
+                }
+            }
+            pc_ocean = {
+                random_list = {
+                    10 = {
+                        add_deposit = d_electrostatic_maelstroms
+                    }
+                    10 = {
+                        add_deposit = d_slug_colonies
+                    }
+                    10 = {
+                        add_deposit = d_water_worms
+                    }
+                    10 = {
+                        add_deposit = d_daedra_colonies
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_mountain_range
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_active_volcano
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_dangerous_wildlife_blocker
+                    }
+                    5 = {
+                        add_deposit = d_toxic_kelp
+                    }
+                }
+            }
+            pc_continental = {
+                random_list = {
+                    10 = {
+                        add_deposit = d_impassable_woods
+                    }
+                    10 = {
+                        add_deposit = d_slug_colonies
+                    }
+                    10 = {
+                        add_deposit = d_arachnid_colonies
+                    }
+                    10 = {
+                        add_deposit = d_water_worms
+                    }
+                    10 = {
+                        add_deposit = d_daedra_colonies
+                    }
+                    5 = {
+                        add_deposit = d_dense_jungle
+                    }
+                    5 = {
+                        add_deposit = d_toxic_kelp
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_mountain_range
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_active_volcano
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_dangerous_wildlife_blocker
+                    }
+                    1 = {
+                        add_deposit = d_wandering_forests
+                    }
+                }
+            }
+            pc_tropical = {
+                random_list = {
+                    10 = {
+                        add_deposit = d_impassable_woods
+                    }
+                    10 = {
+                        add_deposit = d_slug_colonies
+                    }
+                    10 = {
+                        add_deposit = d_arachnid_colonies
+                    }
+                    10 = {
+                        add_deposit = d_water_worms
+                    }
+                    10 = {
+                        add_deposit = d_daedra_colonies
+                    }
+                    5 = {
+                        add_deposit = d_dense_jungle
+                    }
+                    5 = {
+                        add_deposit = d_toxic_kelp
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_mountain_range
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_active_volcano
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_dangerous_wildlife_blocker
+                    }
+                    1 = {
+                        add_deposit = d_wandering_forests
+                    }
+                }
+            }
+            pc_gaia = {
+                random_list = {
+                    10 = {
+                        add_deposit = d_impassable_woods
+                    }
+                    10 = {
+                        add_deposit = d_slug_colonies
+                    }
+                    10 = {
+                        add_deposit = d_arachnid_colonies
+                    }
+                    10 = {
+                        add_deposit = d_water_worms
+                    }
+                    10 = {
+                        add_deposit = d_daedra_colonies
+                    }
+                    5 = {
+                        add_deposit = d_dense_jungle
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_mountain_range
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_active_volcano
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_dangerous_wildlife_blocker
+                    }
+                    1 = {
+                        add_deposit = d_wandering_forests
+                    }
+                }
+            }
+            pc_arctic = {
+                random_list = {
+                    10 = {
+                        add_deposit = d_frozen_gas_geysers
+                    }
+                    10 = {
+                        add_deposit = d_water_worms
+                    }
+                    5 = {
+                        add_deposit = d_noxious_swamp
+                    }
+                    5 = {
+                        add_deposit = d_massive_glacier
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_active_volcano
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_mountain_range
+                    }
+                }
+            }
+            pc_tundra = {
+                random_list = {
+                    10 = {
+                        add_deposit = d_frozen_gas_geysers
+                    }
+                    10 = {
+                        add_deposit = d_water_worms
+                    }
+                    5 = {
+                        add_deposit = d_noxious_swamp
+                    }
+                    5 = {
+                        add_deposit = d_massive_glacier
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_active_volcano
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_mountain_range
+                    }
+                }
+            }
+            pc_alpine = {
+                random_list = {
+                    10 = {
+                        add_deposit = d_frozen_gas_geysers
+                    }
+                    10 = {
+                        add_deposit = d_water_worms
+                    }
+                    10 = {
+                        add_deposit = d_daedra_colonies
+                    }
+                    5 = {
+                        add_deposit = d_noxious_swamp
+                    }
+                    5 = {
+                        add_deposit = d_massive_glacier
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_active_volcano
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_mountain_range
+                    }
+                }
+            }
+            pc_nuked = {
+                random_list = {
+                    5 = {
+                        add_deposit = d_bomb_crater
+                    }
+                    5 = {
+                        add_deposit = d_radioactive_wasteland
+                    }
+                    5 = {
+                        # -2D
+                        add_deposit = d_city_ruins
+                    }
+                }
+            }
+            default = {
+                random_list = {
+                    97 = {
+                        add_deposit = d_crater
+                    }
+                    1 = {
+                        add_deposit = d_infestation
+                    }
+                    1 = {
+                        add_deposit = d_quarantine_zone
+                    }
+                    1 = {
+                        add_deposit = d_slums
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Scope: planet
+effects_add_planet_deposit = {
+    if = {
+        limit = {
+            num_free_districts = {
+                type = district_city
+                value < 3
+            }
+        }
+        break = yes
+    }
+
+    set_variable = {
+        which = get_planet_blockers_count
+        value = 0
+    }
+
+    if = {
+        limit = {
+            is_dry = yes
+        }
+        random_list = {
+            3 = {
+                # +1E
+                add_deposit = d_arid_highlands
+            }
+            3 = {
+                # +2E
+                add_deposit = d_searing_desert
+            }
+            3 = {
+                # +3E
+                add_deposit = d_geothermal_vent
+            }
+            3 = {
+                # +3E
+                add_deposit = d_tempestous_mountain
+            }
+            3 = {
+                # +1M
+                add_deposit = d_veiny_cliffs
+            }
+            3 = {
+                # +1M
+                add_deposit = d_mineral_fields
+            }
+            3 = {
+                # +2M
+                add_deposit = d_prosperous_mesa
+            }
+            3 = {
+                # +3M
+                add_deposit = d_rich_mountain
+            }
+            3 = {
+                if = {
+                    limit = {
+                        is_planet_class = pc_arid
+                    }
+                    # +1F
+                    add_deposit = d_bountiful_plains
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            3 = {
+                if = {
+                    limit = {
+                        is_planet_class = pc_desert
+                    }
+                    # +1F
+                    add_deposit = d_nutritious_mudland
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            3 = {
+                # +2F
+                add_deposit = d_fertile_lands
+            }
+            3 = {
+                # +2F
+                add_deposit = d_great_river
+            }
+            63 = {
+                change_variable = {
+                    which = get_planet_blockers_count
+                    value = 1
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            OR = {
+                is_wet = yes
+                is_planet_class = pc_gaia
+            }
+        }
+        random_list = {
+            3 = {
+                # +1E
+                add_deposit = d_hot_springs
+            }
+            3 = {
+                # +2E
+                add_deposit = d_rushing_waterfalls
+            }
+            3 = {
+                # +3E
+                add_deposit = d_underwater_vent
+            }
+            3 = {
+                # +3E
+                add_deposit = d_tempestous_mountain
+            }
+            3 = {
+                # +1M
+                add_deposit = d_veiny_cliffs
+            }
+            3 = {
+                # +1M
+                add_deposit = d_mineral_fields
+            }
+            3 = {
+                # +2M
+                add_deposit = d_prosperous_mesa
+            }
+            3 = {
+                # +3M
+                add_deposit = d_submerged_ore_veins
+            }
+            3 = {
+                if = {
+                    limit = {
+                        is_planet_class = pc_continental
+                    }
+                    # +1F
+                    add_deposit = d_rugged_woods
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            3 = {
+                if = {
+                    limit = {
+                        is_planet_class = pc_ocean
+                    }
+                    # +1F
+                    add_deposit = d_boggy_fens
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            3 = {
+                # +1F
+                add_deposit = d_green_hills
+            }
+            3 = {
+                # +2F
+                add_deposit = d_lush_jungle
+            }
+            3 = {
+                # +2F
+                add_deposit = d_fertile_lands
+            }
+            3 = {
+                # +3F
+                add_deposit = d_black_soil
+            }
+            58 = {
+                change_variable = {
+                    which = get_planet_blockers_count
+                    value = 1
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            is_cold = yes
+        }
+        random_list = {
+            3 = {
+                # +1E
+                add_deposit = d_hot_springs
+            }
+            3 = {
+                # +2E
+                add_deposit = d_frozen_gas_lake
+            }
+            3 = {
+                # +3E
+                add_deposit = d_geothermal_vent
+            }
+            3 = {
+                # +1M
+                add_deposit = d_veiny_cliffs
+            }
+            3 = {
+                # +2M
+                add_deposit = d_ore_rich_caverns
+            }
+            3 = {
+                # +3M
+                add_deposit = d_rich_mountain
+            }
+            3 = {
+                # +1F
+                add_deposit = d_lichen_fields
+            }
+            3 = {
+                # +1F
+                add_deposit = d_forgiving_tundra
+            }
+            3 = {
+                # +2F
+                add_deposit = d_fungal_caves
+            }
+            73 = {
+                change_variable = {
+                    which = get_planet_blockers_count
+                    value = 1
+                }
+            }
+        }
+    }
+    else = {
+        change_variable = {
+            which = get_planet_blockers_count
+            value = 1
+        }
+    }
+
+    while = {
+        limit = {
+            check_variable = {
+                which = get_planet_blockers_count
+                value > 0
+            }
+        }
+
+        effects_add_planet_blocker = yes
+
+        change_variable = {
+            which = get_planet_blockers_count
+            value = -1
+        }
+    }
+}
+
+effects_set_planet_size_25 = {
+    set_planet_size = 15
+    reroll_planet = yes
+
+    while = {
+        count = 10
+
+        change_planet_size = 1
+        effects_add_planet_deposit = yes
+    }
+}
+
+effects_set_planet_size_30 = {
+    set_planet_size = 20
+    reroll_planet = yes
+
+    while = {
+        count = 10
+
+        change_planet_size = 1
+        effects_add_planet_deposit = yes
+    }
+}
+
+effects_set_planet_size_35 = {
+    set_planet_size = 25
+    reroll_planet = yes
+
+    while = {
+        count = 10
+
+        change_planet_size = 1
+        effects_add_planet_deposit = yes
+    }
+}
+
+effects_set_planet_size_40 = {
+    set_planet_size = 25
+    reroll_planet = yes
+
+    while = {
+        count = 15
+
+        change_planet_size = 1
+        effects_add_planet_deposit = yes
+    }
+}
+
+effects_set_planet_size_45 = {
+    set_planet_size = 25
+    reroll_planet = yes
+
+    while = {
+        count = 20
+
+        change_planet_size = 1
+        effects_add_planet_deposit = yes
+    }
+}
+
+effects_set_planet_size_50 = {
+    set_planet_size = 25
+    reroll_planet = yes
+
+    while = {
+        count = 25
+
+        change_planet_size = 1
+        effects_add_planet_deposit = yes
+    }
+}

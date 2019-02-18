@@ -1,0 +1,2474 @@
+anthem_of_eternity = {
+    name = "NAME_Anthem_Of_Eternity_System_A"
+    class = "rl_standard_stars"
+    usage = custom_empire
+    max_instances = 1
+    spawn_chance = 100
+
+    flags = {
+        empire_home_system
+        flags_aoe_homeworld
+    }
+
+    # Effects
+    prevent_anomalies = yes
+
+    usage_odds = {
+        base = 0
+        modifier = {
+            host_has_dlc = "Megacorp"
+            add = 100
+        }
+    }
+
+    # Asteroid Belts
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 110
+    }
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 175
+    }
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 225
+    }
+
+    # Stars
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Star_A"
+        count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        has_ring = yes
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_star = yes
+        }
+    }
+
+    # Planets
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_A1"
+        count = 1
+        class = pc_molten
+        orbit_distance = { min = 30 max = 40 }
+        orbit_angle = { min = 10 max = 350 }
+        size = { min = 17 max = 21 }
+        has_ring = no
+
+        change_orbit = 5
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A101"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A102"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A103"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A104"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A105"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A106"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A107"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A108"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            effects_add_rich_resources_molten_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_A2"
+        count = 1
+        class = pc_desert
+        orbit_distance = { min = 20 max = 30 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 17 max = 25 }
+        has_ring = no
+
+        change_orbit = 8
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A201"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A202"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A203"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A204"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A205"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A206"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A207"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A208"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A209"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 90 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_desert_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_A3"
+        count = 1
+        home_planet = yes
+        entity = "continental_planet_earth_entity"
+        class = ideal_planet_class
+        orbit_distance = { min = 30 max = 40 }
+        orbit_angle = { min = 90 max = 270 }
+        size = 25
+        starting_planet = yes
+        has_ring = yes
+        deposit_blockers = none
+        modifiers = none
+
+        change_orbit = 15
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A301"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 45 max = 310 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_A301"
+            class = pc_barren
+            size = { min = 9 max = 13 }
+            count = 1
+            orbit_distance = 6
+            orbit_angle = { min = 45 max = 310 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A302"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 5
+            orbit_angle = { min = 45 max = 310 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A303"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 5
+            orbit_angle = { min = 45 max = 310 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_A302"
+            class = pc_barren
+            size = { min = 9 max = 13 }
+            count = 1
+            orbit_distance = 6
+            orbit_angle = { min = 45 max = 310 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_A4"
+        count = 1
+        class = pc_gas_giant
+        orbit_distance = { min = 40 max = 50 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 35 max = 45 }
+        has_ring = yes
+
+        change_orbit = 20
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A401"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A402"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A403"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A404"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A405"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A406"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A407"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_A401"
+            class = pc_barren
+            size = { min = 13 max = 19 }
+            count = 1
+            orbit_distance = 10
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_A402"
+            class = pc_barren_cold
+            size = { min = 13 max = 19 }
+            count = 1
+            orbit_distance = 10
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_barren_cold_planet = yes
+            }
+        }
+
+        init_effect = {
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_A5"
+        count = 1
+        class = pc_barren_cold
+        orbit_distance = { min = 20 max = 30 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 17 max = 25 }
+        has_ring = no
+
+        change_orbit = 6
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A501"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A502"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A503"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A504"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A505"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A506"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A507"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_A501"
+            class = pc_toxic
+            size = { min = 14 max = 19 }
+            count = 1
+            orbit_distance = 7
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_toxic_planet = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_A502"
+            class = pc_tundra
+            size = { min = 18 max = 25 }
+            count = 1
+            orbit_distance = 7
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = yes
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_tundra_planet = yes
+            }
+        }
+
+        init_effect = {
+            effects_add_rich_resources_barren_cold_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_A6"
+        count = 1
+        class = pc_arctic
+        orbit_distance = { min = 20 max = 30 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 17 max = 25 }
+        has_ring = no
+
+        change_orbit = 10
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A601"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A602"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A603"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A604"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A605"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A606"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_arctic_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_A7"
+        count = 1
+        class = pc_frozen
+        orbit_distance = { min = 15 max = 25 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 14 max = 19 }
+        has_ring = no
+
+        change_orbit = 10
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A701"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A702"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A703"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A704"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A705"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_A706"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            effects_add_rich_resources_frozen_planet = yes
+        }
+    }
+
+    neighbor_system = {
+        distance = { min = 30 max = 50 }
+        initializer = "anthem_of_eternity_neighbor_a"
+        trigger = { always = no }
+    }
+    neighbor_system = {
+        distance = { min = 40 max = 70 }
+        initializer = "anthem_of_eternity_neighbor_b"
+        trigger = { always = no }
+    }
+    neighbor_system = {
+        distance = { min = 50 max = 90 }
+        initializer = "anthem_of_eternity_neighbor_c"
+        trigger = { always = no }
+    }
+    neighbor_system = {
+        distance = { min = 50 max = 90 }
+        initializer = "anthem_of_eternity_neighbor_d"
+        trigger = { always = no }
+    }
+}
+
+anthem_of_eternity_neighbor_a = {
+    name = "NAME_Anthem_Of_Eternity_System_B"
+    class = "rl_standard_stars"
+
+    flags = {
+        flags_aoe_neighbor_world
+    }
+
+    # Effects
+    prevent_anomalies = yes
+
+    # Asteroid Belts
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 100
+    }
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 120
+    }
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 200
+    }
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 220
+    }
+
+    # Stars
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Star_B"
+        count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = { min = 30 max = 45 }
+        has_ring = no
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_star = yes
+        }
+    }
+
+    # Planets
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_B1"
+        count = 1
+        class = pc_gaia
+        orbit_distance = { min = 60 max = 70 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 25
+        has_ring = yes
+
+        change_orbit = 10
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B101"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B102"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B103"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B104"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B105"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B106"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B107"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B108"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B109"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_set_planet_size_50 = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_B2"
+        count = 1
+        class = pc_gaia
+        orbit_distance = { min = 30 max = 40 }
+        orbit_angle = { min = 90 max = 270 }
+        size = 25
+        has_ring = yes
+
+        change_orbit = 10
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B201"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B202"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B203"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B204"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B205"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B206"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B207"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B208"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B209"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_set_planet_size_50 = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_B3"
+        count = 1
+        class = pc_gas_giant
+        orbit_distance = { min = 40 max = 50 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 35 max = 45 }
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B301"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B302"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_B303"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_B301"
+            class = pc_ocean
+            size = { min = 17 max = 25 }
+            count = 1
+            orbit_distance = 6
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = yes
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_ocean_planet = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_B302"
+            class = pc_savannah
+            size = { min = 17 max = 25 }
+            count = 1
+            orbit_distance = 6
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = yes
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_savannah_planet = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_B303"
+            class = pc_alpine
+            size = { min = 17 max = 25 }
+            count = 1
+            orbit_distance = 6
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_alpine_planet = yes
+            }
+        }
+    }
+}
+
+anthem_of_eternity_neighbor_b = {
+    name = "NAME_Anthem_Of_Eternity_System_C"
+    class = "rl_trinary_stars"
+
+    flags = {
+        flags_aoe_neighbor_world
+    }
+
+    # Effects
+    prevent_anomalies = yes
+
+    # Asteroid Belts
+    asteroid_belt = {
+        type = crystal_asteroid_belt
+        radius = 160
+    }
+    asteroid_belt = {
+        type = crystal_asteroid_belt
+        radius = 200
+    }
+
+    # Stars
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Star_C1"
+        count = 1
+        class = star
+        orbit_distance = { min = 30 max = 40 }
+        orbit_angle = 0
+        size = { min = 20 max = 30 }
+        has_ring = no
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_star = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Star_C2"
+        count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 100
+        size = { min = 20 max = 30 }
+        has_ring = no
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_star = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Star_C3"
+        count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 100
+        size = { min = 20 max = 25 }
+        has_ring = yes
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_star = yes
+        }
+    }
+
+    change_orbit = 70
+
+    # Planets
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_C1"
+        count = 1
+        class = pc_gaia
+        orbit_distance = { min = 5 max = 15 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 25
+        has_ring = yes
+
+        change_orbit = 13
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C101"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C102"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C103"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_C101"
+            class = pc_tropical
+            size = { min = 17 max = 25 }
+            count = 1
+            orbit_distance = 10
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_tropical_planet = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C104"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 7
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C105"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C106"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_C102"
+            class = pc_arid
+            size = { min = 17 max = 25 }
+            count = 1
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = yes
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_arid_planet = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C107"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 6
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_set_planet_size_50 = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_C2"
+        count = 1
+        class = pc_barren
+        orbit_distance = { min = 30 max = 40 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 15 max = 25 }
+        has_ring = no
+
+        init_effect = {
+            effects_add_rich_resources_barren_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_C3"
+        count = 1
+        class = pc_barren
+        orbit_distance = { min = 10 max = 15 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 15 max = 25 }
+        has_ring = no
+
+        init_effect = {
+            effects_add_rich_resources_barren_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_C4"
+        count = 1
+        class = pc_barren
+        orbit_distance = { min = 10 max = 15 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 15 max = 25 }
+        has_ring = no
+
+        init_effect = {
+            effects_add_rich_resources_barren_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_C5"
+        count = 1
+        class = pc_toxic
+        orbit_distance = { min = 20 max = 25 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 19 max = 25 }
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_C501"
+            class = pc_frozen
+            size = { min = 12 max = 17 }
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_frozen_planet = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_C502"
+            class = pc_barren_cold
+            size = { min = 12 max = 17 }
+            count = 1
+            orbit_distance = 5
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_barren_cold_planet = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C501"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 6
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C502"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C503"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C504"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C505"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C506"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_C507"
+            class = pc_ice_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            effects_add_rich_resources_toxic_planet = yes
+        }
+    }
+}
+
+anthem_of_eternity_neighbor_c = {
+    name = "NAME_Anthem_Of_Eternity_System_D"
+    class = "sc_m_giant"
+
+    flags = {
+        flags_aoe_neighbor_world
+    }
+
+    # Effects
+    prevent_anomalies = yes
+
+    # Asteroid Belts
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 130
+    }
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 160
+    }
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 190
+    }
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 210
+    }
+
+    # Stars
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Star_D"
+        count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 0
+        has_ring = no
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_star = yes
+        }
+    }
+
+    change_orbit = 70
+
+    # Planets
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_D1"
+        count = 1
+        class = pc_molten
+        orbit_distance = { min = 5 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = { min = 13 max = 19 }
+        has_ring = no
+
+        change_orbit = 10
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D101"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D102"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D103"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            effects_add_rich_resources_molten_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_D2"
+        count = 1
+        class = pc_molten
+        orbit_distance = { min = 15 max = 25 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 15 max = 22 }
+        has_ring = no
+
+        change_orbit = 13
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D201"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D202"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D203"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D204"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D205"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D206"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D207"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            effects_add_rich_resources_molten_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_D3"
+        count = 1
+        class = pc_desert
+        orbit_distance = { min = 20 max = 30 }
+        orbit_angle = { min = 90 max = 270 }
+        size = 25
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D301"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D302"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D303"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D304"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D305"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D306"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D307"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D308"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_D301"
+            class = pc_arid
+            size = { min = 17 max = 21 }
+            count = 1
+            orbit_distance = 13
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_arid_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_desert_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_D4"
+        count = 1
+        class = pc_gaia
+        orbit_distance = { min = 25 max = 35 }
+        orbit_angle = { min = 90 max = 270 }
+        size = 25
+        has_ring = yes
+
+        change_orbit = 20
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_D401"
+            class = pc_barren
+            size = { min = 13 max = 17 }
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = yes
+
+            init_effect = {
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_D402"
+            class = pc_continental
+            size = { min = 18 max = 22 }
+            count = 1
+            orbit_distance = 7
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_set_planet_size_30 = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_D403"
+            class = pc_toxic
+            size = { min = 14 max = 18 }
+            count = 1
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_toxic_planet = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D401"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 7
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D402"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D403"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D404"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D405"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Asteroid_D406"
+            class = pc_asteroid
+            size = 1
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 10 max = 350 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_set_planet_size_50 = yes
+        }
+    }
+}
+
+anthem_of_eternity_neighbor_d = {
+    name = "NAME_Anthem_Of_Eternity_System_E"
+    class = "sc_black_hole"
+
+    flags = {
+        flags_aoe_neighbor_world
+    }
+
+    # Effects
+    prevent_anomalies = yes
+
+    # Asteroid Belts
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 30
+    }
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 60
+    }
+
+    # Stars
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Star_E"
+        count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = { min = 25 max = 35 }
+        has_ring = yes
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_black_hole = yes
+        }
+    }
+
+    change_orbit = 50
+
+    # Planets
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_E1"
+        count = 1
+        class = pc_tundra
+        orbit_distance = { min = 5 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 25
+        has_ring = no
+
+        change_orbit = 15
+
+        moon = {
+            class = pc_ice_asteroid
+            size = 1
+            count = 9
+            orbit_distance = 1
+            orbit_angle = { min = 45 max = 315 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_tundra_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_E2"
+        count = 1
+        class = pc_alpine
+        orbit_distance = { min = 15 max = 25 }
+        orbit_angle = { min = 90 max = 270 }
+        size = 25
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            class = pc_ice_asteroid
+            size = 1
+            count = 9
+            orbit_distance = 1
+            orbit_angle = { min = 45 max = 315 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_alpine_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_E3"
+        count = 1
+        class = pc_arctic
+        orbit_distance = { min = 15 max = 25 }
+        orbit_angle = { min = 90 max = 270 }
+        size = 25
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            class = pc_ice_asteroid
+            size = 1
+            count = 9
+            orbit_distance = 1
+            orbit_angle = { min = 45 max = 315 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_arctic_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_E4"
+        count = 1
+        class = pc_frozen
+        orbit_distance = { min = 15 max = 25 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 19 max = 25 }
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            class = pc_ice_asteroid
+            size = 1
+            count = 9
+            orbit_distance = 1
+            orbit_angle = { min = 45 max = 315 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_ice_asteroid = yes
+            }
+        }
+
+        init_effect = {
+            effects_add_rich_resources_frozen_planet = yes
+        }
+    }
+
+    planet = {
+        name = "NAME_Anthem_Of_Eternity_Planet_E5"
+        count = 1
+        class = pc_frozen
+        orbit_distance = { min = 35 max = 40 }
+        orbit_angle = { min = 90 max = 270 }
+        size = { min = 13 max = 17 }
+        has_ring = no
+
+        change_orbit = 30
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_E501"
+            class = pc_gas_giant
+            size = { min = 30 max = 40 }
+            count = 1
+            orbit_distance = 1
+            orbit_angle = { min = 45 max = 315 }
+            has_ring = no
+
+            init_effect = {
+                effects_add_rich_resources_gas_giant = yes
+            }
+        }
+
+        moon = {
+            name = "NAME_Anthem_Of_Eternity_Planet_E502"
+            class = pc_gas_giant
+            size = { min = 25 max = 35 }
+            count = 1
+            orbit_distance = 5
+            orbit_angle = { min = 130 max = 230 }
+            has_ring = yes
+
+            init_effect = {
+                effects_add_rich_resources_gas_giant = yes
+            }
+        }
+
+        init_effect = {
+            effects_add_rich_resources_frozen_planet = yes
+        }
+    }
+
+    init_effect = {
+        spawn_megastructure = {
+            type = "gateway_ruined"
+            random_pos = yes
+            orbit_angle = 360
+        }
+    }
+}
