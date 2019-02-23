@@ -13,6 +13,12 @@ effects_add_planet_blocker = {
             trigger = is_planet_class
             pc_arid = {
                 random_list = {
+                    20 = {
+                        add_deposit = d_scorched_plains
+                    }
+                    10 = {
+                        add_deposit = d_isolated_wastelands
+                    }
                     10 = {
                         add_deposit = d_sandy_marshes
                     }
@@ -24,6 +30,9 @@ effects_add_planet_blocker = {
                     }
                     10 = {
                         add_deposit = d_magmatic_lakes
+                    }
+                    10 = {
+                        add_deposit = d_magmatic_oceans
                     }
                     10 = {
                         add_deposit = d_sand_worms
@@ -47,7 +56,13 @@ effects_add_planet_blocker = {
             pc_desert = {
                 random_list = {
                     10 = {
+                        add_deposit = d_isolated_wastelands
+                    }
+                    10 = {
                         add_deposit = d_sandy_marshes
+                    }
+                    10 = {
+                        add_deposit = d_scorched_plains
                     }
                     10 = {
                         add_deposit = d_melted_streams
@@ -57,6 +72,9 @@ effects_add_planet_blocker = {
                     }
                     10 = {
                         add_deposit = d_magmatic_lakes
+                    }
+                    10 = {
+                        add_deposit = d_magmatic_oceans
                     }
                     10 = {
                         add_deposit = d_sand_worms
@@ -83,10 +101,25 @@ effects_add_planet_blocker = {
             pc_savannah = {
                 random_list = {
                     10 = {
+                        add_deposit = d_isolated_wastelands
+                    }
+                    10 = {
+                        add_deposit = d_sandy_marshes
+                    }
+                    10 = {
+                        add_deposit = d_scorched_plains
+                    }
+                    10 = {
                         add_deposit = d_melted_streams
                     }
                     10 = {
+                        add_deposit = d_melted_rivers
+                    }
+                    10 = {
                         add_deposit = d_magmatic_lakes
+                    }
+                    10 = {
+                        add_deposit = d_magmatic_oceans
                     }
                     10 = {
                         add_deposit = d_sand_worms
@@ -112,8 +145,14 @@ effects_add_planet_blocker = {
             }
             pc_ocean = {
                 random_list = {
-                    10 = {
-                        add_deposit = d_electrostatic_maelstroms
+                    20 = {
+                        add_deposit = d_electric_maelstroms
+                    }
+                    20 = {
+                        add_deposit = d_ravenous_maelstroms
+                    }
+                    15 = {
+                        add_deposit = d_giant_tides
                     }
                     10 = {
                         add_deposit = d_slug_colonies
@@ -144,7 +183,16 @@ effects_add_planet_blocker = {
             pc_continental = {
                 random_list = {
                     10 = {
-                        add_deposit = d_impassable_woods
+                        add_deposit = d_impassable_woodlands
+                    }
+                    10 = {
+                        add_deposit = d_untouched_woodlands
+                    }
+                    10 = {
+                        add_deposit = d_impassable_marshes
+                    }
+                    10 = {
+                        add_deposit = d_untouched_marshes
                     }
                     10 = {
                         add_deposit = d_slug_colonies
@@ -157,6 +205,12 @@ effects_add_planet_blocker = {
                     }
                     10 = {
                         add_deposit = d_daedra_colonies
+                    }
+                    5 = {
+                        add_deposit = d_isolated_wastelands
+                    }
+                    5 = {
+                        add_deposit = d_giant_tides
                     }
                     5 = {
                         add_deposit = d_dense_jungle
@@ -184,7 +238,16 @@ effects_add_planet_blocker = {
             pc_tropical = {
                 random_list = {
                     10 = {
-                        add_deposit = d_impassable_woods
+                        add_deposit = d_impassable_woodlands
+                    }
+                    10 = {
+                        add_deposit = d_untouched_woodlands
+                    }
+                    10 = {
+                        add_deposit = d_impassable_marshes
+                    }
+                    10 = {
+                        add_deposit = d_untouched_marshes
                     }
                     10 = {
                         add_deposit = d_slug_colonies
@@ -224,7 +287,16 @@ effects_add_planet_blocker = {
             pc_gaia = {
                 random_list = {
                     10 = {
-                        add_deposit = d_impassable_woods
+                        add_deposit = d_impassable_woodlands
+                    }
+                    10 = {
+                        add_deposit = d_untouched_woodlands
+                    }
+                    10 = {
+                        add_deposit = d_impassable_marshes
+                    }
+                    10 = {
+                        add_deposit = d_untouched_marshes
                     }
                     10 = {
                         add_deposit = d_slug_colonies

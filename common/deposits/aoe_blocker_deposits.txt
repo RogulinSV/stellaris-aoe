@@ -1,14 +1,9 @@
 d_melted_streams = {
     icon = d_melted_streams
-    time = 400
+    time = 300
 
     is_for_colonizeable = yes
     category = deposit_cat_blockers
-
-    blocker_swap_types = {
-        d_fertile_lands
-        d_great_river
-    }
 
     potential = {
         planet_size >= 10
@@ -18,13 +13,14 @@ d_melted_streams = {
     resources = {
         category = deposit_blockers
         cost = {
-            energy = 500
-            minerals = 300
+            energy = 400
+            minerals = 200
         }
     }
 
     planet_modifier = { 
         planet_max_districts_add = -1
+        pop_growth_speed = -0.02
     }
 
     on_cleared = {
@@ -33,13 +29,13 @@ d_melted_streams = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_terraforming"
+                        has_technology = "tech_advanced_environment_utilization"
                     }
                 }
                 owner = {
                     add_resource = {
-                        energy = 200
-                        minerals = 300
+                        consumer_goods = 100
+                        alloys = 10
                     }
                 }
             }
@@ -47,13 +43,13 @@ d_melted_streams = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_terraforming"
+                        has_technology = "tech_supreme_environment_utilization"
                     }
                 }
                 owner = {
                     add_resource = {
-                        energy = 300
-                        minerals = 450
+                        consumer_goods = 200
+                        alloys = 20
                     }
                 }
             }
@@ -61,13 +57,109 @@ d_melted_streams = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_terraforming"
+                        has_technology = "tech_transcendence_environment_utilization"
                     }
                 }
                 owner = {
                     add_resource = {
-                        energy = 400
-                        minerals = 600
+                        consumer_goods = 300
+                        alloys = 30
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_high_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_desert
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_molten_environment_utilization"
+    }
+}
+
+d_melted_rivers = {
+    icon = d_melted_rivers
+    time = 500
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        is_dry = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 600
+            minerals = 300
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+        pop_growth_speed = -0.04
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 200
+                        alloys = 20
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 300
+                        alloys = 30
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 400
+                        alloys = 40
                     }
                 }
             }
@@ -94,16 +186,20 @@ d_melted_streams = {
     }
 
     prerequisites = {
-        "tech_cleaning_molten_rock"
+        "tech_molten_environment_utilization"
     }
 }
 
-d_melted_rivers = {
-    icon = d_melted_rivers
-    time = 600
+d_magmatic_lakes = {
+    icon = d_magmatic_lakes
+    time = 700
 
     is_for_colonizeable = yes
     category = deposit_cat_blockers
+
+    blocker_swap_types = {
+        d_lichen_fields
+    }
 
     potential = {
         planet_size >= 10
@@ -113,13 +209,14 @@ d_melted_rivers = {
     resources = {
         category = deposit_blockers
         cost = {
-            energy = 750
-            minerals = 500
+            energy = 800
+            minerals = 400
         }
     }
 
     planet_modifier = { 
         planet_max_districts_add = -1
+        pop_growth_speed = -0.06
     }
 
     on_cleared = {
@@ -128,13 +225,13 @@ d_melted_rivers = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_terraforming"
+                        has_technology = "tech_advanced_environment_utilization"
                     }
                 }
                 owner = {
                     add_resource = {
-                        energy = 200
-                        minerals = 300
+                        consumer_goods = 300
+                        alloys = 30
                     }
                 }
             }
@@ -142,13 +239,13 @@ d_melted_rivers = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_terraforming"
+                        has_technology = "tech_supreme_environment_utilization"
                     }
                 }
                 owner = {
                     add_resource = {
-                        energy = 300
-                        minerals = 600
+                        consumer_goods = 400
+                        alloys = 40
                     }
                 }
             }
@@ -156,13 +253,114 @@ d_melted_rivers = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_terraforming"
+                        has_technology = "tech_transcendence_environment_utilization"
                     }
                 }
                 owner = {
                     add_resource = {
-                        energy = 400
-                        minerals = 900
+                        consumer_goods = 500
+                        alloys = 50
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_medium_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_desert
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_molten_environment_utilization"
+    }
+}
+
+d_magmatic_oceans = {
+    icon = d_magmatic_oceans
+    time = 900
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    blocker_swap_types = {
+        d_lichen_fields
+        d_bountiful_plains
+    }
+
+    potential = {
+        planet_size >= 10
+        is_dry = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 1200
+            minerals = 600
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+        pop_growth_speed = -0.08
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 400
+                        alloys = 40
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 500
+                        alloys = 50
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 600
+                        alloys = 60
                     }
                 }
             }
@@ -189,13 +387,707 @@ d_melted_rivers = {
     }
 
     prerequisites = {
-        "tech_cleaning_molten_rock"
+        "tech_molten_environment_utilization"
     }
 }
 
-d_magmatic_lakes = {
-    icon = d_magmatic_lakes
-    time = 900
+d_impassable_woodlands = {
+    icon = d_impassable_woodlands
+    time = 360
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    blocker_swap_types = {
+        d_rugged_woods
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_wet = yes
+            is_planet_class = pc_gaia
+        }
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 400
+            minerals = 200
+        }
+    }
+
+    planet_modifier = {
+        planet_max_districts_add = -1
+        planet_crime_add = 1
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 100
+                        consumer_goods = 10
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 200
+                        consumer_goods = 20
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 300
+                        consumer_goods = 30
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_high_drop_weight
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_ocean
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_floral_environment_utilization"
+    }
+}
+
+d_untouched_woodlands = {
+    icon = d_untouched_woodlands
+    time = 720
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    blocker_swap_types = {
+        d_rugged_woods
+        d_lush_jungle
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_wet = yes
+            is_planet_class = pc_gaia
+        }
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 800
+            minerals = 400
+        }
+    }
+
+    planet_modifier = {
+        planet_max_districts_add = -1
+        planet_crime_add = 2
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 200
+                        consumer_goods = 20
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 300
+                        consumer_goods = 30
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 400
+                        consumer_goods = 40
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_medium_drop_weight
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_ocean
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_floral_environment_utilization"
+    }
+}
+
+d_impassable_marshes = {
+    icon = d_impassable_marshes
+    time = 480
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    blocker_swap_types = {
+        d_boggy_fens
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_wet = yes
+            is_planet_class = pc_gaia
+        }
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 480
+            minerals = 360
+        }
+    }
+
+    planet_modifier = {
+        planet_max_districts_add = -1
+        planet_crime_add = 2
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 200
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 300
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 400
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_medium_drop_weight
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_ocean
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_floral_environment_utilization"
+    }
+}
+
+d_untouched_marshes = {
+    icon = d_untouched_marshes
+    time = 960
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    blocker_swap_types = {
+        d_boggy_fens
+        d_lush_jungle
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_wet = yes
+            is_planet_class = pc_gaia
+        }
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 960
+            minerals = 720
+        }
+    }
+
+    planet_modifier = {
+        planet_max_districts_add = -1
+        planet_crime_add = 3
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 300
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 400
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 500
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_ocean
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_floral_environment_utilization"
+    }
+}
+
+d_electric_maelstroms = {
+    icon = d_electric_maelstroms
+    time = 490
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        is_wet = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 1000
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+        pop_happiness = -0.03
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 1250
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 1500
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 1750
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_high_drop_weight
+        modifier = {
+            factor = 0.25
+            NOT = {
+                is_planet_class = pc_ocean
+            }
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_aquatic_environment_utilization"
+    }
+}
+
+d_ravenous_maelstroms = {
+    icon = d_ravenous_maelstroms
+    time = 980
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    blocker_swap_types = {
+        d_teeming_reef
+    }
+
+    potential = {
+        planet_size >= 10
+        is_wet = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 2000
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+        pop_happiness = -0.06
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 2300
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 2600
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 2900
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_medium_drop_weight
+        modifier = {
+            factor = 0.25
+            NOT = {
+                is_planet_class = pc_ocean
+            }
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_aquatic_environment_utilization"
+    }
+}
+
+d_giant_tides = {
+    icon = d_giant_tides
+    time = 1340
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        is_wet = yes
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 3000
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+        pop_happiness = -0.09
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 3300
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 3500
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 3700
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 0.25
+            NOT = {
+                is_planet_class = pc_ocean
+            }
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_aquatic_environment_utilization"
+    }
+}
+
+d_sandy_marshes = {
+    icon = d_sandy_marshes
+    time = 330
 
     is_for_colonizeable = yes
     category = deposit_cat_blockers
@@ -208,13 +1100,14 @@ d_magmatic_lakes = {
     resources = {
         category = deposit_blockers
         cost = {
-            energy = 900
-            minerals = 700
+            energy = 400
+            minerals = 200
         }
     }
 
     planet_modifier = { 
         planet_max_districts_add = -1
+        planet_buildings_cost_mult = 0.05
     }
 
     on_cleared = {
@@ -223,13 +1116,13 @@ d_magmatic_lakes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_terraforming"
+                        has_technology = "tech_advanced_environment_utilization"
                     }
                 }
                 owner = {
                     add_resource = {
-                        energy = 200
-                        minerals = 400
+                        consumer_goods = 50
+                        alloys = 50
                     }
                 }
             }
@@ -237,13 +1130,13 @@ d_magmatic_lakes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_terraforming"
+                        has_technology = "tech_supreme_environment_utilization"
                     }
                 }
                 owner = {
                     add_resource = {
-                        energy = 300
-                        minerals = 800
+                        consumer_goods = 75
+                        alloys = 75
                     }
                 }
             }
@@ -251,13 +1144,13 @@ d_magmatic_lakes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_terraforming"
+                        has_technology = "tech_transcendence_environment_utilization"
                     }
                 }
                 owner = {
                     add_resource = {
-                        energy = 400
-                        minerals = 1200
+                        consumer_goods = 100
+                        alloys = 100
                     }
                 }
             }
@@ -265,9 +1158,9 @@ d_magmatic_lakes = {
     }
 
     drop_weight = {
-        weight = @blocker_low_drop_weight
+        weight = @blocker_high_drop_weight
         modifier = {
-            factor = 2
+            factor = 0.5
             is_planet_class = pc_savannah
         }
         modifier = {
@@ -284,115 +1177,13 @@ d_magmatic_lakes = {
     }
 
     prerequisites = {
-        "tech_cleaning_molten_rock"
+        "tech_wasteland_environment_utilization"
     }
 }
 
-d_impassable_woods = {
-    icon = d_impassable_woods
-    time = 500
-
-    is_for_colonizeable = yes
-    category = deposit_cat_blockers
-
-    potential = {
-        planet_size >= 10
-        OR = {
-            is_wet = yes
-            is_planet_class = pc_gaia
-        }
-    }
-
-    resources = {
-        category = deposit_blockers
-        cost = {
-            energy = 500
-            minerals = 300
-        }
-    }
-
-    planet_modifier = { 
-        planet_max_districts_add = -1
-    }
-
-    drop_weight = {
-        weight = @blocker_medium_drop_weight
-        modifier = {
-            factor = 2
-            is_planet_class = pc_tropical
-        }
-        modifier = {
-            factor = 1.5
-            is_planet_class = pc_continental
-        }
-        modifier = {
-            factor = 1.25
-            is_planet_class = pc_gaia
-        }
-        modifier = {
-            factor = 0
-            num_free_districts = {
-                type = district_city
-                value < 2
-            }
-        }
-    }
-
-    ai_weight = {
-        weight = 1
-    }
-
-    prerequisites = { "tech_dense_jungle" }
-}
-
-d_electrostatic_maelstroms = {
-    icon = d_electrostatic_maelstroms
-    time = 1000
-
-    is_for_colonizeable = yes
-    category = deposit_cat_blockers
-
-    potential = {
-        planet_size >= 10
-        is_wet = yes
-    }
-
-    resources = {
-        category = deposit_blockers
-        cost = {
-            energy = 1300
-        }
-    }
-
-    planet_modifier = { 
-        planet_max_districts_add = -1
-    }
-
-    drop_weight = {
-        weight = @blocker_low_drop_weight
-        modifier = {
-            factor = 2
-            is_planet_class = pc_ocean
-        }
-        modifier = {
-            factor = 0
-            num_free_districts = {
-                type = district_city
-                value < 2
-            }
-        }
-    }
-
-    ai_weight = {
-        weight = 1
-    }
-
-    # prerequisites = { "tech_dense_jungle" }
-}
-
-d_sandy_marshes = {
-    icon = d_sandy_marshes
-    time = 1000
+d_scorched_plains = {
+    icon = d_scorched_plains
+    time = 660
 
     is_for_colonizeable = yes
     category = deposit_cat_blockers
@@ -405,19 +1196,68 @@ d_sandy_marshes = {
     resources = {
         category = deposit_blockers
         cost = {
-            energy = 1000
+            energy = 600
+            minerals = 400
         }
     }
 
     planet_modifier = { 
         planet_max_districts_add = -1
+        planet_buildings_cost_mult = 0.10
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 100
+                        alloys = 100
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 150
+                        alloys = 150
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 200
+                        alloys = 200
+                    }
+                }
+            }
+        }
     }
 
     drop_weight = {
-        weight = @blocker_low_drop_weight
+        weight = @blocker_medium_drop_weight
         modifier = {
             factor = 2
-            is_planet_class = pc_desert
+            is_planet_class = pc_arid
         }
         modifier = {
             factor = 0
@@ -432,7 +1272,108 @@ d_sandy_marshes = {
         weight = 1
     }
 
-    # prerequisites = { "tech_dense_jungle" }
+    prerequisites = {
+        "tech_wasteland_environment_utilization"
+    }
+}
+
+d_isolated_wastelands = {
+    icon = d_isolated_wastelands
+    time = 630
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_dry = yes
+            is_planet_class = pc_continental
+        }
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 700
+            minerals = 300
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+        planet_buildings_cost_mult = 0.10
+    }
+
+    on_cleared = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_advanced_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 100
+                        minerals = 400
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_supreme_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 150
+                        minerals = 500
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_transcendence_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 200
+                        minerals = 600
+                    }
+                }
+            }
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_continental
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_wasteland_environment_utilization"
+    }
 }
 
 d_arachnid_colonies = {
