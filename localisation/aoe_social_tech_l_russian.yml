@@ -1,4 +1,7 @@
 ﻿l_russian:
+    tech_basic_environment_utilization:0 "Использование окружающей среды"
+    tech_basic_environment_utilization_title:0 "Использование окружающей среды"
+    tech_basic_environment_utilization_desc:0 "Использование окружающей среды"
     tech_advanced_environment_utilization:0 "Передовое использование окружающей среды"
     tech_advanced_environment_utilization_title:0 "Передовое использование окружающей среды"
     tech_advanced_environment_utilization_desc:0 "Передовое использование окружающей среды"
@@ -8,6 +11,10 @@
     tech_transcendence_environment_utilization:0 "Трансцендентное использование окружающей среды"
     tech_transcendence_environment_utilization_title:0 "Трансцендентное использование окружающей среды"
     tech_transcendence_environment_utilization_desc:0 "Трансцендентное использование окружающей среды"
+    tech_infinitum_environment_utilization:0 "Бесконечное использование окружающей среды"
+    tech_infinitum_environment_utilization_title:0 "Бесконечное использование окружающей среды"
+    tech_infinitum_environment_utilization_desc:0 "Бесконечное использование окружающей среды"
+
     tech_molten_environment_utilization:0 "Утилизация расплавленных пород"
     tech_molten_environment_utilization_desc:0 "Утилизация расплавленных пород"
     tech_floral_environment_utilization:0 "Утилизация цветущей среды"

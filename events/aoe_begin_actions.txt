@@ -21,7 +21,7 @@ country_event = {
 
         country_event = {
             id = aoe_begin_actions.10
-            days = 2
+            days = 10
         }
     }
 }

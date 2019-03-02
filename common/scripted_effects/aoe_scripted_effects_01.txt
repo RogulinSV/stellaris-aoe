@@ -420,18 +420,23 @@ effects_add_planet_blocker = {
                 }
             }
             default = {
-                random_list = {
-                    97 = {
-                        add_deposit = d_crater
+                if = {
+                    limit = {
+                        can_have_habitable_deposits = yes
                     }
-                    1 = {
-                        add_deposit = d_infestation
-                    }
-                    1 = {
-                        add_deposit = d_quarantine_zone
-                    }
-                    1 = {
-                        add_deposit = d_slums
+                    random_list = {
+                        97 = {
+                            add_deposit = d_crater
+                        }
+                        1 = {
+                            add_deposit = d_infestation
+                        }
+                        1 = {
+                            add_deposit = d_quarantine_zone
+                        }
+                        1 = {
+                            add_deposit = d_slums
+                        }
                     }
                 }
             }
@@ -458,9 +463,45 @@ effects_add_planet_deposit = {
 
     if = {
         limit = {
+            check_variable = {
+                which = get_planet_metamateria_factory_district_count
+                value < 1
+            }
+        }
+        set_variable = {
+            which = get_planet_metamateria_factory_district_count
+            value = 1
+        }
+    }
+
+    if = {
+        limit = {
             is_dry = yes
         }
         random_list = {
+            15 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_metamateria_factory_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_metamateria_factory_district_count
+                        value = 1
+                    }
+                    # +1A
+                    add_deposit = d_metacrystal_caves
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
             3 = {
                 # +1E
                 add_deposit = d_arid_highlands
@@ -531,7 +572,7 @@ effects_add_planet_deposit = {
                 # +2F
                 add_deposit = d_great_river
             }
-            63 = {
+            48 = {
                 change_variable = {
                     which = get_planet_blockers_count
                     value = 1
@@ -547,6 +588,29 @@ effects_add_planet_deposit = {
             }
         }
         random_list = {
+            15 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_metamateria_factory_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_metamateria_factory_district_count
+                        value = 1
+                    }
+                    # +1A
+                    add_deposit = d_metacrystal_plains
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
             3 = {
                 # +1E
                 add_deposit = d_hot_springs
@@ -625,7 +689,7 @@ effects_add_planet_deposit = {
                 # +3F
                 add_deposit = d_black_soil
             }
-            58 = {
+            43 = {
                 change_variable = {
                     which = get_planet_blockers_count
                     value = 1
@@ -638,6 +702,29 @@ effects_add_planet_deposit = {
             is_cold = yes
         }
         random_list = {
+            15 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_metamateria_factory_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_metamateria_factory_district_count
+                        value = 1
+                    }
+                    # +1A
+                    add_deposit = d_metacrystal_mines
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
             3 = {
                 # +1E
                 add_deposit = d_hot_springs
@@ -674,7 +761,7 @@ effects_add_planet_deposit = {
                 # +2F
                 add_deposit = d_fungal_caves
             }
-            73 = {
+            66 = {
                 change_variable = {
                     which = get_planet_blockers_count
                     value = 1
@@ -710,6 +797,10 @@ effects_set_planet_size_25 = {
     set_planet_size = 15
     reroll_planet = yes
 
+    set_variable = {
+        which = get_planet_metamateria_factory_district_count
+        value = 0
+    }
     while = {
         count = 10
 
@@ -722,6 +813,10 @@ effects_set_planet_size_30 = {
     set_planet_size = 20
     reroll_planet = yes
 
+    set_variable = {
+        which = get_planet_metamateria_factory_district_count
+        value = 0
+    }
     while = {
         count = 10
 
@@ -734,6 +829,10 @@ effects_set_planet_size_35 = {
     set_planet_size = 25
     reroll_planet = yes
 
+    set_variable = {
+        which = get_planet_metamateria_factory_district_count
+        value = 0
+    }
     while = {
         count = 10
 
@@ -746,6 +845,10 @@ effects_set_planet_size_40 = {
     set_planet_size = 25
     reroll_planet = yes
 
+    set_variable = {
+        which = get_planet_metamateria_factory_district_count
+        value = 0
+    }
     while = {
         count = 15
 
@@ -758,6 +861,10 @@ effects_set_planet_size_45 = {
     set_planet_size = 25
     reroll_planet = yes
 
+    set_variable = {
+        which = get_planet_metamateria_factory_district_count
+        value = 0
+    }
     while = {
         count = 20
 
@@ -770,10 +877,16 @@ effects_set_planet_size_50 = {
     set_planet_size = 25
     reroll_planet = yes
 
+    set_variable = {
+        which = get_planet_metamateria_factory_district_count
+        value = 0
+    }
     while = {
         count = 25
 
         change_planet_size = 1
         effects_add_planet_deposit = yes
     }
+
+    validate_planet_buildings_and_districts = yes
 }

@@ -1,0 +1,158 @@
+d_metacrystal_caves = {
+    icon = d_metacrystal_caves
+
+    is_for_colonizeable = yes
+    category = deposit_cat_metamateria
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_submerged_ore_veins
+        d_ore_rich_caverns
+        d_mineral_fields
+    }
+
+    planet_modifier = {
+        district_metamateria_factory_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_dry = yes
+            is_planet_class = pc_nuked
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_desert
+        }
+        modifier = {
+            factor = 3
+            is_planet_class = pc_nuked
+        }
+    }
+}
+
+d_metacrystal_plains = {
+    icon = d_metacrystal_plains
+
+    is_for_colonizeable = yes
+    category = deposit_cat_metamateria
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_mineral_fields
+        d_prosperous_mesa
+    }
+
+    planet_modifier = {
+        district_metamateria_factory_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_wet = yes
+            is_planet_class = pc_gaia
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_gaia
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_ocean
+        }
+    }
+}
+
+d_metacrystal_mines = {
+    icon = d_metacrystal_mines
+
+    is_for_colonizeable = yes
+    category = deposit_cat_metamateria
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_submerged_ore_veins
+        d_ore_rich_caverns
+        d_mineral_fields
+    }
+
+    planet_modifier = {
+        district_metamateria_factory_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_cold = yes
+            is_planet_class = pc_nuked
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+        modifier = {
+            factor = 2
+            is_planet_class = pc_arctic
+        }
+        modifier = {
+            factor = 3
+            is_planet_class = pc_nuked
+        }
+    }
+}
+
+d_metacrystal_matrixes = {
+    icon = d_metacrystal_matrixes
+
+    is_for_colonizeable = yes
+    category = deposit_cat_metamateria
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_null_deposit
+        d_nanites_deposit
+    }
+
+    planet_modifier = {
+        district_metamateria_factory_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_planet_class = pc_hive
+            is_planet_class = pc_machine
+            is_planet_class = pc_ringworld_habitable
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_ringworld_habitable
+        }
+    }
+}

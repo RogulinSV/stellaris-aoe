@@ -35,7 +35,7 @@ d_melted_streams = {
                 owner = {
                     add_resource = {
                         consumer_goods = 100
-                        alloys = 10
+                        alloys = 100
                     }
                 }
             }
@@ -49,7 +49,7 @@ d_melted_streams = {
                 owner = {
                     add_resource = {
                         consumer_goods = 200
-                        alloys = 20
+                        alloys = 200
                     }
                 }
             }
@@ -63,7 +63,21 @@ d_melted_streams = {
                 owner = {
                     add_resource = {
                         consumer_goods = 300
-                        alloys = 30
+                        alloys = 300
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 400
+                        alloys = 400
                     }
                 }
             }
@@ -131,7 +145,7 @@ d_melted_rivers = {
                 owner = {
                     add_resource = {
                         consumer_goods = 200
-                        alloys = 20
+                        alloys = 200
                     }
                 }
             }
@@ -145,7 +159,7 @@ d_melted_rivers = {
                 owner = {
                     add_resource = {
                         consumer_goods = 300
-                        alloys = 30
+                        alloys = 300
                     }
                 }
             }
@@ -159,7 +173,21 @@ d_melted_rivers = {
                 owner = {
                     add_resource = {
                         consumer_goods = 400
-                        alloys = 40
+                        alloys = 400
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 500
+                        alloys = 500
                     }
                 }
             }
@@ -231,7 +259,7 @@ d_magmatic_lakes = {
                 owner = {
                     add_resource = {
                         consumer_goods = 300
-                        alloys = 30
+                        alloys = 300
                     }
                 }
             }
@@ -245,7 +273,7 @@ d_magmatic_lakes = {
                 owner = {
                     add_resource = {
                         consumer_goods = 400
-                        alloys = 40
+                        alloys = 400
                     }
                 }
             }
@@ -259,7 +287,21 @@ d_magmatic_lakes = {
                 owner = {
                     add_resource = {
                         consumer_goods = 500
-                        alloys = 50
+                        alloys = 500
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 600
+                        alloys = 600
                     }
                 }
             }
@@ -332,7 +374,7 @@ d_magmatic_oceans = {
                 owner = {
                     add_resource = {
                         consumer_goods = 400
-                        alloys = 40
+                        alloys = 400
                     }
                 }
             }
@@ -346,7 +388,7 @@ d_magmatic_oceans = {
                 owner = {
                     add_resource = {
                         consumer_goods = 500
-                        alloys = 50
+                        alloys = 500
                     }
                 }
             }
@@ -360,7 +402,21 @@ d_magmatic_oceans = {
                 owner = {
                     add_resource = {
                         consumer_goods = 600
-                        alloys = 60
+                        alloys = 600
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 700
+                        alloys = 700
                     }
                 }
             }
@@ -435,7 +491,7 @@ d_impassable_woodlands = {
                 owner = {
                     add_resource = {
                         food = 100
-                        consumer_goods = 10
+                        consumer_goods = 100
                     }
                 }
             }
@@ -449,7 +505,7 @@ d_impassable_woodlands = {
                 owner = {
                     add_resource = {
                         food = 200
-                        consumer_goods = 20
+                        consumer_goods = 200
                     }
                 }
             }
@@ -463,7 +519,21 @@ d_impassable_woodlands = {
                 owner = {
                     add_resource = {
                         food = 300
-                        consumer_goods = 30
+                        consumer_goods = 300
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 400
+                        consumer_goods = 400
                     }
                 }
             }
@@ -539,7 +609,7 @@ d_untouched_woodlands = {
                 owner = {
                     add_resource = {
                         food = 200
-                        consumer_goods = 20
+                        consumer_goods = 200
                     }
                 }
             }
@@ -553,7 +623,7 @@ d_untouched_woodlands = {
                 owner = {
                     add_resource = {
                         food = 300
-                        consumer_goods = 30
+                        consumer_goods = 300
                     }
                 }
             }
@@ -567,7 +637,21 @@ d_untouched_woodlands = {
                 owner = {
                     add_resource = {
                         food = 400
-                        consumer_goods = 40
+                        consumer_goods = 400
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 500
+                        consumer_goods = 500
                     }
                 }
             }
@@ -668,6 +752,19 @@ d_impassable_marshes = {
                 owner = {
                     add_resource = {
                         food = 400
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 500
                     }
                 }
             }
@@ -772,6 +869,19 @@ d_untouched_marshes = {
                     }
                 }
             }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 600
+                    }
+                }
+            }
         }
     }
 
@@ -861,6 +971,19 @@ d_electric_maelstroms = {
                 owner = {
                     add_resource = {
                         energy = 1750
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 2000
                     }
                 }
             }
@@ -962,6 +1085,19 @@ d_ravenous_maelstroms = {
                     }
                 }
             }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 3200
+                    }
+                }
+            }
         }
     }
 
@@ -1056,6 +1192,19 @@ d_giant_tides = {
                     }
                 }
             }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        energy = 3900
+                    }
+                }
+            }
         }
     }
 
@@ -1121,8 +1270,8 @@ d_sandy_marshes = {
                 }
                 owner = {
                     add_resource = {
-                        consumer_goods = 50
-                        alloys = 50
+                        consumer_goods = 100
+                        alloys = 100
                     }
                 }
             }
@@ -1135,8 +1284,8 @@ d_sandy_marshes = {
                 }
                 owner = {
                     add_resource = {
-                        consumer_goods = 75
-                        alloys = 75
+                        consumer_goods = 200
+                        alloys = 200
                     }
                 }
             }
@@ -1149,8 +1298,22 @@ d_sandy_marshes = {
                 }
                 owner = {
                     add_resource = {
-                        consumer_goods = 100
-                        alloys = 100
+                        consumer_goods = 300
+                        alloys = 300
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 400
+                        alloys = 400
                     }
                 }
             }
@@ -1217,8 +1380,8 @@ d_scorched_plains = {
                 }
                 owner = {
                     add_resource = {
-                        consumer_goods = 100
-                        alloys = 100
+                        consumer_goods = 200
+                        alloys = 200
                     }
                 }
             }
@@ -1231,8 +1394,8 @@ d_scorched_plains = {
                 }
                 owner = {
                     add_resource = {
-                        consumer_goods = 150
-                        alloys = 150
+                        consumer_goods = 300
+                        alloys = 300
                     }
                 }
             }
@@ -1245,8 +1408,22 @@ d_scorched_plains = {
                 }
                 owner = {
                     add_resource = {
-                        consumer_goods = 200
-                        alloys = 200
+                        consumer_goods = 400
+                        alloys = 400
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 500
+                        alloys = 500
                     }
                 }
             }
@@ -1330,8 +1507,8 @@ d_isolated_wastelands = {
                 }
                 owner = {
                     add_resource = {
-                        consumer_goods = 150
-                        minerals = 500
+                        consumer_goods = 200
+                        minerals = 600
                     }
                 }
             }
@@ -1344,8 +1521,22 @@ d_isolated_wastelands = {
                 }
                 owner = {
                     add_resource = {
-                        consumer_goods = 200
-                        minerals = 600
+                        consumer_goods = 300
+                        minerals = 800
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        has_technology = "tech_infinitum_environment_utilization"
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        consumer_goods = 400
+                        minerals = 1000
                     }
                 }
             }

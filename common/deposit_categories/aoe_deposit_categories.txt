@@ -1,0 +1,4 @@
+deposit_cat_metamateria = {
+    blocker = no
+    important = yes
+}

@@ -1,0 +1,666 @@
+tech_basic_metamateria_processing = {
+    cost = @technology_ultralow_cost
+    area = engineering
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { industry }
+    prerequisites = {
+        "tech_basic_industry"
+    }
+    weight = @tier1weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_basic_metamateria_processing_title"
+            desc = "tech_basic_metamateria_processing_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_specialist_produces_mult = 0.05
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_worker_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                any_owned_planet = {
+                    has_deposit = "d_metacrystal_caves"
+                }
+                any_owned_planet = {
+                    has_deposit = "d_metacrystal_plains"
+                }
+                any_owned_planet = {
+                    has_deposit = "d_metacrystal_mines"
+                }
+                any_owned_planet = {
+                    has_deposit = "d_metacrystal_matrixes"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_adopt"
+            }
+        }
+        modifier = {
+            factor = 4
+            has_ascension_perk = "ap_interstellar_dominion"
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            OR = {
+                has_valid_civic = "civic_franchising"
+                has_valid_civic = "civic_gospel_of_the_masses"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            OR = {
+                has_authority = "auth_oligarchic"
+                has_authority = "auth_corporate"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_materialist"
+        }
+        modifier = {
+            factor = 1.35
+            has_ethic = "ethic_fanatic_materialist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOR = {
+                any_owned_planet = {
+                    has_deposit = "d_metacrystal_caves"
+                }
+                any_owned_planet = {
+                    has_deposit = "d_metacrystal_plains"
+                }
+                any_owned_planet = {
+                    has_deposit = "d_metacrystal_mines"
+                }
+                any_owned_planet = {
+                    has_deposit = "d_metacrystal_matrixes"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_adopt"
+            }
+        }
+    }
+}
+
+tech_advanced_metamateria_processing = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { industry }
+    prerequisites = {
+        "tech_basic_metamateria_processing"
+        "tech_mining_1"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_advanced_metamateria_processing_title"
+            desc = "tech_advanced_metamateria_processing_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_specialist_produces_mult = 0.05
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_worker_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_prosperity_administrative_operations"
+                has_tradition = "tr_prosperity_sct"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_interstellar_dominion"
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_valid_civic = "civic_franchising"
+                has_valid_civic = "civic_gospel_of_the_masses"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_authority = "auth_oligarchic"
+                has_authority = "auth_corporate"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_materialist"
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = "ethic_fanatic_materialist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.8
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_prosperity_administrative_operations"
+                has_tradition = "tr_prosperity_sct"
+            }
+        }
+    }
+}
+
+tech_supreme_metamateria_processing = {
+    cost = @technology_medium_cost
+    area = engineering
+    tier = 3
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { industry }
+    prerequisites = {
+        "tech_advanced_metamateria_processing"
+        "tech_mining_2"
+    }
+    weight = @tier3weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_supreme_metamateria_processing_title"
+            desc = "tech_supreme_metamateria_processing_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_specialist_produces_mult = 0.05
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_worker_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+                has_tradition = "tr_prosperity_public_works"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_interstellar_dominion"
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_valid_civic = "civic_franchising"
+                has_valid_civic = "civic_gospel_of_the_masses"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_authority = "auth_oligarchic"
+                has_authority = "auth_corporate"
+            }
+        }
+        modifier = {
+            factor = 0.7
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = "ethic_fanatic_materialist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.7
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+                has_tradition = "tr_prosperity_public_works"
+            }
+        }
+    }
+}
+
+tech_transcendence_metamateria_processing = {
+    cost = @technology_high_cost
+    area = engineering
+    tier = 4
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { industry }
+    prerequisites = {
+        "tech_supreme_metamateria_processing"
+        "tech_mineral_purification_1"
+        "tech_alloys_1"
+    }
+    weight = @tier4weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_transcendence_metamateria_processing_title"
+            desc = "tech_transcendence_metamateria_processing_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_specialist_produces_mult = 0.05
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_worker_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 4
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.6
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.8
+            NOR = {
+                has_ethic = "ethic_materialist"
+                has_ethic = "ethic_fanatic_materialist"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.6
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 4
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            NOR = {
+                has_ethic = "ethic_materialist"
+                has_ethic = "ethic_fanatic_materialist"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+    }
+}
+
+tech_infinitum_metamateria_processing = {
+    cost = @technology_ultrahigh_cost
+    area = engineering
+    tier = 5
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { industry }
+    prerequisites = {
+        "tech_transcendence_metamateria_processing"
+        "tech_mining_3"
+        "tech_mineral_purification_2"
+        "tech_alloys_2"
+    }
+    weight = @tier5weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_infinitum_metamateria_processing_title"
+            desc = "tech_infinitum_metamateria_processing_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_specialist_produces_mult = 0.05
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_worker_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_interstellar_dominion"
+            }
+        }
+        modifier = {
+            factor = 0.6
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = society
+                has_level < 4
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 5
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.6
+            NOR = {
+                has_ethic = "ethic_materialist"
+                has_ethic = "ethic_fanatic_materialist"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.6
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = society
+                has_level < 4
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 5
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0.6
+            NOR = {
+                has_ethic = "ethic_materialist"
+                has_ethic = "ethic_fanatic_materialist"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_interstellar_dominion"
+            }
+        }
+    }
+}

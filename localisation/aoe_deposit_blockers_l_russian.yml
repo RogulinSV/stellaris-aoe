@@ -39,3 +39,12 @@
     d_sand_worms_desc:0 "Песчаные черви"
     d_frozen_gas_geysers:0 "£blocker£ Замёрзшие газовые гейзеры"
     d_frozen_gas_geysers_desc:0 "Замёрзшие газовые гейзеры"
+
+    d_metacrystal_caves:0 "Пещеры метакристаллов"
+    d_metacrystal_caves_desc:0 "Пещеры метакристаллов"
+    d_metacrystal_plains:0 "Равнины метакристаллов"
+    d_metacrystal_plains_desc:0 "Равнины метакристаллов"
+    d_metacrystal_mines:0 "Рудники метакристаллов"
+    d_metacrystal_mines_desc:0 "Рудники метакристаллов"
+    d_metacrystal_matrixes:0 "Матрица метакристаллов"
+    d_metacrystal_matrixes_desc:0 "Матрица метакристаллов"

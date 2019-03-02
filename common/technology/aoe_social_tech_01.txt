@@ -1,10 +1,125 @@
+tech_basic_environment_utilization = {
+    cost = @technology_ultralow_cost
+    area = society
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_colonization_1"
+    }
+    weight = @tier1weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_basic_environment_utilization_title"
+            desc = "tech_basic_environment_utilization_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            is_machine_empire = no
+            has_civic = "civic_machine_assimilator"
+            has_civic = "civic_machine_servitor"
+        }
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        pop_environment_tolerance = 0.05
+        planet_colony_development_speed_mult = 0.10
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            has_valid_civic = "civic_gospel_of_the_masses"
+        }
+        modifier = {
+            factor = 1.3
+            OR = {
+                has_authority = "auth_oligarchic"
+                has_authority = "auth_corporate"
+            }
+        }
+        modifier = {
+            factor = 4
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.9
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.9
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+    }
+}
+
 tech_advanced_environment_utilization = {
     cost = @technology_low_cost
     area = society
     tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
     category = { new_worlds }
     prerequisites = {
-        "tech_colonization_1"
+        "tech_basic_environment_utilization"
+        "tech_colonization_2"
     }
     weight = @tier2weight2
 
@@ -41,24 +156,67 @@ tech_advanced_environment_utilization = {
             }
         }
         modifier = {
-            factor = 4
+            factor = 1.2
+            has_valid_civic = "civic_gospel_of_the_masses"
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_authority = "auth_oligarchic"
+                has_authority = "auth_corporate"
+            }
+        }
+        modifier = {
+            factor = 3
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.8
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
         }
         modifier = {
             factor = 1.25
             research_leader = {
                 area = society
-                has_level > 2
+                has_level > 4
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
         modifier = {
             factor = 0
-            num_owned_planets < 2
+            num_owned_planets < 3
         }
     }
 
     ai_weight = {
+        modifier = {
+            factor = 0.8
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
         modifier = {
             factor = 0
             NOR = {
@@ -68,7 +226,7 @@ tech_advanced_environment_utilization = {
         }
         modifier = {
             factor = 0
-            num_owned_planets < 2
+            num_owned_planets < 3
         }
     }
 }
@@ -77,6 +235,9 @@ tech_supreme_environment_utilization = {
     cost = @technology_medium_cost
     area = society
     tier = 3
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
     category = { new_worlds }
     prerequisites = {
         "tech_advanced_environment_utilization"
@@ -104,8 +265,8 @@ tech_supreme_environment_utilization = {
     }
 
     modifier = {
-        pop_environment_tolerance = 0.10
-        planet_colony_development_speed_mult = 0.20
+        pop_environment_tolerance = 0.05
+        planet_colony_development_speed_mult = 0.10
     }
 
     weight_modifier = {
@@ -117,14 +278,45 @@ tech_supreme_environment_utilization = {
             }
         }
         modifier = {
+            factor = 1.1
+            has_valid_civic = "civic_gospel_of_the_masses"
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_authority = "auth_oligarchic"
+                has_authority = "auth_corporate"
+            }
+        }
+        modifier = {
             factor = 2
             has_ascension_perk = "ap_mastery_of_nature"
         }
         modifier = {
-            factor = 1.25
+            factor = 0.7
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.8
             research_leader = {
                 area = society
-                has_level > 3
+                has_level < 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
@@ -135,6 +327,26 @@ tech_supreme_environment_utilization = {
     }
 
     ai_weight = {
+        modifier = {
+            factor = 0.7
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
         modifier = {
             factor = 0
             NOR = {
@@ -153,10 +365,13 @@ tech_transcendence_environment_utilization = {
     cost = @technology_high_cost
     area = society
     tier = 4
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
     category = { new_worlds }
     prerequisites = {
         "tech_supreme_environment_utilization"
-        "tech_colonization_5"
+        "tech_colonization_4"
     }
     weight = @tier4weight2
 
@@ -180,8 +395,129 @@ tech_transcendence_environment_utilization = {
     }
 
     modifier = {
-        pop_environment_tolerance = 0.15
-        planet_colony_development_speed_mult = 0.30
+        pop_environment_tolerance = 0.05
+        planet_colony_development_speed_mult = 0.10
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_finish"
+            }
+        }
+        modifier = {
+            factor = 0.6
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 5
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.6
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 5
+        }
+    }
+}
+
+tech_infinitum_environment_utilization = {
+    cost = @technology_ultrahigh_cost
+    area = society
+    tier = 5
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_transcendence_environment_utilization"
+        "tech_colonization_5"
+    }
+    weight = @tier5weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_infinitum_environment_utilization_title"
+            desc = "tech_infinitum_environment_utilization_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            is_machine_empire = no
+            has_civic = "civic_machine_assimilator"
+            has_civic = "civic_machine_servitor"
+        }
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        pop_environment_tolerance = 0.05
+        planet_colony_development_speed_mult = 0.10
     }
 
     weight_modifier = {
@@ -198,10 +534,38 @@ tech_transcendence_environment_utilization = {
             }
         }
         modifier = {
-            factor = 1.25
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.6
             research_leader = {
                 area = society
-                has_level > 4
+                has_level < 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = society
+                has_level < 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 5
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
@@ -212,6 +576,42 @@ tech_transcendence_environment_utilization = {
     }
 
     ai_weight = {
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.6
+            research_leader = {
+                area = society
+                has_level < 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = society
+                has_level < 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = society
+                has_level < 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = society
+                has_level < 5
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
         modifier = {
             factor = 0
             NOT = {
@@ -235,11 +635,14 @@ tech_molten_environment_utilization = {
     cost = @technology_ultralow_cost
     area = society
     tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
     category = { new_worlds }
     prerequisites = {
         "tech_colonization_1"
     }
-    weight = @tier2weight2
+    weight = @tier2weight1
 
     weight_groups = {
         deposit_blockers
@@ -260,6 +663,10 @@ tech_molten_environment_utilization = {
         modifier = {
             factor = 1.5
             has_technology = "tech_transcendence_environment_utilization"
+        }
+        modifier = {
+            factor = 1.5
+            has_technology = "tech_infinitum_environment_utilization"
         }
         modifier = {
             factor = 1.25
@@ -302,6 +709,31 @@ tech_molten_environment_utilization = {
             factor = 1.25
             research_leader = {
                 area = society
+                has_level > 1
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 4
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
@@ -340,11 +772,14 @@ tech_floral_environment_utilization = {
     cost = @technology_ultralow_cost
     area = society
     tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
     category = { new_worlds }
     prerequisites = {
         "tech_colonization_1"
     }
-    weight = @tier2weight2
+    weight = @tier2weight1
 
     weight_groups = {
         deposit_blockers
@@ -365,6 +800,10 @@ tech_floral_environment_utilization = {
         modifier = {
             factor = 1.5
             has_technology = "tech_transcendence_environment_utilization"
+        }
+        modifier = {
+            factor = 1.5
+            has_technology = "tech_infinitum_environment_utilization"
         }
         modifier = {
             factor = 1.25
@@ -407,6 +846,31 @@ tech_floral_environment_utilization = {
             factor = 1.25
             research_leader = {
                 area = society
+                has_level > 1
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 4
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
@@ -445,11 +909,14 @@ tech_aquatic_environment_utilization = {
     cost = @technology_ultralow_cost
     area = society
     tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
     category = { new_worlds }
     prerequisites = {
         "tech_colonization_1"
     }
-    weight = @tier2weight2
+    weight = @tier2weight1
 
     weight_groups = {
         deposit_blockers
@@ -470,6 +937,10 @@ tech_aquatic_environment_utilization = {
         modifier = {
             factor = 1.5
             has_technology = "tech_transcendence_environment_utilization"
+        }
+        modifier = {
+            factor = 1.5
+            has_technology = "tech_infinitum_environment_utilization"
         }
         modifier = {
             factor = 1.25
@@ -509,6 +980,31 @@ tech_aquatic_environment_utilization = {
             factor = 1.25
             research_leader = {
                 area = society
+                has_level > 1
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 4
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
@@ -544,11 +1040,14 @@ tech_wasteland_environment_utilization = {
     cost = @technology_ultralow_cost
     area = society
     tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
     category = { new_worlds }
     prerequisites = {
         "tech_colonization_1"
     }
-    weight = @tier2weight2
+    weight = @tier2weight1
 
     weight_groups = {
         deposit_blockers
@@ -569,6 +1068,10 @@ tech_wasteland_environment_utilization = {
         modifier = {
             factor = 1.5
             has_technology = "tech_transcendence_environment_utilization"
+        }
+        modifier = {
+            factor = 1.5
+            has_technology = "tech_infinitum_environment_utilization"
         }
         modifier = {
             factor = 1.25
@@ -608,6 +1111,31 @@ tech_wasteland_environment_utilization = {
             factor = 1.25
             research_leader = {
                 area = society
+                has_level > 1
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 4
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
