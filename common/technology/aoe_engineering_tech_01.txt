@@ -62,7 +62,7 @@ tech_basic_metamateria_processing = {
         modifier = {
             factor = 1.15
             research_leader = {
-                area = society
+                area = engineering
                 has_level > 2
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -70,7 +70,7 @@ tech_basic_metamateria_processing = {
         modifier = {
             factor = 1.25
             research_leader = {
-                area = society
+                area = engineering
                 has_level > 3
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -78,7 +78,7 @@ tech_basic_metamateria_processing = {
         modifier = {
             factor = 1.35
             research_leader = {
-                area = society
+                area = engineering
                 has_level > 4
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -191,7 +191,7 @@ tech_advanced_metamateria_processing = {
         modifier = {
             factor = 0.9
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 2
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -199,7 +199,7 @@ tech_advanced_metamateria_processing = {
         modifier = {
             factor = 1.15
             research_leader = {
-                area = society
+                area = engineering
                 has_level > 3
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -207,7 +207,7 @@ tech_advanced_metamateria_processing = {
         modifier = {
             factor = 1.25
             research_leader = {
-                area = society
+                area = engineering
                 has_level > 4
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -248,7 +248,7 @@ tech_advanced_metamateria_processing = {
         modifier = {
             factor = 0.9
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 2
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -312,7 +312,7 @@ tech_supreme_metamateria_processing = {
         modifier = {
             factor = 0.8
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 2
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -320,7 +320,7 @@ tech_supreme_metamateria_processing = {
         modifier = {
             factor = 0.9
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 3
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -328,7 +328,7 @@ tech_supreme_metamateria_processing = {
         modifier = {
             factor = 1.15
             research_leader = {
-                area = society
+                area = engineering
                 has_level > 4
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -365,7 +365,7 @@ tech_supreme_metamateria_processing = {
         modifier = {
             factor = 0.8
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 2
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -373,7 +373,7 @@ tech_supreme_metamateria_processing = {
         modifier = {
             factor = 0.9
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 3
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -433,7 +433,7 @@ tech_transcendence_metamateria_processing = {
         modifier = {
             factor = 0.7
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 2
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -441,7 +441,7 @@ tech_transcendence_metamateria_processing = {
         modifier = {
             factor = 0.8
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 3
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -449,7 +449,7 @@ tech_transcendence_metamateria_processing = {
         modifier = {
             factor = 0.9
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 4
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -475,7 +475,7 @@ tech_transcendence_metamateria_processing = {
         modifier = {
             factor = 0.7
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 2
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -483,7 +483,7 @@ tech_transcendence_metamateria_processing = {
         modifier = {
             factor = 0.8
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 3
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -491,7 +491,7 @@ tech_transcendence_metamateria_processing = {
         modifier = {
             factor = 0.9
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 4
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -564,7 +564,7 @@ tech_infinitum_metamateria_processing = {
         modifier = {
             factor = 0.6
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 2
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -572,7 +572,7 @@ tech_infinitum_metamateria_processing = {
         modifier = {
             factor = 0.7
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 3
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -580,7 +580,7 @@ tech_infinitum_metamateria_processing = {
         modifier = {
             factor = 0.8
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 4
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -588,7 +588,7 @@ tech_infinitum_metamateria_processing = {
         modifier = {
             factor = 0.9
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 5
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -614,7 +614,7 @@ tech_infinitum_metamateria_processing = {
         modifier = {
             factor = 0.6
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 2
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -622,7 +622,7 @@ tech_infinitum_metamateria_processing = {
         modifier = {
             factor = 0.7
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 3
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -630,7 +630,7 @@ tech_infinitum_metamateria_processing = {
         modifier = {
             factor = 0.8
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 4
                 has_trait = "leader_trait_expertise_industry"
             }
@@ -638,7 +638,7 @@ tech_infinitum_metamateria_processing = {
         modifier = {
             factor = 0.9
             research_leader = {
-                area = society
+                area = engineering
                 has_level < 5
                 has_trait = "leader_trait_expertise_industry"
             }
