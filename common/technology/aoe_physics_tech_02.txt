@@ -1,0 +1,1391 @@
+### Missiles weapon damage
+
+tech_basic_missiles_weapon = {
+    cost = @technology_ultralow_cost
+    area = physics
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { propulsion }
+    ai_update_type = military
+    prerequisites = {
+        "tech_missiles_1"
+    }
+    weight = @tier1weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_basic_missiles_weapon_title"
+            desc = "tech_basic_missiles_weapon_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.1
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 4
+            OR = {
+                has_ascension_perk = "ap_galactic_force_projection"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 2
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_level > 3
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = physics
+                has_level > 4
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            OR = {
+                has_valid_civic = "civic_imperial_cult"
+                has_valid_civic = "civic_warrior_culture"
+                has_valid_civic = "civic_machine_terminator"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            OR = {
+                has_authority = "auth_dictatorial"
+                has_authority = "auth_imperial"
+                has_authority = "auth_ancient_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.35
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.9
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+    }
+}
+
+tech_advanced_missiles_weapon = {
+    cost = @technology_low_cost
+    area = physics
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { propulsion }
+    ai_update_type = military
+    prerequisites = {
+        "tech_basic_missiles_weapon"
+        "tech_missiles_2"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_advanced_missiles_weapon_title"
+            desc = "tech_advanced_missiles_weapon_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.1
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+                has_tradition = "tr_supremacy_overwhelming_force"
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                has_ascension_perk = "ap_galactic_force_projection"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 3
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_level > 4
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_valid_civic = "civic_imperial_cult"
+                has_valid_civic = "civic_warrior_culture"
+                has_valid_civic = "civic_machine_terminator"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_authority = "auth_dictatorial"
+                has_authority = "auth_imperial"
+                has_authority = "auth_ancient_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+                has_tradition = "tr_supremacy_overwhelming_force"
+            }
+        }
+    }
+}
+
+tech_supreme_missiles_weapon = {
+    cost = @technology_medium_cost
+    area = physics
+    tier = 3
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { propulsion }
+    ai_update_type = military
+    prerequisites = {
+        "tech_advanced_missiles_weapon"
+        "tech_missiles_3"
+    }
+    weight = @tier3weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_supreme_missiles_weapon_title"
+            desc = "tech_supreme_missiles_weapon_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.1
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_supremacy_war_games"
+                has_tradition = "tr_supremacy_great_game"
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_ascension_perk = "ap_galactic_force_projection"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 4
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_valid_civic = "civic_imperial_cult"
+                has_valid_civic = "civic_warrior_culture"
+                has_valid_civic = "civic_machine_terminator"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_authority = "auth_dictatorial"
+                has_authority = "auth_imperial"
+                has_authority = "auth_ancient_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.6
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.6
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_supremacy_war_games"
+                has_tradition = "tr_supremacy_great_game"
+            }
+        }
+    }
+}
+
+tech_transcendence_missiles_weapon = {
+    cost = @technology_high_cost
+    area = physics
+    tier = 4
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { propulsion }
+    ai_update_type = military
+    prerequisites = {
+        "tech_supreme_missiles_weapon"
+        "tech_missiles_4"
+    }
+    weight = @tier4weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_transcendence_missiles_weapon_title"
+            desc = "tech_transcendence_missiles_weapon_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.1
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 4
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.6
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 4
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.6
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+    }
+}
+
+tech_infinitum_missiles_weapon = {
+    cost = @technology_ultrahigh_cost
+    area = physics
+    tier = 5
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { propulsion }
+    ai_update_type = military
+    prerequisites = {
+        "tech_transcendence_missiles_weapon"
+        "tech_missiles_5"
+    }
+    weight = @tier5weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_infinitum_missiles_weapon_title"
+            desc = "tech_infinitum_missiles_weapon_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.1
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ascension_perk = "ap_galactic_force_projection"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+            }
+        }
+        modifier = {
+            factor = 0.6
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 4
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 5
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.4
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.6
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 4
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 5
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.4
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ascension_perk = "ap_galactic_force_projection"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+            }
+        }
+    }
+}
+
+### Missiles weapon fire rate
+
+tech_basic_missiles_usage = {
+    cost = @technology_ultralow_cost
+    area = physics
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { propulsion }
+    ai_update_type = military
+    prerequisites = {
+        "tech_missiles_1"
+    }
+    weight = @tier1weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_basic_missiles_usage_title"
+            desc = "tech_basic_missiles_usage_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_fire_rate_mult = 0.1
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 4
+            OR = {
+                has_ascension_perk = "ap_galactic_force_projection"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 2
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_level > 3
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = physics
+                has_level > 4
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            OR = {
+                has_valid_civic = "civic_imperial_cult"
+                has_valid_civic = "civic_warrior_culture"
+                has_valid_civic = "civic_machine_terminator"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            OR = {
+                has_authority = "auth_dictatorial"
+                has_authority = "auth_imperial"
+                has_authority = "auth_ancient_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.35
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.9
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_adopt"
+            }
+        }
+    }
+}
+
+tech_advanced_missiles_usage = {
+    cost = @technology_low_cost
+    area = physics
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { propulsion }
+    ai_update_type = military
+    prerequisites = {
+        "tech_basic_missiles_usage"
+        "tech_missiles_2"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_advanced_missiles_usage_title"
+            desc = "tech_advanced_missiles_usage_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_fire_rate_mult = 0.1
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+                has_tradition = "tr_supremacy_overwhelming_force"
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                has_ascension_perk = "ap_galactic_force_projection"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 3
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_level > 4
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_valid_civic = "civic_imperial_cult"
+                has_valid_civic = "civic_warrior_culture"
+                has_valid_civic = "civic_machine_terminator"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_authority = "auth_dictatorial"
+                has_authority = "auth_imperial"
+                has_authority = "auth_ancient_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_supremacy_master_shipwrights"
+                has_tradition = "tr_supremacy_overwhelming_force"
+            }
+        }
+    }
+}
+
+tech_supreme_missiles_usage = {
+    cost = @technology_medium_cost
+    area = physics
+    tier = 3
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { propulsion }
+    ai_update_type = military
+    prerequisites = {
+        "tech_advanced_missiles_usage"
+        "tech_missiles_3"
+    }
+    weight = @tier3weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_supreme_missiles_usage_title"
+            desc = "tech_supreme_missiles_usage_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_fire_rate_mult = 0.1
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_supremacy_war_games"
+                has_tradition = "tr_supremacy_great_game"
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_ascension_perk = "ap_galactic_force_projection"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_level > 4
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_valid_civic = "civic_imperial_cult"
+                has_valid_civic = "civic_warrior_culture"
+                has_valid_civic = "civic_machine_terminator"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_authority = "auth_dictatorial"
+                has_authority = "auth_imperial"
+                has_authority = "auth_ancient_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.6
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.7
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.6
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_supremacy_war_games"
+                has_tradition = "tr_supremacy_great_game"
+            }
+        }
+    }
+}
+
+tech_transcendence_missiles_usage = {
+    cost = @technology_high_cost
+    area = physics
+    tier = 4
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { propulsion }
+    ai_update_type = military
+    prerequisites = {
+        "tech_supreme_missiles_usage"
+        "tech_missiles_4"
+    }
+    weight = @tier4weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_transcendence_missiles_usage_title"
+            desc = "tech_transcendence_missiles_usage_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_fire_rate_mult = 0.1
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 4
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.6
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 4
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.6
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+    }
+}
+
+tech_infinitum_missiles_usage = {
+    cost = @technology_ultrahigh_cost
+    area = physics
+    tier = 5
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { propulsion }
+    ai_update_type = military
+    prerequisites = {
+        "tech_transcendence_missiles_usage"
+        "tech_missiles_5"
+    }
+    weight = @tier5weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_infinitum_missiles_usage_title"
+            desc = "tech_infinitum_missiles_usage_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        weapon_type_explosive_weapon_fire_rate_mult = 0.1
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ascension_perk = "ap_galactic_force_projection"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+            }
+        }
+        modifier = {
+            factor = 0.6
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 4
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 5
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.4
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.6
+            research_leader = {
+                area = physics
+                has_level < 2
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.7
+            research_leader = {
+                area = physics
+                has_level < 3
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = physics
+                has_level < 4
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.9
+            research_leader = {
+                area = physics
+                has_level < 5
+                NOT = {
+                    has_trait = "leader_trait_expertise_propulsion"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = "ethic_pacifist"
+        }
+        modifier = {
+            factor = 0.4
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_supremacy_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ascension_perk = "ap_galactic_force_projection"
+                has_ascension_perk = "ap_defender_of_the_galaxy"
+            }
+        }
+    }
+}
