@@ -1,3 +1,5 @@
+### Laser weapon damage
+
 tech_basic_laser_weapon = {
     cost = @technology_ultralow_cost
     area = physics
@@ -173,7 +175,9 @@ tech_advanced_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -232,7 +236,9 @@ tech_advanced_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -306,7 +312,9 @@ tech_supreme_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -314,7 +322,9 @@ tech_supreme_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -361,7 +371,9 @@ tech_supreme_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -369,7 +381,9 @@ tech_supreme_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -435,7 +449,9 @@ tech_transcendence_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -443,7 +459,9 @@ tech_transcendence_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -451,7 +469,9 @@ tech_transcendence_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 4
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -470,7 +490,9 @@ tech_transcendence_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -478,7 +500,9 @@ tech_transcendence_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -486,7 +510,9 @@ tech_transcendence_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 4
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -558,7 +584,9 @@ tech_infinitum_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -566,7 +594,9 @@ tech_infinitum_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -574,7 +604,9 @@ tech_infinitum_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 4
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -582,7 +614,9 @@ tech_infinitum_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 5
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -601,7 +635,9 @@ tech_infinitum_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -609,7 +645,9 @@ tech_infinitum_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -617,7 +655,9 @@ tech_infinitum_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 4
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -625,7 +665,9 @@ tech_infinitum_laser_weapon = {
             research_leader = {
                 area = physics
                 has_level < 5
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -652,7 +694,7 @@ tech_infinitum_laser_weapon = {
     }
 }
 
-###
+### Laser weapon fire rate
 
 tech_basic_laser_usage = {
     cost = @technology_ultralow_cost
@@ -829,7 +871,9 @@ tech_advanced_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -888,7 +932,9 @@ tech_advanced_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -962,7 +1008,9 @@ tech_supreme_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -970,7 +1018,9 @@ tech_supreme_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1017,7 +1067,9 @@ tech_supreme_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1025,7 +1077,9 @@ tech_supreme_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1091,7 +1145,9 @@ tech_transcendence_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1099,7 +1155,9 @@ tech_transcendence_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1107,7 +1165,9 @@ tech_transcendence_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 4
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1126,7 +1186,9 @@ tech_transcendence_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1134,7 +1196,9 @@ tech_transcendence_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1142,7 +1206,9 @@ tech_transcendence_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 4
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1214,7 +1280,9 @@ tech_infinitum_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1222,7 +1290,9 @@ tech_infinitum_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1230,7 +1300,9 @@ tech_infinitum_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 4
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1238,7 +1310,9 @@ tech_infinitum_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 5
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1257,7 +1331,9 @@ tech_infinitum_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 2
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1265,7 +1341,9 @@ tech_infinitum_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 3
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1273,7 +1351,9 @@ tech_infinitum_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 4
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
@@ -1281,7 +1361,9 @@ tech_infinitum_laser_usage = {
             research_leader = {
                 area = physics
                 has_level < 5
-                has_trait = "leader_trait_expertise_particles"
+                NOT = {
+                    has_trait = "leader_trait_expertise_particles"
+                }
             }
         }
         modifier = {
