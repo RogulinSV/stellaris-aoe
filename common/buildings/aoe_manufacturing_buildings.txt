@@ -1,0 +1,740 @@
+building_metamateria_factory_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 360
+    category = manufacturing
+
+    upgrades = {
+        building_metamateria_factory_2
+    }
+
+    potential = {
+        habitable_planet = yes
+        has_upgraded_capital = yes
+        NOR = {
+            has_modifier = "resort_colony"
+            has_modifier = "slave_colony"
+        }
+        OR = {
+            has_deposit = "d_metacrystal_caves"
+            has_deposit = "d_metacrystal_plains"
+            has_deposit = "d_metacrystal_mines"
+            has_deposit = "d_metacrystal_matrixes"
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            energy = 500
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    NOT = {
+                        has_deficit = energy
+                    }
+                }
+            }
+            alloys = 1
+        }
+    }
+
+    planet_modifier = {
+        planet_crime_add = 2
+    }
+
+    country_modifier = {
+        country_resource_max_add = 100
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        modifier = {
+            job_metamateria_engineer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        text = "job_metamateria_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        modifier = {
+            job_metamateria_drone_engineer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        text = "job_metamateria_drone_engineer_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 5
+            owner = { 
+                has_monthly_income = {
+                    resource = alloys
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 3
+                }
+            }
+        }
+    }
+
+    ai_resource_production = {
+        alloys = 1
+        trigger = {
+            always = yes
+        }
+    }
+
+    prerequisites = {
+        "tech_basic_metamateria_processing"
+    }
+}
+
+building_metamateria_factory_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 720
+    category = manufacturing
+
+    upgrades = {
+        building_metamateria_factory_3
+    }
+
+    potential = {
+        habitable_planet = yes
+        has_upgraded_capital = yes
+        NOR = {
+            has_modifier = "resort_colony"
+            has_modifier = "slave_colony"
+        }
+        OR = {
+            has_deposit = "d_metacrystal_caves"
+            has_deposit = "d_metacrystal_plains"
+            has_deposit = "d_metacrystal_mines"
+            has_deposit = "d_metacrystal_matrixes"
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            energy = 1000
+        }
+        upkeep = {
+            energy = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    NOT = {
+                        has_deficit = energy
+                    }
+                }
+            }
+            alloys = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_crime_add = 3
+    }
+
+    country_modifier = {
+        country_resource_max_add = 200
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        modifier = {
+            job_metamateria_engineer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        text = "job_metamateria_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        modifier = {
+            job_metamateria_drone_engineer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        text = "job_metamateria_drone_engineer_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 5
+            owner = { 
+                has_monthly_income = {
+                    resource = alloys
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 4
+                }
+            }
+        }
+    }
+
+    ai_resource_production = {
+        alloys = 1
+        trigger = {
+            always = yes
+        }
+    }
+
+    prerequisites = {
+        "tech_advanced_metamateria_processing"
+    }
+}
+
+building_metamateria_factory_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1080
+    category = manufacturing
+
+    upgrades = {
+        building_metamateria_factory_4
+    }
+
+    potential = {
+        habitable_planet = yes
+        has_major_upgraded_capital = yes
+        NOR = {
+            has_modifier = "resort_colony"
+            has_modifier = "slave_colony"
+        }
+        OR = {
+            has_deposit = "d_metacrystal_caves"
+            has_deposit = "d_metacrystal_plains"
+            has_deposit = "d_metacrystal_mines"
+            has_deposit = "d_metacrystal_matrixes"
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1500
+            energy = 1500
+        }
+        upkeep = {
+            energy = 5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    NOT = {
+                        has_deficit = energy
+                    }
+                }
+            }
+            alloys = 4
+        }
+    }
+
+    planet_modifier = {
+        planet_crime_add = 5
+    }
+
+    country_modifier = {
+        country_resource_max_add = 300
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        modifier = {
+            job_metamateria_engineer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        text = "job_metamateria_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        modifier = {
+            job_metamateria_drone_engineer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        text = "job_metamateria_drone_engineer_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 5
+            owner = { 
+                has_monthly_income = {
+                    resource = alloys
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 5
+                }
+            }
+        }
+    }
+
+    ai_resource_production = {
+        alloys = 1
+        trigger = {
+            always = yes
+        }
+    }
+
+    prerequisites = {
+        "tech_supreme_metamateria_processing"
+    }
+}
+
+building_metamateria_factory_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1440
+    category = manufacturing
+
+    upgrades = {
+        building_metamateria_factory_5
+    }
+
+    potential = {
+        habitable_planet = yes
+        has_major_upgraded_capital = yes
+        NOR = {
+            has_modifier = "resort_colony"
+            has_modifier = "slave_colony"
+        }
+        OR = {
+            has_deposit = "d_metacrystal_caves"
+            has_deposit = "d_metacrystal_plains"
+            has_deposit = "d_metacrystal_mines"
+            has_deposit = "d_metacrystal_matrixes"
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+            energy = 2000
+        }
+        upkeep = {
+            energy = 6
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    NOT = {
+                        has_deficit = energy
+                    }
+                }
+            }
+            alloys = 8
+        }
+    }
+
+    planet_modifier = {
+        planet_crime_add = 8
+    }
+
+    country_modifier = {
+        country_resource_max_add = 400
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        modifier = {
+            job_metamateria_engineer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        text = "job_metamateria_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        modifier = {
+            job_metamateria_drone_engineer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        text = "job_metamateria_drone_engineer_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 5
+            owner = { 
+                has_monthly_income = {
+                    resource = alloys
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+    }
+
+    ai_resource_production = {
+        alloys = 1
+        trigger = {
+            always = yes
+        }
+    }
+
+    prerequisites = {
+        "tech_transcendence_metamateria_processing"
+    }
+}
+
+building_metamateria_factory_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1800
+    category = manufacturing
+
+    potential = {
+        habitable_planet = yes
+        has_fully_upgraded_capital = yes
+        NOR = {
+            has_modifier = "resort_colony"
+            has_modifier = "slave_colony"
+        }
+        OR = {
+            has_deposit = "d_metacrystal_caves"
+            has_deposit = "d_metacrystal_plains"
+            has_deposit = "d_metacrystal_mines"
+            has_deposit = "d_metacrystal_matrixes"
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2500
+            energy = 2500
+        }
+        upkeep = {
+            energy = 8
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    NOT = {
+                        has_deficit = energy
+                    }
+                }
+            }
+            alloys = 15
+        }
+    }
+
+    planet_modifier = {
+        planet_crime_add = 12
+    }
+
+    country_modifier = {
+        country_resource_max_add = 500
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        modifier = {
+            job_metamateria_engineer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        text = "job_metamateria_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        modifier = {
+            job_metamateria_drone_engineer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_machine_empire = no
+                is_fallen_empire = no
+                is_hive_empire = no
+            }
+        }
+        text = "job_metamateria_drone_engineer_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 5
+            owner = { 
+                has_monthly_income = {
+                    resource = alloys
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 8
+                }
+            }
+        }
+    }
+
+    ai_resource_production = {
+        alloys = 1
+        trigger = {
+            always = yes
+        }
+    }
+
+    prerequisites = {
+        "tech_infinitum_metamateria_processing"
+    }
+}

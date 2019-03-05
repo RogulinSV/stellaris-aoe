@@ -2,6 +2,7 @@
 
 tech_basic_metamateria_processing = {
     # Unlocks "Metamateria Factory" district
+    # Unlocks "Metamateria Factory" building
 
     cost = @technology_ultralow_cost
     area = engineering
