@@ -90,6 +90,29 @@ country_event = {
                     initializer = "anthem_of_eternity_neighbor_d"
                 }
             }
+            every_system = {
+                limit = {
+                    has_star_flag = "flags_aoe_neighbor_world"
+                }
+                while = {
+                    count = 3
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 3
+                        limit = {
+                            NOR = {
+                                is_same_value = prev
+                                has_hyperlane_to = prev
+                            }
+                        }
+                        add_hyperlane = {
+                            from = this
+                            to = prev
+                        }
+                        log = "System [This.GetName] connected with [Prev.GetName]"
+                    }
+                }
+            }
         }
     }
     option = {
