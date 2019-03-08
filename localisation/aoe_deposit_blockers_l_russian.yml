@@ -39,6 +39,8 @@
     d_sand_worms_desc:0 "Песчаные черви"
     d_frozen_gas_geysers:0 "£blocker£ Замёрзшие газовые гейзеры"
     d_frozen_gas_geysers_desc:0 "Замёрзшие газовые гейзеры"
+    d_parasitic_bioplasm:0 "£blocker£ Паразитическая биоплазма"
+    d_parasitic_bioplasm_desc:0 "Паразитическая биоплазма"
 
     d_metacrystal_caves:0 "Пещеры метакристаллов"
     d_metacrystal_caves_desc:0 "Пещеры метакристаллов"

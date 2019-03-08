@@ -39,18 +39,9 @@ tech_basic_metamateria_processing = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NOR = {
+            NOT = {
                 any_owned_planet = {
-                    has_deposit = "d_metacrystal_caves"
-                }
-                any_owned_planet = {
-                    has_deposit = "d_metacrystal_plains"
-                }
-                any_owned_planet = {
-                    has_deposit = "d_metacrystal_mines"
-                }
-                any_owned_planet = {
-                    has_deposit = "d_metacrystal_matrixes"
+                    has_metacrystal_deposit = yes
                 }
             }
         }
@@ -119,18 +110,9 @@ tech_basic_metamateria_processing = {
     ai_weight = {
         modifier = {
             factor = 0
-            NOR = {
+            NOT = {
                 any_owned_planet = {
-                    has_deposit = "d_metacrystal_caves"
-                }
-                any_owned_planet = {
-                    has_deposit = "d_metacrystal_plains"
-                }
-                any_owned_planet = {
-                    has_deposit = "d_metacrystal_mines"
-                }
-                any_owned_planet = {
-                    has_deposit = "d_metacrystal_matrixes"
+                    has_metacrystal_deposit = yes
                 }
             }
         }

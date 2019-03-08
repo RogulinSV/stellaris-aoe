@@ -1860,3 +1860,62 @@ d_frozen_gas_geysers = {
 
     # prerequisites = { "tech_dense_jungle" }
 }
+
+d_parasitic_bioplasm = {
+    icon = d_parasitic_bioplasm
+    time = 750
+
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+
+    blocker_swap_types = {
+        d_metacrystal_mines
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_cold = yes
+            is_planet_class = pc_nuked
+        }
+    }
+
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 500
+            minerals = 800
+        }
+    }
+
+    planet_modifier = { 
+        planet_max_districts_add = -1
+        # pop_growth_speed = -0.05
+        # pop_citizen_happiness = -0.05
+        pop_growth_from_immigration = -0.05
+        planet_immigration_pull_mult = 0.05
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_arctic
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+
+    prerequisites = {
+        "tech_parasitic_disinsection"
+    }
+}

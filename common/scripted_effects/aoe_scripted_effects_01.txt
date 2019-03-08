@@ -344,6 +344,9 @@ effects_add_planet_blocker = {
                     5 = {
                         add_deposit = d_massive_glacier
                     }
+                    3 = {
+                        add_deposit = d_parasitic_bioplasm
+                    }
                     5 = {
                         # -2D
                         add_deposit = d_active_volcano
@@ -367,6 +370,9 @@ effects_add_planet_blocker = {
                     }
                     5 = {
                         add_deposit = d_massive_glacier
+                    }
+                    3 = {
+                        add_deposit = d_parasitic_bioplasm
                     }
                     5 = {
                         # -2D
@@ -395,6 +401,9 @@ effects_add_planet_blocker = {
                     5 = {
                         add_deposit = d_massive_glacier
                     }
+                    3 = {
+                        add_deposit = d_parasitic_bioplasm
+                    }
                     5 = {
                         # -2D
                         add_deposit = d_active_volcano
@@ -407,6 +416,9 @@ effects_add_planet_blocker = {
             }
             pc_nuked = {
                 random_list = {
+                    10 = {
+                        add_deposit = d_parasitic_bioplasm
+                    }
                     5 = {
                         add_deposit = d_bomb_crater
                     }

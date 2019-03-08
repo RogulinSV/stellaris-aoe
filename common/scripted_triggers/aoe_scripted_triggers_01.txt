@@ -1,0 +1,9 @@
+# Scope: planet
+has_metacrystal_deposit = {
+    OR = {
+        has_deposit = "d_metacrystal_caves"
+        has_deposit = "d_metacrystal_plains"
+        has_deposit = "d_metacrystal_mines"
+        has_deposit = "d_metacrystal_matrixes"
+    }
+}
