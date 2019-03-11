@@ -1,6 +1,6 @@
 ### Ecology adaptation
 
-tech_basic_environment_utilization = {
+tech_environment_utilization_1 = {
     cost = @technology_ultralow_cost
     area = society
     tier = 1
@@ -15,8 +15,8 @@ tech_basic_environment_utilization = {
 
     prereqfor_desc = {
         feature = {
-            title = "tech_basic_environment_utilization_title"
-            desc = "tech_basic_environment_utilization_desc"
+            title = "tech_environment_utilization_1_title"
+            desc = "tech_environment_utilization_1_desc"
         }
     }
 
@@ -111,7 +111,7 @@ tech_basic_environment_utilization = {
     }
 }
 
-tech_advanced_environment_utilization = {
+tech_environment_utilization_2 = {
     cost = @technology_low_cost
     area = society
     tier = 2
@@ -120,15 +120,15 @@ tech_advanced_environment_utilization = {
     is_reverse_engineerable = no
     category = { new_worlds }
     prerequisites = {
-        "tech_basic_environment_utilization"
+        "tech_environment_utilization_1"
         "tech_colonization_2"
     }
     weight = @tier2weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_advanced_environment_utilization_title"
-            desc = "tech_advanced_environment_utilization_desc"
+            title = "tech_environment_utilization_2_title"
+            desc = "tech_environment_utilization_2_desc"
         }
     }
 
@@ -237,7 +237,7 @@ tech_advanced_environment_utilization = {
     }
 }
 
-tech_supreme_environment_utilization = {
+tech_environment_utilization_3 = {
     cost = @technology_medium_cost
     area = society
     tier = 3
@@ -246,15 +246,15 @@ tech_supreme_environment_utilization = {
     is_reverse_engineerable = no
     category = { new_worlds }
     prerequisites = {
-        "tech_advanced_environment_utilization"
+        "tech_environment_utilization_2"
         "tech_colonization_3"
     }
     weight = @tier3weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_supreme_environment_utilization_title"
-            desc = "tech_supreme_environment_utilization_desc"
+            title = "tech_environment_utilization_3_title"
+            desc = "tech_environment_utilization_3_desc"
         }
     }
 
@@ -375,7 +375,7 @@ tech_supreme_environment_utilization = {
     }
 }
 
-tech_transcendence_environment_utilization = {
+tech_environment_utilization_4 = {
     cost = @technology_high_cost
     area = society
     tier = 4
@@ -384,15 +384,15 @@ tech_transcendence_environment_utilization = {
     is_reverse_engineerable = no
     category = { new_worlds }
     prerequisites = {
-        "tech_supreme_environment_utilization"
+        "tech_environment_utilization_3"
         "tech_colonization_4"
     }
     weight = @tier4weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_transcendence_environment_utilization_title"
-            desc = "tech_transcendence_environment_utilization_desc"
+            title = "tech_environment_utilization_4_title"
+            desc = "tech_environment_utilization_4_desc"
         }
     }
 
@@ -508,7 +508,7 @@ tech_transcendence_environment_utilization = {
     }
 }
 
-tech_infinitum_environment_utilization = {
+tech_environment_utilization_5 = {
     cost = @technology_ultrahigh_cost
     area = society
     tier = 5
@@ -517,15 +517,15 @@ tech_infinitum_environment_utilization = {
     is_reverse_engineerable = no
     category = { new_worlds }
     prerequisites = {
-        "tech_transcendence_environment_utilization"
+        "tech_environment_utilization_4"
         "tech_colonization_5"
     }
     weight = @tier5weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_infinitum_environment_utilization_title"
-            desc = "tech_infinitum_environment_utilization_desc"
+            title = "tech_environment_utilization_5_title"
+            desc = "tech_environment_utilization_5_desc"
         }
     }
 
@@ -675,7 +675,7 @@ tech_infinitum_environment_utilization = {
 
 ### Removing blockers
 
-tech_molten_environment_utilization = {
+tech_environment_utilization_molten = {
     cost = @technology_ultralow_cost
     area = society
     tier = 2
@@ -698,19 +698,19 @@ tech_molten_environment_utilization = {
     weight_modifier = {
         modifier = {
             factor = 1.5
-            has_technology = "tech_advanced_environment_utilization"
+            has_technology = "tech_environment_utilization_2"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_supreme_environment_utilization"
+            has_technology = "tech_environment_utilization_3"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_transcendence_environment_utilization"
+            has_technology = "tech_environment_utilization_4"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_infinitum_environment_utilization"
+            has_technology = "tech_environment_utilization_5"
         }
         modifier = {
             factor = 1.25
@@ -812,7 +812,7 @@ tech_molten_environment_utilization = {
     }
 }
 
-tech_floral_environment_utilization = {
+tech_environment_utilization_floral = {
     cost = @technology_ultralow_cost
     area = society
     tier = 2
@@ -835,19 +835,19 @@ tech_floral_environment_utilization = {
     weight_modifier = {
         modifier = {
             factor = 1.5
-            has_technology = "tech_advanced_environment_utilization"
+            has_technology = "tech_environment_utilization_2"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_supreme_environment_utilization"
+            has_technology = "tech_environment_utilization_3"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_transcendence_environment_utilization"
+            has_technology = "tech_environment_utilization_4"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_infinitum_environment_utilization"
+            has_technology = "tech_environment_utilization_5"
         }
         modifier = {
             factor = 1.25
@@ -949,7 +949,7 @@ tech_floral_environment_utilization = {
     }
 }
 
-tech_aquatic_environment_utilization = {
+tech_environment_utilization_aquatic = {
     cost = @technology_ultralow_cost
     area = society
     tier = 2
@@ -972,19 +972,19 @@ tech_aquatic_environment_utilization = {
     weight_modifier = {
         modifier = {
             factor = 1.5
-            has_technology = "tech_advanced_environment_utilization"
+            has_technology = "tech_environment_utilization_2"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_supreme_environment_utilization"
+            has_technology = "tech_environment_utilization_3"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_transcendence_environment_utilization"
+            has_technology = "tech_environment_utilization_4"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_infinitum_environment_utilization"
+            has_technology = "tech_environment_utilization_5"
         }
         modifier = {
             factor = 1.25
@@ -1080,7 +1080,7 @@ tech_aquatic_environment_utilization = {
     }
 }
 
-tech_wasteland_environment_utilization = {
+tech_environment_utilization_wasteland = {
     cost = @technology_ultralow_cost
     area = society
     tier = 2
@@ -1103,19 +1103,19 @@ tech_wasteland_environment_utilization = {
     weight_modifier = {
         modifier = {
             factor = 1.5
-            has_technology = "tech_advanced_environment_utilization"
+            has_technology = "tech_environment_utilization_2"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_supreme_environment_utilization"
+            has_technology = "tech_environment_utilization_3"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_transcendence_environment_utilization"
+            has_technology = "tech_environment_utilization_4"
         }
         modifier = {
             factor = 1.5
-            has_technology = "tech_infinitum_environment_utilization"
+            has_technology = "tech_environment_utilization_5"
         }
         modifier = {
             factor = 1.25
@@ -1211,7 +1211,7 @@ tech_wasteland_environment_utilization = {
     }
 }
 
-tech_parasitic_disinsection = {
+tech_disinsection_parasitic = {
     cost = @technology_low_cost
     area = society
     tier = 2
@@ -1234,19 +1234,19 @@ tech_parasitic_disinsection = {
     weight_modifier = {
         modifier = {
             factor = 1.1
-            has_technology = "tech_advanced_environment_utilization"
+            has_technology = "tech_environment_utilization_2"
         }
         modifier = {
             factor = 1.1
-            has_technology = "tech_supreme_environment_utilization"
+            has_technology = "tech_environment_utilization_3"
         }
         modifier = {
             factor = 1.1
-            has_technology = "tech_transcendence_environment_utilization"
+            has_technology = "tech_environment_utilization_4"
         }
         modifier = {
             factor = 1.1
-            has_technology = "tech_infinitum_environment_utilization"
+            has_technology = "tech_environment_utilization_5"
         }
         modifier = {
             factor = 3

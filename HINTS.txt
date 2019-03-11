@@ -1,0 +1,4 @@
+has_encountered_other_species = yes
+mid_game_years_passed >= 0
+end_game_years_passed >= 0
+num_ascension_perks > 0

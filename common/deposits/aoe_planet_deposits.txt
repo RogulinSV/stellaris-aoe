@@ -15,7 +15,7 @@ d_metacrystal_caves = {
     }
 
     planet_modifier = {
-        district_metamateria_factory_max = 1
+        district_industrial_complex_max = 1
     }
 
     potential = {
@@ -55,7 +55,7 @@ d_metacrystal_plains = {
     }
 
     planet_modifier = {
-        district_metamateria_factory_max = 1
+        district_industrial_complex_max = 1
     }
 
     potential = {
@@ -96,7 +96,7 @@ d_metacrystal_mines = {
     }
 
     planet_modifier = {
-        district_metamateria_factory_max = 1
+        district_industrial_complex_max = 1
     }
 
     potential = {
@@ -136,7 +136,7 @@ d_metacrystal_matrixes = {
     }
 
     planet_modifier = {
-        district_metamateria_factory_max = 1
+        district_industrial_complex_max = 1
     }
 
     potential = {

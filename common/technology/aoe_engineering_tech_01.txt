@@ -1,10 +1,9 @@
-### Metamateria processing
+### Industrial district and complexes
 
-tech_basic_metamateria_processing = {
-    # Unlocks "Metamateria Factory" district
-    # Unlocks "Metamateria Factory" building
+tech_industrial_district = {
+    # Unlocks "Industrial" district
 
-    cost = @technology_ultralow_cost
+    cost = @technology_extralow_cost
     area = engineering
     tier = 1
     is_rare = no
@@ -14,12 +13,65 @@ tech_basic_metamateria_processing = {
     prerequisites = {
         "tech_basic_industry"
     }
-    weight = @tier1weight2
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
-            title = "tech_basic_metamateria_processing_title"
-            desc = "tech_basic_metamateria_processing_desc"
+            title = "tech_industrial_district_title"
+            desc = "tech_industrial_district_desc"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_crystallite_deposits = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            years_passed < 5
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_crystallite_deposits = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            years_passed < 5
+        }
+    }
+}
+
+tech_industrial_complex_1 = {
+    # Unlocks "Industrial Complex I" building
+
+    cost = @technology_extralow_cost
+    area = engineering
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { industry }
+    prerequisites = {
+        "tech_industrial_district"
+    }
+    weight = @tier1weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_industrial_complex_1_title"
+            desc = "tech_industrial_complex_1_desc"
         }
     }
 
@@ -31,24 +83,129 @@ tech_basic_metamateria_processing = {
     }
 
     modifier = {
-        planet_jobs_specialist_produces_mult = 0.05
-        planet_jobs_complex_drone_produces_mult = 0.05
-        planet_jobs_worker_produces_mult = 0.05
+        planet_jobs_specialist_produces_mult = 0.02
+        planet_jobs_complex_drone_produces_mult = 0.02
+        planet_jobs_worker_produces_mult = 0.02
     }
 
     weight_modifier = {
         modifier = {
             factor = 0
             NOT = {
-                any_owned_planet = {
-                    has_metacrystal_deposit = yes
-                }
+                has_tradition = "tr_prosperity_adopt"
             }
         }
+        modifier = {
+            factor = 5
+            has_ascension_perk = "ap_interstellar_dominion"
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.45
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            OR = {
+                has_valid_civic = "civic_franchising"
+                has_valid_civic = "civic_gospel_of_the_masses"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            OR = {
+                has_authority = "auth_oligarchic"
+                has_authority = "auth_corporate"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            has_ethic = "ethic_materialist"
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = "ethic_fanatic_materialist"
+        }
+    }
+
+    ai_weight = {
         modifier = {
             factor = 0
             NOT = {
                 has_tradition = "tr_prosperity_adopt"
+            }
+        }
+    }
+}
+
+tech_industrial_complex_2 = {
+    # Unlocks "Industrial Complex II" building
+
+    cost = @technology_ultralow_cost
+    area = engineering
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { industry }
+    prerequisites = {
+        "tech_industrial_complex_1"
+    }
+    weight = @tier1weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_industrial_complex_2_title"
+            desc = "tech_industrial_complex_2_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_specialist_produces_mult = 0.04
+        planet_jobs_complex_drone_produces_mult = 0.04
+        planet_jobs_worker_produces_mult = 0.04
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_prosperity_administrative_operations"
+                has_tradition = "tr_prosperity_sct"
             }
         }
         modifier = {
@@ -109,27 +266,22 @@ tech_basic_metamateria_processing = {
 
     ai_weight = {
         modifier = {
-            factor = 0
-            NOT = {
-                any_owned_planet = {
-                    has_metacrystal_deposit = yes
-                }
-            }
-        }
-        modifier = {
             factor = 0.9
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
             factor = 0
-            NOT = {
-                has_tradition = "tr_prosperity_adopt"
+            NOR = {
+                has_tradition = "tr_prosperity_administrative_operations"
+                has_tradition = "tr_prosperity_sct"
             }
         }
     }
 }
 
-tech_advanced_metamateria_processing = {
+tech_industrial_complex_3 = {
+    # Unlocks "Industrial Complex III" building
+
     cost = @technology_low_cost
     area = engineering
     tier = 2
@@ -138,15 +290,14 @@ tech_advanced_metamateria_processing = {
     is_reverse_engineerable = no
     category = { industry }
     prerequisites = {
-        "tech_basic_metamateria_processing"
-        "tech_mining_1"
+        "tech_industrial_complex_2"
     }
     weight = @tier2weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_advanced_metamateria_processing_title"
-            desc = "tech_advanced_metamateria_processing_desc"
+            title = "tech_industrial_complex_3_title"
+            desc = "tech_industrial_complex_3_desc"
         }
     }
 
@@ -158,17 +309,18 @@ tech_advanced_metamateria_processing = {
     }
 
     modifier = {
-        planet_jobs_specialist_produces_mult = 0.05
-        planet_jobs_complex_drone_produces_mult = 0.05
-        planet_jobs_worker_produces_mult = 0.05
+        planet_jobs_specialist_produces_mult = 0.06
+        planet_jobs_complex_drone_produces_mult = 0.06
+        planet_jobs_worker_produces_mult = 0.06
     }
 
     weight_modifier = {
         modifier = {
             factor = 0
             NOR = {
-                has_tradition = "tr_prosperity_administrative_operations"
-                has_tradition = "tr_prosperity_sct"
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+                has_tradition = "tr_prosperity_public_works"
+                has_tradition = "tr_prosperity_interstellar_franchising"
             }
         }
         modifier = {
@@ -247,14 +399,17 @@ tech_advanced_metamateria_processing = {
         modifier = {
             factor = 0
             NOR = {
-                has_tradition = "tr_prosperity_administrative_operations"
-                has_tradition = "tr_prosperity_sct"
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+                has_tradition = "tr_prosperity_public_works"
+                has_tradition = "tr_prosperity_interstellar_franchising"
             }
         }
     }
 }
 
-tech_supreme_metamateria_processing = {
+tech_industrial_complex_4 = {
+    # Unlocks "Industrial Complex IV" building
+
     cost = @technology_medium_cost
     area = engineering
     tier = 3
@@ -263,15 +418,14 @@ tech_supreme_metamateria_processing = {
     is_reverse_engineerable = no
     category = { industry }
     prerequisites = {
-        "tech_advanced_metamateria_processing"
-        "tech_mining_2"
+        "tech_industrial_complex_3"
     }
     weight = @tier3weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_supreme_metamateria_processing_title"
-            desc = "tech_supreme_metamateria_processing_desc"
+            title = "tech_industrial_complex_4_title"
+            desc = "tech_industrial_complex_4_desc"
         }
     }
 
@@ -283,17 +437,23 @@ tech_supreme_metamateria_processing = {
     }
 
     modifier = {
-        planet_jobs_specialist_produces_mult = 0.05
-        planet_jobs_complex_drone_produces_mult = 0.05
-        planet_jobs_worker_produces_mult = 0.05
+        planet_jobs_specialist_produces_mult = 0.08
+        planet_jobs_complex_drone_produces_mult = 0.08
+        planet_jobs_worker_produces_mult = 0.08
     }
 
     weight_modifier = {
         modifier = {
             factor = 0
-            NOR = {
-                has_tradition = "tr_prosperity_pursuit_of_profit"
-                has_tradition = "tr_prosperity_public_works"
+            OR = {
+                NOT = {
+                    has_tradition = "tr_prosperity_pursuit_of_profit"
+                    has_tradition = "tr_prosperity_public_works"
+                }
+                NOT = {
+                    has_tradition = "tr_prosperity_interstellar_franchising"
+                    has_tradition = "tr_prosperity_public_works"
+                }
             }
         }
         modifier = {
@@ -379,15 +539,23 @@ tech_supreme_metamateria_processing = {
         }
         modifier = {
             factor = 0
-            NOR = {
-                has_tradition = "tr_prosperity_pursuit_of_profit"
-                has_tradition = "tr_prosperity_public_works"
+            OR = {
+                NOT = {
+                    has_tradition = "tr_prosperity_pursuit_of_profit"
+                    has_tradition = "tr_prosperity_public_works"
+                }
+                NOT = {
+                    has_tradition = "tr_prosperity_interstellar_franchising"
+                    has_tradition = "tr_prosperity_public_works"
+                }
             }
         }
     }
 }
 
-tech_transcendence_metamateria_processing = {
+tech_industrial_complex_5 = {
+    # Unlocks "Industrial Complex V" building
+
     cost = @technology_high_cost
     area = engineering
     tier = 4
@@ -396,16 +564,14 @@ tech_transcendence_metamateria_processing = {
     is_reverse_engineerable = no
     category = { industry }
     prerequisites = {
-        "tech_supreme_metamateria_processing"
-        "tech_mineral_purification_1"
-        "tech_alloys_1"
+        "tech_industrial_complex_4"
     }
     weight = @tier4weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_transcendence_metamateria_processing_title"
-            desc = "tech_transcendence_metamateria_processing_desc"
+            title = "tech_industrial_complex_5_title"
+            desc = "tech_industrial_complex_5_desc"
         }
     }
 
@@ -417,9 +583,9 @@ tech_transcendence_metamateria_processing = {
     }
 
     modifier = {
-        planet_jobs_specialist_produces_mult = 0.05
-        planet_jobs_complex_drone_produces_mult = 0.05
-        planet_jobs_worker_produces_mult = 0.05
+        planet_jobs_specialist_produces_mult = 0.1
+        planet_jobs_complex_drone_produces_mult = 0.1
+        planet_jobs_worker_produces_mult = 0.1
     }
 
     weight_modifier = {
@@ -464,10 +630,9 @@ tech_transcendence_metamateria_processing = {
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
-            factor = 0.8
-            NOR = {
+            factor = 0.9
+            NOT = {
                 has_ethic = "ethic_materialist"
-                has_ethic = "ethic_fanatic_materialist"
             }
         }
     }
@@ -508,10 +673,9 @@ tech_transcendence_metamateria_processing = {
             }
         }
         modifier = {
-            factor = 0.8
-            NOR = {
+            factor = 0.9
+            NOT = {
                 has_ethic = "ethic_materialist"
-                has_ethic = "ethic_fanatic_materialist"
             }
         }
         modifier = {
@@ -523,7 +687,9 @@ tech_transcendence_metamateria_processing = {
     }
 }
 
-tech_infinitum_metamateria_processing = {
+tech_industrial_complex_6 = {
+    # Unlocks "Industrial Complex VI" building
+
     cost = @technology_ultrahigh_cost
     area = engineering
     tier = 5
@@ -532,17 +698,14 @@ tech_infinitum_metamateria_processing = {
     is_reverse_engineerable = no
     category = { industry }
     prerequisites = {
-        "tech_transcendence_metamateria_processing"
-        "tech_mining_3"
-        "tech_mineral_purification_2"
-        "tech_alloys_2"
+        "tech_industrial_complex_5"
     }
     weight = @tier5weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_infinitum_metamateria_processing_title"
-            desc = "tech_infinitum_metamateria_processing_desc"
+            title = "tech_industrial_complex_6_title"
+            desc = "tech_industrial_complex_6_desc"
         }
     }
 
@@ -554,9 +717,9 @@ tech_infinitum_metamateria_processing = {
     }
 
     modifier = {
-        planet_jobs_specialist_produces_mult = 0.05
-        planet_jobs_complex_drone_produces_mult = 0.05
-        planet_jobs_worker_produces_mult = 0.05
+        planet_jobs_specialist_produces_mult = 0.12
+        planet_jobs_complex_drone_produces_mult = 0.12
+        planet_jobs_worker_produces_mult = 0.12
     }
 
     weight_modifier = {
@@ -617,9 +780,14 @@ tech_infinitum_metamateria_processing = {
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
-            factor = 0.6
-            NOR = {
+            factor = 0.8
+            NOT = {
                 has_ethic = "ethic_materialist"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            NOT = {
                 has_ethic = "ethic_fanatic_materialist"
             }
         }
@@ -671,9 +839,14 @@ tech_infinitum_metamateria_processing = {
             }
         }
         modifier = {
-            factor = 0.6
-            NOR = {
+            factor = 0.8
+            NOT = {
                 has_ethic = "ethic_materialist"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            NOT = {
                 has_ethic = "ethic_fanatic_materialist"
             }
         }
@@ -687,6 +860,188 @@ tech_infinitum_metamateria_processing = {
             factor = 0
             NOT = {
                 has_ascension_perk = "ap_interstellar_dominion"
+            }
+        }
+    }
+}
+
+tech_industrial_complex_7 = {
+    # Unlocks "Industrial Complex VII" building
+
+    cost = @technology_extrahigh_cost
+    area = engineering
+    tier = 5
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { industry }
+    prerequisites = {
+        "tech_industrial_complex_6"
+    }
+    weight = @tier5weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_industrial_complex_7_title"
+            desc = "tech_industrial_complex_7_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_specialist_produces_mult = 0.14
+        planet_jobs_complex_drone_produces_mult = 0.14
+        planet_jobs_worker_produces_mult = 0.14
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_interstellar_dominion"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                num_ascension_perks < 2
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 3
+                    NOR = {
+                        has_trait = "leader_trait_expertise_industry"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.6
+            research_leader = {
+                area = engineering
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = engineering
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.7
+            NOT = {
+                has_ethic = "ethic_materialist"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            NOT = {
+                has_ethic = "ethic_fanatic_materialist"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_interstellar_dominion"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                num_ascension_perks < 2
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                OR = {
+                    has_level < 3
+                    NOR = {
+                        has_trait = "leader_trait_expertise_industry"
+                        has_trait = "leader_trait_scientist_chosen"
+                        has_trait = "leader_trait_curator"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.6
+            research_leader = {
+                area = engineering
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            research_leader = {
+                area = engineering
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0.7
+            NOT = {
+                has_ethic = "ethic_materialist"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            NOT = {
+                has_ethic = "ethic_fanatic_materialist"
             }
         }
     }

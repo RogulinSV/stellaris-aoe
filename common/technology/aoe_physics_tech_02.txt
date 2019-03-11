@@ -1,6 +1,6 @@
 ### Missiles weapon damage
 
-tech_basic_missiles_weapon = {
+tech_missile_weapon_1 = {
     cost = @technology_ultralow_cost
     area = physics
     tier = 1
@@ -16,8 +16,8 @@ tech_basic_missiles_weapon = {
 
     prereqfor_desc = {
         feature = {
-            title = "tech_basic_missiles_weapon_title"
-            desc = "tech_basic_missiles_weapon_desc"
+            title = "tech_missile_weapon_1_title"
+            desc = "tech_missile_weapon_1_desc"
         }
     }
 
@@ -122,7 +122,7 @@ tech_basic_missiles_weapon = {
     }
 }
 
-tech_advanced_missiles_weapon = {
+tech_missile_weapon_2 = {
     cost = @technology_low_cost
     area = physics
     tier = 2
@@ -132,15 +132,15 @@ tech_advanced_missiles_weapon = {
     category = { propulsion }
     ai_update_type = military
     prerequisites = {
-        "tech_basic_missiles_weapon"
+        "tech_missile_weapon_1"
         "tech_missiles_2"
     }
     weight = @tier2weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_advanced_missiles_weapon_title"
-            desc = "tech_advanced_missiles_weapon_desc"
+            title = "tech_missile_weapon_2_title"
+            desc = "tech_missile_weapon_2_desc"
         }
     }
 
@@ -259,7 +259,7 @@ tech_advanced_missiles_weapon = {
     }
 }
 
-tech_supreme_missiles_weapon = {
+tech_missile_weapon_3 = {
     cost = @technology_medium_cost
     area = physics
     tier = 3
@@ -269,15 +269,15 @@ tech_supreme_missiles_weapon = {
     category = { propulsion }
     ai_update_type = military
     prerequisites = {
-        "tech_advanced_missiles_weapon"
+        "tech_missile_weapon_2"
         "tech_missiles_3"
     }
     weight = @tier3weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_supreme_missiles_weapon_title"
-            desc = "tech_supreme_missiles_weapon_desc"
+            title = "tech_missile_weapon_3_title"
+            desc = "tech_missile_weapon_3_desc"
         }
     }
 
@@ -404,7 +404,7 @@ tech_supreme_missiles_weapon = {
     }
 }
 
-tech_transcendence_missiles_weapon = {
+tech_missile_weapon_4 = {
     cost = @technology_high_cost
     area = physics
     tier = 4
@@ -414,15 +414,15 @@ tech_transcendence_missiles_weapon = {
     category = { propulsion }
     ai_update_type = military
     prerequisites = {
-        "tech_supreme_missiles_weapon"
+        "tech_missile_weapon_3"
         "tech_missiles_4"
     }
     weight = @tier4weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_transcendence_missiles_weapon_title"
-            desc = "tech_transcendence_missiles_weapon_desc"
+            title = "tech_missile_weapon_4_title"
+            desc = "tech_missile_weapon_4_desc"
         }
     }
 
@@ -532,7 +532,7 @@ tech_transcendence_missiles_weapon = {
     }
 }
 
-tech_infinitum_missiles_weapon = {
+tech_missile_weapon_5 = {
     cost = @technology_ultrahigh_cost
     area = physics
     tier = 5
@@ -542,15 +542,15 @@ tech_infinitum_missiles_weapon = {
     category = { propulsion }
     ai_update_type = military
     prerequisites = {
-        "tech_transcendence_missiles_weapon"
+        "tech_missile_weapon_4"
         "tech_missiles_5"
     }
     weight = @tier5weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_infinitum_missiles_weapon_title"
-            desc = "tech_infinitum_missiles_weapon_desc"
+            title = "tech_missile_weapon_5_title"
+            desc = "tech_missile_weapon_5_desc"
         }
     }
 
@@ -696,7 +696,7 @@ tech_infinitum_missiles_weapon = {
 
 ### Missiles weapon fire rate
 
-tech_basic_missiles_usage = {
+tech_missiles_usage_1 = {
     cost = @technology_ultralow_cost
     area = physics
     tier = 1
@@ -712,8 +712,8 @@ tech_basic_missiles_usage = {
 
     prereqfor_desc = {
         feature = {
-            title = "tech_basic_missiles_usage_title"
-            desc = "tech_basic_missiles_usage_desc"
+            title = "tech_missiles_usage_1_title"
+            desc = "tech_missiles_usage_1_desc"
         }
     }
 
@@ -818,7 +818,7 @@ tech_basic_missiles_usage = {
     }
 }
 
-tech_advanced_missiles_usage = {
+tech_missiles_usage_2 = {
     cost = @technology_low_cost
     area = physics
     tier = 2
@@ -828,15 +828,15 @@ tech_advanced_missiles_usage = {
     category = { propulsion }
     ai_update_type = military
     prerequisites = {
-        "tech_basic_missiles_usage"
+        "tech_missiles_usage_1"
         "tech_missiles_2"
     }
     weight = @tier2weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_advanced_missiles_usage_title"
-            desc = "tech_advanced_missiles_usage_desc"
+            title = "tech_missiles_usage_2_title"
+            desc = "tech_missiles_usage_2_desc"
         }
     }
 
@@ -955,7 +955,7 @@ tech_advanced_missiles_usage = {
     }
 }
 
-tech_supreme_missiles_usage = {
+tech_missiles_usage_3 = {
     cost = @technology_medium_cost
     area = physics
     tier = 3
@@ -965,15 +965,15 @@ tech_supreme_missiles_usage = {
     category = { propulsion }
     ai_update_type = military
     prerequisites = {
-        "tech_advanced_missiles_usage"
+        "tech_missiles_usage_2"
         "tech_missiles_3"
     }
     weight = @tier3weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_supreme_missiles_usage_title"
-            desc = "tech_supreme_missiles_usage_desc"
+            title = "tech_missiles_usage_3_title"
+            desc = "tech_missiles_usage_3_desc"
         }
     }
 
@@ -1100,7 +1100,7 @@ tech_supreme_missiles_usage = {
     }
 }
 
-tech_transcendence_missiles_usage = {
+tech_missiles_usage_4 = {
     cost = @technology_high_cost
     area = physics
     tier = 4
@@ -1110,15 +1110,15 @@ tech_transcendence_missiles_usage = {
     category = { propulsion }
     ai_update_type = military
     prerequisites = {
-        "tech_supreme_missiles_usage"
+        "tech_missiles_usage_3"
         "tech_missiles_4"
     }
     weight = @tier4weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_transcendence_missiles_usage_title"
-            desc = "tech_transcendence_missiles_usage_desc"
+            title = "tech_missiles_usage_4_title"
+            desc = "tech_missiles_usage_4_desc"
         }
     }
 
@@ -1228,7 +1228,7 @@ tech_transcendence_missiles_usage = {
     }
 }
 
-tech_infinitum_missiles_usage = {
+tech_missiles_usage_5 = {
     cost = @technology_ultrahigh_cost
     area = physics
     tier = 5
@@ -1238,15 +1238,15 @@ tech_infinitum_missiles_usage = {
     category = { propulsion }
     ai_update_type = military
     prerequisites = {
-        "tech_transcendence_missiles_usage"
+        "tech_missiles_usage_4"
         "tech_missiles_5"
     }
     weight = @tier5weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_infinitum_missiles_usage_title"
-            desc = "tech_infinitum_missiles_usage_desc"
+            title = "tech_missiles_usage_5_title"
+            desc = "tech_missiles_usage_5_desc"
         }
     }
 

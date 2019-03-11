@@ -29,7 +29,7 @@ d_melted_streams = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -43,7 +43,7 @@ d_melted_streams = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -57,7 +57,7 @@ d_melted_streams = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -71,7 +71,7 @@ d_melted_streams = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -104,7 +104,7 @@ d_melted_streams = {
     }
 
     prerequisites = {
-        "tech_molten_environment_utilization"
+        "tech_environment_utilization_molten"
     }
 }
 
@@ -139,7 +139,7 @@ d_melted_rivers = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -153,7 +153,7 @@ d_melted_rivers = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -167,7 +167,7 @@ d_melted_rivers = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -181,7 +181,7 @@ d_melted_rivers = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -214,7 +214,7 @@ d_melted_rivers = {
     }
 
     prerequisites = {
-        "tech_molten_environment_utilization"
+        "tech_environment_utilization_molten"
     }
 }
 
@@ -253,7 +253,7 @@ d_magmatic_lakes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -267,7 +267,7 @@ d_magmatic_lakes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -281,7 +281,7 @@ d_magmatic_lakes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -295,7 +295,7 @@ d_magmatic_lakes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -328,7 +328,7 @@ d_magmatic_lakes = {
     }
 
     prerequisites = {
-        "tech_molten_environment_utilization"
+        "tech_environment_utilization_molten"
     }
 }
 
@@ -368,7 +368,7 @@ d_magmatic_oceans = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -382,7 +382,7 @@ d_magmatic_oceans = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -396,7 +396,7 @@ d_magmatic_oceans = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -410,7 +410,7 @@ d_magmatic_oceans = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -443,7 +443,7 @@ d_magmatic_oceans = {
     }
 
     prerequisites = {
-        "tech_molten_environment_utilization"
+        "tech_environment_utilization_molten"
     }
 }
 
@@ -485,7 +485,7 @@ d_impassable_woodlands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -499,7 +499,7 @@ d_impassable_woodlands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -513,7 +513,7 @@ d_impassable_woodlands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -527,7 +527,7 @@ d_impassable_woodlands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -560,7 +560,7 @@ d_impassable_woodlands = {
     }
 
     prerequisites = {
-        "tech_floral_environment_utilization"
+        "tech_environment_utilization_floral"
     }
 }
 
@@ -603,7 +603,7 @@ d_untouched_woodlands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -617,7 +617,7 @@ d_untouched_woodlands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -631,7 +631,7 @@ d_untouched_woodlands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -645,7 +645,7 @@ d_untouched_woodlands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -678,7 +678,7 @@ d_untouched_woodlands = {
     }
 
     prerequisites = {
-        "tech_floral_environment_utilization"
+        "tech_environment_utilization_floral"
     }
 }
 
@@ -720,7 +720,7 @@ d_impassable_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -733,7 +733,7 @@ d_impassable_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -746,7 +746,7 @@ d_impassable_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -759,7 +759,7 @@ d_impassable_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -791,7 +791,7 @@ d_impassable_marshes = {
     }
 
     prerequisites = {
-        "tech_floral_environment_utilization"
+        "tech_environment_utilization_floral"
     }
 }
 
@@ -834,7 +834,7 @@ d_untouched_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -847,7 +847,7 @@ d_untouched_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -860,7 +860,7 @@ d_untouched_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -873,7 +873,7 @@ d_untouched_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -905,7 +905,7 @@ d_untouched_marshes = {
     }
 
     prerequisites = {
-        "tech_floral_environment_utilization"
+        "tech_environment_utilization_floral"
     }
 }
 
@@ -939,7 +939,7 @@ d_electric_maelstroms = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -952,7 +952,7 @@ d_electric_maelstroms = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -965,7 +965,7 @@ d_electric_maelstroms = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -978,7 +978,7 @@ d_electric_maelstroms = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -1012,7 +1012,7 @@ d_electric_maelstroms = {
     }
 
     prerequisites = {
-        "tech_aquatic_environment_utilization"
+        "tech_environment_utilization_aquatic"
     }
 }
 
@@ -1050,7 +1050,7 @@ d_ravenous_maelstroms = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -1063,7 +1063,7 @@ d_ravenous_maelstroms = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -1076,7 +1076,7 @@ d_ravenous_maelstroms = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -1089,7 +1089,7 @@ d_ravenous_maelstroms = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -1123,7 +1123,7 @@ d_ravenous_maelstroms = {
     }
 
     prerequisites = {
-        "tech_aquatic_environment_utilization"
+        "tech_environment_utilization_aquatic"
     }
 }
 
@@ -1157,7 +1157,7 @@ d_giant_tides = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -1170,7 +1170,7 @@ d_giant_tides = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -1183,7 +1183,7 @@ d_giant_tides = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -1196,7 +1196,7 @@ d_giant_tides = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -1230,7 +1230,7 @@ d_giant_tides = {
     }
 
     prerequisites = {
-        "tech_aquatic_environment_utilization"
+        "tech_environment_utilization_aquatic"
     }
 }
 
@@ -1265,7 +1265,7 @@ d_sandy_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -1279,7 +1279,7 @@ d_sandy_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -1293,7 +1293,7 @@ d_sandy_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -1307,7 +1307,7 @@ d_sandy_marshes = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -1340,7 +1340,7 @@ d_sandy_marshes = {
     }
 
     prerequisites = {
-        "tech_wasteland_environment_utilization"
+        "tech_environment_utilization_wasteland"
     }
 }
 
@@ -1375,7 +1375,7 @@ d_scorched_plains = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -1389,7 +1389,7 @@ d_scorched_plains = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -1403,7 +1403,7 @@ d_scorched_plains = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -1417,7 +1417,7 @@ d_scorched_plains = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -1450,7 +1450,7 @@ d_scorched_plains = {
     }
 
     prerequisites = {
-        "tech_wasteland_environment_utilization"
+        "tech_environment_utilization_wasteland"
     }
 }
 
@@ -1488,7 +1488,7 @@ d_isolated_wastelands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_advanced_environment_utilization"
+                        has_technology = "tech_environment_utilization_2"
                     }
                 }
                 owner = {
@@ -1502,7 +1502,7 @@ d_isolated_wastelands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_supreme_environment_utilization"
+                        has_technology = "tech_environment_utilization_3"
                     }
                 }
                 owner = {
@@ -1516,7 +1516,7 @@ d_isolated_wastelands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_transcendence_environment_utilization"
+                        has_technology = "tech_environment_utilization_4"
                     }
                 }
                 owner = {
@@ -1530,7 +1530,7 @@ d_isolated_wastelands = {
                 limit = {
                     exists = owner
                     owner = {
-                        has_technology = "tech_infinitum_environment_utilization"
+                        has_technology = "tech_environment_utilization_5"
                     }
                 }
                 owner = {
@@ -1563,7 +1563,7 @@ d_isolated_wastelands = {
     }
 
     prerequisites = {
-        "tech_wasteland_environment_utilization"
+        "tech_environment_utilization_wasteland"
     }
 }
 
@@ -1916,6 +1916,6 @@ d_parasitic_bioplasm = {
     }
 
     prerequisites = {
-        "tech_parasitic_disinsection"
+        "tech_disinsection_parasitic"
     }
 }

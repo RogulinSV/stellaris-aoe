@@ -1,9 +1,47 @@
 # Scope: planet
-has_metacrystal_deposit = {
+has_crystallite_deposits = {
     OR = {
         has_deposit = "d_metacrystal_caves"
         has_deposit = "d_metacrystal_plains"
         has_deposit = "d_metacrystal_mines"
         has_deposit = "d_metacrystal_matrixes"
+    }
+}
+
+# Scope: planet
+is_sovereign_colony = {
+    NOR = {
+        has_modifier = "resort_colony"
+        has_modifier = "slave_colony"
+    }
+}
+
+# Scope: planet
+is_colonizeable_planet = {
+    OR = {
+        habitable_planet = yes
+        is_planet_class = pc_city
+        is_planet_class = pc_nuked
+        is_planet_class = pc_hive
+        is_planet_class = pc_machine
+    }
+}
+
+# Scope: planet
+have_not_habitable_deposits = {
+    OR = {
+        habitable_structure = yes
+        is_planet_class = pc_city
+        is_planet_class = pc_hive
+        is_planet_class = pc_machine
+    }
+}
+
+# Scope: pop
+is_pop_purged = {
+    OR = {
+        is_pop_category = purge
+        is_being_purged = yes
+        has_pop_flag = "event_purge"
     }
 }
