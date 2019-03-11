@@ -2,3 +2,25 @@ has_encountered_other_species = yes
 mid_game_years_passed >= 0
 end_game_years_passed >= 0
 num_ascension_perks > 0
+num_owned_planets > 0
+
+any_owned_planet = {
+	num_unique_species > 9
+}
+any_owned_megastructure = {}
+every_owned_planet = {}
+random_owned_planet = {}
+any_owned_pop = {}
+
+num_buildings = { type = building_foundry_1 value >= 2 }
+
+shipclass_military_station_build_cost_mult = -0.15
+shipclass_military_station_damage_mult = 0.25
+shipclass_military_station_hull_mult = 0.25
+starbase_shipyard_build_cost_mult = -0.10
+ships_upkeep_mult = -0.05
+starbase_shipyard_build_speed_mult = 0.20
+megastructure_build_speed_mult = 0.5
+damage_vs_country_type_fallen_empire_mult = 0.33
+damage_vs_country_type_awakened_fallen_empire_mult = 0.33
+damage_vs_country_type_gate_builders_mult = 0.33

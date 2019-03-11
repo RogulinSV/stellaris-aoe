@@ -65,6 +65,7 @@ tech_industrial_complex_1 = {
     category = { industry }
     prerequisites = {
         "tech_industrial_district"
+        "tech_planetary_government"
     }
     weight = @tier1weight1
 
@@ -291,6 +292,7 @@ tech_industrial_complex_3 = {
     category = { industry }
     prerequisites = {
         "tech_industrial_complex_2"
+        "tech_colonial_centralization"
     }
     weight = @tier2weight2
 
@@ -565,6 +567,7 @@ tech_industrial_complex_5 = {
     category = { industry }
     prerequisites = {
         "tech_industrial_complex_4"
+        "tech_galactic_administration"
     }
     weight = @tier4weight2
 

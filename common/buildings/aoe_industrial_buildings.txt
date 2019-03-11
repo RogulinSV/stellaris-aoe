@@ -11,6 +11,22 @@ building_industrial_complex_1 = {
         "building_industrial_complex_2"
     }
 
+    on_queued = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_unqueued = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_built = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_destroy = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
     potential = {
         is_colonizeable_planet = yes
         has_upgraded_capital = yes
@@ -27,6 +43,7 @@ building_industrial_complex_1 = {
 
     allow = {
         is_sovereign_colony = yes
+        can_build_industrial_complex_1 = yes
     }
 
     resources = {
@@ -197,6 +214,22 @@ building_industrial_complex_2 = {
         "building_industrial_complex_3"
     }
 
+    on_queued = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_unqueued = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_built = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_destroy = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
     potential = {
         is_colonizeable_planet = yes
         has_upgraded_capital = yes
@@ -213,6 +246,7 @@ building_industrial_complex_2 = {
 
     allow = {
         is_sovereign_colony = yes
+        can_build_industrial_complex_2 = yes
         num_pops >= 20
     }
 
@@ -255,7 +289,7 @@ building_industrial_complex_2 = {
             }
         }
         modifier = {
-            job_industrial_complex_worker_add = 1
+            job_industrial_complex_worker_add = 2
         }
     }
 
@@ -278,7 +312,7 @@ building_industrial_complex_2 = {
             }
         }
         modifier = {
-            job_industrial_complex_drone_worker_add = 1
+            job_industrial_complex_drone_worker_add = 2
         }
     }
 
@@ -300,7 +334,7 @@ building_industrial_complex_2 = {
             }
         }
         modifier = {
-            job_industrial_complex_calculator_add = 1
+            job_industrial_complex_calculator_add = 2
         }
     }
 
@@ -322,7 +356,7 @@ building_industrial_complex_2 = {
             }
         }
         modifier = {
-            job_industrial_complex_brain_drone_add = 1
+            job_industrial_complex_brain_drone_add = 2
         }
     }
 
@@ -384,6 +418,22 @@ building_industrial_complex_3 = {
         "building_industrial_complex_4"
     }
 
+    on_queued = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_unqueued = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_built = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_destroy = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
     potential = {
         is_colonizeable_planet = yes
         has_major_upgraded_capital = yes
@@ -400,6 +450,7 @@ building_industrial_complex_3 = {
 
     allow = {
         is_sovereign_colony = yes
+        can_build_industrial_complex_3 = yes
     }
 
     resources = {
@@ -441,7 +492,7 @@ building_industrial_complex_3 = {
             }
         }
         modifier = {
-            job_industrial_complex_worker_add = 1
+            job_industrial_complex_worker_add = 3
         }
     }
 
@@ -464,7 +515,7 @@ building_industrial_complex_3 = {
             }
         }
         modifier = {
-            job_industrial_complex_drone_worker_add = 1
+            job_industrial_complex_drone_worker_add = 3
         }
     }
 
@@ -486,7 +537,7 @@ building_industrial_complex_3 = {
             }
         }
         modifier = {
-            job_industrial_complex_calculator_add = 1
+            job_industrial_complex_calculator_add = 3
         }
     }
 
@@ -508,7 +559,7 @@ building_industrial_complex_3 = {
             }
         }
         modifier = {
-            job_industrial_complex_brain_drone_add = 1
+            job_industrial_complex_brain_drone_add = 3
         }
     }
 
@@ -570,6 +621,22 @@ building_industrial_complex_4 = {
         "building_industrial_complex_5"
     }
 
+    on_queued = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_unqueued = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_built = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_destroy = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
     potential = {
         is_colonizeable_planet = yes
         has_major_upgraded_capital = yes
@@ -586,6 +653,7 @@ building_industrial_complex_4 = {
 
     allow = {
         is_sovereign_colony = yes
+        can_build_industrial_complex_4 = yes
         num_pops >= 60
     }
 
@@ -628,7 +696,7 @@ building_industrial_complex_4 = {
             }
         }
         modifier = {
-            job_industrial_complex_worker_add = 1
+            job_industrial_complex_worker_add = 4
         }
     }
 
@@ -651,7 +719,7 @@ building_industrial_complex_4 = {
             }
         }
         modifier = {
-            job_industrial_complex_drone_worker_add = 1
+            job_industrial_complex_drone_worker_add = 4
         }
     }
 
@@ -673,7 +741,7 @@ building_industrial_complex_4 = {
             }
         }
         modifier = {
-            job_industrial_complex_calculator_add = 1
+            job_industrial_complex_calculator_add = 4
         }
     }
 
@@ -695,7 +763,7 @@ building_industrial_complex_4 = {
             }
         }
         modifier = {
-            job_industrial_complex_brain_drone_add = 1
+            job_industrial_complex_brain_drone_add = 4
         }
     }
 
@@ -757,6 +825,22 @@ building_industrial_complex_5 = {
         "building_industrial_complex_6"
     }
 
+    on_queued = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_unqueued = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_built = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_destroy = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
     potential = {
         is_colonizeable_planet = yes
         has_fully_upgraded_capital = yes
@@ -773,6 +857,7 @@ building_industrial_complex_5 = {
 
     allow = {
         is_sovereign_colony = yes
+        can_build_industrial_complex_5 = yes
     }
 
     resources = {
@@ -814,7 +899,7 @@ building_industrial_complex_5 = {
             }
         }
         modifier = {
-            job_industrial_complex_worker_add = 1
+            job_industrial_complex_worker_add = 5
         }
     }
 
@@ -837,7 +922,7 @@ building_industrial_complex_5 = {
             }
         }
         modifier = {
-            job_industrial_complex_drone_worker_add = 1
+            job_industrial_complex_drone_worker_add = 5
         }
     }
 
@@ -859,7 +944,7 @@ building_industrial_complex_5 = {
             }
         }
         modifier = {
-            job_industrial_complex_calculator_add = 1
+            job_industrial_complex_calculator_add = 5
         }
     }
 
@@ -881,7 +966,7 @@ building_industrial_complex_5 = {
             }
         }
         modifier = {
-            job_industrial_complex_brain_drone_add = 1
+            job_industrial_complex_brain_drone_add = 5
         }
     }
 
@@ -943,6 +1028,22 @@ building_industrial_complex_6 = {
         "building_industrial_complex_7"
     }
 
+    on_queued = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_unqueued = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_built = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_destroy = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
     potential = {
         is_colonizeable_planet = yes
         has_fully_upgraded_capital = yes
@@ -959,6 +1060,7 @@ building_industrial_complex_6 = {
 
     allow = {
         is_sovereign_colony = yes
+        can_build_industrial_complex_6 = yes
         num_pops >= 100
     }
 
@@ -1001,7 +1103,7 @@ building_industrial_complex_6 = {
             }
         }
         modifier = {
-            job_industrial_complex_worker_add = 1
+            job_industrial_complex_worker_add = 6
         }
     }
 
@@ -1024,7 +1126,7 @@ building_industrial_complex_6 = {
             }
         }
         modifier = {
-            job_industrial_complex_drone_worker_add = 1
+            job_industrial_complex_drone_worker_add = 6
         }
     }
 
@@ -1046,7 +1148,7 @@ building_industrial_complex_6 = {
             }
         }
         modifier = {
-            job_industrial_complex_calculator_add = 1
+            job_industrial_complex_calculator_add = 6
         }
     }
 
@@ -1068,7 +1170,7 @@ building_industrial_complex_6 = {
             }
         }
         modifier = {
-            job_industrial_complex_brain_drone_add = 1
+            job_industrial_complex_brain_drone_add = 6
         }
     }
 
@@ -1126,6 +1228,22 @@ building_industrial_complex_7 = {
     base_buildtime = 2520
     category = manufacturing
 
+    on_queued = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_unqueued = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_built = {
+        set_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    on_destroy = {
+        remove_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
     potential = {
         is_colonizeable_planet = yes
         has_fully_upgraded_capital = yes
@@ -1142,6 +1260,7 @@ building_industrial_complex_7 = {
 
     allow = {
         is_sovereign_colony = yes
+        can_build_industrial_complex_7 = yes
         num_pops >= 120
     }
 
@@ -1184,7 +1303,7 @@ building_industrial_complex_7 = {
             }
         }
         modifier = {
-            job_industrial_complex_worker_add = 1
+            job_industrial_complex_worker_add = 7
         }
     }
 
@@ -1207,7 +1326,7 @@ building_industrial_complex_7 = {
             }
         }
         modifier = {
-            job_industrial_complex_drone_worker_add = 1
+            job_industrial_complex_drone_worker_add = 7
         }
     }
 
@@ -1229,7 +1348,7 @@ building_industrial_complex_7 = {
             }
         }
         modifier = {
-            job_industrial_complex_calculator_add = 1
+            job_industrial_complex_calculator_add = 7
         }
     }
 
@@ -1251,7 +1370,7 @@ building_industrial_complex_7 = {
             }
         }
         modifier = {
-            job_industrial_complex_brain_drone_add = 1
+            job_industrial_complex_brain_drone_add = 7
         }
     }
 
@@ -1349,7 +1468,7 @@ building_ancient_industrial_center = {
             owner = { is_fallen_empire = yes }
         }
         modifier = {
-            job_industrial_complex_fe_ai_add = 5
+            job_industrial_complex_fe_ai_add = 6
         }
     }
 

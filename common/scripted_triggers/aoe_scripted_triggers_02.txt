@@ -1,0 +1,357 @@
+# Scope: planet
+can_build_industrial_complex_1 = {
+    NOT = {
+        has_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    OR = {
+        AND = {
+            num_pops <= 15
+            num_buildings = {
+                type = "building_industrial_complex_1"
+                value < 1
+            }
+        }
+        AND = {
+            num_pops <= 20
+            num_buildings = {
+                type = "building_industrial_complex_1"
+                value < 2
+            }
+        }
+        AND = {
+            num_pops <= 25
+            num_buildings = {
+                type = "building_industrial_complex_1"
+                value < 3
+            }
+        }
+        AND = {
+            num_pops <= 30
+            num_buildings = {
+                type = "building_industrial_complex_1"
+                value < 4
+            }
+        }
+        AND = {
+            num_pops <= 35
+            num_buildings = {
+                type = "building_industrial_complex_1"
+                value < 5
+            }
+        }
+        AND = {
+            num_pops > 35
+            num_buildings = {
+                type = "building_industrial_complex_1"
+                value < 6
+            }
+        }
+    }
+}
+
+can_build_industrial_complex_2 = {
+    NOT = {
+        has_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    OR = {
+        AND = {
+            num_pops <= 30
+            num_buildings = {
+                type = "building_industrial_complex_2"
+                value < 1
+            }
+        }
+        AND = {
+            num_pops <= 40
+            num_buildings = {
+                type = "building_industrial_complex_2"
+                value < 2
+            }
+        }
+        AND = {
+            num_pops <= 50
+            num_buildings = {
+                type = "building_industrial_complex_2"
+                value < 3
+            }
+        }
+        AND = {
+            num_pops <= 60
+            num_buildings = {
+                type = "building_industrial_complex_2"
+                value < 4
+            }
+        }
+        AND = {
+            num_pops <= 70
+            num_buildings = {
+                type = "building_industrial_complex_2"
+                value < 5
+            }
+        }
+        AND = {
+            num_pops > 70
+            num_buildings = {
+                type = "building_industrial_complex_2"
+                value < 6
+            }
+        }
+    }
+}
+
+can_build_industrial_complex_3 = {
+    NOT = {
+        has_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    OR = {
+        AND = {
+            num_pops <= 50
+            num_buildings = {
+                type = "building_industrial_complex_3"
+                value < 1
+            }
+        }
+        AND = {
+            num_pops <= 60
+            num_buildings = {
+                type = "building_industrial_complex_3"
+                value < 2
+            }
+        }
+        AND = {
+            num_pops <= 70
+            num_buildings = {
+                type = "building_industrial_complex_3"
+                value < 3
+            }
+        }
+        AND = {
+            num_pops <= 80
+            num_buildings = {
+                type = "building_industrial_complex_3"
+                value < 4
+            }
+        }
+        AND = {
+            num_pops <= 90
+            num_buildings = {
+                type = "building_industrial_complex_3"
+                value < 5
+            }
+        }
+        AND = {
+            num_pops > 90
+            num_buildings = {
+                type = "building_industrial_complex_3"
+                value < 6
+            }
+        }
+    }
+}
+
+can_build_industrial_complex_4 = {
+    NOT = {
+        has_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    OR = {
+        AND = {
+            num_pops <= 75
+            num_buildings = {
+                type = "building_industrial_complex_4"
+                value < 1
+            }
+        }
+        AND = {
+            num_pops <= 90
+            num_buildings = {
+                type = "building_industrial_complex_4"
+                value < 2
+            }
+        }
+        AND = {
+            num_pops <= 105
+            num_buildings = {
+                type = "building_industrial_complex_4"
+                value < 3
+            }
+        }
+        AND = {
+            num_pops <= 120
+            num_buildings = {
+                type = "building_industrial_complex_4"
+                value < 4
+            }
+        }
+        AND = {
+            num_pops <= 135
+            num_buildings = {
+                type = "building_industrial_complex_4"
+                value < 5
+            }
+        }
+        AND = {
+            num_pops > 135
+            num_buildings = {
+                type = "building_industrial_complex_4"
+                value < 6
+            }
+        }
+    }
+}
+
+can_build_industrial_complex_5 = {
+    NOT = {
+        has_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    OR = {
+        AND = {
+            num_pops <= 95
+            num_buildings = {
+                type = "building_industrial_complex_5"
+                value < 1
+            }
+        }
+        AND = {
+            num_pops <= 110
+            num_buildings = {
+                type = "building_industrial_complex_5"
+                value < 2
+            }
+        }
+        AND = {
+            num_pops <= 125
+            num_buildings = {
+                type = "building_industrial_complex_5"
+                value < 3
+            }
+        }
+        AND = {
+            num_pops <= 140
+            num_buildings = {
+                type = "building_industrial_complex_5"
+                value < 4
+            }
+        }
+        AND = {
+            num_pops <= 155
+            num_buildings = {
+                type = "building_industrial_complex_5"
+                value < 5
+            }
+        }
+        AND = {
+            num_pops > 155
+            num_buildings = {
+                type = "building_industrial_complex_5"
+                value < 6
+            }
+        }
+    }
+}
+
+can_build_industrial_complex_6 = {
+    NOT = {
+        has_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    OR = {
+        AND = {
+            num_pops <= 120
+            num_buildings = {
+                type = "building_industrial_complex_6"
+                value < 1
+            }
+        }
+        AND = {
+            num_pops <= 140
+            num_buildings = {
+                type = "building_industrial_complex_6"
+                value < 2
+            }
+        }
+        AND = {
+            num_pops <= 160
+            num_buildings = {
+                type = "building_industrial_complex_6"
+                value < 3
+            }
+        }
+        AND = {
+            num_pops <= 180
+            num_buildings = {
+                type = "building_industrial_complex_6"
+                value < 4
+            }
+        }
+        AND = {
+            num_pops <= 200
+            num_buildings = {
+                type = "building_industrial_complex_6"
+                value < 5
+            }
+        }
+        AND = {
+            num_pops > 200
+            num_buildings = {
+                type = "building_industrial_complex_6"
+                value < 6
+            }
+        }
+    }
+}
+
+can_build_industrial_complex_7 = {
+    NOT = {
+        has_planet_flag = "flags_aoe_building_industrial_complex"
+    }
+
+    OR = {
+        AND = {
+            num_pops <= 140
+            num_buildings = {
+                type = "building_industrial_complex_7"
+                value < 1
+            }
+        }
+        AND = {
+            num_pops <= 160
+            num_buildings = {
+                type = "building_industrial_complex_7"
+                value < 2
+            }
+        }
+        AND = {
+            num_pops <= 180
+            num_buildings = {
+                type = "building_industrial_complex_7"
+                value < 3
+            }
+        }
+        AND = {
+            num_pops <= 200
+            num_buildings = {
+                type = "building_industrial_complex_7"
+                value < 4
+            }
+        }
+        AND = {
+            num_pops <= 220
+            num_buildings = {
+                type = "building_industrial_complex_7"
+                value < 5
+            }
+        }
+        AND = {
+            num_pops > 220
+            num_buildings = {
+                type = "building_industrial_complex_7"
+                value < 6
+            }
+        }
+    }
+}
