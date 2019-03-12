@@ -476,12 +476,24 @@ effects_add_planet_deposit = {
     if = {
         limit = {
             check_variable = {
-                which = get_planet_metamateria_factory_district_count
+                which = get_planet_industrial_complex_district_count
                 value < 1
             }
         }
         set_variable = {
-            which = get_planet_metamateria_factory_district_count
+            which = get_planet_industrial_complex_district_count
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            check_variable = {
+                which = get_planet_manufacturing_complex_district_count
+                value < 1
+            }
+        }
+        set_variable = {
+            which = get_planet_manufacturing_complex_district_count
             value = 1
         }
     }
@@ -491,21 +503,67 @@ effects_add_planet_deposit = {
             is_dry = yes
         }
         random_list = {
-            15 = {
+            7 = {
                 if = {
                     limit = {
                         check_variable = {
-                            which = get_planet_metamateria_factory_district_count
+                            which = get_planet_industrial_complex_district_count
                             value > 0
                             value < 10
                         }
                     }
                     change_variable = {
-                        which = get_planet_metamateria_factory_district_count
+                        which = get_planet_industrial_complex_district_count
                         value = 1
                     }
                     # +1A
-                    add_deposit = d_metacrystal_caves
+                    add_deposit = d_crystallized_caves
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_industrial_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_industrial_complex_district_count
+                        value = 1
+                    }
+                    # +1A
+                    add_deposit = d_crystallized_hills
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_manufacturing_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_manufacturing_complex_district_count
+                        value = 1
+                    }
+                    # +1G
+                    add_deposit = d_metallized_caves
                 }
                 else = {
                     change_variable = {
@@ -584,7 +642,7 @@ effects_add_planet_deposit = {
                 # +2F
                 add_deposit = d_great_river
             }
-            48 = {
+            42 = {
                 change_variable = {
                     which = get_planet_blockers_count
                     value = 1
@@ -600,21 +658,92 @@ effects_add_planet_deposit = {
             }
         }
         random_list = {
-            15 = {
+            7 = {
                 if = {
                     limit = {
                         check_variable = {
-                            which = get_planet_metamateria_factory_district_count
+                            which = get_planet_industrial_complex_district_count
                             value > 0
                             value < 10
                         }
                     }
                     change_variable = {
-                        which = get_planet_metamateria_factory_district_count
+                        which = get_planet_industrial_complex_district_count
                         value = 1
                     }
                     # +1A
-                    add_deposit = d_metacrystal_plains
+                    add_deposit = d_crystallized_plains
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        is_planet_class = pc_continental
+                        check_variable = {
+                            which = get_planet_industrial_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_industrial_complex_district_count
+                        value = 1
+                    }
+                    # +1A
+                    add_deposit = d_crystallized_hills
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_manufacturing_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_manufacturing_complex_district_count
+                        value = 1
+                    }
+                    # +1G
+                    add_deposit = d_metallized_mountains
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        is_planet_class = pc_ocean
+                        check_variable = {
+                            which = get_planet_manufacturing_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_manufacturing_complex_district_count
+                        value = 1
+                    }
+                    # +1G
+                    add_deposit = d_metallized_oceans
                 }
                 else = {
                     change_variable = {
@@ -701,7 +830,7 @@ effects_add_planet_deposit = {
                 # +3F
                 add_deposit = d_black_soil
             }
-            43 = {
+            30 = {
                 change_variable = {
                     which = get_planet_blockers_count
                     value = 1
@@ -714,21 +843,90 @@ effects_add_planet_deposit = {
             is_cold = yes
         }
         random_list = {
-            15 = {
+            7 = {
                 if = {
                     limit = {
                         check_variable = {
-                            which = get_planet_metamateria_factory_district_count
+                            which = get_planet_industrial_complex_district_count
                             value > 0
                             value < 10
                         }
                     }
                     change_variable = {
-                        which = get_planet_metamateria_factory_district_count
+                        which = get_planet_industrial_complex_district_count
                         value = 1
                     }
                     # +1A
-                    add_deposit = d_metacrystal_mines
+                    add_deposit = d_crystallized_mines
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_industrial_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_industrial_complex_district_count
+                        value = 1
+                    }
+                    # +1A
+                    add_deposit = d_crystallized_stratums
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_manufacturing_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_manufacturing_complex_district_count
+                        value = 1
+                    }
+                    # +1G
+                    add_deposit = d_metallized_plains
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_manufacturing_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_manufacturing_complex_district_count
+                        value = 1
+                    }
+                    # +1G
+                    add_deposit = d_metallized_mines
                 }
                 else = {
                     change_variable = {
@@ -773,7 +971,7 @@ effects_add_planet_deposit = {
                 # +2F
                 add_deposit = d_fungal_caves
             }
-            66 = {
+            45 = {
                 change_variable = {
                     which = get_planet_blockers_count
                     value = 1
@@ -810,15 +1008,22 @@ effects_set_planet_size_25 = {
     reroll_planet = yes
 
     set_variable = {
-        which = get_planet_metamateria_factory_district_count
+        which = get_planet_industrial_complex_district_count
         value = 0
     }
+    set_variable = {
+        which = get_planet_manufacturing_complex_district_count
+        value = 0
+    }
+
     while = {
         count = 10
 
         change_planet_size = 1
         effects_add_planet_deposit = yes
     }
+
+    validate_planet_buildings_and_districts = yes
 }
 
 effects_set_planet_size_30 = {
@@ -826,15 +1031,22 @@ effects_set_planet_size_30 = {
     reroll_planet = yes
 
     set_variable = {
-        which = get_planet_metamateria_factory_district_count
+        which = get_planet_industrial_complex_district_count
         value = 0
     }
+    set_variable = {
+        which = get_planet_manufacturing_complex_district_count
+        value = 0
+    }
+
     while = {
         count = 10
 
         change_planet_size = 1
         effects_add_planet_deposit = yes
     }
+
+    validate_planet_buildings_and_districts = yes
 }
 
 effects_set_planet_size_35 = {
@@ -842,15 +1054,22 @@ effects_set_planet_size_35 = {
     reroll_planet = yes
 
     set_variable = {
-        which = get_planet_metamateria_factory_district_count
+        which = get_planet_industrial_complex_district_count
         value = 0
     }
+    set_variable = {
+        which = get_planet_manufacturing_complex_district_count
+        value = 0
+    }
+
     while = {
         count = 10
 
         change_planet_size = 1
         effects_add_planet_deposit = yes
     }
+
+    validate_planet_buildings_and_districts = yes
 }
 
 effects_set_planet_size_40 = {
@@ -858,15 +1077,22 @@ effects_set_planet_size_40 = {
     reroll_planet = yes
 
     set_variable = {
-        which = get_planet_metamateria_factory_district_count
+        which = get_planet_industrial_complex_district_count
         value = 0
     }
+    set_variable = {
+        which = get_planet_manufacturing_complex_district_count
+        value = 0
+    }
+
     while = {
         count = 15
 
         change_planet_size = 1
         effects_add_planet_deposit = yes
     }
+
+    validate_planet_buildings_and_districts = yes
 }
 
 effects_set_planet_size_45 = {
@@ -874,15 +1100,22 @@ effects_set_planet_size_45 = {
     reroll_planet = yes
 
     set_variable = {
-        which = get_planet_metamateria_factory_district_count
+        which = get_planet_industrial_complex_district_count
         value = 0
     }
+    set_variable = {
+        which = get_planet_manufacturing_complex_district_count
+        value = 0
+    }
+
     while = {
         count = 20
 
         change_planet_size = 1
         effects_add_planet_deposit = yes
     }
+
+    validate_planet_buildings_and_districts = yes
 }
 
 effects_set_planet_size_50 = {
@@ -890,9 +1123,14 @@ effects_set_planet_size_50 = {
     reroll_planet = yes
 
     set_variable = {
-        which = get_planet_metamateria_factory_district_count
+        which = get_planet_industrial_complex_district_count
         value = 0
     }
+    set_variable = {
+        which = get_planet_manufacturing_complex_district_count
+        value = 0
+    }
+
     while = {
         count = 25
 

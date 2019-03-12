@@ -1,7 +1,7 @@
-### Industrial district and complexes
+### Manufacturing district and complexes
 
-tech_industrial_district = {
-    # Unlocks "Industrial" district
+tech_manufacturing_district = {
+    # Unlocks "Manufacturing" district
 
     cost = @technology_extralow_cost
     area = engineering
@@ -17,8 +17,8 @@ tech_industrial_district = {
 
     prereqfor_desc = {
         feature = {
-            title = "tech_industrial_district_title"
-            desc = "tech_industrial_district_desc"
+            title = "tech_manufacturing_district_title"
+            desc = "tech_manufacturing_district_desc"
         }
     }
 
@@ -27,7 +27,7 @@ tech_industrial_district = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_crystallized_deposits = yes
+                    has_metallized_deposits = yes
                 }
             }
         }
@@ -42,7 +42,7 @@ tech_industrial_district = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_crystallized_deposits = yes
+                    has_metallized_deposits = yes
                 }
             }
         }
@@ -53,8 +53,8 @@ tech_industrial_district = {
     }
 }
 
-tech_industrial_complex_1 = {
-    # Unlocks "Industrial Complex I" building
+tech_manufacturing_complex_1 = {
+    # Unlocks "Manufacturing Complex I" building
 
     cost = @technology_extralow_cost
     area = engineering
@@ -64,15 +64,15 @@ tech_industrial_complex_1 = {
     is_reverse_engineerable = no
     category = { industry }
     prerequisites = {
-        "tech_industrial_district"
+        "tech_manufacturing_district"
         "tech_planetary_government"
     }
     weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
-            title = "tech_industrial_complex_1_title"
-            desc = "tech_industrial_complex_1_desc"
+            title = "tech_manufacturing_complex_1_title"
+            desc = "tech_manufacturing_complex_1_desc"
         }
     }
 
@@ -98,7 +98,7 @@ tech_industrial_complex_1 = {
         }
         modifier = {
             factor = 5
-            has_ascension_perk = "ap_interstellar_dominion"
+            has_ascension_perk = "ap_one_vision"
         }
         modifier = {
             factor = 1.15
@@ -151,24 +151,16 @@ tech_industrial_complex_1 = {
         modifier = {
             factor = 1.4
             OR = {
-                has_valid_civic = "civic_private_military_companies"
-                has_valid_civic = "civic_naval_contractors"
+                has_valid_civic = "civic_franchising"
+                has_valid_civic = "civic_gospel_of_the_masses"
             }
         }
         modifier = {
             factor = 1.4
             OR = {
                 has_authority = "auth_oligarchic"
-                has_authority = "auth_imperial"
+                has_authority = "auth_corporate"
             }
-        }
-        modifier = {
-            factor = 1.25
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
-            factor = 1.05
-            has_ethic = "ethic_militarist"
         }
         modifier = {
             factor = 1.4
@@ -190,8 +182,8 @@ tech_industrial_complex_1 = {
     }
 }
 
-tech_industrial_complex_2 = {
-    # Unlocks "Industrial Complex II" building
+tech_manufacturing_complex_2 = {
+    # Unlocks "Manufacturing Complex II" building
 
     cost = @technology_ultralow_cost
     area = engineering
@@ -201,14 +193,14 @@ tech_industrial_complex_2 = {
     is_reverse_engineerable = no
     category = { industry }
     prerequisites = {
-        "tech_industrial_complex_1"
+        "tech_manufacturing_complex_1"
     }
     weight = @tier1weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_industrial_complex_2_title"
-            desc = "tech_industrial_complex_2_desc"
+            title = "tech_manufacturing_complex_2_title"
+            desc = "tech_manufacturing_complex_2_desc"
         }
     }
 
@@ -235,7 +227,7 @@ tech_industrial_complex_2 = {
         }
         modifier = {
             factor = 4
-            has_ascension_perk = "ap_interstellar_dominion"
+            has_ascension_perk = "ap_one_vision"
         }
         modifier = {
             factor = 1.15
@@ -276,15 +268,15 @@ tech_industrial_complex_2 = {
         modifier = {
             factor = 1.3
             OR = {
-                has_valid_civic = "civic_private_military_companies"
-                has_valid_civic = "civic_naval_contractors"
+                has_valid_civic = "civic_franchising"
+                has_valid_civic = "civic_gospel_of_the_masses"
             }
         }
         modifier = {
             factor = 1.3
             OR = {
                 has_authority = "auth_oligarchic"
-                has_authority = "auth_imperial"
+                has_authority = "auth_corporate"
             }
         }
         modifier = {
@@ -293,10 +285,6 @@ tech_industrial_complex_2 = {
                 has_valid_civic = "civic_environmentalist"
                 has_valid_civic = "civic_agrarian_idyll"
             }
-        }
-        modifier = {
-            factor = 1.15
-            has_ethic = "ethic_fanatic_militarist"
         }
         modifier = {
             factor = 1.25
@@ -326,8 +314,8 @@ tech_industrial_complex_2 = {
     }
 }
 
-tech_industrial_complex_3 = {
-    # Unlocks "Industrial Complex III" building
+tech_manufacturing_complex_3 = {
+    # Unlocks "Manufacturing Complex III" building
 
     cost = @technology_low_cost
     area = engineering
@@ -337,15 +325,15 @@ tech_industrial_complex_3 = {
     is_reverse_engineerable = no
     category = { industry }
     prerequisites = {
-        "tech_industrial_complex_2"
+        "tech_manufacturing_complex_2"
         "tech_colonial_centralization"
     }
     weight = @tier2weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_industrial_complex_3_title"
-            desc = "tech_industrial_complex_3_desc"
+            title = "tech_manufacturing_complex_3_title"
+            desc = "tech_manufacturing_complex_3_desc"
         }
     }
 
@@ -373,7 +361,7 @@ tech_industrial_complex_3 = {
         }
         modifier = {
             factor = 3
-            has_ascension_perk = "ap_interstellar_dominion"
+            has_ascension_perk = "ap_one_vision"
         }
         modifier = {
             factor = 0.9
@@ -414,15 +402,15 @@ tech_industrial_complex_3 = {
         modifier = {
             factor = 1.2
             OR = {
-                has_valid_civic = "civic_private_military_companies"
-                has_valid_civic = "civic_naval_contractors"
+                has_valid_civic = "civic_franchising"
+                has_valid_civic = "civic_gospel_of_the_masses"
             }
         }
         modifier = {
             factor = 1.2
             OR = {
                 has_authority = "auth_oligarchic"
-                has_authority = "auth_imperial"
+                has_authority = "auth_corporate"
             }
         }
         modifier = {
@@ -431,10 +419,6 @@ tech_industrial_complex_3 = {
                 has_valid_civic = "civic_environmentalist"
                 has_valid_civic = "civic_agrarian_idyll"
             }
-        }
-        modifier = {
-            factor = 1.05
-            has_ethic = "ethic_fanatic_militarist"
         }
         modifier = {
             factor = 1.15
@@ -477,8 +461,8 @@ tech_industrial_complex_3 = {
     }
 }
 
-tech_industrial_complex_4 = {
-    # Unlocks "Industrial Complex IV" building
+tech_manufacturing_complex_4 = {
+    # Unlocks "Manufacturing Complex IV" building
 
     cost = @technology_medium_cost
     area = engineering
@@ -488,14 +472,14 @@ tech_industrial_complex_4 = {
     is_reverse_engineerable = no
     category = { industry }
     prerequisites = {
-        "tech_industrial_complex_3"
+        "tech_manufacturing_complex_3"
     }
     weight = @tier3weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_industrial_complex_4_title"
-            desc = "tech_industrial_complex_4_desc"
+            title = "tech_manufacturing_complex_4_title"
+            desc = "tech_manufacturing_complex_4_desc"
         }
     }
 
@@ -528,7 +512,7 @@ tech_industrial_complex_4 = {
         }
         modifier = {
             factor = 2
-            has_ascension_perk = "ap_interstellar_dominion"
+            has_ascension_perk = "ap_one_vision"
         }
         modifier = {
             factor = 0.8
@@ -569,15 +553,15 @@ tech_industrial_complex_4 = {
         modifier = {
             factor = 1.1
             OR = {
-                has_valid_civic = "civic_private_military_companies"
-                has_valid_civic = "civic_naval_contractors"
+                has_valid_civic = "civic_franchising"
+                has_valid_civic = "civic_gospel_of_the_masses"
             }
         }
         modifier = {
             factor = 1.1
             OR = {
                 has_authority = "auth_oligarchic"
-                has_authority = "auth_imperial"
+                has_authority = "auth_corporate"
             }
         }
         modifier = {
@@ -641,8 +625,8 @@ tech_industrial_complex_4 = {
     }
 }
 
-tech_industrial_complex_5 = {
-    # Unlocks "Industrial Complex V" building
+tech_manufacturing_complex_5 = {
+    # Unlocks "Manufacturing Complex V" building
 
     cost = @technology_high_cost
     area = engineering
@@ -652,15 +636,15 @@ tech_industrial_complex_5 = {
     is_reverse_engineerable = no
     category = { industry }
     prerequisites = {
-        "tech_industrial_complex_4"
+        "tech_manufacturing_complex_4"
         "tech_galactic_administration"
     }
     weight = @tier4weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_industrial_complex_5_title"
-            desc = "tech_industrial_complex_5_desc"
+            title = "tech_manufacturing_complex_5_title"
+            desc = "tech_manufacturing_complex_5_desc"
         }
     }
 
@@ -794,8 +778,8 @@ tech_industrial_complex_5 = {
     }
 }
 
-tech_industrial_complex_6 = {
-    # Unlocks "Industrial Complex VI" building
+tech_manufacturing_complex_6 = {
+    # Unlocks "Manufacturing Complex VI" building
 
     cost = @technology_ultrahigh_cost
     area = engineering
@@ -805,14 +789,14 @@ tech_industrial_complex_6 = {
     is_reverse_engineerable = no
     category = { industry }
     prerequisites = {
-        "tech_industrial_complex_5"
+        "tech_manufacturing_complex_5"
     }
     weight = @tier5weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_industrial_complex_6_title"
-            desc = "tech_industrial_complex_6_desc"
+            title = "tech_manufacturing_complex_6_title"
+            desc = "tech_manufacturing_complex_6_desc"
         }
     }
 
@@ -839,7 +823,7 @@ tech_industrial_complex_6 = {
         modifier = {
             factor = 0
             NOT = {
-                has_ascension_perk = "ap_interstellar_dominion"
+                has_ascension_perk = "ap_one_vision"
             }
         }
         modifier = {
@@ -988,14 +972,14 @@ tech_industrial_complex_6 = {
         modifier = {
             factor = 0
             NOT = {
-                has_ascension_perk = "ap_interstellar_dominion"
+                has_ascension_perk = "ap_one_vision"
             }
         }
     }
 }
 
-tech_industrial_complex_7 = {
-    # Unlocks "Industrial Complex VII" building
+tech_manufacturing_complex_7 = {
+    # Unlocks "Manufacturing Complex VII" building
 
     cost = @technology_extrahigh_cost
     area = engineering
@@ -1005,14 +989,14 @@ tech_industrial_complex_7 = {
     is_reverse_engineerable = no
     category = { industry }
     prerequisites = {
-        "tech_industrial_complex_6"
+        "tech_manufacturing_complex_6"
     }
     weight = @tier5weight3
 
     prereqfor_desc = {
         feature = {
-            title = "tech_industrial_complex_7_title"
-            desc = "tech_industrial_complex_7_desc"
+            title = "tech_manufacturing_complex_7_title"
+            desc = "tech_manufacturing_complex_7_desc"
         }
     }
 
@@ -1039,7 +1023,7 @@ tech_industrial_complex_7 = {
         modifier = {
             factor = 0
             NOT = {
-                has_ascension_perk = "ap_interstellar_dominion"
+                has_ascension_perk = "ap_one_vision"
             }
         }
         modifier = {
@@ -1115,7 +1099,7 @@ tech_industrial_complex_7 = {
         modifier = {
             factor = 0
             NOT = {
-                has_ascension_perk = "ap_interstellar_dominion"
+                has_ascension_perk = "ap_one_vision"
             }
         }
         modifier = {

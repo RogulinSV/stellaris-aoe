@@ -335,9 +335,14 @@ effects_add_rich_resources_habitable_planet = {
     }
 
     set_variable = {
-        which = get_planet_metamateria_factory_district_count
+        which = get_planet_industrial_complex_district_count
         value = 0
     }
+    set_variable = {
+        which = get_planet_manufacturing_complex_district_count
+        value = 0
+    }
+
     while = {
         limit = {
             check_variable = {

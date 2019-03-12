@@ -1,4 +1,8 @@
-deposit_cat_metamateria = {
+deposit_cat_crystallized = {
+    blocker = no
+    important = yes
+}
+deposit_cat_metallized = {
     blocker = no
     important = yes
 }

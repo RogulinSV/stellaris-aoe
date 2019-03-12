@@ -1,10 +1,24 @@
 # Scope: planet
-has_crystallite_deposits = {
+has_crystallized_deposits = {
     OR = {
-        has_deposit = "d_metacrystal_caves"
-        has_deposit = "d_metacrystal_plains"
-        has_deposit = "d_metacrystal_mines"
-        has_deposit = "d_metacrystal_matrixes"
+        has_deposit = "d_crystallized_caves"
+        has_deposit = "d_crystallized_plains"
+        has_deposit = "d_crystallized_mines"
+        has_deposit = "d_crystallized_stratums"
+        has_deposit = "d_crystallized_hills"
+        has_deposit = "d_crystallized_matrixes"
+    }
+}
+
+# Scope: planet
+has_metallized_deposits = {
+    OR = {
+        has_deposit = "d_metallized_caves"
+        has_deposit = "d_metallized_plains"
+        has_deposit = "d_metallized_mines"
+        has_deposit = "d_metallized_mountains"
+        has_deposit = "d_metallized_oceans"
+        has_deposit = "d_metallized_matrixes"
     }
 }
 

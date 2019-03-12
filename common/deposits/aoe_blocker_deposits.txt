@@ -1869,7 +1869,7 @@ d_parasitic_bioplasm = {
     category = deposit_cat_blockers
 
     blocker_swap_types = {
-        d_metacrystal_mines
+        d_crystallized_mines
     }
 
     potential = {

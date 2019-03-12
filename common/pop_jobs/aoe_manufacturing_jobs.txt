@@ -1,7 +1,7 @@
-industrial_complex_worker = {
+manufacturing_complex_worker = {
     category = worker
     condition_string = WORKER_JOB_TRIGGER
-    building_icon = "building_industrial_complex_7"
+    building_icon = "building_manufacturing_complex_7"
     clothes_texture_index = 2
 
     possible = {
@@ -14,7 +14,7 @@ industrial_complex_worker = {
     }
 
     resources = {
-        category = planet_metallurgists
+        category = planet_artisans
         upkeep = {
             minerals = 1
         }
@@ -28,7 +28,7 @@ industrial_complex_worker = {
                     }
                 }
             }
-            consumer_goods = 1
+            alloys = 1
         }
         upkeep = {
             trigger = {
@@ -40,70 +40,70 @@ industrial_complex_worker = {
             food = 1
         }
         produces = {
-            alloys = 1
+            consumer_goods = 1
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_1"
+                    has_technology = "tech_manufacturing_complex_1"
                 }
             }
-            alloys = 1
+            consumer_goods = 1
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_2"
+                    has_technology = "tech_manufacturing_complex_2"
                 }
             }
-            alloys = 2
+            consumer_goods = 2
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_3"
+                    has_technology = "tech_manufacturing_complex_3"
                 }
             }
-            alloys = 3
+            consumer_goods = 3
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_4"
+                    has_technology = "tech_manufacturing_complex_4"
                 }
             }
-            alloys = 4
+            consumer_goods = 4
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_5"
+                    has_technology = "tech_manufacturing_complex_5"
                 }
             }
-            alloys = 5
+            consumer_goods = 5
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_6"
+                    has_technology = "tech_manufacturing_complex_6"
                 }
             }
-            alloys = 6
+            consumer_goods = 6
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_7"
+                    has_technology = "tech_manufacturing_complex_7"
                 }
             }
-            alloys = 7
+            consumer_goods = 7
         }
         produces = {
             trigger = {
@@ -137,10 +137,6 @@ industrial_complex_worker = {
             can_take_servant_job = no
         }
         modifier = {
-            factor = 1.25
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
             factor = 0.75
             has_ethic = "ethic_spiritualist"
         }
@@ -158,7 +154,10 @@ industrial_complex_worker = {
         }
         modifier = {
             factor = 1.25
-            has_trait = "trait_industrious"
+            OR = {
+                has_trait = "trait_talented"
+                has_trait = "trait_thrifty"
+            }
         }
         modifier = {
             factor = 1.5
@@ -201,10 +200,10 @@ industrial_complex_worker = {
     }
 }
 
-industrial_complex_engineer = {
+manufacturing_complex_engineer = {
     category = specialist
     condition_string = SPECIALIST_JOB_TRIGGER
-    building_icon = "building_industrial_complex_7"
+    building_icon = "building_manufacturing_complex_7"
     clothes_texture_index = 3
 
     possible = {
@@ -217,7 +216,7 @@ industrial_complex_engineer = {
     }
 
     resources = {
-        category = planet_metallurgists
+        category = planet_artisans
         upkeep = {
             minerals = 2
         }
@@ -231,7 +230,7 @@ industrial_complex_engineer = {
                     }
                 }
             }
-            consumer_goods = 2
+            alloys = 2
         }
         upkeep = {
             trigger = {
@@ -243,70 +242,70 @@ industrial_complex_engineer = {
             food = 2
         }
         produces = {
-            alloys = 2
+            consumer_goods = 2
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_1"
+                    has_technology = "tech_manufacturing_complex_1"
                 }
             }
-            physics_research = 1
+            engineering_research = 1
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_2"
+                    has_technology = "tech_manufacturing_complex_2"
                 }
             }
-            physics_research = 2
+            engineering_research = 2
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_3"
+                    has_technology = "tech_manufacturing_complex_3"
                 }
             }
-            physics_research = 3
+            engineering_research = 3
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_4"
+                    has_technology = "tech_manufacturing_complex_4"
                 }
             }
-            physics_research = 4
+            engineering_research = 4
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_5"
+                    has_technology = "tech_manufacturing_complex_5"
                 }
             }
-            physics_research = 5
+            engineering_research = 5
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_6"
+                    has_technology = "tech_manufacturing_complex_6"
                 }
             }
-            physics_research = 6
+            engineering_research = 6
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_7"
+                    has_technology = "tech_manufacturing_complex_7"
                 }
             }
-            physics_research = 7
+            engineering_research = 7
         }
         produces = {
             trigger = {
@@ -340,10 +339,6 @@ industrial_complex_engineer = {
             can_take_servant_job = no
         }
         modifier = {
-            factor = 1.25
-            has_ethic = "ethic_fanatic_militarist"
-        }
-        modifier = {
             factor = 0.75
             has_ethic = "ethic_spiritualist"
         }
@@ -364,8 +359,8 @@ industrial_complex_engineer = {
             has_trait = "trait_natural_physicists"
         }
         modifier = {
-            factor = 1.75
-            has_trait = "trait_industrious"
+            factor = 1.25
+            has_trait = "trait_intelligent"
         }
         modifier = {
             factor = 0.75
@@ -400,10 +395,10 @@ industrial_complex_engineer = {
     }
 }
 
-industrial_complex_drone_worker = {
+manufacturing_complex_drone_worker = {
     category = complex_drone
     condition_string = DRONE_JOB_TRIGGER
-    building_icon = "building_industrial_complex_7"
+    building_icon = "building_manufacturing_complex_7"
 
     possible = {
         drone_job_check_trigger = yes
@@ -414,75 +409,75 @@ industrial_complex_drone_worker = {
     }
 
     resources = {
-        category = planet_metallurgists
+        category = planet_artisans
         upkeep = {
             minerals = 2
         }
         produces = {
-            alloys = 2
+            consumer_goods = 2
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_1"
+                    has_technology = "tech_manufacturing_complex_1"
                 }
             }
-            alloys = 2
+            consumer_goods = 2
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_2"
+                    has_technology = "tech_manufacturing_complex_2"
                 }
             }
-            alloys = 3
+            consumer_goods = 3
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_3"
+                    has_technology = "tech_manufacturing_complex_3"
                 }
             }
-            alloys = 4
+            consumer_goods = 4
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_4"
+                    has_technology = "tech_manufacturing_complex_4"
                 }
             }
-            alloys = 5
+            consumer_goods = 5
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_5"
+                    has_technology = "tech_manufacturing_complex_5"
                 }
             }
-            alloys = 6
+            consumer_goods = 6
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_6"
+                    has_technology = "tech_manufacturing_complex_6"
                 }
             }
-            alloys = 7
+            consumer_goods = 7
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_7"
+                    has_technology = "tech_manufacturing_complex_7"
                 }
             }
-            alloys = 8
+            consumer_goods = 8
         }
         produces = {
             trigger = {
@@ -532,10 +527,6 @@ industrial_complex_drone_worker = {
         modifier = {
             factor = 1.15
             has_ethic = "ethic_gestalt_consciousness"
-        }
-        modifier = {
-            factor = 1.25
-            has_ethic = "ethic_fanatic_militarist"
         }
         modifier = {
             factor = 0.75
@@ -593,10 +584,10 @@ industrial_complex_drone_worker = {
     }
 }
 
-industrial_complex_drone_engineer = {
+manufacturing_complex_drone_engineer = {
     category = complex_drone
     condition_string = DRONE_JOB_TRIGGER
-    building_icon = "building_industrial_complex_7"
+    building_icon = "building_manufacturing_complex_7"
 
     possible = {
         drone_job_check_trigger = yes
@@ -607,75 +598,75 @@ industrial_complex_drone_engineer = {
     }
 
     resources = {
-        category = planet_metallurgists
+        category = planet_artisans
         upkeep = {
             minerals = 2
         }
         produces = {
-            alloys = 3
+            consumer_goods = 3
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_1"
+                    has_technology = "tech_manufacturing_complex_1"
                 }
             }
-            physics_research = 1
+            engineering_research = 1
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_2"
+                    has_technology = "tech_manufacturing_complex_2"
                 }
             }
-            physics_research = 2
+            engineering_research = 2
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_3"
+                    has_technology = "tech_manufacturing_complex_3"
                 }
             }
-            physics_research = 3
+            engineering_research = 3
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_4"
+                    has_technology = "tech_manufacturing_complex_4"
                 }
             }
-            physics_research = 4
+            engineering_research = 4
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_5"
+                    has_technology = "tech_manufacturing_complex_5"
                 }
             }
-            physics_research = 5
+            engineering_research = 5
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_6"
+                    has_technology = "tech_manufacturing_complex_6"
                 }
             }
-            physics_research = 6
+            engineering_research = 6
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_7"
+                    has_technology = "tech_manufacturing_complex_7"
                 }
             }
-            physics_research = 7
+            engineering_research = 7
         }
         produces = {
             trigger = {
@@ -725,10 +716,6 @@ industrial_complex_drone_engineer = {
         modifier = {
             factor = 1.15
             has_ethic = "ethic_gestalt_consciousness"
-        }
-        modifier = {
-            factor = 1.25
-            has_ethic = "ethic_fanatic_militarist"
         }
         modifier = {
             factor = 0.75
@@ -786,10 +773,10 @@ industrial_complex_drone_engineer = {
     }
 }
 
-industrial_complex_calculator = {
+manufacturing_complex_calculator = {
     category = simple_drone
     condition_string = DRONE_JOB_TRIGGER
-    building_icon = "building_industrial_complex_7"
+    building_icon = "building_manufacturing_complex_7"
     clothes_texture_index = 3
     icon = "spawning_drone"
 
@@ -802,75 +789,75 @@ industrial_complex_calculator = {
     }
 
     resources = {
-        category = planet_metallurgists
+        category = planet_artisans
         upkeep = {
             minerals = 2
         }
         produces = {
-            alloys = 2
+            consumer_goods = 2
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_1"
+                    has_technology = "tech_manufacturing_complex_1"
                 }
             }
-            alloys = 2
+            consumer_goods = 2
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_2"
+                    has_technology = "tech_manufacturing_complex_2"
                 }
             }
-            alloys = 3
+            consumer_goods = 3
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_3"
+                    has_technology = "tech_manufacturing_complex_3"
                 }
             }
-            alloys = 4
+            consumer_goods = 4
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_4"
+                    has_technology = "tech_manufacturing_complex_4"
                 }
             }
-            alloys = 5
+            consumer_goods = 5
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_5"
+                    has_technology = "tech_manufacturing_complex_5"
                 }
             }
-            alloys = 6
+            consumer_goods = 6
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_6"
+                    has_technology = "tech_manufacturing_complex_6"
                 }
             }
-            alloys = 7
+            consumer_goods = 7
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_7"
+                    has_technology = "tech_manufacturing_complex_7"
                 }
             }
-            alloys = 8
+            consumer_goods = 8
         }
         produces = {
             trigger = {
@@ -908,10 +895,6 @@ industrial_complex_calculator = {
         modifier = {
             factor = 1.15
             has_trait = "trait_robot_power_drills"
-        }
-        modifier = {
-            factor = 1.15
-            has_ethic = "ethic_fanatic_militarist"
         }
         modifier = {
             factor = 0.9
@@ -963,10 +946,10 @@ industrial_complex_calculator = {
     }
 }
 
-industrial_complex_brain_drone = {
+manufacturing_complex_brain_drone = {
     category = simple_drone
     condition_string = DRONE_JOB_TRIGGER
-    building_icon = "building_industrial_complex_7"
+    building_icon = "building_manufacturing_complex_7"
     clothes_texture_index = 3
     icon = "spawning_drone"
 
@@ -979,75 +962,75 @@ industrial_complex_brain_drone = {
     }
 
     resources = {
-        category = planet_metallurgists
+        category = planet_artisans
         upkeep = {
             minerals = 2
         }
         produces = {
-            alloys = 2
+            consumer_goods = 2
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_1"
+                    has_technology = "tech_manufacturing_complex_1"
                 }
             }
-            alloys = 2
+            consumer_goods = 2
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_2"
+                    has_technology = "tech_manufacturing_complex_2"
                 }
             }
-            alloys = 3
+            consumer_goods = 3
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_3"
+                    has_technology = "tech_manufacturing_complex_3"
                 }
             }
-            alloys = 4
+            consumer_goods = 4
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_4"
+                    has_technology = "tech_manufacturing_complex_4"
                 }
             }
-            alloys = 5
+            consumer_goods = 5
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_5"
+                    has_technology = "tech_manufacturing_complex_5"
                 }
             }
-            alloys = 6
+            consumer_goods = 6
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_6"
+                    has_technology = "tech_manufacturing_complex_6"
                 }
             }
-            alloys = 7
+            consumer_goods = 7
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_7"
+                    has_technology = "tech_manufacturing_complex_7"
                 }
             }
-            alloys = 8
+            consumer_goods = 8
         }
         produces = {
             trigger = {
@@ -1085,10 +1068,6 @@ industrial_complex_brain_drone = {
         modifier = {
             factor = 1.15
             has_trait = "trait_robot_power_drills"
-        }
-        modifier = {
-            factor = 1.15
-            has_ethic = "ethic_fanatic_militarist"
         }
         modifier = {
             factor = 0.9
@@ -1140,10 +1119,10 @@ industrial_complex_brain_drone = {
     }
 }
 
-industrial_complex_fe_ai = {
+manufacturing_complex_fe_ai = {
     category = precursor
     is_capped_by_modifier = yes
-    building_icon = "building_ancient_industrial_center"
+    building_icon = "building_ancient_manufacturing_center"
     clothes_texture_index = 3
     icon = "technician"
 
@@ -1158,70 +1137,70 @@ industrial_complex_fe_ai = {
     resources = {
         category = planet_technician
         produces = {
-            alloys = 5
+            consumer_goods = 5
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_1"
+                    has_technology = "tech_manufacturing_complex_1"
                 }
             }
-            alloys = 3
+            consumer_goods = 3
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_2"
+                    has_technology = "tech_manufacturing_complex_2"
                 }
             }
-            alloys = 6
+            consumer_goods = 6
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_3"
+                    has_technology = "tech_manufacturing_complex_3"
                 }
             }
-            alloys = 9
+            consumer_goods = 9
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_4"
+                    has_technology = "tech_manufacturing_complex_4"
                 }
             }
-            alloys = 12
+            consumer_goods = 12
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_5"
+                    has_technology = "tech_manufacturing_complex_5"
                 }
             }
-            alloys = 15
+            consumer_goods = 15
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_6"
+                    has_technology = "tech_manufacturing_complex_6"
                 }
             }
-            alloys = 18
+            consumer_goods = 18
         }
         produces = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_industrial_complex_7"
+                    has_technology = "tech_manufacturing_complex_7"
                 }
             }
-            alloys = 21
+            consumer_goods = 21
         }
     }
 
