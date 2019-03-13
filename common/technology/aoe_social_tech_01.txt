@@ -697,15 +697,23 @@ tech_environment_utilization_molten = {
 
     weight_modifier = {
         modifier = {
-            factor = 1.5
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_1"
+        }
+        modifier = {
+            factor = 1.2
             has_technology = "tech_environment_utilization_2"
         }
         modifier = {
-            factor = 1.5
+            factor = 1.3
             has_technology = "tech_environment_utilization_3"
         }
         modifier = {
-            factor = 1.5
+            factor = 1.4
             has_technology = "tech_environment_utilization_4"
         }
         modifier = {
@@ -808,6 +816,10 @@ tech_environment_utilization_molten = {
         modifier = {
             factor = 0
             num_owned_planets < 2
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
         }
     }
 }
@@ -834,15 +846,23 @@ tech_environment_utilization_floral = {
 
     weight_modifier = {
         modifier = {
-            factor = 1.5
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_1"
+        }
+        modifier = {
+            factor = 1.2
             has_technology = "tech_environment_utilization_2"
         }
         modifier = {
-            factor = 1.5
+            factor = 1.3
             has_technology = "tech_environment_utilization_3"
         }
         modifier = {
-            factor = 1.5
+            factor = 1.4
             has_technology = "tech_environment_utilization_4"
         }
         modifier = {
@@ -945,6 +965,10 @@ tech_environment_utilization_floral = {
         modifier = {
             factor = 0
             num_owned_planets < 2
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
         }
     }
 }
@@ -971,15 +995,23 @@ tech_environment_utilization_aquatic = {
 
     weight_modifier = {
         modifier = {
-            factor = 1.5
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_1"
+        }
+        modifier = {
+            factor = 1.2
             has_technology = "tech_environment_utilization_2"
         }
         modifier = {
-            factor = 1.5
+            factor = 1.3
             has_technology = "tech_environment_utilization_3"
         }
         modifier = {
-            factor = 1.5
+            factor = 1.4
             has_technology = "tech_environment_utilization_4"
         }
         modifier = {
@@ -1076,6 +1108,10 @@ tech_environment_utilization_aquatic = {
         modifier = {
             factor = 0
             num_owned_planets < 2
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
         }
     }
 }
@@ -1102,15 +1138,23 @@ tech_environment_utilization_wasteland = {
 
     weight_modifier = {
         modifier = {
-            factor = 1.5
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_1"
+        }
+        modifier = {
+            factor = 1.2
             has_technology = "tech_environment_utilization_2"
         }
         modifier = {
-            factor = 1.5
+            factor = 1.3
             has_technology = "tech_environment_utilization_3"
         }
         modifier = {
-            factor = 1.5
+            factor = 1.4
             has_technology = "tech_environment_utilization_4"
         }
         modifier = {
@@ -1208,10 +1252,145 @@ tech_environment_utilization_wasteland = {
             factor = 0
             num_owned_planets < 2
         }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
     }
 }
 
-tech_disinsection_parasitic = {
+tech_environment_utilization_carbon = {
+    cost = @technology_ultralow_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_colonization_1"
+    }
+    weight = @tier2weight1
+
+    weight_groups = {
+        deposit_blockers
+    }
+    mod_weight_if_group_picked = {
+        deposit_blockers = 0.5
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_1"
+        }
+        modifier = {
+            factor = 1.2
+            has_technology = "tech_environment_utilization_2"
+        }
+        modifier = {
+            factor = 1.3
+            has_technology = "tech_environment_utilization_3"
+        }
+        modifier = {
+            factor = 1.4
+            has_technology = "tech_environment_utilization_4"
+        }
+        modifier = {
+            factor = 1.5
+            has_technology = "tech_environment_utilization_5"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_expansion_adopt"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_expansion_colonization_fever"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_expansion_a_new_life"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_expansion_finish"
+        }
+        modifier = {
+            factor = 4
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = "d_carbon_pillars"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 1
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = "d_carbon_pillars"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_environment_leveling_rifts = {
     cost = @technology_low_cost
     area = society
     tier = 2
@@ -1232,6 +1411,14 @@ tech_disinsection_parasitic = {
     }
 
     weight_modifier = {
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_1"
+        }
         modifier = {
             factor = 1.1
             has_technology = "tech_environment_utilization_2"
@@ -1256,7 +1443,237 @@ tech_disinsection_parasitic = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_deposit = "d_parasitic_bioplasm"
+                    has_deposit = "d_magmatic_rifts"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 1
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = "d_magmatic_rifts"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_environment_leveling_stalagmites = {
+    cost = @technology_low_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_colonization_1"
+    }
+    weight = @tier2weight2
+
+    weight_groups = {
+        deposit_blockers
+    }
+    mod_weight_if_group_picked = {
+        deposit_blockers = 0.5
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_1"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_2"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_3"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_4"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_5"
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = "d_stalagmite_plains"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 1
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = "d_stalagmite_plains"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_environment_eradication_sand_worms = {
+    cost = @technology_low_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_colonization_1"
+    }
+    weight = @tier2weight3
+
+    weight_groups = {
+        deposit_blockers
+    }
+    mod_weight_if_group_picked = {
+        deposit_blockers = 0.5
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_1"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_2"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_3"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_4"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_5"
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = "d_sand_worms"
                 }
             }
         }
@@ -1303,13 +1720,138 @@ tech_disinsection_parasitic = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_deposit = "d_parasitic_bioplasm"
+                    has_deposit = "d_sand_worms"
                 }
             }
         }
         modifier = {
             factor = 0
             num_owned_planets < 2
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_environment_disinsection_parasitic = {
+    cost = @technology_low_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_colonization_1"
+    }
+    weight = @tier2weight3
+
+    weight_groups = {
+        deposit_blockers
+    }
+    mod_weight_if_group_picked = {
+        deposit_blockers = 0.5
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_1"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_2"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_3"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_4"
+        }
+        modifier = {
+            factor = 1.1
+            has_technology = "tech_environment_utilization_5"
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                any_owned_planet = {
+                    has_deposit = "d_parasitic_bioplasm"
+                }
+                any_owned_planet = {
+                    has_deposit = "d_serpentard_colonies"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 1
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOR = {
+                any_owned_planet = {
+                    has_deposit = "d_parasitic_bioplasm"
+                }
+                any_owned_planet = {
+                    has_deposit = "d_serpentard_colonies"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 2
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
         }
     }
 }
