@@ -1,0 +1,719 @@
+@section_ultralow_cost = 20
+@section_low_cost = 30
+@section_medium_cost = 40
+@section_high_cost = 50
+@section_ultrahigh_cost = 60
+
+### Level 1
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_M1S1_01"
+    ship_size = corvette
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "corvette_M1S1_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_corvette_construction_1"
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 10.0
+            OR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = slaving_despots
+                has_ai_personality = migrating_flock
+                has_ai_personality = evangelising_zealots
+                has_ai_personality = hive_mind
+            }
+        }
+        modifier = {
+            factor = 5.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
+    }
+
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_04"
+    }
+
+    small_utility_slots = 4
+    aux_utility_slots = 1
+
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_ultralow_cost
+        }
+    }
+}
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_S3_01"
+    ship_size = corvette
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "corvette_S3_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_corvette_construction_1"
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 10.0
+            OR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = slaving_despots
+                has_ai_personality = migrating_flock
+                has_ai_personality = evangelising_zealots
+                has_ai_personality = hive_mind
+            }
+        }
+        modifier = {
+            factor = 3
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 3
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NOR = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_explosive"
+            }
+        }
+    }
+
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+
+    small_utility_slots = 4
+    aux_utility_slots = 1
+
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_ultralow_cost
+        }
+    }
+}
+
+### Level 2
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_M1S1_02"
+    ship_size = corvette
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "corvette_M1S1_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_corvette_construction_2"
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 10.0
+            OR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = slaving_despots
+                has_ai_personality = migrating_flock
+                has_ai_personality = evangelising_zealots
+                has_ai_personality = hive_mind
+            }
+        }
+        modifier = {
+            factor = 5.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
+    }
+
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_03"
+    }
+
+    small_utility_slots = 4
+    aux_utility_slots = 1
+
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_low_cost
+        }
+    }
+}
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_S3_02"
+    ship_size = corvette
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "corvette_S3_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_corvette_construction_2"
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 10.0
+            OR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = slaving_despots
+                has_ai_personality = migrating_flock
+                has_ai_personality = evangelising_zealots
+                has_ai_personality = hive_mind
+            }
+        }
+        modifier = {
+            factor = 3.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 3.0
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NOR = {
+                is_preferred_weapons = "weapon_type_energy"
+                is_preferred_weapons = "weapon_type_explosive"
+            }
+        }
+    }
+
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+
+    small_utility_slots = 4
+    aux_utility_slots = 1
+
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_low_cost
+        }
+    }
+}
+
+### Level 3
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_M1S1_03"
+    ship_size = corvette
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "corvette_M1S1_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_corvette_construction_3"
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 10.0
+            OR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = slaving_despots
+                has_ai_personality = migrating_flock
+                has_ai_personality = evangelising_zealots
+                has_ai_personality = hive_mind
+            }
+        }
+        modifier = {
+            factor = 5.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
+    }
+
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+
+    small_utility_slots = 4
+    aux_utility_slots = 2
+
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_medium_cost
+        }
+    }
+}
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_S3_03"
+    ship_size = corvette
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "corvette_S3_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_corvette_construction_3"
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 10.0
+            OR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = slaving_despots
+                has_ai_personality = migrating_flock
+                has_ai_personality = evangelising_zealots
+                has_ai_personality = hive_mind
+            }
+        }
+        modifier = {
+            factor = 5.0
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NOR = { is_preferred_weapons = "weapon_type_explosive" }
+        }
+    }
+
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+
+    small_utility_slots = 4
+    aux_utility_slots = 2
+
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_medium_cost
+        }
+    }
+}
+
+### Level 4
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_M1S1_04"
+    ship_size = corvette
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "corvette_M1S1_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_corvette_construction_4"
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 10.0
+            OR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = slaving_despots
+                has_ai_personality = migrating_flock
+                has_ai_personality = evangelising_zealots
+                has_ai_personality = hive_mind
+            }
+        }
+        modifier = {
+            factor = 5.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
+    }
+
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        slot_size = small
+        slot_type = weapon
+        locatorname = "small_gun_01"
+    }
+
+    small_utility_slots = 4
+    aux_utility_slots = 2
+
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_high_cost
+        }
+    }
+}
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_S3_04"
+    ship_size = corvette
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "corvette_S3_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_corvette_construction_4"
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 10.0
+            OR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = slaving_despots
+                has_ai_personality = migrating_flock
+                has_ai_personality = evangelising_zealots
+                has_ai_personality = hive_mind
+            }
+        }
+        modifier = {
+            factor = 5.0
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NOR = { is_preferred_weapons = "weapon_type_explosive" }
+        }
+    }
+
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_04"
+    }
+
+    small_utility_slots = 4
+    aux_utility_slots = 2
+
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_high_cost
+        }
+    }
+}
+
+### Level 5
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_M1S1_05"
+    ship_size = corvette
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "corvette_M1S1_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_corvette_construction_5"
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 10.0
+            OR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = slaving_despots
+                has_ai_personality = migrating_flock
+                has_ai_personality = evangelising_zealots
+                has_ai_personality = hive_mind
+            }
+        }
+        modifier = {
+            factor = 5.0
+            is_preferred_weapons = "weapon_type_energy"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = { is_preferred_weapons = "weapon_type_energy" }
+        }
+    }
+
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        slot_size = medium
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+
+    small_utility_slots = 4
+    aux_utility_slots = 2
+
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_ultrahigh_cost
+        }
+    }
+}
+
+ship_section_template = {
+    key = "CORVETTE_ADVANCED_S3_05"
+    ship_size = corvette
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "corvette_S3_entity"
+    icon = "GFX_ship_part_core_mid"
+
+    prerequisites = {
+        "tech_corvette_construction_5"
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 10.0
+            OR = {
+                has_ai_personality = peaceful_traders
+                has_ai_personality = slaving_despots
+                has_ai_personality = migrating_flock
+                has_ai_personality = evangelising_zealots
+                has_ai_personality = hive_mind
+            }
+        }
+        modifier = {
+            factor = 5.0
+            is_preferred_weapons = "weapon_type_explosive"
+        }
+        modifier = {
+            factor = 0.1
+            NOT = { is_preferred_weapons = "weapon_type_explosive" }
+        }
+    }
+
+    component_slot = {
+        name = "LARGE_GUN_01"
+        slot_size = large
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        slot_size = torpedo
+        slot_type = weapon
+        locatorname = "medium_gun_03"
+    }
+
+    small_utility_slots = 4
+    aux_utility_slots = 2
+
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_ultrahigh_cost
+        }
+    }
+}

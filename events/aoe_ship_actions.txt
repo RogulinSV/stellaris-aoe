@@ -1,0 +1,34 @@
+namespace = aoe_ship_actions
+
+ship_event = {
+    id = aoe_ship_actions.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "corvette"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "counter_ship_corvettes_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "counter_ship_corvettes_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "counter_ship_corvettes_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}

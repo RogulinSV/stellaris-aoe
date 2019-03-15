@@ -6,3 +6,10 @@ on_press_begin = {
         aoe_begin_actions.2
     }
 }
+
+on_ship_built = {
+    events = {
+        # Corvette built Event
+        aoe_ship_actions.1
+    }
+}
