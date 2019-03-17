@@ -1,0 +1,139 @@
+### Expenditure
+
+thiotimoline_expenditure_buffer = {
+    resource = thiotimoline
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+thiotimoline_expenditure_trade = {
+    resource = thiotimoline
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+thiotimoline_expenditure_colonies = {
+    resource = thiotimoline
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+thiotimoline_expenditure_deposit_blockers = {
+    resource = thiotimoline
+    type = expenditure
+    category = deposit_blockers
+
+    potential = {
+        always = yes
+    }
+    
+    fraction = {
+        weight = 0.05
+    }
+
+    static_max = {
+        base = 1000
+    }
+}
+
+thiotimoline_expenditure_planets = {
+    resource = thiotimoline
+    type = expenditure
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+thiotimoline_upkeep_planets = {
+    resource = thiotimoline
+    type = upkeep
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+thiotimoline_expenditure_megastructures = {
+    resource = thiotimoline
+    type = expenditure
+    category = megastructures
+
+    potential = {
+        is_country_type = default
+        is_at_war = no
+        has_galactic_wonders = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+
+    static_max = {
+        base = 6000
+    }
+}
+
+### Unkeep
+
+thiotimoline_upkeep_buffer = {
+    resource = thiotimoline
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+thiotimoline_upkeep_country = {
+    resource = thiotimoline
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

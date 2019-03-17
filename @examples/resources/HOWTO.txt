@@ -1,0 +1,18 @@
+How to add new strategic resource
+
+ 1. Create file common/ai_budget/%RESOURCE%_budget.txt
+ 2. Create or update file common/deposits/orbital_deposits.txt
+ 3. Create or update file common/static_modifiers/static_modifiers_deficit.txt
+ 4. Create or update file common/strategic_resources/strategic_resoources.txt
+ 5. [optional] Create or update file common/technology/strategic_resources_tech.txt
+ 6. Update file interface/resource_groups/sectors_other_resource_groups.txt
+ 7. Update file interface/resource_groups/topbar_other_resource_groups.txt
+ 8. Create or update file localisation/static_modifiers_l_%LANGUAGE%.yml
+ 9. Create or update file localisation/strategic_resources_l_%LANGUAGE%.yml
+ 10. Create files gfx/interface/icons/modifiers/mod_%RESOURCE%_cost_add.png
+                  gfx/interface/icons/modifiers/mod_%RESOURCE%_cost_mult.png
+                  gfx/interface/icons/modifiers/mod_%RESOURCE%_produces_add.png
+                  gfx/interface/icons/modifiers/mod_%RESOURCE%_produces_mult.png
+                  gfx/interface/icons/modifiers/mod_%RESOURCE%_upkeep_add.png
+                  gfx/interface/icons/modifiers/mod_%RESOURCE%_upkeep_mult.png
+                  gfx/interface/icons/modifiers/mod_resource_%RESOURCE%_mult.png

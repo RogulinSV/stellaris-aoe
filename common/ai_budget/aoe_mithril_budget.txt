@@ -1,0 +1,197 @@
+### Expenditure
+
+mithril_expenditure_buffer = {
+    resource = mithril
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+mithril_expenditure_ships = {
+    resource = mithril
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+mithril_expenditure_ships_upgrades = {
+    resource = mithril
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.06
+    }
+}
+
+mithril_expenditure_starbases = {
+    resource = mithril
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+mithril_expenditure_starbases_expand = {
+    resource = mithril
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.4
+    }
+}
+
+mithril_expenditure_stations_1 = {
+    resource = mithril
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = mithril value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+mithril_expenditure_stations_2 = {
+    resource = mithril
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = mithril value >= 800 }
+        resource_stockpile_compare = { resource = mithril value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+mithril_expenditure_stations_3 = {
+    resource = mithril
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = mithril value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+mithril_expenditure_stations_expand = {
+    resource = mithril
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = mithril value < 800 }
+    }
+
+    fraction = {
+        weight = 0.35
+    }
+}
+
+### Unkeep
+
+mithril_upkeep_buffer = {
+    resource = mithril
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+mithril_upkeep_ships = {
+    resource = mithril
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+mithril_upkeep_starbases = {
+    resource = mithril
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+mithril_upkeep_country = {
+    resource = mithril
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

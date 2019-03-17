@@ -1,0 +1,197 @@
+### Expenditure
+
+yuranic_expenditure_buffer = {
+    resource = yuranic
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+yuranic_expenditure_ships = {
+    resource = yuranic
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+yuranic_expenditure_ships_upgrades = {
+    resource = yuranic
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.06
+    }
+}
+
+yuranic_expenditure_starbases = {
+    resource = yuranic
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+yuranic_expenditure_starbases_expand = {
+    resource = yuranic
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.4
+    }
+}
+
+yuranic_expenditure_stations_1 = {
+    resource = yuranic
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = yuranic value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+yuranic_expenditure_stations_2 = {
+    resource = yuranic
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = yuranic value >= 800 }
+        resource_stockpile_compare = { resource = yuranic value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+yuranic_expenditure_stations_3 = {
+    resource = yuranic
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = yuranic value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+yuranic_expenditure_stations_expand = {
+    resource = yuranic
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = yuranic value < 800 }
+    }
+
+    fraction = {
+        weight = 0.35
+    }
+}
+
+### Unkeep
+
+yuranic_upkeep_buffer = {
+    resource = yuranic
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+yuranic_upkeep_ships = {
+    resource = yuranic
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+yuranic_upkeep_starbases = {
+    resource = yuranic
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+yuranic_upkeep_country = {
+    resource = yuranic
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

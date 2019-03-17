@@ -1,0 +1,197 @@
+### Expenditure
+
+vibranium_expenditure_buffer = {
+    resource = vibranium
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+vibranium_expenditure_ships = {
+    resource = vibranium
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+vibranium_expenditure_ships_upgrades = {
+    resource = vibranium
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.06
+    }
+}
+
+vibranium_expenditure_starbases = {
+    resource = vibranium
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+vibranium_expenditure_starbases_expand = {
+    resource = vibranium
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.4
+    }
+}
+
+vibranium_expenditure_stations_1 = {
+    resource = vibranium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = vibranium value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+vibranium_expenditure_stations_2 = {
+    resource = vibranium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = vibranium value >= 800 }
+        resource_stockpile_compare = { resource = vibranium value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+vibranium_expenditure_stations_3 = {
+    resource = vibranium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = vibranium value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+vibranium_expenditure_stations_expand = {
+    resource = vibranium
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = vibranium value < 800 }
+    }
+
+    fraction = {
+        weight = 0.35
+    }
+}
+
+### Unkeep
+
+vibranium_upkeep_buffer = {
+    resource = vibranium
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+vibranium_upkeep_ships = {
+    resource = vibranium
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+vibranium_upkeep_starbases = {
+    resource = vibranium
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+vibranium_upkeep_country = {
+    resource = vibranium
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

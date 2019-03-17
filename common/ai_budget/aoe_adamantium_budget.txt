@@ -1,0 +1,197 @@
+### Expenditure
+
+adamantium_expenditure_buffer = {
+    resource = adamantium
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+adamantium_expenditure_ships = {
+    resource = adamantium
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+adamantium_expenditure_ships_upgrades = {
+    resource = adamantium
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.06
+    }
+}
+
+adamantium_expenditure_starbases = {
+    resource = adamantium
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+adamantium_expenditure_starbases_expand = {
+    resource = adamantium
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.4
+    }
+}
+
+adamantium_expenditure_stations_1 = {
+    resource = adamantium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = adamantium value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+adamantium_expenditure_stations_2 = {
+    resource = adamantium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = adamantium value >= 800 }
+        resource_stockpile_compare = { resource = adamantium value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+adamantium_expenditure_stations_3 = {
+    resource = adamantium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = adamantium value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+adamantium_expenditure_stations_expand = {
+    resource = adamantium
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = adamantium value < 800 }
+    }
+
+    fraction = {
+        weight = 0.35
+    }
+}
+
+### Unkeep
+
+adamantium_upkeep_buffer = {
+    resource = adamantium
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+adamantium_upkeep_ships = {
+    resource = adamantium
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+adamantium_upkeep_starbases = {
+    resource = adamantium
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+adamantium_upkeep_country = {
+    resource = adamantium
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

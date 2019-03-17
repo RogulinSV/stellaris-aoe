@@ -1,0 +1,139 @@
+### Expenditure
+
+%RESOURCE%_expenditure_buffer = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+%RESOURCE%_expenditure_trade = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+%RESOURCE%_expenditure_colonies = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+%RESOURCE%_expenditure_deposit_blockers = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = deposit_blockers
+
+    potential = {
+        always = yes
+    }
+    
+    fraction = {
+        weight = 0.05
+    }
+
+    static_max = {
+        base = 1000
+    }
+}
+
+%RESOURCE%_expenditure_planets = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+%RESOURCE%_upkeep_planets = {
+    resource = %RESOURCE%
+    type = upkeep
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+%RESOURCE%_expenditure_megastructures = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = megastructures
+
+    potential = {
+        is_country_type = default
+        is_at_war = no
+        has_galactic_wonders = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+
+    static_max = {
+        base = 6000
+    }
+}
+
+### Unkeep
+
+%RESOURCE%_upkeep_buffer = {
+    resource = %RESOURCE%
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+%RESOURCE%_upkeep_country = {
+    resource = %RESOURCE%
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

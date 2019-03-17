@@ -1,0 +1,139 @@
+### Expenditure
+
+satramene_expenditure_buffer = {
+    resource = satramene
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+satramene_expenditure_trade = {
+    resource = satramene
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+satramene_expenditure_colonies = {
+    resource = satramene
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+satramene_expenditure_deposit_blockers = {
+    resource = satramene
+    type = expenditure
+    category = deposit_blockers
+
+    potential = {
+        always = yes
+    }
+    
+    fraction = {
+        weight = 0.05
+    }
+
+    static_max = {
+        base = 1000
+    }
+}
+
+satramene_expenditure_planets = {
+    resource = satramene
+    type = expenditure
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+satramene_upkeep_planets = {
+    resource = satramene
+    type = upkeep
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+satramene_expenditure_megastructures = {
+    resource = satramene
+    type = expenditure
+    category = megastructures
+
+    potential = {
+        is_country_type = default
+        is_at_war = no
+        has_galactic_wonders = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+
+    static_max = {
+        base = 6000
+    }
+}
+
+### Unkeep
+
+satramene_upkeep_buffer = {
+    resource = satramene
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+satramene_upkeep_country = {
+    resource = satramene
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

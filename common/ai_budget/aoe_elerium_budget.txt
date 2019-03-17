@@ -1,0 +1,197 @@
+### Expenditure
+
+elerium_expenditure_buffer = {
+    resource = elerium
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+elerium_expenditure_ships = {
+    resource = elerium
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+elerium_expenditure_ships_upgrades = {
+    resource = elerium
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.06
+    }
+}
+
+elerium_expenditure_starbases = {
+    resource = elerium
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+elerium_expenditure_starbases_expand = {
+    resource = elerium
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.4
+    }
+}
+
+elerium_expenditure_stations_1 = {
+    resource = elerium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = elerium value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+elerium_expenditure_stations_2 = {
+    resource = elerium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = elerium value >= 800 }
+        resource_stockpile_compare = { resource = elerium value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+elerium_expenditure_stations_3 = {
+    resource = elerium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = elerium value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+elerium_expenditure_stations_expand = {
+    resource = elerium
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = elerium value < 800 }
+    }
+
+    fraction = {
+        weight = 0.35
+    }
+}
+
+### Unkeep
+
+elerium_upkeep_buffer = {
+    resource = elerium
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+elerium_upkeep_ships = {
+    resource = elerium
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+elerium_upkeep_starbases = {
+    resource = elerium
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+elerium_upkeep_country = {
+    resource = elerium
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

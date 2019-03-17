@@ -1,0 +1,197 @@
+### Expenditure
+
+gravitoid_expenditure_buffer = {
+    resource = gravitoid
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+gravitoid_expenditure_ships = {
+    resource = gravitoid
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+gravitoid_expenditure_ships_upgrades = {
+    resource = gravitoid
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.06
+    }
+}
+
+gravitoid_expenditure_starbases = {
+    resource = gravitoid
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+gravitoid_expenditure_starbases_expand = {
+    resource = gravitoid
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.4
+    }
+}
+
+gravitoid_expenditure_stations_1 = {
+    resource = gravitoid
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = gravitoid value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+gravitoid_expenditure_stations_2 = {
+    resource = gravitoid
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = gravitoid value >= 800 }
+        resource_stockpile_compare = { resource = gravitoid value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+gravitoid_expenditure_stations_3 = {
+    resource = gravitoid
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = gravitoid value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+gravitoid_expenditure_stations_expand = {
+    resource = gravitoid
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = gravitoid value < 800 }
+    }
+
+    fraction = {
+        weight = 0.35
+    }
+}
+
+### Unkeep
+
+gravitoid_upkeep_buffer = {
+    resource = gravitoid
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+gravitoid_upkeep_ships = {
+    resource = gravitoid
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+gravitoid_upkeep_starbases = {
+    resource = gravitoid
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+gravitoid_upkeep_country = {
+    resource = gravitoid
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

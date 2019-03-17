@@ -1,0 +1,139 @@
+### Expenditure
+
+lirium_expenditure_buffer = {
+    resource = lirium
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+lirium_expenditure_trade = {
+    resource = lirium
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+lirium_expenditure_colonies = {
+    resource = lirium
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+lirium_expenditure_deposit_blockers = {
+    resource = lirium
+    type = expenditure
+    category = deposit_blockers
+
+    potential = {
+        always = yes
+    }
+    
+    fraction = {
+        weight = 0.05
+    }
+
+    static_max = {
+        base = 1000
+    }
+}
+
+lirium_expenditure_planets = {
+    resource = lirium
+    type = expenditure
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+lirium_upkeep_planets = {
+    resource = lirium
+    type = upkeep
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+lirium_expenditure_megastructures = {
+    resource = lirium
+    type = expenditure
+    category = megastructures
+
+    potential = {
+        is_country_type = default
+        is_at_war = no
+        has_galactic_wonders = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+
+    static_max = {
+        base = 6000
+    }
+}
+
+### Unkeep
+
+lirium_upkeep_buffer = {
+    resource = lirium
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+lirium_upkeep_country = {
+    resource = lirium
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

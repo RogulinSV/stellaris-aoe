@@ -1,0 +1,197 @@
+### Expenditure
+
+%RESOURCE%_expenditure_buffer = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+%RESOURCE%_expenditure_ships = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+%RESOURCE%_expenditure_ships_upgrades = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.06
+    }
+}
+
+%RESOURCE%_expenditure_starbases = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+%RESOURCE%_expenditure_starbases_expand = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.4
+    }
+}
+
+%RESOURCE%_expenditure_stations_1 = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = %RESOURCE% value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+%RESOURCE%_expenditure_stations_2 = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = %RESOURCE% value >= 800 }
+        resource_stockpile_compare = { resource = %RESOURCE% value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+%RESOURCE%_expenditure_stations_3 = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = %RESOURCE% value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+%RESOURCE%_expenditure_stations_expand = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = %RESOURCE% value < 800 }
+    }
+
+    fraction = {
+        weight = 0.35
+    }
+}
+
+### Unkeep
+
+%RESOURCE%_upkeep_buffer = {
+    resource = %RESOURCE%
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+%RESOURCE%_upkeep_ships = {
+    resource = %RESOURCE%
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+%RESOURCE%_upkeep_starbases = {
+    resource = %RESOURCE%
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+%RESOURCE%_upkeep_country = {
+    resource = %RESOURCE%
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

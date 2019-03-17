@@ -1,0 +1,197 @@
+### Expenditure
+
+cobaltium_expenditure_buffer = {
+    resource = cobaltium
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+cobaltium_expenditure_ships = {
+    resource = cobaltium
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+cobaltium_expenditure_ships_upgrades = {
+    resource = cobaltium
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.06
+    }
+}
+
+cobaltium_expenditure_starbases = {
+    resource = cobaltium
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+cobaltium_expenditure_starbases_expand = {
+    resource = cobaltium
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.4
+    }
+}
+
+cobaltium_expenditure_stations_1 = {
+    resource = cobaltium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = cobaltium value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+cobaltium_expenditure_stations_2 = {
+    resource = cobaltium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = cobaltium value >= 800 }
+        resource_stockpile_compare = { resource = cobaltium value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+cobaltium_expenditure_stations_3 = {
+    resource = cobaltium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = cobaltium value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+cobaltium_expenditure_stations_expand = {
+    resource = cobaltium
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = cobaltium value < 800 }
+    }
+
+    fraction = {
+        weight = 0.35
+    }
+}
+
+### Unkeep
+
+cobaltium_upkeep_buffer = {
+    resource = cobaltium
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+cobaltium_upkeep_ships = {
+    resource = cobaltium
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+cobaltium_upkeep_starbases = {
+    resource = cobaltium
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+cobaltium_upkeep_country = {
+    resource = cobaltium
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

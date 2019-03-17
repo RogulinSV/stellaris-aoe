@@ -1,0 +1,441 @@
+mithril = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = mithril_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_mithril"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+orihalk = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = orihalk_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_orihalk"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+yuranic = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = yuranic_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_yuranic"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+adamantium = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = adamantium_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_adamantium"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+vibranium = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = vibranium_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_vibranium"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+cobaltium = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = cobaltium_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_cobaltium"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+itildeen = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = itildeen_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_itildeen"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+satramene = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = satramene_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_satramene"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+lirium = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = lirium_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_lirium"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+nevarrit = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = nevarrit_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_nevarrit"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+thiotimoline = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = thiotimoline_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_thiotimoline"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+unobtanium = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = unobtanium_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_unobtanium"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+stalgrim = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = stalgrim_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_stalgrim"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+tiberium = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = tiberium_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_tiberium"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+elerium = {
+    tradable = yes
+    market_amount = 10
+    market_price = 300
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = elerium_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_elerium"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+gravitoid = {
+    tradable = yes
+    market_amount = 10
+    market_price = 300
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = gravitoid_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_gravitoid"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+tylium = {
+    tradable = yes
+    market_amount = 10
+    market_price = 300
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = tylium_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_tylium"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}

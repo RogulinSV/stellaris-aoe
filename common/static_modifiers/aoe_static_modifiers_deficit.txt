@@ -1,0 +1,88 @@
+mithril_deficit = {
+    ship_armor_mult = -0.1
+    ship_shield_mult = -0.1
+    ship_hull_mult = -0.1
+}
+
+orihalk_deficit = {
+    ship_weapon_damage = -0.1
+    ship_fire_rate_mult = -0.1
+}
+
+yuranic_deficit = {
+    ship_evasion_mult = -0.1
+    ship_weapon_range_mult = -0.1
+}
+
+adamantium_deficit = {
+    shipclass_military_station_damage_mult = -0.1
+    shipclass_military_station_hull_mult = -0.1
+}
+
+vibranium_deficit = {
+    starbase_upgrade_cost_mult = 0.1
+    starbase_upgrade_speed_mult = 0.1
+}
+
+cobaltium_deficit = {
+    damage_vs_country_type_fallen_empire_mult = -0.1
+    damage_vs_country_type_awakened_fallen_empire_mult = -0.1
+    damage_vs_country_type_gate_builders_mult = -0.1
+}
+
+itildeen_deficit = {
+    planet_buildings_cost_mult = 0.1
+    planet_building_build_speed_mult = 0.1
+}
+
+satramene_deficit = {
+    planet_pops_robotics_upkeep_mult = 0.1
+    planet_pop_assembly_mult = -0.1
+}
+
+lirium_deficit = {
+    country_energy_produces_mult = -0.1
+    country_minerals_produces_mult = -0.1
+    country_food_produces_mult = -0.1
+}
+
+nevarrit_deficit = {
+    all_technology_research_speed = -0.1
+    biological_pop_happiness = -0.1
+}
+
+thiotimoline_deficit = {
+    modify_species_cost_mult = 0.1
+}
+
+unobtanium_deficit = {
+    country_minerals_produces_mult = -0.1
+    country_energy_produces_mult = -0.1
+    country_unity_produces_mult = -0.1
+}
+
+stalgrim_deficit = {
+    megastructure_build_speed_mult = 0.1
+    station_gatherers_produces_mult = -0.1
+}
+
+tiberium_deficit = {
+    weapon_type_energy_weapon_damage_mult = -0.1
+    weapon_type_explosive_weapon_damage_mult = -0.1
+    weapon_type_kinetic_weapon_damage_mult = -0.1
+}
+
+elerium_deficit = {
+    armies_upkeep_mult = 0.1
+    country_naval_cap_mult = -0.1
+}
+
+gravitoid_deficit = {
+    ships_upkeep_mult = 0.1
+    country_naval_cap_mult = -0.1
+}
+
+tylium_deficit = {
+    pop_cat_ruler_happiness = -0.1
+    pop_cat_specialist_happiness = -0.1
+}

@@ -1,0 +1,1999 @@
+tech_deep_space_survey = {
+    cost = @technology_ultralow_cost
+    area = engineering
+    tier = 1
+    category = { materials }
+    prerequisites = {
+        "tech_basic_industry"
+    }
+    weight = @tier1weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_deep_space_survey_title"
+            desc = "tech_deep_space_survey_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 3
+
+        modifier = {
+            factor = 2
+            years_passed > 5
+        }
+        modifier = {
+            factor = 3
+            years_passed > 10
+        }
+        modifier = {
+            factor = 4
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_deep_space_survey"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 2
+            years_passed > 5
+        }
+        modifier = {
+            factor = 3
+            years_passed > 10
+        }
+        modifier = {
+            factor = 4
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_deep_space_survey"
+                }
+            }
+        }
+    }
+}
+
+tech_mine_mithril = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_mithril_title"
+            desc = "tech_mine_mithril_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = mithril
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_mithril_1"
+                        has_deposit = "d_mithril_2"
+                        has_deposit = "d_mithril_3"
+                        has_deposit = "d_mithril_4"
+                        has_deposit = "d_mithril_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_mithril"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = mithril
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_mithril_1"
+                        has_deposit = "d_mithril_2"
+                        has_deposit = "d_mithril_3"
+                        has_deposit = "d_mithril_4"
+                        has_deposit = "d_mithril_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_orihalk = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_orihalk_title"
+            desc = "tech_mine_orihalk_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = orihalk
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_orihalk_1"
+                        has_deposit = "d_orihalk_2"
+                        has_deposit = "d_orihalk_3"
+                        has_deposit = "d_orihalk_4"
+                        has_deposit = "d_orihalk_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_orihalk"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = orihalk
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_orihalk_1"
+                        has_deposit = "d_orihalk_2"
+                        has_deposit = "d_orihalk_3"
+                        has_deposit = "d_orihalk_4"
+                        has_deposit = "d_orihalk_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_yuranic = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_yuranic_title"
+            desc = "tech_mine_yuranic_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = yuranic
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_yuranic_1"
+                        has_deposit = "d_yuranic_2"
+                        has_deposit = "d_yuranic_3"
+                        has_deposit = "d_yuranic_4"
+                        has_deposit = "d_yuranic_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_yuranic"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = yuranic
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_yuranic_1"
+                        has_deposit = "d_yuranic_2"
+                        has_deposit = "d_yuranic_3"
+                        has_deposit = "d_yuranic_4"
+                        has_deposit = "d_yuranic_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_adamantium = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_adamantium_title"
+            desc = "tech_mine_adamantium_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = adamantium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_adamantium_1"
+                        has_deposit = "d_adamantium_2"
+                        has_deposit = "d_adamantium_3"
+                        has_deposit = "d_adamantium_4"
+                        has_deposit = "d_adamantium_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_adamantium"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = adamantium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_adamantium_1"
+                        has_deposit = "d_adamantium_2"
+                        has_deposit = "d_adamantium_3"
+                        has_deposit = "d_adamantium_4"
+                        has_deposit = "d_adamantium_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_vibranium = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_vibranium_title"
+            desc = "tech_mine_vibranium_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = vibranium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_vibranium_1"
+                        has_deposit = "d_vibranium_2"
+                        has_deposit = "d_vibranium_3"
+                        has_deposit = "d_vibranium_4"
+                        has_deposit = "d_vibranium_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_vibranium"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = vibranium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_vibranium_1"
+                        has_deposit = "d_vibranium_2"
+                        has_deposit = "d_vibranium_3"
+                        has_deposit = "d_vibranium_4"
+                        has_deposit = "d_vibranium_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_cobaltium = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_cobaltium_title"
+            desc = "tech_mine_cobaltium_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = cobaltium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_cobaltium_1"
+                        has_deposit = "d_cobaltium_2"
+                        has_deposit = "d_cobaltium_3"
+                        has_deposit = "d_cobaltium_4"
+                        has_deposit = "d_cobaltium_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_cobaltium"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = cobaltium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_cobaltium_1"
+                        has_deposit = "d_cobaltium_2"
+                        has_deposit = "d_cobaltium_3"
+                        has_deposit = "d_cobaltium_4"
+                        has_deposit = "d_cobaltium_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_itildeen = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_itildeen_title"
+            desc = "tech_mine_itildeen_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = itildeen
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_itildeen_1"
+                        has_deposit = "d_itildeen_2"
+                        has_deposit = "d_itildeen_3"
+                        has_deposit = "d_itildeen_4"
+                        has_deposit = "d_itildeen_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_itildeen"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = itildeen
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_itildeen_1"
+                        has_deposit = "d_itildeen_2"
+                        has_deposit = "d_itildeen_3"
+                        has_deposit = "d_itildeen_4"
+                        has_deposit = "d_itildeen_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_satramene = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_satramene_title"
+            desc = "tech_mine_satramene_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = satramene
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_satramene_1"
+                        has_deposit = "d_satramene_2"
+                        has_deposit = "d_satramene_3"
+                        has_deposit = "d_satramene_4"
+                        has_deposit = "d_satramene_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_satramene"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = satramene
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_satramene_1"
+                        has_deposit = "d_satramene_2"
+                        has_deposit = "d_satramene_3"
+                        has_deposit = "d_satramene_4"
+                        has_deposit = "d_satramene_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_lirium = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_lirium_title"
+            desc = "tech_mine_lirium_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = lirium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_lirium_1"
+                        has_deposit = "d_lirium_2"
+                        has_deposit = "d_lirium_3"
+                        has_deposit = "d_lirium_4"
+                        has_deposit = "d_lirium_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_lirium"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = lirium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_lirium_1"
+                        has_deposit = "d_lirium_2"
+                        has_deposit = "d_lirium_3"
+                        has_deposit = "d_lirium_4"
+                        has_deposit = "d_lirium_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_nevarrit = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_nevarrit_title"
+            desc = "tech_mine_nevarrit_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = nevarrit
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_nevarrit_1"
+                        has_deposit = "d_nevarrit_2"
+                        has_deposit = "d_nevarrit_3"
+                        has_deposit = "d_nevarrit_4"
+                        has_deposit = "d_nevarrit_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_nevarrit"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = nevarrit
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_nevarrit_1"
+                        has_deposit = "d_nevarrit_2"
+                        has_deposit = "d_nevarrit_3"
+                        has_deposit = "d_nevarrit_4"
+                        has_deposit = "d_nevarrit_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_thiotimoline = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_thiotimoline_title"
+            desc = "tech_mine_thiotimoline_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = thiotimoline
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_thiotimoline_1"
+                        has_deposit = "d_thiotimoline_2"
+                        has_deposit = "d_thiotimoline_3"
+                        has_deposit = "d_thiotimoline_4"
+                        has_deposit = "d_thiotimoline_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_thiotimoline"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = thiotimoline
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_thiotimoline_1"
+                        has_deposit = "d_thiotimoline_2"
+                        has_deposit = "d_thiotimoline_3"
+                        has_deposit = "d_thiotimoline_4"
+                        has_deposit = "d_thiotimoline_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_unobtanium = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_unobtanium_title"
+            desc = "tech_mine_unobtanium_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = unobtanium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_unobtanium_1"
+                        has_deposit = "d_unobtanium_2"
+                        has_deposit = "d_unobtanium_3"
+                        has_deposit = "d_unobtanium_4"
+                        has_deposit = "d_unobtanium_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_unobtanium"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = unobtanium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_unobtanium_1"
+                        has_deposit = "d_unobtanium_2"
+                        has_deposit = "d_unobtanium_3"
+                        has_deposit = "d_unobtanium_4"
+                        has_deposit = "d_unobtanium_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_stalgrim = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_stalgrim_title"
+            desc = "tech_mine_stalgrim_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = stalgrim
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_stalgrim_1"
+                        has_deposit = "d_stalgrim_2"
+                        has_deposit = "d_stalgrim_3"
+                        has_deposit = "d_stalgrim_4"
+                        has_deposit = "d_stalgrim_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_stalgrim"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = stalgrim
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_stalgrim_1"
+                        has_deposit = "d_stalgrim_2"
+                        has_deposit = "d_stalgrim_3"
+                        has_deposit = "d_stalgrim_4"
+                        has_deposit = "d_stalgrim_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_tiberium = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_tiberium_title"
+            desc = "tech_mine_tiberium_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = tiberium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_tiberium_1"
+                        has_deposit = "d_tiberium_2"
+                        has_deposit = "d_tiberium_3"
+                        has_deposit = "d_tiberium_4"
+                        has_deposit = "d_tiberium_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_tiberium"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = tiberium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_tiberium_1"
+                        has_deposit = "d_tiberium_2"
+                        has_deposit = "d_tiberium_3"
+                        has_deposit = "d_tiberium_4"
+                        has_deposit = "d_tiberium_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_elerium = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_elerium_title"
+            desc = "tech_mine_elerium_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = elerium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_elerium_1"
+                        has_deposit = "d_elerium_2"
+                        has_deposit = "d_elerium_3"
+                        has_deposit = "d_elerium_4"
+                        has_deposit = "d_elerium_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_elerium"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = elerium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_elerium_1"
+                        has_deposit = "d_elerium_2"
+                        has_deposit = "d_elerium_3"
+                        has_deposit = "d_elerium_4"
+                        has_deposit = "d_elerium_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_gravitoid = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_gravitoid_title"
+            desc = "tech_mine_gravitoid_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = gravitoid
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_gravitoid_1"
+                        has_deposit = "d_gravitoid_2"
+                        has_deposit = "d_gravitoid_3"
+                        has_deposit = "d_gravitoid_4"
+                        has_deposit = "d_gravitoid_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_gravitoid"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = gravitoid
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_gravitoid_1"
+                        has_deposit = "d_gravitoid_2"
+                        has_deposit = "d_gravitoid_3"
+                        has_deposit = "d_gravitoid_4"
+                        has_deposit = "d_gravitoid_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_tylium = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_tylium_title"
+            desc = "tech_mine_tylium_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = tylium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_tylium_1"
+                        has_deposit = "d_tylium_2"
+                        has_deposit = "d_tylium_3"
+                        has_deposit = "d_tylium_4"
+                        has_deposit = "d_tylium_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_tylium"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = tylium
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_tylium_1"
+                        has_deposit = "d_tylium_2"
+                        has_deposit = "d_tylium_3"
+                        has_deposit = "d_tylium_4"
+                        has_deposit = "d_tylium_5"
+                    }
+                }
+            }
+        }
+    }
+}

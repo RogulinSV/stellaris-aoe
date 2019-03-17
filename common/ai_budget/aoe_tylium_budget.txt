@@ -1,0 +1,291 @@
+### Expenditure
+
+tylium_expenditure_buffer = {
+    resource = tylium
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+tylium_expenditure_trade = {
+    resource = tylium
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+tylium_expenditure_colonies = {
+    resource = tylium
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+tylium_expenditure_deposit_blockers = {
+    resource = tylium
+    type = expenditure
+    category = deposit_blockers
+
+    potential = {
+        always = yes
+    }
+    
+    fraction = {
+        weight = 0.05
+    }
+
+    static_max = {
+        base = 1000
+    }
+}
+
+tylium_expenditure_planets = {
+    resource = tylium
+    type = expenditure
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+tylium_upkeep_planets = {
+    resource = tylium
+    type = upkeep
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+tylium_expenditure_megastructures = {
+    resource = tylium
+    type = expenditure
+    category = megastructures
+
+    potential = {
+        is_country_type = default
+        is_at_war = no
+        has_galactic_wonders = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+
+    static_max = {
+        base = 6000
+    }
+}
+
+tylium_expenditure_ships = {
+    resource = tylium
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+tylium_expenditure_ships_upgrades = {
+    resource = tylium
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.06
+    }
+}
+
+tylium_expenditure_starbases = {
+    resource = tylium
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+tylium_expenditure_starbases_expand = {
+    resource = tylium
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.4
+    }
+}
+
+tylium_expenditure_stations_1 = {
+    resource = tylium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = tylium value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+tylium_expenditure_stations_2 = {
+    resource = tylium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = tylium value >= 800 }
+        resource_stockpile_compare = { resource = tylium value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+tylium_expenditure_stations_3 = {
+    resource = tylium
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = tylium value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+tylium_expenditure_stations_expand = {
+    resource = tylium
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = tylium value < 800 }
+    }
+
+    fraction = {
+        weight = 0.35
+    }
+}
+
+### Unkeep
+
+tylium_upkeep_buffer = {
+    resource = tylium
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+tylium_upkeep_ships = {
+    resource = tylium
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+tylium_upkeep_starbases = {
+    resource = tylium
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+tylium_upkeep_country = {
+    resource = tylium
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}
