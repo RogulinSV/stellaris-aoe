@@ -138,6 +138,53 @@ mithril_expenditure_stations_expand = {
     }
 }
 
+mithril_expenditure_claims = {
+    resource = mithril
+    type = expenditure
+    category = claims
+
+    potential = {
+        NOT = {
+            OR = {
+                has_ethic = ethic_fanatic_pacifist
+                has_ethic = ethic_pacifist
+            }
+        }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+mithril_expenditure_claims_militarist = {
+    resource = mithril
+    type = expenditure
+    category = claims
+
+    potential = {
+        has_ethic = ethic_militarist
+    }
+
+    fraction = {
+        weight = 0.05
+    }
+}
+
+mithril_expenditure_claims_fanatic_militarist = {
+    resource = mithril
+    type = expenditure
+    category = claims
+
+    potential = {
+        has_ethic = ethic_fanatic_militarist
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
 ### Unkeep
 
 mithril_upkeep_buffer = {

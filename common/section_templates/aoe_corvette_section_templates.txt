@@ -1,8 +1,8 @@
-@section_ultralow_cost = 20
-@section_low_cost = 30
-@section_medium_cost = 40
-@section_high_cost = 50
-@section_ultrahigh_cost = 60
+@section_ultralow_cost = 10
+@section_low_cost = 20
+@section_medium_cost = 30
+@section_high_cost = 40
+@section_ultrahigh_cost = 50
 
 ### Level 1
 
@@ -71,6 +71,7 @@ ship_section_template = {
         category = ship_sections
         cost = {
             alloys = @section_ultralow_cost
+            mithril = @section_ultralow_cost
         }
     }
 }
@@ -147,6 +148,7 @@ ship_section_template = {
         category = ship_sections
         cost = {
             alloys = @section_ultralow_cost
+            orihalk = @section_ultralow_cost
         }
     }
 }
@@ -218,6 +220,7 @@ ship_section_template = {
         category = ship_sections
         cost = {
             alloys = @section_low_cost
+            mithril = @section_low_cost
         }
     }
 }
@@ -294,6 +297,7 @@ ship_section_template = {
         category = ship_sections
         cost = {
             alloys = @section_low_cost
+            orihalk = @section_low_cost
         }
     }
 }
@@ -365,6 +369,7 @@ ship_section_template = {
         category = ship_sections
         cost = {
             alloys = @section_medium_cost
+            mithril = @section_medium_cost
         }
     }
 }
@@ -434,6 +439,7 @@ ship_section_template = {
         category = ship_sections
         cost = {
             alloys = @section_medium_cost
+            orihalk = @section_medium_cost
         }
     }
 }
@@ -505,6 +511,7 @@ ship_section_template = {
         category = ship_sections
         cost = {
             alloys = @section_high_cost
+            mithril = @section_high_cost
         }
     }
 }
@@ -574,6 +581,7 @@ ship_section_template = {
         category = ship_sections
         cost = {
             alloys = @section_high_cost
+            orihalk = @section_high_cost
         }
     }
 }
@@ -645,6 +653,7 @@ ship_section_template = {
         category = ship_sections
         cost = {
             alloys = @section_ultrahigh_cost
+            mithril = @section_ultrahigh_cost
         }
     }
 }
@@ -714,6 +723,7 @@ ship_section_template = {
         category = ship_sections
         cost = {
             alloys = @section_ultrahigh_cost
+            orihalk = @section_ultrahigh_cost
         }
     }
 }

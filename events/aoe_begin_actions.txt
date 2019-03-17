@@ -213,6 +213,10 @@ country_event = {
     hide_window = no
     is_triggered_only = yes
 
+    immediate = {
+         add_research_option = "tech_deep_space_survey"
+    }
+
     option = {
         name = aoe_begin_actions.13.a
         custom_tooltip = aoe_begin_actions.13.a.tooltip
