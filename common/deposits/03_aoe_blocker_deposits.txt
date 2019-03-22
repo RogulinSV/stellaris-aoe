@@ -390,7 +390,7 @@ d_magmatic_oceans = {
 }
 
 d_magmatic_rifts = {
-    icon = "d_planetary_rifts"
+    icon = "d_magmatic_rifts"
     time = 1300
 
     is_for_colonizeable = yes

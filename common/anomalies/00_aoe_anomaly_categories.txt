@@ -1,0 +1,26 @@
+strategic_resources_discovering_category = {
+    desc = strategic_resources_discovering_category_desc
+    picture = GFX_aoe_strategic_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 10
+            OR = {
+                has_mithril_resource = yes
+                has_orihalk_resource = yes
+                has_yuranic_resource = yes
+                has_itildeen_resource = yes
+                has_satramene_resource = yes
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.10"
+        }
+    }
+}

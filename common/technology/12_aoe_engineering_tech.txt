@@ -40,7 +40,7 @@ tech_corvette_construction_1 = {
     weight_modifier = {
         modifier = {
             factor = 0
-            NOT = {
+            NOR = {
                 has_technology = "tech_mine_mithril"
                 has_technology = "tech_mine_orihalk"
             }
@@ -171,7 +171,7 @@ tech_corvette_construction_1 = {
     ai_weight = {
         modifier = {
             factor = 0
-            NOT = {
+            NOR = {
                 has_technology = "tech_mine_mithril"
                 has_technology = "tech_mine_orihalk"
             }

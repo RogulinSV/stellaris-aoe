@@ -54,9 +54,11 @@ building_manufacturing_complex_1 = {
         cost = {
             minerals = 500
             energy = 500
+            satramene = 100
         }
         upkeep = {
             energy = 2
+            satramene = 1
         }
         produces = {
             trigger = {
@@ -64,6 +66,7 @@ building_manufacturing_complex_1 = {
                 owner = {
                     NOT = {
                         has_deficit = energy
+                        has_deficit = satramene
                     }
                 }
             }
@@ -190,6 +193,15 @@ building_manufacturing_complex_1 = {
                 }
             }
         }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 2
+                }
+            }
+        }
     }
 
     ai_resource_production = {
@@ -261,9 +273,11 @@ building_manufacturing_complex_2 = {
         cost = {
             minerals = 1000
             energy = 1000
+            satramene = 200
         }
         upkeep = {
             energy = 3
+            satramene = 2
         }
         produces = {
             trigger = {
@@ -271,6 +285,7 @@ building_manufacturing_complex_2 = {
                 owner = {
                     NOT = {
                         has_deficit = energy
+                        has_deficit = satramene
                     }
                 }
             }
@@ -397,6 +412,15 @@ building_manufacturing_complex_2 = {
                 }
             }
         }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 3
+                }
+            }
+        }
     }
 
     ai_resource_production = {
@@ -467,9 +491,11 @@ building_manufacturing_complex_3 = {
         cost = {
             minerals = 1500
             energy = 1500
+            satramene = 300
         }
         upkeep = {
             energy = 5
+            satramene = 3
         }
         produces = {
             trigger = {
@@ -477,6 +503,7 @@ building_manufacturing_complex_3 = {
                 owner = {
                     NOT = {
                         has_deficit = energy
+                        has_deficit = satramene
                     }
                 }
             }
@@ -603,6 +630,15 @@ building_manufacturing_complex_3 = {
                 }
             }
         }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 4
+                }
+            }
+        }
     }
 
     ai_resource_production = {
@@ -674,9 +710,11 @@ building_manufacturing_complex_4 = {
         cost = {
             minerals = 2000
             energy = 2000
+            satramene = 400
         }
         upkeep = {
             energy = 8
+            satramene = 4
         }
         produces = {
             trigger = {
@@ -684,6 +722,7 @@ building_manufacturing_complex_4 = {
                 owner = {
                     NOT = {
                         has_deficit = energy
+                        has_deficit = satramene
                     }
                 }
             }
@@ -810,6 +849,15 @@ building_manufacturing_complex_4 = {
                 }
             }
         }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 5
+                }
+            }
+        }
     }
 
     ai_resource_production = {
@@ -880,9 +928,11 @@ building_manufacturing_complex_5 = {
         cost = {
             minerals = 2500
             energy = 2500
+            satramene = 500
         }
         upkeep = {
             energy = 13
+            satramene = 5
         }
         produces = {
             trigger = {
@@ -890,6 +940,7 @@ building_manufacturing_complex_5 = {
                 owner = {
                     NOT = {
                         has_deficit = energy
+                        has_deficit = satramene
                     }
                 }
             }
@@ -1016,6 +1067,15 @@ building_manufacturing_complex_5 = {
                 }
             }
         }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 6
+                }
+            }
+        }
     }
 
     ai_resource_production = {
@@ -1087,9 +1147,11 @@ building_manufacturing_complex_6 = {
         cost = {
             minerals = 3000
             energy = 3000
+            satramene = 600
         }
         upkeep = {
             energy = 21
+            satramene = 6
         }
         produces = {
             trigger = {
@@ -1097,6 +1159,7 @@ building_manufacturing_complex_6 = {
                 owner = {
                     NOT = {
                         has_deficit = energy
+                        has_deficit = satramene
                     }
                 }
             }
@@ -1223,6 +1286,15 @@ building_manufacturing_complex_6 = {
                 }
             }
         }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 7
+                }
+            }
+        }
     }
 
     ai_resource_production = {
@@ -1290,9 +1362,11 @@ building_manufacturing_complex_7 = {
         cost = {
             minerals = 3500
             energy = 3500
+            satramene = 700
         }
         upkeep = {
             energy = 34
+            satramene = 7
         }
         produces = {
             trigger = {
@@ -1300,6 +1374,7 @@ building_manufacturing_complex_7 = {
                 owner = {
                     NOT = {
                         has_deficit = energy
+                        has_deficit = satramene
                     }
                 }
             }
@@ -1426,6 +1501,15 @@ building_manufacturing_complex_7 = {
                 }
             }
         }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 8
+                }
+            }
+        }
     }
 
     ai_resource_production = {
@@ -1466,9 +1550,11 @@ building_ancient_manufacturing_center = {
         cost = {
             minerals = 3000
             energy = 3000
+            satramene = 500
         }
         upkeep = {
             energy = 10
+            satramene = 5
         }
         produces = {
             trigger = {
@@ -1476,6 +1562,7 @@ building_ancient_manufacturing_center = {
                 owner = {
                     NOT = {
                         has_deficit = energy
+                        has_deficit = satramene
                     }
                 }
             }
@@ -1519,6 +1606,15 @@ building_ancient_manufacturing_center = {
                 has_monthly_income = {
                     resource = energy
                     value < 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 6
                 }
             }
         }

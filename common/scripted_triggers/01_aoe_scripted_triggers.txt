@@ -23,6 +23,81 @@ has_metallized_deposits = {
 }
 
 # Scope: planet
+has_mithril_resource = {
+    OR = {
+        has_deposit = "d_mithril_1"
+        has_deposit = "d_mithril_2"
+        has_deposit = "d_mithril_3"
+        has_deposit = "d_mithril_4"
+        has_deposit = "d_mithril_5"
+        has_resource = {
+            type = mithril
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_orihalk_resource = {
+    OR = {
+        has_deposit = "d_orihalk_1"
+        has_deposit = "d_orihalk_2"
+        has_deposit = "d_orihalk_3"
+        has_deposit = "d_orihalk_4"
+        has_deposit = "d_orihalk_5"
+        has_resource = {
+            type = orihalk
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_yuranic_resource = {
+    OR = {
+        has_deposit = "d_yuranic_1"
+        has_deposit = "d_yuranic_2"
+        has_deposit = "d_yuranic_3"
+        has_deposit = "d_yuranic_4"
+        has_deposit = "d_yuranic_5"
+        has_resource = {
+            type = yuranic
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_itildeen_resource = {
+    OR = {
+        has_deposit = "d_itildeen_1"
+        has_deposit = "d_itildeen_2"
+        has_deposit = "d_itildeen_3"
+        has_deposit = "d_itildeen_4"
+        has_deposit = "d_itildeen_5"
+        has_resource = {
+            type = itildeen
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_satramene_resource = {
+    OR = {
+        has_deposit = "d_satramene_1"
+        has_deposit = "d_satramene_2"
+        has_deposit = "d_satramene_3"
+        has_deposit = "d_satramene_4"
+        has_deposit = "d_satramene_5"
+        has_resource = {
+            type = satramene
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
 is_sovereign_colony = {
     NOR = {
         has_modifier = "resort_colony"

@@ -33,6 +33,12 @@ tech_industrial_district = {
         }
         modifier = {
             factor = 0
+            NOT = {
+                has_technology = "tech_mine_itildeen"
+            }
+        }
+        modifier = {
+            factor = 0
             years_passed < 5
         }
     }
@@ -44,6 +50,12 @@ tech_industrial_district = {
                 any_owned_planet = {
                     has_crystallized_deposits = yes
                 }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = "tech_mine_itildeen"
             }
         }
         modifier = {

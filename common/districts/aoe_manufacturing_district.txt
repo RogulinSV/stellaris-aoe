@@ -1,5 +1,5 @@
 district_manufacturing_complex = {
-    base_buildtime = 1440
+    base_buildtime = 900
     icon = "district_manufacturing_complex"
 
     min_for_deposits_on_planet = 1
@@ -27,11 +27,13 @@ district_manufacturing_complex = {
     resources = {
         category = planet_districts
         cost = {
-            minerals = 2000
-            energy = 4000
+            energy = 3000
+            minerals = 1500
+            satramene = 500
         }
         upkeep = {
             energy = 5
+            satramene = 2
         }
     }
 
@@ -274,6 +276,24 @@ district_manufacturing_complex = {
                 }
             }
         }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 3
+                }
+            }
+        }
     }
 
     prerequisites = {
@@ -282,7 +302,7 @@ district_manufacturing_complex = {
 }
 
 district_manufacturing_complex_uncapped = {
-    base_buildtime = 1800
+    base_buildtime = 900
     icon = "district_manufacturing_complex_uncapped"
     is_capped_by_modifier = no
 
@@ -309,11 +329,13 @@ district_manufacturing_complex_uncapped = {
     resources = {
         category = planet_districts
         cost = {
-            minerals = 2000
-            energy = 4000
+            energy = 3000
+            minerals = 1500
+            satramene = 500
         }
         upkeep = {
             energy = 5
+            satramene = 2
         }
     }
 
@@ -553,6 +575,24 @@ district_manufacturing_complex_uncapped = {
             NOT = {
                 any_owned_pop = {
                     is_unemployed = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 3
                 }
             }
         }

@@ -1,0 +1,118 @@
+special_project = {
+    key = "strategic_resources_anomaly_project"
+    cost = 0
+    days_to_research = 300
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_evt_strategic_resources_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+        skill = 2
+    }
+
+    on_success = {
+        if = {
+            limit = {
+                from = {
+                    has_mithril_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_mithril"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_mithril"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_orihalk_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_orihalk"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_orihalk"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_yuranic_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_yuranic"
+                    }
+                }
+            }
+            owner = {
+                give_technology = { 
+                    tech = "tech_mine_yuranic"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_itildeen_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_itildeen"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_itildeen"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_satramene_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_satramene"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_satramene"
+                }
+            }
+        }
+        else = {
+            owner = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier1researchreward
+                    min = @tier1researchmin
+                    max = @tier1researchmax
+                }
+            }
+        }
+    }
+
+    on_fail = {
+    }
+}
