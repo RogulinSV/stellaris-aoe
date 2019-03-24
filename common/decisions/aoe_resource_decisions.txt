@@ -19,7 +19,10 @@ decision_planet_interstellar_research = {
     }
 
     allow = {
-        # has_building = ""
+        OR = {
+            has_building = "building_observatory_1"
+            has_building = "building_observatory_2"
+        }
         NOT = {
             has_modifier = "planet_interstellar_research"
         }
