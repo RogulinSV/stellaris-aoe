@@ -32,3 +32,8 @@
     building_manufacturing_complex_7_desc:0 "Производственный мегасектор"
     building_ancient_manufacturing_center:0 "Древний производственный центр"
     building_ancient_manufacturing_center_desc:0 "Древний производственный центр"
+
+    building_observatory_1:0 "Межзвёздная обсерватория"
+    building_observatory_1_desc:0 "Межзвёздная обсерватория"
+    building_observatory_2:0 "Галактическая обсерватория"
+    building_observatory_2_desc:0 "Галактическая обсерватория"
