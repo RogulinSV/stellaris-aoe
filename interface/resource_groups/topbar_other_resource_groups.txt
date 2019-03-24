@@ -17,6 +17,8 @@ tb_others_group = {
         elerium
         gravitoid
         tylium
+        chalcolivan
+        terrigen
         volatile_motes
         exotic_gases
         rare_crystals

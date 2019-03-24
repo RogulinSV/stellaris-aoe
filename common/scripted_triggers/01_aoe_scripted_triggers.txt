@@ -68,6 +68,51 @@ has_yuranic_resource = {
 }
 
 # Scope: planet
+has_adamantium_resource = {
+    OR = {
+        has_deposit = "d_adamantium_1"
+        has_deposit = "d_adamantium_2"
+        has_deposit = "d_adamantium_3"
+        has_deposit = "d_adamantium_4"
+        has_deposit = "d_adamantium_5"
+        has_resource = {
+            type = adamantium
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_vibranium_resource = {
+    OR = {
+        has_deposit = "d_vibranium_1"
+        has_deposit = "d_vibranium_2"
+        has_deposit = "d_vibranium_3"
+        has_deposit = "d_vibranium_4"
+        has_deposit = "d_vibranium_5"
+        has_resource = {
+            type = vibranium
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_cobaltium_resource = {
+    OR = {
+        has_deposit = "d_cobaltium_1"
+        has_deposit = "d_cobaltium_2"
+        has_deposit = "d_cobaltium_3"
+        has_deposit = "d_cobaltium_4"
+        has_deposit = "d_cobaltium_5"
+        has_resource = {
+            type = cobaltium
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
 has_itildeen_resource = {
     OR = {
         has_deposit = "d_itildeen_1"
@@ -92,6 +137,171 @@ has_satramene_resource = {
         has_deposit = "d_satramene_5"
         has_resource = {
             type = satramene
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_lirium_resource = {
+    OR = {
+        has_deposit = "d_lirium_1"
+        has_deposit = "d_lirium_2"
+        has_deposit = "d_lirium_3"
+        has_deposit = "d_lirium_4"
+        has_deposit = "d_lirium_5"
+        has_resource = {
+            type = lirium
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_nevarrit_resource = {
+    OR = {
+        has_deposit = "d_nevarrit_1"
+        has_deposit = "d_nevarrit_2"
+        has_deposit = "d_nevarrit_3"
+        has_deposit = "d_nevarrit_4"
+        has_deposit = "d_nevarrit_5"
+        has_resource = {
+            type = nevarrit
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_thiotimoline_resource = {
+    OR = {
+        has_deposit = "d_thiotimoline_1"
+        has_deposit = "d_thiotimoline_2"
+        has_deposit = "d_thiotimoline_3"
+        has_deposit = "d_thiotimoline_4"
+        has_deposit = "d_thiotimoline_5"
+        has_resource = {
+            type = thiotimoline
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_unobtanium_resource = {
+    OR = {
+        has_deposit = "d_unobtanium_1"
+        has_deposit = "d_unobtanium_2"
+        has_deposit = "d_unobtanium_3"
+        has_deposit = "d_unobtanium_4"
+        has_deposit = "d_unobtanium_5"
+        has_resource = {
+            type = unobtanium
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_stalgrim_resource = {
+    OR = {
+        has_deposit = "d_stalgrim_1"
+        has_deposit = "d_stalgrim_2"
+        has_deposit = "d_stalgrim_3"
+        has_deposit = "d_stalgrim_4"
+        has_deposit = "d_stalgrim_5"
+        has_resource = {
+            type = stalgrim
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_tiberium_resource = {
+    OR = {
+        has_deposit = "d_tiberium_1"
+        has_deposit = "d_tiberium_2"
+        has_deposit = "d_tiberium_3"
+        has_deposit = "d_tiberium_4"
+        has_deposit = "d_tiberium_5"
+        has_resource = {
+            type = tiberium
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_elerium_resource = {
+    OR = {
+        has_deposit = "d_elerium_1"
+        has_deposit = "d_elerium_2"
+        has_deposit = "d_elerium_3"
+        has_deposit = "d_elerium_4"
+        has_deposit = "d_elerium_5"
+        has_resource = {
+            type = elerium
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_gravitoid_resource = {
+    OR = {
+        has_deposit = "d_gravitoid_1"
+        has_deposit = "d_gravitoid_2"
+        has_deposit = "d_gravitoid_3"
+        has_deposit = "d_gravitoid_4"
+        has_deposit = "d_gravitoid_5"
+        has_resource = {
+            type = gravitoid
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_tylium_resource = {
+    OR = {
+        has_deposit = "d_tylium_1"
+        has_deposit = "d_tylium_2"
+        has_deposit = "d_tylium_3"
+        has_deposit = "d_tylium_4"
+        has_deposit = "d_tylium_5"
+        has_resource = {
+            type = tylium
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_chalcolivan_resource = {
+    OR = {
+        has_deposit = "d_chalcolivan_1"
+        has_deposit = "d_chalcolivan_2"
+        has_deposit = "d_chalcolivan_3"
+        has_deposit = "d_chalcolivan_4"
+        has_deposit = "d_chalcolivan_5"
+        has_resource = {
+            type = chalcolivan
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_terrigen_resource = {
+    OR = {
+        has_deposit = "d_terrigen_1"
+        has_deposit = "d_terrigen_2"
+        has_deposit = "d_terrigen_3"
+        has_deposit = "d_terrigen_4"
+        has_deposit = "d_terrigen_5"
+        has_resource = {
+            type = terrigen
             amount > 0
         }
     }

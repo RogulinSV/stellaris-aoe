@@ -86,3 +86,15 @@ tylium_deficit = {
     pop_cat_ruler_happiness = -0.1
     pop_cat_specialist_happiness = -0.1
 }
+
+chalcolivan_deficit = {
+    shipsize_corvette_build_speed_mult = -0.1
+    shipsize_destroyer_build_speed_mult = -0.1
+    shipsize_cruiser_build_speed_mult = -0.1
+    shipsize_battleship_build_speed_mult = -0.1
+}
+
+terrigen_deficit = {
+    deposit_blockers_cost_mult = 0.1
+}
+

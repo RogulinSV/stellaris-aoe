@@ -1,0 +1,244 @@
+### Expenditure
+
+chalcolivan_expenditure_buffer = {
+    resource = chalcolivan
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+chalcolivan_expenditure_ships = {
+    resource = chalcolivan
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+chalcolivan_expenditure_ships_upgrades = {
+    resource = chalcolivan
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.06
+    }
+}
+
+chalcolivan_expenditure_starbases = {
+    resource = chalcolivan
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+chalcolivan_expenditure_starbases_expand = {
+    resource = chalcolivan
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.4
+    }
+}
+
+chalcolivan_expenditure_stations_1 = {
+    resource = chalcolivan
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = chalcolivan value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+chalcolivan_expenditure_stations_2 = {
+    resource = chalcolivan
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = chalcolivan value >= 800 }
+        resource_stockpile_compare = { resource = chalcolivan value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+chalcolivan_expenditure_stations_3 = {
+    resource = chalcolivan
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = chalcolivan value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+chalcolivan_expenditure_stations_expand = {
+    resource = chalcolivan
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = chalcolivan value < 800 }
+    }
+
+    fraction = {
+        weight = 0.35
+    }
+}
+
+chalcolivan_expenditure_claims = {
+    resource = chalcolivan
+    type = expenditure
+    category = claims
+
+    potential = {
+        NOT = {
+            OR = {
+                has_ethic = ethic_fanatic_pacifist
+                has_ethic = ethic_pacifist
+            }
+        }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+chalcolivan_expenditure_claims_militarist = {
+    resource = chalcolivan
+    type = expenditure
+    category = claims
+
+    potential = {
+        has_ethic = ethic_militarist
+    }
+
+    fraction = {
+        weight = 0.05
+    }
+}
+
+chalcolivan_expenditure_claims_fanatic_militarist = {
+    resource = chalcolivan
+    type = expenditure
+    category = claims
+
+    potential = {
+        has_ethic = ethic_fanatic_militarist
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+### Unkeep
+
+chalcolivan_upkeep_buffer = {
+    resource = chalcolivan
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+chalcolivan_upkeep_ships = {
+    resource = chalcolivan
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+chalcolivan_upkeep_starbases = {
+    resource = chalcolivan
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+chalcolivan_upkeep_country = {
+    resource = chalcolivan
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

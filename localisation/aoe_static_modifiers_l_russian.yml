@@ -16,3 +16,5 @@
     elerium_deficit:0 "Дефицит элериумной слюды"
     gravitoid_deficit:0 "Дефицит частиц гравитона"
     tylium_deficit:0 "Дефицит жидкого тилиума"
+    chalcolivan_deficit:0 "Дефицит халколивановой руды"
+    terrigen_deficit:0 "Дефицит жидкого терригена"

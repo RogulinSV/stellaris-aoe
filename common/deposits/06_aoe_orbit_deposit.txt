@@ -1,0 +1,206 @@
+### terrigen Deposits
+
+d_terrigen_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            terrigen = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_toxic
+            is_planet_class = pc_frozen
+            is_planet_class = pc_broken
+            is_planet_class = pc_shattered
+        }
+    }
+    
+    drop_weight = {
+        weight = 2.0
+
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            OR = {
+                is_planet_class = pc_shattered
+                is_planet_class = pc_broken
+            }
+        }
+    }
+}
+
+d_terrigen_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            terrigen = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_toxic
+            is_planet_class = pc_frozen
+            is_planet_class = pc_broken
+            is_planet_class = pc_shattered
+        }
+    }
+    
+    drop_weight = {
+        weight = 1.5
+
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            OR = {
+                is_planet_class = pc_shattered
+                is_planet_class = pc_broken
+            }
+        }
+    }
+}
+
+d_terrigen_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            terrigen = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_toxic
+            is_planet_class = pc_frozen
+            is_planet_class = pc_broken
+            is_planet_class = pc_shattered
+        }
+    }
+    
+    drop_weight = {
+        weight = 1.0
+
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            OR = {
+                is_planet_class = pc_shattered
+                is_planet_class = pc_broken
+            }
+        }
+    }
+}
+
+d_terrigen_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            terrigen = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_toxic
+            is_planet_class = pc_frozen
+            is_planet_class = pc_broken
+            is_planet_class = pc_shattered
+        }
+    }
+    
+    drop_weight = {
+        weight = 0.5
+
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            OR = {
+                is_planet_class = pc_shattered
+                is_planet_class = pc_broken
+            }
+        }
+    }
+}
+
+d_terrigen_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            terrigen = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_toxic
+            is_planet_class = pc_frozen
+            is_planet_class = pc_broken
+            is_planet_class = pc_shattered
+        }
+    }
+    
+    drop_weight = {
+        weight = 0.1
+
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            OR = {
+                is_planet_class = pc_shattered
+                is_planet_class = pc_broken
+            }
+        }
+    }
+}

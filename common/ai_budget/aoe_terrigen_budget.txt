@@ -1,0 +1,291 @@
+### Expenditure
+
+terrigen_expenditure_buffer = {
+    resource = terrigen
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.0
+    }
+}
+
+terrigen_expenditure_trade = {
+    resource = terrigen
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+terrigen_expenditure_colonies = {
+    resource = terrigen
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+terrigen_expenditure_deposit_blockers = {
+    resource = terrigen
+    type = expenditure
+    category = deposit_blockers
+
+    potential = {
+        always = yes
+    }
+    
+    fraction = {
+        weight = 0.05
+    }
+
+    static_max = {
+        base = 1000
+    }
+}
+
+terrigen_expenditure_planets = {
+    resource = terrigen
+    type = expenditure
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+terrigen_upkeep_planets = {
+    resource = terrigen
+    type = upkeep
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+terrigen_expenditure_megastructures = {
+    resource = terrigen
+    type = expenditure
+    category = megastructures
+
+    potential = {
+        is_country_type = default
+        is_at_war = no
+        has_galactic_wonders = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+
+    static_max = {
+        base = 6000
+    }
+}
+
+terrigen_expenditure_ships = {
+    resource = terrigen
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+terrigen_expenditure_ships_upgrades = {
+    resource = terrigen
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.06
+    }
+}
+
+terrigen_expenditure_starbases = {
+    resource = terrigen
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+terrigen_expenditure_starbases_expand = {
+    resource = terrigen
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.4
+    }
+}
+
+terrigen_expenditure_stations_1 = {
+    resource = terrigen
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = terrigen value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+terrigen_expenditure_stations_2 = {
+    resource = terrigen
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = terrigen value >= 800 }
+        resource_stockpile_compare = { resource = terrigen value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.075
+    }
+}
+
+terrigen_expenditure_stations_3 = {
+    resource = terrigen
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = terrigen value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+terrigen_expenditure_stations_expand = {
+    resource = terrigen
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = terrigen value < 800 }
+    }
+
+    fraction = {
+        weight = 0.35
+    }
+}
+
+### Unkeep
+
+terrigen_upkeep_buffer = {
+    resource = terrigen
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+terrigen_upkeep_ships = {
+    resource = terrigen
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+terrigen_upkeep_starbases = {
+    resource = terrigen
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.10
+    }
+}
+
+terrigen_upkeep_country = {
+    resource = terrigen
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 1
+    }
+}

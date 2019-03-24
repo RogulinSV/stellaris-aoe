@@ -53,6 +53,12 @@
     tech_mine_tylium:0 "Добыча жидкого тилиума"
     tech_mine_tylium_title:0 "Добыча жидкого тилиума"
     tech_mine_tylium_desc:0 "Добыча жидкого тилиума"
+    tech_mine_chalcolivan:0 "Добыча халколивановой руды"
+    tech_mine_chalcolivan_title:0 "Добыча халколивановой руды"
+    tech_mine_chalcolivan_desc:0 "Добыча халколивановой руды"
+    tech_mine_terrigen:0 "Добыча жидкого терригена"
+    tech_mine_terrigen_title:0 "Добыча жидкого терригена"
+    tech_mine_terrigen_desc:0 "Добыча жидкого терригена"
 
     tech_industrial_district:0 "Планетарный промышленный район"
     tech_industrial_district_title:0 "Планетарный промышленный район"

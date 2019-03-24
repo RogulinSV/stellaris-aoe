@@ -441,3 +441,55 @@ tylium = {
         always = yes
     }
 }
+
+chalcolivan = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = chalcolivan_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_chalcolivan"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}
+
+terrigen = {
+    tradable = yes
+    market_amount = 10
+    market_price = 200
+    max = 10000
+    fixed_max_amount = no
+
+    deficit_modifier = terrigen_deficit
+
+    ai_weight = {
+        weight = 100
+    }
+
+    ai_wants = {
+        base = 1000
+    }
+
+    prerequisites = {
+        "tech_mine_terrigen"
+    }
+
+    visibility_prerequisite = {
+        always = yes
+    }
+}

@@ -1,4 +1,6 @@
 tech_deep_space_survey = {
+    # Unlocks "Observatory I" building
+
     cost = @technology_ultralow_cost
     area = engineering
     tier = 1
@@ -1991,6 +1993,230 @@ tech_mine_tylium = {
                         has_deposit = "d_tylium_3"
                         has_deposit = "d_tylium_4"
                         has_deposit = "d_tylium_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_chalcolivan = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_chalcolivan_title"
+            desc = "tech_mine_chalcolivan_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = chalcolivan
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_chalcolivan_1"
+                        has_deposit = "d_chalcolivan_2"
+                        has_deposit = "d_chalcolivan_3"
+                        has_deposit = "d_chalcolivan_4"
+                        has_deposit = "d_chalcolivan_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_chalcolivan"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = chalcolivan
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_chalcolivan_1"
+                        has_deposit = "d_chalcolivan_2"
+                        has_deposit = "d_chalcolivan_3"
+                        has_deposit = "d_chalcolivan_4"
+                        has_deposit = "d_chalcolivan_5"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tech_mine_terrigen = {
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_deep_space_survey" }
+    weight = @tier2weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mine_terrigen_title"
+            desc = "tech_mine_terrigen_desc"
+        }
+    }
+
+    weight_modifier = {
+        factor = 2
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = terrigen
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_terrigen_1"
+                        has_deposit = "d_terrigen_2"
+                        has_deposit = "d_terrigen_3"
+                        has_deposit = "d_terrigen_4"
+                        has_deposit = "d_terrigen_5"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = engineering
+                has_level > 1
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = engineering
+                has_level > 2
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = engineering
+                has_level > 3
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_level > 4
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = root
+                    has_technology = "tech_mine_terrigen"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 5
+
+        modifier = {
+            factor = 0
+            NOR = {
+                any_system_within_border = {
+                    any_system_planet = {
+                        has_resource = {
+                            type = terrigen
+                            amount > 0
+                        }
+                    }
+                }
+                any_planet_within_border = {
+                    OR = {
+                        has_deposit = "d_terrigen_1"
+                        has_deposit = "d_terrigen_2"
+                        has_deposit = "d_terrigen_3"
+                        has_deposit = "d_terrigen_4"
+                        has_deposit = "d_terrigen_5"
                     }
                 }
             }
