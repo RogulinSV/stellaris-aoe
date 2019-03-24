@@ -1,0 +1,5 @@
+﻿l_russian:
+    aoe_pulse_actions.2.title:0 "Обнаружены залежи ресурсов"
+    aoe_pulse_actions.2.desc:0 "На планете [This.GetName] обнаружены залежи ресурсов"
+    aoe_pulse_actions.2.a:0 "Отлично!"
+    aoe_pulse_actions.2.a.tooltip:0 "Отлично!"

@@ -1,5 +1,7 @@
 namespace = aoe_ship_actions
 
+### Ship building based events
+
 ship_event = {
     id = aoe_ship_actions.1
     hide_window = yes
@@ -34,14 +36,223 @@ ship_event = {
 }
 
 ship_event = {
+    id = aoe_ship_actions.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "destroyer"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "counter_ship_destroyer_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "counter_ship_destroyer_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "counter_ship_destroyer_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.3
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "cruiser"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "counter_ship_cruiser_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "counter_ship_cruiser_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "counter_ship_cruiser_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.4
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "battleship"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "counter_ship_battleship_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "counter_ship_battleship_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "counter_ship_battleship_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.5
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "titan"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "counter_ship_titan_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "counter_ship_titan_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "counter_ship_titan_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.8
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            is_ship_size = "colonizer"
+            is_ship_size = "sponsored_colonizer"
+        }
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "counter_ship_colonizer_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "counter_ship_colonizer_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "counter_ship_colonizer_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.9
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ship_size = "transport"
+    }
+
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "counter_ship_transport_built"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "counter_ship_transport_built"
+                    value = 1
+                }
+                else = {
+                    change_variable = {
+                        which = "counter_ship_transport_built"
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+### Strategic resource specific ship events
+
+ship_event = {
     id = aoe_ship_actions.10
     title = aoe_ship_actions.10.title
     desc = aoe_ship_actions.10.desc
-    picture = GFX_aoe_strategic_resources_discovered
+    picture = GFX_aoe_metallic_resources_discovered
     show_sound = event_laboratory_sound
     is_triggered_only = yes
     hide_window = no
     location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
 
     option = {
         name = aoe_ship_actions.10.a
@@ -50,7 +261,7 @@ ship_event = {
             owner = {
                 has_technology = "tech_mine_mithril"
             }
-            from = {
+            fromfrom = {
                 has_mithril_resource = yes
             }
         }
@@ -67,17 +278,17 @@ ship_event = {
             owner = {
                 NOT = {
                     has_technology = "tech_mine_mithril"
-                    has_special_project = "strategic_resources_anomaly_project"
+                    has_special_project = "aoe_metallic_resources_anomaly_project"
                 }
             }
-            from = {
+            fromfrom = {
                 has_mithril_resource = yes
             }
         }
         hidden_effect = {
-            from = {
+            fromfrom = {
                 enable_special_project = {
-                    name = "strategic_resources_anomaly_project"
+                    name = "aoe_metallic_resources_anomaly_project"
                     location = this
                     owner = root.owner
                 }
@@ -87,11 +298,33 @@ ship_event = {
     option = {
         name = aoe_ship_actions.10.c
         custom_tooltip = aoe_ship_actions.10.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.11
+    title = aoe_ship_actions.11.title
+    desc = aoe_ship_actions.11.desc
+    picture = GFX_aoe_metallic_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.11.a
+        custom_tooltip = aoe_ship_actions.11.a.tooltip
         trigger = {
             owner = {
                 has_technology = "tech_mine_orihalk"
             }
-            from = {
+            fromfrom = {
                 has_orihalk_resource = yes
             }
         }
@@ -102,23 +335,23 @@ ship_event = {
         }
     }
     option = {
-        name = aoe_ship_actions.10.d
-        custom_tooltip = aoe_ship_actions.10.d.tooltip
+        name = aoe_ship_actions.11.b
+        custom_tooltip = aoe_ship_actions.11.b.tooltip
         trigger = {
             owner = {
                 NOT = {
                     has_technology = "tech_mine_orihalk"
-                    has_special_project = "strategic_resources_anomaly_project"
+                    has_special_project = "aoe_metallic_resources_anomaly_project"
                 }
             }
-            from = {
+            fromfrom = {
                 has_orihalk_resource = yes
             }
         }
         hidden_effect = {
-            from = {
+            fromfrom = {
                 enable_special_project = {
-                    name = "strategic_resources_anomaly_project"
+                    name = "aoe_metallic_resources_anomaly_project"
                     location = this
                     owner = root.owner
                 }
@@ -126,13 +359,35 @@ ship_event = {
         }
     }
     option = {
-        name = aoe_ship_actions.10.e
-        custom_tooltip = aoe_ship_actions.10.e.tooltip
+        name = aoe_ship_actions.11.c
+        custom_tooltip = aoe_ship_actions.11.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.12
+    title = aoe_ship_actions.12.title
+    desc = aoe_ship_actions.12.desc
+    picture = GFX_aoe_crystalline_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.12.a
+        custom_tooltip = aoe_ship_actions.12.a.tooltip
         trigger = {
             owner = {
                 has_technology = "tech_mine_yuranic"
             }
-            from = {
+            fromfrom = {
                 has_yuranic_resource = yes
             }
         }
@@ -143,23 +398,23 @@ ship_event = {
         }
     }
     option = {
-        name = aoe_ship_actions.10.f
-        custom_tooltip = aoe_ship_actions.10.f.tooltip
+        name = aoe_ship_actions.12.b
+        custom_tooltip = aoe_ship_actions.12.b.tooltip
         trigger = {
             owner = {
                 NOT = {
                     has_technology = "tech_mine_yuranic"
-                    has_special_project = "strategic_resources_anomaly_project"
+                    has_special_project = "aoe_crystalline_resources_anomaly_project"
                 }
             }
-            from = {
+            fromfrom = {
                 has_yuranic_resource = yes
             }
         }
         hidden_effect = {
-            from = {
+            fromfrom = {
                 enable_special_project = {
-                    name = "strategic_resources_anomaly_project"
+                    name = "aoe_crystalline_resources_anomaly_project"
                     location = this
                     owner = root.owner
                 }
@@ -167,13 +422,224 @@ ship_event = {
         }
     }
     option = {
-        name = aoe_ship_actions.10.g
-        custom_tooltip = aoe_ship_actions.10.g.tooltip
+        name = aoe_ship_actions.12.c
+        custom_tooltip = aoe_ship_actions.12.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.13
+    title = aoe_ship_actions.13.title
+    desc = aoe_ship_actions.13.desc
+    picture = GFX_aoe_metallic_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.13.a
+        custom_tooltip = aoe_ship_actions.13.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_adamantium"
+            }
+            fromfrom = {
+                has_adamantium_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                adamantium = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.13.b
+        custom_tooltip = aoe_ship_actions.13.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_adamantium"
+                    has_special_project = "aoe_metallic_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_adamantium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_metallic_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.13.c
+        custom_tooltip = aoe_ship_actions.13.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.14
+    title = aoe_ship_actions.14.title
+    desc = aoe_ship_actions.14.desc
+    picture = GFX_aoe_metallic_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.14.a
+        custom_tooltip = aoe_ship_actions.14.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_vibranium"
+            }
+            fromfrom = {
+                has_vibranium_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                vibranium = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.14.b
+        custom_tooltip = aoe_ship_actions.14.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_vibranium"
+                    has_special_project = "aoe_metallic_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_vibranium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_metallic_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.14.c
+        custom_tooltip = aoe_ship_actions.14.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.15
+    title = aoe_ship_actions.15.title
+    desc = aoe_ship_actions.15.desc
+    picture = GFX_aoe_crystalline_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.15.a
+        custom_tooltip = aoe_ship_actions.15.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_cobaltium"
+            }
+            fromfrom = {
+                has_cobaltium_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                cobaltium = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.15.b
+        custom_tooltip = aoe_ship_actions.15.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_cobaltium"
+                    has_special_project = "aoe_crystalline_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_cobaltium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_crystalline_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.15.c
+        custom_tooltip = aoe_ship_actions.15.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.16
+    title = aoe_ship_actions.16.title
+    desc = aoe_ship_actions.16.desc
+    picture = GFX_aoe_gaseous_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.16.a
+        custom_tooltip = aoe_ship_actions.16.a.tooltip
         trigger = {
             owner = {
                 has_technology = "tech_mine_itildeen"
             }
-            from = {
+            fromfrom = {
                 has_itildeen_resource = yes
             }
         }
@@ -184,23 +650,23 @@ ship_event = {
         }
     }
     option = {
-        name = aoe_ship_actions.10.h
-        custom_tooltip = aoe_ship_actions.10.h.tooltip
+        name = aoe_ship_actions.16.b
+        custom_tooltip = aoe_ship_actions.16.b.tooltip
         trigger = {
             owner = {
                 NOT = {
                     has_technology = "tech_mine_itildeen"
-                    has_special_project = "strategic_resources_anomaly_project"
+                    has_special_project = "aoe_gaseous_resources_anomaly_project"
                 }
             }
-            from = {
+            fromfrom = {
                 has_itildeen_resource = yes
             }
         }
         hidden_effect = {
-            from = {
+            fromfrom = {
                 enable_special_project = {
-                    name = "strategic_resources_anomaly_project"
+                    name = "aoe_gaseous_resources_anomaly_project"
                     location = this
                     owner = root.owner
                 }
@@ -208,13 +674,35 @@ ship_event = {
         }
     }
     option = {
-        name = aoe_ship_actions.10.i
-        custom_tooltip = aoe_ship_actions.10.i.tooltip
+        name = aoe_ship_actions.16.c
+        custom_tooltip = aoe_ship_actions.16.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.17
+    title = aoe_ship_actions.17.title
+    desc = aoe_ship_actions.17.desc
+    picture = GFX_aoe_gaseous_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.17.a
+        custom_tooltip = aoe_ship_actions.17.a.tooltip
         trigger = {
             owner = {
                 has_technology = "tech_mine_satramene"
             }
-            from = {
+            fromfrom = {
                 has_satramene_resource = yes
             }
         }
@@ -225,23 +713,23 @@ ship_event = {
         }
     }
     option = {
-        name = aoe_ship_actions.10.j
-        custom_tooltip = aoe_ship_actions.10.j.tooltip
+        name = aoe_ship_actions.17.b
+        custom_tooltip = aoe_ship_actions.17.b.tooltip
         trigger = {
             owner = {
                 NOT = {
                     has_technology = "tech_mine_satramene"
-                    has_special_project = "strategic_resources_anomaly_project"
+                    has_special_project = "aoe_gaseous_resources_anomaly_project"
                 }
             }
-            from = {
+            fromfrom = {
                 has_satramene_resource = yes
             }
         }
         hidden_effect = {
-            from = {
+            fromfrom = {
                 enable_special_project = {
-                    name = "strategic_resources_anomaly_project"
+                    name = "aoe_gaseous_resources_anomaly_project"
                     location = this
                     owner = root.owner
                 }
@@ -249,12 +737,700 @@ ship_event = {
         }
     }
     option = {
-        name = aoe_ship_actions.10.z
-        custom_tooltip = aoe_ship_actions.10.z.tooltip
-        hidden_effect = {
-            leader = {
-                add_experience = 200
+        name = aoe_ship_actions.17.c
+        custom_tooltip = aoe_ship_actions.17.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.18
+    title = aoe_ship_actions.18.title
+    desc = aoe_ship_actions.18.desc
+    picture = GFX_aoe_crystalline_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.18.a
+        custom_tooltip = aoe_ship_actions.18.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_lirium"
+            }
+            fromfrom = {
+                has_lirium_resource = yes
             }
         }
+        owner = {
+            add_resource = {
+                lirium = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.18.b
+        custom_tooltip = aoe_ship_actions.18.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_lirium"
+                    has_special_project = "aoe_crystalline_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_lirium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_crystalline_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.18.c
+        custom_tooltip = aoe_ship_actions.18.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.19
+    title = aoe_ship_actions.19.title
+    desc = aoe_ship_actions.19.desc
+    picture = GFX_aoe_powdered_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.19.a
+        custom_tooltip = aoe_ship_actions.19.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_nevarrit"
+            }
+            fromfrom = {
+                has_nevarrit_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                nevarrit = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.19.b
+        custom_tooltip = aoe_ship_actions.19.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_nevarrit"
+                    has_special_project = "aoe_powdered_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_nevarrit_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_powdered_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.19.c
+        custom_tooltip = aoe_ship_actions.19.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.20
+    title = aoe_ship_actions.20.title
+    desc = aoe_ship_actions.20.desc
+    picture = GFX_aoe_powdered_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.20.a
+        custom_tooltip = aoe_ship_actions.20.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_thiotimoline"
+            }
+            fromfrom = {
+                has_thiotimoline_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                thiotimoline = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.20.b
+        custom_tooltip = aoe_ship_actions.20.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_thiotimoline"
+                    has_special_project = "aoe_powdered_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_thiotimoline_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_powdered_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.20.c
+        custom_tooltip = aoe_ship_actions.20.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.21
+    title = aoe_ship_actions.21.title
+    desc = aoe_ship_actions.21.desc
+    picture = GFX_aoe_crystalline_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.21.a
+        custom_tooltip = aoe_ship_actions.21.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_unobtanium"
+            }
+            fromfrom = {
+                has_unobtanium_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                unobtanium = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.21.b
+        custom_tooltip = aoe_ship_actions.21.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_unobtanium"
+                    has_special_project = "aoe_crystalline_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_unobtanium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_crystalline_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.21.c
+        custom_tooltip = aoe_ship_actions.21.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.22
+    title = aoe_ship_actions.22.title
+    desc = aoe_ship_actions.22.desc
+    picture = GFX_aoe_metallic_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.22.a
+        custom_tooltip = aoe_ship_actions.22.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_stalgrim"
+            }
+            fromfrom = {
+                has_stalgrim_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                stalgrim = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.22.b
+        custom_tooltip = aoe_ship_actions.22.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_stalgrim"
+                    has_special_project = "aoe_metallic_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_stalgrim_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_metallic_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.22.c
+        custom_tooltip = aoe_ship_actions.22.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.23
+    title = aoe_ship_actions.23.title
+    desc = aoe_ship_actions.23.desc
+    picture = GFX_aoe_metallic_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.23.a
+        custom_tooltip = aoe_ship_actions.23.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_tiberium"
+            }
+            fromfrom = {
+                has_tiberium_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                tiberium = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.23.b
+        custom_tooltip = aoe_ship_actions.23.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_tiberium"
+                    has_special_project = "aoe_metallic_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_tiberium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_metallic_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.23.c
+        custom_tooltip = aoe_ship_actions.23.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.24
+    title = aoe_ship_actions.24.title
+    desc = aoe_ship_actions.24.desc
+    picture = GFX_aoe_micaceous_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.24.a
+        custom_tooltip = aoe_ship_actions.24.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_elerium"
+            }
+            fromfrom = {
+                has_elerium_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                elerium = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.24.b
+        custom_tooltip = aoe_ship_actions.24.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_elerium"
+                    has_special_project = "aoe_micaceous_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_elerium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_micaceous_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.24.c
+        custom_tooltip = aoe_ship_actions.24.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.25
+    title = aoe_ship_actions.25.title
+    desc = aoe_ship_actions.25.desc
+    picture = GFX_aoe_corpuscular_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.25.a
+        custom_tooltip = aoe_ship_actions.25.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_gravitoid"
+            }
+            fromfrom = {
+                has_gravitoid_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                gravitoid = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.25.b
+        custom_tooltip = aoe_ship_actions.25.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_gravitoid"
+                    has_special_project = "aoe_corpuscular_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_gravitoid_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_corpuscular_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.25.c
+        custom_tooltip = aoe_ship_actions.25.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.26
+    title = aoe_ship_actions.26.title
+    desc = aoe_ship_actions.26.desc
+    picture = GFX_aoe_fluid_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.26.a
+        custom_tooltip = aoe_ship_actions.26.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_tylium"
+            }
+            fromfrom = {
+                has_tylium_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                tylium = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.26.b
+        custom_tooltip = aoe_ship_actions.26.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_tylium"
+                    has_special_project = "aoe_fluid_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_tylium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_fluid_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.26.c
+        custom_tooltip = aoe_ship_actions.26.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.27
+    title = aoe_ship_actions.27.title
+    desc = aoe_ship_actions.27.desc
+    picture = GFX_aoe_metallic_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.27.a
+        custom_tooltip = aoe_ship_actions.27.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_chalcolivan"
+            }
+            fromfrom = {
+                has_chalcolivan_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                chalcolivan = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.27.b
+        custom_tooltip = aoe_ship_actions.27.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_chalcolivan"
+                    has_special_project = "aoe_metallic_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_chalcolivan_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_metallic_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.27.c
+        custom_tooltip = aoe_ship_actions.27.c.tooltip
+    }
+}
+
+ship_event = {
+    id = aoe_ship_actions.28
+    title = aoe_ship_actions.28.title
+    desc = aoe_ship_actions.28.desc
+    picture = GFX_aoe_fluid_resources_discovered
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 50
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.28.a
+        custom_tooltip = aoe_ship_actions.28.a.tooltip
+        trigger = {
+            owner = {
+                has_technology = "tech_mine_terrigen"
+            }
+            fromfrom = {
+                has_terrigen_resource = yes
+            }
+        }
+        owner = {
+            add_resource = {
+                terrigen = @tier2materialmax
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.28.b
+        custom_tooltip = aoe_ship_actions.28.b.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_technology = "tech_mine_terrigen"
+                    has_special_project = "aoe_fluid_resources_anomaly_project"
+                }
+            }
+            fromfrom = {
+                has_terrigen_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_fluid_resources_anomaly_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.28.c
+        custom_tooltip = aoe_ship_actions.28.c.tooltip
     }
 }

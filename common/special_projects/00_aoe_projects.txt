@@ -1,10 +1,10 @@
 special_project = {
-    key = "strategic_resources_anomaly_project"
+    key = "aoe_metallic_resources_anomaly_project"
     cost = 0
     days_to_research = 300
     timelimit = -1
     tech_department = engineering_technology
-    picture = GFX_evt_strategic_resources_project
+    picture = GFX_aoe_metallic_resources_project
     icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
 
     event_scope = ship_event
@@ -53,6 +53,125 @@ special_project = {
         else_if = {
             limit = {
                 from = {
+                    has_adamantium_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_adamantium"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_adamantium"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_vibranium_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_vibranium"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_vibranium"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_stalgrim_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_stalgrim"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_stalgrim"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_tiberium_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_tiberium"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_tiberium"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_chalcolivan_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_chalcolivan"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_chalcolivan"
+                }
+            }
+        }
+        else = {
+            owner = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier1researchreward
+                    min = @tier1researchmin
+                    max = @tier1researchmax
+                }
+            }
+        }
+    }
+
+    # on_fail = {
+    # }
+}
+
+special_project = {
+    key = "aoe_crystalline_resources_anomaly_project"
+    cost = 0
+    days_to_research = 300
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_aoe_crystalline_resources_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+        skill = 2
+    }
+
+    on_success = {
+        if = {
+            limit = {
+                from = {
                     has_yuranic_resource = yes
                 }
                 owner = {
@@ -62,12 +181,97 @@ special_project = {
                 }
             }
             owner = {
-                give_technology = { 
+                give_technology = {
                     tech = "tech_mine_yuranic"
                 }
             }
         }
         else_if = {
+            limit = {
+                from = {
+                    has_cobaltium_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_cobaltium"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_cobaltium"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_lirium_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_lirium"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_lirium"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_unobtanium_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_unobtanium"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_unobtanium"
+                }
+            }
+        }
+        else = {
+            owner = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier1researchreward
+                    min = @tier1researchmin
+                    max = @tier1researchmax
+                }
+            }
+        }
+    }
+
+    # on_fail = {
+    # }
+}
+
+special_project = {
+    key = "aoe_gaseous_resources_anomaly_project"
+    cost = 0
+    days_to_research = 300
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_aoe_gaseous_resources_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+        skill = 2
+    }
+
+    on_success = {
+        if = {
             limit = {
                 from = {
                     has_itildeen_resource = yes
@@ -113,6 +317,244 @@ special_project = {
         }
     }
 
-    on_fail = {
+    # on_fail = {
+    # }
+}
+
+special_project = {
+    key = "aoe_powdered_resources_anomaly_project"
+    cost = 0
+    days_to_research = 300
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_aoe_powdered_resources_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+        skill = 2
     }
+
+    on_success = {
+        if = {
+            limit = {
+                from = {
+                    has_nevarrit_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_nevarrit"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_nevarrit"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_thiotimoline_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_thiotimoline"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_thiotimoline"
+                }
+            }
+        }
+        else = {
+            owner = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier1researchreward
+                    min = @tier1researchmin
+                    max = @tier1researchmax
+                }
+            }
+        }
+    }
+
+    # on_fail = {
+    # }
+}
+
+special_project = {
+    key = "aoe_micaceous_resources_anomaly_project"
+    cost = 0
+    days_to_research = 300
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_aoe_micaceous_resources_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+        skill = 2
+    }
+
+    on_success = {
+        if = {
+            limit = {
+                from = {
+                    has_elerium_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_elerium"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_elerium"
+                }
+            }
+        }
+        else = {
+            owner = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier1researchreward
+                    min = @tier1researchmin
+                    max = @tier1researchmax
+                }
+            }
+        }
+    }
+
+    # on_fail = {
+    # }
+}
+
+special_project = {
+    key = "aoe_corpuscular_resources_anomaly_project"
+    cost = 0
+    days_to_research = 300
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_aoe_corpuscular_resources_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+        skill = 2
+    }
+
+    on_success = {
+        if = {
+            limit = {
+                from = {
+                    has_gravitoid_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_gravitoid"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_gravitoid"
+                }
+            }
+        }
+        else = {
+            owner = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier1researchreward
+                    min = @tier1researchmin
+                    max = @tier1researchmax
+                }
+            }
+        }
+    }
+
+    # on_fail = {
+    # }
+}
+
+special_project = {
+    key = "aoe_fluid_resources_anomaly_project"
+    cost = 0
+    days_to_research = 300
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_aoe_fluid_resources_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+        skill = 2
+    }
+
+    on_success = {
+        if = {
+            limit = {
+                from = {
+                    has_tylium_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_tylium"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_tylium"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_terrigen_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_terrigen"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_terrigen"
+                }
+            }
+        }
+        else = {
+            owner = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier1researchreward
+                    min = @tier1researchmin
+                    max = @tier1researchmax
+                }
+            }
+        }
+    }
+
+    # on_fail = {
+    # }
 }

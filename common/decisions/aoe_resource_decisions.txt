@@ -1,0 +1,38 @@
+decision_planet_interstellar_research = {
+    owned_planets_only = yes
+    sound = event_administrative_work
+    icon = decision_interstellar_research
+
+    resources = {
+        category = decisions
+        cost = {
+            energy = 500
+            unity = 10
+        }
+    }
+
+    potential = {
+        owner = {
+            is_regular_empire = yes
+            has_technology = "tech_deep_space_survey"
+        }
+    }
+
+    allow = {
+        # has_building = ""
+        NOT = {
+            has_modifier = "planet_interstellar_research"
+        }
+    }
+
+    effect = {
+        add_modifier = {
+            modifier = "planet_interstellar_research"
+            days = 1080
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+}

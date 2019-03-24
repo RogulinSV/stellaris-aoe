@@ -1,0 +1,4 @@
+planet_interstellar_research = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_interstellar_research.dds"
+    icon_frame = 1
+}

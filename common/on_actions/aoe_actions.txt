@@ -7,9 +7,28 @@ on_press_begin = {
     }
 }
 
+on_bi_yearly_pulse = {
+    events = {
+        # Searching resources Event
+        aoe_pulse_actions.1
+    }
+}
+
 on_ship_built = {
     events = {
         # Corvette built Event
         aoe_ship_actions.1
+        # Destroyer built Event
+        aoe_ship_actions.2
+        # Cruiser built Event
+        aoe_ship_actions.3
+        # Battleship built Event
+        aoe_ship_actions.4
+        # Titan built Event
+        aoe_ship_actions.5
+        # Colonizer built Event
+        aoe_ship_actions.8
+        # Transport built Event
+        aoe_ship_actions.9
     }
 }

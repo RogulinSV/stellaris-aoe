@@ -1,19 +1,19 @@
-strategic_resources_discovering_category = {
-    desc = strategic_resources_discovering_category_desc
-    picture = GFX_aoe_strategic_resources_discovering
+resources_mithril_discovering_category = {
+    desc = resources_mithril_discovering_category_desc
+    picture = GFX_aoe_metallic_resources_discovering
     max_once_global = no
     max_once = no
     level = 3
 
     spawn_chance = {
         modifier = {
-            add = 10
-            OR = {
-                has_mithril_resource = yes
-                has_orihalk_resource = yes
-                has_yuranic_resource = yes
-                has_itildeen_resource = yes
-                has_satramene_resource = yes
+            add = 3
+            has_mithril_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_mithril" }
             }
         }
     }
@@ -24,3 +24,532 @@ strategic_resources_discovering_category = {
         }
     }
 }
+
+resources_orihalk_discovering_category = {
+    desc = resources_orihalk_discovering_category_desc
+    picture = GFX_aoe_metallic_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_orihalk_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_orihalk" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.11"
+        }
+    }
+}
+
+resources_yuranic_discovering_category = {
+    desc = resources_yuranic_discovering_category_desc
+    picture = GFX_aoe_crystalline_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_yuranic_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_yuranic" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.12"
+        }
+    }
+}
+
+resources_adamantium_discovering_category = {
+    desc = resources_adamantium_discovering_category_desc
+    picture = GFX_aoe_metallic_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_adamantium_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_adamantium" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.13"
+        }
+    }
+}
+
+resources_vibranium_discovering_category = {
+    desc = resources_vibranium_discovering_category_desc
+    picture = GFX_aoe_metallic_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_vibranium_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_vibranium" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.14"
+        }
+    }
+}
+
+resources_cobaltium_discovering_category = {
+    desc = resources_cobaltium_discovering_category_desc
+    picture = GFX_aoe_crystalline_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_cobaltium_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_cobaltium" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.15"
+        }
+    }
+}
+
+resources_itildeen_discovering_category = {
+    desc = resources_itildeen_discovering_category_desc
+    picture = GFX_aoe_gaseous_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_itildeen_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_itildeen" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.16"
+        }
+    }
+}
+
+resources_satramene_discovering_category = {
+    desc = resources_satramene_discovering_category_desc
+    picture = GFX_aoe_gaseous_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_satramene_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_satramene" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.17"
+        }
+    }
+}
+
+resources_lirium_discovering_category = {
+    desc = resources_lirium_discovering_category_desc
+    picture = GFX_aoe_crystalline_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_lirium_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_lirium" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.18"
+        }
+    }
+}
+
+resources_nevarrit_discovering_category = {
+    desc = resources_nevarrit_discovering_category_desc
+    picture = GFX_aoe_powdered_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_nevarrit_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_nevarrit" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.19"
+        }
+    }
+}
+
+resources_thiotimoline_discovering_category = {
+    desc = resources_thiotimoline_discovering_category_desc
+    picture = GFX_aoe_powdered_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_thiotimoline_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_thiotimoline" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.20"
+        }
+    }
+}
+
+resources_unobtanium_discovering_category = {
+    desc = resources_unobtanium_discovering_category_desc
+    picture = GFX_aoe_crystalline_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_unobtanium_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_unobtanium" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.21"
+        }
+    }
+}
+
+resources_stalgrim_discovering_category = {
+    desc = resources_stalgrim_discovering_category_desc
+    picture = GFX_aoe_metallic_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_stalgrim_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_stalgrim" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.22"
+        }
+    }
+}
+
+resources_tiberium_discovering_category = {
+    desc = resources_tiberium_discovering_category_desc
+    picture = GFX_aoe_metallic_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_tiberium_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_tiberium" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.23"
+        }
+    }
+}
+
+resources_elerium_discovering_category = {
+    desc = resources_elerium_discovering_category_desc
+    picture = GFX_aoe_micaceous_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_elerium_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_elerium" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.24"
+        }
+    }
+}
+
+resources_gravitoid_discovering_category = {
+    desc = resources_gravitoid_discovering_category_desc
+    picture = GFX_aoe_corpuscular_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_gravitoid_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_gravitoid" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.25"
+        }
+    }
+}
+
+resources_tylium_discovering_category = {
+    desc = resources_tylium_discovering_category_desc
+    picture = GFX_aoe_fluid_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_tylium_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_tylium" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.26"
+        }
+    }
+}
+
+resources_chalcolivan_discovering_category = {
+    desc = resources_chalcolivan_discovering_category_desc
+    picture = GFX_aoe_metallic_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_chalcolivan_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_chalcolivan" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.27"
+        }
+    }
+}
+
+resources_terrigen_discovering_category = {
+    desc = resources_terrigen_discovering_category_desc
+    picture = GFX_aoe_fluid_resources_discovering
+    max_once_global = no
+    max_once = no
+    level = 3
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            has_terrigen_resource = yes
+        }
+        modifier = {
+            factor = 5
+            from.owner = {
+                NOT = { has_technology = "tech_mine_terrigen" }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.28"
+        }
+    }
+}
+
+# strategic_resources_discovering_category = {
+#     desc = strategic_resources_discovering_category_desc
+#     picture = GFX_aoe_strategic_resources_discovering
+#     max_once_global = no
+#     max_once = no
+#     level = 3
+
+#     spawn_chance = {
+#         modifier = {
+#             add = 100
+#             OR = {
+#                 has_mithril_resource = yes
+#                 has_orihalk_resource = yes
+#                 has_yuranic_resource = yes
+#                 has_adamantium_resource = yes
+#                 has_itildeen_resource = yes
+#                 has_satramene_resource = yes
+#             }
+#         }
+#         modifier = {
+#             factor = 0
+#             # exists = space_owner
+#             # space_owner = { is_same_value = from.owner }
+#             from.owner = {
+#                 AND = {
+#                     has_technology = "tech_mine_mithril"
+#                     has_technology = "tech_mine_orihalk"
+#                     has_technology = "tech_mine_yuranic"
+#                     has_technology = "tech_mine_adamantium"
+#                     has_technology = "tech_mine_itildeen"
+#                     has_technology = "tech_mine_satramene"
+#                 }
+#             }
+#         }
+#     }
+
+#     on_success = {
+#         1 = {
+#             ship_event = "aoe_ship_actions.10"
+#         }
+#     }
+# }

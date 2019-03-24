@@ -109,7 +109,8 @@ country_event = {
                             from = this
                             to = prev
                         }
-                        log = "System [This.GetName] connected with [Prev.GetName]"
+
+                        log = "aoe_begin_actions.10: System «[This.GetName]» was connected with «[Prev.GetName]» system"
                     }
                 }
             }
