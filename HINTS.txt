@@ -23,7 +23,6 @@ shipclass_starbase_damage_mult = 0.50
 shipsize_corvette_build_speed_mult = 0.25
 shipsize_destroyer_build_speed_mult = 0.25
 shipsize_cruiser_build_speed_mult = 0.25
-shipsize_cruiser_build_speed_mult = 0.25
 shipsize_battleship_build_speed_mult = 0.25
 shipsize_corvette_hull_add = 100
 ships_upkeep_mult = -0.05
