@@ -12,16 +12,18 @@ ship_event = {
                 is_planet_class = "pc_crystalline_gas_giant"
                 is_planet_class = "pc_metalline_uninhabitable"
                 is_planet_class = "pc_metalline_gas_giant"
-                is_planet_class = "pc_methane_uninhabitable"
-                is_planet_class = "pc_methane_gas_giant"
-                is_planet_class = "pc_carbon_uninhabitable"
-                is_planet_class = "pc_carbon_gas_giant"
-                is_planet_class = "pc_nitrogen_uninhabitable"
-                is_planet_class = "pc_nitrogen_gas_giant"
-                is_planet_class = "pc_sulfuric_uninhabitable"
-                is_planet_class = "pc_sulfuric_gas_giant"
-                is_planet_class = "pc_argon_uninhabitable"
-                is_planet_class = "pc_argon_gas_giant"
+                is_planet_class = "pc_methanum_uninhabitable"
+                is_planet_class = "pc_methanum_gas_giant"
+                is_planet_class = "pc_carbonium_uninhabitable"
+                is_planet_class = "pc_carbonium_gas_giant"
+                is_planet_class = "pc_nitrogenium_uninhabitable"
+                is_planet_class = "pc_nitrogenium_gas_giant"
+                is_planet_class = "pc_sulphureum_uninhabitable"
+                is_planet_class = "pc_sulphureum_gas_giant"
+                is_planet_class = "pc_argonium_uninhabitable"
+                is_planet_class = "pc_argonium_gas_giant"
+                is_planet_class = "pc_phosphorium_uninhabitable"
+                is_planet_class = "pc_phosphorium_gas_giant"
             }
         }
     }
@@ -73,7 +75,7 @@ ship_event = {
             limit = {
                 from = {
                     OR = {
-                        is_planet_class = "pc_methane_uninhabitable"
+                        is_planet_class = "pc_methanum_uninhabitable"
                     }
                 }
             }
@@ -81,25 +83,25 @@ ship_event = {
                 if = {
                     limit = {
                         check_variable = {
-                            which = "get_planet_methane_surveyed_count"
+                            which = "get_planet_methanum_surveyed_count"
                             value < 1
                         }
                     }
                     set_variable = {
-                        which = "get_planet_methane_surveyed_count"
+                        which = "get_planet_methanum_surveyed_count"
                         value = 1
                     }
                 }
                 else = {
                     change_variable = {
-                        which = "get_planet_methane_surveyed_count"
+                        which = "get_planet_methanum_surveyed_count"
                         value = 1
                     }
                 }
                 if = {
                     limit = {
                         check_variable = {
-                            which = "get_planet_methane_surveyed_count"
+                            which = "get_planet_methanum_surveyed_count"
                             value = 1
                         }
                     }
@@ -113,7 +115,7 @@ ship_event = {
             limit = {
                 from = {
                     OR = {
-                        is_planet_class = "pc_carbon_uninhabitable"
+                        is_planet_class = "pc_carbonium_uninhabitable"
                     }
                 }
             }
@@ -121,25 +123,25 @@ ship_event = {
                 if = {
                     limit = {
                         check_variable = {
-                            which = "get_planet_carbon_surveyed_count"
+                            which = "get_planet_carbonium_surveyed_count"
                             value < 1
                         }
                     }
                     set_variable = {
-                        which = "get_planet_carbon_surveyed_count"
+                        which = "get_planet_carbonium_surveyed_count"
                         value = 1
                     }
                 }
                 else = {
                     change_variable = {
-                        which = "get_planet_carbon_surveyed_count"
+                        which = "get_planet_carbonium_surveyed_count"
                         value = 1
                     }
                 }
                 if = {
                     limit = {
                         check_variable = {
-                            which = "get_planet_carbon_surveyed_count"
+                            which = "get_planet_carbonium_surveyed_count"
                             value = 1
                         }
                     }
@@ -153,7 +155,7 @@ ship_event = {
             limit = {
                 from = {
                     OR = {
-                        is_planet_class = "pc_nitrogen_uninhabitable"
+                        is_planet_class = "pc_nitrogenium_uninhabitable"
                     }
                 }
             }
@@ -161,25 +163,25 @@ ship_event = {
                 if = {
                     limit = {
                         check_variable = {
-                            which = "get_planet_nitrogen_surveyed_count"
+                            which = "get_planet_nitrogenium_surveyed_count"
                             value < 1
                         }
                     }
                     set_variable = {
-                        which = "get_planet_nitrogen_surveyed_count"
+                        which = "get_planet_nitrogenium_surveyed_count"
                         value = 1
                     }
                 }
                 else = {
                     change_variable = {
-                        which = "get_planet_nitrogen_surveyed_count"
+                        which = "get_planet_nitrogenium_surveyed_count"
                         value = 1
                     }
                 }
                 if = {
                     limit = {
                         check_variable = {
-                            which = "get_planet_nitrogen_surveyed_count"
+                            which = "get_planet_nitrogenium_surveyed_count"
                             value = 1
                         }
                     }
@@ -193,7 +195,7 @@ ship_event = {
             limit = {
                 from = {
                     OR = {
-                        is_planet_class = "pc_sulfuric_uninhabitable"
+                        is_planet_class = "pc_sulphureum_uninhabitable"
                     }
                 }
             }
@@ -201,25 +203,25 @@ ship_event = {
                 if = {
                     limit = {
                         check_variable = {
-                            which = "get_planet_sulfuric_surveyed_count"
+                            which = "get_planet_sulphureum_surveyed_count"
                             value < 1
                         }
                     }
                     set_variable = {
-                        which = "get_planet_sulfuric_surveyed_count"
+                        which = "get_planet_sulphureum_surveyed_count"
                         value = 1
                     }
                 }
                 else = {
                     change_variable = {
-                        which = "get_planet_sulfuric_surveyed_count"
+                        which = "get_planet_sulphureum_surveyed_count"
                         value = 1
                     }
                 }
                 if = {
                     limit = {
                         check_variable = {
-                            which = "get_planet_sulfuric_surveyed_count"
+                            which = "get_planet_sulphureum_surveyed_count"
                             value = 1
                         }
                     }
@@ -273,7 +275,7 @@ ship_event = {
             limit = {
                 from = {
                     OR = {
-                        is_planet_class = "pc_argon_uninhabitable"
+                        is_planet_class = "pc_argonium_uninhabitable"
                     }
                 }
             }
@@ -281,30 +283,70 @@ ship_event = {
                 if = {
                     limit = {
                         check_variable = {
-                            which = "get_planet_argon_surveyed_count"
+                            which = "get_planet_argonium_surveyed_count"
                             value < 1
                         }
                     }
                     set_variable = {
-                        which = "get_planet_argon_surveyed_count"
+                        which = "get_planet_argonium_surveyed_count"
                         value = 1
                     }
                 }
                 else = {
                     change_variable = {
-                        which = "get_planet_argon_surveyed_count"
+                        which = "get_planet_argonium_surveyed_count"
                         value = 1
                     }
                 }
                 if = {
                     limit = {
                         check_variable = {
-                            which = "get_planet_argon_surveyed_count"
+                            which = "get_planet_argonium_surveyed_count"
                             value = 1
                         }
                     }
                     country_event = {
                         id = "aoe_planet_actions.7"
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    OR = {
+                        is_planet_class = "pc_phosphorium_uninhabitable"
+                    }
+                }
+            }
+            root.owner = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "get_planet_phosphorium_surveyed_count"
+                            value < 1
+                        }
+                    }
+                    set_variable = {
+                        which = "get_planet_phosphorium_surveyed_count"
+                        value = 1
+                    }
+                }
+                else = {
+                    change_variable = {
+                        which = "get_planet_phosphorium_surveyed_count"
+                        value = 1
+                    }
+                }
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "get_planet_phosphorium_surveyed_count"
+                            value = 1
+                        }
+                    }
+                    country_event = {
+                        id = "aoe_planet_actions.8"
                     }
                 }
             }
@@ -335,13 +377,13 @@ country_event = {
     }
 }
 
-### Methane planets surveyed
+### Methanum planets surveyed
 
 country_event = {
     id = aoe_planet_actions.2
     title = aoe_planet_actions.2.title
     desc = aoe_planet_actions.2.desc
-    picture = GFX_aoe_methane_planet_surveyed
+    picture = GFX_aoe_methanum_planet_surveyed
     show_sound = event_laboratory_sound
     is_triggered_only = yes
     hide_window = no
@@ -358,13 +400,13 @@ country_event = {
     }
 }
 
-### Carbon planets surveyed
+### Carbonium planets surveyed
 
 country_event = {
     id = aoe_planet_actions.3
     title = aoe_planet_actions.3.title
     desc = aoe_planet_actions.3.desc
-    picture = GFX_aoe_carbon_planet_surveyed
+    picture = GFX_aoe_carbonium_planet_surveyed
     show_sound = event_laboratory_sound
     is_triggered_only = yes
     hide_window = no
@@ -380,13 +422,13 @@ country_event = {
     }
 }
 
-### Nitrogen planets surveyed
+### Nitrogenium planets surveyed
 
 country_event = {
     id = aoe_planet_actions.4
     title = aoe_planet_actions.4.title
     desc = aoe_planet_actions.4.desc
-    picture = GFX_aoe_nitrogen_planet_surveyed
+    picture = GFX_aoe_nitrogenium_planet_surveyed
     show_sound = event_laboratory_sound
     is_triggered_only = yes
     hide_window = no
@@ -402,13 +444,13 @@ country_event = {
     }
 }
 
-### Sulfuric planets surveyed
+### Sulphureum planets surveyed
 
 country_event = {
     id = aoe_planet_actions.5
     title = aoe_planet_actions.5.title
     desc = aoe_planet_actions.5.desc
-    picture = GFX_aoe_sulfuric_planet_surveyed
+    picture = GFX_aoe_sulphureum_planet_surveyed
     show_sound = event_laboratory_sound
     is_triggered_only = yes
     hide_window = no
@@ -446,13 +488,13 @@ country_event = {
     }
 }
 
-### Argon planets surveyed
+### Argonium planets surveyed
 
 country_event = {
     id = aoe_planet_actions.7
     title = aoe_planet_actions.7.title
     desc = aoe_planet_actions.7.desc
-    picture = GFX_aoe_argon_planet_surveyed
+    picture = GFX_aoe_argonium_planet_surveyed
     show_sound = event_laboratory_sound
     is_triggered_only = yes
     hide_window = no
@@ -465,5 +507,27 @@ country_event = {
     option = {
         name = aoe_planet_actions.7.a
         custom_tooltip = aoe_planet_actions.7.a.tooltip
+    }
+}
+
+### Phosphorium planets surveyed
+
+country_event = {
+    id = aoe_planet_actions.8
+    title = aoe_planet_actions.8.title
+    desc = aoe_planet_actions.8.desc
+    picture = GFX_aoe_phosphorium_planet_surveyed
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        print_scope_effect = yes
+    }
+
+    option = {
+        name = aoe_planet_actions.8.a
+        custom_tooltip = aoe_planet_actions.8.a.tooltip
     }
 }

@@ -1,5 +1,5 @@
 tech_gas_giant_compacting = {
-    cost = @technology_middle_cost
+    cost = @technology_medium_cost
     area = society
     tier = 3
     is_rare = yes
@@ -68,7 +68,7 @@ tech_gas_giant_compacting = {
 }
 
 tech_crystalline_sculpting = {
-    cost = @technology_middle_cost
+    cost = @technology_medium_cost
     area = society
     tier = 2
     is_rare = no
@@ -178,7 +178,7 @@ tech_crystalline_sculpting = {
 }
 
 tech_metalline_sculpting = {
-    cost = @technology_middle_cost
+    cost = @technology_medium_cost
     area = society
     tier = 2
     is_rare = no
@@ -287,8 +287,8 @@ tech_metalline_sculpting = {
     }
 }
 
-tech_methane_sculpting = {
-    cost = @technology_middle_cost
+tech_methanum_sculpting = {
+    cost = @technology_medium_cost
     area = society
     tier = 2
     is_rare = no
@@ -302,8 +302,8 @@ tech_methane_sculpting = {
 
     prereqfor_desc = {
         feature = {
-            title = "tech_methane_sculpting_title"
-            desc = "tech_methane_sculpting_desc"
+            title = "tech_methanum_sculpting_title"
+            desc = "tech_methanum_sculpting_desc"
         }
     }
 
@@ -318,14 +318,14 @@ tech_methane_sculpting = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "get_planet_methane_surveyed_count"
+                which = "get_planet_methanum_surveyed_count"
                 value < 5
             }
         }
         modifier = {
             factor = 0.5
             check_variable = {
-                which = "get_planet_methane_surveyed_count"
+                which = "get_planet_methanum_surveyed_count"
                 value < 10
             }
         }
@@ -373,14 +373,14 @@ tech_methane_sculpting = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "get_planet_methane_surveyed_count"
+                which = "get_planet_methanum_surveyed_count"
                 value < 5
             }
         }
         modifier = {
             factor = 0.5
             check_variable = {
-                which = "get_planet_methane_surveyed_count"
+                which = "get_planet_methanum_surveyed_count"
                 value < 10
             }
         }
@@ -397,8 +397,8 @@ tech_methane_sculpting = {
     }
 }
 
-tech_carbon_sculpting = {
-    cost = @technology_middle_cost
+tech_carbonium_sculpting = {
+    cost = @technology_medium_cost
     area = society
     tier = 2
     is_rare = no
@@ -412,8 +412,8 @@ tech_carbon_sculpting = {
 
     prereqfor_desc = {
         feature = {
-            title = "tech_carbon_sculpting_title"
-            desc = "tech_carbon_sculpting_desc"
+            title = "tech_carbonium_sculpting_title"
+            desc = "tech_carbonium_sculpting_desc"
         }
     }
 
@@ -428,14 +428,14 @@ tech_carbon_sculpting = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "get_planet_carbon_surveyed_count"
+                which = "get_planet_carbonium_surveyed_count"
                 value < 5
             }
         }
         modifier = {
             factor = 0.5
             check_variable = {
-                which = "get_planet_carbon_surveyed_count"
+                which = "get_planet_carbonium_surveyed_count"
                 value < 10
             }
         }
@@ -483,14 +483,14 @@ tech_carbon_sculpting = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "get_planet_carbon_surveyed_count"
+                which = "get_planet_carbonium_surveyed_count"
                 value < 5
             }
         }
         modifier = {
             factor = 0.5
             check_variable = {
-                which = "get_planet_carbon_surveyed_count"
+                which = "get_planet_carbonium_surveyed_count"
                 value < 10
             }
         }
@@ -507,8 +507,8 @@ tech_carbon_sculpting = {
     }
 }
 
-tech_nitrogen_sculpting = {
-    cost = @technology_middle_cost
+tech_nitrogenium_sculpting = {
+    cost = @technology_medium_cost
     area = society
     tier = 2
     is_rare = no
@@ -522,8 +522,8 @@ tech_nitrogen_sculpting = {
 
     prereqfor_desc = {
         feature = {
-            title = "tech_nitrogen_sculpting_title"
-            desc = "tech_nitrogen_sculpting_desc"
+            title = "tech_nitrogenium_sculpting_title"
+            desc = "tech_nitrogenium_sculpting_desc"
         }
     }
 
@@ -538,14 +538,14 @@ tech_nitrogen_sculpting = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "get_planet_nitrogen_surveyed_count"
+                which = "get_planet_nitrogenium_surveyed_count"
                 value < 5
             }
         }
         modifier = {
             factor = 0.5
             check_variable = {
-                which = "get_planet_nitrogen_surveyed_count"
+                which = "get_planet_nitrogenium_surveyed_count"
                 value < 10
             }
         }
@@ -593,14 +593,14 @@ tech_nitrogen_sculpting = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "get_planet_nitrogen_surveyed_count"
+                which = "get_planet_nitrogenium_surveyed_count"
                 value < 5
             }
         }
         modifier = {
             factor = 0.5
             check_variable = {
-                which = "get_planet_nitrogen_surveyed_count"
+                which = "get_planet_nitrogenium_surveyed_count"
                 value < 10
             }
         }
@@ -617,8 +617,8 @@ tech_nitrogen_sculpting = {
     }
 }
 
-tech_sulfuric_sculpting = {
-    cost = @technology_middle_cost
+tech_sulphureum_sculpting = {
+    cost = @technology_medium_cost
     area = society
     tier = 2
     is_rare = no
@@ -632,8 +632,8 @@ tech_sulfuric_sculpting = {
 
     prereqfor_desc = {
         feature = {
-            title = "tech_sulfuric_sculpting_title"
-            desc = "tech_sulfuric_sculpting_desc"
+            title = "tech_sulphureum_sculpting_title"
+            desc = "tech_sulphureum_sculpting_desc"
         }
     }
 
@@ -648,14 +648,14 @@ tech_sulfuric_sculpting = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "get_planet_sulfuric_surveyed_count"
+                which = "get_planet_sulphureum_surveyed_count"
                 value < 5
             }
         }
         modifier = {
             factor = 0.5
             check_variable = {
-                which = "get_planet_sulfuric_surveyed_count"
+                which = "get_planet_sulphureum_surveyed_count"
                 value < 10
             }
         }
@@ -703,14 +703,14 @@ tech_sulfuric_sculpting = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "get_planet_sulfuric_surveyed_count"
+                which = "get_planet_sulphureum_surveyed_count"
                 value < 5
             }
         }
         modifier = {
             factor = 0.5
             check_variable = {
-                which = "get_planet_sulfuric_surveyed_count"
+                which = "get_planet_sulphureum_surveyed_count"
                 value < 10
             }
         }
@@ -727,8 +727,8 @@ tech_sulfuric_sculpting = {
     }
 }
 
-tech_argon_sculpting = {
-    cost = @technology_middle_cost
+tech_argonium_sculpting = {
+    cost = @technology_medium_cost
     area = society
     tier = 2
     is_rare = no
@@ -742,8 +742,8 @@ tech_argon_sculpting = {
 
     prereqfor_desc = {
         feature = {
-            title = "tech_argon_sculpting_title"
-            desc = "tech_argon_sculpting_desc"
+            title = "tech_argonium_sculpting_title"
+            desc = "tech_argonium_sculpting_desc"
         }
     }
 
@@ -758,14 +758,14 @@ tech_argon_sculpting = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "get_planet_argon_surveyed_count"
+                which = "get_planet_argonium_surveyed_count"
                 value < 5
             }
         }
         modifier = {
             factor = 0.5
             check_variable = {
-                which = "get_planet_argon_surveyed_count"
+                which = "get_planet_argonium_surveyed_count"
                 value < 10
             }
         }
@@ -813,14 +813,124 @@ tech_argon_sculpting = {
         modifier = {
             factor = 0
             check_variable = {
-                which = "get_planet_argon_surveyed_count"
+                which = "get_planet_argonium_surveyed_count"
                 value < 5
             }
         }
         modifier = {
             factor = 0.5
             check_variable = {
-                which = "get_planet_argon_surveyed_count"
+                which = "get_planet_argonium_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_phosphorium_sculpting = {
+    cost = @technology_medium_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_phosphorium_sculpting_title"
+            desc = "tech_phosphorium_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_phosphorium_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_phosphorium_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_phosphorium_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_phosphorium_surveyed_count"
                 value < 10
             }
         }

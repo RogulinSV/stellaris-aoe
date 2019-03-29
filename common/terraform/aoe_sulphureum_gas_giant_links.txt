@@ -1,6 +1,6 @@
 terraform_link = {
-    from = "pc_sulfuric_gas_giant"
-    to = "pc_sulfuric_uninhabitable"
+    from = "pc_sulphureum_gas_giant"
+    to = "pc_sulphureum_uninhabitable"
 
     energy = 15000
     duration = 4000
@@ -8,7 +8,7 @@ terraform_link = {
     condition = {
         AND = {
             has_technology = "tech_gas_giant_compacting"
-            has_technology = "tech_sulfuric_sculpting"
+            has_technology = "tech_sulphureum_sculpting"
         }
     }
 

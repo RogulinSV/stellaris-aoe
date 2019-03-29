@@ -156,10 +156,10 @@ pc_metalline_gas_giant = {
     survey_time_factor = @gas_giant_planet_survey_factor
 }
 
-### Methane planets
+### Methanum planets
 
-pc_methane_uninhabitable = {
-    entity = "methane_uninhabitable_planet"
+pc_methanum_uninhabitable = {
+    entity = "methanum_uninhabitable_planet"
     entity_scale = @uninhabitable_planet_standard_scale
     icon_frame = 11
 
@@ -189,8 +189,8 @@ pc_methane_uninhabitable = {
     survey_time_factor = @uninhabitable_planet_survey_factor
 }
 
-pc_methane_gas_giant = {
-    entity = "methane_gas_giant_planet"
+pc_methanum_gas_giant = {
+    entity = "methanum_gas_giant_planet"
     entity_scale = @gas_giant_planet_standard_scale
     icon_frame = 14
 
@@ -225,10 +225,10 @@ pc_methane_gas_giant = {
     survey_time_factor = @gas_giant_planet_survey_factor
 }
 
-### Carbon planets
+### Carbonium planets
 
-pc_carbon_uninhabitable = {
-    entity = "carbon_uninhabitable_planet"
+pc_carbonium_uninhabitable = {
+    entity = "carbonium_uninhabitable_planet"
     entity_scale = @uninhabitable_planet_standard_scale
     icon_frame = 11
 
@@ -258,8 +258,8 @@ pc_carbon_uninhabitable = {
     survey_time_factor = @uninhabitable_planet_survey_factor
 }
 
-pc_carbon_gas_giant = {
-    entity = "carbon_gas_giant_planet"
+pc_carbonium_gas_giant = {
+    entity = "carbonium_gas_giant_planet"
     entity_scale = @gas_giant_planet_standard_scale
     icon_frame = 14
 
@@ -294,10 +294,10 @@ pc_carbon_gas_giant = {
     survey_time_factor = @gas_giant_planet_survey_factor
 }
 
-### Nitrogen planets
+### Nitrogenium planets
 
-pc_nitrogen_uninhabitable = {
-    entity = "nitrogen_uninhabitable_planet"
+pc_nitrogenium_uninhabitable = {
+    entity = "nitrogenium_uninhabitable_planet"
     entity_scale = @uninhabitable_planet_standard_scale
     icon_frame = 11
 
@@ -327,8 +327,8 @@ pc_nitrogen_uninhabitable = {
     survey_time_factor = @uninhabitable_planet_survey_factor
 }
 
-pc_nitrogen_gas_giant = {
-    entity = "nitrogen_gas_giant_planet"
+pc_nitrogenium_gas_giant = {
+    entity = "nitrogenium_gas_giant_planet"
     entity_scale = @gas_giant_planet_standard_scale
     icon_frame = 14
 
@@ -363,10 +363,10 @@ pc_nitrogen_gas_giant = {
     survey_time_factor = @gas_giant_planet_survey_factor
 }
 
-### Sulfuric planets
+### Sulphureum planets
 
-pc_sulfuric_uninhabitable = {
-    entity = "sulfuric_uninhabitable_planet"
+pc_sulphureum_uninhabitable = {
+    entity = "sulphureum_uninhabitable_planet"
     entity_scale = @uninhabitable_planet_standard_scale
     icon_frame = 11
 
@@ -396,8 +396,8 @@ pc_sulfuric_uninhabitable = {
     survey_time_factor = @uninhabitable_planet_survey_factor
 }
 
-pc_sulfuric_gas_giant = {
-    entity = "sulfuric_gas_giant_planet"
+pc_sulphureum_gas_giant = {
+    entity = "sulphureum_gas_giant_planet"
     entity_scale = @gas_giant_planet_standard_scale
     icon_frame = 14
 
@@ -432,10 +432,10 @@ pc_sulfuric_gas_giant = {
     survey_time_factor = @gas_giant_planet_survey_factor
 }
 
-### Argon planets
+### Argonium planets
 
-pc_argon_uninhabitable = {
-    entity = "argon_uninhabitable_planet"
+pc_argonium_uninhabitable = {
+    entity = "argonium_uninhabitable_planet"
     entity_scale = @uninhabitable_planet_standard_scale
     icon_frame = 11
 
@@ -465,8 +465,8 @@ pc_argon_uninhabitable = {
     survey_time_factor = @uninhabitable_planet_survey_factor
 }
 
-pc_argon_gas_giant = {
-    entity = "argon_gas_giant_planet"
+pc_argonium_gas_giant = {
+    entity = "argonium_gas_giant_planet"
     entity_scale = @gas_giant_planet_standard_scale
     icon_frame = 14
 
@@ -476,6 +476,75 @@ pc_argon_gas_giant = {
 
     min_distance_from_sun = 40
     max_distance_from_sun = 130
+
+    spawn_odds = @gas_giant_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @gas_giant_planet_chance_of_ring
+    production_spawn_chance = @gas_giant_planet_production_spawn_chance
+
+    planet_size = {
+        min = @gas_giant_planet_min_size
+        max = @gas_giant_planet_max_size
+    }
+    moon_size = {
+        min = @gas_giant_planet_moon_min_size
+        max = @gas_giant_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = no
+    orbit_lines = yes
+    space_monster_target = yes
+    survey_time_factor = @gas_giant_planet_survey_factor
+}
+
+### Phosphorium planets
+
+pc_phosphorium_uninhabitable = {
+    entity = "phosphorium_uninhabitable_planet"
+    entity_scale = @uninhabitable_planet_standard_scale
+    icon_frame = 11
+
+    min_distance_from_sun = 10
+    max_distance_from_sun = 50
+
+    spawn_odds = @uninhabitable_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @uninhabitable_planet_chance_of_ring
+    production_spawn_chance = @uninhabitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @uninhabitable_planet_min_size
+        max = @uninhabitable_planet_max_size
+    }
+    moon_size = {
+        min = @uninhabitable_planet_moon_min_size
+        max = @uninhabitable_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = yes
+    orbit_lines = yes
+    survey_time_factor = @uninhabitable_planet_survey_factor
+}
+
+pc_phosphorium_gas_giant = {
+    entity = "phosphorium_gas_giant_planet"
+    entity_scale = @gas_giant_planet_standard_scale
+    icon_frame = 14
+
+    atmosphere_color        = hsv { 0.1 0.15 1.1 }
+    atmosphere_intensity    = 1.1
+    atmosphere_width        = 0.5
+
+    min_distance_from_sun = 20
+    max_distance_from_sun = 90
 
     spawn_odds = @gas_giant_planet_spawn_odds
     extra_orbit_size = 0

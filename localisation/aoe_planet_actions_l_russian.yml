@@ -27,3 +27,7 @@
     aoe_planet_actions.7.desc:0 "Изучение аргонового мира"
     aoe_planet_actions.7.a:0 "Познавательно!"
     aoe_planet_actions.7.a.tooltip:0 "Познавательно!"
+    aoe_planet_actions.8.title:0 "Изучение фосфорного мира"
+    aoe_planet_actions.8.desc:0 "Изучение фосфорного мира"
+    aoe_planet_actions.8.a:0 "Поучительно!"
+    aoe_planet_actions.8.a.tooltip:0 "Поучительно!"

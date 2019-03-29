@@ -1,12 +1,12 @@
 terraform_link = {
-    from = "pc_methane_uninhabitable"
+    from = "pc_phosphorium_uninhabitable"
     to = "pc_barren"
 
     energy = 3000
     duration = 1800
 
     condition = {
-        has_technology = "tech_methane_sculpting"
+        has_technology = "tech_phosphorium_sculpting"
     }
 
     ai_weight = {
@@ -15,14 +15,14 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_methane_uninhabitable"
+    from = "pc_phosphorium_uninhabitable"
     to = "pc_barren_cold"
 
     energy = 3000
     duration = 1800
 
     condition = {
-        has_technology = "tech_methane_sculpting"
+        has_technology = "tech_phosphorium_sculpting"
     }
 
     ai_weight = {
@@ -31,14 +31,14 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_methane_uninhabitable"
+    from = "pc_phosphorium_uninhabitable"
     to = "pc_desert"
 
     energy = 8000
     duration = 3600
 
     condition = {
-        has_technology = "tech_methane_sculpting"
+        has_technology = "tech_phosphorium_sculpting"
     }
 
     ai_weight = {
@@ -62,14 +62,14 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_methane_uninhabitable"
+    from = "pc_phosphorium_uninhabitable"
     to = "pc_arid"
 
     energy = 8000
     duration = 3600
 
     condition = {
-        has_technology = "tech_methane_sculpting"
+        has_technology = "tech_phosphorium_sculpting"
     }
 
     ai_weight = {
@@ -93,14 +93,14 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_methane_uninhabitable"
+    from = "pc_phosphorium_uninhabitable"
     to = "pc_savannah"
 
     energy = 8000
     duration = 3600
 
     condition = {
-        has_technology = "tech_methane_sculpting"
+        has_technology = "tech_phosphorium_sculpting"
     }
 
     ai_weight = {
@@ -124,14 +124,14 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_methane_uninhabitable"
+    from = "pc_phosphorium_uninhabitable"
     to = "pc_continental"
 
     energy = 8000
     duration = 3600
 
     condition = {
-        has_technology = "tech_methane_sculpting"
+        has_technology = "tech_phosphorium_sculpting"
     }
 
     ai_weight = {
@@ -155,14 +155,14 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_methane_uninhabitable"
+    from = "pc_phosphorium_uninhabitable"
     to = "pc_tropical"
 
     energy = 8000
     duration = 3600
 
     condition = {
-        has_technology = "tech_methane_sculpting"
+        has_technology = "tech_phosphorium_sculpting"
     }
 
     ai_weight = {
@@ -186,14 +186,14 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_methane_uninhabitable"
+    from = "pc_phosphorium_uninhabitable"
     to = "pc_ocean"
 
     energy = 10000
     duration = 4000
 
     condition = {
-        has_technology = "tech_methane_sculpting"
+        has_technology = "tech_phosphorium_sculpting"
     }
 
     ai_weight = {
@@ -217,14 +217,14 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_methane_uninhabitable"
+    from = "pc_phosphorium_uninhabitable"
     to = "pc_tundra"
 
     energy = 8000
     duration = 3600
 
     condition = {
-        has_technology = "tech_methane_sculpting"
+        has_technology = "tech_phosphorium_sculpting"
     }
 
     ai_weight = {
@@ -248,14 +248,14 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_methane_uninhabitable"
+    from = "pc_phosphorium_uninhabitable"
     to = "pc_alpine"
 
     energy = 8000
     duration = 3600
 
     condition = {
-        has_technology = "tech_methane_sculpting"
+        has_technology = "tech_phosphorium_sculpting"
     }
 
     ai_weight = {
@@ -279,14 +279,14 @@ terraform_link = {
 }
 
 terraform_link = {
-    from = "pc_methane_uninhabitable"
+    from = "pc_phosphorium_uninhabitable"
     to = "pc_arctic"
 
     energy = 8000
     duration = 3600
 
     condition = {
-        has_technology = "tech_methane_sculpting"
+        has_technology = "tech_phosphorium_sculpting"
     }
 
     ai_weight = {

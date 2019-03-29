@@ -80,14 +80,14 @@ entity = {
 }
 
 entity = {
-    name = "methane_uninhabitable_planet_01_entity"
+    name = "methanum_uninhabitable_planet_01_entity"
     pdxmesh = "planet_non_clouded_mesh"
 
     meshsettings = {
         name = "planet_geosphereShape"
-        texture_diffuse = "methane_01_diffuse.dds"
-        texture_normal = "methane_01_normal.dds"
-        texture_specular = "methane_01_specular.dds"
+        texture_diffuse = "methanum_01_diffuse.dds"
+        texture_normal = "methanum_01_normal.dds"
+        texture_specular = "methanum_01_specular.dds"
     }
 
     ##pole texture override
@@ -106,13 +106,13 @@ entity = {
 }
 
 entity = {
-    name = "methane_gas_giant_planet_01_entity"
+    name = "methanum_gas_giant_planet_01_entity"
     pdxmesh = "planet_no_pole_no_clouds_mesh"
 
     meshsettings = {
         name = "planet_geosphereShape"
-        texture_diffuse = "methane_gas_giant_01_diffuse.dds"
-        texture_normal = "methane_gas_giant_01_normal.dds"
+        texture_diffuse = "methanum_gas_giant_01_diffuse.dds"
+        texture_normal = "methanum_gas_giant_01_normal.dds"
         texture_specular = "nospec.dds"
     }
 
@@ -125,14 +125,14 @@ entity = {
 }
 
 entity = {
-    name = "carbon_uninhabitable_planet_01_entity"
+    name = "carbonium_uninhabitable_planet_01_entity"
     pdxmesh = "planet_non_clouded_mesh"
 
     meshsettings = {
         name = "planet_geosphereShape"
-        texture_diffuse = "carbon_01_diffuse.dds"
-        texture_normal = "carbon_01_normal.dds"
-        texture_specular = "carbon_01_specular.dds"
+        texture_diffuse = "carbonium_01_diffuse.dds"
+        texture_normal = "carbonium_01_normal.dds"
+        texture_specular = "carbonium_01_specular.dds"
     }
 
     ##pole texture override
@@ -151,13 +151,13 @@ entity = {
 }
 
 entity = {
-    name = "carbon_gas_giant_planet_01_entity"
+    name = "carbonium_gas_giant_planet_01_entity"
     pdxmesh = "planet_no_pole_no_clouds_mesh"
 
     meshsettings = {
         name = "planet_geosphereShape"
-        texture_diffuse = "carbon_gas_giant_01_diffuse.dds"
-        texture_normal = "carbon_gas_giant_01_normal.dds"
+        texture_diffuse = "carbonium_gas_giant_01_diffuse.dds"
+        texture_normal = "carbonium_gas_giant_01_normal.dds"
         texture_specular = "nospec.dds"
     }
 
@@ -170,14 +170,14 @@ entity = {
 }
 
 entity = {
-    name = "nitrogen_uninhabitable_planet_01_entity"
+    name = "nitrogenium_uninhabitable_planet_01_entity"
     pdxmesh = "planet_non_clouded_mesh"
 
     meshsettings = {
         name = "planet_geosphereShape"
-        texture_diffuse = "nitrogen_01_diffuse.dds"
-        texture_normal = "nitrogen_01_normal.dds"
-        texture_specular = "nitrogen_01_specular.dds"
+        texture_diffuse = "nitrogenium_01_diffuse.dds"
+        texture_normal = "nitrogenium_01_normal.dds"
+        texture_specular = "nitrogenium_01_specular.dds"
     }
 
     ##pole texture override
@@ -196,13 +196,13 @@ entity = {
 }
 
 entity = {
-    name = "nitrogen_gas_giant_planet_01_entity"
+    name = "nitrogenium_gas_giant_planet_01_entity"
     pdxmesh = "planet_no_pole_no_clouds_mesh"
 
     meshsettings = {
         name = "planet_geosphereShape"
-        texture_diffuse = "nitrogen_gas_giant_01_diffuse.dds"
-        texture_normal = "nitrogen_gas_giant_01_normal.dds"
+        texture_diffuse = "nitrogenium_gas_giant_01_diffuse.dds"
+        texture_normal = "nitrogenium_gas_giant_01_normal.dds"
         texture_specular = "nospec.dds"
     }
 
@@ -215,14 +215,14 @@ entity = {
 }
 
 entity = {
-    name = "sulfuric_uninhabitable_planet_01_entity"
+    name = "sulphureum_uninhabitable_planet_01_entity"
     pdxmesh = "planet_non_clouded_mesh"
 
     meshsettings = {
         name = "planet_geosphereShape"
-        texture_diffuse = "sulfuric_01_diffuse.dds"
-        texture_normal = "sulfuric_01_normal.dds"
-        texture_specular = "sulfuric_01_specular.dds"
+        texture_diffuse = "sulphureum_01_diffuse.dds"
+        texture_normal = "sulphureum_01_normal.dds"
+        texture_specular = "sulphureum_01_specular.dds"
     }
 
     ##pole texture override
@@ -241,13 +241,13 @@ entity = {
 }
 
 entity = {
-    name = "sulfuric_gas_giant_planet_01_entity"
+    name = "sulphureum_gas_giant_planet_01_entity"
     pdxmesh = "planet_no_pole_no_clouds_mesh"
 
     meshsettings = {
         name = "planet_geosphereShape"
-        texture_diffuse = "sulfuric_gas_giant_01_diffuse.dds"
-        texture_normal = "sulfuric_gas_giant_01_normal.dds"
+        texture_diffuse = "sulphureum_gas_giant_01_diffuse.dds"
+        texture_normal = "sulphureum_gas_giant_01_normal.dds"
         texture_specular = "nospec.dds"
     }
 
@@ -260,14 +260,14 @@ entity = {
 }
 
 entity = {
-    name = "argon_uninhabitable_planet_01_entity"
+    name = "argonium_uninhabitable_planet_01_entity"
     pdxmesh = "planet_non_clouded_mesh"
 
     meshsettings = {
         name = "planet_geosphereShape"
-        texture_diffuse = "argon_01_diffuse.dds"
-        texture_normal = "argon_01_normal.dds"
-        texture_specular = "argon_01_specular.dds"
+        texture_diffuse = "argonium_01_diffuse.dds"
+        texture_normal = "argonium_01_normal.dds"
+        texture_specular = "argonium_01_specular.dds"
     }
 
     ##pole texture override
@@ -286,13 +286,58 @@ entity = {
 }
 
 entity = {
-    name = "argon_gas_giant_planet_01_entity"
+    name = "argonium_gas_giant_planet_01_entity"
     pdxmesh = "planet_no_pole_no_clouds_mesh"
 
     meshsettings = {
         name = "planet_geosphereShape"
-        texture_diffuse = "argon_gas_giant_01_diffuse.dds"
-        texture_normal = "argon_gas_giant_01_normal.dds"
+        texture_diffuse = "argonium_gas_giant_01_diffuse.dds"
+        texture_normal = "argonium_gas_giant_01_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "phosphorium_uninhabitable_planet_01_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "phosphorium_01_diffuse.dds"
+        texture_normal = "phosphorium_01_normal.dds"
+        texture_specular = "phosphorium_01_specular.dds"
+    }
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_a" } }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_b" } }
+    }
+}
+
+entity = {
+    name = "phosphorium_gas_giant_planet_01_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "phosphorium_gas_giant_01_diffuse.dds"
+        texture_normal = "phosphorium_gas_giant_01_normal.dds"
         texture_specular = "nospec.dds"
     }
 

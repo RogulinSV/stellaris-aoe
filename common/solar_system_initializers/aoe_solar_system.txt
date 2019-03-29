@@ -924,6 +924,11 @@ anthem_of_eternity = {
         initializer = "anthem_of_eternity_neighbor_test"
         trigger = { always = yes }
     }
+    neighbor_system = {
+        distance = { min = 10 max = 40 }
+        initializer = "anthem_of_eternity_neighbor_test2"
+        trigger = { always = yes }
+    }
 }
 
 anthem_of_eternity_neighbor_a = {
@@ -2541,9 +2546,9 @@ anthem_of_eternity_neighbor_test = {
     change_orbit = 20
 
     planet = {
-        name = "Methane Gas Giant"
+        name = "methanum Gas Giant"
         count = 1
-        class = pc_methane_gas_giant
+        class = pc_methanum_gas_giant
         orbit_distance = { min = 1 max = 10 }
         orbit_angle = { min = 10 max = 350 }
         size = 35
@@ -2552,9 +2557,9 @@ anthem_of_eternity_neighbor_test = {
         change_orbit = 15
 
         moon = {
-            name = "Methane Uninhabitable"
+            name = "methanum Uninhabitable"
             count = 1
-            class = pc_methane_uninhabitable
+            class = pc_methanum_uninhabitable
             orbit_distance = { min = 1 max = 10 }
             orbit_angle = { min = 10 max = 350 }
             size = 25
@@ -2577,9 +2582,9 @@ anthem_of_eternity_neighbor_test = {
     change_orbit = 20
 
     planet = {
-        name = "Carbon Gas Giant"
+        name = "carbonium Gas Giant"
         count = 1
-        class = pc_carbon_gas_giant
+        class = pc_carbonium_gas_giant
         orbit_distance = { min = 1 max = 10 }
         orbit_angle = { min = 10 max = 350 }
         size = 35
@@ -2588,9 +2593,9 @@ anthem_of_eternity_neighbor_test = {
         change_orbit = 15
 
         moon = {
-            name = "Carbon Uninhabitable"
+            name = "carbonium Uninhabitable"
             count = 1
-            class = pc_carbon_uninhabitable
+            class = pc_carbonium_uninhabitable
             orbit_distance = { min = 1 max = 10 }
             orbit_angle = { min = 10 max = 350 }
             size = 25
@@ -2613,9 +2618,9 @@ anthem_of_eternity_neighbor_test = {
     change_orbit = 20
 
     planet = {
-        name = "Nitrogen Gas Giant"
+        name = "nitrogenium Gas Giant"
         count = 1
-        class = pc_nitrogen_gas_giant
+        class = pc_nitrogenium_gas_giant
         orbit_distance = { min = 1 max = 10 }
         orbit_angle = { min = 10 max = 350 }
         size = 35
@@ -2624,9 +2629,9 @@ anthem_of_eternity_neighbor_test = {
         change_orbit = 15
 
         moon = {
-            name = "Nitrogen Uninhabitable"
+            name = "nitrogenium Uninhabitable"
             count = 1
-            class = pc_nitrogen_uninhabitable
+            class = pc_nitrogenium_uninhabitable
             orbit_distance = { min = 1 max = 10 }
             orbit_angle = { min = 10 max = 350 }
             size = 25
@@ -2649,9 +2654,9 @@ anthem_of_eternity_neighbor_test = {
     change_orbit = 20
 
     planet = {
-        name = "Sulfuric Gas Giant"
+        name = "sulphureum Gas Giant"
         count = 1
-        class = pc_sulfuric_gas_giant
+        class = pc_sulphureum_gas_giant
         orbit_distance = { min = 1 max = 10 }
         orbit_angle = { min = 10 max = 350 }
         size = 35
@@ -2660,9 +2665,9 @@ anthem_of_eternity_neighbor_test = {
         change_orbit = 15
 
         moon = {
-            name = "Sulfuric Uninhabitable"
+            name = "sulphureum Uninhabitable"
             count = 1
-            class = pc_sulfuric_uninhabitable
+            class = pc_sulphureum_uninhabitable
             orbit_distance = { min = 1 max = 10 }
             orbit_angle = { min = 10 max = 350 }
             size = 25
@@ -2685,9 +2690,9 @@ anthem_of_eternity_neighbor_test = {
     change_orbit = 20
 
     planet = {
-        name = "Argon Gas Giant"
+        name = "argonium Gas Giant"
         count = 1
-        class = pc_argon_gas_giant
+        class = pc_argonium_gas_giant
         orbit_distance = { min = 1 max = 10 }
         orbit_angle = { min = 10 max = 350 }
         size = 35
@@ -2696,9 +2701,144 @@ anthem_of_eternity_neighbor_test = {
         change_orbit = 15
 
         moon = {
-            name = "Argon Uninhabitable"
+            name = "argonium Uninhabitable"
             count = 1
-            class = pc_argon_uninhabitable
+            class = pc_argonium_uninhabitable
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = yes
+
+            change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+}
+
+anthem_of_eternity_neighbor_test2 = {
+    name = "Test2 System"
+    class = "rl_standard_stars"
+
+    # Effects
+    prevent_anomalies = yes
+
+    # Stars
+    planet = {
+        name = "Test2 Star"
+        count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = { min = 25 max = 30 }
+        has_ring = no
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_star = yes
+        }
+    }
+
+    change_orbit = 45
+
+    # Planets
+    planet = {
+        name = "Phosphorium Gas Giant"
+        count = 1
+        class = pc_phosphorium_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Phosphorium Uninhabitable"
+            count = 1
+            class = pc_phosphorium_uninhabitable
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = yes
+
+            change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+
+    change_orbit = 25
+
+    # Planets
+    planet = {
+        name = "Crystalline Gas Giant"
+        count = 1
+        class = pc_crystalline_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Crystalline Uninhabitable"
+            count = 1
+            class = pc_crystalline_uninhabitable
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = yes
+
+            change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+
+    change_orbit = 25
+
+    # Planets
+    planet = {
+        name = "Crystalline Gas Giant"
+        count = 1
+        class = pc_crystalline_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Crystalline Uninhabitable"
+            count = 1
+            class = pc_crystalline_uninhabitable
             orbit_distance = { min = 1 max = 10 }
             orbit_angle = { min = 10 max = 350 }
             size = 25
