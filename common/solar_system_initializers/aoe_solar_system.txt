@@ -919,6 +919,11 @@ anthem_of_eternity = {
         initializer = "anthem_of_eternity_neighbor_d"
         trigger = { always = no }
     }
+    neighbor_system = {
+        distance = { min = 10 max = 40 }
+        initializer = "anthem_of_eternity_neighbor_test"
+        trigger = { always = yes }
+    }
 }
 
 anthem_of_eternity_neighbor_a = {
@@ -2469,6 +2474,247 @@ anthem_of_eternity_neighbor_d = {
             type = "gateway_ruined"
             random_pos = yes
             orbit_angle = 360
+        }
+    }
+}
+
+anthem_of_eternity_neighbor_test = {
+    name = "Test System"
+    class = "rl_standard_stars"
+
+    # Effects
+    prevent_anomalies = yes
+
+    # Stars
+    planet = {
+        name = "Test Star"
+        count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = { min = 25 max = 30 }
+        has_ring = no
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_star = yes
+        }
+    }
+
+    change_orbit = 45
+
+    # Planets
+    planet = {
+        name = "Metalline Gas Giant"
+        count = 1
+        class = pc_metalline_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Metalline Uninhabitable"
+            count = 1
+            class = pc_metalline_uninhabitable
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = yes
+
+            change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+
+    change_orbit = 20
+
+    planet = {
+        name = "Methane Gas Giant"
+        count = 1
+        class = pc_methane_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Methane Uninhabitable"
+            count = 1
+            class = pc_methane_uninhabitable
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = yes
+
+            change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+
+    change_orbit = 20
+
+    planet = {
+        name = "Carbon Gas Giant"
+        count = 1
+        class = pc_carbon_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Carbon Uninhabitable"
+            count = 1
+            class = pc_carbon_uninhabitable
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = yes
+
+            change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+
+    change_orbit = 20
+
+    planet = {
+        name = "Nitrogen Gas Giant"
+        count = 1
+        class = pc_nitrogen_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Nitrogen Uninhabitable"
+            count = 1
+            class = pc_nitrogen_uninhabitable
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = yes
+
+            change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+
+    change_orbit = 20
+
+    planet = {
+        name = "Sulfuric Gas Giant"
+        count = 1
+        class = pc_sulfuric_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Sulfuric Uninhabitable"
+            count = 1
+            class = pc_sulfuric_uninhabitable
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = yes
+
+            change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+
+    change_orbit = 20
+
+    planet = {
+        name = "Argon Gas Giant"
+        count = 1
+        class = pc_argon_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Argon Uninhabitable"
+            count = 1
+            class = pc_argon_uninhabitable
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = yes
+
+            change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
         }
     }
 }

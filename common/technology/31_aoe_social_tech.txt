@@ -1,0 +1,838 @@
+tech_gas_giant_compacting = {
+    cost = @technology_middle_cost
+    area = society
+    tier = 3
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_ecological_adaptation"
+    }
+    weight = @tier3weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_gas_giant_compacting_title"
+            desc = "tech_gas_giant_compacting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.05
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.30
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}
+
+tech_crystalline_sculpting = {
+    cost = @technology_middle_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_crystalline_sculpting_title"
+            desc = "tech_crystalline_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_crystalline_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_crystalline_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_crystalline_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_crystalline_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_metalline_sculpting = {
+    cost = @technology_middle_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_metalline_sculpting_title"
+            desc = "tech_metalline_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_metalline_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_metalline_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_metalline_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_metalline_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_methane_sculpting = {
+    cost = @technology_middle_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_methane_sculpting_title"
+            desc = "tech_methane_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_methane_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_methane_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_methane_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_methane_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_carbon_sculpting = {
+    cost = @technology_middle_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_carbon_sculpting_title"
+            desc = "tech_carbon_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_carbon_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_carbon_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_carbon_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_carbon_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_nitrogen_sculpting = {
+    cost = @technology_middle_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_nitrogen_sculpting_title"
+            desc = "tech_nitrogen_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_nitrogen_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_nitrogen_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_nitrogen_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_nitrogen_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_sulfuric_sculpting = {
+    cost = @technology_middle_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_sulfuric_sculpting_title"
+            desc = "tech_sulfuric_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_sulfuric_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_sulfuric_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_sulfuric_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_sulfuric_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_argon_sculpting = {
+    cost = @technology_middle_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_argon_sculpting_title"
+            desc = "tech_argon_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_argon_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_argon_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "get_planet_argon_surveyed_count"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0.5
+            check_variable = {
+                which = "get_planet_argon_surveyed_count"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}

@@ -1,0 +1,502 @@
+@uninhabitable_planet_standard_scale = 11
+@uninhabitable_planet_min_size = 10
+@uninhabitable_planet_max_size = 25
+@uninhabitable_planet_moon_min_size = 6
+@uninhabitable_planet_moon_max_size = 10
+@uninhabitable_planet_spawn_odds = 5
+@uninhabitable_planet_production_spawn_chance = 0.7
+@uninhabitable_planet_survey_factor = 2.0
+@uninhabitable_planet_chance_of_ring = 0.5
+
+@gas_giant_planet_standard_scale = 14
+@gas_giant_planet_min_size = 25
+@gas_giant_planet_max_size = 35
+@gas_giant_planet_moon_min_size = 10
+@gas_giant_planet_moon_max_size = 25
+@gas_giant_planet_spawn_odds = 5
+@gas_giant_planet_production_spawn_chance = 0.7
+@gas_giant_planet_survey_factor = 1.5
+@gas_giant_planet_chance_of_ring = 0.75
+
+### Crystalline planets
+
+pc_crystalline_uninhabitable = {
+    entity = "crystalline_uninhabitable_planet"
+    entity_scale = @uninhabitable_planet_standard_scale
+    icon_frame = 11
+
+    min_distance_from_sun = 60
+    max_distance_from_sun = 110
+
+    spawn_odds = @uninhabitable_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @uninhabitable_planet_chance_of_ring
+    production_spawn_chance = @uninhabitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @uninhabitable_planet_min_size
+        max = @uninhabitable_planet_max_size
+    }
+    moon_size = {
+        min = @uninhabitable_planet_moon_min_size
+        max = @uninhabitable_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = yes
+    orbit_lines = yes
+    survey_time_factor = @uninhabitable_planet_survey_factor
+}
+
+pc_crystalline_gas_giant = {
+    entity = "crystalline_gas_giant_planet"
+    entity_scale = @gas_giant_planet_standard_scale
+    icon_frame = 14
+
+    atmosphere_color        = hsv { 0.4 0.9 0.4 }
+    atmosphere_intensity    = 1.1
+    atmosphere_width        = 0.5
+
+    min_distance_from_sun = 40
+    max_distance_from_sun = 1000
+
+    spawn_odds = @gas_giant_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @gas_giant_planet_chance_of_ring
+    production_spawn_chance = @gas_giant_planet_production_spawn_chance
+
+    planet_size = {
+        min = @gas_giant_planet_min_size
+        max = @gas_giant_planet_max_size
+    }
+    moon_size = {
+        min = @gas_giant_planet_moon_min_size
+        max = @gas_giant_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = no
+    orbit_lines = yes
+    space_monster_target = yes
+    survey_time_factor = @gas_giant_planet_survey_factor
+}
+
+### Metalline planets
+
+pc_metalline_uninhabitable = {
+    entity = "metalline_uninhabitable_planet"
+    entity_scale = @uninhabitable_planet_standard_scale
+    icon_frame = 11
+
+    min_distance_from_sun = 50
+    max_distance_from_sun = 150
+
+    spawn_odds = @uninhabitable_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @uninhabitable_planet_chance_of_ring
+    production_spawn_chance = @uninhabitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @uninhabitable_planet_min_size
+        max = @uninhabitable_planet_max_size
+    }
+    moon_size = {
+        min = @uninhabitable_planet_moon_min_size
+        max = @uninhabitable_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = yes
+    orbit_lines = yes
+    survey_time_factor = @uninhabitable_planet_survey_factor
+}
+
+pc_metalline_gas_giant = {
+    entity = "metalline_gas_giant_planet"
+    entity_scale = @gas_giant_planet_standard_scale
+    icon_frame = 14
+
+    atmosphere_color        = hsv { 1.5 0.13 0.35 }
+    atmosphere_intensity    = 0.75
+    atmosphere_width        = 0.95
+
+    min_distance_from_sun = 40
+    max_distance_from_sun = 1000
+
+    spawn_odds = @gas_giant_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @gas_giant_planet_chance_of_ring
+    production_spawn_chance = @gas_giant_planet_production_spawn_chance
+
+    planet_size = {
+        min = @gas_giant_planet_min_size
+        max = @gas_giant_planet_max_size
+    }
+    moon_size = {
+        min = @gas_giant_planet_moon_min_size
+        max = @gas_giant_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = no
+    orbit_lines = yes
+    space_monster_target = yes
+    survey_time_factor = @gas_giant_planet_survey_factor
+}
+
+### Methane planets
+
+pc_methane_uninhabitable = {
+    entity = "methane_uninhabitable_planet"
+    entity_scale = @uninhabitable_planet_standard_scale
+    icon_frame = 11
+
+    min_distance_from_sun = 90
+    max_distance_from_sun = 1000
+
+    spawn_odds = @uninhabitable_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @uninhabitable_planet_chance_of_ring
+    production_spawn_chance = @uninhabitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @uninhabitable_planet_min_size
+        max = @uninhabitable_planet_max_size
+    }
+    moon_size = {
+        min = @uninhabitable_planet_moon_min_size
+        max = @uninhabitable_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = yes
+    orbit_lines = yes
+    survey_time_factor = @uninhabitable_planet_survey_factor
+}
+
+pc_methane_gas_giant = {
+    entity = "methane_gas_giant_planet"
+    entity_scale = @gas_giant_planet_standard_scale
+    icon_frame = 14
+
+    atmosphere_color        = hsv { 0.1 0.15 1.1 }
+    atmosphere_intensity    = 1.1
+    atmosphere_width        = 0.5
+
+    min_distance_from_sun = 90
+    max_distance_from_sun = 1000
+
+    spawn_odds = @gas_giant_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @gas_giant_planet_chance_of_ring
+    production_spawn_chance = @gas_giant_planet_production_spawn_chance
+
+    planet_size = {
+        min = @gas_giant_planet_min_size
+        max = @gas_giant_planet_max_size
+    }
+    moon_size = {
+        min = @gas_giant_planet_moon_min_size
+        max = @gas_giant_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = no
+    orbit_lines = yes
+    space_monster_target = yes
+    survey_time_factor = @gas_giant_planet_survey_factor
+}
+
+### Carbon planets
+
+pc_carbon_uninhabitable = {
+    entity = "carbon_uninhabitable_planet"
+    entity_scale = @uninhabitable_planet_standard_scale
+    icon_frame = 11
+
+    min_distance_from_sun = 90
+    max_distance_from_sun = 1000
+
+    spawn_odds = @uninhabitable_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @uninhabitable_planet_chance_of_ring
+    production_spawn_chance = @uninhabitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @uninhabitable_planet_min_size
+        max = @uninhabitable_planet_max_size
+    }
+    moon_size = {
+        min = @uninhabitable_planet_moon_min_size
+        max = @uninhabitable_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = yes
+    orbit_lines = yes
+    survey_time_factor = @uninhabitable_planet_survey_factor
+}
+
+pc_carbon_gas_giant = {
+    entity = "carbon_gas_giant_planet"
+    entity_scale = @gas_giant_planet_standard_scale
+    icon_frame = 14
+
+    atmosphere_color        = hsv { 0.1 0.15 1.1 }
+    atmosphere_intensity    = 1.1
+    atmosphere_width        = 0.5
+
+    min_distance_from_sun = 70
+    max_distance_from_sun = 1000
+
+    spawn_odds = @gas_giant_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @gas_giant_planet_chance_of_ring
+    production_spawn_chance = @gas_giant_planet_production_spawn_chance
+
+    planet_size = {
+        min = @gas_giant_planet_min_size
+        max = @gas_giant_planet_max_size
+    }
+    moon_size = {
+        min = @gas_giant_planet_moon_min_size
+        max = @gas_giant_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = no
+    orbit_lines = yes
+    space_monster_target = yes
+    survey_time_factor = @gas_giant_planet_survey_factor
+}
+
+### Nitrogen planets
+
+pc_nitrogen_uninhabitable = {
+    entity = "nitrogen_uninhabitable_planet"
+    entity_scale = @uninhabitable_planet_standard_scale
+    icon_frame = 11
+
+    min_distance_from_sun = 50
+    max_distance_from_sun = 1000
+
+    spawn_odds = @uninhabitable_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @uninhabitable_planet_chance_of_ring
+    production_spawn_chance = @uninhabitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @uninhabitable_planet_min_size
+        max = @uninhabitable_planet_max_size
+    }
+    moon_size = {
+        min = @uninhabitable_planet_moon_min_size
+        max = @uninhabitable_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = yes
+    orbit_lines = yes
+    survey_time_factor = @uninhabitable_planet_survey_factor
+}
+
+pc_nitrogen_gas_giant = {
+    entity = "nitrogen_gas_giant_planet"
+    entity_scale = @gas_giant_planet_standard_scale
+    icon_frame = 14
+
+    atmosphere_color        = hsv { 0.1 0.15 1.1 }
+    atmosphere_intensity    = 1.1
+    atmosphere_width        = 0.5
+
+    min_distance_from_sun = 90
+    max_distance_from_sun = 1000
+
+    spawn_odds = @gas_giant_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @gas_giant_planet_chance_of_ring
+    production_spawn_chance = @gas_giant_planet_production_spawn_chance
+
+    planet_size = {
+        min = @gas_giant_planet_min_size
+        max = @gas_giant_planet_max_size
+    }
+    moon_size = {
+        min = @gas_giant_planet_moon_min_size
+        max = @gas_giant_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = no
+    orbit_lines = yes
+    space_monster_target = yes
+    survey_time_factor = @gas_giant_planet_survey_factor
+}
+
+### Sulfuric planets
+
+pc_sulfuric_uninhabitable = {
+    entity = "sulfuric_uninhabitable_planet"
+    entity_scale = @uninhabitable_planet_standard_scale
+    icon_frame = 11
+
+    min_distance_from_sun = 60
+    max_distance_from_sun = 1000
+
+    spawn_odds = @uninhabitable_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @uninhabitable_planet_chance_of_ring
+    production_spawn_chance = @uninhabitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @uninhabitable_planet_min_size
+        max = @uninhabitable_planet_max_size
+    }
+    moon_size = {
+        min = @uninhabitable_planet_moon_min_size
+        max = @uninhabitable_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = yes
+    orbit_lines = yes
+    survey_time_factor = @uninhabitable_planet_survey_factor
+}
+
+pc_sulfuric_gas_giant = {
+    entity = "sulfuric_gas_giant_planet"
+    entity_scale = @gas_giant_planet_standard_scale
+    icon_frame = 14
+
+    atmosphere_color        = hsv { 0.1 0.15 1.1 }
+    atmosphere_intensity    = 1.1
+    atmosphere_width        = 0.5
+
+    min_distance_from_sun = 100
+    max_distance_from_sun = 1000
+
+    spawn_odds = @gas_giant_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @gas_giant_planet_chance_of_ring
+    production_spawn_chance = @gas_giant_planet_production_spawn_chance
+
+    planet_size = {
+        min = @gas_giant_planet_min_size
+        max = @gas_giant_planet_max_size
+    }
+    moon_size = {
+        min = @gas_giant_planet_moon_min_size
+        max = @gas_giant_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = no
+    orbit_lines = yes
+    space_monster_target = yes
+    survey_time_factor = @gas_giant_planet_survey_factor
+}
+
+### Argon planets
+
+pc_argon_uninhabitable = {
+    entity = "argon_uninhabitable_planet"
+    entity_scale = @uninhabitable_planet_standard_scale
+    icon_frame = 11
+
+    min_distance_from_sun = 15
+    max_distance_from_sun = 75
+
+    spawn_odds = @uninhabitable_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @uninhabitable_planet_chance_of_ring
+    production_spawn_chance = @uninhabitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @uninhabitable_planet_min_size
+        max = @uninhabitable_planet_max_size
+    }
+    moon_size = {
+        min = @uninhabitable_planet_moon_min_size
+        max = @uninhabitable_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = yes
+    orbit_lines = yes
+    survey_time_factor = @uninhabitable_planet_survey_factor
+}
+
+pc_argon_gas_giant = {
+    entity = "argon_gas_giant_planet"
+    entity_scale = @gas_giant_planet_standard_scale
+    icon_frame = 14
+
+    atmosphere_color        = hsv { 0.1 0.15 1.1 }
+    atmosphere_intensity    = 1.1
+    atmosphere_width        = 0.5
+
+    min_distance_from_sun = 40
+    max_distance_from_sun = 130
+
+    spawn_odds = @gas_giant_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @gas_giant_planet_chance_of_ring
+    production_spawn_chance = @gas_giant_planet_production_spawn_chance
+
+    planet_size = {
+        min = @gas_giant_planet_min_size
+        max = @gas_giant_planet_max_size
+    }
+    moon_size = {
+        min = @gas_giant_planet_moon_min_size
+        max = @gas_giant_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = no
+    orbit_lines = yes
+    space_monster_target = yes
+    survey_time_factor = @gas_giant_planet_survey_factor
+}

@@ -1,0 +1,310 @@
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_barren"
+
+    energy = 3000
+    duration = 1800
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_barren_cold"
+
+    energy = 3000
+    duration = 1800
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_desert"
+
+    energy = 8000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_desert"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_arid"
+
+    energy = 8000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_arid"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_savannah"
+
+    energy = 8000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_savannah"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_continental"
+
+    energy = 8000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_continental"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_tropical"
+
+    energy = 8000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_tropical"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_ocean"
+
+    energy = 10000
+    duration = 4000
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_ocean"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_tundra"
+
+    energy = 8000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_tundra"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_alpine"
+
+    energy = 8000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_alpine"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_arctic"
+
+    energy = 8000
+    duration = 3600
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_arctic"
+            }
+        }
+    }
+}

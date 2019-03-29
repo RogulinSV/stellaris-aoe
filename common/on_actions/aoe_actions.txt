@@ -32,3 +32,10 @@ on_ship_built = {
         aoe_ship_actions.9
     }
 }
+
+on_survey = {
+    events = {
+        # Planets surveyed
+        aoe_planet_actions.0
+    }
+}
