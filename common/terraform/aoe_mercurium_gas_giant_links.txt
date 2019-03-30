@@ -1,0 +1,18 @@
+terraform_link = {
+    from = "pc_mercurium_gas_giant"
+    to = "pc_mercurium_uninhabitable"
+
+    energy = 15000
+    duration = 4000
+
+    condition = {
+        AND = {
+            has_technology = "tech_gas_giant_compacting"
+            has_technology = "tech_mercurium_sculpting"
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}

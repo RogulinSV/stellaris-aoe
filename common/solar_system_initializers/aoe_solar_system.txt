@@ -2825,9 +2825,9 @@ anthem_of_eternity_neighbor_test2 = {
 
     # Planets
     planet = {
-        name = "Crystalline Gas Giant"
+        name = "Ammonium Gas Giant"
         count = 1
-        class = pc_crystalline_gas_giant
+        class = pc_ammonium_gas_giant
         orbit_distance = { min = 1 max = 10 }
         orbit_angle = { min = 10 max = 350 }
         size = 35
@@ -2836,15 +2836,206 @@ anthem_of_eternity_neighbor_test2 = {
         change_orbit = 15
 
         moon = {
-            name = "Crystalline Uninhabitable"
+            name = "Ammonium Uninhabitable"
             count = 1
-            class = pc_crystalline_uninhabitable
+            class = pc_ammonium_uninhabitable
             orbit_distance = { min = 1 max = 10 }
             orbit_angle = { min = 10 max = 350 }
             size = 25
             has_ring = yes
 
             change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+
+    change_orbit = 25
+
+    # Planets
+    planet = {
+        name = "Mercurium Gas Giant"
+        count = 1
+        class = pc_mercurium_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Mercurium Uninhabitable"
+            count = 1
+            class = pc_mercurium_uninhabitable
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = yes
+
+            change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+
+    change_orbit = 25
+
+    # Planets
+    planet = {
+        name = "Barium Gas Giant"
+        count = 1
+        class = pc_barium_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Barium Uninhabitable"
+            count = 1
+            class = pc_barium_uninhabitable
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = yes
+
+            change_orbit = 15
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+
+        init_effect = {
+            prevent_anomaly = yes
+            effects_add_rich_resources_gas_giant = yes
+        }
+    }
+
+    change_orbit = 40
+
+    # Planets
+    planet = {
+        name = "Celestial Gas Giant"
+        count = 1
+        class = pc_celestial_gas_giant
+        orbit_distance = { min = 1 max = 10 }
+        orbit_angle = { min = 10 max = 350 }
+        size = 35
+        has_ring = yes
+
+        change_orbit = 15
+
+        moon = {
+            name = "Celestial molten"
+            count = 1
+            class = pc_celestial_molten
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = no
+
+            change_orbit = 12
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+        moon = {
+            name = "Celestial hot"
+            count = 1
+            class = pc_celestial_hot
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = no
+
+            change_orbit = 12
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+        moon = {
+            name = "Celestial barren"
+            count = 1
+            class = pc_celestial_barren
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = no
+
+            change_orbit = 12
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+        moon = {
+            name = "Celestial wet"
+            count = 1
+            class = pc_celestial_wet
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = no
+
+            change_orbit = 12
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+        moon = {
+            name = "Celestial cold"
+            count = 1
+            class = pc_celestial_cold
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = no
+
+            change_orbit = 12
+
+            init_effect = {
+                prevent_anomaly = yes
+                effects_add_rich_resources_barren_planet = yes
+            }
+        }
+        moon = {
+            name = "Celestial frozen"
+            count = 1
+            class = pc_celestial_frozen
+            orbit_distance = { min = 1 max = 10 }
+            orbit_angle = { min = 10 max = 350 }
+            size = 25
+            has_ring = no
+
+            change_orbit = 12
 
             init_effect = {
                 prevent_anomaly = yes

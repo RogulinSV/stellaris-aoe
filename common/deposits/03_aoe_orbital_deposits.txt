@@ -1,0 +1,189 @@
+### Mithril Deposits
+
+d_mithril_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            mithril = 1
+            energy = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_celestial_barren
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = 2.0
+
+        modifier = {
+            factor = 0.2
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+}
+
+d_mithril_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            mithril = 2
+            energy = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_celestial_barren
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = 1.5
+
+        modifier = {
+            factor = 0.2
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+}
+
+d_mithril_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            mithril = 3
+            energy = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_celestial_barren
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = 1.0
+
+        modifier = {
+            factor = 0.2
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+}
+
+d_mithril_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            mithril = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_celestial_barren
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = 0.5
+
+        modifier = {
+            factor = 0.2
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+}
+
+d_mithril_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            mithril = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_celestial_barren
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = 0.1
+
+        modifier = {
+            factor = 0.2
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+}

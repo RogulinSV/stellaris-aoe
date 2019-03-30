@@ -1,0 +1,216 @@
+### Satramene Deposits
+
+d_satramene_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            satramene = 1
+            energy = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = 2.0
+
+        modifier = {
+            factor = 0.2
+            is_planet_class = pc_gas_giant
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            OR = {
+                is_planet_class = pc_carbonium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
+                is_planet_class = pc_nitrogenium_gas_giant
+            }
+        }
+    }
+}
+
+d_satramene_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            satramene = 2
+            energy = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = 1.5
+
+        modifier = {
+            factor = 0.2
+            is_planet_class = pc_gas_giant
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            OR = {
+                is_planet_class = pc_carbonium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
+                is_planet_class = pc_nitrogenium_gas_giant
+            }
+        }
+    }
+}
+
+d_satramene_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            satramene = 3
+            energy = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = 1.0
+
+        modifier = {
+            factor = 0.2
+            is_planet_class = pc_gas_giant
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            OR = {
+                is_planet_class = pc_carbonium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
+                is_planet_class = pc_nitrogenium_gas_giant
+            }
+        }
+    }
+}
+
+d_satramene_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            satramene = 4
+            energy = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = 0.5
+
+        modifier = {
+            factor = 0.2
+            is_planet_class = pc_gas_giant
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            OR = {
+                is_planet_class = pc_carbonium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
+                is_planet_class = pc_nitrogenium_gas_giant
+            }
+        }
+    }
+}
+
+d_satramene_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            satramene = 5
+            energy = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = 0.1
+
+        modifier = {
+            factor = 0.2
+            is_planet_class = pc_gas_giant
+        }
+        modifier = {
+            factor = 2.0
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 3.0
+            OR = {
+                is_planet_class = pc_carbonium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
+                is_planet_class = pc_nitrogenium_gas_giant
+            }
+        }
+    }
+}
