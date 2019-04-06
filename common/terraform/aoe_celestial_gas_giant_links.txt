@@ -1,6 +1,6 @@
 terraform_link = {
     from = "pc_celestial_gas_giant"
-    to = "pc_celestial"
+    to = "pc_celestial_barren"
 
     energy = 15000
     duration = 4000
