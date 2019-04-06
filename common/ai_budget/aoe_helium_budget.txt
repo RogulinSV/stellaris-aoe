@@ -1,0 +1,119 @@
+### Expenditure
+
+helium_expenditure_buffer = {
+    resource = helium
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.01
+    }
+}
+
+helium_expenditure_trade = {
+    resource = helium
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+helium_expenditure_colonies = {
+    resource = helium
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+helium_expenditure_deposit_blockers = {
+    resource = helium
+    type = expenditure
+    category = deposit_blockers
+
+    potential = {
+        always = yes
+    }
+    
+    fraction = {
+        weight = 0.15
+    }
+
+    static_max = {
+        base = 1000
+    }
+}
+
+helium_expenditure_planets = {
+    resource = helium
+    type = expenditure
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+helium_upkeep_planets = {
+    resource = helium
+    type = upkeep
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+### Unkeep
+
+helium_upkeep_buffer = {
+    resource = helium
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.01
+    }
+}
+
+helium_upkeep_country = {
+    resource = helium
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}

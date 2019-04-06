@@ -98,3 +98,26 @@ terrigen_deficit = {
     deposit_blockers_cost_mult = 0.1
 }
 
+corenite_deficit = {
+    country_influence_produces_mult = -0.1
+}
+
+energon_deficit = {
+    starbase_shipyard_build_speed_mult = -0.1
+    starbase_shipyard_build_cost_mult = 0.1
+}
+
+engos_deficit = {
+    pop_housing_usage_mult = 0.1
+    pop_growth_speed = -0.1
+}
+
+helium_deficit = {
+    edict_length_mult = -0.1
+    edicts_cost_mult = 0.1
+}
+
+kryptonite_deficit = {
+    country_starbase_influence_cost_mult = 0.1
+    starbase_outpost_cost_mult = 0.1
+}

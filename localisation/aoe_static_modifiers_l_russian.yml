@@ -18,3 +18,8 @@
     tylium_deficit:0 "Дефицит жидкого тилиума"
     chalcolivan_deficit:0 "Дефицит халколивановой руды"
     terrigen_deficit:0 "Дефицит жидкого терригена"
+    corenite_deficit:0 "Дефицит красной ртути"
+    energon_deficit:0 "Дефицит плазмы энергона"
+    engos_deficit:0 "Дефицит газа энгоса"
+    helium_deficit:0 "Дефицит газа гелиума"
+    kryptonite_deficit:0 "Дефицит криптонитной руды"

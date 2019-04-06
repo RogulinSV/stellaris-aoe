@@ -19,6 +19,11 @@ tb_others_group = {
         tylium
         chalcolivan
         terrigen
+        corenite
+        energon
+        engos
+        helium
+        kryptonite
         volatile_motes
         exotic_gases
         rare_crystals

@@ -3,7 +3,7 @@ How to add new strategic resource
  1. Create file common/ai_budget/%RESOURCE%_budget.txt
  2. Create or update file common/deposits/orbital_deposits.txt
  3. Create or update file common/static_modifiers/static_modifiers_deficit.txt
- 4. Create or update file common/strategic_resources/strategic_resoources.txt
+ 4. Create or update file common/strategic_resources/strategic_resources.txt
  5. [optional] Create or update file common/technology/strategic_resources_tech.txt
  6. Update file interface/resource_groups/sectors_other_resource_groups.txt
  7. Update file interface/resource_groups/topbar_other_resource_groups.txt

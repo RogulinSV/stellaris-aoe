@@ -1,0 +1,197 @@
+### Expenditure
+
+corenite_expenditure_buffer = {
+    resource = corenite
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.01
+    }
+}
+
+corenite_expenditure_trade = {
+    resource = corenite
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+corenite_expenditure_ships = {
+    resource = corenite
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+corenite_expenditure_ships_upgrades = {
+    resource = corenite
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.05
+    }
+}
+
+corenite_expenditure_starbases = {
+    resource = corenite
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.1
+    }
+}
+
+corenite_expenditure_starbases_expand = {
+    resource = corenite
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.2
+    }
+}
+
+corenite_expenditure_stations_1 = {
+    resource = corenite
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = corenite value < 800 }
+    }
+
+    fraction = {
+        weight = 0.1
+    }
+}
+
+corenite_expenditure_stations_2 = {
+    resource = corenite
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = corenite value >= 800 }
+        resource_stockpile_compare = { resource = corenite value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.05
+    }
+}
+
+corenite_expenditure_stations_3 = {
+    resource = corenite
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = corenite value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+corenite_expenditure_stations_expand = {
+    resource = corenite
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = corenite value < 800 }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+### Unkeep
+
+corenite_upkeep_buffer = {
+    resource = corenite
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.01
+    }
+}
+
+corenite_upkeep_ships = {
+    resource = corenite
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+corenite_upkeep_starbases = {
+    resource = corenite
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.1
+    }
+}

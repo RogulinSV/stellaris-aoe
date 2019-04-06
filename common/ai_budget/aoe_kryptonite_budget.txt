@@ -1,0 +1,197 @@
+### Expenditure
+
+kryptonite_expenditure_buffer = {
+    resource = kryptonite
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.01
+    }
+}
+
+kryptonite_expenditure_trade = {
+    resource = kryptonite
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+kryptonite_expenditure_ships = {
+    resource = kryptonite
+    type = expenditure
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.1
+    }
+}
+
+kryptonite_expenditure_ships_upgrades = {
+    resource = kryptonite
+    type = expenditure
+    category = ship_upgrades
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.05
+    }
+}
+
+kryptonite_expenditure_starbases = {
+    resource = kryptonite
+    type = expenditure
+    category = starbases
+
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.1
+    }
+}
+
+kryptonite_expenditure_starbases_expand = {
+    resource = kryptonite
+    type = expenditure
+    category = starbases
+
+    potential = {
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+kryptonite_expenditure_stations_1 = {
+    resource = kryptonite
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = kryptonite value < 800 }
+    }
+
+    fraction = {
+        weight = 0.1
+    }
+}
+
+kryptonite_expenditure_stations_2 = {
+    resource = kryptonite
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = kryptonite value >= 800 }
+        resource_stockpile_compare = { resource = kryptonite value < 1200 }
+    }
+
+    fraction = {
+        weight = 0.05
+    }
+}
+
+kryptonite_expenditure_stations_3 = {
+    resource = kryptonite
+    type = expenditure
+    category = stations
+
+    potential = {
+        always = yes
+        resource_stockpile_compare = { resource = kryptonite value >= 1200 }
+    }
+
+    fraction = {
+        weight = 0.005
+    }
+}
+
+kryptonite_expenditure_stations_expand = {
+    resource = kryptonite
+    type = expenditure
+    category = stations
+
+    potential = {
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = kryptonite value < 800 }
+    }
+
+    fraction = {
+        weight = 0.05
+    }
+}
+
+### Unkeep
+
+kryptonite_upkeep_buffer = {
+    resource = kryptonite
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.01
+    }
+}
+
+kryptonite_upkeep_ships = {
+    resource = kryptonite
+    type = upkeep
+    category = ships
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.1
+    }
+}
+
+kryptonite_upkeep_starbases = {
+    resource = kryptonite
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.1
+    }
+}

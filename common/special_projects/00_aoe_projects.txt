@@ -135,6 +135,40 @@ special_project = {
                 }
             }
         }
+        else_if = {
+            limit = {
+                from = {
+                    has_corenite_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_corenite"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_corenite"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_kryptonite_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_kryptonite"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_kryptonite"
+                }
+            }
+        }
         else = {
             owner = {
                 add_monthly_resource_mult = {
@@ -305,6 +339,40 @@ special_project = {
                 }
             }
         }
+        else_if = {
+            limit = {
+                from = {
+                    has_engos_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_engos"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_engos"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_helium_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_helium"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_helium"
+                }
+            }
+        }
         else = {
             owner = {
                 add_monthly_resource_mult = {
@@ -472,6 +540,23 @@ special_project = {
             owner = {
                 give_technology = {
                     tech = "tech_mine_gravitoid"
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_energon_resource = yes
+                }
+                owner = {
+                    NOT = {
+                        has_technology = "tech_mine_energon"
+                    }
+                }
+            }
+            owner = {
+                give_technology = {
+                    tech = "tech_mine_energon"
                 }
             }
         }

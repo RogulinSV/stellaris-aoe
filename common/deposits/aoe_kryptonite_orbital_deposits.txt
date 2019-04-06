@@ -1,0 +1,269 @@
+### Kryptonite Deposits
+
+d_kryptonite_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            kryptonite = 1
+            alloys = 3
+        }
+    }
+    planet_modifier = {
+        trade_value_add = 1
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_ice_asteroid
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_argonium_uninhabitable
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                is_planet_class = pc_celestial_cold
+                is_planet_class = pc_celestial_frozen
+            }
+        }
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+}
+
+d_kryptonite_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            kryptonite = 2
+            alloys = 2
+        }
+    }
+    planet_modifier = {
+        trade_value_add = 2
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_ice_asteroid
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_argonium_uninhabitable
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                is_planet_class = pc_celestial_cold
+                is_planet_class = pc_celestial_frozen
+            }
+        }
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+}
+
+d_kryptonite_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            kryptonite = 3
+            alloys = 1
+        }
+    }
+    planet_modifier = {
+        trade_value_add = 3
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_ice_asteroid
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_argonium_uninhabitable
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                is_planet_class = pc_celestial_cold
+                is_planet_class = pc_celestial_frozen
+            }
+        }
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+}
+
+d_kryptonite_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            kryptonite = 4
+        }
+    }
+    planet_modifier = {
+        trade_value_add = 4
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_ice_asteroid
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_argonium_uninhabitable
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                is_planet_class = pc_celestial_cold
+                is_planet_class = pc_celestial_frozen
+            }
+        }
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+}
+
+d_kryptonite_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            kryptonite = 5
+        }
+    }
+    planet_modifier = {
+        trade_value_add = 5
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_ice_asteroid
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_argonium_uninhabitable
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                is_planet_class = pc_celestial_cold
+                is_planet_class = pc_celestial_frozen
+            }
+        }
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+}

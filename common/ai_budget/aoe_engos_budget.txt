@@ -1,0 +1,119 @@
+### Expenditure
+
+engos_expenditure_buffer = {
+    resource = engos
+    type = expenditure
+    category = buffer
+
+    potential = {
+        always = no
+    }
+
+    fraction = {
+        weight = 0.01
+    }
+}
+
+engos_expenditure_trade = {
+    resource = engos
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
+    }
+}
+
+engos_expenditure_colonies = {
+    resource = engos
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+engos_expenditure_deposit_blockers = {
+    resource = engos
+    type = expenditure
+    category = deposit_blockers
+
+    potential = {
+        always = yes
+    }
+    
+    fraction = {
+        weight = 0.15
+    }
+
+    static_max = {
+        base = 1000
+    }
+}
+
+engos_expenditure_planets = {
+    resource = engos
+    type = expenditure
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+engos_upkeep_planets = {
+    resource = engos
+    type = upkeep
+    category = planets
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}
+
+### Unkeep
+
+engos_upkeep_buffer = {
+    resource = engos
+    type = upkeep
+    category = buffer
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.01
+    }
+}
+
+engos_upkeep_country = {
+    resource = engos
+    type = upkeep
+    category = country
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.15
+    }
+}

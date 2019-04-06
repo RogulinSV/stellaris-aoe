@@ -138,6 +138,34 @@
     }
 }
 
+%RESOURCE%_expenditure_armies = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = armies
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.01
+    }
+}
+
+%RESOURCE%_expenditure_armies_high = {
+    resource = %RESOURCE%
+    type = expenditure
+    category = armies
+
+    potential = {
+        highest_threat > 20
+    }
+
+    fraction = {
+        weight = 0.05
+    }
+}
+
 ### Unkeep
 
 %RESOURCE%_upkeep_buffer = {

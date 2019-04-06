@@ -308,6 +308,81 @@ has_terrigen_resource = {
 }
 
 # Scope: planet
+has_corenite_resource = {
+    OR = {
+        has_deposit = "d_corenite_1"
+        has_deposit = "d_corenite_2"
+        has_deposit = "d_corenite_3"
+        has_deposit = "d_corenite_4"
+        has_deposit = "d_corenite_5"
+        has_resource = {
+            type = corenite
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_energon_resource = {
+    OR = {
+        has_deposit = "d_energon_1"
+        has_deposit = "d_energon_2"
+        has_deposit = "d_energon_3"
+        has_deposit = "d_energon_4"
+        has_deposit = "d_energon_5"
+        has_resource = {
+            type = energon
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_engos_resource = {
+    OR = {
+        has_deposit = "d_engos_1"
+        has_deposit = "d_engos_2"
+        has_deposit = "d_engos_3"
+        has_deposit = "d_engos_4"
+        has_deposit = "d_engos_5"
+        has_resource = {
+            type = engos
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_helium_resource = {
+    OR = {
+        has_deposit = "d_helium_1"
+        has_deposit = "d_helium_2"
+        has_deposit = "d_helium_3"
+        has_deposit = "d_helium_4"
+        has_deposit = "d_helium_5"
+        has_resource = {
+            type = helium
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
+has_kryptonite_resource = {
+    OR = {
+        has_deposit = "d_kryptonite_1"
+        has_deposit = "d_kryptonite_2"
+        has_deposit = "d_kryptonite_3"
+        has_deposit = "d_kryptonite_4"
+        has_deposit = "d_kryptonite_5"
+        has_resource = {
+            type = kryptonite
+            amount > 0
+        }
+    }
+}
+
+# Scope: planet
 is_sovereign_colony = {
     NOR = {
         has_modifier = "resort_colony"
