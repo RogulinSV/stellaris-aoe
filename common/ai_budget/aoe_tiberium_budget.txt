@@ -10,7 +10,7 @@ tiberium_expenditure_buffer = {
     }
 
     fraction = {
-        weight = 0.0
+        weight = 0.01
     }
 }
 
@@ -28,86 +28,6 @@ tiberium_expenditure_trade = {
     }
 }
 
-tiberium_expenditure_colonies = {
-    resource = tiberium
-    type = expenditure
-    category = trade
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.25
-    }
-}
-
-tiberium_expenditure_deposit_blockers = {
-    resource = tiberium
-    type = expenditure
-    category = deposit_blockers
-
-    potential = {
-        always = yes
-    }
-    
-    fraction = {
-        weight = 0.05
-    }
-
-    static_max = {
-        base = 1000
-    }
-}
-
-tiberium_expenditure_planets = {
-    resource = tiberium
-    type = expenditure
-    category = planets
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.15
-    }
-}
-
-tiberium_upkeep_planets = {
-    resource = tiberium
-    type = upkeep
-    category = planets
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.25
-    }
-}
-
-tiberium_expenditure_megastructures = {
-    resource = tiberium
-    type = expenditure
-    category = megastructures
-
-    potential = {
-        is_country_type = default
-        is_at_war = no
-        has_galactic_wonders = yes
-    }
-
-    fraction = {
-        weight = 0.15
-    }
-
-    static_max = {
-        base = 6000
-    }
-}
-
 tiberium_expenditure_ships = {
     resource = tiberium
     type = expenditure
@@ -118,21 +38,7 @@ tiberium_expenditure_ships = {
     }
 
     fraction = {
-        weight = 0.10
-    }
-}
-
-tiberium_expenditure_ships_upgrades = {
-    resource = tiberium
-    type = expenditure
-    category = ship_upgrades
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.06
+        weight = 0.1
     }
 }
 
@@ -148,26 +54,7 @@ tiberium_expenditure_starbases = {
     }
 
     fraction = {
-        weight = 0.15
-    }
-}
-
-tiberium_expenditure_starbases_expand = {
-    resource = tiberium
-    type = expenditure
-    category = starbases
-
-    potential = {
-        has_ai_expansion_plan = yes
-        highest_threat < 50
-        NOT = {
-            is_country_type = fallen_empire
-            is_country_type = awakened_fallen_empire
-        }
-    }
-
-    fraction = {
-        weight = 0.4
+        weight = 0.1
     }
 }
 
@@ -182,7 +69,7 @@ tiberium_expenditure_stations_1 = {
     }
 
     fraction = {
-        weight = 0.15
+        weight = 0.1
     }
 }
 
@@ -198,7 +85,7 @@ tiberium_expenditure_stations_2 = {
     }
 
     fraction = {
-        weight = 0.075
+        weight = 0.05
     }
 }
 
@@ -217,21 +104,6 @@ tiberium_expenditure_stations_3 = {
     }
 }
 
-tiberium_expenditure_stations_expand = {
-    resource = tiberium
-    type = expenditure
-    category = stations
-
-    potential = {
-        exploitable_planets > 2
-        resource_stockpile_compare = { resource = tiberium value < 800 }
-    }
-
-    fraction = {
-        weight = 0.35
-    }
-}
-
 ### Unkeep
 
 tiberium_upkeep_buffer = {
@@ -244,7 +116,7 @@ tiberium_upkeep_buffer = {
     }
 
     fraction = {
-        weight = 0.25
+        weight = 0.01
     }
 }
 
@@ -258,7 +130,7 @@ tiberium_upkeep_ships = {
     }
 
     fraction = {
-        weight = 0.25
+        weight = 0.05
     }
 }
 
@@ -272,20 +144,6 @@ tiberium_upkeep_starbases = {
     }
 
     fraction = {
-        weight = 0.10
-    }
-}
-
-tiberium_upkeep_country = {
-    resource = tiberium
-    type = upkeep
-    category = country
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 1
+        weight = 0.05
     }
 }

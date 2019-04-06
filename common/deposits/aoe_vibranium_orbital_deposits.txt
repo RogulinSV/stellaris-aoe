@@ -1,10 +1,12 @@
-### terrigen Deposits
+### Vibranium Deposits
 
-d_terrigen_1 = {
+d_vibranium_1 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            terrigen = 1
+            vibranium = 1
+            energy = 3
+            minerals = 3
         }
     }
     station = shipclass_mining_station
@@ -13,39 +15,37 @@ d_terrigen_1 = {
     potential = {
         OR = {
             is_planet_class = pc_asteroid
-            is_planet_class = pc_toxic
-            is_planet_class = pc_frozen
-            is_planet_class = pc_broken
-            is_planet_class = pc_shattered
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_celestial_barren
         }
     }
-    
+
     drop_weight = {
-        weight = 2.0
+        weight = @deposit_ultrahigh_drop_weight
 
         modifier = {
-            factor = 0.5
+            factor = 0.25
             is_planet_class = pc_asteroid
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_shattered
-                is_planet_class = pc_broken
-            }
+            is_planet_class = pc_mercurium_uninhabitable
         }
     }
 }
 
-d_terrigen_2 = {
+d_vibranium_2 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            terrigen = 2
+            vibranium = 2
+            energy = 2
+            minerals = 2
         }
     }
     station = shipclass_mining_station
@@ -54,39 +54,37 @@ d_terrigen_2 = {
     potential = {
         OR = {
             is_planet_class = pc_asteroid
-            is_planet_class = pc_toxic
-            is_planet_class = pc_frozen
-            is_planet_class = pc_broken
-            is_planet_class = pc_shattered
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_celestial_barren
         }
     }
-    
+
     drop_weight = {
-        weight = 1.5
+        weight = @deposit_high_drop_weight
 
         modifier = {
-            factor = 0.5
+            factor = 0.25
             is_planet_class = pc_asteroid
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_shattered
-                is_planet_class = pc_broken
-            }
+            is_planet_class = pc_mercurium_uninhabitable
         }
     }
 }
 
-d_terrigen_3 = {
+d_vibranium_3 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            terrigen = 3
+            vibranium = 3
+            energy = 1
+            minerals = 1
         }
     }
     station = shipclass_mining_station
@@ -95,39 +93,35 @@ d_terrigen_3 = {
     potential = {
         OR = {
             is_planet_class = pc_asteroid
-            is_planet_class = pc_toxic
-            is_planet_class = pc_frozen
-            is_planet_class = pc_broken
-            is_planet_class = pc_shattered
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_celestial_barren
         }
     }
-    
+
     drop_weight = {
-        weight = 1.0
+        weight = @deposit_medium_drop_weight
 
         modifier = {
-            factor = 0.5
+            factor = 0.25
             is_planet_class = pc_asteroid
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_shattered
-                is_planet_class = pc_broken
-            }
+            is_planet_class = pc_mercurium_uninhabitable
         }
     }
 }
 
-d_terrigen_4 = {
+d_vibranium_4 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            terrigen = 4
+            vibranium = 4
         }
     }
     station = shipclass_mining_station
@@ -136,39 +130,35 @@ d_terrigen_4 = {
     potential = {
         OR = {
             is_planet_class = pc_asteroid
-            is_planet_class = pc_toxic
-            is_planet_class = pc_frozen
-            is_planet_class = pc_broken
-            is_planet_class = pc_shattered
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_celestial_barren
         }
     }
-    
+
     drop_weight = {
-        weight = 0.5
+        weight = @deposit_low_drop_weight
 
         modifier = {
-            factor = 0.5
+            factor = 0.25
             is_planet_class = pc_asteroid
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_shattered
-                is_planet_class = pc_broken
-            }
+            is_planet_class = pc_mercurium_uninhabitable
         }
     }
 }
 
-d_terrigen_5 = {
+d_vibranium_5 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            terrigen = 5
+            vibranium = 5
         }
     }
     station = shipclass_mining_station
@@ -177,30 +167,26 @@ d_terrigen_5 = {
     potential = {
         OR = {
             is_planet_class = pc_asteroid
-            is_planet_class = pc_toxic
-            is_planet_class = pc_frozen
-            is_planet_class = pc_broken
-            is_planet_class = pc_shattered
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_celestial_barren
         }
     }
-    
+
     drop_weight = {
-        weight = 0.1
+        weight = @deposit_ultralow_drop_weight
 
         modifier = {
-            factor = 0.5
+            factor = 0.25
             is_planet_class = pc_asteroid
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_shattered
-                is_planet_class = pc_broken
-            }
+            is_planet_class = pc_mercurium_uninhabitable
         }
     }
 }

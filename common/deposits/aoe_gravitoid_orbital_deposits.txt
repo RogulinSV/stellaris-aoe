@@ -28,7 +28,7 @@ d_gravitoid_1 = {
     }
 
     drop_weight = {
-        weight = 2.0
+        weight = @deposit_ultrahigh_drop_weight
 
         modifier = {
             factor = 0.5
@@ -80,7 +80,7 @@ d_gravitoid_2 = {
     }
 
     drop_weight = {
-        weight = 1.5
+        weight = @deposit_high_drop_weight
 
         modifier = {
             factor = 0.5
@@ -132,7 +132,7 @@ d_gravitoid_3 = {
     }
 
     drop_weight = {
-        weight = 1.0
+        weight = @deposit_medium_drop_weight
 
         modifier = {
             factor = 0.5
@@ -184,7 +184,7 @@ d_gravitoid_4 = {
     }
 
     drop_weight = {
-        weight = 0.5
+        weight = @deposit_low_drop_weight
 
         modifier = {
             factor = 0.5
@@ -236,7 +236,7 @@ d_gravitoid_5 = {
     }
 
     drop_weight = {
-        weight = 0.1
+        weight = @deposit_ultralow_drop_weight
 
         modifier = {
             factor = 0.5

@@ -8,33 +8,43 @@ d_tylium_1 = {
             society_research = 1
         }
     }
+    planet_modifier = {
+        trade_value_add = 1
+    }
     station = shipclass_mining_station
     is_for_colonizeable = no
 
     potential = {
         OR = {
-            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_nitrogenium_uninhabitable
             is_planet_class = pc_nitrogenium_gas_giant
-            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_ammonium_gas_giant
             is_planet_class = pc_celestial_wet
-            is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 2.0
+        weight = @deposit_ultrahigh_drop_weight
 
         modifier = {
-            factor = 0.75
+            factor = 0.5
             OR = {
-                is_planet_class = pc_sulphureum_gas_giant
                 is_planet_class = pc_nitrogenium_gas_giant
-                is_planet_class = pc_carbonium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
             }
         }
         modifier = {
-            factor = 2.0
+            factor = 1.5
+            has_distar = yes
+        }
+        modifier = {
+            factor = 1.5
             is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 2.0
+            is_planet_class = pc_nitrogenium_uninhabitable
         }
         modifier = {
             factor = 3.0
@@ -51,33 +61,43 @@ d_tylium_2 = {
             society_research = 2
         }
     }
+    planet_modifier = {
+        trade_value_add = 2
+    }
     station = shipclass_mining_station
     is_for_colonizeable = no
 
     potential = {
         OR = {
-            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_nitrogenium_uninhabitable
             is_planet_class = pc_nitrogenium_gas_giant
-            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_ammonium_gas_giant
             is_planet_class = pc_celestial_wet
-            is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 1.5
+        weight = @deposit_high_drop_weight
 
         modifier = {
-            factor = 0.75
+            factor = 0.5
             OR = {
-                is_planet_class = pc_sulphureum_gas_giant
                 is_planet_class = pc_nitrogenium_gas_giant
-                is_planet_class = pc_carbonium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
             }
         }
         modifier = {
-            factor = 2.0
+            factor = 1.5
+            has_distar = yes
+        }
+        modifier = {
+            factor = 1.5
             is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 2.0
+            is_planet_class = pc_nitrogenium_uninhabitable
         }
         modifier = {
             factor = 3.0
@@ -94,33 +114,43 @@ d_tylium_3 = {
             society_research = 3
         }
     }
+    planet_modifier = {
+        trade_value_add = 3
+    }
     station = shipclass_mining_station
     is_for_colonizeable = no
 
     potential = {
         OR = {
-            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_nitrogenium_uninhabitable
             is_planet_class = pc_nitrogenium_gas_giant
-            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_ammonium_gas_giant
             is_planet_class = pc_celestial_wet
-            is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 1.0
+        weight = @deposit_medium_drop_weight
 
         modifier = {
-            factor = 0.75
+            factor = 0.5
             OR = {
-                is_planet_class = pc_sulphureum_gas_giant
                 is_planet_class = pc_nitrogenium_gas_giant
-                is_planet_class = pc_carbonium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
             }
         }
         modifier = {
-            factor = 2.0
+            factor = 1.5
+            has_distar = yes
+        }
+        modifier = {
+            factor = 1.5
             is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 2.0
+            is_planet_class = pc_nitrogenium_uninhabitable
         }
         modifier = {
             factor = 3.0
@@ -137,33 +167,43 @@ d_tylium_4 = {
             society_research = 4
         }
     }
+    planet_modifier = {
+        trade_value_add = 4
+    }
     station = shipclass_mining_station
     is_for_colonizeable = no
 
     potential = {
         OR = {
-            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_nitrogenium_uninhabitable
             is_planet_class = pc_nitrogenium_gas_giant
-            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_ammonium_gas_giant
             is_planet_class = pc_celestial_wet
-            is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 0.5
+        weight = @deposit_low_drop_weight
 
         modifier = {
-            factor = 0.75
+            factor = 0.5
             OR = {
-                is_planet_class = pc_sulphureum_gas_giant
                 is_planet_class = pc_nitrogenium_gas_giant
-                is_planet_class = pc_carbonium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
             }
         }
         modifier = {
-            factor = 2.0
+            factor = 1.5
+            has_distar = yes
+        }
+        modifier = {
+            factor = 1.5
             is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 2.0
+            is_planet_class = pc_nitrogenium_uninhabitable
         }
         modifier = {
             factor = 3.0
@@ -180,33 +220,43 @@ d_tylium_5 = {
             society_research = 5
         }
     }
+    planet_modifier = {
+        trade_value_add = 5
+    }
     station = shipclass_mining_station
     is_for_colonizeable = no
 
     potential = {
         OR = {
-            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_nitrogenium_uninhabitable
             is_planet_class = pc_nitrogenium_gas_giant
-            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_ammonium_gas_giant
             is_planet_class = pc_celestial_wet
-            is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 0.1
+        weight = @deposit_ultralow_drop_weight
 
         modifier = {
-            factor = 0.75
+            factor = 0.5
             OR = {
-                is_planet_class = pc_sulphureum_gas_giant
                 is_planet_class = pc_nitrogenium_gas_giant
-                is_planet_class = pc_carbonium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
             }
         }
         modifier = {
-            factor = 2.0
+            factor = 1.5
+            has_distar = yes
+        }
+        modifier = {
+            factor = 1.5
             is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 2.0
+            is_planet_class = pc_nitrogenium_uninhabitable
         }
         modifier = {
             factor = 3.0

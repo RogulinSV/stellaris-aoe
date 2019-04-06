@@ -1,0 +1,481 @@
+d_crystallized_caves = {
+    icon = "d_crystallized_caves"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_crystallized
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_submerged_ore_veins
+        d_ore_rich_caverns
+        d_mineral_fields
+    }
+
+    planet_modifier = {
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_dry = yes
+            is_planet_class = pc_nuked
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+
+        modifier = {
+            factor = 2
+            is_planet_class = pc_desert
+        }
+        modifier = {
+            factor = 3
+            is_planet_class = pc_nuked
+        }
+    }
+}
+
+d_crystallized_plains = {
+    icon = "d_crystallized_plains"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_crystallized
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_mineral_fields
+        d_prosperous_mesa
+    }
+
+    planet_modifier = {
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_wet = yes
+            is_planet_class = pc_gaia
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+
+        modifier = {
+            factor = 2
+            is_planet_class = pc_gaia
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_ocean
+        }
+    }
+}
+
+d_crystallized_mines = {
+    icon = "d_crystallized_mines"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_crystallized
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_submerged_ore_veins
+        d_ore_rich_caverns
+        d_mineral_fields
+    }
+
+    planet_modifier = {
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_cold = yes
+            is_planet_class = pc_nuked
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+
+        modifier = {
+            factor = 2
+            is_planet_class = pc_arctic
+        }
+        modifier = {
+            factor = 3
+            is_planet_class = pc_nuked
+        }
+    }
+}
+
+d_crystallized_stratums = {
+    icon = "d_crystallized_stratums"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_crystallized
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_submerged_ore_veins
+        d_ore_rich_caverns
+        d_mineral_fields
+        d_crystallized_mines
+    }
+
+    planet_modifier = {
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        is_cold = yes
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+
+        modifier = {
+            factor = 2
+            is_planet_class = pc_arctic
+        }
+    }
+}
+
+d_crystallized_hills = {
+    icon = "d_crystallized_hills"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_crystallized
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_submerged_ore_veins
+        d_ore_rich_caverns
+        d_mineral_fields
+        d_crystallized_caves
+    }
+
+    planet_modifier = {
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_dry = yes
+            is_planet_class = pc_continental
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+
+        modifier = {
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_arid
+                is_planet_class = pc_savannah
+            }
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_continental
+        }
+    }
+}
+
+d_crystallized_matrixes = {
+    icon = "d_crystallized_matrixes"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_crystallized
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_null_deposit
+        d_nanites_deposit
+    }
+
+    planet_modifier = {
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_planet_class = pc_hive
+            is_planet_class = pc_machine
+            is_planet_class = pc_ringworld_habitable
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_ringworld_habitable
+        }
+    }
+}
+
+d_metallized_caves = {
+    icon = "d_metallized_caves"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_metallized
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_submerged_ore_veins
+        d_ore_rich_caverns
+        d_mineral_fields
+        d_dust_caverns
+    }
+
+    planet_modifier = {
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_dry = yes
+            is_planet_class = pc_nuked
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+
+        modifier = {
+            factor = 2
+            is_planet_class = pc_desert
+        }
+        modifier = {
+            factor = 3
+            is_planet_class = pc_nuked
+        }
+    }
+}
+
+d_metallized_plains = {
+    icon = "d_metallized_plains"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_metallized
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_geothermal_vent
+        d_frozen_gas_lake
+        d_mineral_fields
+    }
+
+    planet_modifier = {
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_cold = yes
+            is_planet_class = pc_nuked
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_arctic
+        }
+        modifier = {
+            factor = 3
+            is_planet_class = pc_nuked
+        }
+    }
+}
+
+d_metallized_mines = {
+    icon = "d_metallized_mines"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_metallized
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_submerged_ore_veins
+        d_ore_rich_caverns
+        d_mineral_fields
+        d_dust_caverns
+    }
+
+    planet_modifier = {
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_cold = yes
+            is_planet_class = pc_nuked
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+
+        modifier = {
+            factor = 2
+            is_planet_class = pc_arctic
+        }
+        modifier = {
+            factor = 3
+            is_planet_class = pc_nuked
+        }
+    }
+}
+
+d_metallized_mountains = {
+    icon = "d_metallized_mountains"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_metallized
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_crystal_forest
+        d_tempestous_mountain
+        d_veiny_cliffs
+        d_rich_mountain
+    }
+
+    planet_modifier = {
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_wet = yes
+            is_planet_class = pc_gaia
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+
+        modifier = {
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_ocean
+                is_planet_class = pc_gaia
+            }
+        }
+    }
+}
+
+d_metallized_oceans = {
+    icon = "d_metallized_oceans"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_metallized
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_crystal_reef
+        d_underwater_vent
+    }
+
+    planet_modifier = {
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        is_planet_class = pc_ocean
+    }
+
+    drop_weight = {
+        weight = @blocker_low_drop_weight
+    }
+}
+
+d_metallized_matrixes = {
+    icon = "d_metallized_matrixes"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_metallized
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_null_deposit
+        d_nanites_deposit
+    }
+
+    planet_modifier = {
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            is_planet_class = pc_hive
+            is_planet_class = pc_machine
+            is_planet_class = pc_ringworld_habitable
+        }
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_ringworld_habitable
+        }
+    }
+}

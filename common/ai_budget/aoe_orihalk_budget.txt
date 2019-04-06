@@ -10,7 +10,21 @@ orihalk_expenditure_buffer = {
     }
 
     fraction = {
-        weight = 0.0
+        weight = 0.01
+    }
+}
+
+orihalk_expenditure_trade = {
+    resource = orihalk
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
     }
 }
 
@@ -24,7 +38,7 @@ orihalk_expenditure_ships = {
     }
 
     fraction = {
-        weight = 0.10
+        weight = 0.1
     }
 }
 
@@ -38,42 +52,7 @@ orihalk_expenditure_ships_upgrades = {
     }
 
     fraction = {
-        weight = 0.06
-    }
-}
-
-orihalk_expenditure_starbases = {
-    resource = orihalk
-    type = expenditure
-    category = starbases
-
-    potential = {
-        NOT = {
-            is_country_type = fallen_empire
-        }
-    }
-
-    fraction = {
-        weight = 0.15
-    }
-}
-
-orihalk_expenditure_starbases_expand = {
-    resource = orihalk
-    type = expenditure
-    category = starbases
-
-    potential = {
-        has_ai_expansion_plan = yes
-        highest_threat < 50
-        NOT = {
-            is_country_type = fallen_empire
-            is_country_type = awakened_fallen_empire
-        }
-    }
-
-    fraction = {
-        weight = 0.4
+        weight = 0.1
     }
 }
 
@@ -88,7 +67,7 @@ orihalk_expenditure_stations_1 = {
     }
 
     fraction = {
-        weight = 0.15
+        weight = 0.1
     }
 }
 
@@ -104,7 +83,7 @@ orihalk_expenditure_stations_2 = {
     }
 
     fraction = {
-        weight = 0.075
+        weight = 0.05
     }
 }
 
@@ -134,7 +113,21 @@ orihalk_expenditure_stations_expand = {
     }
 
     fraction = {
-        weight = 0.35
+        weight = 0.15
+    }
+}
+
+orihalk_expenditure_colonies = {
+    resource = orihalk
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.1
     }
 }
 
@@ -197,7 +190,7 @@ orihalk_upkeep_buffer = {
     }
 
     fraction = {
-        weight = 0.25
+        weight = 0.01
     }
 }
 
@@ -211,7 +204,7 @@ orihalk_upkeep_ships = {
     }
 
     fraction = {
-        weight = 0.25
+        weight = 0.1
     }
 }
 
@@ -225,7 +218,7 @@ orihalk_upkeep_starbases = {
     }
 
     fraction = {
-        weight = 0.10
+        weight = 0.1
     }
 }
 
@@ -239,6 +232,6 @@ orihalk_upkeep_country = {
     }
 
     fraction = {
-        weight = 1
+        weight = 0.05
     }
 }

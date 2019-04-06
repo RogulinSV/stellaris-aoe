@@ -42,69 +42,31 @@ lirium_expenditure_colonies = {
     }
 }
 
-lirium_expenditure_deposit_blockers = {
+lirium_expenditure_armies = {
     resource = lirium
     type = expenditure
-    category = deposit_blockers
+    category = armies
 
     potential = {
         always = yes
     }
-    
+
+    fraction = {
+        weight = 0.01
+    }
+}
+
+lirium_expenditure_armies_high = {
+    resource = lirium
+    type = expenditure
+    category = armies
+
+    potential = {
+        highest_threat > 20
+    }
+
     fraction = {
         weight = 0.05
-    }
-
-    static_max = {
-        base = 1000
-    }
-}
-
-lirium_expenditure_planets = {
-    resource = lirium
-    type = expenditure
-    category = planets
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.15
-    }
-}
-
-lirium_upkeep_planets = {
-    resource = lirium
-    type = upkeep
-    category = planets
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.25
-    }
-}
-
-lirium_expenditure_megastructures = {
-    resource = lirium
-    type = expenditure
-    category = megastructures
-
-    potential = {
-        is_country_type = default
-        is_at_war = no
-        has_galactic_wonders = yes
-    }
-
-    fraction = {
-        weight = 0.15
-    }
-
-    static_max = {
-        base = 6000
     }
 }
 
@@ -120,7 +82,7 @@ lirium_upkeep_buffer = {
     }
 
     fraction = {
-        weight = 0.25
+        weight = 0.01
     }
 }
 
@@ -134,6 +96,6 @@ lirium_upkeep_country = {
     }
 
     fraction = {
-        weight = 1
+        weight = 0.1
     }
 }

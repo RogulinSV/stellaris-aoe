@@ -1,12 +1,15 @@
-### Unobtanium Deposits
+### Lirium Deposits
 
-d_unobtanium_1 = {
+d_lirium_1 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            unobtanium = 1
-            physics_research = 1
+            lirium = 1
+            minerals = 5
         }
+    }
+    planet_modifier = {
+        trade_value_add = 1
     }
     station = shipclass_mining_station
     is_for_colonizeable = no
@@ -15,40 +18,47 @@ d_unobtanium_1 = {
         OR = {
             is_planet_class = pc_asteroid
             is_planet_class = pc_carbonium_uninhabitable
-            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
             is_planet_class = pc_mercurium_uninhabitable
-            is_planet_class = pc_celestial_frozen
+            is_planet_class = pc_celestial_molten
         }
     }
 
     drop_weight = {
-        weight = 2.0
+        weight = @deposit_ultrahigh_drop_weight
 
         modifier = {
-            factor = 0.2
+            factor = 0.25
             is_planet_class = pc_asteroid
         }
         modifier = {
+            factor = 0.5
+            is_planet_class = pc_carbonium_uninhabitable
+        }
+        modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
             OR = {
+                is_planet_class = pc_phosphorium_uninhabitable
                 is_planet_class = pc_mercurium_uninhabitable
-                is_planet_class = pc_argonium_uninhabitable
             }
         }
     }
 }
 
-d_unobtanium_2 = {
+d_lirium_2 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            unobtanium = 2
-            physics_research = 2
+            lirium = 2
+            minerals = 4
         }
+    }
+    planet_modifier = {
+        trade_value_add = 2
     }
     station = shipclass_mining_station
     is_for_colonizeable = no
@@ -57,40 +67,47 @@ d_unobtanium_2 = {
         OR = {
             is_planet_class = pc_asteroid
             is_planet_class = pc_carbonium_uninhabitable
-            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
             is_planet_class = pc_mercurium_uninhabitable
-            is_planet_class = pc_celestial_frozen
+            is_planet_class = pc_celestial_molten
         }
     }
 
     drop_weight = {
-        weight = 1.5
+        weight = @deposit_high_drop_weight
 
         modifier = {
-            factor = 0.2
+            factor = 0.25
             is_planet_class = pc_asteroid
         }
         modifier = {
+            factor = 0.5
+            is_planet_class = pc_carbonium_uninhabitable
+        }
+        modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
             OR = {
+                is_planet_class = pc_phosphorium_uninhabitable
                 is_planet_class = pc_mercurium_uninhabitable
-                is_planet_class = pc_argonium_uninhabitable
             }
         }
     }
 }
 
-d_unobtanium_3 = {
+d_lirium_3 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            unobtanium = 3
-            physics_research = 3
+            lirium = 3
+            minerals = 3
         }
+    }
+    planet_modifier = {
+        trade_value_add = 3
     }
     station = shipclass_mining_station
     is_for_colonizeable = no
@@ -99,40 +116,47 @@ d_unobtanium_3 = {
         OR = {
             is_planet_class = pc_asteroid
             is_planet_class = pc_carbonium_uninhabitable
-            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
             is_planet_class = pc_mercurium_uninhabitable
-            is_planet_class = pc_celestial_frozen
+            is_planet_class = pc_celestial_molten
         }
     }
 
     drop_weight = {
-        weight = 1.0
+        weight = @deposit_medium_drop_weight
 
         modifier = {
-            factor = 0.2
+            factor = 0.25
             is_planet_class = pc_asteroid
         }
         modifier = {
+            factor = 0.5
+            is_planet_class = pc_carbonium_uninhabitable
+        }
+        modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
             OR = {
+                is_planet_class = pc_phosphorium_uninhabitable
                 is_planet_class = pc_mercurium_uninhabitable
-                is_planet_class = pc_argonium_uninhabitable
             }
         }
     }
 }
 
-d_unobtanium_4 = {
+d_lirium_4 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            unobtanium = 4
-            physics_research = 4
+            lirium = 4
+            minerals = 2
         }
+    }
+    planet_modifier = {
+        trade_value_add = 4
     }
     station = shipclass_mining_station
     is_for_colonizeable = no
@@ -141,40 +165,47 @@ d_unobtanium_4 = {
         OR = {
             is_planet_class = pc_asteroid
             is_planet_class = pc_carbonium_uninhabitable
-            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
             is_planet_class = pc_mercurium_uninhabitable
-            is_planet_class = pc_celestial_frozen
+            is_planet_class = pc_celestial_molten
         }
     }
 
     drop_weight = {
-        weight = 0.5
+        weight = @deposit_low_drop_weight
 
         modifier = {
-            factor = 0.2
+            factor = 0.25
             is_planet_class = pc_asteroid
         }
         modifier = {
+            factor = 0.5
+            is_planet_class = pc_carbonium_uninhabitable
+        }
+        modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
             OR = {
+                is_planet_class = pc_phosphorium_uninhabitable
                 is_planet_class = pc_mercurium_uninhabitable
-                is_planet_class = pc_argonium_uninhabitable
             }
         }
     }
 }
 
-d_unobtanium_5 = {
+d_lirium_5 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            unobtanium = 5
-            physics_research = 5
+            lirium = 5
+            minerals = 1
         }
+    }
+    planet_modifier = {
+        trade_value_add = 5
     }
     station = shipclass_mining_station
     is_for_colonizeable = no
@@ -183,28 +214,32 @@ d_unobtanium_5 = {
         OR = {
             is_planet_class = pc_asteroid
             is_planet_class = pc_carbonium_uninhabitable
-            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
             is_planet_class = pc_mercurium_uninhabitable
-            is_planet_class = pc_celestial_frozen
+            is_planet_class = pc_celestial_molten
         }
     }
 
     drop_weight = {
-        weight = 0.1
+        weight = @deposit_ultralow_drop_weight
 
         modifier = {
-            factor = 0.2
+            factor = 0.25
             is_planet_class = pc_asteroid
         }
         modifier = {
+            factor = 0.5
+            is_planet_class = pc_carbonium_uninhabitable
+        }
+        modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
             OR = {
+                is_planet_class = pc_phosphorium_uninhabitable
                 is_planet_class = pc_mercurium_uninhabitable
-                is_planet_class = pc_argonium_uninhabitable
             }
         }
     }

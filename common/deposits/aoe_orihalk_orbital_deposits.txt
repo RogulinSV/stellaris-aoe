@@ -13,35 +13,32 @@ d_orihalk_1 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
             is_planet_class = pc_ice_asteroid
-            is_planet_class = pc_methanum_uninhabitable
             is_planet_class = pc_nitrogenium_uninhabitable
-            is_planet_class = pc_celestial_hot
-            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
         }
     }
 
     drop_weight = {
-        weight = 2.0
+        weight = @deposit_ultrahigh_drop_weight
 
         modifier = {
-            factor = 0.2
-            OR = {
-                is_planet_class = pc_asteroid
-                is_planet_class = pc_ice_asteroid
-            }
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_methanum_uninhabitable
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_nitrogenium_uninhabitable
-                is_planet_class = pc_celestial_hot
-            }
+            is_planet_class = pc_nitrogenium_uninhabitable
         }
     }
 }
@@ -59,35 +56,32 @@ d_orihalk_2 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
             is_planet_class = pc_ice_asteroid
-            is_planet_class = pc_methanum_uninhabitable
             is_planet_class = pc_nitrogenium_uninhabitable
-            is_planet_class = pc_celestial_hot
-            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
         }
     }
 
     drop_weight = {
-        weight = 1.5
+        weight = @deposit_high_drop_weight
 
         modifier = {
-            factor = 0.2
-            OR = {
-                is_planet_class = pc_asteroid
-                is_planet_class = pc_ice_asteroid
-            }
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_methanum_uninhabitable
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_nitrogenium_uninhabitable
-                is_planet_class = pc_celestial_hot
-            }
+            is_planet_class = pc_nitrogenium_uninhabitable
         }
     }
 }
@@ -105,35 +99,32 @@ d_orihalk_3 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
             is_planet_class = pc_ice_asteroid
-            is_planet_class = pc_methanum_uninhabitable
             is_planet_class = pc_nitrogenium_uninhabitable
-            is_planet_class = pc_celestial_hot
-            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
         }
     }
 
     drop_weight = {
-        weight = 1.0
+        weight = @deposit_medium_drop_weight
 
         modifier = {
-            factor = 0.2
-            OR = {
-                is_planet_class = pc_asteroid
-                is_planet_class = pc_ice_asteroid
-            }
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_methanum_uninhabitable
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_nitrogenium_uninhabitable
-                is_planet_class = pc_celestial_hot
-            }
+            is_planet_class = pc_nitrogenium_uninhabitable
         }
     }
 }
@@ -150,35 +141,32 @@ d_orihalk_4 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
             is_planet_class = pc_ice_asteroid
-            is_planet_class = pc_methanum_uninhabitable
             is_planet_class = pc_nitrogenium_uninhabitable
-            is_planet_class = pc_celestial_hot
-            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
         }
     }
 
     drop_weight = {
-        weight = 0.5
+        weight = @deposit_low_drop_weight
 
         modifier = {
-            factor = 0.2
-            OR = {
-                is_planet_class = pc_asteroid
-                is_planet_class = pc_ice_asteroid
-            }
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_methanum_uninhabitable
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_nitrogenium_uninhabitable
-                is_planet_class = pc_celestial_hot
-            }
+            is_planet_class = pc_nitrogenium_uninhabitable
         }
     }
 }
@@ -195,35 +183,32 @@ d_orihalk_5 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
             is_planet_class = pc_ice_asteroid
-            is_planet_class = pc_methanum_uninhabitable
             is_planet_class = pc_nitrogenium_uninhabitable
-            is_planet_class = pc_celestial_hot
-            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
         }
     }
 
     drop_weight = {
-        weight = 0.1
+        weight = @deposit_ultralow_drop_weight
 
         modifier = {
-            factor = 0.2
-            OR = {
-                is_planet_class = pc_asteroid
-                is_planet_class = pc_ice_asteroid
-            }
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_methanum_uninhabitable
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_nitrogenium_uninhabitable
-                is_planet_class = pc_celestial_hot
-            }
+            is_planet_class = pc_nitrogenium_uninhabitable
         }
     }
 }

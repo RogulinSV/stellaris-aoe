@@ -10,7 +10,21 @@ vibranium_expenditure_buffer = {
     }
 
     fraction = {
-        weight = 0.0
+        weight = 0.01
+    }
+}
+
+vibranium_expenditure_trade = {
+    resource = vibranium
+    type = expenditure
+    category = trade
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.25
     }
 }
 
@@ -24,21 +38,7 @@ vibranium_expenditure_ships = {
     }
 
     fraction = {
-        weight = 0.10
-    }
-}
-
-vibranium_expenditure_ships_upgrades = {
-    resource = vibranium
-    type = expenditure
-    category = ship_upgrades
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.06
+        weight = 0.1
     }
 }
 
@@ -54,26 +54,7 @@ vibranium_expenditure_starbases = {
     }
 
     fraction = {
-        weight = 0.15
-    }
-}
-
-vibranium_expenditure_starbases_expand = {
-    resource = vibranium
-    type = expenditure
-    category = starbases
-
-    potential = {
-        has_ai_expansion_plan = yes
-        highest_threat < 50
-        NOT = {
-            is_country_type = fallen_empire
-            is_country_type = awakened_fallen_empire
-        }
-    }
-
-    fraction = {
-        weight = 0.4
+        weight = 0.1
     }
 }
 
@@ -88,7 +69,7 @@ vibranium_expenditure_stations_1 = {
     }
 
     fraction = {
-        weight = 0.15
+        weight = 0.1
     }
 }
 
@@ -104,7 +85,7 @@ vibranium_expenditure_stations_2 = {
     }
 
     fraction = {
-        weight = 0.075
+        weight = 0.05
     }
 }
 
@@ -123,21 +104,6 @@ vibranium_expenditure_stations_3 = {
     }
 }
 
-vibranium_expenditure_stations_expand = {
-    resource = vibranium
-    type = expenditure
-    category = stations
-
-    potential = {
-        exploitable_planets > 2
-        resource_stockpile_compare = { resource = vibranium value < 800 }
-    }
-
-    fraction = {
-        weight = 0.35
-    }
-}
-
 ### Unkeep
 
 vibranium_upkeep_buffer = {
@@ -150,7 +116,7 @@ vibranium_upkeep_buffer = {
     }
 
     fraction = {
-        weight = 0.25
+        weight = 0.01
     }
 }
 
@@ -164,7 +130,7 @@ vibranium_upkeep_ships = {
     }
 
     fraction = {
-        weight = 0.25
+        weight = 0.05
     }
 }
 
@@ -178,20 +144,6 @@ vibranium_upkeep_starbases = {
     }
 
     fraction = {
-        weight = 0.10
-    }
-}
-
-vibranium_upkeep_country = {
-    resource = vibranium
-    type = upkeep
-    category = country
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 1
+        weight = 0.05
     }
 }

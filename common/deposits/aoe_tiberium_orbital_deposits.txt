@@ -13,27 +13,31 @@ d_tiberium_1 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
+            is_planet_class = pc_ice_asteroid
             is_planet_class = pc_crystalline_uninhabitable
             is_planet_class = pc_crystalline_gas_giant
-            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
         }
     }
 
     drop_weight = {
-        weight = 2.0
+        weight = @deposit_ultrahigh_drop_weight
 
         modifier = {
-            factor = 0.2
-            is_planet_class = pc_asteroid
-        }
-        modifier = {
-            factor = 2.0
-            is_inside_nebula = yes
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
         }
         modifier = {
             factor = 0.5
-            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_celestial_cold
+        }
+        modifier = {
+            factor = 1.5
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 2.5
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
@@ -55,27 +59,31 @@ d_tiberium_2 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
+            is_planet_class = pc_ice_asteroid
             is_planet_class = pc_crystalline_uninhabitable
             is_planet_class = pc_crystalline_gas_giant
-            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
         }
     }
 
     drop_weight = {
-        weight = 1.5
+        weight = @deposit_high_drop_weight
 
         modifier = {
-            factor = 0.2
-            is_planet_class = pc_asteroid
-        }
-        modifier = {
-            factor = 2.0
-            is_inside_nebula = yes
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
         }
         modifier = {
             factor = 0.5
-            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_celestial_cold
+        }
+        modifier = {
+            factor = 1.5
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 2.5
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
@@ -97,27 +105,31 @@ d_tiberium_3 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
+            is_planet_class = pc_ice_asteroid
             is_planet_class = pc_crystalline_uninhabitable
             is_planet_class = pc_crystalline_gas_giant
-            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
         }
     }
 
     drop_weight = {
-        weight = 1.0
+        weight = @deposit_medium_drop_weight
 
         modifier = {
-            factor = 0.2
-            is_planet_class = pc_asteroid
-        }
-        modifier = {
-            factor = 2.0
-            is_inside_nebula = yes
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
         }
         modifier = {
             factor = 0.5
-            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_celestial_cold
+        }
+        modifier = {
+            factor = 1.5
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 2.5
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
@@ -139,27 +151,31 @@ d_tiberium_4 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
+            is_planet_class = pc_ice_asteroid
             is_planet_class = pc_crystalline_uninhabitable
             is_planet_class = pc_crystalline_gas_giant
-            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
         }
     }
 
     drop_weight = {
-        weight = 0.5
+        weight = @deposit_low_drop_weight
 
         modifier = {
-            factor = 0.2
-            is_planet_class = pc_asteroid
-        }
-        modifier = {
-            factor = 2.0
-            is_inside_nebula = yes
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
         }
         modifier = {
             factor = 0.5
-            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_celestial_cold
+        }
+        modifier = {
+            factor = 1.5
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 2.5
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
@@ -181,27 +197,31 @@ d_tiberium_5 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
+            is_planet_class = pc_ice_asteroid
             is_planet_class = pc_crystalline_uninhabitable
             is_planet_class = pc_crystalline_gas_giant
-            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
         }
     }
 
     drop_weight = {
-        weight = 0.1
+        weight = @deposit_ultralow_drop_weight
 
         modifier = {
-            factor = 0.2
-            is_planet_class = pc_asteroid
-        }
-        modifier = {
-            factor = 2.0
-            is_inside_nebula = yes
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
         }
         modifier = {
             factor = 0.5
-            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_celestial_cold
+        }
+        modifier = {
+            factor = 1.5
+            is_inside_nebula = yes
+        }
+        modifier = {
+            factor = 2.5
+            has_distar = yes
         }
         modifier = {
             factor = 3.0

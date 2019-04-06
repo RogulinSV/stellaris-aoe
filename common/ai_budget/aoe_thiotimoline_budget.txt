@@ -10,25 +10,11 @@ thiotimoline_expenditure_buffer = {
     }
 
     fraction = {
-        weight = 0.0
+        weight = 0.01
     }
 }
 
 thiotimoline_expenditure_trade = {
-    resource = thiotimoline
-    type = expenditure
-    category = trade
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.25
-    }
-}
-
-thiotimoline_expenditure_colonies = {
     resource = thiotimoline
     type = expenditure
     category = trade
@@ -60,34 +46,6 @@ thiotimoline_expenditure_deposit_blockers = {
     }
 }
 
-thiotimoline_expenditure_planets = {
-    resource = thiotimoline
-    type = expenditure
-    category = planets
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.15
-    }
-}
-
-thiotimoline_upkeep_planets = {
-    resource = thiotimoline
-    type = upkeep
-    category = planets
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.25
-    }
-}
-
 thiotimoline_expenditure_megastructures = {
     resource = thiotimoline
     type = expenditure
@@ -104,7 +62,7 @@ thiotimoline_expenditure_megastructures = {
     }
 
     static_max = {
-        base = 6000
+        base = 5000
     }
 }
 
@@ -120,20 +78,6 @@ thiotimoline_upkeep_buffer = {
     }
 
     fraction = {
-        weight = 0.25
-    }
-}
-
-thiotimoline_upkeep_country = {
-    resource = thiotimoline
-    type = upkeep
-    category = country
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 1
+        weight = 0.01
     }
 }

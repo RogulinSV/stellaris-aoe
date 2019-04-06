@@ -1,11 +1,11 @@
-### Elerium Deposits
+### Itildeen Deposits
 
-d_elerium_1 = {
+d_itildeen_1 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            elerium = 1
-            society_research = 1
+            itildeen = 1
+            energy = 5
         }
     }
     station = shipclass_mining_station
@@ -13,42 +13,45 @@ d_elerium_1 = {
 
     potential = {
         OR = {
+            is_planet_class = pc_methanum_uninhabitable
             is_planet_class = pc_methanum_gas_giant
             is_planet_class = pc_argonium_gas_giant
-            is_planet_class = pc_phosphorium_gas_giant
-            is_planet_class = pc_celestial_barren
-            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 2.0
+        weight = @deposit_ultrahigh_drop_weight
 
         modifier = {
-            factor = 0.75
+            factor = 0.25
+            is_planet_class = pc_methanum_uninhabitable
+        }
+        modifier = {
+            factor = 0.5
             OR = {
-                is_planet_class = pc_methanum_gas_giant
                 is_planet_class = pc_argonium_gas_giant
-                is_planet_class = pc_phosphorium_gas_giant
+                is_planet_class = pc_mercurium_gas_giant
             }
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            is_planet_class = pc_methanum_gas_giant
         }
         modifier = {
             factor = 3.0
-            is_planet_class = pc_celestial_wet
+            is_inside_nebula = yes
         }
     }
 }
 
-d_elerium_2 = {
+d_itildeen_2 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            elerium = 2
-            society_research = 2
+            itildeen = 2
+            energy = 4
         }
     }
     station = shipclass_mining_station
@@ -56,42 +59,45 @@ d_elerium_2 = {
 
     potential = {
         OR = {
+            is_planet_class = pc_methanum_uninhabitable
             is_planet_class = pc_methanum_gas_giant
             is_planet_class = pc_argonium_gas_giant
-            is_planet_class = pc_phosphorium_gas_giant
-            is_planet_class = pc_celestial_barren
-            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 1.5
+        weight = @deposit_high_drop_weight
 
         modifier = {
-            factor = 0.75
+            factor = 0.25
+            is_planet_class = pc_methanum_uninhabitable
+        }
+        modifier = {
+            factor = 0.5
             OR = {
-                is_planet_class = pc_methanum_gas_giant
                 is_planet_class = pc_argonium_gas_giant
-                is_planet_class = pc_phosphorium_gas_giant
+                is_planet_class = pc_mercurium_gas_giant
             }
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            is_planet_class = pc_methanum_gas_giant
         }
         modifier = {
             factor = 3.0
-            is_planet_class = pc_celestial_wet
+            is_inside_nebula = yes
         }
     }
 }
 
-d_elerium_3 = {
+d_itildeen_3 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            elerium = 3
-            society_research = 3
+            itildeen = 3
+            energy = 3
         }
     }
     station = shipclass_mining_station
@@ -99,42 +105,45 @@ d_elerium_3 = {
 
     potential = {
         OR = {
+            is_planet_class = pc_methanum_uninhabitable
             is_planet_class = pc_methanum_gas_giant
             is_planet_class = pc_argonium_gas_giant
-            is_planet_class = pc_phosphorium_gas_giant
-            is_planet_class = pc_celestial_barren
-            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 1.0
+        weight = @deposit_medium_drop_weight
 
         modifier = {
-            factor = 0.75
+            factor = 0.25
+            is_planet_class = pc_methanum_uninhabitable
+        }
+        modifier = {
+            factor = 0.5
             OR = {
-                is_planet_class = pc_methanum_gas_giant
                 is_planet_class = pc_argonium_gas_giant
-                is_planet_class = pc_phosphorium_gas_giant
+                is_planet_class = pc_mercurium_gas_giant
             }
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            is_planet_class = pc_methanum_gas_giant
         }
         modifier = {
             factor = 3.0
-            is_planet_class = pc_celestial_wet
+            is_inside_nebula = yes
         }
     }
 }
 
-d_elerium_4 = {
+d_itildeen_4 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            elerium = 4
-            society_research = 4
+            itildeen = 4
+            energy = 2
         }
     }
     station = shipclass_mining_station
@@ -142,42 +151,45 @@ d_elerium_4 = {
 
     potential = {
         OR = {
+            is_planet_class = pc_methanum_uninhabitable
             is_planet_class = pc_methanum_gas_giant
             is_planet_class = pc_argonium_gas_giant
-            is_planet_class = pc_phosphorium_gas_giant
-            is_planet_class = pc_celestial_barren
-            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 0.5
+        weight = @deposit_low_drop_weight
 
         modifier = {
-            factor = 0.75
+            factor = 0.25
+            is_planet_class = pc_methanum_uninhabitable
+        }
+        modifier = {
+            factor = 0.5
             OR = {
-                is_planet_class = pc_methanum_gas_giant
                 is_planet_class = pc_argonium_gas_giant
-                is_planet_class = pc_phosphorium_gas_giant
+                is_planet_class = pc_mercurium_gas_giant
             }
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            is_planet_class = pc_methanum_gas_giant
         }
         modifier = {
             factor = 3.0
-            is_planet_class = pc_celestial_wet
+            is_inside_nebula = yes
         }
     }
 }
 
-d_elerium_5 = {
+d_itildeen_5 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            elerium = 5
-            society_research = 5
+            itildeen = 5
+            energy = 1
         }
     }
     station = shipclass_mining_station
@@ -185,32 +197,35 @@ d_elerium_5 = {
 
     potential = {
         OR = {
+            is_planet_class = pc_methanum_uninhabitable
             is_planet_class = pc_methanum_gas_giant
             is_planet_class = pc_argonium_gas_giant
-            is_planet_class = pc_phosphorium_gas_giant
-            is_planet_class = pc_celestial_barren
-            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 0.1
+        weight = @deposit_ultralow_drop_weight
 
         modifier = {
-            factor = 0.75
+            factor = 0.25
+            is_planet_class = pc_methanum_uninhabitable
+        }
+        modifier = {
+            factor = 0.5
             OR = {
-                is_planet_class = pc_methanum_gas_giant
                 is_planet_class = pc_argonium_gas_giant
-                is_planet_class = pc_phosphorium_gas_giant
+                is_planet_class = pc_mercurium_gas_giant
             }
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            is_planet_class = pc_methanum_gas_giant
         }
         modifier = {
             factor = 3.0
-            is_planet_class = pc_celestial_wet
+            is_inside_nebula = yes
         }
     }
 }

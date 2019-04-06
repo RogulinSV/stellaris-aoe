@@ -10,35 +10,21 @@ yuranic_expenditure_buffer = {
     }
 
     fraction = {
-        weight = 0.0
+        weight = 0.01
     }
 }
 
-yuranic_expenditure_ships = {
+yuranic_expenditure_trade = {
     resource = yuranic
     type = expenditure
-    category = ships
+    category = trade
 
     potential = {
         always = yes
     }
 
     fraction = {
-        weight = 0.10
-    }
-}
-
-yuranic_expenditure_ships_upgrades = {
-    resource = yuranic
-    type = expenditure
-    category = ship_upgrades
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.06
+        weight = 0.25
     }
 }
 
@@ -54,7 +40,7 @@ yuranic_expenditure_starbases = {
     }
 
     fraction = {
-        weight = 0.15
+        weight = 0.1
     }
 }
 
@@ -73,7 +59,7 @@ yuranic_expenditure_starbases_expand = {
     }
 
     fraction = {
-        weight = 0.4
+        weight = 0.1
     }
 }
 
@@ -88,7 +74,7 @@ yuranic_expenditure_stations_1 = {
     }
 
     fraction = {
-        weight = 0.15
+        weight = 0.1
     }
 }
 
@@ -104,7 +90,7 @@ yuranic_expenditure_stations_2 = {
     }
 
     fraction = {
-        weight = 0.075
+        weight = 0.05
     }
 }
 
@@ -134,7 +120,7 @@ yuranic_expenditure_stations_expand = {
     }
 
     fraction = {
-        weight = 0.35
+        weight = 0.1
     }
 }
 
@@ -150,21 +136,7 @@ yuranic_upkeep_buffer = {
     }
 
     fraction = {
-        weight = 0.25
-    }
-}
-
-yuranic_upkeep_ships = {
-    resource = yuranic
-    type = upkeep
-    category = ships
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.25
+        weight = 0.01
     }
 }
 
@@ -178,20 +150,6 @@ yuranic_upkeep_starbases = {
     }
 
     fraction = {
-        weight = 0.10
-    }
-}
-
-yuranic_upkeep_country = {
-    resource = yuranic
-    type = upkeep
-    category = country
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 1
+        weight = 0.1
     }
 }

@@ -10,131 +10,86 @@ adamantium_expenditure_buffer = {
     }
 
     fraction = {
-        weight = 0.0
+        weight = 0.01
     }
 }
 
-adamantium_expenditure_ships = {
+adamantium_expenditure_trade = {
     resource = adamantium
     type = expenditure
-    category = ships
+    category = trade
 
     potential = {
         always = yes
     }
 
     fraction = {
-        weight = 0.10
+        weight = 0.25
     }
 }
 
-adamantium_expenditure_ships_upgrades = {
+adamantium_expenditure_deposit_blockers = {
     resource = adamantium
     type = expenditure
-    category = ship_upgrades
+    category = deposit_blockers
+
+    potential = {
+        always = yes
+    }
+    
+    fraction = {
+        weight = 0.05
+    }
+
+    static_max = {
+        base = 1000
+    }
+}
+
+adamantium_expenditure_planets = {
+    resource = adamantium
+    type = expenditure
+    category = planets
 
     potential = {
         always = yes
     }
 
     fraction = {
-        weight = 0.06
+        weight = 0.05
     }
 }
 
-adamantium_expenditure_starbases = {
+adamantium_upkeep_planets = {
     resource = adamantium
-    type = expenditure
-    category = starbases
+    type = upkeep
+    category = planets
 
     potential = {
-        NOT = {
-            is_country_type = fallen_empire
-        }
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.1
+    }
+}
+
+adamantium_expenditure_megastructures = {
+    resource = adamantium
+    type = expenditure
+    category = megastructures
+
+    potential = {
+        is_at_war = no
+        has_galactic_wonders = yes
     }
 
     fraction = {
         weight = 0.15
     }
-}
 
-adamantium_expenditure_starbases_expand = {
-    resource = adamantium
-    type = expenditure
-    category = starbases
-
-    potential = {
-        has_ai_expansion_plan = yes
-        highest_threat < 50
-        NOT = {
-            is_country_type = fallen_empire
-            is_country_type = awakened_fallen_empire
-        }
-    }
-
-    fraction = {
-        weight = 0.4
-    }
-}
-
-adamantium_expenditure_stations_1 = {
-    resource = adamantium
-    type = expenditure
-    category = stations
-
-    potential = {
-        always = yes
-        resource_stockpile_compare = { resource = adamantium value < 800 }
-    }
-
-    fraction = {
-        weight = 0.15
-    }
-}
-
-adamantium_expenditure_stations_2 = {
-    resource = adamantium
-    type = expenditure
-    category = stations
-
-    potential = {
-        always = yes
-        resource_stockpile_compare = { resource = adamantium value >= 800 }
-        resource_stockpile_compare = { resource = adamantium value < 1200 }
-    }
-
-    fraction = {
-        weight = 0.075
-    }
-}
-
-adamantium_expenditure_stations_3 = {
-    resource = adamantium
-    type = expenditure
-    category = stations
-
-    potential = {
-        always = yes
-        resource_stockpile_compare = { resource = adamantium value >= 1200 }
-    }
-
-    fraction = {
-        weight = 0.005
-    }
-}
-
-adamantium_expenditure_stations_expand = {
-    resource = adamantium
-    type = expenditure
-    category = stations
-
-    potential = {
-        exploitable_planets > 2
-        resource_stockpile_compare = { resource = adamantium value < 800 }
-    }
-
-    fraction = {
-        weight = 0.35
+    static_max = {
+        base = 5000
     }
 }
 
@@ -150,48 +105,6 @@ adamantium_upkeep_buffer = {
     }
 
     fraction = {
-        weight = 0.25
-    }
-}
-
-adamantium_upkeep_ships = {
-    resource = adamantium
-    type = upkeep
-    category = ships
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.25
-    }
-}
-
-adamantium_upkeep_starbases = {
-    resource = adamantium
-    type = upkeep
-    category = starbases
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.10
-    }
-}
-
-adamantium_upkeep_country = {
-    resource = adamantium
-    type = upkeep
-    category = country
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 1
+        weight = 0.01
     }
 }

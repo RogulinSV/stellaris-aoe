@@ -1,0 +1,214 @@
+### Stalgrim Deposits
+
+d_stalgrim_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            stalgrim = 1
+            alloys = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_celestial_barren
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_mercurium_uninhabitable
+        }
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+}
+
+d_stalgrim_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            stalgrim = 2
+            alloys = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_celestial_barren
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_mercurium_uninhabitable
+        }
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+}
+
+d_stalgrim_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            stalgrim = 3
+            alloys = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_celestial_barren
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_mercurium_uninhabitable
+        }
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+}
+
+d_stalgrim_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            stalgrim = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_celestial_barren
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_mercurium_uninhabitable
+        }
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+}
+
+d_stalgrim_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            stalgrim = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_asteroid
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_celestial_barren
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 0.25
+            is_planet_class = pc_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_mercurium_uninhabitable
+        }
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+        modifier = {
+            factor = 3.0
+            is_planet_class = pc_metalline_uninhabitable
+        }
+    }
+}

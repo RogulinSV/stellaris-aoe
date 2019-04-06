@@ -1,11 +1,11 @@
-### Cobaltium Deposits
+### Yuranic Deposits
 
-d_cobaltium_1 = {
+d_yuranic_1 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            cobaltium = 1
-            alloys = 3
+            yuranic = 1
+            energy = 1
             minerals = 3
         }
     }
@@ -14,46 +14,42 @@ d_cobaltium_1 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
             is_planet_class = pc_ice_asteroid
             is_planet_class = pc_methanum_uninhabitable
-            is_planet_class = pc_metalline_uninhabitable
-            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
             is_planet_class = pc_celestial_cold
             is_planet_class = pc_celestial_frozen
         }
     }
 
     drop_weight = {
-        weight = 2.0
+        weight = @deposit_ultrahigh_drop_weight
 
         modifier = {
-            factor = 0.2
-            OR = {
-                is_planet_class = pc_asteroid
-                is_planet_class = pc_ice_asteroid
-            }
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_sulphureum_uninhabitable
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_methanum_uninhabitable
-                is_planet_class = pc_ammonium_uninhabitable
-            }
+            is_planet_class = pc_methanum_uninhabitable
         }
     }
 }
 
-d_cobaltium_2 = {
+d_yuranic_2 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            cobaltium = 2
-            alloys = 2
+            yuranic = 2
+            energy = 2
             minerals = 2
         }
     }
@@ -62,46 +58,42 @@ d_cobaltium_2 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
             is_planet_class = pc_ice_asteroid
             is_planet_class = pc_methanum_uninhabitable
-            is_planet_class = pc_metalline_uninhabitable
-            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
             is_planet_class = pc_celestial_cold
             is_planet_class = pc_celestial_frozen
         }
     }
 
     drop_weight = {
-        weight = 1.5
+        weight = @deposit_high_drop_weight
 
         modifier = {
-            factor = 0.2
-            OR = {
-                is_planet_class = pc_asteroid
-                is_planet_class = pc_ice_asteroid
-            }
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_sulphureum_uninhabitable
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_methanum_uninhabitable
-                is_planet_class = pc_ammonium_uninhabitable
-            }
+            is_planet_class = pc_methanum_uninhabitable
         }
     }
 }
 
-d_cobaltium_3 = {
+d_yuranic_3 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            cobaltium = 3
-            alloys = 1
+            yuranic = 3
+            energy = 3
             minerals = 1
         }
     }
@@ -110,45 +102,42 @@ d_cobaltium_3 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
             is_planet_class = pc_ice_asteroid
             is_planet_class = pc_methanum_uninhabitable
-            is_planet_class = pc_metalline_uninhabitable
-            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
             is_planet_class = pc_celestial_cold
             is_planet_class = pc_celestial_frozen
         }
     }
 
     drop_weight = {
-        weight = 1.0
+        weight = @deposit_medium_drop_weight
 
         modifier = {
-            factor = 0.2
-            OR = {
-                is_planet_class = pc_asteroid
-                is_planet_class = pc_ice_asteroid
-            }
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_sulphureum_uninhabitable
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_methanum_uninhabitable
-                is_planet_class = pc_ammonium_uninhabitable
-            }
+            is_planet_class = pc_methanum_uninhabitable
         }
     }
 }
 
-d_cobaltium_4 = {
+d_yuranic_4 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            cobaltium = 4
+            yuranic = 4
+            energy = 4
         }
     }
     station = shipclass_mining_station
@@ -156,45 +145,42 @@ d_cobaltium_4 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
             is_planet_class = pc_ice_asteroid
             is_planet_class = pc_methanum_uninhabitable
-            is_planet_class = pc_metalline_uninhabitable
-            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
             is_planet_class = pc_celestial_cold
             is_planet_class = pc_celestial_frozen
         }
     }
 
     drop_weight = {
-        weight = 0.5
+        weight = @deposit_low_drop_weight
 
         modifier = {
-            factor = 0.2
-            OR = {
-                is_planet_class = pc_asteroid
-                is_planet_class = pc_ice_asteroid
-            }
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_sulphureum_uninhabitable
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_methanum_uninhabitable
-                is_planet_class = pc_ammonium_uninhabitable
-            }
+            is_planet_class = pc_methanum_uninhabitable
         }
     }
 }
 
-d_cobaltium_5 = {
+d_yuranic_5 = {
     resources = {
         category = orbital_mining_deposits
         produces = {
-            cobaltium = 5
+            yuranic = 5
+            energy = 5
         }
     }
     station = shipclass_mining_station
@@ -202,36 +188,32 @@ d_cobaltium_5 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_asteroid
             is_planet_class = pc_ice_asteroid
             is_planet_class = pc_methanum_uninhabitable
-            is_planet_class = pc_metalline_uninhabitable
-            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
             is_planet_class = pc_celestial_cold
             is_planet_class = pc_celestial_frozen
         }
     }
 
     drop_weight = {
-        weight = 0.1
+        weight = @deposit_ultralow_drop_weight
 
         modifier = {
-            factor = 0.2
-            OR = {
-                is_planet_class = pc_asteroid
-                is_planet_class = pc_ice_asteroid
-            }
+            factor = 0.25
+            is_planet_class = pc_ice_asteroid
+        }
+        modifier = {
+            factor = 0.5
+            is_planet_class = pc_sulphureum_uninhabitable
         }
         modifier = {
             factor = 2.0
-            is_inside_nebula = yes
+            has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_methanum_uninhabitable
-                is_planet_class = pc_ammonium_uninhabitable
-            }
+            is_planet_class = pc_methanum_uninhabitable
         }
     }
 }

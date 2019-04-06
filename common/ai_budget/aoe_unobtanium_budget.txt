@@ -10,7 +10,7 @@ unobtanium_expenditure_buffer = {
     }
 
     fraction = {
-        weight = 0.0
+        weight = 0.01
     }
 }
 
@@ -28,83 +28,51 @@ unobtanium_expenditure_trade = {
     }
 }
 
-unobtanium_expenditure_colonies = {
+unobtanium_expenditure_ships_upgrades = {
     resource = unobtanium
     type = expenditure
-    category = trade
+    category = ship_upgrades
 
     potential = {
         always = yes
     }
 
-    fraction = {
-        weight = 0.25
-    }
-}
-
-unobtanium_expenditure_deposit_blockers = {
-    resource = unobtanium
-    type = expenditure
-    category = deposit_blockers
-
-    potential = {
-        always = yes
-    }
-    
     fraction = {
         weight = 0.05
     }
-
-    static_max = {
-        base = 1000
-    }
 }
 
-unobtanium_expenditure_planets = {
+unobtanium_expenditure_starbases_expand = {
     resource = unobtanium
     type = expenditure
-    category = planets
+    category = starbases
 
     potential = {
-        always = yes
+        has_ai_expansion_plan = yes
+        highest_threat < 50
+        NOT = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
     }
 
     fraction = {
-        weight = 0.15
+        weight = 0.05
     }
 }
 
-unobtanium_upkeep_planets = {
-    resource = unobtanium
-    type = upkeep
-    category = planets
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.25
-    }
-}
-
-unobtanium_expenditure_megastructures = {
+unobtanium_expenditure_stations_expand = {
     resource = unobtanium
     type = expenditure
-    category = megastructures
+    category = stations
 
     potential = {
-        is_country_type = default
-        is_at_war = no
-        has_galactic_wonders = yes
+        exploitable_planets > 2
+        resource_stockpile_compare = { resource = unobtanium value < 800 }
     }
 
     fraction = {
-        weight = 0.15
-    }
-
-    static_max = {
-        base = 6000
+        weight = 0.05
     }
 }
 
@@ -120,20 +88,34 @@ unobtanium_upkeep_buffer = {
     }
 
     fraction = {
-        weight = 0.25
+        weight = 0.01
     }
 }
 
-unobtanium_upkeep_country = {
+unobtanium_upkeep_ships = {
     resource = unobtanium
     type = upkeep
-    category = country
+    category = ships
 
     potential = {
         always = yes
     }
 
     fraction = {
-        weight = 1
+        weight = 0.1
+    }
+}
+
+unobtanium_upkeep_starbases = {
+    resource = unobtanium
+    type = upkeep
+    category = starbases
+
+    potential = {
+        always = yes
+    }
+
+    fraction = {
+        weight = 0.1
     }
 }

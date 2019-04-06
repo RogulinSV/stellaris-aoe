@@ -13,32 +13,35 @@ d_satramene_1 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_gas_giant
+            is_planet_class = pc_carbonium_uninhabitable
             is_planet_class = pc_carbonium_gas_giant
-            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
             is_planet_class = pc_ammonium_gas_giant
             is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 2.0
+        weight = @deposit_ultrahigh_drop_weight
 
         modifier = {
-            factor = 0.2
-            is_planet_class = pc_gas_giant
+            factor = 0.25
+            is_planet_class = pc_carbonium_uninhabitable
         }
         modifier = {
-            factor = 2.0
-            is_inside_nebula = yes
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_phosphorium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
+            }
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_carbonium_gas_giant
-                is_planet_class = pc_ammonium_gas_giant
-                is_planet_class = pc_nitrogenium_gas_giant
-            }
+            is_planet_class = pc_carbonium_gas_giant
+        }
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
         }
     }
 }
@@ -56,32 +59,35 @@ d_satramene_2 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_gas_giant
+            is_planet_class = pc_carbonium_uninhabitable
             is_planet_class = pc_carbonium_gas_giant
-            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
             is_planet_class = pc_ammonium_gas_giant
             is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 1.5
+        weight = @deposit_high_drop_weight
 
         modifier = {
-            factor = 0.2
-            is_planet_class = pc_gas_giant
+            factor = 0.25
+            is_planet_class = pc_carbonium_uninhabitable
         }
         modifier = {
-            factor = 2.0
-            is_inside_nebula = yes
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_phosphorium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
+            }
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_carbonium_gas_giant
-                is_planet_class = pc_ammonium_gas_giant
-                is_planet_class = pc_nitrogenium_gas_giant
-            }
+            is_planet_class = pc_carbonium_gas_giant
+        }
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
         }
     }
 }
@@ -99,32 +105,35 @@ d_satramene_3 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_gas_giant
+            is_planet_class = pc_carbonium_uninhabitable
             is_planet_class = pc_carbonium_gas_giant
-            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
             is_planet_class = pc_ammonium_gas_giant
             is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 1.0
+        weight = @deposit_medium_drop_weight
 
         modifier = {
-            factor = 0.2
-            is_planet_class = pc_gas_giant
+            factor = 0.25
+            is_planet_class = pc_carbonium_uninhabitable
         }
         modifier = {
-            factor = 2.0
-            is_inside_nebula = yes
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_phosphorium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
+            }
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_carbonium_gas_giant
-                is_planet_class = pc_ammonium_gas_giant
-                is_planet_class = pc_nitrogenium_gas_giant
-            }
+            is_planet_class = pc_carbonium_gas_giant
+        }
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
         }
     }
 }
@@ -142,32 +151,35 @@ d_satramene_4 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_gas_giant
+            is_planet_class = pc_carbonium_uninhabitable
             is_planet_class = pc_carbonium_gas_giant
-            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
             is_planet_class = pc_ammonium_gas_giant
             is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 0.5
+        weight = @deposit_low_drop_weight
 
         modifier = {
-            factor = 0.2
-            is_planet_class = pc_gas_giant
+            factor = 0.25
+            is_planet_class = pc_carbonium_uninhabitable
         }
         modifier = {
-            factor = 2.0
-            is_inside_nebula = yes
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_phosphorium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
+            }
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_carbonium_gas_giant
-                is_planet_class = pc_ammonium_gas_giant
-                is_planet_class = pc_nitrogenium_gas_giant
-            }
+            is_planet_class = pc_carbonium_gas_giant
+        }
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
         }
     }
 }
@@ -185,32 +197,35 @@ d_satramene_5 = {
 
     potential = {
         OR = {
-            is_planet_class = pc_gas_giant
+            is_planet_class = pc_carbonium_uninhabitable
             is_planet_class = pc_carbonium_gas_giant
-            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
             is_planet_class = pc_ammonium_gas_giant
             is_planet_class = pc_celestial_gas_giant
         }
     }
 
     drop_weight = {
-        weight = 0.1
+        weight = @deposit_ultralow_drop_weight
 
         modifier = {
-            factor = 0.2
-            is_planet_class = pc_gas_giant
+            factor = 0.25
+            is_planet_class = pc_carbonium_uninhabitable
         }
         modifier = {
-            factor = 2.0
-            is_inside_nebula = yes
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_phosphorium_gas_giant
+                is_planet_class = pc_ammonium_gas_giant
+            }
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_carbonium_gas_giant
-                is_planet_class = pc_ammonium_gas_giant
-                is_planet_class = pc_nitrogenium_gas_giant
-            }
+            is_planet_class = pc_carbonium_gas_giant
+        }
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
         }
     }
 }

@@ -10,7 +10,7 @@ stalgrim_expenditure_buffer = {
     }
 
     fraction = {
-        weight = 0.0
+        weight = 0.01
     }
 }
 
@@ -25,114 +25,6 @@ stalgrim_expenditure_trade = {
 
     fraction = {
         weight = 0.25
-    }
-}
-
-stalgrim_expenditure_colonies = {
-    resource = stalgrim
-    type = expenditure
-    category = trade
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.25
-    }
-}
-
-stalgrim_expenditure_deposit_blockers = {
-    resource = stalgrim
-    type = expenditure
-    category = deposit_blockers
-
-    potential = {
-        always = yes
-    }
-    
-    fraction = {
-        weight = 0.05
-    }
-
-    static_max = {
-        base = 1000
-    }
-}
-
-stalgrim_expenditure_planets = {
-    resource = stalgrim
-    type = expenditure
-    category = planets
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.15
-    }
-}
-
-stalgrim_upkeep_planets = {
-    resource = stalgrim
-    type = upkeep
-    category = planets
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.25
-    }
-}
-
-stalgrim_expenditure_megastructures = {
-    resource = stalgrim
-    type = expenditure
-    category = megastructures
-
-    potential = {
-        is_country_type = default
-        is_at_war = no
-        has_galactic_wonders = yes
-    }
-
-    fraction = {
-        weight = 0.15
-    }
-
-    static_max = {
-        base = 6000
-    }
-}
-
-stalgrim_expenditure_ships = {
-    resource = stalgrim
-    type = expenditure
-    category = ships
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.10
-    }
-}
-
-stalgrim_expenditure_ships_upgrades = {
-    resource = stalgrim
-    type = expenditure
-    category = ship_upgrades
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.06
     }
 }
 
@@ -167,7 +59,7 @@ stalgrim_expenditure_starbases_expand = {
     }
 
     fraction = {
-        weight = 0.4
+        weight = 0.15
     }
 }
 
@@ -182,7 +74,7 @@ stalgrim_expenditure_stations_1 = {
     }
 
     fraction = {
-        weight = 0.15
+        weight = 0.1
     }
 }
 
@@ -198,7 +90,7 @@ stalgrim_expenditure_stations_2 = {
     }
 
     fraction = {
-        weight = 0.075
+        weight = 0.05
     }
 }
 
@@ -228,7 +120,7 @@ stalgrim_expenditure_stations_expand = {
     }
 
     fraction = {
-        weight = 0.35
+        weight = 0.15
     }
 }
 
@@ -244,21 +136,7 @@ stalgrim_upkeep_buffer = {
     }
 
     fraction = {
-        weight = 0.25
-    }
-}
-
-stalgrim_upkeep_ships = {
-    resource = stalgrim
-    type = upkeep
-    category = ships
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 0.25
+        weight = 0.01
     }
 }
 
@@ -272,20 +150,6 @@ stalgrim_upkeep_starbases = {
     }
 
     fraction = {
-        weight = 0.10
-    }
-}
-
-stalgrim_upkeep_country = {
-    resource = stalgrim
-    type = upkeep
-    category = country
-
-    potential = {
-        always = yes
-    }
-
-    fraction = {
-        weight = 1
+        weight = 0.15
     }
 }
