@@ -97,16 +97,8 @@ tech_crystalline_sculpting = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_crystalline_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_crystalline_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "crystalline_worlds_surveyed"
             }
         }
         modifier = {
@@ -120,7 +112,7 @@ tech_crystalline_sculpting = {
             has_ascension_perk = "ap_mastery_of_nature"
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
@@ -152,16 +144,8 @@ tech_crystalline_sculpting = {
     ai_weight = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_crystalline_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_crystalline_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "crystalline_worlds_surveyed"
             }
         }
         modifier = {
@@ -171,7 +155,7 @@ tech_crystalline_sculpting = {
             }
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
     }
@@ -207,16 +191,8 @@ tech_metalline_sculpting = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_metalline_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_metalline_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "metalline_worlds_surveyed"
             }
         }
         modifier = {
@@ -230,7 +206,7 @@ tech_metalline_sculpting = {
             has_ascension_perk = "ap_mastery_of_nature"
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
@@ -262,16 +238,8 @@ tech_metalline_sculpting = {
     ai_weight = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_metalline_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_metalline_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "metalline_worlds_surveyed"
             }
         }
         modifier = {
@@ -281,7 +249,7 @@ tech_metalline_sculpting = {
             }
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
     }
@@ -317,16 +285,8 @@ tech_methanum_sculpting = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_methanum_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_methanum_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "methanum_worlds_surveyed"
             }
         }
         modifier = {
@@ -340,7 +300,7 @@ tech_methanum_sculpting = {
             has_ascension_perk = "ap_mastery_of_nature"
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
@@ -372,16 +332,8 @@ tech_methanum_sculpting = {
     ai_weight = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_methanum_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_methanum_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "methanum_worlds_surveyed"
             }
         }
         modifier = {
@@ -391,7 +343,7 @@ tech_methanum_sculpting = {
             }
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
     }
@@ -427,16 +379,8 @@ tech_carbonium_sculpting = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_carbonium_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_carbonium_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "carbonium_worlds_surveyed"
             }
         }
         modifier = {
@@ -450,7 +394,7 @@ tech_carbonium_sculpting = {
             has_ascension_perk = "ap_mastery_of_nature"
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
@@ -482,16 +426,8 @@ tech_carbonium_sculpting = {
     ai_weight = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_carbonium_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_carbonium_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "carbonium_worlds_surveyed"
             }
         }
         modifier = {
@@ -501,7 +437,7 @@ tech_carbonium_sculpting = {
             }
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
     }
@@ -537,16 +473,8 @@ tech_nitrogenium_sculpting = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_nitrogenium_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_nitrogenium_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "nitrogenium_worlds_surveyed"
             }
         }
         modifier = {
@@ -560,7 +488,7 @@ tech_nitrogenium_sculpting = {
             has_ascension_perk = "ap_mastery_of_nature"
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
@@ -592,16 +520,8 @@ tech_nitrogenium_sculpting = {
     ai_weight = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_nitrogenium_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_nitrogenium_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "nitrogenium_worlds_surveyed"
             }
         }
         modifier = {
@@ -611,7 +531,7 @@ tech_nitrogenium_sculpting = {
             }
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
     }
@@ -647,16 +567,8 @@ tech_sulphureum_sculpting = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_sulphureum_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_sulphureum_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "sulphureum_worlds_surveyed"
             }
         }
         modifier = {
@@ -670,7 +582,7 @@ tech_sulphureum_sculpting = {
             has_ascension_perk = "ap_mastery_of_nature"
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
@@ -702,16 +614,8 @@ tech_sulphureum_sculpting = {
     ai_weight = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_sulphureum_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_sulphureum_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "sulphureum_worlds_surveyed"
             }
         }
         modifier = {
@@ -721,7 +625,7 @@ tech_sulphureum_sculpting = {
             }
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
     }
@@ -757,16 +661,8 @@ tech_argonium_sculpting = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_argonium_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_argonium_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "argonium_worlds_surveyed"
             }
         }
         modifier = {
@@ -780,7 +676,7 @@ tech_argonium_sculpting = {
             has_ascension_perk = "ap_mastery_of_nature"
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
@@ -812,16 +708,8 @@ tech_argonium_sculpting = {
     ai_weight = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_argonium_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_argonium_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "argonium_worlds_surveyed"
             }
         }
         modifier = {
@@ -831,7 +719,7 @@ tech_argonium_sculpting = {
             }
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
     }
@@ -867,16 +755,8 @@ tech_phosphorium_sculpting = {
     weight_modifier = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_phosphorium_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_phosphorium_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "phosphorium_worlds_surveyed"
             }
         }
         modifier = {
@@ -890,7 +770,7 @@ tech_phosphorium_sculpting = {
             has_ascension_perk = "ap_mastery_of_nature"
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
@@ -922,16 +802,8 @@ tech_phosphorium_sculpting = {
     ai_weight = {
         modifier = {
             factor = 0
-            check_variable = {
-                which = "get_planet_phosphorium_surveyed_count"
-                value < 5
-            }
-        }
-        modifier = {
-            factor = 0.5
-            check_variable = {
-                which = "get_planet_phosphorium_surveyed_count"
-                value < 10
+            NOT = {
+                has_country_flag = "phosphorium_worlds_surveyed"
             }
         }
         modifier = {
@@ -941,7 +813,383 @@ tech_phosphorium_sculpting = {
             }
         }
         modifier = {
-            factor = 0.75
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_ammonium_sculpting = {
+    cost = @technology_medium_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_ammonium_sculpting_title"
+            desc = "tech_ammonium_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "ammonium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "ammonium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_mercurium_sculpting = {
+    cost = @technology_medium_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mercurium_sculpting_title"
+            desc = "tech_mercurium_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "mercurium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "mercurium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_barium_sculpting = {
+    cost = @technology_medium_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_barium_sculpting_title"
+            desc = "tech_barium_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "barium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "barium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_celestial_sculpting = {
+    cost = @technology_medium_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier2weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_celestial_sculpting_title"
+            desc = "tech_celestial_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "celestial_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "celestial_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_expansion_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
     }

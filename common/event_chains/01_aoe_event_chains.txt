@@ -1,0 +1,180 @@
+crystalline_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_crystalline_worlds"
+    counter = {
+        crystalline_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        crystalline_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
+metalline_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_metalline_worlds"
+    counter = {
+        metalline_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        metalline_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
+methanum_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_methanum_worlds"
+    counter = {
+        methanum_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        methanum_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
+carbonium_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_carbonium_worlds"
+    counter = {
+        carbonium_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        carbonium_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
+nitrogenium_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_nitrogenium_worlds"
+    counter = {
+        nitrogenium_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        nitrogenium_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
+sulphureum_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_sulphureum_worlds"
+    counter = {
+        sulphureum_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        sulphureum_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
+argonium_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_argonium_worlds"
+    counter = {
+        argonium_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        argonium_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
+phosphorium_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_phosphorium_worlds"
+    counter = {
+        phosphorium_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        phosphorium_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
+ammonium_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_ammonium_worlds"
+    counter = {
+        ammonium_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        ammonium_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
+mercurium_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_mercurium_worlds"
+    counter = {
+        mercurium_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        mercurium_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
+barium_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_barium_worlds"
+    counter = {
+        barium_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        barium_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
+celestial_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = "GFX_aoe_celestial_worlds"
+    counter = {
+        celestial_barren_worlds_surveyed = {
+            max = 7
+        }
+        celestial_hot_worlds_surveyed = {
+            max = 7
+        }
+        celestial_wet_worlds_surveyed = {
+            max = 7
+        }
+        celestial_molten_worlds_surveyed = {
+            max = 7
+        }
+        celestial_cold_worlds_surveyed = {
+            max = 7
+        }
+        celestial_frozen_worlds_surveyed = {
+            max = 7
+        }
+        celestial_gas_giant_worlds_surveyed = {
+            max = 13
+        }
+    }
+}
+
+# %RESOURCE%_worlds_chain = {
+#     icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+#     picture = "GFX_aoe_%RESOURCE%_worlds"
+#     counter = {
+#         %RESOURCE%_worlds_surveyed = {
+#             max = 10
+#         }
+#     }
+# }
