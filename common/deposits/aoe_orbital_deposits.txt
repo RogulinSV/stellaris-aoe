@@ -1,4 +1,5 @@
-# Energy Deposits
+### Energy Deposits
+
 d_energy_100 = {
     resources = {
         category = orbital_mining_deposits
@@ -227,7 +228,523 @@ d_energy_15 = {
     }
 }
 
-# Minerals Deposits
+d_energy_uninhabitable_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_energy_uninhabitable_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_energy_uninhabitable_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_energy_uninhabitable_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_energy_uninhabitable_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_energy_celestial_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_energy_celestial_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_energy_celestial_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_energy_celestial_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_energy_celestial_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_energy_gas_giant_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_metalline_gas_giant
+            is_planet_class = pc_methanum_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_argonium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_barium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
+        }
+    }
+}
+
+d_energy_gas_giant_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_metalline_gas_giant
+            is_planet_class = pc_methanum_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_argonium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_barium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
+        }
+    }
+}
+
+d_energy_gas_giant_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_metalline_gas_giant
+            is_planet_class = pc_methanum_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_argonium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_barium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
+        }
+    }
+}
+
+d_energy_gas_giant_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_metalline_gas_giant
+            is_planet_class = pc_methanum_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_argonium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_barium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
+        }
+    }
+}
+
+d_energy_gas_giant_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            energy = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_metalline_gas_giant
+            is_planet_class = pc_methanum_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_argonium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_barium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
+        }
+    }
+}
+
+### Minerals Deposits
+
 d_minerals_100 = {
     resources = {
         category = orbital_mining_deposits
@@ -402,7 +919,1189 @@ d_minerals_15 = {
     }
 }
 
-# Unity Deposits
+d_minerals_uninhabitable_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            minerals = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_minerals_uninhabitable_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            minerals = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_minerals_uninhabitable_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            minerals = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_minerals_uninhabitable_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            minerals = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_minerals_uninhabitable_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            minerals = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_minerals_celestial_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            minerals = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_minerals_celestial_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            minerals = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_minerals_celestial_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            minerals = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_minerals_celestial_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            minerals = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_minerals_celestial_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            minerals = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+### Physics Research
+
+d_physics_uninhabitable_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            physics_research = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_physics_uninhabitable_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            physics_research = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_physics_uninhabitable_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            physics_research = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_physics_uninhabitable_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            physics_research = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_physics_uninhabitable_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            physics_research = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_physics_celestial_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            physics_research = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_physics_celestial_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            physics_research = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_physics_celestial_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            physics_research = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_physics_celestial_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            physics_research = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_physics_celestial_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            physics_research = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+### Engineering Research
+
+d_engineering_uninhabitable_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            engineering_research = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_engineering_uninhabitable_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            engineering_research = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_engineering_uninhabitable_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            engineering_research = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_engineering_uninhabitable_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            engineering_research = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_engineering_uninhabitable_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            engineering_research = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_uninhabitable
+            is_planet_class = pc_metalline_uninhabitable
+            is_planet_class = pc_methanum_uninhabitable
+            is_planet_class = pc_carbonium_uninhabitable
+            is_planet_class = pc_nitrogenium_uninhabitable
+            is_planet_class = pc_sulphureum_uninhabitable
+            is_planet_class = pc_argonium_uninhabitable
+            is_planet_class = pc_phosphorium_uninhabitable
+            is_planet_class = pc_ammonium_uninhabitable
+            is_planet_class = pc_mercurium_uninhabitable
+            is_planet_class = pc_barium_uninhabitable
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 3.0
+            has_distar = yes
+        }
+    }
+}
+
+d_engineering_celestial_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            engineering_research = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_engineering_celestial_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            engineering_research = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_engineering_celestial_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            engineering_research = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_engineering_celestial_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            engineering_research = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+d_engineering_celestial_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            engineering_research = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_celestial_hot
+            is_planet_class = pc_celestial_molten
+            is_planet_class = pc_celestial_wet
+            is_planet_class = pc_celestial_cold
+            is_planet_class = pc_celestial_frozen
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 2.0
+            has_distar = yes
+        }
+    }
+}
+
+### Society Research
+
+d_society_gas_giant_1 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            society_research = 1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_metalline_gas_giant
+            is_planet_class = pc_methanum_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_argonium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_barium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultrahigh_drop_weight
+
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
+        }
+    }
+}
+
+d_society_gas_giant_2 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            society_research = 2
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_metalline_gas_giant
+            is_planet_class = pc_methanum_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_argonium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_barium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
+        }
+    }
+}
+
+d_society_gas_giant_3 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            society_research = 3
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_metalline_gas_giant
+            is_planet_class = pc_methanum_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_argonium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_barium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
+        }
+    }
+}
+
+d_society_gas_giant_4 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            society_research = 4
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_metalline_gas_giant
+            is_planet_class = pc_methanum_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_argonium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_barium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
+        }
+    }
+}
+
+d_society_gas_giant_5 = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            society_research = 5
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizeable = no
+
+    potential = {
+        OR = {
+            is_planet_class = pc_crystalline_gas_giant
+            is_planet_class = pc_metalline_gas_giant
+            is_planet_class = pc_methanum_gas_giant
+            is_planet_class = pc_carbonium_gas_giant
+            is_planet_class = pc_nitrogenium_gas_giant
+            is_planet_class = pc_sulphureum_gas_giant
+            is_planet_class = pc_argonium_gas_giant
+            is_planet_class = pc_phosphorium_gas_giant
+            is_planet_class = pc_ammonium_gas_giant
+            is_planet_class = pc_mercurium_gas_giant
+            is_planet_class = pc_barium_gas_giant
+            is_planet_class = pc_celestial_gas_giant
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_ultralow_drop_weight
+
+        modifier = {
+            factor = 3.0
+            is_inside_nebula = yes
+        }
+    }
+}
+
+### Unity Deposits
+
 d_unity_5 = {
     resources = {
         category = orbital_mining_deposits
@@ -479,7 +2178,8 @@ d_unity_10 = {
     }
 }
 
-# Trade Value Deposits
+### Trade Value Deposits
+
 d_trade_value_15 = {
     planet_modifier = {
         trade_value_add = 15
@@ -506,7 +2206,8 @@ d_trade_value_15 = {
     }
 }
 
-# Alloys Deposits
+### Alloys Deposits
+
 d_alloys_5 = {
     resources = {
         category = orbital_mining_deposits
@@ -583,7 +2284,8 @@ d_alloys_10 = {
     }
 }
 
-# Volatile Motes Deposits
+### Volatile Motes Deposits
+
 d_volatile_motes_10 = {
     resources = {
         category = orbital_mining_deposits
@@ -638,7 +2340,8 @@ d_volatile_motes_15 = {
     }
 }
 
-# Exotic Gases Deposits
+### Exotic Gases Deposits
+
 d_exotic_gases_10 = {
     resources = {
         category = orbital_mining_deposits
@@ -687,7 +2390,8 @@ d_exotic_gases_15 = {
     }
 }
 
-# Rare Crystals Deposits
+### Rare Crystals Deposits
+
 d_rare_crystals_10 = {
     resources = {
         category = orbital_mining_deposits
