@@ -32,15 +32,19 @@ d_corenite_1 = {
             is_planet_class = pc_asteroid
         }
         modifier = {
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_celestial_hot
+                is_planet_class = pc_celestial_molten
+            }
+        }
+        modifier = {
             factor = 2.0
             has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_argonium_uninhabitable
-                is_planet_class = pc_mercurium_uninhabitable
-            }
+            is_planet_class = pc_mercurium_uninhabitable
         }
     }
 }
@@ -77,15 +81,19 @@ d_corenite_2 = {
             is_planet_class = pc_asteroid
         }
         modifier = {
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_celestial_hot
+                is_planet_class = pc_celestial_molten
+            }
+        }
+        modifier = {
             factor = 2.0
             has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_argonium_uninhabitable
-                is_planet_class = pc_mercurium_uninhabitable
-            }
+            is_planet_class = pc_mercurium_uninhabitable
         }
     }
 }
@@ -122,15 +130,19 @@ d_corenite_3 = {
             is_planet_class = pc_asteroid
         }
         modifier = {
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_celestial_hot
+                is_planet_class = pc_celestial_molten
+            }
+        }
+        modifier = {
             factor = 2.0
             has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_argonium_uninhabitable
-                is_planet_class = pc_mercurium_uninhabitable
-            }
+            is_planet_class = pc_mercurium_uninhabitable
         }
     }
 }
@@ -167,15 +179,19 @@ d_corenite_4 = {
             is_planet_class = pc_asteroid
         }
         modifier = {
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_celestial_hot
+                is_planet_class = pc_celestial_molten
+            }
+        }
+        modifier = {
             factor = 2.0
             has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_argonium_uninhabitable
-                is_planet_class = pc_mercurium_uninhabitable
-            }
+            is_planet_class = pc_mercurium_uninhabitable
         }
     }
 }
@@ -212,15 +228,19 @@ d_corenite_5 = {
             is_planet_class = pc_asteroid
         }
         modifier = {
+            factor = 0.5
+            OR = {
+                is_planet_class = pc_celestial_hot
+                is_planet_class = pc_celestial_molten
+            }
+        }
+        modifier = {
             factor = 2.0
             has_distar = yes
         }
         modifier = {
             factor = 3.0
-            OR = {
-                is_planet_class = pc_argonium_uninhabitable
-                is_planet_class = pc_mercurium_uninhabitable
-            }
+            is_planet_class = pc_mercurium_uninhabitable
         }
     }
 }
