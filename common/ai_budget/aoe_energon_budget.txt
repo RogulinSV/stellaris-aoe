@@ -58,22 +58,6 @@ energon_expenditure_ships = {
     }
 }
 
-energon_expenditure_starbases = {
-    resource = energon
-    type = expenditure
-    category = starbases
-
-    potential = {
-        NOT = {
-            is_country_type = fallen_empire
-        }
-    }
-
-    fraction = {
-        weight = 0.05
-    }
-}
-
 energon_expenditure_colonies = {
     resource = energon
     type = expenditure
