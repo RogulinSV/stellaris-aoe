@@ -17,4 +17,8 @@
     aoe_begin_actions.13.a.tooltip:0 "Запустить инициативу научного превосходства"
     aoe_begin_actions.13.b:0 "Запустить программу научного превосходства"
     aoe_begin_actions.13.b.tooltip:0 "Запустить программу научного превосходства"
+    aoe_begin_actions.14.title:0 "Биологическое превосходство"
+    aoe_begin_actions.14.desc:0 "Биологическое превосходство"
+    aoe_begin_actions.14.a:0 "Применить мутацию биологического превосходства"
+    aoe_begin_actions.14.a.tooltip:0 "Применить мутацию биологического превосходства"
     aoe_begin_actions.decline:0 "Отказаться"

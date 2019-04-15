@@ -23,6 +23,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_crystalline"
                 is_planet_class = "pc_crystalline_uninhabitable"
                 is_planet_class = "pc_crystalline_gas_giant"
             }
@@ -66,6 +67,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_crystalline"
                 is_planet_class = "pc_crystalline_uninhabitable"
                 is_planet_class = "pc_crystalline_gas_giant"
             }
@@ -76,7 +78,37 @@ ship_event = {
         if = {
             limit = {
                 from = {
+                    is_planet_class = "pc_crystalline"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "crystalline_worlds_chain"
+                            counter = "crystalline_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "crystalline_worlds_chain"
+                    counter = "crystalline_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
                     is_planet_class = "pc_crystalline_uninhabitable"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "crystalline_worlds_chain"
+                            counter = "crystalline_uninhabitable_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -92,6 +124,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_crystalline_gas_giant"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "crystalline_worlds_chain"
+                            counter = "crystalline_gas_giant_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -105,6 +145,10 @@ ship_event = {
         if = {
             limit = {
                 owner = {
+                    has_completed_event_chain_counter = {
+                        event_chain = "crystalline_worlds_chain"
+                        counter = "crystalline_worlds_surveyed"
+                    }
                     has_completed_event_chain_counter = {
                         event_chain = "crystalline_worlds_chain"
                         counter = "crystalline_uninhabitable_worlds_surveyed"
@@ -174,6 +218,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_metalline"
                 is_planet_class = "pc_metalline_uninhabitable"
                 is_planet_class = "pc_metalline_gas_giant"
             }
@@ -217,6 +262,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_metalline"
                 is_planet_class = "pc_metalline_uninhabitable"
                 is_planet_class = "pc_metalline_gas_giant"
             }
@@ -227,7 +273,37 @@ ship_event = {
         if = {
             limit = {
                 from = {
+                    is_planet_class = "pc_metalline"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "metalline_worlds_chain"
+                            counter = "metalline_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "metalline_worlds_chain"
+                    counter = "metalline_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
                     is_planet_class = "pc_metalline_uninhabitable"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "metalline_worlds_chain"
+                            counter = "metalline_uninhabitable_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -243,6 +319,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_metalline_gas_giant"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "metalline_worlds_chain"
+                            counter = "metalline_gas_giant_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -256,6 +340,10 @@ ship_event = {
         if = {
             limit = {
                 owner = {
+                    has_completed_event_chain_counter = {
+                        event_chain = "metalline_worlds_chain"
+                        counter = "metalline_worlds_surveyed"
+                    }
                     has_completed_event_chain_counter = {
                         event_chain = "metalline_worlds_chain"
                         counter = "metalline_uninhabitable_worlds_surveyed"
@@ -325,6 +413,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_methanum"
                 is_planet_class = "pc_methanum_uninhabitable"
                 is_planet_class = "pc_methanum_gas_giant"
             }
@@ -368,6 +457,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_methanum"
                 is_planet_class = "pc_methanum_uninhabitable"
                 is_planet_class = "pc_methanum_gas_giant"
             }
@@ -378,7 +468,37 @@ ship_event = {
         if = {
             limit = {
                 from = {
+                    is_planet_class = "pc_methanum"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "methanum_worlds_chain"
+                            counter = "methanum_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "methanum_worlds_chain"
+                    counter = "methanum_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
                     is_planet_class = "pc_methanum_uninhabitable"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "methanum_worlds_chain"
+                            counter = "methanum_uninhabitable_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -394,6 +514,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_methanum_gas_giant"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "methanum_worlds_chain"
+                            counter = "methanum_gas_giant_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -407,6 +535,10 @@ ship_event = {
         if = {
             limit = {
                 owner = {
+                    has_completed_event_chain_counter = {
+                        event_chain = "methanum_worlds_chain"
+                        counter = "methanum_worlds_surveyed"
+                    }
                     has_completed_event_chain_counter = {
                         event_chain = "methanum_worlds_chain"
                         counter = "methanum_uninhabitable_worlds_surveyed"
@@ -531,6 +663,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_carbonium_uninhabitable"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "carbonium_worlds_chain"
+                            counter = "carbonium_uninhabitable_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -544,6 +684,14 @@ ship_event = {
             limit = {
                 from = {
                     is_planet_class = "pc_carbonium_gas_giant"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "carbonium_worlds_chain"
+                            counter = "carbonium_gas_giant_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -682,6 +830,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_nitrogenium_uninhabitable"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "nitrogenium_worlds_chain"
+                            counter = "nitrogenium_uninhabitable_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -695,6 +851,14 @@ ship_event = {
             limit = {
                 from = {
                     is_planet_class = "pc_nitrogenium_gas_giant"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "nitrogenium_worlds_chain"
+                            counter = "nitrogenium_gas_giant_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -833,6 +997,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_sulphureum_uninhabitable"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "sulphureum_worlds_chain"
+                            counter = "sulphureum_uninhabitable_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -846,6 +1018,14 @@ ship_event = {
             limit = {
                 from = {
                     is_planet_class = "pc_sulphureum_gas_giant"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "sulphureum_worlds_chain"
+                            counter = "sulphureum_gas_giant_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -984,6 +1164,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_argonium_uninhabitable"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "argonium_worlds_chain"
+                            counter = "argonium_uninhabitable_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -997,6 +1185,14 @@ ship_event = {
             limit = {
                 from = {
                     is_planet_class = "pc_argonium_gas_giant"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "argonium_worlds_chain"
+                            counter = "argonium_gas_giant_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -1135,6 +1331,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_phosphorium_uninhabitable"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "phosphorium_worlds_chain"
+                            counter = "phosphorium_uninhabitable_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -1148,6 +1352,14 @@ ship_event = {
             limit = {
                 from = {
                     is_planet_class = "pc_phosphorium_gas_giant"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "phosphorium_worlds_chain"
+                            counter = "phosphorium_gas_giant_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -1286,6 +1498,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_ammonium_uninhabitable"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "ammonium_worlds_chain"
+                            counter = "ammonium_uninhabitable_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -1299,6 +1519,14 @@ ship_event = {
             limit = {
                 from = {
                     is_planet_class = "pc_ammonium_gas_giant"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "ammonium_worlds_chain"
+                            counter = "ammonium_gas_giant_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -1437,6 +1665,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_mercurium_uninhabitable"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "mercurium_worlds_chain"
+                            counter = "mercurium_uninhabitable_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -1450,6 +1686,14 @@ ship_event = {
             limit = {
                 from = {
                     is_planet_class = "pc_mercurium_gas_giant"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "mercurium_worlds_chain"
+                            counter = "mercurium_gas_giant_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -1533,6 +1777,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_barium"
                 is_planet_class = "pc_barium_uninhabitable"
                 is_planet_class = "pc_barium_gas_giant"
             }
@@ -1576,6 +1821,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_barium"
                 is_planet_class = "pc_barium_uninhabitable"
                 is_planet_class = "pc_barium_gas_giant"
             }
@@ -1586,7 +1832,37 @@ ship_event = {
         if = {
             limit = {
                 from = {
+                    is_planet_class = "pc_barium"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "barium_worlds_chain"
+                            counter = "barium_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "barium_worlds_chain"
+                    counter = "barium_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
                     is_planet_class = "pc_barium_uninhabitable"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "barium_worlds_chain"
+                            counter = "barium_uninhabitable_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -1602,6 +1878,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_barium_gas_giant"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "barium_worlds_chain"
+                            counter = "barium_gas_giant_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -1615,6 +1899,10 @@ ship_event = {
         if = {
             limit = {
                 owner = {
+                    has_completed_event_chain_counter = {
+                        event_chain = "barium_worlds_chain"
+                        counter = "barium_worlds_surveyed"
+                    }
                     has_completed_event_chain_counter = {
                         event_chain = "barium_worlds_chain"
                         counter = "barium_uninhabitable_worlds_surveyed"
@@ -1749,6 +2037,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_celestial_barren"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "celestial_worlds_chain"
+                            counter = "celestial_barren_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -1762,6 +2058,14 @@ ship_event = {
             limit = {
                 from = {
                     is_planet_class = "pc_celestial_hot"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "celestial_worlds_chain"
+                            counter = "celestial_hot_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -1777,6 +2081,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_celestial_wet"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "celestial_worlds_chain"
+                            counter = "celestial_wet_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -1790,6 +2102,14 @@ ship_event = {
             limit = {
                 from = {
                     is_planet_class = "pc_celestial_molten"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "celestial_worlds_chain"
+                            counter = "celestial_molten_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {
@@ -1805,6 +2125,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_celestial_cold"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "celestial_worlds_chain"
+                            counter = "celestial_cold_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -1819,6 +2147,14 @@ ship_event = {
                 from = {
                     is_planet_class = "pc_celestial_frozen"
                 }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "celestial_worlds_chain"
+                            counter = "celestial_frozen_worlds_surveyed"
+                        }
+                    }
+                }
             }
             owner = {
                 add_event_chain_counter = {
@@ -1832,6 +2168,14 @@ ship_event = {
             limit = {
                 from = {
                     is_planet_class = "pc_celestial_gas_giant"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "celestial_worlds_chain"
+                            counter = "celestial_gas_giant_worlds_surveyed"
+                        }
+                    }
                 }
             }
             owner = {

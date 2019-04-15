@@ -1,0 +1,412 @@
+### Energy deposits
+
+d_crystalline_highlands = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_energy
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_generator_max = 1
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+    }
+}
+
+d_crystalline_springs = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_energy
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_generator_max = 2
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+    }
+}
+
+d_crystalline_mountains = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_energy
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_generator_max = 3
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+    }
+}
+
+### Mineral deposits
+
+d_crystalline_caves = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_minerals
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_mining_max = 1
+        district_industrial_complex_max = 1
+        building_crystal_mines_max = 1
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+    }
+}
+
+d_crystalline_ore_veins = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_minerals
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_mining_max = 2
+        district_industrial_complex_max = 2
+        building_crystal_mines_max = 2
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+    }
+}
+
+d_crystalline_prosperous_mesa = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_minerals
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_mining_max = 3
+        district_industrial_complex_max = 3
+        building_crystal_mines_max = 3
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+    }
+}
+
+### Food deposits
+
+d_crystalline_plains = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_food
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_farming_max = 1
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+    }
+}
+
+d_crystalline_oasis = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_food
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_farming_max = 1
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+    }
+}
+
+d_crystalline_woods = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_food
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_farming_max = 2
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+    }
+}
+
+d_crystalline_jungles = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_food
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_farming_max = 3
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+    }
+}
+
+### Crystal deposits
+
+d_crystalline_crystal_caverns = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_rare
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        building_crystal_mines_max = 2
+        district_manufacturing_complex_max = 2
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight_rare
+    }
+}
+
+d_crystalline_crystal_desert = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_rare
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        building_crystal_mines_max = 4
+        district_manufacturing_complex_max = 4
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight_rare
+    }
+}
+
+### Mote deposits
+
+d_crystalline_dust_caverns = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_rare
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        building_mote_harvesters_max = 1
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight_rare
+    }
+}
+
+d_crystalline_dust_desert = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_rare
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        building_mote_harvesters_max = 2
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight_rare
+    }
+}
+
+### Gase deposits
+
+d_crystalline_bubbling_swamp = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_rare
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        building_gas_extractors_max = 1
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight_rare
+    }
+}
+
+d_crystalline_fuming_bog = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_rare
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        building_gas_extractors_max = 2
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight_rare
+    }
+}
+
+### Alien Pet deposits
+
+d_crystalline_alien_pets = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_rare
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        building_xeno_zoo_max = 1
+    }
+
+    potential = {
+        is_planet_class = pc_crystalline
+    }
+
+    drop_weight = {
+        weight = @mid_rare
+    }
+}

@@ -2,6 +2,9 @@ crystalline_worlds_chain = {
     icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
     picture = "GFX_aoe_crystalline_worlds"
     counter = {
+        crystalline_worlds_surveyed = {
+            max = 1
+        }
         crystalline_uninhabitable_worlds_surveyed = {
             max = 5
         }
@@ -15,6 +18,9 @@ metalline_worlds_chain = {
     icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
     picture = "GFX_aoe_metalline_worlds"
     counter = {
+        metalline_worlds_surveyed = {
+            max = 1
+        }
         metalline_uninhabitable_worlds_surveyed = {
             max = 5
         }
@@ -28,6 +34,9 @@ methanum_worlds_chain = {
     icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
     picture = "GFX_aoe_methanum_worlds"
     counter = {
+        methanum_worlds_surveyed = {
+            max = 1
+        }
         methanum_uninhabitable_worlds_surveyed = {
             max = 5
         }
@@ -132,6 +141,9 @@ barium_worlds_chain = {
     icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
     picture = "GFX_aoe_barium_worlds"
     counter = {
+        barium_worlds_surveyed = {
+            max = 1
+        }
         barium_uninhabitable_worlds_surveyed = {
             max = 5
         }

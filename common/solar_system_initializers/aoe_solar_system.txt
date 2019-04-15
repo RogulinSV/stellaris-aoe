@@ -2799,20 +2799,13 @@ anthem_of_eternity_neighbor_test2 = {
         change_orbit = 15
 
         moon = {
-            name = "Crystalline Uninhabitable"
+            name = "Crystalline"
             count = 1
-            class = pc_crystalline_uninhabitable
+            class = pc_crystalline
             orbit_distance = { min = 1 max = 10 }
             orbit_angle = { min = 10 max = 350 }
             size = 25
             has_ring = yes
-
-            change_orbit = 15
-
-            init_effect = {
-                prevent_anomaly = yes
-                effects_add_rich_resources_barren_planet = yes
-            }
         }
 
         init_effect = {
@@ -2836,20 +2829,13 @@ anthem_of_eternity_neighbor_test2 = {
         change_orbit = 15
 
         moon = {
-            name = "Ammonium Uninhabitable"
+            name = "Metalline"
             count = 1
-            class = pc_ammonium_uninhabitable
+            class = pc_metalline
             orbit_distance = { min = 1 max = 10 }
             orbit_angle = { min = 10 max = 350 }
             size = 25
             has_ring = yes
-
-            change_orbit = 15
-
-            init_effect = {
-                prevent_anomaly = yes
-                effects_add_rich_resources_barren_planet = yes
-            }
         }
 
         init_effect = {
@@ -2873,20 +2859,13 @@ anthem_of_eternity_neighbor_test2 = {
         change_orbit = 15
 
         moon = {
-            name = "Mercurium Uninhabitable"
+            name = "Methanum"
             count = 1
-            class = pc_mercurium_uninhabitable
+            class = pc_methanum
             orbit_distance = { min = 1 max = 10 }
             orbit_angle = { min = 10 max = 350 }
             size = 25
             has_ring = yes
-
-            change_orbit = 15
-
-            init_effect = {
-                prevent_anomaly = yes
-                effects_add_rich_resources_barren_planet = yes
-            }
         }
 
         init_effect = {
@@ -2910,20 +2889,13 @@ anthem_of_eternity_neighbor_test2 = {
         change_orbit = 15
 
         moon = {
-            name = "Barium Uninhabitable"
+            name = "Barium"
             count = 1
-            class = pc_barium_uninhabitable
+            class = pc_barium
             orbit_distance = { min = 1 max = 10 }
             orbit_angle = { min = 10 max = 350 }
             size = 25
             has_ring = yes
-
-            change_orbit = 15
-
-            init_effect = {
-                prevent_anomaly = yes
-                effects_add_rich_resources_barren_planet = yes
-            }
         }
 
         init_effect = {

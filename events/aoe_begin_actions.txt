@@ -48,6 +48,10 @@ country_event = {
             id = aoe_begin_actions.13
             days = 5
         }
+        country_event = {
+            id = aoe_begin_actions.14
+            days = 6
+        }
     }
 }
 
@@ -230,6 +234,31 @@ country_event = {
         custom_tooltip = aoe_begin_actions.13.b.tooltip
         hidden_effect = {
             set_country_flag = "flags_aoe_science_ascension"
+        }
+    }
+    option = {
+        name = aoe_begin_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_begin_actions.14
+    title = aoe_begin_actions.14.title
+    desc = aoe_begin_actions.14.desc
+    picture = GFX_aoe_actions_species_ascension
+    show_sound = event_laboratory_sound
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = aoe_begin_actions.14.a
+        custom_tooltip = aoe_begin_actions.14.a.tooltip
+        hidden_effect = {
+            capital_scope = {
+                modify_species = {
+                    add_trait = "trait_xenomorphic_species"
+                }
+            }
         }
     }
     option = {

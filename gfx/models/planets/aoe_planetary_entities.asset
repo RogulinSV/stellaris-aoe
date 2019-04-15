@@ -2298,3 +2298,374 @@ entity = {
 
     scale = 1.15
 }
+
+### Crystalline habitable
+
+entity = {
+    name = "crystalline_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "crystalline_01_diffuse.dds"
+        texture_normal = "habitable_01_normal.dds"
+        texture_specular = "habitable_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "crystalline_clouds_diffuse.dds"
+        texture_normal = "crystalline_clouds_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "crystalline_clouds_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Metalline habitable
+
+entity = {
+    name = "metalline_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "metalline_02_diffuse.dds"
+        texture_normal = "habitable_01_normal.dds"
+        texture_specular = "metalline_02_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "metalline_clouds_diffuse.dds"
+        texture_normal = "metalline_clouds_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "metalline_clouds_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "metalline_planet_02_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "metalline_03_diffuse.dds"
+        texture_normal = "habitable_01_normal.dds"
+        texture_specular = "metalline_03_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "metalline_clouds_diffuse.dds"
+        texture_normal = "metalline_clouds_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "metalline_clouds_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "metalline_planet_03_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "metalline_04_diffuse.dds"
+        texture_normal = "habitable_01_normal.dds"
+        texture_specular = "metalline_04_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "metalline_clouds_diffuse.dds"
+        texture_normal = "metalline_clouds_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "metalline_clouds_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Methanum habitable
+
+entity = {
+    name = "methanum_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_02_diffuse.dds"
+        texture_normal = "methanum_02_normal.dds"
+        texture_specular = "methanum_02_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "methanum_clouds_diffuse.dds"
+        texture_normal = "methanum_clouds_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "methanum_clouds_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "methanum_planet_02_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_03_diffuse.dds"
+        texture_normal = "methanum_03_normal.dds"
+        texture_specular = "methanum_03_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "methanum_clouds_diffuse.dds"
+        texture_normal = "methanum_clouds_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "methanum_clouds_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "methanum_planet_03_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_04_diffuse.dds"
+        texture_normal = "methanum_03_normal.dds"
+        texture_specular = "methanum_03_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "methanum_clouds_diffuse.dds"
+        texture_normal = "methanum_clouds_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "methanum_clouds_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Barium habitable
+
+entity = {
+    name = "barium_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "barium_02_diffuse.dds"
+        texture_normal = "barium_02_normal.dds"
+        texture_specular = "barium_02_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "barium_clouds_diffuse.dds"
+        texture_normal = "barium_clouds_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "barium_clouds_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "barium_planet_02_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "barium_03_diffuse.dds"
+        texture_normal = "barium_03_normal.dds"
+        texture_specular = "barium_03_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "barium_clouds_diffuse.dds"
+        texture_normal = "barium_clouds_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "barium_clouds_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "barium_planet_03_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "barium_04_diffuse.dds"
+        texture_normal = "barium_04_normal.dds"
+        texture_specular = "barium_04_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "barium_clouds_diffuse.dds"
+        texture_normal = "barium_clouds_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "barium_clouds_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "barium_planet_04_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "barium_05_diffuse.dds"
+        texture_normal = "habitable_01_normal.dds"
+        texture_specular = "habitable_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "barium_clouds_diffuse.dds"
+        texture_normal = "barium_clouds_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "barium_clouds_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}

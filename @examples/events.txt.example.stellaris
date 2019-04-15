@@ -1,0 +1,150 @@
+### %WORLD% Worlds survey
+
+ship_event = {
+    id = aoe_planet_actions.%X%
+    title = aoe_planet_actions.%X%.title
+    desc = aoe_planet_actions.%X%.desc
+    picture = GFX_aoe_%WORLD%_worlds
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    trigger = {
+        owner = {
+            NOT = {
+                has_event_chain = "%WORLD%_worlds_chain"
+                has_country_flag = "%WORLD%_worlds_surveyed"
+                has_country_flag = "%WORLD%_worlds_discovered"
+                has_ethic = "ethic_gestalt_consciousness"
+            }
+        }
+        from = {
+            OR = {
+                is_planet_class = "pc_%WORLD%_uninhabitable"
+                is_planet_class = "pc_%WORLD%_gas_giant"
+            }
+        }
+    }
+
+    immediate = {
+        owner = {
+            set_timed_country_flag = {
+                flag = "%WORLD%_worlds_discovered"
+                days = 720
+            }
+        }
+    }
+
+    option = {
+        name = aoe_planet_actions.%X%.a
+        custom_tooltip = aoe_planet_actions.%X%.a.tooltip
+        begin_event_chain = {
+            event_chain = "%WORLD%_worlds_chain"
+            target = owner
+        }
+    }
+    option = {
+        name = aoe_planet_actions.%X%.b
+        custom_tooltip = aoe_planet_actions.%X%.b.tooltip
+        leader = {
+            add_experience = 25
+        }
+    }
+}
+
+ship_event = {
+    id = aoe_planet_actions.%Y%
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        owner = {
+            has_event_chain = "%WORLD%_worlds_chain"
+        }
+        from = {
+            OR = {
+                is_planet_class = "pc_%WORLD%_uninhabitable"
+                is_planet_class = "pc_%WORLD%_gas_giant"
+            }
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_%WORLD%_uninhabitable"
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "%WORLD%_worlds_chain"
+                    counter = "%WORLD%_uninhabitable_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_%WORLD%_gas_giant"
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "%WORLD%_worlds_chain"
+                    counter = "%WORLD%_gas_giant_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                owner = {
+                    has_completed_event_chain_counter = {
+                        event_chain = "%WORLD%_worlds_chain"
+                        counter = "%WORLD%_uninhabitable_worlds_surveyed"
+                    }
+                    has_completed_event_chain_counter = {
+                        event_chain = "%WORLD%_worlds_chain"
+                        counter = "%WORLD%_gas_giant_worlds_surveyed"
+                    }
+                }
+            }
+            owner = {
+                country_event = { id = aoe_planet_actions.%Z% }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = aoe_planet_actions.%Z%
+    title = aoe_planet_actions.%Z%.title
+    desc = aoe_planet_actions.%Z%.desc
+    picture = GFX_aoe_%WORLD%_worlds
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    trigger = {
+        NOT = {
+            has_country_flag = "%WORLD%_worlds_surveyed"
+        }
+    }
+
+    immediate = {
+        set_country_flag = "%WORLD%_worlds_surveyed"
+    }
+
+    option = {
+        name = aoe_planet_actions.%Z%.a
+        custom_tooltip = aoe_planet_actions.%Z%.a.tooltip
+        end_event_chain = "%WORLD%_worlds_chain"
+        add_resource = {
+            influence = 100
+        }
+    }
+}

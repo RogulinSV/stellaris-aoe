@@ -24,6 +24,12 @@ spriteTypes = {
         alwaystransparent = yes
     }
     spriteType = {
+        name = "GFX_aoe_actions_species_ascension"
+        texturefile = "gfx/event_pictures/actions_species_ascension.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
         name = "GFX_aoe_metallic_resources_discovering"
         texturefile = "gfx/event_pictures/strategic_resources_discovering.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
