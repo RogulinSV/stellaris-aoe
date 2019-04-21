@@ -6,12 +6,18 @@ district_manufacturing_complex = {
     max_for_deposits_on_planet = 10
 
     show_on_uncolonized = {
-        can_have_habitable_deposits = yes
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
         has_metallized_deposits = yes
     }
 
     potential = {
-        can_have_habitable_deposits = yes
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
         has_metallized_deposits = yes
     }
 

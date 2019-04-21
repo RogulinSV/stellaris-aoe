@@ -7,6 +7,9 @@ has_crystallized_deposits = {
         has_deposit = "d_crystallized_stratums"
         has_deposit = "d_crystallized_hills"
         has_deposit = "d_crystallized_matrixes"
+        has_deposit = "d_extraterrestrial_monomorphic_deposits"
+        has_deposit = "d_extraterrestrial_polymorphic_deposits"
+        has_deposit = "d_extraterrestrial_isomorphic_deposits"
     }
 }
 
@@ -19,6 +22,9 @@ has_metallized_deposits = {
         has_deposit = "d_metallized_mountains"
         has_deposit = "d_metallized_oceans"
         has_deposit = "d_metallized_matrixes"
+        has_deposit = "d_extraterrestrial_monomeric_deposits"
+        has_deposit = "d_extraterrestrial_polymeric_deposits"
+        has_deposit = "d_extraterrestrial_isomeric_deposits"
     }
 }
 
@@ -383,6 +389,16 @@ has_kryptonite_resource = {
 }
 
 # Scope: planet
+is_extraterrestrial_planet = {
+    OR = {
+        is_planet_class = pc_crystalline
+        is_planet_class = pc_metalline
+        is_planet_class = pc_methanum
+        is_planet_class = pc_barium
+    }
+}
+
+# Scope: planet
 is_sovereign_colony = {
     NOR = {
         has_modifier = "resort_colony"
@@ -398,6 +414,16 @@ is_colonizeable_planet = {
         is_planet_class = pc_nuked
         is_planet_class = pc_hive
         is_planet_class = pc_machine
+    }
+}
+
+# Scope: planet
+can_have_extraterrestrial_deposits = {
+    OR = {
+        is_planet_class = pc_crystalline
+        is_planet_class = pc_metalline
+        is_planet_class = pc_methanum
+        is_planet_class = pc_barium
     }
 }
 
