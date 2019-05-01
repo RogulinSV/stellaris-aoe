@@ -342,6 +342,10 @@ effects_add_rich_resources_habitable_planet = {
         which = get_planet_manufacturing_complex_district_count
         value = 0
     }
+    set_variable = {
+        which = get_planet_scientific_complex_district_count
+        value = 0
+    }
 
     while = {
         limit = {

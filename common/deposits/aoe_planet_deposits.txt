@@ -1,3 +1,5 @@
+### Industrial Complex Deposits
+
 d_crystallized_caves = {
     icon = "d_crystallized_caves"
 
@@ -243,6 +245,8 @@ d_crystallized_matrixes = {
     }
 }
 
+### Manufacturing Complex Deposits
+
 d_metallized_caves = {
     icon = "d_metallized_caves"
 
@@ -477,5 +481,217 @@ d_metallized_matrixes = {
             factor = 0.5
             is_planet_class = pc_ringworld_habitable
         }
+    }
+}
+
+### Scientific Complex Deposits
+
+d_plasmatic_cobblestones = {
+    icon = "d_plasmatic_cobblestones"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_anomalous
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_submerged_ore_veins
+        d_dust_desert
+        d_underwater_vent
+    }
+
+    planet_modifier = {
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        is_dry = yes
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+    }
+}
+
+d_spice_lakes = {
+    icon = "d_spice_lakes"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_anomalous
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_submerged_ore_veins
+        d_dust_desert
+        d_underwater_vent
+    }
+
+    planet_modifier = {
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        is_dry = yes
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+    }
+}
+
+d_floating_gardens = {
+    icon = "d_floating_gardens"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_anomalous
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_buzzing_plains
+        d_mineral_striations
+        d_natural_farmland
+    }
+
+    planet_modifier = {
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        is_wet = yes
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+    }
+}
+
+d_floating_islands = {
+    icon = "d_floating_islands"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_anomalous
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_buzzing_plains
+        d_mineral_striations
+        d_natural_farmland
+    }
+
+    planet_modifier = {
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        is_wet = yes
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+    }
+}
+
+d_relic_ice = {
+    icon = "d_relic_ice"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_anomalous
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_frozen_gas_lake
+        d_geothermal_vent
+        d_crystalline_caverns
+        d_betharian_deposit
+    }
+
+    planet_modifier = {
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        is_cold = yes
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+    }
+}
+
+d_soil_funnels = {
+    icon = "d_soil_funnels"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_anomalous
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_geothermal_vent
+        d_ore_rich_caverns
+        d_dust_caverns
+        d_betharian_deposit
+    }
+
+    planet_modifier = {
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        is_cold = yes
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
+    }
+}
+
+d_ancient_pillars = {
+    icon = "d_ancient_pillars"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_anomalous
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        d_betharian_deposit
+    }
+
+    planet_modifier = {
+        district_scientific_complex_max = 2
+    }
+
+    potential = {
+        planet_size >= 10
+        is_colonizeable_planet = yes
+    }
+
+    drop_weight = {
+        weight = @blocker_ultralow_drop_weight
     }
 }

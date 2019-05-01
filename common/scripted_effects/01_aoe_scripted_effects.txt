@@ -497,6 +497,18 @@ effects_add_planet_deposit = {
             value = 1
         }
     }
+    if = {
+        limit = {
+            check_variable = {
+                which = get_planet_scientific_complex_district_count
+                value < 1
+            }
+        }
+        set_variable = {
+            which = get_planet_scientific_complex_district_count
+            value = 1
+        }
+    }
 
     if = {
         limit = {
@@ -564,6 +576,52 @@ effects_add_planet_deposit = {
                     }
                     # +1G
                     add_deposit = d_metallized_caves
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_scientific_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_scientific_complex_district_count
+                        value = 1
+                    }
+                    # +1S
+                    add_deposit = d_plasmatic_cobblestones
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_scientific_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_scientific_complex_district_count
+                        value = 1
+                    }
+                    # +1S
+                    add_deposit = d_spice_lakes
                 }
                 else = {
                     change_variable = {
@@ -744,6 +802,52 @@ effects_add_planet_deposit = {
                     }
                     # +1G
                     add_deposit = d_metallized_oceans
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_scientific_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_scientific_complex_district_count
+                        value = 1
+                    }
+                    # +1S
+                    add_deposit = d_floating_islands
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_scientific_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_scientific_complex_district_count
+                        value = 1
+                    }
+                    # +1S
+                    add_deposit = d_floating_gardens
                 }
                 else = {
                     change_variable = {
@@ -935,6 +1039,52 @@ effects_add_planet_deposit = {
                     }
                 }
             }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_scientific_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_scientific_complex_district_count
+                        value = 1
+                    }
+                    # +1S
+                    add_deposit = d_relic_ice
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
+            7 = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = get_planet_scientific_complex_district_count
+                            value > 0
+                            value < 10
+                        }
+                    }
+                    change_variable = {
+                        which = get_planet_scientific_complex_district_count
+                        value = 1
+                    }
+                    # +1S
+                    add_deposit = d_soil_funnels
+                }
+                else = {
+                    change_variable = {
+                        which = get_planet_blockers_count
+                        value = 1
+                    }
+                }
+            }
             3 = {
                 # +1E
                 add_deposit = d_hot_springs
@@ -1015,6 +1165,10 @@ effects_set_planet_size_25 = {
         which = get_planet_manufacturing_complex_district_count
         value = 0
     }
+    set_variable = {
+        which = get_planet_scientific_complex_district_count
+        value = 0
+    }
 
     while = {
         count = 10
@@ -1036,6 +1190,10 @@ effects_set_planet_size_30 = {
     }
     set_variable = {
         which = get_planet_manufacturing_complex_district_count
+        value = 0
+    }
+    set_variable = {
+        which = get_planet_scientific_complex_district_count
         value = 0
     }
 
@@ -1061,6 +1219,10 @@ effects_set_planet_size_35 = {
         which = get_planet_manufacturing_complex_district_count
         value = 0
     }
+    set_variable = {
+        which = get_planet_scientific_complex_district_count
+        value = 0
+    }
 
     while = {
         count = 10
@@ -1082,6 +1244,10 @@ effects_set_planet_size_40 = {
     }
     set_variable = {
         which = get_planet_manufacturing_complex_district_count
+        value = 0
+    }
+    set_variable = {
+        which = get_planet_scientific_complex_district_count
         value = 0
     }
 
@@ -1107,6 +1273,10 @@ effects_set_planet_size_45 = {
         which = get_planet_manufacturing_complex_district_count
         value = 0
     }
+    set_variable = {
+        which = get_planet_scientific_complex_district_count
+        value = 0
+    }
 
     while = {
         count = 20
@@ -1128,6 +1298,10 @@ effects_set_planet_size_50 = {
     }
     set_variable = {
         which = get_planet_manufacturing_complex_district_count
+        value = 0
+    }
+    set_variable = {
+        which = get_planet_scientific_complex_district_count
         value = 0
     }
 

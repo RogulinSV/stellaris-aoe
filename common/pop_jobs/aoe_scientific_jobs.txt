@@ -1,0 +1,2651 @@
+astronomer = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = "building_observatory_2"
+    clothes_texture_index = 3
+
+    possible = {
+        complex_specialist_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            consumer_goods = 2
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    NOT = {
+                        is_sovereign_colony = yes
+                        has_orbital_bombardment = no
+                    }
+                }
+            }
+            unity = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = pop
+                pop = {
+                    is_pop_purged = yes
+                }
+            }
+            food = 2
+        }
+        produces = {
+            engineering_research = 5
+            physics_research = 5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        has_valid_civic = "civic_imperial_cult"
+                        has_valid_civic = "civic_citizen_service"
+                    }
+                }
+            }
+            unity = 2
+        }
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = "trait_mechanical"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_living_standard = {
+                type = "living_standard_academic_privilege"
+            }
+        }
+        modifier = {
+            factor = 3
+            has_trait = "trait_erudite"
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = "trait_robot_logic_engines"
+                has_trait = "trait_intelligent"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = "trait_brainslug"
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = "trait_natural_engineers"
+                has_trait = "trait_natural_physicists"
+            }
+        }
+        modifier = {
+            factor = 0.2
+            has_trait = "trait_enigmatic_intelligence_failed"
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = "trait_enigmatic_intelligence_poor"
+                has_trait = "trait_enigmatic_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.2
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+astronomer_drone = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_observatory_2"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 6
+        }
+        produces = {
+            engineering_research = 5
+            physics_research = 5
+        }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    weight = {
+        weight = @simple_drone_job_weight
+
+        modifier = {
+            factor = 3
+            has_trait = "trait_erudite"
+        }
+        modifier = {
+            factor = 2
+            has_trait = "trait_intelligent"
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = "trait_natural_engineers"
+                has_trait = "trait_natural_physicists"
+            }
+        }
+        modifier = {
+            factor = 0.65
+            OR = {
+                has_trait = "trait_syncretic_proles"
+                has_trait = "trait_presapient_proles"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = "civic_machine_assimilator" }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+astronomer_calculator = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_observatory_2"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_machine_empire = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 6
+        }
+        produces = {
+            engineering_research = 5
+            physics_research = 5
+        }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+
+        modifier = {
+            factor = 2
+            has_trait = "trait_robot_logic_engines"
+        }
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = "civic_machine_assimilator" }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+astronomer_brain_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_observatory_2"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_hive_empire = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 6
+        }
+        produces = {
+            engineering_research = 5
+            physics_research = 5
+        }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+
+        modifier = {
+            factor = 2
+            has_trait = "trait_robot_logic_engines"
+        }
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = { has_valid_civic = "civic_machine_assimilator" }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+### Scientific Complex Jobs
+
+# Regular Empire
+
+scientific_complex_society_scientist = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = "building_society_scientific_complex_5"
+    clothes_texture_index = 3
+
+    possible = {
+        specialist_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    NOT = {
+                        is_sovereign_colony = yes
+                        has_orbital_bombardment = no
+                    }
+                }
+            }
+            unity = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = pop
+                pop = {
+                    is_pop_purged = yes
+                }
+            }
+            food = 2
+        }
+        produces = {
+            society_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            society_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            society_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            society_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            society_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     society_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     society_research = 7
+        # }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        has_valid_civic = "civic_imperial_cult"
+                        has_valid_civic = "civic_citizen_service"
+                    }
+                }
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_miners_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+
+        modifier = {
+            factor = 0.33
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.1
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 3
+            has_trait = "trait_natural_sociologists"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_quick_learners"
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = "trait_slow_learners"
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = "trait_ingenious"
+        }
+        modifier = {
+            factor = 0.25
+            has_trait = "trait_agrarian"
+        }
+        modifier = {
+            factor = 0.25
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+scientific_complex_engineering_scientist = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = "building_engineering_scientific_complex_5"
+    clothes_texture_index = 3
+
+    possible = {
+        specialist_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    NOT = {
+                        is_sovereign_colony = yes
+                        has_orbital_bombardment = no
+                    }
+                }
+            }
+            unity = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = pop
+                pop = {
+                    is_pop_purged = yes
+                }
+            }
+            food = 2
+        }
+        produces = {
+            engineering_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            engineering_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            engineering_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            engineering_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            engineering_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     engineering_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     engineering_research = 7
+        # }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        has_valid_civic = "civic_imperial_cult"
+                        has_valid_civic = "civic_citizen_service"
+                    }
+                }
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_refiners_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+
+        modifier = {
+            factor = 0.33
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.1
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 3
+            has_trait = "trait_natural_engineers"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_quick_learners"
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = "trait_slow_learners"
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = "trait_ingenious"
+        }
+        modifier = {
+            factor = 0.25
+            has_trait = "trait_agrarian"
+        }
+        modifier = {
+            factor = 0.25
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+scientific_complex_physics_scientist = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = "building_physics_scientific_complex_5"
+    clothes_texture_index = 3
+
+    possible = {
+        specialist_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    NOT = {
+                        is_sovereign_colony = yes
+                        has_orbital_bombardment = no
+                    }
+                }
+            }
+            unity = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = pop
+                pop = {
+                    is_pop_purged = yes
+                }
+            }
+            food = 2
+        }
+        produces = {
+            physics_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            physics_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            physics_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            physics_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            physics_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     physics_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     physics_research = 7
+        # }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    OR = {
+                        has_valid_civic = "civic_imperial_cult"
+                        has_valid_civic = "civic_citizen_service"
+                    }
+                }
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_chemists_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+
+        modifier = {
+            factor = 0.33
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.1
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 3
+            has_trait = "trait_natural_physicists"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_quick_learners"
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = "trait_slow_learners"
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = "trait_ingenious"
+        }
+        modifier = {
+            factor = 0.25
+            has_trait = "trait_agrarian"
+        }
+        modifier = {
+            factor = 0.25
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+# Drone Empire
+
+scientific_complex_society_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_society_scientific_complex_5"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        produces = {
+            society_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            society_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            society_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            society_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            society_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     society_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     society_research = 7
+        # }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_miners_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 1.15
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 2
+            has_trait = "trait_robot_emotion_emulators"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_efficient_processors"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_logic_engines"
+        }
+        modifier = {
+            factor = 0.75
+            years_passed < 1
+            exists = owner
+            owner = {
+                has_valid_civic = "civic_machine_assimilator"
+            }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                has_modifier = "planet_population_control_gestalt"
+            }
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+scientific_complex_engineering_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_engineering_scientific_complex_5"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        produces = {
+            engineering_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            engineering_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            engineering_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            engineering_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            engineering_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     engineering_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     engineering_research = 7
+        # }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_translucers_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 1.15
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 2
+            has_trait = "trait_robot_enhanced_memory"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_efficient_processors"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_logic_engines"
+        }
+        modifier = {
+            factor = 0.75
+            years_passed < 1
+            exists = owner
+            owner = {
+                has_valid_civic = "civic_machine_assimilator"
+            }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                has_modifier = "planet_population_control_gestalt"
+            }
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+scientific_complex_physics_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_physics_scientific_complex_5"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        produces = {
+            physics_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            physics_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            physics_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            physics_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            physics_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     physics_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     physics_research = 7
+        # }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_farmers_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 1.15
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 2
+            has_trait = "trait_robot_learning_algorithms"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_efficient_processors"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_logic_engines"
+        }
+        modifier = {
+            factor = 0.75
+            years_passed < 1
+            exists = owner
+            owner = {
+                has_valid_civic = "civic_machine_assimilator"
+            }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                has_modifier = "planet_population_control_gestalt"
+            }
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+# Machine Empire
+
+scientific_complex_society_calculator = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_society_scientific_complex_5"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_machine_empire = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        produces = {
+            society_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            society_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            society_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            society_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            society_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     society_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     society_research = 7
+        # }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_miners_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 2
+            has_trait = "trait_robot_emotion_emulators"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_efficient_processors"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_logic_engines"
+        }
+        modifier = {
+            factor = 0.75
+            years_passed < 1
+            exists = owner
+            owner = {
+                has_valid_civic = "civic_machine_assimilator"
+            }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+scientific_complex_engineering_calculator = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_engineering_scientific_complex_5"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_machine_empire = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        produces = {
+            engineering_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            engineering_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            engineering_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            engineering_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            engineering_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     engineering_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     engineering_research = 7
+        # }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_translucers_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 2
+            has_trait = "trait_robot_enhanced_memory"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_efficient_processors"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_logic_engines"
+        }
+        modifier = {
+            factor = 0.75
+            years_passed < 1
+            exists = owner
+            owner = {
+                has_valid_civic = "civic_machine_assimilator"
+            }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+scientific_complex_physics_calculator = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_physics_scientific_complex_5"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_machine_empire = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        produces = {
+            physics_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            physics_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            physics_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            physics_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            physics_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     physics_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     physics_research = 7
+        # }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_farmers_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 2
+            has_trait = "trait_robot_learning_algorithms"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_efficient_processors"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_logic_engines"
+        }
+        modifier = {
+            factor = 0.75
+            years_passed < 1
+            exists = owner
+            owner = {
+                has_valid_civic = "civic_machine_assimilator"
+            }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+# Hive Empire
+
+scientific_complex_society_brain_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_society_scientific_complex_5"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_hive_empire = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        produces = {
+            society_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            society_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            society_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            society_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            society_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     society_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     society_research = 7
+        # }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_miners_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 2
+            has_trait = "trait_robot_emotion_emulators"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_efficient_processors"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_logic_engines"
+        }
+        modifier = {
+            factor = 0.75
+            years_passed < 1
+            exists = owner
+            owner = {
+                has_valid_civic = "civic_machine_assimilator"
+            }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+scientific_complex_engineering_brain_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_engineering_scientific_complex_5"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_hive_empire = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        produces = {
+            engineering_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            engineering_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            engineering_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            engineering_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            engineering_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     engineering_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     engineering_research = 7
+        # }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_translucers_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 2
+            has_trait = "trait_robot_enhanced_memory"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_efficient_processors"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_logic_engines"
+        }
+        modifier = {
+            factor = 0.75
+            years_passed < 1
+            exists = owner
+            owner = {
+                has_valid_civic = "civic_machine_assimilator"
+            }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+scientific_complex_physics_brain_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = "building_physics_scientific_complex_5"
+
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_hive_empire = yes
+        }
+    }
+
+    resources = {
+        category = planet_researchers
+        upkeep = {
+            minerals = 2
+        }
+        produces = {
+            physics_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            physics_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            physics_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            physics_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            physics_research = 5
+        }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_6"
+        #         }
+        #     }
+        #     physics_research = 6
+        # }
+        # produces = {
+        #     trigger = {
+        #         exists = owner
+        #         owner = {
+        #             has_technology = "tech_scientific_complex_7"
+        #         }
+        #     }
+        #     physics_research = 7
+        # }
+        produces = {
+            trigger = {
+                has_trait = "trait_robot_propaganda_machines"
+            }
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_farmers_produces_mult = -0.01
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+
+        modifier = {
+            factor = 0.25
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.85
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+        modifier = {
+            factor = 1.15
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = 2
+            has_trait = "trait_robot_learning_algorithms"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_efficient_processors"
+        }
+        modifier = {
+            factor = 1.15
+            has_trait = "trait_robot_logic_engines"
+        }
+        modifier = {
+            factor = 0.75
+            years_passed < 1
+            exists = owner
+            owner = {
+                has_valid_civic = "civic_machine_assimilator"
+            }
+            has_trait = "trait_cybernetic"
+        }
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+# Fallen Empire
+
+scientific_complex_fe_scientist_ai = {
+    category = precursor
+    is_capped_by_modifier = yes
+    building_icon = "building_ancient_scientific_center"
+    clothes_texture_index = 3
+    icon = "technician"
+
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = { 
+            is_fallen_empire = yes
+        }
+        is_same_species = owner
+    }
+
+    resources = {
+        category = planet_technician
+        produces = {
+            society_research = 10
+            engineering_research = 10
+            physics_research = 10
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_1"
+                }
+            }
+            society_research = 10
+            engineering_research = 10
+            physics_research = 10
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_2"
+                }
+            }
+            society_research = 13
+            engineering_research = 13
+            physics_research = 13
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_3"
+                }
+            }
+            society_research = 16
+            engineering_research = 16
+            physics_research = 16
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_4"
+                }
+            }
+            society_research = 19
+            engineering_research = 19
+            physics_research = 19
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_scientific_complex_5"
+                }
+            }
+            society_research = 22
+            engineering_research = 22
+            physics_research = 22
+        }
+    }
+
+    weight = {
+        weight = 10000
+
+        modifier = {
+            factor = 0.01
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}

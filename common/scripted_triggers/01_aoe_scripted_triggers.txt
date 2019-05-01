@@ -29,6 +29,23 @@ has_metallized_deposits = {
 }
 
 # Scope: planet
+has_anomalous_deposits = {
+    OR = {
+        has_deposit = "d_plasmatic_cobblestones"
+        has_deposit = "d_spice_lakes"
+        has_deposit = "d_floating_gardens"
+        has_deposit = "d_floating_islands"
+        has_deposit = "d_relic_ice"
+        has_deposit = "d_soil_funnels"
+        has_deposit = "d_ancient_pillars"
+        has_deposit = "d_extraterrestrial_vagrant_biome"
+        has_deposit = "d_extraterrestrial_foggy_biome"
+        has_deposit = "d_extraterrestrial_pungent_biome"
+        has_deposit = "d_extraterrestrial_tremendous_biome"
+    }
+}
+
+# Scope: planet
 has_mithril_resource = {
     OR = {
         has_deposit = "d_mithril_1"
@@ -410,6 +427,7 @@ is_sovereign_colony = {
 is_colonizeable_planet = {
     OR = {
         habitable_planet = yes
+        is_extraterrestrial_planet = yes
         is_planet_class = pc_city
         is_planet_class = pc_nuked
         is_planet_class = pc_hive

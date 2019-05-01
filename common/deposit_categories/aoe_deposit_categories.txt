@@ -6,3 +6,7 @@ deposit_cat_metallized = {
     blocker = no
     important = yes
 }
+deposit_cat_anomalous = {
+    blocker = no
+    important = yes
+}

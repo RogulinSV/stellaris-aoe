@@ -251,7 +251,7 @@ manufacturing_complex_engineer = {
                     has_technology = "tech_manufacturing_complex_1"
                 }
             }
-            engineering_research = 1
+            consumer_goods = 1
         }
         produces = {
             trigger = {
@@ -260,7 +260,7 @@ manufacturing_complex_engineer = {
                     has_technology = "tech_manufacturing_complex_2"
                 }
             }
-            engineering_research = 2
+            consumer_goods = 2
         }
         produces = {
             trigger = {
@@ -269,7 +269,7 @@ manufacturing_complex_engineer = {
                     has_technology = "tech_manufacturing_complex_3"
                 }
             }
-            engineering_research = 3
+            consumer_goods = 3
         }
         produces = {
             trigger = {
@@ -278,7 +278,7 @@ manufacturing_complex_engineer = {
                     has_technology = "tech_manufacturing_complex_4"
                 }
             }
-            engineering_research = 4
+            consumer_goods = 4
         }
         produces = {
             trigger = {
@@ -287,7 +287,7 @@ manufacturing_complex_engineer = {
                     has_technology = "tech_manufacturing_complex_5"
                 }
             }
-            engineering_research = 5
+            consumer_goods = 5
         }
         produces = {
             trigger = {
@@ -296,7 +296,7 @@ manufacturing_complex_engineer = {
                     has_technology = "tech_manufacturing_complex_6"
                 }
             }
-            engineering_research = 6
+            consumer_goods = 6
         }
         produces = {
             trigger = {
@@ -305,7 +305,7 @@ manufacturing_complex_engineer = {
                     has_technology = "tech_manufacturing_complex_7"
                 }
             }
-            engineering_research = 7
+            consumer_goods = 7
         }
         produces = {
             trigger = {
@@ -612,7 +612,7 @@ manufacturing_complex_drone_engineer = {
                     has_technology = "tech_manufacturing_complex_1"
                 }
             }
-            engineering_research = 1
+            consumer_goods = 1
         }
         produces = {
             trigger = {
@@ -621,7 +621,7 @@ manufacturing_complex_drone_engineer = {
                     has_technology = "tech_manufacturing_complex_2"
                 }
             }
-            engineering_research = 2
+            consumer_goods = 2
         }
         produces = {
             trigger = {
@@ -630,7 +630,7 @@ manufacturing_complex_drone_engineer = {
                     has_technology = "tech_manufacturing_complex_3"
                 }
             }
-            engineering_research = 3
+            consumer_goods = 3
         }
         produces = {
             trigger = {
@@ -639,7 +639,7 @@ manufacturing_complex_drone_engineer = {
                     has_technology = "tech_manufacturing_complex_4"
                 }
             }
-            engineering_research = 4
+            consumer_goods = 4
         }
         produces = {
             trigger = {
@@ -648,7 +648,7 @@ manufacturing_complex_drone_engineer = {
                     has_technology = "tech_manufacturing_complex_5"
                 }
             }
-            engineering_research = 5
+            consumer_goods = 5
         }
         produces = {
             trigger = {
@@ -657,7 +657,7 @@ manufacturing_complex_drone_engineer = {
                     has_technology = "tech_manufacturing_complex_6"
                 }
             }
-            engineering_research = 6
+            consumer_goods = 6
         }
         produces = {
             trigger = {
@@ -666,7 +666,7 @@ manufacturing_complex_drone_engineer = {
                     has_technology = "tech_manufacturing_complex_7"
                 }
             }
-            engineering_research = 7
+            consumer_goods = 7
         }
         produces = {
             trigger = {

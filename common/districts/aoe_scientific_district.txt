@@ -1,0 +1,660 @@
+district_scientific_complex = {
+    base_buildtime = 900
+    icon = "district_scientific_complex"
+
+    min_for_deposits_on_planet = 1
+    max_for_deposits_on_planet = 10
+
+    show_on_uncolonized = {
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+        has_anomalous_deposits = yes
+    }
+
+    potential = {
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+        has_anomalous_deposits = yes
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    conversion_ratio = 1
+    convert_to = {
+        "district_scientific_complex_uncapped"
+    }
+
+    resources = {
+        category = planet_districts
+        cost = {
+            energy = 2500
+            minerals = 2500
+            cobaltium = 500
+        }
+        upkeep = {
+            energy = 5
+            cobaltium = 3
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 3
+        planet_army_build_speed_mult = -0.03
+    }
+
+    # Adding jobs
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_scientific_complex_society_scientist_add = 1
+            job_scientific_complex_engineering_scientist_add = 1
+            job_scientific_complex_physics_scientist_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_scientific_complex_scientists_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_scientific_complex_society_drone_add = 1
+            job_scientific_complex_engineering_drone_add = 1
+            job_scientific_complex_physics_drone_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_scientific_complex_scientist_drones_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_scientific_complex_society_calculator_add = 1
+            job_scientific_complex_engineering_calculator_add = 1
+            job_scientific_complex_physics_calculator_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "job_scientific_complex_scientist_calculators_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_scientific_complex_society_brain_drone_add = 1
+            job_scientific_complex_engineering_brain_drone_add = 1
+            job_scientific_complex_physics_brain_drone_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "job_scientific_complex_scientist_brain_drones_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        modifier = {
+            job_scientific_complex_fe_scientist_ai_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        text = "job_scientific_complex_fe_scientist_ai_effect_desc"
+    }
+
+    # Adding modifiers
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = "tech_scientific_complex_1"
+            }
+        }
+        modifier = {
+            planet_jobs_society_research_produces_mult = 0.01
+            planet_jobs_engineering_research_produces_mult = 0.01
+            planet_jobs_physics_research_produces_mult = 0.01
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = "tech_scientific_complex_2"
+            }
+        }
+        modifier = {
+            planet_jobs_society_research_produces_mult = 0.02
+            planet_jobs_engineering_research_produces_mult = 0.02
+            planet_jobs_physics_research_produces_mult = 0.02
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = "tech_scientific_complex_3"
+            }
+        }
+        modifier = {
+            planet_jobs_society_research_produces_mult = 0.03
+            planet_jobs_engineering_research_produces_mult = 0.03
+            planet_jobs_physics_research_produces_mult = 0.03
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = "tech_scientific_complex_4"
+            }
+        }
+        modifier = {
+            planet_jobs_society_research_produces_mult = 0.04
+            planet_jobs_engineering_research_produces_mult = 0.04
+            planet_jobs_physics_research_produces_mult = 0.04
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = "tech_scientific_complex_5"
+            }
+        }
+        modifier = {
+            planet_jobs_society_research_produces_mult = 0.05
+            planet_jobs_engineering_research_produces_mult = 0.05
+            planet_jobs_physics_research_produces_mult = 0.05
+        }
+    }
+
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = {
+    #             has_technology = "tech_scientific_complex_6"
+    #         }
+    #     }
+    #     modifier = {
+    #         planet_jobs_society_research_produces_mult = 0.06
+    #         planet_jobs_engineering_research_produces_mult = 0.06
+    #         planet_jobs_physics_research_produces_mult = 0.06
+    #     }
+    # }
+
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = {
+    #             has_technology = "tech_scientific_complex_7"
+    #         }
+    #     }
+    #     modifier = {
+    #         planet_jobs_society_research_produces_mult = 0.07
+    #         planet_jobs_engineering_research_produces_mult = 0.07
+    #         planet_jobs_physics_research_produces_mult = 0.07
+    #     }
+    # }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 1.25
+            owner = {
+                num_rare_techs < 1
+            }
+        }
+        modifier = {
+            factor = 1.25
+            owner = {
+                num_rare_techs < 5
+            }
+        }
+        modifier = {
+            factor = 1.25
+            owner = {
+                num_rare_techs < 10
+            }
+        }
+        modifier = {
+            factor = 1.25
+            any_owned_pop = {
+                is_unemployed = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            free_housing > 0
+            NOT = {
+                any_owned_pop = {
+                    is_unemployed = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = cobaltium
+                    value < 4
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_scientific_district"
+    }
+}
+
+district_scientific_complex_uncapped = {
+    base_buildtime = 900
+    icon = "district_scientific_complex_uncapped"
+    is_capped_by_modifier = no
+
+    min_for_deposits_on_planet = 1
+    max_for_deposits_on_planet = 5
+
+    show_on_uncolonized = {
+        have_not_habitable_deposits = yes
+    }
+
+    potential = {
+        have_not_habitable_deposits = yes
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    conversion_ratio = 1
+    convert_to = {
+        "district_scientific_complex"
+    }
+
+    resources = {
+        category = planet_districts
+        cost = {
+            energy = 2500
+            minerals = 2500
+            cobaltium = 500
+        }
+        upkeep = {
+            energy = 5
+            cobaltium = 3
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 3
+        planet_army_build_speed_mult = -0.03
+    }
+
+    # Adding jobs
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_scientific_complex_society_scientist_add = 1
+            job_scientific_complex_engineering_scientist_add = 1
+            job_scientific_complex_physics_scientist_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_scientific_complex_scientists_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_scientific_complex_society_drone_add = 1
+            job_scientific_complex_engineering_drone_add = 1
+            job_scientific_complex_physics_drone_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_scientific_complex_scientist_drones_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_scientific_complex_society_calculator_add = 1
+            job_scientific_complex_engineering_calculator_add = 1
+            job_scientific_complex_physics_calculator_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "job_scientific_complex_scientist_calculators_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_scientific_complex_society_brain_drone_add = 1
+            job_scientific_complex_engineering_brain_drone_add = 1
+            job_scientific_complex_physics_brain_drone_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "job_scientific_complex_scientist_brain_drones_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        modifier = {
+            job_scientific_complex_fe_society_ai_add = 1
+            job_scientific_complex_fe_engineering_ai_add = 1
+            job_scientific_complex_fe_physics_ai_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        text = "job_scientific_complex_fe_scientist_ai_effect_desc"
+    }
+
+    # Adding modifiers
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = "tech_scientific_complex_1"
+            }
+        }
+        modifier = {
+            planet_jobs_society_research_produces_mult = 0.01
+            planet_jobs_engineering_research_produces_mult = 0.01
+            planet_jobs_physics_research_produces_mult = 0.01
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = "tech_scientific_complex_2"
+            }
+        }
+        modifier = {
+            planet_jobs_society_research_produces_mult = 0.02
+            planet_jobs_engineering_research_produces_mult = 0.02
+            planet_jobs_physics_research_produces_mult = 0.02
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = "tech_scientific_complex_3"
+            }
+        }
+        modifier = {
+            planet_jobs_society_research_produces_mult = 0.03
+            planet_jobs_engineering_research_produces_mult = 0.03
+            planet_jobs_physics_research_produces_mult = 0.03
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = "tech_scientific_complex_4"
+            }
+        }
+        modifier = {
+            planet_jobs_society_research_produces_mult = 0.04
+            planet_jobs_engineering_research_produces_mult = 0.04
+            planet_jobs_physics_research_produces_mult = 0.04
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = "tech_scientific_complex_5"
+            }
+        }
+        modifier = {
+            planet_jobs_society_research_produces_mult = 0.05
+            planet_jobs_engineering_research_produces_mult = 0.05
+            planet_jobs_physics_research_produces_mult = 0.05
+        }
+    }
+
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = {
+    #             has_technology = "tech_scientific_complex_6"
+    #         }
+    #     }
+    #     modifier = {
+    #         planet_jobs_society_research_produces_mult = 0.06
+    #         planet_jobs_engineering_research_produces_mult = 0.06
+    #         planet_jobs_physics_research_produces_mult = 0.06
+    #     }
+    # }
+
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = {
+    #             has_technology = "tech_scientific_complex_7"
+    #         }
+    #     }
+    #     modifier = {
+    #         planet_jobs_society_research_produces_mult = 0.07
+    #         planet_jobs_engineering_research_produces_mult = 0.07
+    #         planet_jobs_physics_research_produces_mult = 0.07
+    #     }
+    # }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 1.25
+            owner = {
+                num_rare_techs < 1
+            }
+        }
+        modifier = {
+            factor = 1.25
+            owner = {
+                num_rare_techs < 5
+            }
+        }
+        modifier = {
+            factor = 1.25
+            owner = {
+                num_rare_techs < 10
+            }
+        }
+        modifier = {
+            factor = 1.25
+            any_owned_pop = {
+                is_unemployed = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            free_housing > 0
+            NOT = {
+                any_owned_pop = {
+                    is_unemployed = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = cobaltium
+                    value < 4
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_scientific_district"
+    }
+}

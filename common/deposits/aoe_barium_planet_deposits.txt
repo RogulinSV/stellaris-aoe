@@ -1371,3 +1371,97 @@ d_extraterrestrial_isomeric_deposits = {
         weight = @deposit_low_drop_weight_rare
     }
 }
+
+### Scientific deposits
+
+d_extraterrestrial_vagrant_biome = {
+    icon = "d_extraterrestrial_vagrant_biome"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_anomalous
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        is_extraterrestrial_planet = yes
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+    }
+}
+
+d_extraterrestrial_foggy_biome = {
+    icon = "d_extraterrestrial_foggy_biome"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_anomalous
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        is_extraterrestrial_planet = yes
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+    }
+}
+
+d_extraterrestrial_pungent_biome = {
+    icon = "d_extraterrestrial_pungent_biome"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_anomalous
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        is_extraterrestrial_planet = yes
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+    }
+}
+
+d_extraterrestrial_tremendous_biome = {
+    icon = "d_extraterrestrial_tremendous_biome"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_anomalous
+
+    use_for_min_max_adjustments = no
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    planet_modifier = {
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        is_extraterrestrial_planet = yes
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+    }
+}
