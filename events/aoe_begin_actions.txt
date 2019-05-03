@@ -202,6 +202,39 @@ country_event = {
                     uses_naval_capacity = yes
                 }
             }
+
+            create_leader = {
+                class = general
+                species = owner_main_species
+                name = random
+                skill = 3
+                leader_age_min = 25
+                leader_age_max = 45
+                traits = {
+                    trait = leader_trait_general_synthetic
+                    trait = random_trait
+                }
+            }
+            create_fleet = {
+                effect = {
+                    set_owner = root
+                    while = {
+                        count = 10
+                        create_army_transport = {
+                            ship_name = random
+                            graphical_culture = root
+                            army_type = "assault_army"
+                            species = root.species
+                        }
+                    }
+                    set_location = {
+                        target = root.capital_scope
+                        distance = 60
+                        angle = random
+                    }
+                }
+            }
+            last_created_army = { assign_leader = last_created_leader }
         }
     }
     option = {
