@@ -509,6 +509,125 @@ special_project = {
 }
 
 special_project = {
+    key = "aoe_micaceous_resources_mining_project"
+    cost = 0
+    days_to_research = 900
+    timelimit = -1
+    tech_department = engineering_technology
+    picture = GFX_aoe_micaceous_mining_project
+    icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_constructor = 1
+    }
+
+    on_success = {
+        if = {
+            limit = {
+                from = {
+                    has_elerium_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_elerium_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_elerium_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_elerium_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_elerium_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_elerium_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_elerium_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_elerium_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_elerium_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_elerium_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_elerium_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = elerium
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else = {
+            owner = {
+                add_monthly_resource_mult = {
+                    resource = elerium
+                    value = @tier1materialreward
+                    min = @tier1researchmin
+                    max = @tier1materialmax
+                }
+            }
+        }
+    }
+
+    # on_fail = {
+    # }
+}
+
+special_project = {
     key = "aoe_corpuscular_resources_anomaly_project"
     cost = 0
     days_to_research = 300

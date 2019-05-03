@@ -47,3 +47,10 @@
     helium_desc:0 "Газ гелиум"
     kryptonite:0 "Криптонитная руда"
     kryptonite_desc:0 "Криптонитная руда"
+
+    mod_planet_jobs_elerium_produces_mult:0 "£eleruim£ $elerium$ от видов £job£ деятельности"
+    mod_planet_jobs_elerium_produces_add:0 "$mod_planet_jobs_elerium_produces_mult$"
+    mod_planet_miners_elerium_produces_mult:0 "£eleruim£ $elerium$ от категории £job_miner£ $job_miner_plural$"
+    mod_planet_miners_elerium_produces_add:0 "$mod_planet_miners_elerium_produces_mult$"
+    mod_country_elerium_produces_mult:0 "$elerium$ ежемесячно"
+    mod_country_elerium_produces_add:0 "$mod_country_elerium_produces_mult$"

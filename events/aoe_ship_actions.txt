@@ -1749,3 +1749,60 @@ ship_event = {
         custom_tooltip = aoe_ship_actions.33.c.tooltip
     }
 }
+
+ship_event = {
+    id = aoe_ship_actions.54
+    title = aoe_ship_actions.54.title
+    desc = aoe_ship_actions.54.desc
+    picture = GFX_aoe_micaceous_resources_mined
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    immediate = {
+        leader = {
+            add_experience = 100
+        }
+        owner = {
+            add_resource = {
+                elerium = @tier2materialmax
+            }
+        }
+    }
+
+    option = {
+        name = aoe_ship_actions.54.a
+        custom_tooltip = aoe_ship_actions.54.a.tooltip
+        trigger = {
+            owner = {
+                NOT = {
+                    has_special_project = "aoe_micaceous_resources_mining_project"
+                }
+                NOR = {
+                    has_technology = "tech_elerium_mining_1"
+                    has_technology = "tech_elerium_mining_2"
+                    has_technology = "tech_elerium_mining_3"
+                    has_technology = "tech_elerium_mining_4"
+                    has_technology = "tech_elerium_mining_5"
+                }
+            }
+            fromfrom = {
+                has_elerium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_micaceous_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.54.b
+        custom_tooltip = aoe_ship_actions.54.b.tooltip
+    }
+}

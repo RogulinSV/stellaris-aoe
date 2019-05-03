@@ -31,6 +31,7 @@ has_metallized_deposits = {
 # Scope: planet
 has_anomalous_deposits = {
     OR = {
+        has_deposit = "d_sr_elerium_deposit"
         has_deposit = "d_plasmatic_cobblestones"
         has_deposit = "d_spice_lakes"
         has_deposit = "d_floating_gardens"
@@ -256,8 +257,16 @@ has_tiberium_resource = {
 }
 
 # Scope: planet
+has_elerium_deposit = {
+    OR = {
+        has_deposit = "d_sr_elerium_deposit"
+    }
+}
+
+# Scope: planet
 has_elerium_resource = {
     OR = {
+        has_elerium_deposit = yes
         has_deposit = "d_elerium_1"
         has_deposit = "d_elerium_2"
         has_deposit = "d_elerium_3"

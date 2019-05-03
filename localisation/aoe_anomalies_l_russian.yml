@@ -29,6 +29,8 @@
     resources_tiberium_discovering_category_desc:0 "Исследование и добыча руды на планете [From.GetName] в системе [From.solar_system.GetName]"
     resources_elerium_discovering_category:0 "Исследование и добыча слюды"
     resources_elerium_discovering_category_desc:0 "Исследование и добыча слюды на планете [From.GetName] в системе [From.solar_system.GetName]"
+    resources_elerium_mining_category:0 "Производство и добыча слюды"
+    resources_elerium_mining_category_desc:0 "Производство и добыча слюды на планете [From.GetName] в системе [From.solar_system.GetName]"
     resources_gravitoid_discovering_category:0 "Исследование и добыча частиц"
     resources_gravitoid_discovering_category_desc:0 "Исследование и добыча заряженных частиц со звезды [From.GetName] в системе [From.solar_system.GetName]"
     resources_tylium_discovering_category:0 "Исследование и добыча жидкости"

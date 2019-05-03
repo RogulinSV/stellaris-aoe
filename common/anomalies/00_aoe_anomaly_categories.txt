@@ -381,17 +381,16 @@ resources_elerium_discovering_category = {
     picture = GFX_aoe_micaceous_resources_discovering
     max_once_global = no
     max_once = no
-    level = 3
+    level = 5
 
     spawn_chance = {
         modifier = {
-            add = 3
+            add = 25
             has_elerium_resource = yes
-        }
-        modifier = {
-            factor = 5
             from.owner = {
-                NOT = { has_technology = "tech_mine_elerium" }
+                NOT = {
+                    has_technology = "tech_mine_elerium"
+                }
             }
         }
     }
@@ -399,6 +398,37 @@ resources_elerium_discovering_category = {
     on_success = {
         1 = {
             ship_event = "aoe_ship_actions.24"
+        }
+    }
+}
+
+resources_elerium_mining_category = {
+    desc = resources_elerium_mining_category_desc
+    picture = GFX_aoe_micaceous_resources_founded
+    max_once_global = no
+    max_once = no
+    level = 8
+
+    spawn_chance = {
+        modifier = {
+            add = 10
+            has_elerium_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_elerium"
+                NOR = {
+                    has_technology = "tech_elerium_mining_1"
+                    has_technology = "tech_elerium_mining_2"
+                    has_technology = "tech_elerium_mining_3"
+                    has_technology = "tech_elerium_mining_4"
+                    has_technology = "tech_elerium_mining_5"
+                }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.54"
         }
     }
 }

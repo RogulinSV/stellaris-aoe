@@ -683,7 +683,7 @@ d_ancient_pillars = {
     }
 
     planet_modifier = {
-        district_scientific_complex_max = 2
+        district_scientific_complex_max = 1
     }
 
     potential = {
@@ -693,5 +693,60 @@ d_ancient_pillars = {
 
     drop_weight = {
         weight = @blocker_ultralow_drop_weight
+    }
+}
+
+### Strategic Resource Deposits
+
+d_sr_elerium_deposit = {
+    icon = "d_sr_elerium_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_elerium_harvester_max = 1
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_elerium_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_elerium_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            solar_system = {
+                is_inside_nebula = yes
+            }
+        }
     }
 }

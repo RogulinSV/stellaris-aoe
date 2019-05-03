@@ -9,6 +9,8 @@
     aoe_powdered_resources_anomaly_project_DESC:0 "Проект по исследованию неизвестных пылинок"
     aoe_micaceous_resources_anomaly_project:0 "Проект по исследованию неизвестной слюды"
     aoe_micaceous_resources_anomaly_project_DESC:0 "Проект по исследованию неизвестной слюды"
+    aoe_micaceous_resources_mining_project:0 "Проект по улучшению добычи слюды"
+    aoe_micaceous_resources_mining_project_DESC:0 "Проект по улучшению добычи слюды"
     aoe_corpuscular_resources_anomaly_project:0 "Проект по исследованию неизвестных заряженных частиц"
     aoe_corpuscular_resources_anomaly_project_DESC:0 "Проект по исследованию неизвестных заряженных частиц"
     aoe_fluid_resources_anomaly_project:0 "Проект по исследованию неизвестной жидкости"

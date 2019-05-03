@@ -40,6 +40,9 @@
     d_ancient_pillars:0 "Древние столпы знания"
     d_ancient_pillars_desc:0 "Древние столпы знания"
 
+    d_sr_elerium_deposit:0 "Залежи элериумной слюды"
+    d_sr_elerium_deposit_desc:0 "Залежи элериумной слюды"
+
     d_extraterrestrial_windy_highlands:0 "Ветреная возвышенность"
     d_extraterrestrial_windy_highlands_desc:0 "Ветреная возвышенность"
     d_extraterrestrial_gaseus_emissions:0 "Газовые выбросы"

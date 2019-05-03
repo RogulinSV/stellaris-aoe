@@ -134,6 +134,13 @@
     aoe_ship_actions.24.c:0 "Завершить исследование и добычу слюды"
     aoe_ship_actions.24.c.tooltip:0 "Завершить исследование и добычу слюды £elerium на планете [FromFrom.GetName] в системе [FromFrom.solar_system.GetName]"
 
+    aoe_ship_actions.54.title:0 "Производство и добыча слюды"
+    aoe_ship_actions.54.desc:0 "Производство и добыча слюды на планете [FromFrom.GetName] в системе [FromFrom.solar_system.GetName]"
+    aoe_ship_actions.54.a:0 "Начать добычу §Gэлериумной§! слюды"
+    aoe_ship_actions.54.a.tooltip:0 "Начать добычу слюды £elerium на планете [FromFrom.GetName] в системе [FromFrom.solar_system.GetName]"
+    aoe_ship_actions.54.b:0 "Завершить производство и добычу слюды"
+    aoe_ship_actions.54.b.tooltip:0 "Завершить производство и добычу слюды £elerium на планете [FromFrom.GetName] в системе [FromFrom.solar_system.GetName]"
+
     aoe_ship_actions.25.title:0 "Исследование и добыча частиц"
     aoe_ship_actions.25.desc:0 "Исследование и добыча заряженных частиц со звезды [FromFrom.GetName] в системе [FromFrom.solar_system.GetName]"
     aoe_ship_actions.25.a:0 "Начать добычу частиц §Yгравитона§!"

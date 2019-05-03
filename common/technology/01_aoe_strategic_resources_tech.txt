@@ -1665,6 +1665,8 @@ tech_mine_tiberium = {
 }
 
 tech_mine_elerium = {
+    # Unlocks "Elerium Harvester I" building
+
     cost = @technology_low_cost
     area = engineering
     tier = 2

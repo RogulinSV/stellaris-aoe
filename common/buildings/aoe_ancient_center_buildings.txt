@@ -1,0 +1,81 @@
+building_ancient_fission_center = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 2000
+    category = resource
+
+    potential = {
+        exists = owner
+        owner = { is_fallen_empire = yes }
+    }
+
+    show_tech_unlock_if = {
+        is_fallen_empire = yes
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 5000
+            energy = 4000
+        }
+        upkeep = {
+            energy = 20
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        modifier = {
+            job_fission_harvester_fe_ai_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        text = "job_fission_harvester_fe_ai_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 21
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_owned_pops = { 
+                limit = { 
+                    OR = { 
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_mine_elerium"
+    }
+}
