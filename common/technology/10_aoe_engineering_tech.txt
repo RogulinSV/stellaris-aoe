@@ -27,7 +27,7 @@ tech_industrial_district = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_crystallized_deposits = yes
+                    has_industrial_deposits = yes
                 }
             }
         }
@@ -48,7 +48,7 @@ tech_industrial_district = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_crystallized_deposits = yes
+                    has_industrial_deposits = yes
                 }
             }
         }

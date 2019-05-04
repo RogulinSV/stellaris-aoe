@@ -35,7 +35,7 @@ building_society_scientific_complex_1 = {
     potential = {
         is_colonizeable_planet = yes
         has_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -262,7 +262,7 @@ building_society_scientific_complex_2 = {
     potential = {
         is_colonizeable_planet = yes
         has_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -490,7 +490,7 @@ building_society_scientific_complex_3 = {
     potential = {
         is_colonizeable_planet = yes
         has_major_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -717,7 +717,7 @@ building_society_scientific_complex_4 = {
     potential = {
         is_colonizeable_planet = yes
         has_major_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -941,7 +941,7 @@ building_society_scientific_complex_5 = {
     potential = {
         is_colonizeable_planet = yes
         has_fully_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -1170,7 +1170,7 @@ building_engineering_scientific_complex_1 = {
     potential = {
         is_colonizeable_planet = yes
         has_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -1397,7 +1397,7 @@ building_engineering_scientific_complex_2 = {
     potential = {
         is_colonizeable_planet = yes
         has_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -1625,7 +1625,7 @@ building_engineering_scientific_complex_3 = {
     potential = {
         is_colonizeable_planet = yes
         has_major_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -1852,7 +1852,7 @@ building_engineering_scientific_complex_4 = {
     potential = {
         is_colonizeable_planet = yes
         has_major_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -2076,7 +2076,7 @@ building_engineering_scientific_complex_5 = {
     potential = {
         is_colonizeable_planet = yes
         has_fully_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -2305,7 +2305,7 @@ building_physics_scientific_complex_1 = {
     potential = {
         is_colonizeable_planet = yes
         has_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -2532,7 +2532,7 @@ building_physics_scientific_complex_2 = {
     potential = {
         is_colonizeable_planet = yes
         has_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -2760,7 +2760,7 @@ building_physics_scientific_complex_3 = {
     potential = {
         is_colonizeable_planet = yes
         has_major_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -2987,7 +2987,7 @@ building_physics_scientific_complex_4 = {
     potential = {
         is_colonizeable_planet = yes
         has_major_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -3211,7 +3211,7 @@ building_physics_scientific_complex_5 = {
     potential = {
         is_colonizeable_planet = yes
         has_fully_upgraded_capital = yes
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {
@@ -3417,7 +3417,7 @@ building_ancient_scientific_center = {
     potential = {
         exists = owner
         owner = { is_fallen_empire = yes }
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     show_tech_unlock_if = {

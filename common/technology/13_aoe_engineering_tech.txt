@@ -29,7 +29,7 @@ tech_scientific_district = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_anomalous_deposits = yes
+                    has_scientific_deposits = yes
                 }
             }
         }
@@ -50,7 +50,7 @@ tech_scientific_district = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_anomalous_deposits = yes
+                    has_scientific_deposits = yes
                 }
             }
         }

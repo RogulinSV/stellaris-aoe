@@ -27,7 +27,7 @@ tech_manufacturing_district = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_metallized_deposits = yes
+                    has_manufacturing_deposits = yes
                 }
             }
         }
@@ -48,7 +48,7 @@ tech_manufacturing_district = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_metallized_deposits = yes
+                    has_manufacturing_deposits = yes
                 }
             }
         }

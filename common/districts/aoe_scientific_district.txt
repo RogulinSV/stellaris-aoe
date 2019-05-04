@@ -10,7 +10,7 @@ district_scientific_complex = {
             can_have_habitable_deposits = yes
             can_have_extraterrestrial_deposits = yes
         }
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     potential = {
@@ -18,7 +18,7 @@ district_scientific_complex = {
             can_have_habitable_deposits = yes
             can_have_extraterrestrial_deposits = yes
         }
-        has_anomalous_deposits = yes
+        has_scientific_deposits = yes
     }
 
     allow = {

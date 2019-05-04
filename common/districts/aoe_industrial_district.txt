@@ -10,7 +10,7 @@ district_industrial_complex = {
             can_have_habitable_deposits = yes
             can_have_extraterrestrial_deposits = yes
         }
-        has_crystallized_deposits = yes
+        has_industrial_deposits = yes
     }
 
     potential = {
@@ -18,7 +18,7 @@ district_industrial_complex = {
             can_have_habitable_deposits = yes
             can_have_extraterrestrial_deposits = yes
         }
-        has_crystallized_deposits = yes
+        has_industrial_deposits = yes
     }
 
     allow = {

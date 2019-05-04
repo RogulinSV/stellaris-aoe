@@ -1,5 +1,5 @@
 # Scope: planet
-has_crystallized_deposits = {
+has_industrial_deposits = {
     OR = {
         has_deposit = "d_crystallized_caves"
         has_deposit = "d_crystallized_plains"
@@ -14,7 +14,7 @@ has_crystallized_deposits = {
 }
 
 # Scope: planet
-has_metallized_deposits = {
+has_manufacturing_deposits = {
     OR = {
         has_deposit = "d_metallized_caves"
         has_deposit = "d_metallized_plains"
@@ -29,7 +29,7 @@ has_metallized_deposits = {
 }
 
 # Scope: planet
-has_anomalous_deposits = {
+has_scientific_deposits = {
     OR = {
         has_deposit = "d_sr_elerium_deposit"
         has_deposit = "d_plasmatic_cobblestones"
