@@ -1,19 +1,371 @@
-resources_mithril_discovering_category = {
-    desc = resources_mithril_discovering_category_desc
-    picture = GFX_aoe_metallic_resources_discovering
+### Resources Discovering Category Events
+
+resources_discovering_category_1 = {
+    picture = GFX_aoe_resources_discovering_category_1
     max_once_global = no
     max_once = no
     level = 3
 
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_mithril_resource = yes
         }
+        text = resources_discovering_category.1.desc.1.a
+    }
+    desc = {
+        trigger = {
+            has_orihalk_resource = yes
+        }
+        text = resources_discovering_category.1.desc.2.a
+    }
+    desc = {
+        trigger = {
+            has_yuranic_resource = yes
+        }
+        text = resources_discovering_category.1.desc.3.a
+    }
+    desc = {
+        trigger = {
+            has_adamantium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.4.a
+    }
+    desc = {
+        trigger = {
+            has_vibranium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.5.a
+    }
+    desc = {
+        trigger = {
+            has_cobaltium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.6.a
+    }
+    desc = {
+        trigger = {
+            has_itildeen_resource = yes
+        }
+        text = resources_discovering_category.1.desc.7.a
+    }
+    desc = {
+        trigger = {
+            has_satramene_resource = yes
+        }
+        text = resources_discovering_category.1.desc.8.a
+    }
+    desc = {
+        trigger = {
+            has_lirium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.9.a
+    }
+    desc = {
+        trigger = {
+            has_nevarrit_resource = yes
+        }
+        text = resources_discovering_category.1.desc.10.a
+    }
+    desc = {
+        trigger = {
+            has_thiotimoline_resource = yes
+        }
+        text = resources_discovering_category.1.desc.11.a
+    }
+    desc = {
+        trigger = {
+            has_unobtanium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.12.a
+    }
+    desc = {
+        trigger = {
+            has_stalgrim_resource = yes
+        }
+        text = resources_discovering_category.1.desc.13.a
+    }
+    desc = {
+        trigger = {
+            has_tiberium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.14.a
+    }
+    desc = {
+        trigger = {
+            has_elerium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.15.a
+    }
+    desc = {
+        trigger = {
+            has_gravitoid_resource = yes
+        }
+        text = resources_discovering_category.1.desc.16.a
+    }
+    desc = {
+        trigger = {
+            has_tylium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.17.a
+    }
+    desc = {
+        trigger = {
+            has_chalcolivan_resource = yes
+        }
+        text = resources_discovering_category.1.desc.18.a
+    }
+    desc = {
+        trigger = {
+            has_terrigen_resource = yes
+        }
+        text = resources_discovering_category.1.desc.19.a
+    }
+    desc = {
+        trigger = {
+            has_corenite_resource = yes
+        }
+        text = resources_discovering_category.1.desc.20.a
+    }
+    desc = {
+        trigger = {
+            has_energon_resource = yes
+        }
+        text = resources_discovering_category.1.desc.21.a
+    }
+    desc = {
+        trigger = {
+            has_engos_resource = yes
+        }
+        text = resources_discovering_category.1.desc.22.a
+    }
+    desc = {
+        trigger = {
+            has_helium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.23.a
+    }
+    desc = {
+        trigger = {
+            has_kryptonite_resource = yes
+        }
+        text = resources_discovering_category.1.desc.24.a
+    }
+
+    spawn_chance = {
         modifier = {
-            factor = 5
+            add = @anomaly_medium_spawn_chance
+            has_mithril_resource = yes
             from.owner = {
-                NOT = { has_technology = "tech_mine_mithril" }
+                NOT = {
+                    has_technology = "tech_mine_mithril"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_orihalk_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_orihalk"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_yuranic_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_yuranic"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_adamantium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_adamantium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_vibranium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_vibranium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_cobaltium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_cobaltium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_itildeen_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_itildeen"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_satramene_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_satramene"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_lirium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_lirium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_nevarrit_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_nevarrit"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_thiotimoline_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_thiotimoline"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_unobtanium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_unobtanium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_stalgrim_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_stalgrim"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_tiberium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_tiberium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_elerium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_elerium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_gravitoid_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_gravitoid"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_tylium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_tylium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_chalcolivan_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_chalcolivan"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_terrigen_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_terrigen"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_corenite_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_corenite"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_energon_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_energon"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_engos_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_engos"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_helium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_helium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_kryptonite_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_kryptonite"
+                }
             }
         }
     }
@@ -25,22 +377,922 @@ resources_mithril_discovering_category = {
     }
 }
 
-resources_orihalk_discovering_category = {
-    desc = resources_orihalk_discovering_category_desc
-    picture = GFX_aoe_metallic_resources_discovering
+resources_discovering_category_2 = {
+    picture = GFX_aoe_resources_discovering_category_2
     max_once_global = no
     max_once = no
-    level = 3
+    level = 4
+
+    desc = {
+        trigger = {
+            has_mithril_resource = yes
+        }
+        text = resources_discovering_category.1.desc.1.a
+    }
+    desc = {
+        trigger = {
+            has_orihalk_resource = yes
+        }
+        text = resources_discovering_category.1.desc.2.a
+    }
+    desc = {
+        trigger = {
+            has_yuranic_resource = yes
+        }
+        text = resources_discovering_category.1.desc.3.a
+    }
+    desc = {
+        trigger = {
+            has_adamantium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.4.a
+    }
+    desc = {
+        trigger = {
+            has_vibranium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.5.a
+    }
+    desc = {
+        trigger = {
+            has_cobaltium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.6.a
+    }
+    desc = {
+        trigger = {
+            has_itildeen_resource = yes
+        }
+        text = resources_discovering_category.1.desc.7.a
+    }
+    desc = {
+        trigger = {
+            has_satramene_resource = yes
+        }
+        text = resources_discovering_category.1.desc.8.a
+    }
+    desc = {
+        trigger = {
+            has_lirium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.9.a
+    }
+    desc = {
+        trigger = {
+            has_nevarrit_resource = yes
+        }
+        text = resources_discovering_category.1.desc.10.a
+    }
+    desc = {
+        trigger = {
+            has_thiotimoline_resource = yes
+        }
+        text = resources_discovering_category.1.desc.11.a
+    }
+    desc = {
+        trigger = {
+            has_unobtanium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.12.a
+    }
+    desc = {
+        trigger = {
+            has_stalgrim_resource = yes
+        }
+        text = resources_discovering_category.1.desc.13.a
+    }
+    desc = {
+        trigger = {
+            has_tiberium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.14.a
+    }
+    desc = {
+        trigger = {
+            has_elerium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.15.a
+    }
+    desc = {
+        trigger = {
+            has_gravitoid_resource = yes
+        }
+        text = resources_discovering_category.1.desc.16.a
+    }
+    desc = {
+        trigger = {
+            has_tylium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.17.a
+    }
+    desc = {
+        trigger = {
+            has_chalcolivan_resource = yes
+        }
+        text = resources_discovering_category.1.desc.18.a
+    }
+    desc = {
+        trigger = {
+            has_terrigen_resource = yes
+        }
+        text = resources_discovering_category.1.desc.19.a
+    }
+    desc = {
+        trigger = {
+            has_corenite_resource = yes
+        }
+        text = resources_discovering_category.1.desc.20.a
+    }
+    desc = {
+        trigger = {
+            has_energon_resource = yes
+        }
+        text = resources_discovering_category.1.desc.21.a
+    }
+    desc = {
+        trigger = {
+            has_engos_resource = yes
+        }
+        text = resources_discovering_category.1.desc.22.a
+    }
+    desc = {
+        trigger = {
+            has_helium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.23.a
+    }
+    desc = {
+        trigger = {
+            has_kryptonite_resource = yes
+        }
+        text = resources_discovering_category.1.desc.24.a
+    }
 
     spawn_chance = {
         modifier = {
-            add = 3
-            has_orihalk_resource = yes
+            add = @anomaly_high_spawn_chance
+            has_mithril_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_mithril"
+                }
+            }
         }
         modifier = {
-            factor = 5
+            add = @anomaly_high_spawn_chance
+            has_orihalk_resource = yes
             from.owner = {
-                NOT = { has_technology = "tech_mine_orihalk" }
+                NOT = {
+                    has_technology = "tech_mine_orihalk"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_yuranic_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_yuranic"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_adamantium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_adamantium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_vibranium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_vibranium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_cobaltium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_cobaltium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_itildeen_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_itildeen"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_satramene_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_satramene"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_lirium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_lirium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_nevarrit_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_nevarrit"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_thiotimoline_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_thiotimoline"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_unobtanium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_unobtanium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_stalgrim_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_stalgrim"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_tiberium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_tiberium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_elerium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_elerium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_gravitoid_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_gravitoid"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_tylium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_tylium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_chalcolivan_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_chalcolivan"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_terrigen_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_terrigen"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_corenite_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_corenite"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_energon_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_energon"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_engos_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_engos"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_helium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_helium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_kryptonite_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_kryptonite"
+                }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.10"
+        }
+    }
+}
+
+resources_discovering_category_3 = {
+    picture = GFX_aoe_resources_discovering_category_3
+    max_once_global = no
+    max_once = no
+    level = 5
+
+    desc = {
+        trigger = {
+            has_mithril_resource = yes
+        }
+        text = resources_discovering_category.1.desc.1.a
+    }
+    desc = {
+        trigger = {
+            has_orihalk_resource = yes
+        }
+        text = resources_discovering_category.1.desc.2.a
+    }
+    desc = {
+        trigger = {
+            has_yuranic_resource = yes
+        }
+        text = resources_discovering_category.1.desc.3.a
+    }
+    desc = {
+        trigger = {
+            has_adamantium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.4.a
+    }
+    desc = {
+        trigger = {
+            has_vibranium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.5.a
+    }
+    desc = {
+        trigger = {
+            has_cobaltium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.6.a
+    }
+    desc = {
+        trigger = {
+            has_itildeen_resource = yes
+        }
+        text = resources_discovering_category.1.desc.7.a
+    }
+    desc = {
+        trigger = {
+            has_satramene_resource = yes
+        }
+        text = resources_discovering_category.1.desc.8.a
+    }
+    desc = {
+        trigger = {
+            has_lirium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.9.a
+    }
+    desc = {
+        trigger = {
+            has_nevarrit_resource = yes
+        }
+        text = resources_discovering_category.1.desc.10.a
+    }
+    desc = {
+        trigger = {
+            has_thiotimoline_resource = yes
+        }
+        text = resources_discovering_category.1.desc.11.a
+    }
+    desc = {
+        trigger = {
+            has_unobtanium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.12.a
+    }
+    desc = {
+        trigger = {
+            has_stalgrim_resource = yes
+        }
+        text = resources_discovering_category.1.desc.13.a
+    }
+    desc = {
+        trigger = {
+            has_tiberium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.14.a
+    }
+    desc = {
+        trigger = {
+            has_elerium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.15.a
+    }
+    desc = {
+        trigger = {
+            has_gravitoid_resource = yes
+        }
+        text = resources_discovering_category.1.desc.16.a
+    }
+    desc = {
+        trigger = {
+            has_tylium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.17.a
+    }
+    desc = {
+        trigger = {
+            has_chalcolivan_resource = yes
+        }
+        text = resources_discovering_category.1.desc.18.a
+    }
+    desc = {
+        trigger = {
+            has_terrigen_resource = yes
+        }
+        text = resources_discovering_category.1.desc.19.a
+    }
+    desc = {
+        trigger = {
+            has_corenite_resource = yes
+        }
+        text = resources_discovering_category.1.desc.20.a
+    }
+    desc = {
+        trigger = {
+            has_energon_resource = yes
+        }
+        text = resources_discovering_category.1.desc.21.a
+    }
+    desc = {
+        trigger = {
+            has_engos_resource = yes
+        }
+        text = resources_discovering_category.1.desc.22.a
+    }
+    desc = {
+        trigger = {
+            has_helium_resource = yes
+        }
+        text = resources_discovering_category.1.desc.23.a
+    }
+    desc = {
+        trigger = {
+            has_kryptonite_resource = yes
+        }
+        text = resources_discovering_category.1.desc.24.a
+    }
+
+    spawn_chance = {
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_mithril_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_mithril"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_orihalk_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_orihalk"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_yuranic_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_yuranic"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_adamantium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_adamantium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_vibranium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_vibranium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_cobaltium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_cobaltium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_itildeen_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_itildeen"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_satramene_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_satramene"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_lirium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_lirium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_nevarrit_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_nevarrit"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_thiotimoline_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_thiotimoline"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_unobtanium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_unobtanium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_stalgrim_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_stalgrim"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_tiberium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_tiberium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_elerium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_elerium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_gravitoid_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_gravitoid"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_tylium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_tylium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_chalcolivan_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_chalcolivan"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_terrigen_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_terrigen"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_corenite_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_corenite"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_energon_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_energon"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_engos_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_engos"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_helium_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_helium"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_kryptonite_resource = yes
+            from.owner = {
+                NOT = {
+                    has_technology = "tech_mine_kryptonite"
+                }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.10"
+        }
+    }
+}
+
+### Resources Mining Category Events
+
+resources_mining_category_1 = {
+    picture = GFX_aoe_resources_mining_category_1
+    max_once_global = no
+    max_once = no
+    level = 6
+
+    desc = {
+        trigger = {
+            has_mithril_resource = yes
+        }
+        text = resources_mining_category.1.desc.1.a
+    }
+    desc = {
+        trigger = {
+            has_orihalk_resource = yes
+        }
+        text = resources_mining_category.1.desc.2.a
+    }
+    desc = {
+        trigger = {
+            has_yuranic_resource = yes
+        }
+        text = resources_mining_category.1.desc.3.a
+    }
+    desc = {
+        trigger = {
+            has_adamantium_resource = yes
+        }
+        text = resources_mining_category.1.desc.4.a
+    }
+    desc = {
+        trigger = {
+            has_vibranium_resource = yes
+        }
+        text = resources_mining_category.1.desc.5.a
+    }
+    desc = {
+        trigger = {
+            has_cobaltium_resource = yes
+        }
+        text = resources_mining_category.1.desc.6.a
+    }
+    desc = {
+        trigger = {
+            has_itildeen_resource = yes
+        }
+        text = resources_mining_category.1.desc.7.a
+    }
+    desc = {
+        trigger = {
+            has_satramene_resource = yes
+        }
+        text = resources_mining_category.1.desc.8.a
+    }
+    desc = {
+        trigger = {
+            has_lirium_resource = yes
+        }
+        text = resources_mining_category.1.desc.9.a
+    }
+    desc = {
+        trigger = {
+            has_nevarrit_resource = yes
+        }
+        text = resources_mining_category.1.desc.10.a
+    }
+    desc = {
+        trigger = {
+            has_thiotimoline_resource = yes
+        }
+        text = resources_mining_category.1.desc.11.a
+    }
+    desc = {
+        trigger = {
+            has_unobtanium_resource = yes
+        }
+        text = resources_mining_category.1.desc.12.a
+    }
+    desc = {
+        trigger = {
+            has_stalgrim_resource = yes
+        }
+        text = resources_mining_category.1.desc.13.a
+    }
+    desc = {
+        trigger = {
+            has_tiberium_resource = yes
+        }
+        text = resources_mining_category.1.desc.14.a
+    }
+    desc = {
+        trigger = {
+            has_elerium_resource = yes
+        }
+        text = resources_mining_category.1.desc.15.a
+    }
+    desc = {
+        trigger = {
+            has_gravitoid_resource = yes
+        }
+        text = resources_mining_category.1.desc.16.a
+    }
+    desc = {
+        trigger = {
+            has_tylium_resource = yes
+        }
+        text = resources_mining_category.1.desc.17.a
+    }
+    desc = {
+        trigger = {
+            has_chalcolivan_resource = yes
+        }
+        text = resources_mining_category.1.desc.18.a
+    }
+    desc = {
+        trigger = {
+            has_terrigen_resource = yes
+        }
+        text = resources_mining_category.1.desc.19.a
+    }
+    desc = {
+        trigger = {
+            has_corenite_resource = yes
+        }
+        text = resources_mining_category.1.desc.20.a
+    }
+    desc = {
+        trigger = {
+            has_energon_resource = yes
+        }
+        text = resources_mining_category.1.desc.21.a
+    }
+    desc = {
+        trigger = {
+            has_engos_resource = yes
+        }
+        text = resources_mining_category.1.desc.22.a
+    }
+    desc = {
+        trigger = {
+            has_helium_resource = yes
+        }
+        text = resources_mining_category.1.desc.23.a
+    }
+    desc = {
+        trigger = {
+            has_kryptonite_resource = yes
+        }
+        text = resources_mining_category.1.desc.24.a
+    }
+
+    spawn_chance = {
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_elerium_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_elerium"
+                NOT = {
+                    has_technology = "tech_elerium_mining_1"
+                }
             }
         }
     }
@@ -52,344 +1304,165 @@ resources_orihalk_discovering_category = {
     }
 }
 
-resources_yuranic_discovering_category = {
-    desc = resources_yuranic_discovering_category_desc
-    picture = GFX_aoe_crystalline_resources_discovering
+resources_mining_category_2 = {
+    picture = GFX_aoe_resources_mining_category_2
     max_once_global = no
     max_once = no
-    level = 3
+    level = 7
 
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
+            has_mithril_resource = yes
+        }
+        text = resources_mining_category.1.desc.1.a
+    }
+    desc = {
+        trigger = {
+            has_orihalk_resource = yes
+        }
+        text = resources_mining_category.1.desc.2.a
+    }
+    desc = {
+        trigger = {
             has_yuranic_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_yuranic" }
-            }
-        }
+        text = resources_mining_category.1.desc.3.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.12"
-        }
-    }
-}
-
-resources_adamantium_discovering_category = {
-    desc = resources_adamantium_discovering_category_desc
-    picture = GFX_aoe_metallic_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_adamantium_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_adamantium" }
-            }
-        }
+        text = resources_mining_category.1.desc.4.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.13"
-        }
-    }
-}
-
-resources_vibranium_discovering_category = {
-    desc = resources_vibranium_discovering_category_desc
-    picture = GFX_aoe_metallic_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_vibranium_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_vibranium" }
-            }
-        }
+        text = resources_mining_category.1.desc.5.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.14"
-        }
-    }
-}
-
-resources_cobaltium_discovering_category = {
-    desc = resources_cobaltium_discovering_category_desc
-    picture = GFX_aoe_crystalline_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_cobaltium_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_cobaltium" }
-            }
-        }
+        text = resources_mining_category.1.desc.6.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.15"
-        }
-    }
-}
-
-resources_itildeen_discovering_category = {
-    desc = resources_itildeen_discovering_category_desc
-    picture = GFX_aoe_gaseous_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_itildeen_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_itildeen" }
-            }
-        }
+        text = resources_mining_category.1.desc.7.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.16"
-        }
-    }
-}
-
-resources_satramene_discovering_category = {
-    desc = resources_satramene_discovering_category_desc
-    picture = GFX_aoe_gaseous_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_satramene_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_satramene" }
-            }
-        }
+        text = resources_mining_category.1.desc.8.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.17"
-        }
-    }
-}
-
-resources_lirium_discovering_category = {
-    desc = resources_lirium_discovering_category_desc
-    picture = GFX_aoe_crystalline_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_lirium_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_lirium" }
-            }
-        }
+        text = resources_mining_category.1.desc.9.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.18"
-        }
-    }
-}
-
-resources_nevarrit_discovering_category = {
-    desc = resources_nevarrit_discovering_category_desc
-    picture = GFX_aoe_powdered_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_nevarrit_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_nevarrit" }
-            }
-        }
+        text = resources_mining_category.1.desc.10.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.19"
-        }
-    }
-}
-
-resources_thiotimoline_discovering_category = {
-    desc = resources_thiotimoline_discovering_category_desc
-    picture = GFX_aoe_powdered_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_thiotimoline_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_thiotimoline" }
-            }
-        }
+        text = resources_mining_category.1.desc.11.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.20"
-        }
-    }
-}
-
-resources_unobtanium_discovering_category = {
-    desc = resources_unobtanium_discovering_category_desc
-    picture = GFX_aoe_crystalline_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_unobtanium_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_unobtanium" }
-            }
-        }
+        text = resources_mining_category.1.desc.12.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.21"
-        }
-    }
-}
-
-resources_stalgrim_discovering_category = {
-    desc = resources_stalgrim_discovering_category_desc
-    picture = GFX_aoe_metallic_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_stalgrim_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_stalgrim" }
-            }
-        }
+        text = resources_mining_category.1.desc.13.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.22"
-        }
-    }
-}
-
-resources_tiberium_discovering_category = {
-    desc = resources_tiberium_discovering_category_desc
-    picture = GFX_aoe_metallic_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
+    desc = {
+        trigger = {
             has_tiberium_resource = yes
         }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_tiberium" }
-            }
-        }
+        text = resources_mining_category.1.desc.14.a
     }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.23"
+    desc = {
+        trigger = {
+            has_elerium_resource = yes
         }
+        text = resources_mining_category.1.desc.15.a
     }
-}
-
-resources_elerium_discovering_category = {
-    desc = resources_elerium_discovering_category_desc
-    picture = GFX_aoe_micaceous_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 5
+    desc = {
+        trigger = {
+            has_gravitoid_resource = yes
+        }
+        text = resources_mining_category.1.desc.16.a
+    }
+    desc = {
+        trigger = {
+            has_tylium_resource = yes
+        }
+        text = resources_mining_category.1.desc.17.a
+    }
+    desc = {
+        trigger = {
+            has_chalcolivan_resource = yes
+        }
+        text = resources_mining_category.1.desc.18.a
+    }
+    desc = {
+        trigger = {
+            has_terrigen_resource = yes
+        }
+        text = resources_mining_category.1.desc.19.a
+    }
+    desc = {
+        trigger = {
+            has_corenite_resource = yes
+        }
+        text = resources_mining_category.1.desc.20.a
+    }
+    desc = {
+        trigger = {
+            has_energon_resource = yes
+        }
+        text = resources_mining_category.1.desc.21.a
+    }
+    desc = {
+        trigger = {
+            has_engos_resource = yes
+        }
+        text = resources_mining_category.1.desc.22.a
+    }
+    desc = {
+        trigger = {
+            has_helium_resource = yes
+        }
+        text = resources_mining_category.1.desc.23.a
+    }
+    desc = {
+        trigger = {
+            has_kryptonite_resource = yes
+        }
+        text = resources_mining_category.1.desc.24.a
+    }
 
     spawn_chance = {
         modifier = {
-            add = 25
+            add = @anomaly_high_spawn_chance
             has_elerium_resource = yes
             from.owner = {
+                has_technology = "tech_elerium_mining_1"
                 NOT = {
-                    has_technology = "tech_mine_elerium"
+                    has_technology = "tech_elerium_mining_2"
                 }
             }
         }
@@ -397,29 +1470,511 @@ resources_elerium_discovering_category = {
 
     on_success = {
         1 = {
-            ship_event = "aoe_ship_actions.24"
+            ship_event = "aoe_ship_actions.11"
         }
     }
 }
 
-resources_elerium_mining_category = {
-    desc = resources_elerium_mining_category_desc
-    picture = GFX_aoe_micaceous_resources_founded
+resources_mining_category_3 = {
+    picture = GFX_aoe_resources_mining_category_3
     max_once_global = no
     max_once = no
     level = 8
 
+    desc = {
+        trigger = {
+            has_mithril_resource = yes
+        }
+        text = resources_mining_category.1.desc.1.a
+    }
+    desc = {
+        trigger = {
+            has_orihalk_resource = yes
+        }
+        text = resources_mining_category.1.desc.2.a
+    }
+    desc = {
+        trigger = {
+            has_yuranic_resource = yes
+        }
+        text = resources_mining_category.1.desc.3.a
+    }
+    desc = {
+        trigger = {
+            has_adamantium_resource = yes
+        }
+        text = resources_mining_category.1.desc.4.a
+    }
+    desc = {
+        trigger = {
+            has_vibranium_resource = yes
+        }
+        text = resources_mining_category.1.desc.5.a
+    }
+    desc = {
+        trigger = {
+            has_cobaltium_resource = yes
+        }
+        text = resources_mining_category.1.desc.6.a
+    }
+    desc = {
+        trigger = {
+            has_itildeen_resource = yes
+        }
+        text = resources_mining_category.1.desc.7.a
+    }
+    desc = {
+        trigger = {
+            has_satramene_resource = yes
+        }
+        text = resources_mining_category.1.desc.8.a
+    }
+    desc = {
+        trigger = {
+            has_lirium_resource = yes
+        }
+        text = resources_mining_category.1.desc.9.a
+    }
+    desc = {
+        trigger = {
+            has_nevarrit_resource = yes
+        }
+        text = resources_mining_category.1.desc.10.a
+    }
+    desc = {
+        trigger = {
+            has_thiotimoline_resource = yes
+        }
+        text = resources_mining_category.1.desc.11.a
+    }
+    desc = {
+        trigger = {
+            has_unobtanium_resource = yes
+        }
+        text = resources_mining_category.1.desc.12.a
+    }
+    desc = {
+        trigger = {
+            has_stalgrim_resource = yes
+        }
+        text = resources_mining_category.1.desc.13.a
+    }
+    desc = {
+        trigger = {
+            has_tiberium_resource = yes
+        }
+        text = resources_mining_category.1.desc.14.a
+    }
+    desc = {
+        trigger = {
+            has_elerium_resource = yes
+        }
+        text = resources_mining_category.1.desc.15.a
+    }
+    desc = {
+        trigger = {
+            has_gravitoid_resource = yes
+        }
+        text = resources_mining_category.1.desc.16.a
+    }
+    desc = {
+        trigger = {
+            has_tylium_resource = yes
+        }
+        text = resources_mining_category.1.desc.17.a
+    }
+    desc = {
+        trigger = {
+            has_chalcolivan_resource = yes
+        }
+        text = resources_mining_category.1.desc.18.a
+    }
+    desc = {
+        trigger = {
+            has_terrigen_resource = yes
+        }
+        text = resources_mining_category.1.desc.19.a
+    }
+    desc = {
+        trigger = {
+            has_corenite_resource = yes
+        }
+        text = resources_mining_category.1.desc.20.a
+    }
+    desc = {
+        trigger = {
+            has_energon_resource = yes
+        }
+        text = resources_mining_category.1.desc.21.a
+    }
+    desc = {
+        trigger = {
+            has_engos_resource = yes
+        }
+        text = resources_mining_category.1.desc.22.a
+    }
+    desc = {
+        trigger = {
+            has_helium_resource = yes
+        }
+        text = resources_mining_category.1.desc.23.a
+    }
+    desc = {
+        trigger = {
+            has_kryptonite_resource = yes
+        }
+        text = resources_mining_category.1.desc.24.a
+    }
+
     spawn_chance = {
         modifier = {
-            add = 10
+            add = @anomaly_medium_spawn_chance
             has_elerium_resource = yes
             from.owner = {
-                has_technology = "tech_mine_elerium"
-                NOR = {
-                    has_technology = "tech_elerium_mining_1"
-                    has_technology = "tech_elerium_mining_2"
+                has_technology = "tech_elerium_mining_2"
+                NOT = {
                     has_technology = "tech_elerium_mining_3"
+                }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.11"
+        }
+    }
+}
+
+resources_mining_category_4 = {
+    picture = GFX_aoe_resources_mining_category_4
+    max_once_global = no
+    max_once = no
+    level = 9
+
+    desc = {
+        trigger = {
+            has_mithril_resource = yes
+        }
+        text = resources_mining_category.1.desc.1.a
+    }
+    desc = {
+        trigger = {
+            has_orihalk_resource = yes
+        }
+        text = resources_mining_category.1.desc.2.a
+    }
+    desc = {
+        trigger = {
+            has_yuranic_resource = yes
+        }
+        text = resources_mining_category.1.desc.3.a
+    }
+    desc = {
+        trigger = {
+            has_adamantium_resource = yes
+        }
+        text = resources_mining_category.1.desc.4.a
+    }
+    desc = {
+        trigger = {
+            has_vibranium_resource = yes
+        }
+        text = resources_mining_category.1.desc.5.a
+    }
+    desc = {
+        trigger = {
+            has_cobaltium_resource = yes
+        }
+        text = resources_mining_category.1.desc.6.a
+    }
+    desc = {
+        trigger = {
+            has_itildeen_resource = yes
+        }
+        text = resources_mining_category.1.desc.7.a
+    }
+    desc = {
+        trigger = {
+            has_satramene_resource = yes
+        }
+        text = resources_mining_category.1.desc.8.a
+    }
+    desc = {
+        trigger = {
+            has_lirium_resource = yes
+        }
+        text = resources_mining_category.1.desc.9.a
+    }
+    desc = {
+        trigger = {
+            has_nevarrit_resource = yes
+        }
+        text = resources_mining_category.1.desc.10.a
+    }
+    desc = {
+        trigger = {
+            has_thiotimoline_resource = yes
+        }
+        text = resources_mining_category.1.desc.11.a
+    }
+    desc = {
+        trigger = {
+            has_unobtanium_resource = yes
+        }
+        text = resources_mining_category.1.desc.12.a
+    }
+    desc = {
+        trigger = {
+            has_stalgrim_resource = yes
+        }
+        text = resources_mining_category.1.desc.13.a
+    }
+    desc = {
+        trigger = {
+            has_tiberium_resource = yes
+        }
+        text = resources_mining_category.1.desc.14.a
+    }
+    desc = {
+        trigger = {
+            has_elerium_resource = yes
+        }
+        text = resources_mining_category.1.desc.15.a
+    }
+    desc = {
+        trigger = {
+            has_gravitoid_resource = yes
+        }
+        text = resources_mining_category.1.desc.16.a
+    }
+    desc = {
+        trigger = {
+            has_tylium_resource = yes
+        }
+        text = resources_mining_category.1.desc.17.a
+    }
+    desc = {
+        trigger = {
+            has_chalcolivan_resource = yes
+        }
+        text = resources_mining_category.1.desc.18.a
+    }
+    desc = {
+        trigger = {
+            has_terrigen_resource = yes
+        }
+        text = resources_mining_category.1.desc.19.a
+    }
+    desc = {
+        trigger = {
+            has_corenite_resource = yes
+        }
+        text = resources_mining_category.1.desc.20.a
+    }
+    desc = {
+        trigger = {
+            has_energon_resource = yes
+        }
+        text = resources_mining_category.1.desc.21.a
+    }
+    desc = {
+        trigger = {
+            has_engos_resource = yes
+        }
+        text = resources_mining_category.1.desc.22.a
+    }
+    desc = {
+        trigger = {
+            has_helium_resource = yes
+        }
+        text = resources_mining_category.1.desc.23.a
+    }
+    desc = {
+        trigger = {
+            has_kryptonite_resource = yes
+        }
+        text = resources_mining_category.1.desc.24.a
+    }
+
+    spawn_chance = {
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_elerium_resource = yes
+            from.owner = {
+                has_technology = "tech_elerium_mining_3"
+                NOT = {
                     has_technology = "tech_elerium_mining_4"
+                }
+            }
+        }
+    }
+
+    on_success = {
+        1 = {
+            ship_event = "aoe_ship_actions.11"
+        }
+    }
+}
+
+resources_mining_category_5 = {
+    picture = GFX_aoe_resources_mining_category_5
+    max_once_global = no
+    max_once = no
+    level = 10
+
+    desc = {
+        trigger = {
+            has_mithril_resource = yes
+        }
+        text = resources_mining_category.1.desc.1.a
+    }
+    desc = {
+        trigger = {
+            has_orihalk_resource = yes
+        }
+        text = resources_mining_category.1.desc.2.a
+    }
+    desc = {
+        trigger = {
+            has_yuranic_resource = yes
+        }
+        text = resources_mining_category.1.desc.3.a
+    }
+    desc = {
+        trigger = {
+            has_adamantium_resource = yes
+        }
+        text = resources_mining_category.1.desc.4.a
+    }
+    desc = {
+        trigger = {
+            has_vibranium_resource = yes
+        }
+        text = resources_mining_category.1.desc.5.a
+    }
+    desc = {
+        trigger = {
+            has_cobaltium_resource = yes
+        }
+        text = resources_mining_category.1.desc.6.a
+    }
+    desc = {
+        trigger = {
+            has_itildeen_resource = yes
+        }
+        text = resources_mining_category.1.desc.7.a
+    }
+    desc = {
+        trigger = {
+            has_satramene_resource = yes
+        }
+        text = resources_mining_category.1.desc.8.a
+    }
+    desc = {
+        trigger = {
+            has_lirium_resource = yes
+        }
+        text = resources_mining_category.1.desc.9.a
+    }
+    desc = {
+        trigger = {
+            has_nevarrit_resource = yes
+        }
+        text = resources_mining_category.1.desc.10.a
+    }
+    desc = {
+        trigger = {
+            has_thiotimoline_resource = yes
+        }
+        text = resources_mining_category.1.desc.11.a
+    }
+    desc = {
+        trigger = {
+            has_unobtanium_resource = yes
+        }
+        text = resources_mining_category.1.desc.12.a
+    }
+    desc = {
+        trigger = {
+            has_stalgrim_resource = yes
+        }
+        text = resources_mining_category.1.desc.13.a
+    }
+    desc = {
+        trigger = {
+            has_tiberium_resource = yes
+        }
+        text = resources_mining_category.1.desc.14.a
+    }
+    desc = {
+        trigger = {
+            has_elerium_resource = yes
+        }
+        text = resources_mining_category.1.desc.15.a
+    }
+    desc = {
+        trigger = {
+            has_gravitoid_resource = yes
+        }
+        text = resources_mining_category.1.desc.16.a
+    }
+    desc = {
+        trigger = {
+            has_tylium_resource = yes
+        }
+        text = resources_mining_category.1.desc.17.a
+    }
+    desc = {
+        trigger = {
+            has_chalcolivan_resource = yes
+        }
+        text = resources_mining_category.1.desc.18.a
+    }
+    desc = {
+        trigger = {
+            has_terrigen_resource = yes
+        }
+        text = resources_mining_category.1.desc.19.a
+    }
+    desc = {
+        trigger = {
+            has_corenite_resource = yes
+        }
+        text = resources_mining_category.1.desc.20.a
+    }
+    desc = {
+        trigger = {
+            has_energon_resource = yes
+        }
+        text = resources_mining_category.1.desc.21.a
+    }
+    desc = {
+        trigger = {
+            has_engos_resource = yes
+        }
+        text = resources_mining_category.1.desc.22.a
+    }
+    desc = {
+        trigger = {
+            has_helium_resource = yes
+        }
+        text = resources_mining_category.1.desc.23.a
+    }
+    desc = {
+        trigger = {
+            has_kryptonite_resource = yes
+        }
+        text = resources_mining_category.1.desc.24.a
+    }
+
+    spawn_chance = {
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_elerium_resource = yes
+            from.owner = {
+                has_technology = "tech_elerium_mining_4"
+                NOT = {
                     has_technology = "tech_elerium_mining_5"
                 }
             }
@@ -428,158 +1983,7 @@ resources_elerium_mining_category = {
 
     on_success = {
         1 = {
-            ship_event = "aoe_ship_actions.54"
+            ship_event = "aoe_ship_actions.11"
         }
     }
 }
-
-resources_gravitoid_discovering_category = {
-    desc = resources_gravitoid_discovering_category_desc
-    picture = GFX_aoe_corpuscular_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
-            has_gravitoid_resource = yes
-        }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_gravitoid" }
-            }
-        }
-    }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.25"
-        }
-    }
-}
-
-resources_tylium_discovering_category = {
-    desc = resources_tylium_discovering_category_desc
-    picture = GFX_aoe_fluid_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
-            has_tylium_resource = yes
-        }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_tylium" }
-            }
-        }
-    }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.26"
-        }
-    }
-}
-
-resources_chalcolivan_discovering_category = {
-    desc = resources_chalcolivan_discovering_category_desc
-    picture = GFX_aoe_metallic_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
-            has_chalcolivan_resource = yes
-        }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_chalcolivan" }
-            }
-        }
-    }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.27"
-        }
-    }
-}
-
-resources_terrigen_discovering_category = {
-    desc = resources_terrigen_discovering_category_desc
-    picture = GFX_aoe_fluid_resources_discovering
-    max_once_global = no
-    max_once = no
-    level = 3
-
-    spawn_chance = {
-        modifier = {
-            add = 3
-            has_terrigen_resource = yes
-        }
-        modifier = {
-            factor = 5
-            from.owner = {
-                NOT = { has_technology = "tech_mine_terrigen" }
-            }
-        }
-    }
-
-    on_success = {
-        1 = {
-            ship_event = "aoe_ship_actions.28"
-        }
-    }
-}
-
-# strategic_resources_discovering_category = {
-#     desc = strategic_resources_discovering_category_desc
-#     picture = GFX_aoe_strategic_resources_discovering
-#     max_once_global = no
-#     max_once = no
-#     level = 3
-
-#     spawn_chance = {
-#         modifier = {
-#             add = 100
-#             OR = {
-#                 has_mithril_resource = yes
-#                 has_orihalk_resource = yes
-#                 has_yuranic_resource = yes
-#                 has_adamantium_resource = yes
-#                 has_itildeen_resource = yes
-#                 has_satramene_resource = yes
-#             }
-#         }
-#         modifier = {
-#             factor = 0
-#             # exists = space_owner
-#             # space_owner = { is_same_value = from.owner }
-#             from.owner = {
-#                 AND = {
-#                     has_technology = "tech_mine_mithril"
-#                     has_technology = "tech_mine_orihalk"
-#                     has_technology = "tech_mine_yuranic"
-#                     has_technology = "tech_mine_adamantium"
-#                     has_technology = "tech_mine_itildeen"
-#                     has_technology = "tech_mine_satramene"
-#                 }
-#             }
-#         }
-#     }
-
-#     on_success = {
-#         1 = {
-#             ship_event = "aoe_ship_actions.10"
-#         }
-#     }
-# }

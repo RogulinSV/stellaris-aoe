@@ -24,7 +24,16 @@ elerium_harvester_worker = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_advanced_nuclear_fission"
+                    has_technology = "tech_elerium_mining_1"
+                }
+            }
+            elerium = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_2"
                 }
             }
             elerium = 2
@@ -33,7 +42,7 @@ elerium_harvester_worker = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_supreme_nuclear_fission"
+                    has_technology = "tech_elerium_mining_3"
                 }
             }
             elerium = 3
@@ -42,10 +51,19 @@ elerium_harvester_worker = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_transcendence_nuclear_fission"
+                    has_technology = "tech_elerium_mining_4"
                 }
             }
             elerium = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_5"
+                }
+            }
+            elerium = 5
         }
     }
 
@@ -152,7 +170,16 @@ elerium_harvester_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_advanced_nuclear_fission"
+                    has_technology = "tech_elerium_mining_1"
+                }
+            }
+            elerium = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_2"
                 }
             }
             elerium = 2
@@ -161,7 +188,7 @@ elerium_harvester_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_supreme_nuclear_fission"
+                    has_technology = "tech_elerium_mining_3"
                 }
             }
             elerium = 3
@@ -170,10 +197,19 @@ elerium_harvester_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_transcendence_nuclear_fission"
+                    has_technology = "tech_elerium_mining_4"
                 }
             }
             elerium = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_5"
+                }
+            }
+            elerium = 5
         }
     }
 
@@ -234,7 +270,16 @@ elerium_harvester_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_advanced_nuclear_fission"
+                    has_technology = "tech_elerium_mining_1"
+                }
+            }
+            elerium = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_2"
                 }
             }
             elerium = 2
@@ -243,7 +288,7 @@ elerium_harvester_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_supreme_nuclear_fission"
+                    has_technology = "tech_elerium_mining_3"
                 }
             }
             elerium = 3
@@ -252,10 +297,19 @@ elerium_harvester_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_transcendence_nuclear_fission"
+                    has_technology = "tech_elerium_mining_4"
                 }
             }
             elerium = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_5"
+                }
+            }
+            elerium = 5
         }
     }
 
@@ -316,7 +370,16 @@ elerium_harvester_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_advanced_nuclear_fission"
+                    has_technology = "tech_elerium_mining_1"
+                }
+            }
+            elerium = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_2"
                 }
             }
             elerium = 2
@@ -325,7 +388,7 @@ elerium_harvester_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_supreme_nuclear_fission"
+                    has_technology = "tech_elerium_mining_3"
                 }
             }
             elerium = 3
@@ -334,10 +397,19 @@ elerium_harvester_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_transcendence_nuclear_fission"
+                    has_technology = "tech_elerium_mining_4"
                 }
             }
             elerium = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_5"
+                }
+            }
+            elerium = 5
         }
     }
 

@@ -21,3 +21,9 @@
 
 @deposit_low_rare_drop_weight = 1
 @deposit_high_rare_drop_weight = 2
+
+@anomaly_ultrahigh_spawn_chance = 25
+@anomaly_high_spawn_chance = 20
+@anomaly_medium_spawn_chance = 15
+@anomaly_low_spawn_chance = 10
+@anomaly_ultralow_spawn_chance = 5

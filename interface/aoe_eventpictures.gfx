@@ -30,146 +30,44 @@ spriteTypes = {
         alwaystransparent = yes
     }
     spriteType = {
-        name = "GFX_aoe_metallic_resources_discovering"
-        texturefile = "gfx/event_pictures/strategic_resources_discovering.dds"
+        name = "GFX_aoe_resources_discovering_category_1"
+        texturefile = "gfx/event_pictures/strategic_resources_discovering_category.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
-        name = "GFX_aoe_crystalline_resources_discovering"
-        texturefile = "gfx/event_pictures/strategic_resources_discovering.dds"
+        name = "GFX_aoe_resources_discovering_category_2"
+        texturefile = "gfx/event_pictures/strategic_resources_discovering_category.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
-        name = "GFX_aoe_gaseous_resources_discovering"
-        texturefile = "gfx/event_pictures/strategic_resources_discovering.dds"
+        name = "GFX_aoe_resources_discovering_category_3"
+        texturefile = "gfx/event_pictures/strategic_resources_discovering_category.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
-        name = "GFX_aoe_powdered_resources_discovering"
-        texturefile = "gfx/event_pictures/strategic_resources_discovering.dds"
+        name = "GFX_aoe_resources_discovering_event"
+        texturefile = "gfx/event_pictures/strategic_resources_discovering_event.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
-        name = "GFX_aoe_micaceous_resources_discovering"
-        texturefile = "gfx/event_pictures/strategic_resources_discovering.dds"
+        name = "GFX_aoe_resources_discovering_project_1"
+        texturefile = "gfx/event_pictures/strategic_resources_discovering_project.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
-        name = "GFX_aoe_micaceous_resources_mining"
-        texturefile = "gfx/event_pictures/strategic_resources_mining.dds"
+        name = "GFX_aoe_resources_discovering_project_2"
+        texturefile = "gfx/event_pictures/strategic_resources_discovering_project.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
-        name = "GFX_aoe_corpuscular_resources_discovering"
-        texturefile = "gfx/event_pictures/strategic_resources_discovering.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_fluid_resources_discovering"
-        texturefile = "gfx/event_pictures/strategic_resources_discovering.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_metallic_resources_discovered"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_crystalline_resources_discovered"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_gaseous_resources_discovered"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_powdered_resources_discovered"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_micaceous_resources_discovered"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_micaceous_resources_founded"
-        texturefile = "gfx/event_pictures/strategic_resources_founded.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_corpuscular_resources_discovered"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_fluid_resources_discovered"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_metallic_resources_project"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_crystalline_resources_project"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_gaseous_resources_project"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_powdered_resources_project"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_micaceous_resources_project"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_micaceous_mining_project"
-        texturefile = "gfx/event_pictures/strategic_resources_mining.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_corpuscular_resources_project"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
-        masking_texture = "gfx/interface/situation_log/event_mask.dds"
-        alwaystransparent = yes
-    }
-    spriteType = {
-        name = "GFX_aoe_fluid_resources_project"
-        texturefile = "gfx/event_pictures/strategic_resources_discovered.dds"
+        name = "GFX_aoe_resources_discovering_project_3"
+        texturefile = "gfx/event_pictures/strategic_resources_discovering_project.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
@@ -248,6 +146,48 @@ spriteTypes = {
     spriteType = {
         name = "GFX_aoe_celestial_worlds"
         texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_resources_mining_event"
+        texturefile = "gfx/event_pictures/strategic_resources_mining_event.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_resources_mining_category_1"
+        texturefile = "gfx/event_pictures/strategic_resources_mining_category.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_resources_mining_category_2"
+        texturefile = "gfx/event_pictures/strategic_resources_mining_category.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_resources_mining_category_3"
+        texturefile = "gfx/event_pictures/strategic_resources_mining_category.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_resources_mining_category_4"
+        texturefile = "gfx/event_pictures/strategic_resources_mining_category.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_resources_mining_category_5"
+        texturefile = "gfx/event_pictures/strategic_resources_mining_category.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_resources_mining_project"
+        texturefile = "gfx/event_pictures/strategic_resources_mining_project.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
