@@ -1,3 +1,5 @@
+### Astronomer Jobs
+
 astronomer = {
     category = specialist
     condition_string = SPECIALIST_JOB_TRIGGER
@@ -417,7 +419,7 @@ scientific_complex_society_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_society_scientific_complex_1"
                 }
             }
             society_research = 1
@@ -426,7 +428,7 @@ scientific_complex_society_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_society_scientific_complex_2"
                 }
             }
             society_research = 2
@@ -435,7 +437,7 @@ scientific_complex_society_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_society_scientific_complex_3"
                 }
             }
             society_research = 3
@@ -444,7 +446,7 @@ scientific_complex_society_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_society_scientific_complex_4"
                 }
             }
             society_research = 4
@@ -453,29 +455,11 @@ scientific_complex_society_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_society_scientific_complex_5"
                 }
             }
             society_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     society_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     society_research = 7
-        # }
         produces = {
             trigger = {
                 exists = owner
@@ -615,7 +599,7 @@ scientific_complex_engineering_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_engineering_scientific_complex_1"
                 }
             }
             engineering_research = 1
@@ -624,7 +608,7 @@ scientific_complex_engineering_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_engineering_scientific_complex_2"
                 }
             }
             engineering_research = 2
@@ -633,7 +617,7 @@ scientific_complex_engineering_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_engineering_scientific_complex_3"
                 }
             }
             engineering_research = 3
@@ -642,7 +626,7 @@ scientific_complex_engineering_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_engineering_scientific_complex_4"
                 }
             }
             engineering_research = 4
@@ -651,29 +635,11 @@ scientific_complex_engineering_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_engineering_scientific_complex_5"
                 }
             }
             engineering_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     engineering_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     engineering_research = 7
-        # }
         produces = {
             trigger = {
                 exists = owner
@@ -813,7 +779,7 @@ scientific_complex_physics_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_physics_scientific_complex_1"
                 }
             }
             physics_research = 1
@@ -822,7 +788,7 @@ scientific_complex_physics_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_physics_scientific_complex_2"
                 }
             }
             physics_research = 2
@@ -831,7 +797,7 @@ scientific_complex_physics_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_physics_scientific_complex_3"
                 }
             }
             physics_research = 3
@@ -840,7 +806,7 @@ scientific_complex_physics_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_physics_scientific_complex_4"
                 }
             }
             physics_research = 4
@@ -849,29 +815,11 @@ scientific_complex_physics_scientist = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_physics_scientific_complex_5"
                 }
             }
             physics_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     physics_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     physics_research = 7
-        # }
         produces = {
             trigger = {
                 exists = owner
@@ -990,7 +938,7 @@ scientific_complex_society_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_society_scientific_complex_1"
                 }
             }
             society_research = 1
@@ -999,7 +947,7 @@ scientific_complex_society_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_society_scientific_complex_2"
                 }
             }
             society_research = 2
@@ -1008,7 +956,7 @@ scientific_complex_society_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_society_scientific_complex_3"
                 }
             }
             society_research = 3
@@ -1017,7 +965,7 @@ scientific_complex_society_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_society_scientific_complex_4"
                 }
             }
             society_research = 4
@@ -1026,29 +974,11 @@ scientific_complex_society_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_society_scientific_complex_5"
                 }
             }
             society_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     society_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     society_research = 7
-        # }
         produces = {
             trigger = {
                 has_trait = "trait_robot_propaganda_machines"
@@ -1174,7 +1104,7 @@ scientific_complex_engineering_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_engineering_scientific_complex_1"
                 }
             }
             engineering_research = 1
@@ -1183,7 +1113,7 @@ scientific_complex_engineering_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_engineering_scientific_complex_2"
                 }
             }
             engineering_research = 2
@@ -1192,7 +1122,7 @@ scientific_complex_engineering_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_engineering_scientific_complex_3"
                 }
             }
             engineering_research = 3
@@ -1201,7 +1131,7 @@ scientific_complex_engineering_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_engineering_scientific_complex_4"
                 }
             }
             engineering_research = 4
@@ -1210,29 +1140,11 @@ scientific_complex_engineering_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_engineering_scientific_complex_5"
                 }
             }
             engineering_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     engineering_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     engineering_research = 7
-        # }
         produces = {
             trigger = {
                 has_trait = "trait_robot_propaganda_machines"
@@ -1358,7 +1270,7 @@ scientific_complex_physics_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_physics_scientific_complex_1"
                 }
             }
             physics_research = 1
@@ -1367,7 +1279,7 @@ scientific_complex_physics_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_physics_scientific_complex_2"
                 }
             }
             physics_research = 2
@@ -1376,7 +1288,7 @@ scientific_complex_physics_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_physics_scientific_complex_3"
                 }
             }
             physics_research = 3
@@ -1385,7 +1297,7 @@ scientific_complex_physics_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_physics_scientific_complex_4"
                 }
             }
             physics_research = 4
@@ -1394,29 +1306,11 @@ scientific_complex_physics_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_physics_scientific_complex_5"
                 }
             }
             physics_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     physics_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     physics_research = 7
-        # }
         produces = {
             trigger = {
                 has_trait = "trait_robot_propaganda_machines"
@@ -1544,7 +1438,7 @@ scientific_complex_society_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_society_scientific_complex_1"
                 }
             }
             society_research = 1
@@ -1553,7 +1447,7 @@ scientific_complex_society_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_society_scientific_complex_2"
                 }
             }
             society_research = 2
@@ -1562,7 +1456,7 @@ scientific_complex_society_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_society_scientific_complex_3"
                 }
             }
             society_research = 3
@@ -1571,7 +1465,7 @@ scientific_complex_society_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_society_scientific_complex_4"
                 }
             }
             society_research = 4
@@ -1580,29 +1474,11 @@ scientific_complex_society_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_society_scientific_complex_5"
                 }
             }
             society_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     society_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     society_research = 7
-        # }
         produces = {
             trigger = {
                 has_trait = "trait_robot_propaganda_machines"
@@ -1714,7 +1590,7 @@ scientific_complex_engineering_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_engineering_scientific_complex_1"
                 }
             }
             engineering_research = 1
@@ -1723,7 +1599,7 @@ scientific_complex_engineering_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_engineering_scientific_complex_2"
                 }
             }
             engineering_research = 2
@@ -1732,7 +1608,7 @@ scientific_complex_engineering_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_engineering_scientific_complex_3"
                 }
             }
             engineering_research = 3
@@ -1741,7 +1617,7 @@ scientific_complex_engineering_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_engineering_scientific_complex_4"
                 }
             }
             engineering_research = 4
@@ -1750,29 +1626,11 @@ scientific_complex_engineering_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_engineering_scientific_complex_5"
                 }
             }
             engineering_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     engineering_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     engineering_research = 7
-        # }
         produces = {
             trigger = {
                 has_trait = "trait_robot_propaganda_machines"
@@ -1884,7 +1742,7 @@ scientific_complex_physics_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_physics_scientific_complex_1"
                 }
             }
             physics_research = 1
@@ -1893,7 +1751,7 @@ scientific_complex_physics_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_physics_scientific_complex_2"
                 }
             }
             physics_research = 2
@@ -1902,7 +1760,7 @@ scientific_complex_physics_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_physics_scientific_complex_3"
                 }
             }
             physics_research = 3
@@ -1911,7 +1769,7 @@ scientific_complex_physics_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_physics_scientific_complex_4"
                 }
             }
             physics_research = 4
@@ -1920,29 +1778,11 @@ scientific_complex_physics_calculator = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_physics_scientific_complex_5"
                 }
             }
             physics_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     physics_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     physics_research = 7
-        # }
         produces = {
             trigger = {
                 has_trait = "trait_robot_propaganda_machines"
@@ -2056,7 +1896,7 @@ scientific_complex_society_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_society_scientific_complex_1"
                 }
             }
             society_research = 1
@@ -2065,7 +1905,7 @@ scientific_complex_society_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_society_scientific_complex_2"
                 }
             }
             society_research = 2
@@ -2074,7 +1914,7 @@ scientific_complex_society_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_society_scientific_complex_3"
                 }
             }
             society_research = 3
@@ -2083,7 +1923,7 @@ scientific_complex_society_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_society_scientific_complex_4"
                 }
             }
             society_research = 4
@@ -2092,29 +1932,11 @@ scientific_complex_society_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_society_scientific_complex_5"
                 }
             }
             society_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     society_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     society_research = 7
-        # }
         produces = {
             trigger = {
                 has_trait = "trait_robot_propaganda_machines"
@@ -2226,7 +2048,7 @@ scientific_complex_engineering_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_engineering_scientific_complex_1"
                 }
             }
             engineering_research = 1
@@ -2235,7 +2057,7 @@ scientific_complex_engineering_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_engineering_scientific_complex_2"
                 }
             }
             engineering_research = 2
@@ -2244,7 +2066,7 @@ scientific_complex_engineering_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_engineering_scientific_complex_3"
                 }
             }
             engineering_research = 3
@@ -2253,7 +2075,7 @@ scientific_complex_engineering_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_engineering_scientific_complex_4"
                 }
             }
             engineering_research = 4
@@ -2262,29 +2084,11 @@ scientific_complex_engineering_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_engineering_scientific_complex_5"
                 }
             }
             engineering_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     engineering_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     engineering_research = 7
-        # }
         produces = {
             trigger = {
                 has_trait = "trait_robot_propaganda_machines"
@@ -2396,7 +2200,7 @@ scientific_complex_physics_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_physics_scientific_complex_1"
                 }
             }
             physics_research = 1
@@ -2405,7 +2209,7 @@ scientific_complex_physics_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_physics_scientific_complex_2"
                 }
             }
             physics_research = 2
@@ -2414,7 +2218,7 @@ scientific_complex_physics_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_physics_scientific_complex_3"
                 }
             }
             physics_research = 3
@@ -2423,7 +2227,7 @@ scientific_complex_physics_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_physics_scientific_complex_4"
                 }
             }
             physics_research = 4
@@ -2432,29 +2236,11 @@ scientific_complex_physics_brain_drone = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_physics_scientific_complex_5"
                 }
             }
             physics_research = 5
         }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_6"
-        #         }
-        #     }
-        #     physics_research = 6
-        # }
-        # produces = {
-        #     trigger = {
-        #         exists = owner
-        #         owner = {
-        #             has_technology = "tech_scientific_complex_7"
-        #         }
-        #     }
-        #     physics_research = 7
-        # }
         produces = {
             trigger = {
                 has_trait = "trait_robot_propaganda_machines"
@@ -2569,7 +2355,9 @@ scientific_complex_fe_scientist_ai = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_1"
+                    has_technology = "tech_society_scientific_complex_1"
+                    has_technology = "tech_engineering_scientific_complex_1"
+                    has_technology = "tech_physics_scientific_complex_1"
                 }
             }
             society_research = 10
@@ -2580,7 +2368,9 @@ scientific_complex_fe_scientist_ai = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_2"
+                    has_technology = "tech_society_scientific_complex_2"
+                    has_technology = "tech_engineering_scientific_complex_2"
+                    has_technology = "tech_physics_scientific_complex_2"
                 }
             }
             society_research = 13
@@ -2591,7 +2381,9 @@ scientific_complex_fe_scientist_ai = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_3"
+                    has_technology = "tech_society_scientific_complex_3"
+                    has_technology = "tech_engineering_scientific_complex_3"
+                    has_technology = "tech_physics_scientific_complex_3"
                 }
             }
             society_research = 16
@@ -2602,7 +2394,9 @@ scientific_complex_fe_scientist_ai = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_4"
+                    has_technology = "tech_society_scientific_complex_4"
+                    has_technology = "tech_engineering_scientific_complex_4"
+                    has_technology = "tech_physics_scientific_complex_4"
                 }
             }
             society_research = 19
@@ -2613,7 +2407,9 @@ scientific_complex_fe_scientist_ai = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_technology = "tech_scientific_complex_5"
+                    has_technology = "tech_society_scientific_complex_5"
+                    has_technology = "tech_engineering_scientific_complex_5"
+                    has_technology = "tech_physics_scientific_complex_5"
                 }
             }
             society_research = 22

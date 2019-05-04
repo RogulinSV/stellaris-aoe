@@ -6,7 +6,7 @@ terraform_link = {
     duration = 1800
 
     condition = {
-        has_technology = "tech_celestia_sculpting"
+        has_technology = "tech_celestial_sculpting"
     }
 
     ai_weight = {
@@ -22,7 +22,7 @@ terraform_link = {
     duration = 1800
 
     condition = {
-        has_technology = "tech_celestia_sculpting"
+        has_technology = "tech_celestial_sculpting"
     }
 
     ai_weight = {
@@ -38,7 +38,7 @@ terraform_link = {
     duration = 3600
 
     condition = {
-        has_technology = "tech_celestia_sculpting"
+        has_technology = "tech_celestial_sculpting"
     }
 
     ai_weight = {
@@ -69,7 +69,7 @@ terraform_link = {
     duration = 3600
 
     condition = {
-        has_technology = "tech_celestia_sculpting"
+        has_technology = "tech_celestial_sculpting"
     }
 
     ai_weight = {
@@ -100,7 +100,7 @@ terraform_link = {
     duration = 3600
 
     condition = {
-        has_technology = "tech_celestia_sculpting"
+        has_technology = "tech_celestial_sculpting"
     }
 
     ai_weight = {
@@ -131,7 +131,7 @@ terraform_link = {
     duration = 3600
 
     condition = {
-        has_technology = "tech_celestia_sculpting"
+        has_technology = "tech_celestial_sculpting"
     }
 
     ai_weight = {
@@ -162,7 +162,7 @@ terraform_link = {
     duration = 3600
 
     condition = {
-        has_technology = "tech_celestia_sculpting"
+        has_technology = "tech_celestial_sculpting"
     }
 
     ai_weight = {
@@ -193,7 +193,7 @@ terraform_link = {
     duration = 4000
 
     condition = {
-        has_technology = "tech_celestia_sculpting"
+        has_technology = "tech_celestial_sculpting"
     }
 
     ai_weight = {
@@ -224,7 +224,7 @@ terraform_link = {
     duration = 3600
 
     condition = {
-        has_technology = "tech_celestia_sculpting"
+        has_technology = "tech_celestial_sculpting"
     }
 
     ai_weight = {
@@ -255,7 +255,7 @@ terraform_link = {
     duration = 3600
 
     condition = {
-        has_technology = "tech_celestia_sculpting"
+        has_technology = "tech_celestial_sculpting"
     }
 
     ai_weight = {
@@ -286,7 +286,7 @@ terraform_link = {
     duration = 3600
 
     condition = {
-        has_technology = "tech_celestia_sculpting"
+        has_technology = "tech_celestial_sculpting"
     }
 
     ai_weight = {

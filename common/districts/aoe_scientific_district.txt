@@ -176,7 +176,9 @@ district_scientific_complex = {
         potential = {
             exists = owner
             owner = {
-                has_technology = "tech_scientific_complex_1"
+                has_technology = "tech_society_scientific_complex_1"
+                has_technology = "tech_engineering_scientific_complex_1"
+                has_technology = "tech_physics_scientific_complex_1"
             }
         }
         modifier = {
@@ -190,7 +192,9 @@ district_scientific_complex = {
         potential = {
             exists = owner
             owner = {
-                has_technology = "tech_scientific_complex_2"
+                has_technology = "tech_society_scientific_complex_2"
+                has_technology = "tech_engineering_scientific_complex_2"
+                has_technology = "tech_physics_scientific_complex_2"
             }
         }
         modifier = {
@@ -204,7 +208,9 @@ district_scientific_complex = {
         potential = {
             exists = owner
             owner = {
-                has_technology = "tech_scientific_complex_3"
+                has_technology = "tech_society_scientific_complex_3"
+                has_technology = "tech_engineering_scientific_complex_3"
+                has_technology = "tech_physics_scientific_complex_3"
             }
         }
         modifier = {
@@ -218,7 +224,9 @@ district_scientific_complex = {
         potential = {
             exists = owner
             owner = {
-                has_technology = "tech_scientific_complex_4"
+                has_technology = "tech_society_scientific_complex_4"
+                has_technology = "tech_engineering_scientific_complex_4"
+                has_technology = "tech_physics_scientific_complex_4"
             }
         }
         modifier = {
@@ -232,7 +240,9 @@ district_scientific_complex = {
         potential = {
             exists = owner
             owner = {
-                has_technology = "tech_scientific_complex_5"
+                has_technology = "tech_society_scientific_complex_5"
+                has_technology = "tech_engineering_scientific_complex_5"
+                has_technology = "tech_physics_scientific_complex_5"
             }
         }
         modifier = {
@@ -241,34 +251,6 @@ district_scientific_complex = {
             planet_jobs_physics_research_produces_mult = 0.05
         }
     }
-
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         exists = owner
-    #         owner = {
-    #             has_technology = "tech_scientific_complex_6"
-    #         }
-    #     }
-    #     modifier = {
-    #         planet_jobs_society_research_produces_mult = 0.06
-    #         planet_jobs_engineering_research_produces_mult = 0.06
-    #         planet_jobs_physics_research_produces_mult = 0.06
-    #     }
-    # }
-
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         exists = owner
-    #         owner = {
-    #             has_technology = "tech_scientific_complex_7"
-    #         }
-    #     }
-    #     modifier = {
-    #         planet_jobs_society_research_produces_mult = 0.07
-    #         planet_jobs_engineering_research_produces_mult = 0.07
-    #         planet_jobs_physics_research_produces_mult = 0.07
-    #     }
-    # }
 
     ai_weight = {
         weight = 1
@@ -482,9 +464,7 @@ district_scientific_complex_uncapped = {
             }
         }
         modifier = {
-            job_scientific_complex_fe_society_ai_add = 1
-            job_scientific_complex_fe_engineering_ai_add = 1
-            job_scientific_complex_fe_physics_ai_add = 1
+            job_scientific_complex_fe_scientist_ai_add = 3
         }
     }
 
@@ -504,7 +484,9 @@ district_scientific_complex_uncapped = {
         potential = {
             exists = owner
             owner = {
-                has_technology = "tech_scientific_complex_1"
+                has_technology = "tech_society_scientific_complex_1"
+                has_technology = "tech_engineering_scientific_complex_1"
+                has_technology = "tech_physics_scientific_complex_1"
             }
         }
         modifier = {
@@ -518,7 +500,9 @@ district_scientific_complex_uncapped = {
         potential = {
             exists = owner
             owner = {
-                has_technology = "tech_scientific_complex_2"
+                has_technology = "tech_society_scientific_complex_2"
+                has_technology = "tech_engineering_scientific_complex_2"
+                has_technology = "tech_physics_scientific_complex_2"
             }
         }
         modifier = {
@@ -532,7 +516,9 @@ district_scientific_complex_uncapped = {
         potential = {
             exists = owner
             owner = {
-                has_technology = "tech_scientific_complex_3"
+                has_technology = "tech_society_scientific_complex_3"
+                has_technology = "tech_engineering_scientific_complex_3"
+                has_technology = "tech_physics_scientific_complex_3"
             }
         }
         modifier = {
@@ -546,7 +532,9 @@ district_scientific_complex_uncapped = {
         potential = {
             exists = owner
             owner = {
-                has_technology = "tech_scientific_complex_4"
+                has_technology = "tech_society_scientific_complex_4"
+                has_technology = "tech_engineering_scientific_complex_4"
+                has_technology = "tech_physics_scientific_complex_4"
             }
         }
         modifier = {
@@ -560,7 +548,9 @@ district_scientific_complex_uncapped = {
         potential = {
             exists = owner
             owner = {
-                has_technology = "tech_scientific_complex_5"
+                has_technology = "tech_society_scientific_complex_5"
+                has_technology = "tech_engineering_scientific_complex_5"
+                has_technology = "tech_physics_scientific_complex_5"
             }
         }
         modifier = {
@@ -569,34 +559,6 @@ district_scientific_complex_uncapped = {
             planet_jobs_physics_research_produces_mult = 0.05
         }
     }
-
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         exists = owner
-    #         owner = {
-    #             has_technology = "tech_scientific_complex_6"
-    #         }
-    #     }
-    #     modifier = {
-    #         planet_jobs_society_research_produces_mult = 0.06
-    #         planet_jobs_engineering_research_produces_mult = 0.06
-    #         planet_jobs_physics_research_produces_mult = 0.06
-    #     }
-    # }
-
-    # triggered_planet_modifier = {
-    #     potential = {
-    #         exists = owner
-    #         owner = {
-    #             has_technology = "tech_scientific_complex_7"
-    #         }
-    #     }
-    #     modifier = {
-    #         planet_jobs_society_research_produces_mult = 0.07
-    #         planet_jobs_engineering_research_produces_mult = 0.07
-    #         planet_jobs_physics_research_produces_mult = 0.07
-    #     }
-    # }
 
     ai_weight = {
         weight = 1

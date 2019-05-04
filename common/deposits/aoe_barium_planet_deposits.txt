@@ -715,7 +715,7 @@ d_extraterrestrial_crystal_caves = {
     }
 
     drop_weight = {
-        weight = @deposit_high_drop_weight_rare
+        weight = @deposit_high_rare_drop_weight
     }
 }
 
@@ -738,7 +738,7 @@ d_extraterrestrial_crystal_plains = {
     }
 
     drop_weight = {
-        weight = @deposit_high_drop_weight_rare
+        weight = @deposit_high_rare_drop_weight
     }
 }
 
@@ -761,7 +761,7 @@ d_extraterrestrial_crystal_desert = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -784,7 +784,7 @@ d_extraterrestrial_crystal_reef = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -807,7 +807,7 @@ d_extraterrestrial_crystal_mountains = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -830,7 +830,7 @@ d_extraterrestrial_crystal_mines = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -855,7 +855,7 @@ d_extraterrestrial_dust_caves = {
     }
 
     drop_weight = {
-        weight = @deposit_high_drop_weight_rare
+        weight = @deposit_high_rare_drop_weight
     }
 }
 
@@ -878,7 +878,7 @@ d_extraterrestrial_dust_geysers = {
     }
 
     drop_weight = {
-        weight = @deposit_high_drop_weight_rare
+        weight = @deposit_high_rare_drop_weight
     }
 }
 
@@ -901,7 +901,7 @@ d_extraterrestrial_dust_desert = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -924,7 +924,7 @@ d_extraterrestrial_dust_clouds = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -947,7 +947,7 @@ d_extraterrestrial_dust_streams = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -970,7 +970,7 @@ d_extraterrestrial_dust_stratums = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -995,7 +995,7 @@ d_extraterrestrial_rotten_marsh = {
     }
 
     drop_weight = {
-        weight = @deposit_high_drop_weight_rare
+        weight = @deposit_high_rare_drop_weight
     }
 }
 
@@ -1018,7 +1018,7 @@ d_extraterrestrial_porous_valleys = {
     }
 
     drop_weight = {
-        weight = @deposit_high_drop_weight_rare
+        weight = @deposit_high_rare_drop_weight
     }
 }
 
@@ -1041,7 +1041,7 @@ d_extraterrestrial_frozen_lakes = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -1064,7 +1064,7 @@ d_extraterrestrial_porous_vesicle = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -1087,7 +1087,7 @@ d_extraterrestrial_gaseous_reservoirs = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -1110,7 +1110,7 @@ d_extraterrestrial_gaseous_oceans = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -1135,7 +1135,7 @@ d_extraterrestrial_betharian_pillars = {
     }
 
     drop_weight = {
-        weight = @deposit_high_drop_weight_rare
+        weight = @deposit_high_rare_drop_weight
     }
 }
 
@@ -1158,7 +1158,7 @@ d_extraterrestrial_betharian_quarries = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -1183,7 +1183,7 @@ d_extraterrestrial_protozoa_fauna = {
     }
 
     drop_weight = {
-        weight = @deposit_high_drop_weight_rare
+        weight = @deposit_high_rare_drop_weight
     }
 }
 
@@ -1206,7 +1206,7 @@ d_extraterrestrial_relict_fauna = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -1287,7 +1287,7 @@ d_extraterrestrial_isomorphic_deposits = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 
@@ -1368,7 +1368,7 @@ d_extraterrestrial_isomeric_deposits = {
     }
 
     drop_weight = {
-        weight = @deposit_low_drop_weight_rare
+        weight = @deposit_low_rare_drop_weight
     }
 }
 

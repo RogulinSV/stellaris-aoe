@@ -18,3 +18,6 @@
 @deposit_medium_drop_weight = 3
 @deposit_high_drop_weight = 4
 @deposit_ultrahigh_drop_weight = 5
+
+@deposit_low_rare_drop_weight = 1
+@deposit_high_rare_drop_weight = 2
