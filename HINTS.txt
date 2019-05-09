@@ -8,7 +8,7 @@ num_communications < 1
 num_uncleared_blockers < 1
 
 any_owned_planet = {
-	num_unique_species > 9
+    num_unique_species > 9
 }
 any_owned_megastructure = {}
 every_owned_planet = {}
@@ -164,3 +164,9 @@ ascension_perks_add = 1
 subject_integration_influence_cost_mult = -0.5
 empire_size_penalty_mult = 0.5
 empire_size_branch_office_mult = -0.25
+
+every_pool_leader = {
+    kill_leader = {
+        show_notification = no
+    }
+}

@@ -1,6 +1,16 @@
 # Scope: planet
 has_industrial_deposits = {
     OR = {
+        has_deposit = "d_sr_mithril_deposit"
+        has_deposit = "d_sr_orihalk_deposit"
+        has_deposit = "d_sr_adamantium_deposit"
+        has_deposit = "d_sr_vibranium_deposit"
+        has_deposit = "d_sr_itildeen_deposit"
+        has_deposit = "d_sr_thiotimoline_deposit"
+        has_deposit = "d_sr_unobtanium_deposit"
+        has_deposit = "d_sr_stalgrim_deposit"
+        has_deposit = "d_sr_terrigen_deposit"
+        has_deposit = "d_sr_kryptonite_deposit"
         has_deposit = "d_crystallized_caves"
         has_deposit = "d_crystallized_plains"
         has_deposit = "d_crystallized_mines"
@@ -16,6 +26,16 @@ has_industrial_deposits = {
 # Scope: planet
 has_manufacturing_deposits = {
     OR = {
+        has_deposit = "d_sr_yuranic_deposit"
+        has_deposit = "d_sr_cobaltium_deposit"
+        has_deposit = "d_sr_satramene_deposit"
+        has_deposit = "d_sr_lirium_deposit"
+        has_deposit = "d_sr_nevarrit_deposit"
+        has_deposit = "d_sr_tiberium_deposit"
+        has_deposit = "d_sr_chalcolivan_deposit"
+        has_deposit = "d_sr_corenite_deposit"
+        has_deposit = "d_sr_engos_deposit"
+        has_deposit = "d_sr_helium_deposit"
         has_deposit = "d_metallized_caves"
         has_deposit = "d_metallized_plains"
         has_deposit = "d_metallized_mines"
@@ -32,6 +52,9 @@ has_manufacturing_deposits = {
 has_scientific_deposits = {
     OR = {
         has_deposit = "d_sr_elerium_deposit"
+        has_deposit = "d_sr_gravitoid_deposit"
+        has_deposit = "d_sr_tylium_deposit"
+        has_deposit = "d_sr_energon_deposit"
         has_deposit = "d_plasmatic_cobblestones"
         has_deposit = "d_spice_lakes"
         has_deposit = "d_floating_gardens"
@@ -47,8 +70,16 @@ has_scientific_deposits = {
 }
 
 # Scope: planet
+has_mithril_deposit = {
+    OR = {
+        has_deposit = "d_sr_mithril_deposit"
+    }
+}
+
+# Scope: planet
 has_mithril_resource = {
     OR = {
+        has_mithril_deposit = yes
         has_deposit = "d_mithril_1"
         has_deposit = "d_mithril_2"
         has_deposit = "d_mithril_3"
@@ -62,8 +93,16 @@ has_mithril_resource = {
 }
 
 # Scope: planet
+has_orihalk_deposit = {
+    OR = {
+        has_deposit = "d_sr_orihalk_deposit"
+    }
+}
+
+# Scope: planet
 has_orihalk_resource = {
     OR = {
+        has_orihalk_deposit = yes
         has_deposit = "d_orihalk_1"
         has_deposit = "d_orihalk_2"
         has_deposit = "d_orihalk_3"
@@ -77,8 +116,16 @@ has_orihalk_resource = {
 }
 
 # Scope: planet
+has_yuranic_deposit = {
+    OR = {
+        has_deposit = "d_sr_yuranic_deposit"
+    }
+}
+
+# Scope: planet
 has_yuranic_resource = {
     OR = {
+        has_yuranic_deposit = yes
         has_deposit = "d_yuranic_1"
         has_deposit = "d_yuranic_2"
         has_deposit = "d_yuranic_3"
@@ -92,8 +139,16 @@ has_yuranic_resource = {
 }
 
 # Scope: planet
+has_adamantium_deposit = {
+    OR = {
+        has_deposit = "d_sr_adamantium_deposit"
+    }
+}
+
+# Scope: planet
 has_adamantium_resource = {
     OR = {
+        has_adamantium_deposit = yes
         has_deposit = "d_adamantium_1"
         has_deposit = "d_adamantium_2"
         has_deposit = "d_adamantium_3"
@@ -107,8 +162,16 @@ has_adamantium_resource = {
 }
 
 # Scope: planet
+has_vibranium_deposit = {
+    OR = {
+        has_deposit = "d_sr_vibranium_deposit"
+    }
+}
+
+# Scope: planet
 has_vibranium_resource = {
     OR = {
+        has_vibranium_deposit = yes
         has_deposit = "d_vibranium_1"
         has_deposit = "d_vibranium_2"
         has_deposit = "d_vibranium_3"
@@ -122,8 +185,16 @@ has_vibranium_resource = {
 }
 
 # Scope: planet
+has_cobaltium_deposit = {
+    OR = {
+        has_deposit = "d_sr_cobaltium_deposit"
+    }
+}
+
+# Scope: planet
 has_cobaltium_resource = {
     OR = {
+        has_cobaltium_deposit = yes
         has_deposit = "d_cobaltium_1"
         has_deposit = "d_cobaltium_2"
         has_deposit = "d_cobaltium_3"
@@ -137,8 +208,16 @@ has_cobaltium_resource = {
 }
 
 # Scope: planet
+has_itildeen_deposit = {
+    OR = {
+        has_deposit = "d_sr_itildeen_deposit"
+    }
+}
+
+# Scope: planet
 has_itildeen_resource = {
     OR = {
+        has_itildeen_deposit = yes
         has_deposit = "d_itildeen_1"
         has_deposit = "d_itildeen_2"
         has_deposit = "d_itildeen_3"
@@ -152,8 +231,16 @@ has_itildeen_resource = {
 }
 
 # Scope: planet
+has_satramene_deposit = {
+    OR = {
+        has_deposit = "d_sr_satramene_deposit"
+    }
+}
+
+# Scope: planet
 has_satramene_resource = {
     OR = {
+        has_satramene_deposit = yes
         has_deposit = "d_satramene_1"
         has_deposit = "d_satramene_2"
         has_deposit = "d_satramene_3"
@@ -167,8 +254,16 @@ has_satramene_resource = {
 }
 
 # Scope: planet
+has_lirium_deposit = {
+    OR = {
+        has_deposit = "d_sr_lirium_deposit"
+    }
+}
+
+# Scope: planet
 has_lirium_resource = {
     OR = {
+        has_lirium_deposit = yes
         has_deposit = "d_lirium_1"
         has_deposit = "d_lirium_2"
         has_deposit = "d_lirium_3"
@@ -182,8 +277,16 @@ has_lirium_resource = {
 }
 
 # Scope: planet
+has_nevarrit_deposit = {
+    OR = {
+        has_deposit = "d_sr_nevarrit_deposit"
+    }
+}
+
+# Scope: planet
 has_nevarrit_resource = {
     OR = {
+        has_nevarrit_deposit = yes
         has_deposit = "d_nevarrit_1"
         has_deposit = "d_nevarrit_2"
         has_deposit = "d_nevarrit_3"
@@ -197,8 +300,16 @@ has_nevarrit_resource = {
 }
 
 # Scope: planet
+has_thiotimoline_deposit = {
+    OR = {
+        has_deposit = "d_sr_thiotimoline_deposit"
+    }
+}
+
+# Scope: planet
 has_thiotimoline_resource = {
     OR = {
+        has_thiotimoline_deposit = yes
         has_deposit = "d_thiotimoline_1"
         has_deposit = "d_thiotimoline_2"
         has_deposit = "d_thiotimoline_3"
@@ -212,8 +323,16 @@ has_thiotimoline_resource = {
 }
 
 # Scope: planet
+has_unobtanium_deposit = {
+    OR = {
+        has_deposit = "d_sr_unobtanium_deposit"
+    }
+}
+
+# Scope: planet
 has_unobtanium_resource = {
     OR = {
+        has_unobtanium_deposit = yes
         has_deposit = "d_unobtanium_1"
         has_deposit = "d_unobtanium_2"
         has_deposit = "d_unobtanium_3"
@@ -227,8 +346,16 @@ has_unobtanium_resource = {
 }
 
 # Scope: planet
+has_stalgrim_deposit = {
+    OR = {
+        has_deposit = "d_sr_stalgrim_deposit"
+    }
+}
+
+# Scope: planet
 has_stalgrim_resource = {
     OR = {
+        has_stalgrim_deposit = yes
         has_deposit = "d_stalgrim_1"
         has_deposit = "d_stalgrim_2"
         has_deposit = "d_stalgrim_3"
@@ -242,8 +369,16 @@ has_stalgrim_resource = {
 }
 
 # Scope: planet
+has_tiberium_deposit = {
+    OR = {
+        has_deposit = "d_sr_tiberium_deposit"
+    }
+}
+
+# Scope: planet
 has_tiberium_resource = {
     OR = {
+        has_tiberium_deposit = yes
         has_deposit = "d_tiberium_1"
         has_deposit = "d_tiberium_2"
         has_deposit = "d_tiberium_3"
@@ -280,8 +415,16 @@ has_elerium_resource = {
 }
 
 # Scope: planet
+has_gravitoid_deposit = {
+    OR = {
+        has_deposit = "d_sr_gravitoid_deposit"
+    }
+}
+
+# Scope: planet
 has_gravitoid_resource = {
     OR = {
+        has_gravitoid_deposit = yes
         has_deposit = "d_gravitoid_1"
         has_deposit = "d_gravitoid_2"
         has_deposit = "d_gravitoid_3"
@@ -295,8 +438,16 @@ has_gravitoid_resource = {
 }
 
 # Scope: planet
+has_tylium_deposit = {
+    OR = {
+        has_deposit = "d_sr_tylium_deposit"
+    }
+}
+
+# Scope: planet
 has_tylium_resource = {
     OR = {
+        has_tylium_deposit = yes
         has_deposit = "d_tylium_1"
         has_deposit = "d_tylium_2"
         has_deposit = "d_tylium_3"
@@ -310,8 +461,16 @@ has_tylium_resource = {
 }
 
 # Scope: planet
+has_chalcolivan_deposit = {
+    OR = {
+        has_deposit = "d_sr_chalcolivan_deposit"
+    }
+}
+
+# Scope: planet
 has_chalcolivan_resource = {
     OR = {
+        has_chalcolivan_deposit = yes
         has_deposit = "d_chalcolivan_1"
         has_deposit = "d_chalcolivan_2"
         has_deposit = "d_chalcolivan_3"
@@ -325,8 +484,16 @@ has_chalcolivan_resource = {
 }
 
 # Scope: planet
+has_terrigen_deposit = {
+    OR = {
+        has_deposit = "d_sr_terrigen_deposit"
+    }
+}
+
+# Scope: planet
 has_terrigen_resource = {
     OR = {
+        has_terrigen_deposit = yes
         has_deposit = "d_terrigen_1"
         has_deposit = "d_terrigen_2"
         has_deposit = "d_terrigen_3"
@@ -340,8 +507,16 @@ has_terrigen_resource = {
 }
 
 # Scope: planet
+has_corenite_deposit = {
+    OR = {
+        has_deposit = "d_sr_corenite_deposit"
+    }
+}
+
+# Scope: planet
 has_corenite_resource = {
     OR = {
+        has_corenite_deposit = yes
         has_deposit = "d_corenite_1"
         has_deposit = "d_corenite_2"
         has_deposit = "d_corenite_3"
@@ -355,8 +530,16 @@ has_corenite_resource = {
 }
 
 # Scope: planet
+has_energon_deposit = {
+    OR = {
+        has_deposit = "d_sr_energon_deposit"
+    }
+}
+
+# Scope: planet
 has_energon_resource = {
     OR = {
+        has_energon_deposit = yes
         has_deposit = "d_energon_1"
         has_deposit = "d_energon_2"
         has_deposit = "d_energon_3"
@@ -370,8 +553,16 @@ has_energon_resource = {
 }
 
 # Scope: planet
+has_engos_deposit = {
+    OR = {
+        has_deposit = "d_sr_engos_deposit"
+    }
+}
+
+# Scope: planet
 has_engos_resource = {
     OR = {
+        has_engos_deposit = yes
         has_deposit = "d_engos_1"
         has_deposit = "d_engos_2"
         has_deposit = "d_engos_3"
@@ -385,8 +576,16 @@ has_engos_resource = {
 }
 
 # Scope: planet
+has_helium_deposit = {
+    OR = {
+        has_deposit = "d_sr_helium_deposit"
+    }
+}
+
+# Scope: planet
 has_helium_resource = {
     OR = {
+        has_helium_deposit = yes
         has_deposit = "d_helium_1"
         has_deposit = "d_helium_2"
         has_deposit = "d_helium_3"
@@ -400,8 +599,16 @@ has_helium_resource = {
 }
 
 # Scope: planet
+has_kryptonite_deposit = {
+    OR = {
+        has_deposit = "d_sr_kryptonite_deposit"
+    }
+}
+
+# Scope: planet
 has_kryptonite_resource = {
     OR = {
+        has_kryptonite_deposit = yes
         has_deposit = "d_kryptonite_1"
         has_deposit = "d_kryptonite_2"
         has_deposit = "d_kryptonite_3"

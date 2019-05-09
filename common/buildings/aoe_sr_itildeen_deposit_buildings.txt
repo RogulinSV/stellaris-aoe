@@ -1,0 +1,923 @@
+building_itildeen_harvester = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 300
+    category = resource
+    is_capped_by_modifier = yes
+
+    upgrades = {
+        "building_itildeen_factory_1"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_upgraded_capital = yes
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 300
+            energy = 200
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_worker_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_itildeen_harvester_worker_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_drone_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_itildeen_harvester_drone_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_calculator_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_calculator_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_brain_drone_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_brain_drone_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_mine_itildeen"
+    }
+}
+
+building_itildeen_factory_1 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 500
+    category = resource
+
+    upgrades = {
+        "building_itildeen_factory_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_upgraded_capital = yes
+        num_pops >= 20
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            energy = 400
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_worker_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_itildeen_harvester_worker_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_drone_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_itildeen_harvester_drone_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_calculator_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_calculator_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_brain_drone_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_brain_drone_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_itildeen_mining_1"
+    }
+}
+
+building_itildeen_factory_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 750
+    category = resource
+
+    upgrades = {
+        "building_itildeen_factory_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_major_upgraded_capital = yes
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 900
+            energy = 600
+        }
+        upkeep = {
+            energy = 6
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_worker_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_itildeen_harvester_worker_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_drone_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_itildeen_harvester_drone_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_calculator_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_calculator_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_brain_drone_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_brain_drone_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_itildeen_mining_2"
+    }
+}
+
+building_itildeen_factory_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1000
+    category = resource
+
+    upgrades = {
+        "building_itildeen_factory_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_major_upgraded_capital = yes
+        num_pops >= 60
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1300
+            energy = 800
+        }
+        upkeep = {
+            energy = 8
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_worker_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_itildeen_harvester_worker_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_drone_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_itildeen_harvester_drone_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_calculator_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_calculator_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_brain_drone_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_brain_drone_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_itildeen_mining_3"
+    }
+}
+
+building_itildeen_factory_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1300
+    category = resource
+
+    upgrades = {
+        "building_itildeen_factory_5"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_fully_upgraded_capital = yes
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1700
+            energy = 1100
+        }
+        upkeep = {
+            energy = 10
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_worker_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_itildeen_harvester_worker_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_drone_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_itildeen_harvester_drone_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_calculator_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_calculator_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_brain_drone_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_brain_drone_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_itildeen_mining_4"
+    }
+}
+
+building_itildeen_factory_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1500
+    category = resource
+
+    potential = {
+        is_colonizeable_planet = yes
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_fully_upgraded_capital = yes
+        num_pops >= 100
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2200
+            energy = 1600
+        }
+        upkeep = {
+            energy = 12
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_worker_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_itildeen_harvester_worker_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_drone_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_itildeen_harvester_drone_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_calculator_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_calculator_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_itildeen_harvester_brain_drone_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "job_itildeen_harvester_brain_drone_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 13
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_itildeen_mining_5"
+    }
+}

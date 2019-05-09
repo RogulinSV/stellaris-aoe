@@ -1,0 +1,792 @@
+### Chalcolivan Mining
+
+tech_chalcolivan_mining_1 = {
+    # Unlocks "Chalcolivan Factory I" building
+
+    cost = @technology_extralow_cost
+    area = engineering
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { materials }
+    prerequisites = {
+        "tech_mine_chalcolivan"
+        "tech_space_mining_1"
+    }
+    weight = @tier1weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_chalcolivan_mining_1_title"
+            desc = "tech_chalcolivan_mining_1_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_chalcolivan_produces_mult = 0.2
+        planet_miners_chalcolivan_produces_mult = 0.2
+        country_chalcolivan_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_tradition = "tr_prosperity_pursuit_of_profit"
+        }
+        modifier = {
+            factor = 2
+            has_tradition = "tr_prosperity_finish"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_chalcolivan_deposit = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 500
+            }
+        }
+        modifier = {
+            factor = 2
+            has_monthly_income = {
+               resource = chalcolivan
+               value < 3
+            }
+        }
+        modifier = {
+            factor = 4
+            has_ascension_perk = "ap_technological_ascendancy"
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 1
+                OR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = engineering
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.45
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_adopt"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_chalcolivan_deposit = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 500
+            }
+        }
+    }
+}
+
+tech_chalcolivan_mining_2 = {
+    # Unlocks "Chalcolivan Factory II" building
+
+    cost = @technology_low_cost
+    area = engineering
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { materials }
+    prerequisites = {
+        "tech_chalcolivan_mining_1"
+        "tech_space_mining_2"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_chalcolivan_mining_2_title"
+            desc = "tech_chalcolivan_mining_2_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_chalcolivan_produces_mult = 0.2
+        planet_miners_chalcolivan_produces_mult = 0.2
+        country_chalcolivan_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_prosperity_administrative_operations"
+                has_tradition = "tr_prosperity_sct"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_prosperity_pursuit_of_profit"
+        }
+        modifier = {
+            factor = 1.5
+            has_tradition = "tr_prosperity_finish"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_chalcolivan_deposit = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 500
+            }
+        }
+        modifier = {
+            factor = 0.5
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 2000
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_monthly_income = {
+               resource = chalcolivan
+               value < 6
+            }
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_technological_ascendancy"
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_prosperity_administrative_operations"
+                has_tradition = "tr_prosperity_sct"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_chalcolivan_deposit = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 500
+            }
+        }
+        modifier = {
+            factor = 0.5
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 2000
+            }
+        }
+    }
+}
+
+tech_chalcolivan_mining_3 = {
+    # Unlocks "Chalcolivan Factory III" building
+
+    cost = @technology_medium_cost
+    area = engineering
+    tier = 3
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { materials }
+    prerequisites = {
+        "tech_chalcolivan_mining_2"
+        "tech_space_mining_3"
+    }
+    weight = @tier3weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_chalcolivan_mining_3_title"
+            desc = "tech_chalcolivan_mining_3_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_chalcolivan_produces_mult = 0.2
+        planet_miners_chalcolivan_produces_mult = 0.2
+        country_chalcolivan_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+                OR = {
+                    has_tradition = "tr_prosperity_interstellar_franchising"
+                    has_tradition = "tr_prosperity_public_works"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_prosperity_finish"
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_chalcolivan_deposit = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 1000
+            }
+        }
+        modifier = {
+            factor = 0.5
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 4000
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_monthly_income = {
+               resource = chalcolivan
+               value < 11
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_technological_ascendancy"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 2
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                NOR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_prosperity_pursuit_of_profit"
+                OR = {
+                    has_tradition = "tr_prosperity_interstellar_franchising"
+                    has_tradition = "tr_prosperity_public_works"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_chalcolivan_deposit = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 1000
+            }
+        }
+        modifier = {
+            factor = 0.5
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 4000
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 2
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = engineering
+                NOR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_chalcolivan_mining_4 = {
+    # Unlocks "Chalcolivan Factory IV" building
+
+    cost = @technology_high_cost
+    area = engineering
+    tier = 4
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { materials }
+    prerequisites = {
+        "tech_chalcolivan_mining_3"
+        "tech_space_mining_4"
+    }
+    weight = @tier4weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_chalcolivan_mining_4_title"
+            desc = "tech_chalcolivan_mining_4_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_chalcolivan_produces_mult = 0.2
+        planet_miners_chalcolivan_produces_mult = 0.2
+        country_chalcolivan_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_chalcolivan_deposit = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 2000
+            }
+        }
+        modifier = {
+            factor = 0.5
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 8000
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_monthly_income = {
+               resource = chalcolivan
+               value < 16
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = engineering
+                NOR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = engineering
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_chalcolivan_deposit = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 2000
+            }
+        }
+        modifier = {
+            factor = 0.5
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 8000
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = engineering
+                NOR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_chalcolivan_mining_5 = {
+    # Unlocks "Chalcolivan Factory V" building
+
+    cost = @technology_ultrahigh_cost
+    area = engineering
+    tier = 5
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { materials }
+    prerequisites = {
+        "tech_chalcolivan_mining_4"
+        "tech_space_mining_5"
+    }
+    weight = @tier5weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_chalcolivan_mining_5_title"
+            desc = "tech_chalcolivan_mining_5_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        planet_jobs_chalcolivan_produces_mult = 0.2
+        planet_miners_chalcolivan_produces_mult = 0.2
+        country_chalcolivan_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_technological_ascendancy"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_chalcolivan_deposit = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 4000
+            }
+        }
+        modifier = {
+            factor = 0.5
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 15000
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.25
+            research_leader = {
+                area = engineering
+                NOR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_prosperity_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_technological_ascendancy"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_chalcolivan_deposit = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 4000
+            }
+        }
+        modifier = {
+            factor = 0.5
+            resource_stockpile_compare = {
+                resource = chalcolivan
+                value < 15000
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = engineering
+                has_level < 4
+            }
+        }
+        modifier = {
+            factor = 0.25
+            research_leader = {
+                area = engineering
+                NOR = {
+                    has_trait = "leader_trait_expertise_materials"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}

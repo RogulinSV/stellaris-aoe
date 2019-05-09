@@ -1,4 +1,4 @@
-### terrigen Deposits
+### Terrigen Deposits
 
 d_terrigen_1 = {
     resources = {

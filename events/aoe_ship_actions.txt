@@ -461,7 +461,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -470,7 +470,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -479,7 +479,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -523,7 +523,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -532,7 +532,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -541,7 +541,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -585,7 +585,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -594,7 +594,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -603,7 +603,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -647,7 +647,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -656,7 +656,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -665,7 +665,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -709,7 +709,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -718,7 +718,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -727,7 +727,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -771,7 +771,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -780,7 +780,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -789,7 +789,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -833,7 +833,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -842,7 +842,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -851,7 +851,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -895,7 +895,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -904,7 +904,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -913,7 +913,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -957,7 +957,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -966,7 +966,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -975,7 +975,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1019,7 +1019,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1028,7 +1028,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1037,7 +1037,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1081,7 +1081,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1090,7 +1090,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1099,7 +1099,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1143,7 +1143,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1152,7 +1152,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1161,7 +1161,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1205,7 +1205,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1214,7 +1214,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1223,7 +1223,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1267,7 +1267,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1276,7 +1276,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1285,7 +1285,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1329,7 +1329,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1338,7 +1338,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1347,7 +1347,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1391,7 +1391,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1400,7 +1400,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1409,7 +1409,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1453,7 +1453,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1462,7 +1462,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1471,7 +1471,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1515,7 +1515,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1524,7 +1524,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1533,7 +1533,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1577,7 +1577,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1586,7 +1586,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1595,7 +1595,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1639,7 +1639,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1648,7 +1648,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1657,7 +1657,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1701,7 +1701,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1710,7 +1710,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1719,7 +1719,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1763,7 +1763,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1772,7 +1772,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1781,7 +1781,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1825,7 +1825,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1834,7 +1834,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1843,7 +1843,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1887,7 +1887,7 @@ ship_event = {
         }
         hidden_effect = {
             random_list = {
-                15 = {
+                25 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_1"
@@ -1896,7 +1896,7 @@ ship_event = {
                         }
                     }
                 }
-                30 = {
+                55 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_2"
@@ -1905,7 +1905,7 @@ ship_event = {
                         }
                     }
                 }
-                55 = {
+                20 = {
                     fromfrom = {
                         enable_special_project = {
                             name = "aoe_resources_discovering_project_3"
@@ -1954,20 +1954,388 @@ ship_event = {
     desc = {
         trigger = {
             fromfrom = {
-                has_elerium_resource = yes
+                has_mithril_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.1.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_orihalk_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.2.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_yuranic_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.3.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_adamantium_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.4.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_vibranium_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.5.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_cobaltium_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.6.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_itildeen_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.7.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_satramene_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.8.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_lirium_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.9.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_nevarrit_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.10.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_thiotimoline_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.11.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_unobtanium_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.12.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_stalgrim_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.13.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_tiberium_resource = yes
             }
         }
         text = aoe_ship_actions.11.desc.14.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_elerium_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.15.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_gravitoid_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.16.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_tylium_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.17.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_chalcolivan_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.18.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_terrigen_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.19.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_corenite_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.20.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_energon_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.21.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_engos_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.22.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_helium_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.23.a
+    }
+    desc = {
+        trigger = {
+            fromfrom = {
+                has_kryptonite_resource = yes
+            }
+        }
+        text = aoe_ship_actions.11.desc.24.a
     }
 
     trigger = {
         OR = {
             AND = {
                 owner = {
+                    has_technology = "tech_mine_mithril"
+                }
+                fromfrom = {
+                    has_mithril_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_orihalk"
+                }
+                fromfrom = {
+                    has_orihalk_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_yuranic"
+                }
+                fromfrom = {
+                    has_yuranic_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_adamantium"
+                }
+                fromfrom = {
+                    has_adamantium_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_vibranium"
+                }
+                fromfrom = {
+                    has_vibranium_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_cobaltium"
+                }
+                fromfrom = {
+                    has_cobaltium_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_itildeen"
+                }
+                fromfrom = {
+                    has_itildeen_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_satramene"
+                }
+                fromfrom = {
+                    has_satramene_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_lirium"
+                }
+                fromfrom = {
+                    has_lirium_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_nevarrit"
+                }
+                fromfrom = {
+                    has_nevarrit_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_thiotimoline"
+                }
+                fromfrom = {
+                    has_thiotimoline_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_unobtanium"
+                }
+                fromfrom = {
+                    has_unobtanium_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_stalgrim"
+                }
+                fromfrom = {
+                    has_stalgrim_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_tiberium"
+                }
+                fromfrom = {
+                    has_tiberium_resource = yes
+                }
+            }
+            AND = {
+                owner = {
                     has_technology = "tech_mine_elerium"
                 }
                 fromfrom = {
                     has_elerium_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_gravitoid"
+                }
+                fromfrom = {
+                    has_gravitoid_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_tylium"
+                }
+                fromfrom = {
+                    has_tylium_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_chalcolivan"
+                }
+                fromfrom = {
+                    has_chalcolivan_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_terrigen"
+                }
+                fromfrom = {
+                    has_terrigen_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_corenite"
+                }
+                fromfrom = {
+                    has_corenite_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_energon"
+                }
+                fromfrom = {
+                    has_energon_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_engos"
+                }
+                fromfrom = {
+                    has_engos_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_helium"
+                }
+                fromfrom = {
+                    has_helium_resource = yes
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = "tech_mine_kryptonite"
+                }
+                fromfrom = {
+                    has_kryptonite_resource = yes
                 }
             }
         }
@@ -1980,8 +2348,610 @@ ship_event = {
     }
 
     option = {
+        name = aoe_ship_actions.11.option.1.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.1.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_mithril_mining_1"
+                    has_technology = "tech_mithril_mining_2"
+                    has_technology = "tech_mithril_mining_3"
+                    has_technology = "tech_mithril_mining_4"
+                    has_technology = "tech_mithril_mining_5"
+                }
+            }
+            fromfrom = {
+                has_mithril_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.1.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.1.b
+        trigger = {
+            fromfrom = {
+                has_mithril_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    mithril = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.2.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.2.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_orihalk_mining_1"
+                    has_technology = "tech_orihalk_mining_2"
+                    has_technology = "tech_orihalk_mining_3"
+                    has_technology = "tech_orihalk_mining_4"
+                    has_technology = "tech_orihalk_mining_5"
+                }
+            }
+            fromfrom = {
+                has_orihalk_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.2.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.2.b
+        trigger = {
+            fromfrom = {
+                has_orihalk_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    orihalk = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.3.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.3.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_yuranic_mining_1"
+                    has_technology = "tech_yuranic_mining_2"
+                    has_technology = "tech_yuranic_mining_3"
+                    has_technology = "tech_yuranic_mining_4"
+                    has_technology = "tech_yuranic_mining_5"
+                }
+            }
+            fromfrom = {
+                has_yuranic_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.3.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.3.b
+        trigger = {
+            fromfrom = {
+                has_yuranic_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    yuranic = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.4.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.4.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_adamantium_mining_1"
+                    has_technology = "tech_adamantium_mining_2"
+                    has_technology = "tech_adamantium_mining_3"
+                    has_technology = "tech_adamantium_mining_4"
+                    has_technology = "tech_adamantium_mining_5"
+                }
+            }
+            fromfrom = {
+                has_adamantium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.4.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.4.b
+        trigger = {
+            fromfrom = {
+                has_adamantium_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    adamantium = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.5.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.5.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_vibranium_mining_1"
+                    has_technology = "tech_vibranium_mining_2"
+                    has_technology = "tech_vibranium_mining_3"
+                    has_technology = "tech_vibranium_mining_4"
+                    has_technology = "tech_vibranium_mining_5"
+                }
+            }
+            fromfrom = {
+                has_vibranium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.5.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.5.b
+        trigger = {
+            fromfrom = {
+                has_vibranium_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    vibranium = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.6.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.6.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_cobaltium_mining_1"
+                    has_technology = "tech_cobaltium_mining_2"
+                    has_technology = "tech_cobaltium_mining_3"
+                    has_technology = "tech_cobaltium_mining_4"
+                    has_technology = "tech_cobaltium_mining_5"
+                }
+            }
+            fromfrom = {
+                has_cobaltium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.6.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.6.b
+        trigger = {
+            fromfrom = {
+                has_cobaltium_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    cobaltium = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.7.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.7.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_itildeen_mining_1"
+                    has_technology = "tech_itildeen_mining_2"
+                    has_technology = "tech_itildeen_mining_3"
+                    has_technology = "tech_itildeen_mining_4"
+                    has_technology = "tech_itildeen_mining_5"
+                }
+            }
+            fromfrom = {
+                has_itildeen_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.7.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.7.b
+        trigger = {
+            fromfrom = {
+                has_itildeen_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    itildeen = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.8.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.8.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_satramene_mining_1"
+                    has_technology = "tech_satramene_mining_2"
+                    has_technology = "tech_satramene_mining_3"
+                    has_technology = "tech_satramene_mining_4"
+                    has_technology = "tech_satramene_mining_5"
+                }
+            }
+            fromfrom = {
+                has_satramene_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.8.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.8.b
+        trigger = {
+            fromfrom = {
+                has_satramene_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    satramene = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.9.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.9.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_lirium_mining_1"
+                    has_technology = "tech_lirium_mining_2"
+                    has_technology = "tech_lirium_mining_3"
+                    has_technology = "tech_lirium_mining_4"
+                    has_technology = "tech_lirium_mining_5"
+                }
+            }
+            fromfrom = {
+                has_lirium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.9.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.9.b
+        trigger = {
+            fromfrom = {
+                has_lirium_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    lirium = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.10.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.10.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_nevarrit_mining_1"
+                    has_technology = "tech_nevarrit_mining_2"
+                    has_technology = "tech_nevarrit_mining_3"
+                    has_technology = "tech_nevarrit_mining_4"
+                    has_technology = "tech_nevarrit_mining_5"
+                }
+            }
+            fromfrom = {
+                has_nevarrit_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.10.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.10.b
+        trigger = {
+            fromfrom = {
+                has_nevarrit_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    nevarrit = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.11.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.11.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_thiotimoline_mining_1"
+                    has_technology = "tech_thiotimoline_mining_2"
+                    has_technology = "tech_thiotimoline_mining_3"
+                    has_technology = "tech_thiotimoline_mining_4"
+                    has_technology = "tech_thiotimoline_mining_5"
+                }
+            }
+            fromfrom = {
+                has_thiotimoline_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.11.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.11.b
+        trigger = {
+            fromfrom = {
+                has_thiotimoline_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    thiotimoline = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.12.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.12.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_unobtanium_mining_1"
+                    has_technology = "tech_unobtanium_mining_2"
+                    has_technology = "tech_unobtanium_mining_3"
+                    has_technology = "tech_unobtanium_mining_4"
+                    has_technology = "tech_unobtanium_mining_5"
+                }
+            }
+            fromfrom = {
+                has_unobtanium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.12.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.12.b
+        trigger = {
+            fromfrom = {
+                has_unobtanium_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    unobtanium = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.13.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.13.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_stalgrim_mining_1"
+                    has_technology = "tech_stalgrim_mining_2"
+                    has_technology = "tech_stalgrim_mining_3"
+                    has_technology = "tech_stalgrim_mining_4"
+                    has_technology = "tech_stalgrim_mining_5"
+                }
+            }
+            fromfrom = {
+                has_stalgrim_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.13.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.13.b
+        trigger = {
+            fromfrom = {
+                has_stalgrim_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    stalgrim = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
         name = aoe_ship_actions.11.option.14.a
         custom_tooltip = aoe_ship_actions.11.tooltip.14.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_tiberium_mining_1"
+                    has_technology = "tech_tiberium_mining_2"
+                    has_technology = "tech_tiberium_mining_3"
+                    has_technology = "tech_tiberium_mining_4"
+                    has_technology = "tech_tiberium_mining_5"
+                }
+            }
+            fromfrom = {
+                has_tiberium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.14.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.14.b
+        trigger = {
+            fromfrom = {
+                has_tiberium_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    tiberium = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.15.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.15.a
         trigger = {
             owner = {
                 NAND = {
@@ -2007,8 +2977,8 @@ ship_event = {
         }
     }
     option = {
-        name = aoe_ship_actions.11.option.14.b
-        custom_tooltip = aoe_ship_actions.11.tooltip.14.b
+        name = aoe_ship_actions.11.option.15.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.15.b
         trigger = {
             fromfrom = {
                 has_elerium_resource = yes
@@ -2018,6 +2988,393 @@ ship_event = {
             owner = {
                 add_resource = {
                     elerium = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.16.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.16.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_gravitoid_mining_1"
+                    has_technology = "tech_gravitoid_mining_2"
+                    has_technology = "tech_gravitoid_mining_3"
+                    has_technology = "tech_gravitoid_mining_4"
+                    has_technology = "tech_gravitoid_mining_5"
+                }
+            }
+            fromfrom = {
+                has_gravitoid_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.16.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.16.b
+        trigger = {
+            fromfrom = {
+                has_gravitoid_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    gravitoid = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.17.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.17.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_tylium_mining_1"
+                    has_technology = "tech_tylium_mining_2"
+                    has_technology = "tech_tylium_mining_3"
+                    has_technology = "tech_tylium_mining_4"
+                    has_technology = "tech_tylium_mining_5"
+                }
+            }
+            fromfrom = {
+                has_tylium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.17.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.17.b
+        trigger = {
+            fromfrom = {
+                has_tylium_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    tylium = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.18.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.18.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_chalcolivan_mining_1"
+                    has_technology = "tech_chalcolivan_mining_2"
+                    has_technology = "tech_chalcolivan_mining_3"
+                    has_technology = "tech_chalcolivan_mining_4"
+                    has_technology = "tech_chalcolivan_mining_5"
+                }
+            }
+            fromfrom = {
+                has_chalcolivan_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.18.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.18.b
+        trigger = {
+            fromfrom = {
+                has_chalcolivan_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    chalcolivan = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.19.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.19.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_terrigen_mining_1"
+                    has_technology = "tech_terrigen_mining_2"
+                    has_technology = "tech_terrigen_mining_3"
+                    has_technology = "tech_terrigen_mining_4"
+                    has_technology = "tech_terrigen_mining_5"
+                }
+            }
+            fromfrom = {
+                has_terrigen_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.19.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.19.b
+        trigger = {
+            fromfrom = {
+                has_terrigen_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    terrigen = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.20.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.20.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_corenite_mining_1"
+                    has_technology = "tech_corenite_mining_2"
+                    has_technology = "tech_corenite_mining_3"
+                    has_technology = "tech_corenite_mining_4"
+                    has_technology = "tech_corenite_mining_5"
+                }
+            }
+            fromfrom = {
+                has_corenite_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.20.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.20.b
+        trigger = {
+            fromfrom = {
+                has_corenite_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    corenite = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.21.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.21.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_energon_mining_1"
+                    has_technology = "tech_energon_mining_2"
+                    has_technology = "tech_energon_mining_3"
+                    has_technology = "tech_energon_mining_4"
+                    has_technology = "tech_energon_mining_5"
+                }
+            }
+            fromfrom = {
+                has_energon_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.21.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.21.b
+        trigger = {
+            fromfrom = {
+                has_energon_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    energon = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.22.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.22.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_engos_mining_1"
+                    has_technology = "tech_engos_mining_2"
+                    has_technology = "tech_engos_mining_3"
+                    has_technology = "tech_engos_mining_4"
+                    has_technology = "tech_engos_mining_5"
+                }
+            }
+            fromfrom = {
+                has_engos_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.22.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.22.b
+        trigger = {
+            fromfrom = {
+                has_engos_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    engos = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.23.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.23.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_helium_mining_1"
+                    has_technology = "tech_helium_mining_2"
+                    has_technology = "tech_helium_mining_3"
+                    has_technology = "tech_helium_mining_4"
+                    has_technology = "tech_helium_mining_5"
+                }
+            }
+            fromfrom = {
+                has_helium_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.23.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.23.b
+        trigger = {
+            fromfrom = {
+                has_helium_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    helium = @tier2materialmax
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.24.a
+        custom_tooltip = aoe_ship_actions.11.tooltip.24.a
+        trigger = {
+            owner = {
+                NAND = {
+                    has_technology = "tech_kryptonite_mining_1"
+                    has_technology = "tech_kryptonite_mining_2"
+                    has_technology = "tech_kryptonite_mining_3"
+                    has_technology = "tech_kryptonite_mining_4"
+                    has_technology = "tech_kryptonite_mining_5"
+                }
+            }
+            fromfrom = {
+                has_kryptonite_resource = yes
+            }
+        }
+        hidden_effect = {
+            fromfrom = {
+                enable_special_project = {
+                    name = "aoe_resources_mining_project"
+                    location = this
+                    owner = root.owner
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_ship_actions.11.option.24.b
+        custom_tooltip = aoe_ship_actions.11.tooltip.24.b
+        trigger = {
+            fromfrom = {
+                has_kryptonite_resource = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                add_resource = {
+                    kryptonite = @tier2materialmax
                 }
             }
         }

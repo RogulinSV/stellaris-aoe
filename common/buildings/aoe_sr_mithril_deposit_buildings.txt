@@ -1,4 +1,4 @@
-building_elerium_harvester = {
+building_mithril_harvester = {
     capital = no
     can_build = yes
     can_demolish = yes
@@ -9,7 +9,7 @@ building_elerium_harvester = {
     is_capped_by_modifier = yes
 
     upgrades = {
-        "building_elerium_factory_1"
+        "building_mithril_factory_1"
     }
 
     potential = {
@@ -41,7 +41,7 @@ building_elerium_harvester = {
             }
         }
         modifier = {
-            job_elerium_harvester_worker_add = 1
+            job_mithril_harvester_worker_add = 1
         }
     }
 
@@ -53,7 +53,7 @@ building_elerium_harvester = {
                 is_fallen_empire = no
             }
         }
-        text = "job_elerium_harvester_worker_effect_desc"
+        text = "job_mithril_harvester_worker_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -64,7 +64,7 @@ building_elerium_harvester = {
             }
         }
         modifier = {
-            job_elerium_harvester_drone_add = 1
+            job_mithril_harvester_drone_add = 1
         }
     }
 
@@ -75,7 +75,7 @@ building_elerium_harvester = {
                 is_gestalt = yes
             }
         }
-        text = "job_elerium_harvester_drone_effect_desc"
+        text = "job_mithril_harvester_drone_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -86,7 +86,7 @@ building_elerium_harvester = {
             }
         }
         modifier = {
-            job_elerium_harvester_calculator_add = 1
+            job_mithril_harvester_calculator_add = 1
         }
     }
 
@@ -97,7 +97,7 @@ building_elerium_harvester = {
                 is_machine_empire = yes
             }
         }
-        text = "job_elerium_harvester_calculator_effect_desc"
+        text = "job_mithril_harvester_calculator_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -108,7 +108,7 @@ building_elerium_harvester = {
             }
         }
         modifier = {
-            job_elerium_harvester_brain_drone_add = 1
+            job_mithril_harvester_brain_drone_add = 1
         }
     }
 
@@ -119,7 +119,7 @@ building_elerium_harvester = {
                 is_hive_empire = yes
             }
         }
-        text = "job_elerium_harvester_brain_drone_effect_desc"
+        text = "job_mithril_harvester_brain_drone_effect_desc"
     }
 
     ai_weight = {
@@ -136,9 +136,9 @@ building_elerium_harvester = {
         }
         modifier = {
             factor = 0
-            count_owned_pops = { 
-                limit = { 
-                    OR = { 
+            count_owned_pops = {
+                limit = {
+                    OR = {
                         is_unemployed = yes
                         has_job = servant
                     }
@@ -149,11 +149,11 @@ building_elerium_harvester = {
     }
 
     prerequisites = {
-        "tech_mine_elerium"
+        "tech_mine_mithril"
     }
 }
 
-building_elerium_factory_1 = {
+building_mithril_factory_1 = {
     capital = no
     can_build = no
     can_demolish = yes
@@ -163,7 +163,7 @@ building_elerium_factory_1 = {
     category = resource
 
     upgrades = {
-        "building_elerium_factory_2"
+        "building_mithril_factory_2"
     }
 
     potential = {
@@ -196,7 +196,7 @@ building_elerium_factory_1 = {
             }
         }
         modifier = {
-            job_elerium_harvester_worker_add = 2
+            job_mithril_harvester_worker_add = 2
         }
     }
 
@@ -208,7 +208,7 @@ building_elerium_factory_1 = {
                 is_fallen_empire = no
             }
         }
-        text = "job_elerium_harvester_worker_effect_desc"
+        text = "job_mithril_harvester_worker_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -219,7 +219,7 @@ building_elerium_factory_1 = {
             }
         }
         modifier = {
-            job_elerium_harvester_drone_add = 2
+            job_mithril_harvester_drone_add = 2
         }
     }
 
@@ -230,7 +230,7 @@ building_elerium_factory_1 = {
                 is_gestalt = yes
             }
         }
-        text = "job_elerium_harvester_drone_effect_desc"
+        text = "job_mithril_harvester_drone_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -241,7 +241,7 @@ building_elerium_factory_1 = {
             }
         }
         modifier = {
-            job_elerium_harvester_calculator_add = 2
+            job_mithril_harvester_calculator_add = 2
         }
     }
 
@@ -252,7 +252,7 @@ building_elerium_factory_1 = {
                 is_machine_empire = yes
             }
         }
-        text = "job_elerium_harvester_calculator_effect_desc"
+        text = "job_mithril_harvester_calculator_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -263,7 +263,7 @@ building_elerium_factory_1 = {
             }
         }
         modifier = {
-            job_elerium_harvester_brain_drone_add = 2
+            job_mithril_harvester_brain_drone_add = 2
         }
     }
 
@@ -274,7 +274,7 @@ building_elerium_factory_1 = {
                 is_hive_empire = yes
             }
         }
-        text = "job_elerium_harvester_brain_drone_effect_desc"
+        text = "job_mithril_harvester_brain_drone_effect_desc"
     }
 
     ai_weight = {
@@ -291,9 +291,9 @@ building_elerium_factory_1 = {
         }
         modifier = {
             factor = 0
-            count_owned_pops = { 
-                limit = { 
-                    OR = { 
+            count_owned_pops = {
+                limit = {
+                    OR = {
                         is_unemployed = yes
                         has_job = servant
                     }
@@ -304,11 +304,11 @@ building_elerium_factory_1 = {
     }
 
     prerequisites = {
-        "tech_elerium_mining_1"
+        "tech_mithril_mining_1"
     }
 }
 
-building_elerium_factory_2 = {
+building_mithril_factory_2 = {
     capital = no
     can_build = no
     can_demolish = yes
@@ -318,7 +318,7 @@ building_elerium_factory_2 = {
     category = resource
 
     upgrades = {
-        "building_elerium_factory_3"
+        "building_mithril_factory_3"
     }
 
     potential = {
@@ -350,7 +350,7 @@ building_elerium_factory_2 = {
             }
         }
         modifier = {
-            job_elerium_harvester_worker_add = 3
+            job_mithril_harvester_worker_add = 3
         }
     }
 
@@ -362,7 +362,7 @@ building_elerium_factory_2 = {
                 is_fallen_empire = no
             }
         }
-        text = "job_elerium_harvester_worker_effect_desc"
+        text = "job_mithril_harvester_worker_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -373,7 +373,7 @@ building_elerium_factory_2 = {
             }
         }
         modifier = {
-            job_elerium_harvester_drone_add = 3
+            job_mithril_harvester_drone_add = 3
         }
     }
 
@@ -384,7 +384,7 @@ building_elerium_factory_2 = {
                 is_gestalt = yes
             }
         }
-        text = "job_elerium_harvester_drone_effect_desc"
+        text = "job_mithril_harvester_drone_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -395,7 +395,7 @@ building_elerium_factory_2 = {
             }
         }
         modifier = {
-            job_elerium_harvester_calculator_add = 3
+            job_mithril_harvester_calculator_add = 3
         }
     }
 
@@ -406,7 +406,7 @@ building_elerium_factory_2 = {
                 is_machine_empire = yes
             }
         }
-        text = "job_elerium_harvester_calculator_effect_desc"
+        text = "job_mithril_harvester_calculator_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -417,7 +417,7 @@ building_elerium_factory_2 = {
             }
         }
         modifier = {
-            job_elerium_harvester_brain_drone_add = 3
+            job_mithril_harvester_brain_drone_add = 3
         }
     }
 
@@ -428,7 +428,7 @@ building_elerium_factory_2 = {
                 is_hive_empire = yes
             }
         }
-        text = "job_elerium_harvester_brain_drone_effect_desc"
+        text = "job_mithril_harvester_brain_drone_effect_desc"
     }
 
     ai_weight = {
@@ -445,9 +445,9 @@ building_elerium_factory_2 = {
         }
         modifier = {
             factor = 0
-            count_owned_pops = { 
-                limit = { 
-                    OR = { 
+            count_owned_pops = {
+                limit = {
+                    OR = {
                         is_unemployed = yes
                         has_job = servant
                     }
@@ -458,11 +458,11 @@ building_elerium_factory_2 = {
     }
 
     prerequisites = {
-        "tech_elerium_mining_2"
+        "tech_mithril_mining_2"
     }
 }
 
-building_elerium_factory_3 = {
+building_mithril_factory_3 = {
     capital = no
     can_build = no
     can_demolish = yes
@@ -472,7 +472,7 @@ building_elerium_factory_3 = {
     category = resource
 
     upgrades = {
-        "building_elerium_factory_4"
+        "building_mithril_factory_4"
     }
 
     potential = {
@@ -505,7 +505,7 @@ building_elerium_factory_3 = {
             }
         }
         modifier = {
-            job_elerium_harvester_worker_add = 4
+            job_mithril_harvester_worker_add = 4
         }
     }
 
@@ -517,7 +517,7 @@ building_elerium_factory_3 = {
                 is_fallen_empire = no
             }
         }
-        text = "job_elerium_harvester_worker_effect_desc"
+        text = "job_mithril_harvester_worker_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -528,7 +528,7 @@ building_elerium_factory_3 = {
             }
         }
         modifier = {
-            job_elerium_harvester_drone_add = 4
+            job_mithril_harvester_drone_add = 4
         }
     }
 
@@ -539,7 +539,7 @@ building_elerium_factory_3 = {
                 is_gestalt = yes
             }
         }
-        text = "job_elerium_harvester_drone_effect_desc"
+        text = "job_mithril_harvester_drone_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -550,7 +550,7 @@ building_elerium_factory_3 = {
             }
         }
         modifier = {
-            job_elerium_harvester_calculator_add = 4
+            job_mithril_harvester_calculator_add = 4
         }
     }
 
@@ -561,7 +561,7 @@ building_elerium_factory_3 = {
                 is_machine_empire = yes
             }
         }
-        text = "job_elerium_harvester_calculator_effect_desc"
+        text = "job_mithril_harvester_calculator_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -572,7 +572,7 @@ building_elerium_factory_3 = {
             }
         }
         modifier = {
-            job_elerium_harvester_brain_drone_add = 4
+            job_mithril_harvester_brain_drone_add = 4
         }
     }
 
@@ -583,7 +583,7 @@ building_elerium_factory_3 = {
                 is_hive_empire = yes
             }
         }
-        text = "job_elerium_harvester_brain_drone_effect_desc"
+        text = "job_mithril_harvester_brain_drone_effect_desc"
     }
 
     ai_weight = {
@@ -600,9 +600,9 @@ building_elerium_factory_3 = {
         }
         modifier = {
             factor = 0
-            count_owned_pops = { 
-                limit = { 
-                    OR = { 
+            count_owned_pops = {
+                limit = {
+                    OR = {
                         is_unemployed = yes
                         has_job = servant
                     }
@@ -613,11 +613,11 @@ building_elerium_factory_3 = {
     }
 
     prerequisites = {
-        "tech_elerium_mining_3"
+        "tech_mithril_mining_3"
     }
 }
 
-building_elerium_factory_4 = {
+building_mithril_factory_4 = {
     capital = no
     can_build = no
     can_demolish = yes
@@ -627,7 +627,7 @@ building_elerium_factory_4 = {
     category = resource
 
     upgrades = {
-        "building_elerium_factory_5"
+        "building_mithril_factory_5"
     }
 
     potential = {
@@ -659,7 +659,7 @@ building_elerium_factory_4 = {
             }
         }
         modifier = {
-            job_elerium_harvester_worker_add = 5
+            job_mithril_harvester_worker_add = 5
         }
     }
 
@@ -671,7 +671,7 @@ building_elerium_factory_4 = {
                 is_fallen_empire = no
             }
         }
-        text = "job_elerium_harvester_worker_effect_desc"
+        text = "job_mithril_harvester_worker_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -682,7 +682,7 @@ building_elerium_factory_4 = {
             }
         }
         modifier = {
-            job_elerium_harvester_drone_add = 5
+            job_mithril_harvester_drone_add = 5
         }
     }
 
@@ -693,7 +693,7 @@ building_elerium_factory_4 = {
                 is_gestalt = yes
             }
         }
-        text = "job_elerium_harvester_drone_effect_desc"
+        text = "job_mithril_harvester_drone_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -704,7 +704,7 @@ building_elerium_factory_4 = {
             }
         }
         modifier = {
-            job_elerium_harvester_calculator_add = 5
+            job_mithril_harvester_calculator_add = 5
         }
     }
 
@@ -715,7 +715,7 @@ building_elerium_factory_4 = {
                 is_machine_empire = yes
             }
         }
-        text = "job_elerium_harvester_calculator_effect_desc"
+        text = "job_mithril_harvester_calculator_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -726,7 +726,7 @@ building_elerium_factory_4 = {
             }
         }
         modifier = {
-            job_elerium_harvester_brain_drone_add = 5
+            job_mithril_harvester_brain_drone_add = 5
         }
     }
 
@@ -737,7 +737,7 @@ building_elerium_factory_4 = {
                 is_hive_empire = yes
             }
         }
-        text = "job_elerium_harvester_brain_drone_effect_desc"
+        text = "job_mithril_harvester_brain_drone_effect_desc"
     }
 
     ai_weight = {
@@ -754,9 +754,9 @@ building_elerium_factory_4 = {
         }
         modifier = {
             factor = 0
-            count_owned_pops = { 
-                limit = { 
-                    OR = { 
+            count_owned_pops = {
+                limit = {
+                    OR = {
                         is_unemployed = yes
                         has_job = servant
                     }
@@ -767,11 +767,11 @@ building_elerium_factory_4 = {
     }
 
     prerequisites = {
-        "tech_elerium_mining_4"
+        "tech_mithril_mining_4"
     }
 }
 
-building_elerium_factory_5 = {
+building_mithril_factory_5 = {
     capital = no
     can_build = no
     can_demolish = yes
@@ -810,7 +810,7 @@ building_elerium_factory_5 = {
             }
         }
         modifier = {
-            job_elerium_harvester_worker_add = 6
+            job_mithril_harvester_worker_add = 6
         }
     }
 
@@ -822,7 +822,7 @@ building_elerium_factory_5 = {
                 is_fallen_empire = no
             }
         }
-        text = "job_elerium_harvester_worker_effect_desc"
+        text = "job_mithril_harvester_worker_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -833,7 +833,7 @@ building_elerium_factory_5 = {
             }
         }
         modifier = {
-            job_elerium_harvester_drone_add = 6
+            job_mithril_harvester_drone_add = 6
         }
     }
 
@@ -844,7 +844,7 @@ building_elerium_factory_5 = {
                 is_gestalt = yes
             }
         }
-        text = "job_elerium_harvester_drone_effect_desc"
+        text = "job_mithril_harvester_drone_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -855,7 +855,7 @@ building_elerium_factory_5 = {
             }
         }
         modifier = {
-            job_elerium_harvester_calculator_add = 6
+            job_mithril_harvester_calculator_add = 6
         }
     }
 
@@ -866,7 +866,7 @@ building_elerium_factory_5 = {
                 is_machine_empire = yes
             }
         }
-        text = "job_elerium_harvester_calculator_effect_desc"
+        text = "job_mithril_harvester_calculator_effect_desc"
     }
 
     triggered_planet_modifier = {
@@ -877,7 +877,7 @@ building_elerium_factory_5 = {
             }
         }
         modifier = {
-            job_elerium_harvester_brain_drone_add = 6
+            job_mithril_harvester_brain_drone_add = 6
         }
     }
 
@@ -888,7 +888,7 @@ building_elerium_factory_5 = {
                 is_hive_empire = yes
             }
         }
-        text = "job_elerium_harvester_brain_drone_effect_desc"
+        text = "job_mithril_harvester_brain_drone_effect_desc"
     }
 
     ai_weight = {
@@ -905,9 +905,9 @@ building_elerium_factory_5 = {
         }
         modifier = {
             factor = 0
-            count_owned_pops = { 
-                limit = { 
-                    OR = { 
+            count_owned_pops = {
+                limit = {
+                    OR = {
                         is_unemployed = yes
                         has_job = servant
                     }
@@ -918,6 +918,6 @@ building_elerium_factory_5 = {
     }
 
     prerequisites = {
-        "tech_elerium_mining_5"
+        "tech_mithril_mining_5"
     }
 }

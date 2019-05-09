@@ -1287,11 +1287,241 @@ resources_mining_category_1 = {
     spawn_chance = {
         modifier = {
             add = @anomaly_ultrahigh_spawn_chance
+            has_mithril_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_mithril"
+                NOT = {
+                    has_technology = "tech_mithril_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_orihalk_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_orihalk"
+                NOT = {
+                    has_technology = "tech_orihalk_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_yuranic_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_yuranic"
+                NOT = {
+                    has_technology = "tech_yuranic_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_adamantium_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_adamantium"
+                NOT = {
+                    has_technology = "tech_adamantium_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_vibranium_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_vibranium"
+                NOT = {
+                    has_technology = "tech_vibranium_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_cobaltium_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_cobaltium"
+                NOT = {
+                    has_technology = "tech_cobaltium_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_itildeen_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_itildeen"
+                NOT = {
+                    has_technology = "tech_itildeen_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_satramene_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_satramene"
+                NOT = {
+                    has_technology = "tech_satramene_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_lirium_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_lirium"
+                NOT = {
+                    has_technology = "tech_lirium_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_nevarrit_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_nevarrit"
+                NOT = {
+                    has_technology = "tech_nevarrit_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_thiotimoline_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_thiotimoline"
+                NOT = {
+                    has_technology = "tech_thiotimoline_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_unobtanium_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_unobtanium"
+                NOT = {
+                    has_technology = "tech_unobtanium_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_stalgrim_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_stalgrim"
+                NOT = {
+                    has_technology = "tech_stalgrim_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_tiberium_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_tiberium"
+                NOT = {
+                    has_technology = "tech_tiberium_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
             has_elerium_resource = yes
             from.owner = {
                 has_technology = "tech_mine_elerium"
                 NOT = {
                     has_technology = "tech_elerium_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_gravitoid_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_gravitoid"
+                NOT = {
+                    has_technology = "tech_gravitoid_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_tylium_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_tylium"
+                NOT = {
+                    has_technology = "tech_tylium_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_chalcolivan_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_chalcolivan"
+                NOT = {
+                    has_technology = "tech_chalcolivan_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_terrigen_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_terrigen"
+                NOT = {
+                    has_technology = "tech_terrigen_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_corenite_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_corenite"
+                NOT = {
+                    has_technology = "tech_corenite_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_energon_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_energon"
+                NOT = {
+                    has_technology = "tech_energon_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_engos_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_engos"
+                NOT = {
+                    has_technology = "tech_engos_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_helium_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_helium"
+                NOT = {
+                    has_technology = "tech_helium_mining_1"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultrahigh_spawn_chance
+            has_kryptonite_resource = yes
+            from.owner = {
+                has_technology = "tech_mine_kryptonite"
+                NOT = {
+                    has_technology = "tech_kryptonite_mining_1"
                 }
             }
         }
@@ -1458,11 +1688,241 @@ resources_mining_category_2 = {
     spawn_chance = {
         modifier = {
             add = @anomaly_high_spawn_chance
+            has_mithril_resource = yes
+            from.owner = {
+                has_technology = "tech_mithril_mining_1"
+                NOT = {
+                    has_technology = "tech_mithril_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_orihalk_resource = yes
+            from.owner = {
+                has_technology = "tech_orihalk_mining_1"
+                NOT = {
+                    has_technology = "tech_orihalk_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_yuranic_resource = yes
+            from.owner = {
+                has_technology = "tech_yuranic_mining_1"
+                NOT = {
+                    has_technology = "tech_yuranic_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_adamantium_resource = yes
+            from.owner = {
+                has_technology = "tech_adamantium_mining_1"
+                NOT = {
+                    has_technology = "tech_adamantium_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_vibranium_resource = yes
+            from.owner = {
+                has_technology = "tech_vibranium_mining_1"
+                NOT = {
+                    has_technology = "tech_vibranium_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_cobaltium_resource = yes
+            from.owner = {
+                has_technology = "tech_cobaltium_mining_1"
+                NOT = {
+                    has_technology = "tech_cobaltium_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_itildeen_resource = yes
+            from.owner = {
+                has_technology = "tech_itildeen_mining_1"
+                NOT = {
+                    has_technology = "tech_itildeen_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_satramene_resource = yes
+            from.owner = {
+                has_technology = "tech_satramene_mining_1"
+                NOT = {
+                    has_technology = "tech_satramene_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_lirium_resource = yes
+            from.owner = {
+                has_technology = "tech_lirium_mining_1"
+                NOT = {
+                    has_technology = "tech_lirium_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_nevarrit_resource = yes
+            from.owner = {
+                has_technology = "tech_nevarrit_mining_1"
+                NOT = {
+                    has_technology = "tech_nevarrit_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_thiotimoline_resource = yes
+            from.owner = {
+                has_technology = "tech_thiotimoline_mining_1"
+                NOT = {
+                    has_technology = "tech_thiotimoline_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_unobtanium_resource = yes
+            from.owner = {
+                has_technology = "tech_unobtanium_mining_1"
+                NOT = {
+                    has_technology = "tech_unobtanium_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_stalgrim_resource = yes
+            from.owner = {
+                has_technology = "tech_stalgrim_mining_1"
+                NOT = {
+                    has_technology = "tech_stalgrim_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_tiberium_resource = yes
+            from.owner = {
+                has_technology = "tech_tiberium_mining_1"
+                NOT = {
+                    has_technology = "tech_tiberium_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
             has_elerium_resource = yes
             from.owner = {
                 has_technology = "tech_elerium_mining_1"
                 NOT = {
                     has_technology = "tech_elerium_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_gravitoid_resource = yes
+            from.owner = {
+                has_technology = "tech_gravitoid_mining_1"
+                NOT = {
+                    has_technology = "tech_gravitoid_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_tylium_resource = yes
+            from.owner = {
+                has_technology = "tech_tylium_mining_1"
+                NOT = {
+                    has_technology = "tech_tylium_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_chalcolivan_resource = yes
+            from.owner = {
+                has_technology = "tech_chalcolivan_mining_1"
+                NOT = {
+                    has_technology = "tech_chalcolivan_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_terrigen_resource = yes
+            from.owner = {
+                has_technology = "tech_terrigen_mining_1"
+                NOT = {
+                    has_technology = "tech_terrigen_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_corenite_resource = yes
+            from.owner = {
+                has_technology = "tech_corenite_mining_1"
+                NOT = {
+                    has_technology = "tech_corenite_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_energon_resource = yes
+            from.owner = {
+                has_technology = "tech_energon_mining_1"
+                NOT = {
+                    has_technology = "tech_energon_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_engos_resource = yes
+            from.owner = {
+                has_technology = "tech_engos_mining_1"
+                NOT = {
+                    has_technology = "tech_engos_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_helium_resource = yes
+            from.owner = {
+                has_technology = "tech_helium_mining_1"
+                NOT = {
+                    has_technology = "tech_helium_mining_2"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_high_spawn_chance
+            has_kryptonite_resource = yes
+            from.owner = {
+                has_technology = "tech_kryptonite_mining_1"
+                NOT = {
+                    has_technology = "tech_kryptonite_mining_2"
                 }
             }
         }
@@ -1629,11 +2089,241 @@ resources_mining_category_3 = {
     spawn_chance = {
         modifier = {
             add = @anomaly_medium_spawn_chance
+            has_mithril_resource = yes
+            from.owner = {
+                has_technology = "tech_mithril_mining_2"
+                NOT = {
+                    has_technology = "tech_mithril_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_orihalk_resource = yes
+            from.owner = {
+                has_technology = "tech_orihalk_mining_2"
+                NOT = {
+                    has_technology = "tech_orihalk_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_yuranic_resource = yes
+            from.owner = {
+                has_technology = "tech_yuranic_mining_2"
+                NOT = {
+                    has_technology = "tech_yuranic_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_adamantium_resource = yes
+            from.owner = {
+                has_technology = "tech_adamantium_mining_2"
+                NOT = {
+                    has_technology = "tech_adamantium_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_vibranium_resource = yes
+            from.owner = {
+                has_technology = "tech_vibranium_mining_2"
+                NOT = {
+                    has_technology = "tech_vibranium_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_cobaltium_resource = yes
+            from.owner = {
+                has_technology = "tech_cobaltium_mining_2"
+                NOT = {
+                    has_technology = "tech_cobaltium_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_itildeen_resource = yes
+            from.owner = {
+                has_technology = "tech_itildeen_mining_2"
+                NOT = {
+                    has_technology = "tech_itildeen_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_satramene_resource = yes
+            from.owner = {
+                has_technology = "tech_satramene_mining_2"
+                NOT = {
+                    has_technology = "tech_satramene_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_lirium_resource = yes
+            from.owner = {
+                has_technology = "tech_lirium_mining_2"
+                NOT = {
+                    has_technology = "tech_lirium_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_nevarrit_resource = yes
+            from.owner = {
+                has_technology = "tech_nevarrit_mining_2"
+                NOT = {
+                    has_technology = "tech_nevarrit_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_thiotimoline_resource = yes
+            from.owner = {
+                has_technology = "tech_thiotimoline_mining_2"
+                NOT = {
+                    has_technology = "tech_thiotimoline_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_unobtanium_resource = yes
+            from.owner = {
+                has_technology = "tech_unobtanium_mining_2"
+                NOT = {
+                    has_technology = "tech_unobtanium_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_stalgrim_resource = yes
+            from.owner = {
+                has_technology = "tech_stalgrim_mining_2"
+                NOT = {
+                    has_technology = "tech_stalgrim_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_tiberium_resource = yes
+            from.owner = {
+                has_technology = "tech_tiberium_mining_2"
+                NOT = {
+                    has_technology = "tech_tiberium_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
             has_elerium_resource = yes
             from.owner = {
                 has_technology = "tech_elerium_mining_2"
                 NOT = {
                     has_technology = "tech_elerium_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_gravitoid_resource = yes
+            from.owner = {
+                has_technology = "tech_gravitoid_mining_2"
+                NOT = {
+                    has_technology = "tech_gravitoid_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_tylium_resource = yes
+            from.owner = {
+                has_technology = "tech_tylium_mining_2"
+                NOT = {
+                    has_technology = "tech_tylium_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_chalcolivan_resource = yes
+            from.owner = {
+                has_technology = "tech_chalcolivan_mining_2"
+                NOT = {
+                    has_technology = "tech_chalcolivan_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_terrigen_resource = yes
+            from.owner = {
+                has_technology = "tech_terrigen_mining_2"
+                NOT = {
+                    has_technology = "tech_terrigen_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_corenite_resource = yes
+            from.owner = {
+                has_technology = "tech_corenite_mining_2"
+                NOT = {
+                    has_technology = "tech_corenite_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_energon_resource = yes
+            from.owner = {
+                has_technology = "tech_energon_mining_2"
+                NOT = {
+                    has_technology = "tech_energon_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_engos_resource = yes
+            from.owner = {
+                has_technology = "tech_engos_mining_2"
+                NOT = {
+                    has_technology = "tech_engos_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_helium_resource = yes
+            from.owner = {
+                has_technology = "tech_helium_mining_2"
+                NOT = {
+                    has_technology = "tech_helium_mining_3"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_medium_spawn_chance
+            has_kryptonite_resource = yes
+            from.owner = {
+                has_technology = "tech_kryptonite_mining_2"
+                NOT = {
+                    has_technology = "tech_kryptonite_mining_3"
                 }
             }
         }
@@ -1800,11 +2490,241 @@ resources_mining_category_4 = {
     spawn_chance = {
         modifier = {
             add = @anomaly_low_spawn_chance
+            has_mithril_resource = yes
+            from.owner = {
+                has_technology = "tech_mithril_mining_3"
+                NOT = {
+                    has_technology = "tech_mithril_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_orihalk_resource = yes
+            from.owner = {
+                has_technology = "tech_orihalk_mining_3"
+                NOT = {
+                    has_technology = "tech_orihalk_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_yuranic_resource = yes
+            from.owner = {
+                has_technology = "tech_yuranic_mining_3"
+                NOT = {
+                    has_technology = "tech_yuranic_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_adamantium_resource = yes
+            from.owner = {
+                has_technology = "tech_adamantium_mining_3"
+                NOT = {
+                    has_technology = "tech_adamantium_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_vibranium_resource = yes
+            from.owner = {
+                has_technology = "tech_vibranium_mining_3"
+                NOT = {
+                    has_technology = "tech_vibranium_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_cobaltium_resource = yes
+            from.owner = {
+                has_technology = "tech_cobaltium_mining_3"
+                NOT = {
+                    has_technology = "tech_cobaltium_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_itildeen_resource = yes
+            from.owner = {
+                has_technology = "tech_itildeen_mining_3"
+                NOT = {
+                    has_technology = "tech_itildeen_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_satramene_resource = yes
+            from.owner = {
+                has_technology = "tech_satramene_mining_3"
+                NOT = {
+                    has_technology = "tech_satramene_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_lirium_resource = yes
+            from.owner = {
+                has_technology = "tech_lirium_mining_3"
+                NOT = {
+                    has_technology = "tech_lirium_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_nevarrit_resource = yes
+            from.owner = {
+                has_technology = "tech_nevarrit_mining_3"
+                NOT = {
+                    has_technology = "tech_nevarrit_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_thiotimoline_resource = yes
+            from.owner = {
+                has_technology = "tech_thiotimoline_mining_3"
+                NOT = {
+                    has_technology = "tech_thiotimoline_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_unobtanium_resource = yes
+            from.owner = {
+                has_technology = "tech_unobtanium_mining_3"
+                NOT = {
+                    has_technology = "tech_unobtanium_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_stalgrim_resource = yes
+            from.owner = {
+                has_technology = "tech_stalgrim_mining_3"
+                NOT = {
+                    has_technology = "tech_stalgrim_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_tiberium_resource = yes
+            from.owner = {
+                has_technology = "tech_tiberium_mining_3"
+                NOT = {
+                    has_technology = "tech_tiberium_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
             has_elerium_resource = yes
             from.owner = {
                 has_technology = "tech_elerium_mining_3"
                 NOT = {
                     has_technology = "tech_elerium_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_gravitoid_resource = yes
+            from.owner = {
+                has_technology = "tech_gravitoid_mining_3"
+                NOT = {
+                    has_technology = "tech_gravitoid_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_tylium_resource = yes
+            from.owner = {
+                has_technology = "tech_tylium_mining_3"
+                NOT = {
+                    has_technology = "tech_tylium_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_chalcolivan_resource = yes
+            from.owner = {
+                has_technology = "tech_chalcolivan_mining_3"
+                NOT = {
+                    has_technology = "tech_chalcolivan_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_terrigen_resource = yes
+            from.owner = {
+                has_technology = "tech_terrigen_mining_3"
+                NOT = {
+                    has_technology = "tech_terrigen_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_corenite_resource = yes
+            from.owner = {
+                has_technology = "tech_corenite_mining_3"
+                NOT = {
+                    has_technology = "tech_corenite_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_energon_resource = yes
+            from.owner = {
+                has_technology = "tech_energon_mining_3"
+                NOT = {
+                    has_technology = "tech_energon_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_engos_resource = yes
+            from.owner = {
+                has_technology = "tech_engos_mining_3"
+                NOT = {
+                    has_technology = "tech_engos_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_helium_resource = yes
+            from.owner = {
+                has_technology = "tech_helium_mining_3"
+                NOT = {
+                    has_technology = "tech_helium_mining_4"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_low_spawn_chance
+            has_kryptonite_resource = yes
+            from.owner = {
+                has_technology = "tech_kryptonite_mining_3"
+                NOT = {
+                    has_technology = "tech_kryptonite_mining_4"
                 }
             }
         }
@@ -1971,11 +2891,241 @@ resources_mining_category_5 = {
     spawn_chance = {
         modifier = {
             add = @anomaly_ultralow_spawn_chance
+            has_mithril_resource = yes
+            from.owner = {
+                has_technology = "tech_mithril_mining_4"
+                NOT = {
+                    has_technology = "tech_mithril_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_orihalk_resource = yes
+            from.owner = {
+                has_technology = "tech_orihalk_mining_4"
+                NOT = {
+                    has_technology = "tech_orihalk_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_yuranic_resource = yes
+            from.owner = {
+                has_technology = "tech_yuranic_mining_4"
+                NOT = {
+                    has_technology = "tech_yuranic_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_adamantium_resource = yes
+            from.owner = {
+                has_technology = "tech_adamantium_mining_4"
+                NOT = {
+                    has_technology = "tech_adamantium_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_vibranium_resource = yes
+            from.owner = {
+                has_technology = "tech_vibranium_mining_4"
+                NOT = {
+                    has_technology = "tech_vibranium_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_cobaltium_resource = yes
+            from.owner = {
+                has_technology = "tech_cobaltium_mining_4"
+                NOT = {
+                    has_technology = "tech_cobaltium_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_itildeen_resource = yes
+            from.owner = {
+                has_technology = "tech_itildeen_mining_4"
+                NOT = {
+                    has_technology = "tech_itildeen_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_satramene_resource = yes
+            from.owner = {
+                has_technology = "tech_satramene_mining_4"
+                NOT = {
+                    has_technology = "tech_satramene_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_lirium_resource = yes
+            from.owner = {
+                has_technology = "tech_lirium_mining_4"
+                NOT = {
+                    has_technology = "tech_lirium_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_nevarrit_resource = yes
+            from.owner = {
+                has_technology = "tech_nevarrit_mining_4"
+                NOT = {
+                    has_technology = "tech_nevarrit_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_thiotimoline_resource = yes
+            from.owner = {
+                has_technology = "tech_thiotimoline_mining_4"
+                NOT = {
+                    has_technology = "tech_thiotimoline_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_unobtanium_resource = yes
+            from.owner = {
+                has_technology = "tech_unobtanium_mining_4"
+                NOT = {
+                    has_technology = "tech_unobtanium_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_stalgrim_resource = yes
+            from.owner = {
+                has_technology = "tech_stalgrim_mining_4"
+                NOT = {
+                    has_technology = "tech_stalgrim_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_tiberium_resource = yes
+            from.owner = {
+                has_technology = "tech_tiberium_mining_4"
+                NOT = {
+                    has_technology = "tech_tiberium_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
             has_elerium_resource = yes
             from.owner = {
                 has_technology = "tech_elerium_mining_4"
                 NOT = {
                     has_technology = "tech_elerium_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_gravitoid_resource = yes
+            from.owner = {
+                has_technology = "tech_gravitoid_mining_4"
+                NOT = {
+                    has_technology = "tech_gravitoid_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_tylium_resource = yes
+            from.owner = {
+                has_technology = "tech_tylium_mining_4"
+                NOT = {
+                    has_technology = "tech_tylium_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_chalcolivan_resource = yes
+            from.owner = {
+                has_technology = "tech_chalcolivan_mining_4"
+                NOT = {
+                    has_technology = "tech_chalcolivan_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_terrigen_resource = yes
+            from.owner = {
+                has_technology = "tech_terrigen_mining_4"
+                NOT = {
+                    has_technology = "tech_terrigen_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_corenite_resource = yes
+            from.owner = {
+                has_technology = "tech_corenite_mining_4"
+                NOT = {
+                    has_technology = "tech_corenite_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_energon_resource = yes
+            from.owner = {
+                has_technology = "tech_energon_mining_4"
+                NOT = {
+                    has_technology = "tech_energon_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_engos_resource = yes
+            from.owner = {
+                has_technology = "tech_engos_mining_4"
+                NOT = {
+                    has_technology = "tech_engos_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_helium_resource = yes
+            from.owner = {
+                has_technology = "tech_helium_mining_4"
+                NOT = {
+                    has_technology = "tech_helium_mining_5"
+                }
+            }
+        }
+        modifier = {
+            add = @anomaly_ultralow_spawn_chance
+            has_kryptonite_resource = yes
+            from.owner = {
+                has_technology = "tech_kryptonite_mining_4"
+                NOT = {
+                    has_technology = "tech_kryptonite_mining_5"
                 }
             }
         }

@@ -1,280 +1,7 @@
-tech_advanced_nuclear_fission = {
-    cost = @technology_low_cost
-    area = physics
-    tier = 2
-    is_rare = no
-    is_dangerous = no
-    is_reverse_engineerable = no
-    category = { particles }
-    prerequisites = {
-        "tech_physics_1"
-    }
-    weight = @tier2weight3
+### Tiberium Mining
 
-    prereqfor_desc = {
-        feature = {
-            title = "tech_advanced_nuclear_fission_title"
-            desc = "tech_advanced_nuclear_fission_desc"
-        }
-    }
-
-    potential = {
-        OR = {
-            has_country_flag = "flags_aoe_science_ascension"
-            has_global_flag = "flags_aoe_science_ascension"
-        }
-    }
-
-    modifier = {
-        category_materials_research_speed_mult = 0.05
-        category_particles_research_speed_mult = 0.05
-    }
-
-    weight_modifier = {
-        modifier = {
-            factor = 1.15
-            research_leader = {
-                area = engineering
-                has_level > 1
-                OR = {
-                    has_trait = "leader_trait_expertise_particles"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-        modifier = {
-            factor = 1.25
-            research_leader = {
-                area = engineering
-                has_level > 2
-                OR = {
-                    has_trait = "leader_trait_expertise_particles"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-        modifier = {
-            factor = 1.35
-            research_leader = {
-                area = engineering
-                has_level > 3
-                OR = {
-                    has_trait = "leader_trait_expertise_particles"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-        modifier = {
-            factor = 1.45
-            research_leader = {
-                area = engineering
-                has_level > 4
-                OR = {
-                    has_trait = "leader_trait_expertise_particles"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-    }
-
-    ai_weight = {
-    }
-}
-
-tech_supreme_nuclear_fission = {
-    cost = @technology_medium_cost
-    area = physics
-    tier = 3
-    is_rare = no
-    is_dangerous = no
-    is_reverse_engineerable = no
-    category = { particles }
-    prerequisites = {
-        "tech_physics_2"
-        "tech_advanced_nuclear_fission"
-    }
-    weight = @tier3weight3
-
-    prereqfor_desc = {
-        feature = {
-            title = "tech_supreme_nuclear_fission_title"
-            desc = "tech_supreme_nuclear_fission_desc"
-        }
-    }
-
-    potential = {
-        OR = {
-            has_country_flag = "flags_aoe_science_ascension"
-            has_global_flag = "flags_aoe_science_ascension"
-        }
-    }
-
-    modifier = {
-        category_materials_research_speed_mult = 0.1
-        category_particles_research_speed_mult = 0.1
-    }
-
-    weight_modifier = {
-        modifier = {
-            factor = 0
-            research_leader = {
-                area = engineering
-                has_level < 2
-            }
-        }
-        modifier = {
-            factor = 0.75
-            research_leader = {
-                area = engineering
-                NOR = {
-                    has_trait = "leader_trait_expertise_particles"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-        modifier = {
-            factor = 1.15
-            research_leader = {
-                area = engineering
-                has_level > 3
-                OR = {
-                    has_trait = "leader_trait_expertise_particles"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-        modifier = {
-            factor = 1.25
-            research_leader = {
-                area = engineering
-                has_level > 4
-                OR = {
-                    has_trait = "leader_trait_expertise_particles"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-    }
-
-    ai_weight = {
-        modifier = {
-            factor = 0
-            research_leader = {
-                area = engineering
-                has_level < 2
-            }
-        }
-        modifier = {
-            factor = 0.75
-            research_leader = {
-                area = engineering
-                NOR = {
-                    has_trait = "leader_trait_expertise_particles"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-    }
-}
-
-tech_transcendence_nuclear_fission = {
-    cost = @technology_high_cost
-    area = physics
-    tier = 4
-    is_rare = yes
-    is_dangerous = no
-    is_reverse_engineerable = no
-    category = { particles }
-    prerequisites = {
-        "tech_physics_3"
-        "tech_supreme_nuclear_fission"
-    }
-    weight = @tier4weight3
-
-    prereqfor_desc = {
-        feature = {
-            title = "tech_transcendence_nuclear_fission_title"
-            desc = "tech_transcendence_nuclear_fission_desc"
-        }
-    }
-
-    potential = {
-        OR = {
-            has_country_flag = "flags_aoe_science_ascension"
-            has_global_flag = "flags_aoe_science_ascension"
-        }
-    }
-
-    modifier = {
-        category_materials_research_speed_mult = 0.2
-        category_particles_research_speed_mult = 0.2
-    }
-
-    weight_modifier = {
-        modifier = {
-            factor = 0
-            research_leader = {
-                area = engineering
-                has_level < 3
-            }
-        }
-        modifier = {
-            factor = 0.5
-            research_leader = {
-                area = engineering
-                NOR = {
-                    has_trait = "leader_trait_expertise_particles"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-        modifier = {
-            factor = 1.15
-            research_leader = {
-                area = engineering
-                has_level > 4
-                OR = {
-                    has_trait = "leader_trait_expertise_particles"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-    }
-
-    ai_weight = {
-        modifier = {
-            factor = 0
-            research_leader = {
-                area = engineering
-                has_level < 3
-            }
-        }
-        modifier = {
-            factor = 0.5
-            research_leader = {
-                area = engineering
-                NOR = {
-                    has_trait = "leader_trait_expertise_particles"
-                    has_trait = "leader_trait_scientist_chosen"
-                    has_trait = "leader_trait_curator"
-                }
-            }
-        }
-    }
-}
-
-tech_elerium_mining_1 = {
-    # Unlocks "Elerium Factory I" building
+tech_tiberium_mining_1 = {
+    # Unlocks "Tiberium Factory I" building
 
     cost = @technology_extralow_cost
     area = engineering
@@ -284,14 +11,15 @@ tech_elerium_mining_1 = {
     is_reverse_engineerable = no
     category = { materials }
     prerequisites = {
-        "tech_mine_elerium"
+        "tech_mine_tiberium"
+        "tech_space_mining_1"
     }
     weight = @tier1weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_elerium_mining_1_title"
-            desc = "tech_elerium_mining_1_desc"
+            title = "tech_tiberium_mining_1_title"
+            desc = "tech_tiberium_mining_1_desc"
         }
     }
 
@@ -303,9 +31,9 @@ tech_elerium_mining_1 = {
     }
 
     modifier = {
-        planet_jobs_elerium_produces_mult = 0.2
-        planet_miners_elerium_produces_mult = 0.2
-        country_elerium_produces_mult = 0.05
+        planet_jobs_tiberium_produces_mult = 0.2
+        planet_miners_tiberium_produces_mult = 0.2
+        country_tiberium_produces_mult = 0.05
     }
 
     weight_modifier = {
@@ -327,21 +55,21 @@ tech_elerium_mining_1 = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_elerium_deposit = yes
+                    has_tiberium_deposit = yes
                 }
             }
         }
         modifier = {
             factor = 0.5
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 500
             }
         }
         modifier = {
             factor = 2
             has_monthly_income = {
-               resource = elerium
+               resource = tiberium
                value < 3
             }
         }
@@ -410,22 +138,22 @@ tech_elerium_mining_1 = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_elerium_deposit = yes
+                    has_tiberium_deposit = yes
                 }
             }
         }
         modifier = {
             factor = 0.5
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 500
             }
         }
     }
 }
 
-tech_elerium_mining_2 = {
-    # Unlocks "Elerium Factory II" building
+tech_tiberium_mining_2 = {
+    # Unlocks "Tiberium Factory II" building
 
     cost = @technology_low_cost
     area = engineering
@@ -435,14 +163,15 @@ tech_elerium_mining_2 = {
     is_reverse_engineerable = no
     category = { materials }
     prerequisites = {
-        "tech_elerium_mining_1"
+        "tech_tiberium_mining_1"
+        "tech_space_mining_2"
     }
     weight = @tier2weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_elerium_mining_2_title"
-            desc = "tech_elerium_mining_2_desc"
+            title = "tech_tiberium_mining_2_title"
+            desc = "tech_tiberium_mining_2_desc"
         }
     }
 
@@ -454,9 +183,9 @@ tech_elerium_mining_2 = {
     }
 
     modifier = {
-        planet_jobs_elerium_produces_mult = 0.2
-        planet_miners_elerium_produces_mult = 0.2
-        country_elerium_produces_mult = 0.05
+        planet_jobs_tiberium_produces_mult = 0.2
+        planet_miners_tiberium_produces_mult = 0.2
+        country_tiberium_produces_mult = 0.05
     }
 
     weight_modifier = {
@@ -479,28 +208,28 @@ tech_elerium_mining_2 = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_elerium_deposit = yes
+                    has_tiberium_deposit = yes
                 }
             }
         }
         modifier = {
             factor = 0
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 500
             }
         }
         modifier = {
             factor = 0.5
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 2000
             }
         }
         modifier = {
             factor = 1.75
             has_monthly_income = {
-               resource = elerium
+               resource = tiberium
                value < 6
             }
         }
@@ -558,29 +287,29 @@ tech_elerium_mining_2 = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_elerium_deposit = yes
+                    has_tiberium_deposit = yes
                 }
             }
         }
         modifier = {
             factor = 0
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 500
             }
         }
         modifier = {
             factor = 0.5
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 2000
             }
         }
     }
 }
 
-tech_elerium_mining_3 = {
-    # Unlocks "Elerium Factory III" building
+tech_tiberium_mining_3 = {
+    # Unlocks "Tiberium Factory III" building
 
     cost = @technology_medium_cost
     area = engineering
@@ -590,14 +319,15 @@ tech_elerium_mining_3 = {
     is_reverse_engineerable = no
     category = { materials }
     prerequisites = {
-        "tech_elerium_mining_2"
+        "tech_tiberium_mining_2"
+        "tech_space_mining_3"
     }
     weight = @tier3weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_elerium_mining_3_title"
-            desc = "tech_elerium_mining_3_desc"
+            title = "tech_tiberium_mining_3_title"
+            desc = "tech_tiberium_mining_3_desc"
         }
     }
 
@@ -609,9 +339,9 @@ tech_elerium_mining_3 = {
     }
 
     modifier = {
-        planet_jobs_elerium_produces_mult = 0.2
-        planet_miners_elerium_produces_mult = 0.2
-        country_elerium_produces_mult = 0.05
+        planet_jobs_tiberium_produces_mult = 0.2
+        planet_miners_tiberium_produces_mult = 0.2
+        country_tiberium_produces_mult = 0.05
     }
 
     weight_modifier = {
@@ -633,28 +363,28 @@ tech_elerium_mining_3 = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_elerium_deposit = yes
+                    has_tiberium_deposit = yes
                 }
             }
         }
         modifier = {
             factor = 0
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 1000
             }
         }
         modifier = {
             factor = 0.5
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 4000
             }
         }
         modifier = {
             factor = 1.5
             has_monthly_income = {
-               resource = elerium
+               resource = tiberium
                value < 11
             }
         }
@@ -721,21 +451,21 @@ tech_elerium_mining_3 = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_elerium_deposit = yes
+                    has_tiberium_deposit = yes
                 }
             }
         }
         modifier = {
             factor = 0
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 1000
             }
         }
         modifier = {
             factor = 0.5
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 4000
             }
         }
@@ -760,8 +490,8 @@ tech_elerium_mining_3 = {
     }
 }
 
-tech_elerium_mining_4 = {
-    # Unlocks "Elerium Factory IV" building
+tech_tiberium_mining_4 = {
+    # Unlocks "Tiberium Factory IV" building
 
     cost = @technology_high_cost
     area = engineering
@@ -771,14 +501,15 @@ tech_elerium_mining_4 = {
     is_reverse_engineerable = no
     category = { materials }
     prerequisites = {
-        "tech_elerium_mining_3"
+        "tech_tiberium_mining_3"
+        "tech_space_mining_4"
     }
     weight = @tier4weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_elerium_mining_4_title"
-            desc = "tech_elerium_mining_4_desc"
+            title = "tech_tiberium_mining_4_title"
+            desc = "tech_tiberium_mining_4_desc"
         }
     }
 
@@ -790,9 +521,9 @@ tech_elerium_mining_4 = {
     }
 
     modifier = {
-        planet_jobs_elerium_produces_mult = 0.2
-        planet_miners_elerium_produces_mult = 0.2
-        country_elerium_produces_mult = 0.05
+        planet_jobs_tiberium_produces_mult = 0.2
+        planet_miners_tiberium_produces_mult = 0.2
+        country_tiberium_produces_mult = 0.05
     }
 
     weight_modifier = {
@@ -806,28 +537,28 @@ tech_elerium_mining_4 = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_elerium_deposit = yes
+                    has_tiberium_deposit = yes
                 }
             }
         }
         modifier = {
             factor = 0
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 2000
             }
         }
         modifier = {
             factor = 0.5
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 8000
             }
         }
         modifier = {
             factor = 1.25
             has_monthly_income = {
-               resource = elerium
+               resource = tiberium
                value < 16
             }
         }
@@ -874,21 +605,21 @@ tech_elerium_mining_4 = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_elerium_deposit = yes
+                    has_tiberium_deposit = yes
                 }
             }
         }
         modifier = {
             factor = 0
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 2000
             }
         }
         modifier = {
             factor = 0.5
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 8000
             }
         }
@@ -913,8 +644,8 @@ tech_elerium_mining_4 = {
     }
 }
 
-tech_elerium_mining_5 = {
-    # Unlocks "Elerium Factory V" building
+tech_tiberium_mining_5 = {
+    # Unlocks "Tiberium Factory V" building
 
     cost = @technology_ultrahigh_cost
     area = engineering
@@ -924,14 +655,15 @@ tech_elerium_mining_5 = {
     is_reverse_engineerable = no
     category = { materials }
     prerequisites = {
-        "tech_elerium_mining_4"
+        "tech_tiberium_mining_4"
+        "tech_space_mining_5"
     }
     weight = @tier5weight2
 
     prereqfor_desc = {
         feature = {
-            title = "tech_elerium_mining_5_title"
-            desc = "tech_elerium_mining_5_desc"
+            title = "tech_tiberium_mining_5_title"
+            desc = "tech_tiberium_mining_5_desc"
         }
     }
 
@@ -943,9 +675,9 @@ tech_elerium_mining_5 = {
     }
 
     modifier = {
-        planet_jobs_elerium_produces_mult = 0.2
-        planet_miners_elerium_produces_mult = 0.2
-        country_elerium_produces_mult = 0.05
+        planet_jobs_tiberium_produces_mult = 0.2
+        planet_miners_tiberium_produces_mult = 0.2
+        country_tiberium_produces_mult = 0.05
     }
 
     weight_modifier = {
@@ -965,21 +697,21 @@ tech_elerium_mining_5 = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_elerium_deposit = yes
+                    has_tiberium_deposit = yes
                 }
             }
         }
         modifier = {
             factor = 0
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 4000
             }
         }
         modifier = {
             factor = 0.5
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 15000
             }
         }
@@ -1020,21 +752,21 @@ tech_elerium_mining_5 = {
             factor = 0
             NOT = {
                 any_owned_planet = {
-                    has_elerium_deposit = yes
+                    has_tiberium_deposit = yes
                 }
             }
         }
         modifier = {
             factor = 0
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 4000
             }
         }
         modifier = {
             factor = 0.5
             resource_stockpile_compare = {
-                resource = elerium
+                resource = tiberium
                 value < 15000
             }
         }

@@ -698,6 +698,754 @@ d_ancient_pillars = {
 
 ### Strategic Resource Deposits
 
+d_sr_mithril_deposit = {
+    icon = "d_sr_mithril_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_mithril_harvester_max = 1
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_mithril_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_mithril_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_orihalk_deposit = {
+    icon = "d_sr_orihalk_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_orihalk_harvester_max = 1
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_orihalk_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_orihalk_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_yuranic_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_yuranic_harvester_max = 1
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_yuranic_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_yuranic_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_adamantium_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_adamantium_harvester_max = 1
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_adamantium_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_adamantium_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_vibranium_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_vibranium_harvester_max = 1
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_vibranium_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_vibranium_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_cobaltium_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_cobaltium_harvester_max = 1
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_cobaltium_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_cobaltium_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_itildeen_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_itildeen_harvester_max = 1
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_itildeen_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_itildeen_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+}
+
+d_sr_satramene_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_satramene_harvester_max = 1
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_satramene_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_satramene_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+}
+
+d_sr_lirium_deposit = {
+    icon = "d_sr_lirium_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_lirium_harvester_max = 1
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_lirium_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_lirium_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_nevarrit_deposit = {
+    icon = "d_sr_nevarrit_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_nevarrit_harvester_max = 1
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_nevarrit_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_nevarrit_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_thiotimoline_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_thiotimoline_harvester_max = 1
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_thiotimoline_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_thiotimoline_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_unobtanium_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_unobtanium_harvester_max = 1
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_unobtanium_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_unobtanium_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_stalgrim_deposit = {
+    icon = "d_sr_stalgrim_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_stalgrim_harvester_max = 1
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_stalgrim_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_stalgrim_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_tiberium_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_tiberium_harvester_max = 1
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_tiberium_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_tiberium_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2.5
+            solar_system = {
+                has_distar = yes
+            }
+        }
+        modifier = {
+            factor = 1.5
+            solar_system = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+}
+
 d_sr_elerium_deposit = {
     icon = "d_sr_elerium_deposit"
 
@@ -743,9 +1491,510 @@ d_sr_elerium_deposit = {
             }
         }
         modifier = {
-            factor = 1.15
+            factor = 1.5
             solar_system = {
                 is_inside_nebula = yes
+            }
+        }
+        modifier = {
+            factor = 1.5
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_gravitoid_deposit = {
+    icon = "d_sr_gravitoid_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_gravitoid_harvester_max = 1
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_gravitoid_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_gravitoid_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                is_inside_nebula = yes
+            }
+        }
+        modifier = {
+            factor = 3
+            solar_system = {
+                is_star_class = "pc_m_giant_star"
+            }
+        }
+    }
+}
+
+d_sr_tylium_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_tylium_harvester_max = 1
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_tylium_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_tylium_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            solar_system = {
+                is_inside_nebula = yes
+            }
+        }
+        modifier = {
+            factor = 1.5
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_chalcolivan_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_chalcolivan_harvester_max = 1
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_chalcolivan_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_chalcolivan_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_terrigen_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_terrigen_harvester_max = 1
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_terrigen_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_terrigen_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            solar_system = {
+                is_inside_nebula = yes
+            }
+        }
+        modifier = {
+            factor = 1.5
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_corenite_deposit = {
+    icon = "d_sr_corenite_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_corenite_harvester_max = 1
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_corenite_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_corenite_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
+            }
+        }
+    }
+}
+
+d_sr_energon_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_energon_harvester_max = 1
+        district_scientific_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_energon_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_energon_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            solar_system = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+}
+
+d_sr_engos_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_engos_harvester_max = 1
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_engos_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_engos_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+}
+
+d_sr_helium_deposit = {
+    icon = "d_undefined_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_helium_harvester_max = 1
+        district_manufacturing_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_helium_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_helium_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+}
+
+d_sr_kryptonite_deposit = {
+    icon = "d_sr_kryptonite_deposit"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_resources
+
+    use_for_min_max_adjustments = no
+    should_swap_deposit_on_terraforming = no
+
+    planet_modifier = {
+        building_kryptonite_harvester_max = 1
+        district_industrial_complex_max = 1
+    }
+
+    potential = {
+        planet_size >= 10
+        OR = {
+            can_have_habitable_deposits = yes
+            can_have_extraterrestrial_deposits = yes
+        }
+    }
+
+    drop_weight = {
+        weight = @deposit_low_drop_weight
+
+        modifier = {
+            factor = 1.75
+            solar_system = {
+                any_system_planet = {
+                    NOT = { is_same_value = prevprev }
+                    has_kryptonite_resource = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            solar_system = {
+                any_neighbor_system = {
+                    any_system_planet = {
+                        has_kryptonite_resource = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            solar_system = {
+                has_distar = yes
             }
         }
     }

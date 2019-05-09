@@ -1336,6 +1336,1224 @@ special_project = {
         if = {
             limit = {
                 from = {
+                    has_mithril_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_mithril_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_mithril_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_mithril_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_mithril_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_mithril_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_mithril_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_mithril_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_mithril_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_mithril_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_mithril_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = mithril
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_orihalk_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_orihalk_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_orihalk_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_orihalk_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_orihalk_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_orihalk_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_orihalk_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_orihalk_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_orihalk_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_orihalk_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_orihalk_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = orihalk
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_yuranic_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_yuranic_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_yuranic_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_yuranic_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_yuranic_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_yuranic_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_yuranic_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_yuranic_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_yuranic_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_yuranic_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_yuranic_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = yuranic
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_adamantium_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_adamantium_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_adamantium_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_adamantium_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_adamantium_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_adamantium_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_adamantium_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_adamantium_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_adamantium_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_adamantium_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_adamantium_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = adamantium
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_vibranium_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_vibranium_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_vibranium_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_vibranium_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_vibranium_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_vibranium_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_vibranium_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_vibranium_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_vibranium_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_vibranium_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_vibranium_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = vibranium
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_cobaltium_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_cobaltium_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_cobaltium_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_cobaltium_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_cobaltium_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_cobaltium_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_cobaltium_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_cobaltium_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_cobaltium_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_cobaltium_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_cobaltium_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = cobaltium
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_itildeen_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_itildeen_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_itildeen_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_itildeen_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_itildeen_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_itildeen_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_itildeen_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_itildeen_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_itildeen_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_itildeen_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_itildeen_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = itildeen
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_satramene_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_satramene_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_satramene_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_satramene_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_satramene_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_satramene_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_satramene_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_satramene_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_satramene_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_satramene_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_satramene_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = satramene
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_lirium_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_lirium_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_lirium_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_lirium_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_lirium_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_lirium_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_lirium_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_lirium_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_lirium_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_lirium_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_lirium_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = lirium
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_nevarrit_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_nevarrit_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_nevarrit_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_nevarrit_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_nevarrit_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_nevarrit_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_nevarrit_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_nevarrit_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_nevarrit_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_nevarrit_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_nevarrit_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = nevarrit
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_thiotimoline_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_thiotimoline_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_thiotimoline_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_thiotimoline_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_thiotimoline_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_thiotimoline_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_thiotimoline_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_thiotimoline_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_thiotimoline_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_thiotimoline_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_thiotimoline_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = thiotimoline
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_unobtanium_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_unobtanium_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_unobtanium_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_unobtanium_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_unobtanium_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_unobtanium_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_unobtanium_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_unobtanium_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_unobtanium_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_unobtanium_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_unobtanium_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = unobtanium
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_stalgrim_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_stalgrim_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_stalgrim_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_stalgrim_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_stalgrim_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_stalgrim_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_stalgrim_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_stalgrim_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_stalgrim_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_stalgrim_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_stalgrim_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = stalgrim
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_tiberium_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_tiberium_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_tiberium_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_tiberium_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_tiberium_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_tiberium_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_tiberium_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_tiberium_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_tiberium_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_tiberium_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_tiberium_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = tiberium
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
                     has_elerium_resource = yes
                 }
             }
@@ -1413,6 +2631,789 @@ special_project = {
                 owner = {
                     add_monthly_resource_mult = {
                         resource = elerium
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_gravitoid_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_gravitoid_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_gravitoid_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_gravitoid_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_gravitoid_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_gravitoid_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_gravitoid_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_gravitoid_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_gravitoid_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_gravitoid_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_gravitoid_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = gravitoid
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_tylium_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_tylium_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_tylium_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_tylium_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_tylium_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_tylium_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_tylium_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_tylium_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_tylium_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_tylium_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_tylium_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = tylium
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_chalcolivan_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_chalcolivan_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_chalcolivan_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_chalcolivan_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_chalcolivan_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_chalcolivan_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_chalcolivan_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_chalcolivan_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_chalcolivan_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_chalcolivan_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_chalcolivan_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = chalcolivan
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_terrigen_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_terrigen_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_terrigen_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_terrigen_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_terrigen_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_terrigen_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_terrigen_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_terrigen_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_terrigen_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_terrigen_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_terrigen_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = terrigen
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_corenite_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_corenite_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_corenite_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_corenite_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_corenite_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_corenite_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_corenite_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_corenite_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_corenite_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_corenite_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_corenite_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = corenite
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_energon_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_energon_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_energon_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_energon_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_energon_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_energon_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_energon_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_energon_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_energon_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_energon_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_energon_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = energon
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_engos_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_engos_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_engos_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_engos_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_engos_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_engos_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_engos_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_engos_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_engos_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_engos_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_engos_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = engos
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_helium_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_helium_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_helium_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_helium_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_helium_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_helium_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_helium_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_helium_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_helium_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_helium_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_helium_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = helium
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_kryptonite_resource = yes
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_kryptonite_mining_1"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_kryptonite_mining_1"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_kryptonite_mining_2"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_kryptonite_mining_2"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_kryptonite_mining_3"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_kryptonite_mining_3"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_kryptonite_mining_4"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_kryptonite_mining_4"
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    owner = {
+                        NOT = {
+                            has_technology = "tech_kryptonite_mining_5"
+                        }
+                    }
+                }
+                owner = {
+                    give_technology = {
+                        tech = "tech_kryptonite_mining_5"
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_monthly_resource_mult = {
+                        resource = kryptonite
                         value = @tier1materialreward
                         min = @tier1materialmin
                         max = @tier1materialmax
