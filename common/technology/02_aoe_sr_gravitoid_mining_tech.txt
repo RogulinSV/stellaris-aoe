@@ -3,6 +3,7 @@
 tech_gravitoid_mining_1 = {
     # Unlocks "Gravitoid Factory I" building
 
+    icon = "tech_sr_gravitoid_mining_1"
     cost = @technology_extralow_cost
     area = engineering
     tier = 1
@@ -155,6 +156,7 @@ tech_gravitoid_mining_1 = {
 tech_gravitoid_mining_2 = {
     # Unlocks "Gravitoid Factory II" building
 
+    icon = "tech_sr_gravitoid_mining_2"
     cost = @technology_low_cost
     area = engineering
     tier = 2
@@ -311,6 +313,7 @@ tech_gravitoid_mining_2 = {
 tech_gravitoid_mining_3 = {
     # Unlocks "Gravitoid Factory III" building
 
+    icon = "tech_sr_gravitoid_mining_3"
     cost = @technology_medium_cost
     area = engineering
     tier = 3
@@ -493,6 +496,7 @@ tech_gravitoid_mining_3 = {
 tech_gravitoid_mining_4 = {
     # Unlocks "Gravitoid Factory IV" building
 
+    icon = "tech_sr_gravitoid_mining_4"
     cost = @technology_high_cost
     area = engineering
     tier = 4
@@ -647,6 +651,7 @@ tech_gravitoid_mining_4 = {
 tech_gravitoid_mining_5 = {
     # Unlocks "Gravitoid Factory V" building
 
+    icon = "tech_sr_gravitoid_mining_5"
     cost = @technology_ultrahigh_cost
     area = engineering
     tier = 5
