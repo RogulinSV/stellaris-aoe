@@ -147,6 +147,7 @@ country_event = {
             capital_scope = {
                 change_pc = pc_gaia
                 effects_set_planet_size_50 = yes
+                add_deposit = "d_sr_elerium_deposit"
             }
         }
     }
@@ -267,6 +268,7 @@ country_event = {
         custom_tooltip = aoe_begin_actions.13.b.tooltip
         hidden_effect = {
             set_country_flag = "flags_aoe_science_ascension"
+            give_technology = { tech = "tech_mine_elerium" }
         }
     }
     option = {
