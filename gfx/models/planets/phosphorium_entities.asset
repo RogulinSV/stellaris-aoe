@@ -1,0 +1,197 @@
+### Uninhabitable Planets
+
+entity = {
+    name = "phosphorium_uninhabitable_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "phosphorium_05_diffuse.dds"
+        texture_normal = "phosphorium_05_normal.dds"
+        texture_specular = "phosphorium_05_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "phosphorium_clouds_01_diffuse.dds"
+        texture_normal = "phosphorium_clouds_01_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "phosphorium_clouds_shadow_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "phosphorium_uninhabitable_planet_02_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "phosphorium_06_diffuse.dds"
+        texture_normal = "phosphorium_06_normal.dds"
+        texture_specular = "phosphorium_06_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "phosphorium_clouds_01_diffuse.dds"
+        texture_normal = "phosphorium_clouds_01_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "phosphorium_clouds_shadow_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "phosphorium_uninhabitable_planet_03_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "phosphorium_07_diffuse.dds"
+        texture_normal = "phosphorium_07_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Gas Giants
+
+entity = {
+    name = "phosphorium_gas_giant_01_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "phosphorium_gas_giant_01_diffuse.dds"
+        texture_normal = "gas_giant_01_normal.dds"
+        texture_specular = "gas_giant_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "phosphorium_gas_giant_02_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "phosphorium_gas_giant_02_diffuse.dds"
+        texture_normal = "gas_giant_01_normal.dds"
+        texture_specular = "gas_giant_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "phosphorium_gas_giant_03_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "phosphorium_gas_giant_03_diffuse.dds"
+        texture_normal = "gas_giant_01_normal.dds"
+        texture_specular = "gas_giant_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "phosphorium_gas_giant_04_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "phosphorium_gas_giant_04_diffuse.dds"
+        texture_normal = "gas_giant_01_normal.dds"
+        texture_specular = "gas_giant_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+### Habitable Planets
+
+entity = {
+    name = "phosphorium_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "phosphorium_01_diffuse.dds"
+        texture_normal = "tropical_01_normal.dds"
+        texture_specular = "tropical_01_spec.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "phosphorium_clouds_01_diffuse.dds"
+        texture_normal = "phosphorium_clouds_01_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "phosphorium_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}

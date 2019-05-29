@@ -1,0 +1,353 @@
+### Uninhabitable Planets
+
+entity = {
+    name = "sulphureum_uninhabitable_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_05_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_01_diffuse.dds"
+        texture_normal = "sulphureum_clouds_01_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "sulphureum_uninhabitable_planet_02_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_06_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "sulphureum_uninhabitable_planet_03_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_07_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "sulphureum_uninhabitable_planet_04_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_08_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_02_diffuse.dds"
+        texture_normal = "sulphureum_clouds_02_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_shadow_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Gas Giants
+
+entity = {
+    name = "sulphureum_gas_giant_01_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_gas_giant_01_diffuse.dds"
+        texture_normal = "gas_giant_01_normal.dds"
+        texture_specular = "gas_giant_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "sulphureum_gas_giant_02_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_gas_giant_02_diffuse.dds"
+        texture_normal = "gas_giant_01_normal.dds"
+        texture_specular = "gas_giant_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "sulphureum_gas_giant_03_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_gas_giant_03_diffuse.dds"
+        texture_normal = "sulphureum_gas_giant_03_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "sulphureum_gas_giant_04_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_gas_giant_04_diffuse.dds"
+        texture_normal = "sulphureum_gas_giant_04_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+### Habitable Planets
+
+entity = {
+    name = "sulphureum_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_01_diffuse.dds"
+        texture_normal = "continental_02_normals.dds"
+        texture_specular = "continental_02_spec.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_01_diffuse.dds"
+        texture_normal = "sulphureum_clouds_01_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "sulphureum_planet_02_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_02_diffuse.dds"
+        texture_normal = "sulphureum_02_normal.dds"
+        texture_specular = "sulphureum_02_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_02_diffuse.dds"
+        texture_normal = "sulphureum_clouds_02_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_shadow_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "sulphureum_planet_03_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_03_diffuse.dds"
+        texture_normal = "sulphureum_03_normal.dds"
+        texture_specular = "sulphureum_03_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_02_diffuse.dds"
+        texture_normal = "sulphureum_clouds_02_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_shadow_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "sulphureum_planet_04_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "sulphureum_04_diffuse.dds"
+        texture_normal = "sulphureum_04_normal.dds"
+        texture_specular = "sulphureum_04_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_01_diffuse.dds"
+        texture_normal = "sulphureum_clouds_01_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "sulphureum_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}

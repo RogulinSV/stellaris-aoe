@@ -1,0 +1,287 @@
+### Uninhabitable Planets
+
+entity = {
+    name = "ammonium_uninhabitable_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "ammonium_05_diffuse.dds"
+        texture_normal = "ammonium_05_normal.dds"
+        texture_specular = "ammonium_05_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "ammonium_clouds_02_diffuse.dds"
+        texture_normal = "ammonium_clouds_02_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "ammonium_clouds_shadow_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_a" } }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_b" } }
+    }
+}
+
+entity = {
+    name = "ammonium_uninhabitable_planet_02_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "ammonium_06_diffuse.dds"
+        texture_normal = "ammonium_06_normal.dds"
+        texture_specular = "ammonium_06_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_a" } }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_b" } }
+    }
+}
+
+entity = {
+    name = "ammonium_uninhabitable_planet_03_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "ammonium_07_diffuse.dds"
+        texture_normal = "ammonium_07_normal.dds"
+        texture_specular = "ammonium_07_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_a" } }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_b" } }
+    }
+}
+
+entity = {
+    name = "ammonium_uninhabitable_planet_04_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "ammonium_08_diffuse.dds"
+        texture_normal = "ammonium_08_normal.dds"
+        texture_specular = "ammonium_08_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_a" } }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_b" } }
+    }
+}
+
+entity = {
+    name = "ammonium_uninhabitable_planet_05_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "ammonium_09_diffuse.dds"
+        texture_normal = "ammonium_09_normal.dds"
+        texture_specular = "ammonium_09_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_a" } }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_b" } }
+    }
+}
+
+### Gas Giants
+
+entity = {
+    name = "ammonium_gas_giant_01_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "ammonium_gas_giant_01_diffuse.dds"
+        texture_normal = "ammonium_gas_giant_01_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "ammonium_gas_giant_02_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "ammonium_gas_giant_02_diffuse.dds"
+        texture_normal = "ammonium_gas_giant_02_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "ammonium_gas_giant_03_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "ammonium_gas_giant_03_diffuse.dds"
+        texture_normal = "ammonium_gas_giant_03_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "ammonium_gas_giant_04_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "ammonium_gas_giant_04_diffuse.dds"
+        texture_normal = "ammonium_gas_giant_04_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "ammonium_gas_giant_05_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "ammonium_gas_giant_05_diffuse.dds"
+        texture_normal = "ammonium_gas_giant_05_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+### Habitable Planets
+
+entity = {
+    name = "ammonium_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "ammonium_01_diffuse.dds"
+        texture_normal = "ammonium_01_normals.dds"
+        texture_specular = "ammonium_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "ammonium_clouds_01_diffuse.dds"
+        texture_normal = "ammonium_clouds_01_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "ammonium_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}

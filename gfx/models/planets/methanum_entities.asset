@@ -1,0 +1,325 @@
+### Uninhabitable Planets
+
+entity = {
+    name = "methanum_uninhabitable_planet_01_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_05_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "methanum_uninhabitable_planet_02_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_06_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "methanum_uninhabitable_planet_03_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_07_diffuse.dds"
+        texture_normal = "methanum_07_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "methanum_uninhabitable_planet_04_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_08_diffuse.dds"
+        texture_normal = "methanum_08_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "methanum_uninhabitable_planet_05_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_09_diffuse.dds"
+        texture_normal = "methanum_09_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "methanum_uninhabitable_planet_06_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_10_diffuse.dds"
+        texture_normal = "methanum_10_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "methanum_uninhabitable_planet_07_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_11_diffuse.dds"
+        texture_normal = "methanum_11_normals.dds"
+        texture_specular = "methanum_11_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "methanum_clouds_01_diffuse.dds"
+        texture_normal = "methanum_clouds_01_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "methanum_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Gas Giants
+
+entity = {
+    name = "methanum_gas_giant_01_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_gas_giant_01_diffuse.dds"
+        texture_normal = "methanum_gas_giant_01_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "methanum_gas_giant_02_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_gas_giant_02_diffuse.dds"
+        texture_normal = "methanum_gas_giant_02_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "methanum_gas_giant_03_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_gas_giant_03_diffuse.dds"
+        texture_normal = "methanum_gas_giant_03_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "methanum_gas_giant_04_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_gas_giant_04_diffuse.dds"
+        texture_normal = "methanum_gas_giant_04_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "methanum_gas_giant_05_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_gas_giant_05_diffuse.dds"
+        texture_normal = "methanum_gas_giant_05_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+### Habitable Planets
+
+entity = {
+    name = "methanum_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_01_diffuse.dds"
+        texture_normal = "methanum_01_normals.dds"
+        texture_specular = "methanum_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "methanum_clouds_01_diffuse.dds"
+        texture_normal = "methanum_clouds_01_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "methanum_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "methanum_planet_02_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "methanum_02_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "methanum_clouds_01_diffuse.dds"
+        texture_normal = "methanum_clouds_01_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "methanum_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}

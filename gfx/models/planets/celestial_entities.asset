@@ -1,0 +1,4227 @@
+### Uninhabitable Molten Planets
+
+entity = {
+    name = "celestial_molten_planet_01_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_molten_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_molten_planet_02_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_molten_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_molten_planet_03_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_molten_03_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_molten_planet_04_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_molten_04_diffuse.dds"
+        texture_normal = "celestial_molten_04_normal.dds"
+        texture_specular = "celestial_molten_04_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_molten_planet_05_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_molten_05_diffuse.dds"
+        texture_normal = "celestial_molten_05_normal.dds"
+        texture_specular = "celestial_molten_05_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_molten_planet_06_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_molten_06_diffuse.dds"
+        texture_normal = "celestial_molten_06_normal.dds"
+        texture_specular = "celestial_molten_06_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_molten_planet_07_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_molten_07_diffuse.dds"
+        texture_normal = "celestial_molten_07_normal.dds"
+        texture_specular = "celestial_molten_07_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_molten_planet_08_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_molten_08_diffuse.dds"
+        texture_normal = "celestial_molten_08_normal.dds"
+        texture_specular = "celestial_molten_08_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Uninhabitable Hot Planets
+
+entity = {
+    name = "celestial_hot_planet_01_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_hot_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_hot_planet_02_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_hot_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_hot_planet_03_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_hot_03_diffuse.dds"
+        texture_normal = "celestial_hot_03_normal.dds"
+        texture_specular = "celestial_hot_03_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_hot_planet_04_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_hot_04_diffuse.dds"
+        texture_normal = "celestial_hot_04_normal.dds"
+        texture_specular = "celestial_hot_04_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_hot_planet_05_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_hot_05_diffuse.dds"
+        texture_normal = "celestial_hot_05_normal.dds"
+        texture_specular = "celestial_hot_05_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_hot_planet_06_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_hot_06_diffuse.dds"
+        texture_normal = "celestial_hot_06_normal.dds"
+        texture_specular = "celestial_hot_06_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_hot_planet_07_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_hot_07_diffuse.dds"
+        texture_normal = "celestial_hot_07_normal.dds"
+        texture_specular = "celestial_hot_07_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_hot_planet_08_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_hot_08_diffuse.dds"
+        texture_normal = "celestial_hot_08_normal.dds"
+        texture_specular = "celestial_hot_08_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_hot_planet_09_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_hot_09_diffuse.dds"
+        texture_normal = "celestial_hot_09_normal.dds"
+        texture_specular = "celestial_hot_09_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Uninhabitable Wet Planets
+
+entity = {
+    name = "celestial_wet_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_01_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_01_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_01_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_02_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_02_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_02_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_02_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_03_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_03_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_03_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_03_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_03_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_04_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_04_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_04_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_04_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_04_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_05_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_05_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_05_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_05_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_05_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_06_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_06_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_06_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_06_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_06_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_07_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_07_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_07_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_07_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_07_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_08_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_08_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_08_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_08_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_08_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_09_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_09_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_09_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_09_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_09_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_10_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_10_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_10_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_10_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_10_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_11_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_11_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_11_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_11_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_11_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_12_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_12_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_12_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_12_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_12_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_13_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_13_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_13_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_13_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_13_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_wet_planet_14_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_wet_14_diffuse.dds"
+        texture_normal = "default_01_normal.dds"
+        texture_specular = "default_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_14_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_14_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_14_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Uninhabitable Barren Planets
+
+entity = {
+    name = "celestial_barren_planet_01_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_01_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_02_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_02_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_03_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_03_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_04_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_04_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_05_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_05_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_barren_1_diffuse.dds"
+        texture_normal = "poles_barren_1_normal.dds"
+        texture_specular = "poles_barren_1_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_06_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_06_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_07_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_07_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_08_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_08_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_09_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_09_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_10_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_10_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_barren_1_diffuse.dds"
+        texture_normal = "poles_barren_1_normal.dds"
+        texture_specular = "poles_barren_1_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_11_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_11_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_barren_1_diffuse.dds"
+        texture_normal = "poles_barren_1_normal.dds"
+        texture_specular = "poles_barren_1_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_12_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_12_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_13_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_13_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_14_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_14_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_barren_1_diffuse.dds"
+        texture_normal = "poles_barren_1_normal.dds"
+        texture_specular = "poles_barren_1_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_15_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_15_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_16_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_16_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_barren_1_diffuse.dds"
+        texture_normal = "poles_barren_1_normal.dds"
+        texture_specular = "poles_barren_1_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_17_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_17_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_18_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_18_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_19_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_19_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_20_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_20_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_21_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_21_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_22_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_22_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_23_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_23_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_24_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_24_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_barren_1_diffuse.dds"
+        texture_normal = "poles_barren_1_normal.dds"
+        texture_specular = "poles_barren_1_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_25_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_25_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_barren_planet_26_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_barren_26_diffuse.dds"
+        texture_normal = "barren_01_normal.dds"
+        texture_specular = "barren_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Uninhabitable Cold Planets
+
+entity = {
+    name = "celestial_cold_planet_01_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_01_diffuse.dds"
+        texture_normal = "celestial_cold_01_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_02_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_02_diffuse.dds"
+        texture_normal = "celestial_cold_02_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_03_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_03_diffuse.dds"
+        texture_normal = "celestial_cold_03_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_04_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_04_diffuse.dds"
+        texture_normal = "celestial_cold_04_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_05_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_05_diffuse.dds"
+        texture_normal = "celestial_cold_05_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_06_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_06_diffuse.dds"
+        texture_normal = "celestial_cold_06_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_07_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_07_diffuse.dds"
+        texture_normal = "celestial_cold_07_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_08_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_08_diffuse.dds"
+        texture_normal = "celestial_cold_08_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_09_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_09_diffuse.dds"
+        texture_normal = "celestial_cold_09_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_10_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_10_diffuse.dds"
+        texture_normal = "celestial_cold_10_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_11_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_11_diffuse.dds"
+        texture_normal = "celestial_cold_11_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_12_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_12_diffuse.dds"
+        texture_normal = "celestial_cold_12_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_13_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_13_diffuse.dds"
+        texture_normal = "celestial_cold_13_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_14_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_14_diffuse.dds"
+        texture_normal = "celestial_cold_14_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_15_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_15_diffuse.dds"
+        texture_normal = "celestial_cold_15_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_16_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_16_diffuse.dds"
+        texture_normal = "celestial_cold_16_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_17_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_17_diffuse.dds"
+        texture_normal = "celestial_cold_17_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_18_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_18_diffuse.dds"
+        texture_normal = "celestial_cold_18_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_19_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_19_diffuse.dds"
+        texture_normal = "celestial_cold_19_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_20_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_20_diffuse.dds"
+        texture_normal = "celestial_cold_20_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_21_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_21_diffuse.dds"
+        texture_normal = "celestial_cold_21_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_22_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_22_diffuse.dds"
+        texture_normal = "celestial_cold_22_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_23_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_23_diffuse.dds"
+        texture_normal = "celestial_cold_23_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_24_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_24_diffuse.dds"
+        texture_normal = "celestial_cold_24_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_25_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_25_diffuse.dds"
+        texture_normal = "celestial_cold_25_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_26_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_26_diffuse.dds"
+        texture_normal = "celestial_cold_26_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_27_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_27_diffuse.dds"
+        texture_normal = "celestial_cold_27_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_28_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_28_diffuse.dds"
+        texture_normal = "celestial_cold_28_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_29_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_29_diffuse.dds"
+        texture_normal = "celestial_cold_29_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_30_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_30_diffuse.dds"
+        texture_normal = "celestial_cold_30_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_31_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_31_diffuse.dds"
+        texture_normal = "celestial_cold_31_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_32_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_32_diffuse.dds"
+        texture_normal = "celestial_cold_32_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_33_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_33_diffuse.dds"
+        texture_normal = "celestial_cold_33_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_34_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_34_diffuse.dds"
+        texture_normal = "celestial_cold_34_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_35_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_35_diffuse.dds"
+        texture_normal = "celestial_cold_35_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_36_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_36_diffuse.dds"
+        texture_normal = "celestial_cold_36_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_37_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_37_diffuse.dds"
+        texture_normal = "celestial_cold_37_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_38_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_38_diffuse.dds"
+        texture_normal = "celestial_cold_38_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_39_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_39_diffuse.dds"
+        texture_normal = "celestial_cold_39_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_40_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_40_diffuse.dds"
+        texture_normal = "celestial_cold_40_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_41_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_41_diffuse.dds"
+        texture_normal = "celestial_cold_41_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_42_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_42_diffuse.dds"
+        texture_normal = "celestial_cold_42_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_43_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_43_diffuse.dds"
+        texture_normal = "celestial_cold_43_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_44_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_44_diffuse.dds"
+        texture_normal = "celestial_cold_44_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_45_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_45_diffuse.dds"
+        texture_normal = "celestial_cold_45_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_46_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_46_diffuse.dds"
+        texture_normal = "celestial_cold_46_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_47_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_47_diffuse.dds"
+        texture_normal = "celestial_cold_47_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_48_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_48_diffuse.dds"
+        texture_normal = "celestial_cold_48_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_49_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_49_diffuse.dds"
+        texture_normal = "celestial_cold_49_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_50_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_50_diffuse.dds"
+        texture_normal = "celestial_cold_50_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_51_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_51_diffuse.dds"
+        texture_normal = "celestial_cold_51_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_52_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_52_diffuse.dds"
+        texture_normal = "celestial_cold_52_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_53_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_53_diffuse.dds"
+        texture_normal = "celestial_cold_53_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_54_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_54_diffuse.dds"
+        texture_normal = "celestial_cold_54_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_55_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_55_diffuse.dds"
+        texture_normal = "celestial_cold_55_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_56_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_56_diffuse.dds"
+        texture_normal = "celestial_cold_56_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_57_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_57_diffuse.dds"
+        texture_normal = "celestial_cold_57_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_58_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_58_diffuse.dds"
+        texture_normal = "celestial_cold_58_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_59_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_59_diffuse.dds"
+        texture_normal = "celestial_cold_59_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_60_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_60_diffuse.dds"
+        texture_normal = "celestial_cold_60_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_61_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_61_diffuse.dds"
+        texture_normal = "celestial_cold_61_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_62_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_62_diffuse.dds"
+        texture_normal = "celestial_cold_62_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_63_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_63_diffuse.dds"
+        texture_normal = "celestial_cold_63_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_64_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_64_diffuse.dds"
+        texture_normal = "celestial_cold_64_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_65_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_65_diffuse.dds"
+        texture_normal = "celestial_cold_65_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_66_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_66_diffuse.dds"
+        texture_normal = "celestial_cold_66_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_67_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_67_diffuse.dds"
+        texture_normal = "celestial_cold_67_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_68_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_68_diffuse.dds"
+        texture_normal = "celestial_cold_68_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_69_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_69_diffuse.dds"
+        texture_normal = "celestial_cold_69_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_70_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_70_diffuse.dds"
+        texture_normal = "celestial_cold_70_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_71_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_71_diffuse.dds"
+        texture_normal = "celestial_cold_71_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_72_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_72_diffuse.dds"
+        texture_normal = "celestial_cold_72_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_73_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_73_diffuse.dds"
+        texture_normal = "celestial_cold_73_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_74_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_74_diffuse.dds"
+        texture_normal = "celestial_cold_74_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_75_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_75_diffuse.dds"
+        texture_normal = "celestial_cold_75_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_76_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_76_diffuse.dds"
+        texture_normal = "celestial_cold_76_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_cold_planet_77_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_cold_77_diffuse.dds"
+        texture_normal = "celestial_cold_77_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Uninhabitable Frozen Planets
+
+entity = {
+    name = "celestial_frozen_planet_01_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_01_diffuse.dds"
+        texture_normal = "celestial_frozen_01_normal.dds"
+        texture_specular = "celestial_frozen_01_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_01_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_01_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_02_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_02_diffuse.dds"
+        texture_normal = "celestial_frozen_02_normal.dds"
+        texture_specular = "celestial_frozen_02_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_03_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_03_diffuse.dds"
+        texture_normal = "celestial_frozen_03_normal.dds"
+        texture_specular = "celestial_frozen_03_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_04_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_04_diffuse.dds"
+        texture_normal = "celestial_frozen_04_normal.dds"
+        texture_specular = "celestial_frozen_04_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_02_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_02_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_05_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_05_diffuse.dds"
+        texture_normal = "celestial_frozen_05_normal.dds"
+        texture_specular = "celestial_frozen_05_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_03_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_03_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_03_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_06_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_06_diffuse.dds"
+        texture_normal = "celestial_frozen_06_normal.dds"
+        texture_specular = "celestial_frozen_06_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_07_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_07_diffuse.dds"
+        texture_normal = "celestial_frozen_07_normal.dds"
+        texture_specular = "celestial_frozen_07_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_04_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_04_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_04_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_08_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_08_diffuse.dds"
+        texture_normal = "celestial_frozen_08_normal.dds"
+        texture_specular = "celestial_frozen_08_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_09_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_09_diffuse.dds"
+        texture_normal = "celestial_frozen_09_normal.dds"
+        texture_specular = "celestial_frozen_09_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_10_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_10_diffuse.dds"
+        texture_normal = "celestial_frozen_10_normal.dds"
+        texture_specular = "celestial_frozen_10_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_05_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_05_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_05_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_11_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_11_diffuse.dds"
+        texture_normal = "celestial_frozen_11_normal.dds"
+        texture_specular = "celestial_frozen_11_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_12_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_12_diffuse.dds"
+        texture_normal = "celestial_frozen_12_normal.dds"
+        texture_specular = "celestial_frozen_12_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_06_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_06_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_06_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_13_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_13_diffuse.dds"
+        texture_normal = "celestial_frozen_13_normal.dds"
+        texture_specular = "celestial_frozen_13_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_14_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_14_diffuse.dds"
+        texture_normal = "celestial_frozen_14_normal.dds"
+        texture_specular = "celestial_frozen_14_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_15_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_15_diffuse.dds"
+        texture_normal = "celestial_frozen_15_normal.dds"
+        texture_specular = "celestial_frozen_15_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_07_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_07_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_07_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_16_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_16_diffuse.dds"
+        texture_normal = "celestial_frozen_16_normal.dds"
+        texture_specular = "celestial_frozen_16_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_17_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_17_diffuse.dds"
+        texture_normal = "celestial_frozen_17_normal.dds"
+        texture_specular = "celestial_frozen_17_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_18_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_18_diffuse.dds"
+        texture_normal = "celestial_frozen_18_normal.dds"
+        texture_specular = "celestial_frozen_18_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_01_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_01_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_19_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_19_diffuse.dds"
+        texture_normal = "celestial_frozen_19_normal.dds"
+        texture_specular = "celestial_frozen_19_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_02_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_02_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_20_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_20_diffuse.dds"
+        texture_normal = "celestial_frozen_20_normal.dds"
+        texture_specular = "celestial_frozen_20_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_21_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_21_diffuse.dds"
+        texture_normal = "celestial_frozen_21_normal.dds"
+        texture_specular = "celestial_frozen_21_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_22_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_22_diffuse.dds"
+        texture_normal = "celestial_frozen_22_normal.dds"
+        texture_specular = "celestial_frozen_22_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_23_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_23_diffuse.dds"
+        texture_normal = "celestial_frozen_23_normal.dds"
+        texture_specular = "celestial_frozen_23_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_24_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_24_diffuse.dds"
+        texture_normal = "celestial_frozen_24_normal.dds"
+        texture_specular = "celestial_frozen_24_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_25_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_25_diffuse.dds"
+        texture_normal = "celestial_frozen_25_normal.dds"
+        texture_specular = "celestial_frozen_25_specular.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_03_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_03_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_03_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_26_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_26_diffuse.dds"
+        texture_normal = "celestial_frozen_26_normal.dds"
+        texture_specular = "celestial_frozen_26_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_27_entity"
+    pdxmesh = "planet_non_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_27_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_28_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_28_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_01_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_01_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_01_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_29_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_29_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_02_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_02_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_02_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_30_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_30_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_03_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_03_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_03_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+entity = {
+    name = "celestial_frozen_planet_31_entity"
+    pdxmesh = "planet_clouded_mesh"
+
+    ##pole texture override
+    meshsettings = {
+        name = "polesShape"
+        texture_diffuse = "poles_1_diffuse.dds"
+        texture_normal = "poles_1_normal.dds"
+        texture_specular = "poles_1_specular.dds"
+    }
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_frozen_31_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_04_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_04_normal.dds"
+        texture_specular = "clouds_thin_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "celestial_wet_clouds_shadow_04_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+    }
+}
+
+### Gas Giants
+
+entity = {
+    name = "celestial_gas_giant_01_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_01_diffuse.dds"
+        texture_normal = "celestial_gas_giant_01_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_02_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_02_diffuse.dds"
+        texture_normal = "celestial_gas_giant_02_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_03_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_03_diffuse.dds"
+        texture_normal = "celestial_gas_giant_03_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_04_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_04_diffuse.dds"
+        texture_normal = "celestial_gas_giant_04_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_05_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_05_diffuse.dds"
+        texture_normal = "celestial_gas_giant_05_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_06_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_06_diffuse.dds"
+        texture_normal = "celestial_gas_giant_06_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_07_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_07_diffuse.dds"
+        texture_normal = "celestial_gas_giant_07_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_08_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_08_diffuse.dds"
+        texture_normal = "celestial_gas_giant_08_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_09_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_09_diffuse.dds"
+        texture_normal = "celestial_gas_giant_09_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_10_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_10_diffuse.dds"
+        texture_normal = "celestial_gas_giant_10_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_11_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_11_diffuse.dds"
+        texture_normal = "celestial_gas_giant_11_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_12_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_12_diffuse.dds"
+        texture_normal = "celestial_gas_giant_12_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_13_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_13_diffuse.dds"
+        texture_normal = "celestial_gas_giant_13_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_14_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_14_diffuse.dds"
+        texture_normal = "celestial_gas_giant_14_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_15_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_15_diffuse.dds"
+        texture_normal = "celestial_gas_giant_15_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_16_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_16_diffuse.dds"
+        texture_normal = "celestial_gas_giant_16_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_17_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_17_diffuse.dds"
+        texture_normal = "celestial_gas_giant_17_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_18_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_18_diffuse.dds"
+        texture_normal = "celestial_gas_giant_18_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_19_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_19_diffuse.dds"
+        texture_normal = "celestial_gas_giant_19_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_20_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_20_diffuse.dds"
+        texture_normal = "celestial_gas_giant_20_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_21_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_21_diffuse.dds"
+        texture_normal = "celestial_gas_giant_21_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_22_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_22_diffuse.dds"
+        texture_normal = "celestial_gas_giant_22_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_23_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_23_diffuse.dds"
+        texture_normal = "celestial_gas_giant_23_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_24_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_24_diffuse.dds"
+        texture_normal = "celestial_gas_giant_24_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_25_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_25_diffuse.dds"
+        texture_normal = "celestial_gas_giant_25_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_26_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_26_diffuse.dds"
+        texture_normal = "celestial_gas_giant_26_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_27_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_27_diffuse.dds"
+        texture_normal = "celestial_gas_giant_27_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_28_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_28_diffuse.dds"
+        texture_normal = "celestial_gas_giant_28_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_29_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_29_diffuse.dds"
+        texture_normal = "celestial_gas_giant_29_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_30_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_30_diffuse.dds"
+        texture_normal = "celestial_gas_giant_30_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_31_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_31_diffuse.dds"
+        texture_normal = "celestial_gas_giant_31_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_32_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_32_diffuse.dds"
+        texture_normal = "celestial_gas_giant_32_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_33_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_33_diffuse.dds"
+        texture_normal = "celestial_gas_giant_33_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_34_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_34_diffuse.dds"
+        texture_normal = "celestial_gas_giant_34_normal.dds"
+        texture_specular = "nospec.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
+
+entity = {
+    name = "celestial_gas_giant_35_entity"
+    pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "celestial_gas_giant_35_diffuse.dds"
+        texture_normal = "gas_giant_01_normal.dds"
+        texture_specular = "gas_giant_01_specular.dds"
+    }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+    }
+
+    scale = 1.15
+}
