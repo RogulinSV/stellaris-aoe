@@ -624,10 +624,18 @@ has_kryptonite_resource = {
 # Scope: planet
 is_extraterrestrial_planet = {
     OR = {
-        is_planet_class = pc_crystalline
-        is_planet_class = pc_metalline
-        is_planet_class = pc_methanum
-        is_planet_class = pc_barium
+        is_planet_class = "pc_crystalline"
+        is_planet_class = "pc_metalline"
+        is_planet_class = "pc_methanum"
+        is_planet_class = "pc_carbonium"
+        is_planet_class = "pc_nitrogenium"
+        is_planet_class = "pc_sulphureum"
+        is_planet_class = "pc_argonium"
+        is_planet_class = "pc_phosphorium"
+        is_planet_class = "pc_ammonium"
+        is_planet_class = "pc_mercurium"
+        is_planet_class = "pc_barium"
+        is_planet_class = "pc_chlorum"
     }
 }
 
@@ -644,30 +652,25 @@ is_colonizeable_planet = {
     OR = {
         habitable_planet = yes
         is_extraterrestrial_planet = yes
-        is_planet_class = pc_city
-        is_planet_class = pc_nuked
-        is_planet_class = pc_hive
-        is_planet_class = pc_machine
+        is_planet_class = "pc_city"
+        is_planet_class = "pc_nuked"
+        is_planet_class = "pc_hive"
+        is_planet_class = "pc_machine"
     }
 }
 
 # Scope: planet
 can_have_extraterrestrial_deposits = {
-    OR = {
-        is_planet_class = pc_crystalline
-        is_planet_class = pc_metalline
-        is_planet_class = pc_methanum
-        is_planet_class = pc_barium
-    }
+    is_extraterrestrial_planet = yes
 }
 
 # Scope: planet
 have_not_habitable_deposits = {
     OR = {
         habitable_structure = yes
-        is_planet_class = pc_city
-        is_planet_class = pc_hive
-        is_planet_class = pc_machine
+        is_planet_class = "pc_city"
+        is_planet_class = "pc_hive"
+        is_planet_class = "pc_machine"
     }
 }
 

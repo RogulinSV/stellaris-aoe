@@ -1,0 +1,749 @@
+### Habitable Worlds
+
+terraform_link = {
+    from = "pc_argonium"
+    to = "pc_desert"
+
+    energy = 14000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_argonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_desert"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_desert"
+    to = "pc_argonium"
+
+    energy = 10000
+    duration = 4200
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_argonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_argonium"
+    to = "pc_arid"
+
+    energy = 14000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_argonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_arid"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_arid"
+    to = "pc_argonium"
+
+    energy = 10000
+    duration = 4200
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_argonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_argonium"
+    to = "pc_savannah"
+
+    energy = 14000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_argonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_savannah"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_savannah"
+    to = "pc_argonium"
+
+    energy = 10000
+    duration = 4200
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_argonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_argonium"
+    to = "pc_continental"
+
+    energy = 14000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_argonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_continental"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_continental"
+    to = "pc_argonium"
+
+    energy = 10000
+    duration = 4200
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_argonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_argonium"
+    to = "pc_tropical"
+
+    energy = 14000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_argonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_tropical"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_tropical"
+    to = "pc_argonium"
+
+    energy = 10000
+    duration = 4200
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_argonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_argonium"
+    to = "pc_ocean"
+
+    energy = 14000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_argonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_ocean"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_ocean"
+    to = "pc_argonium"
+
+    energy = 10000
+    duration = 4200
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_argonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_argonium"
+    to = "pc_alpine"
+
+    energy = 14000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_argonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_alpine"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_alpine"
+    to = "pc_argonium"
+
+    energy = 10000
+    duration = 4200
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_argonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_argonium"
+    to = "pc_tundra"
+
+    energy = 14000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_argonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_tundra"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_tundra"
+    to = "pc_argonium"
+
+    energy = 10000
+    duration = 4200
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_argonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_argonium"
+    to = "pc_arctic"
+
+    energy = 14000
+    duration = 7200
+
+    condition = {
+        has_technology = "tech_argonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_arctic"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_arctic"
+    to = "pc_argonium"
+
+    energy = 10000
+    duration = 4200
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_argonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}
+
+### Uninhabitable Worlds
+
+terraform_link = {
+    from = "pc_argonium_uninhabitable"
+    to = "pc_argonium"
+
+    energy = 8000
+    duration = 3600
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_argonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}
+
+### Gas Giant Worlds
+
+terraform_link = {
+    from = "pc_argonium_gas_giant"
+    to = "pc_argonium"
+
+    energy = 15000
+    duration = 4000
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        AND = {
+            has_technology = "tech_argonium_restoration"
+            has_technology = "tech_gas_giant_compacting"
+        }
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 30000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}

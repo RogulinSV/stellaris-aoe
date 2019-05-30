@@ -98,12 +98,24 @@ planet_jobs_engineering_research_produces_mult = 0.10
 planet_jobs_physics_research_produces_mult = 0.30
 planet_pops_consumer_goods_upkeep_mult = -0.05
 planet_amenities_no_happiness_add = 10
+planet_pop_assembly_mult = 0.1
+planet_pops_robotics_upkeep_mult = -0.1
+planet_pops_organics_food_upkeep_mult = -0.1
 planet_crime_no_happiness_add = -20
 planet_emigration_push_add = 100
 planet_immigration_pull_mult = 0.25
+planet_army_build_speed_mult = 0.2
 planet_building_build_speed_mult = -0.20
 planet_buildings_cost_mult = -0.4
+planet_buildings_upkeep_mult = -0.10
+planet_districts_cost_mult = -0.10
+planet_districts_upkeep_mult = -0.10
+planet_branch_offices_cost_mult = -0.1
 planet_max_districts_add = -1
+planet_non_artificial_max_districts_add = 1
+planet_colony_development_speed_mult = 0.25
+planet_structures_cost_mult = -0.10
+
 
 pop_government_ethic_attraction = 0.50
 pop_cat_slave_political_power = -0.25

@@ -1,6 +1,6 @@
 namespace = aoe_planet_actions
 
-### Crystalline Worlds survey
+### Crystalline Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.1
@@ -195,7 +195,7 @@ country_event = {
     }
 }
 
-### Metalline Worlds survey
+### Metalline Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.4
@@ -390,7 +390,7 @@ country_event = {
     }
 }
 
-### Methanum Worlds survey
+### Methanum Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.7
@@ -585,7 +585,7 @@ country_event = {
     }
 }
 
-### Carbonium Worlds survey
+### Carbonium Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.10
@@ -608,6 +608,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_carbonium"
                 is_planet_class = "pc_carbonium_uninhabitable"
                 is_planet_class = "pc_carbonium_gas_giant"
             }
@@ -651,6 +652,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_carbonium"
                 is_planet_class = "pc_carbonium_uninhabitable"
                 is_planet_class = "pc_carbonium_gas_giant"
             }
@@ -659,6 +661,28 @@ ship_event = {
 
     immediate = {
         if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_carbonium"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "carbonium_worlds_chain"
+                            counter = "carbonium_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "carbonium_worlds_chain"
+                    counter = "carbonium_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
             limit = {
                 from = {
                     is_planet_class = "pc_carbonium_uninhabitable"
@@ -708,6 +732,10 @@ ship_event = {
                 owner = {
                     has_completed_event_chain_counter = {
                         event_chain = "carbonium_worlds_chain"
+                        counter = "carbonium_worlds_surveyed"
+                    }
+                    has_completed_event_chain_counter = {
+                        event_chain = "carbonium_worlds_chain"
                         counter = "carbonium_uninhabitable_worlds_surveyed"
                     }
                     has_completed_event_chain_counter = {
@@ -752,7 +780,7 @@ country_event = {
     }
 }
 
-### Nitrogenium Worlds survey
+### Nitrogenium Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.13
@@ -775,6 +803,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_nitrogenium"
                 is_planet_class = "pc_nitrogenium_uninhabitable"
                 is_planet_class = "pc_nitrogenium_gas_giant"
             }
@@ -818,6 +847,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_nitrogenium"
                 is_planet_class = "pc_nitrogenium_uninhabitable"
                 is_planet_class = "pc_nitrogenium_gas_giant"
             }
@@ -826,6 +856,28 @@ ship_event = {
 
     immediate = {
         if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_nitrogenium"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "nitrogenium_worlds_chain"
+                            counter = "nitrogenium_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "nitrogenium_worlds_chain"
+                    counter = "nitrogenium_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
             limit = {
                 from = {
                     is_planet_class = "pc_nitrogenium_uninhabitable"
@@ -875,6 +927,10 @@ ship_event = {
                 owner = {
                     has_completed_event_chain_counter = {
                         event_chain = "nitrogenium_worlds_chain"
+                        counter = "nitrogenium_worlds_surveyed"
+                    }
+                    has_completed_event_chain_counter = {
+                        event_chain = "nitrogenium_worlds_chain"
                         counter = "nitrogenium_uninhabitable_worlds_surveyed"
                     }
                     has_completed_event_chain_counter = {
@@ -919,7 +975,7 @@ country_event = {
     }
 }
 
-### Sulphureum Worlds survey
+### Sulphureum Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.16
@@ -942,6 +998,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_sulphureum"
                 is_planet_class = "pc_sulphureum_uninhabitable"
                 is_planet_class = "pc_sulphureum_gas_giant"
             }
@@ -985,6 +1042,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_sulphureum"
                 is_planet_class = "pc_sulphureum_uninhabitable"
                 is_planet_class = "pc_sulphureum_gas_giant"
             }
@@ -993,6 +1051,28 @@ ship_event = {
 
     immediate = {
         if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_sulphureum"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "sulphureum_worlds_chain"
+                            counter = "sulphureum_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "sulphureum_worlds_chain"
+                    counter = "sulphureum_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
             limit = {
                 from = {
                     is_planet_class = "pc_sulphureum_uninhabitable"
@@ -1042,6 +1122,10 @@ ship_event = {
                 owner = {
                     has_completed_event_chain_counter = {
                         event_chain = "sulphureum_worlds_chain"
+                        counter = "sulphureum_worlds_surveyed"
+                    }
+                    has_completed_event_chain_counter = {
+                        event_chain = "sulphureum_worlds_chain"
                         counter = "sulphureum_uninhabitable_worlds_surveyed"
                     }
                     has_completed_event_chain_counter = {
@@ -1086,7 +1170,7 @@ country_event = {
     }
 }
 
-### Argonium Worlds survey
+### Argonium Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.19
@@ -1109,6 +1193,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_argonium"
                 is_planet_class = "pc_argonium_uninhabitable"
                 is_planet_class = "pc_argonium_gas_giant"
             }
@@ -1152,6 +1237,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_argonium"
                 is_planet_class = "pc_argonium_uninhabitable"
                 is_planet_class = "pc_argonium_gas_giant"
             }
@@ -1160,6 +1246,28 @@ ship_event = {
 
     immediate = {
         if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_argonium"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "argonium_worlds_chain"
+                            counter = "argonium_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "argonium_worlds_chain"
+                    counter = "argonium_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
             limit = {
                 from = {
                     is_planet_class = "pc_argonium_uninhabitable"
@@ -1209,6 +1317,10 @@ ship_event = {
                 owner = {
                     has_completed_event_chain_counter = {
                         event_chain = "argonium_worlds_chain"
+                        counter = "argonium_worlds_surveyed"
+                    }
+                    has_completed_event_chain_counter = {
+                        event_chain = "argonium_worlds_chain"
                         counter = "argonium_uninhabitable_worlds_surveyed"
                     }
                     has_completed_event_chain_counter = {
@@ -1253,7 +1365,7 @@ country_event = {
     }
 }
 
-### Phosphorium Worlds survey
+### Phosphorium Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.22
@@ -1276,6 +1388,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_phosphorium"
                 is_planet_class = "pc_phosphorium_uninhabitable"
                 is_planet_class = "pc_phosphorium_gas_giant"
             }
@@ -1319,6 +1432,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_phosphorium"
                 is_planet_class = "pc_phosphorium_uninhabitable"
                 is_planet_class = "pc_phosphorium_gas_giant"
             }
@@ -1327,6 +1441,28 @@ ship_event = {
 
     immediate = {
         if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_phosphorium"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "phosphorium_worlds_chain"
+                            counter = "phosphorium_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "phosphorium_worlds_chain"
+                    counter = "phosphorium_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
             limit = {
                 from = {
                     is_planet_class = "pc_phosphorium_uninhabitable"
@@ -1376,6 +1512,10 @@ ship_event = {
                 owner = {
                     has_completed_event_chain_counter = {
                         event_chain = "phosphorium_worlds_chain"
+                        counter = "phosphorium_worlds_surveyed"
+                    }
+                    has_completed_event_chain_counter = {
+                        event_chain = "phosphorium_worlds_chain"
                         counter = "phosphorium_uninhabitable_worlds_surveyed"
                     }
                     has_completed_event_chain_counter = {
@@ -1420,7 +1560,7 @@ country_event = {
     }
 }
 
-### Ammonium Worlds survey
+### Ammonium Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.25
@@ -1443,6 +1583,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_ammonium"
                 is_planet_class = "pc_ammonium_uninhabitable"
                 is_planet_class = "pc_ammonium_gas_giant"
             }
@@ -1486,6 +1627,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_ammonium"
                 is_planet_class = "pc_ammonium_uninhabitable"
                 is_planet_class = "pc_ammonium_gas_giant"
             }
@@ -1494,6 +1636,28 @@ ship_event = {
 
     immediate = {
         if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_ammonium"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "ammonium_worlds_chain"
+                            counter = "ammonium_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "ammonium_worlds_chain"
+                    counter = "ammonium_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
             limit = {
                 from = {
                     is_planet_class = "pc_ammonium_uninhabitable"
@@ -1543,6 +1707,10 @@ ship_event = {
                 owner = {
                     has_completed_event_chain_counter = {
                         event_chain = "ammonium_worlds_chain"
+                        counter = "ammonium_worlds_surveyed"
+                    }
+                    has_completed_event_chain_counter = {
+                        event_chain = "ammonium_worlds_chain"
                         counter = "ammonium_uninhabitable_worlds_surveyed"
                     }
                     has_completed_event_chain_counter = {
@@ -1587,7 +1755,7 @@ country_event = {
     }
 }
 
-### Mercurium Worlds survey
+### Mercurium Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.28
@@ -1610,6 +1778,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_mercurium"
                 is_planet_class = "pc_mercurium_uninhabitable"
                 is_planet_class = "pc_mercurium_gas_giant"
             }
@@ -1653,6 +1822,7 @@ ship_event = {
         }
         from = {
             OR = {
+                is_planet_class = "pc_mercurium"
                 is_planet_class = "pc_mercurium_uninhabitable"
                 is_planet_class = "pc_mercurium_gas_giant"
             }
@@ -1661,6 +1831,28 @@ ship_event = {
 
     immediate = {
         if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_mercurium"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "mercurium_worlds_chain"
+                            counter = "mercurium_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "mercurium_worlds_chain"
+                    counter = "mercurium_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
             limit = {
                 from = {
                     is_planet_class = "pc_mercurium_uninhabitable"
@@ -1710,6 +1902,10 @@ ship_event = {
                 owner = {
                     has_completed_event_chain_counter = {
                         event_chain = "mercurium_worlds_chain"
+                        counter = "mercurium_worlds_surveyed"
+                    }
+                    has_completed_event_chain_counter = {
+                        event_chain = "mercurium_worlds_chain"
                         counter = "mercurium_uninhabitable_worlds_surveyed"
                     }
                     has_completed_event_chain_counter = {
@@ -1754,7 +1950,7 @@ country_event = {
     }
 }
 
-### Barium Worlds survey
+### Barium Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.31
@@ -1949,12 +2145,207 @@ country_event = {
     }
 }
 
-### Celestial Worlds survey
+### Chlorum Worlds Survey
 
 ship_event = {
     id = aoe_planet_actions.34
     title = aoe_planet_actions.34.title
     desc = aoe_planet_actions.34.desc
+    picture = GFX_aoe_chlorum_worlds
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+    location = from
+
+    trigger = {
+        owner = {
+            NOT = {
+                has_event_chain = "chlorum_worlds_chain"
+                has_country_flag = "chlorum_worlds_surveyed"
+                has_country_flag = "chlorum_worlds_discovered"
+                has_ethic = "ethic_gestalt_consciousness"
+            }
+        }
+        from = {
+            OR = {
+                is_planet_class = "pc_chlorum"
+                is_planet_class = "pc_chlorum_uninhabitable"
+                is_planet_class = "pc_chlorum_gas_giant"
+            }
+        }
+    }
+
+    immediate = {
+        owner = {
+            set_timed_country_flag = {
+                flag = "chlorum_worlds_discovered"
+                days = 720
+            }
+        }
+    }
+
+    option = {
+        name = aoe_planet_actions.34.a
+        custom_tooltip = aoe_planet_actions.34.a.tooltip
+        begin_event_chain = {
+            event_chain = "chlorum_worlds_chain"
+            target = owner
+        }
+    }
+    option = {
+        name = aoe_planet_actions.34.b
+        custom_tooltip = aoe_planet_actions.34.b.tooltip
+        leader = {
+            add_experience = 25
+        }
+    }
+}
+
+ship_event = {
+    id = aoe_planet_actions.35
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        owner = {
+            has_event_chain = "chlorum_worlds_chain"
+        }
+        from = {
+            OR = {
+                is_planet_class = "pc_chlorum"
+                is_planet_class = "pc_chlorum_uninhabitable"
+                is_planet_class = "pc_chlorum_gas_giant"
+            }
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_chlorum"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "chlorum_worlds_chain"
+                            counter = "chlorum_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "chlorum_worlds_chain"
+                    counter = "chlorum_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_chlorum_uninhabitable"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "chlorum_worlds_chain"
+                            counter = "chlorum_uninhabitable_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "chlorum_worlds_chain"
+                    counter = "chlorum_uninhabitable_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    is_planet_class = "pc_chlorum_gas_giant"
+                }
+                owner = {
+                    NOT = {
+                        has_completed_event_chain_counter = {
+                            event_chain = "chlorum_worlds_chain"
+                            counter = "chlorum_gas_giant_worlds_surveyed"
+                        }
+                    }
+                }
+            }
+            owner = {
+                add_event_chain_counter = {
+                    event_chain = "chlorum_worlds_chain"
+                    counter = "chlorum_gas_giant_worlds_surveyed"
+                    amount = 1
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                owner = {
+                    has_completed_event_chain_counter = {
+                        event_chain = "chlorum_worlds_chain"
+                        counter = "chlorum_worlds_surveyed"
+                    }
+                    has_completed_event_chain_counter = {
+                        event_chain = "chlorum_worlds_chain"
+                        counter = "chlorum_uninhabitable_worlds_surveyed"
+                    }
+                    has_completed_event_chain_counter = {
+                        event_chain = "chlorum_worlds_chain"
+                        counter = "chlorum_gas_giant_worlds_surveyed"
+                    }
+                }
+            }
+            owner = {
+                country_event = { id = aoe_planet_actions.36 }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = aoe_planet_actions.36
+    title = aoe_planet_actions.36.title
+    desc = aoe_planet_actions.36.desc
+    picture = GFX_aoe_chlorum_worlds
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    trigger = {
+        NOT = {
+            has_country_flag = "chlorum_worlds_surveyed"
+        }
+    }
+
+    immediate = {
+        set_country_flag = "chlorum_worlds_surveyed"
+    }
+
+    option = {
+        name = aoe_planet_actions.36.a
+        custom_tooltip = aoe_planet_actions.36.a.tooltip
+        end_event_chain = "chlorum_worlds_chain"
+        add_resource = {
+            influence = 100
+        }
+    }
+}
+
+### Celestial Worlds Survey
+
+ship_event = {
+    id = aoe_planet_actions.39
+    title = aoe_planet_actions.39.title
+    desc = aoe_planet_actions.39.desc
     picture = GFX_aoe_celestial_worlds
     show_sound = event_laboratory_sound
     is_triggered_only = yes
@@ -1993,16 +2384,16 @@ ship_event = {
     }
 
     option = {
-        name = aoe_planet_actions.34.a
-        custom_tooltip = aoe_planet_actions.34.a.tooltip
+        name = aoe_planet_actions.39.a
+        custom_tooltip = aoe_planet_actions.39.a.tooltip
         begin_event_chain = {
             event_chain = "celestial_worlds_chain"
             target = owner
         }
     }
     option = {
-        name = aoe_planet_actions.34.b
-        custom_tooltip = aoe_planet_actions.34.b.tooltip
+        name = aoe_planet_actions.39.b
+        custom_tooltip = aoe_planet_actions.39.b.tooltip
         leader = {
             add_experience = 25
         }
@@ -2010,7 +2401,7 @@ ship_event = {
 }
 
 ship_event = {
-    id = aoe_planet_actions.35
+    id = aoe_planet_actions.40
     is_triggered_only = yes
     hide_window = yes
 
@@ -2221,16 +2612,16 @@ ship_event = {
                 }
             }
             owner = {
-                country_event = { id = aoe_planet_actions.36 }
+                country_event = { id = aoe_planet_actions.41 }
             }
         }
     }
 }
 
 country_event = {
-    id = aoe_planet_actions.36
-    title = aoe_planet_actions.36.title
-    desc = aoe_planet_actions.36.desc
+    id = aoe_planet_actions.41
+    title = aoe_planet_actions.41.title
+    desc = aoe_planet_actions.41.desc
     picture = GFX_aoe_celestial_worlds
     show_sound = event_laboratory_sound
     is_triggered_only = yes
@@ -2247,8 +2638,8 @@ country_event = {
     }
 
     option = {
-        name = aoe_planet_actions.36.a
-        custom_tooltip = aoe_planet_actions.36.a.tooltip
+        name = aoe_planet_actions.41.a
+        custom_tooltip = aoe_planet_actions.41.a.tooltip
         end_event_chain = "celestial_worlds_chain"
         add_resource = {
             influence = 500

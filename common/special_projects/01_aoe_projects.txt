@@ -1,0 +1,439 @@
+@project_cost = 30000
+
+# This: Country
+# Root: Country
+# Prev: Country
+# PrevPrev: Country
+# From: Planet
+# FromFrom: Planet
+special_project = {
+    key = "aoe_crystalline_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_crystalline_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_crystalline_species"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_metalline_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_metalline_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_metalline_species"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_methanum_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_methanum_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_methanum_species"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_carbonium_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_carbonium_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_carbonium_species"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_nitrogenium_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_nitrogenium_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_nitrogenium_species"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_sulphureum_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_sulphureum_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_sulphureum_species"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_argonium_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_argonium_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_argonium_species"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_phosphorium_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_phosphorium_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_phosphorium_species"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_ammonium_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_ammonium_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_ammonium_species"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_mercurium_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_mercurium_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_mercurium_species"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_barium_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_barium_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_barium_species"
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_chlorum_adaptation_project"
+    cost = @project_cost
+    timelimit = -1
+    location = no
+    tech_department = society_technology
+    picture = GFX_aoe_chlorum_adaptation_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = planet_event
+
+    abort_trigger = {
+        from = {
+            OR = {
+                has_ground_combat = yes
+                has_orbital_bombardment = yes
+                is_occupied_flag = yes
+                NOR = {
+                    is_controlled_by = root
+                    owner = {
+                        is_same_value = root
+                    }
+                }
+            }
+        }
+    }
+
+    on_success = {
+        capital_scope = {
+            modify_species = {
+                add_trait = "trait_chlorum_species"
+            }
+        }
+    }
+}

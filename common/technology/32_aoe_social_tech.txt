@@ -1,0 +1,2291 @@
+tech_crystalline_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_crystalline_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_crystalline_restoration_title"
+            desc = "tech_crystalline_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "crystalline_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_crystalline"
+                species = {
+                    OR = {
+                        has_trait = "trait_crystalline_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "crystalline_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_metalline_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_metalline_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_metalline_restoration_title"
+            desc = "tech_metalline_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "metalline_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_metalline"
+                species = {
+                    OR = {
+                        has_trait = "trait_metalline_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "metalline_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_methanum_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_methanum_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_methanum_restoration_title"
+            desc = "tech_methanum_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "methanum_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_methanum"
+                species = {
+                    OR = {
+                        has_trait = "trait_methanum_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "methanum_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_carbonium_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_carbonium_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_carbonium_restoration_title"
+            desc = "tech_carbonium_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "carbonium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_carbonium"
+                species = {
+                    OR = {
+                        has_trait = "trait_carbonium_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "carbonium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_nitrogenium_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_nitrogenium_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_nitrogenium_restoration_title"
+            desc = "tech_nitrogenium_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "nitrogenium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_nitrogenium"
+                species = {
+                    OR = {
+                        has_trait = "trait_nitrogenium_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "nitrogenium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_sulphureum_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_sulphureum_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_sulphureum_restoration_title"
+            desc = "tech_sulphureum_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "sulphureum_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_sulphureum"
+                species = {
+                    OR = {
+                        has_trait = "trait_sulphureum_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "sulphureum_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_argonium_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_argonium_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_argonium_restoration_title"
+            desc = "tech_argonium_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "argonium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_argonium"
+                species = {
+                    OR = {
+                        has_trait = "trait_argonium_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "argonium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_phosphorium_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_phosphorium_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_phosphorium_restoration_title"
+            desc = "tech_phosphorium_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "phosphorium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_phosphorium"
+                species = {
+                    OR = {
+                        has_trait = "trait_phosphorium_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "phosphorium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_ammonium_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_ammonium_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_ammonium_restoration_title"
+            desc = "tech_ammonium_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "ammonium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_ammonium"
+                species = {
+                    OR = {
+                        has_trait = "trait_ammonium_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "ammonium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_mercurium_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_mercurium_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_mercurium_restoration_title"
+            desc = "tech_mercurium_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "mercurium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_mercurium"
+                species = {
+                    OR = {
+                        has_trait = "trait_mercurium_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "mercurium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_barium_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_barium_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_barium_restoration_title"
+            desc = "tech_barium_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "barium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_barium"
+                species = {
+                    OR = {
+                        has_trait = "trait_barium_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "barium_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}
+
+tech_chlorum_restoration = {
+    cost = @technology_high_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_chlorum_sculpting"
+        "tech_climate_restoration"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_chlorum_restoration_title"
+            desc = "tech_chlorum_restoration_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "chlorum_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ideal_planet_class = "pc_chlorum"
+                species = {
+                    OR = {
+                        has_trait = "trait_chlorum_species"
+                        has_trait = "trait_xenomorphic_species"
+                    }
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "chlorum_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.95
+            NAND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                NOR = {
+                    has_trait = "leader_trait_expertise_new_worlds"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+    }
+}

@@ -23,7 +23,7 @@
 pc_crystalline_uninhabitable = {
     entity = "crystalline_uninhabitable_planet"
     entity_scale = @uninhabitable_planet_standard_scale
-    icon_frame = 11
+    icon_frame = 53
 
     min_distance_from_sun = 60
     max_distance_from_sun = 110
@@ -751,6 +751,75 @@ pc_barium_gas_giant = {
     atmosphere_width        = 0.75
 
     min_distance_from_sun = 100
+    max_distance_from_sun = 1000
+
+    spawn_odds = @gas_giant_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @gas_giant_planet_chance_of_ring
+    production_spawn_chance = @gas_giant_planet_production_spawn_chance
+
+    planet_size = {
+        min = @gas_giant_planet_min_size
+        max = @gas_giant_planet_max_size
+    }
+    moon_size = {
+        min = @gas_giant_planet_moon_min_size
+        max = @gas_giant_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = no
+    orbit_lines = yes
+    space_monster_target = yes
+    survey_time_factor = @gas_giant_planet_survey_factor
+}
+
+### Chlorum planets
+
+pc_chlorum_uninhabitable = {
+    entity = "chlorum_uninhabitable_planet"
+    entity_scale = @uninhabitable_planet_standard_scale
+    icon_frame = 11
+
+    min_distance_from_sun = 80
+    max_distance_from_sun = 1000
+
+    spawn_odds = @uninhabitable_planet_spawn_odds
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = @uninhabitable_planet_chance_of_ring
+    production_spawn_chance = @uninhabitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @uninhabitable_planet_min_size
+        max = @uninhabitable_planet_max_size
+    }
+    moon_size = {
+        min = @uninhabitable_planet_moon_min_size
+        max = @uninhabitable_planet_moon_max_size
+    }
+
+    colonizable = no
+    show_city = no
+    can_be_invaded = no
+    can_be_moon = yes
+    orbit_lines = yes
+    survey_time_factor = @uninhabitable_planet_survey_factor
+}
+
+pc_chlorum_gas_giant = {
+    entity = "chlorum_gas_giant"
+    entity_scale = @gas_giant_planet_standard_scale
+    icon_frame = 14
+
+    atmosphere_color        = hsv { 0.22 0.44 0.98 }
+    atmosphere_intensity    = 1.0
+    atmosphere_width        = 0.75
+
+    min_distance_from_sun = 80
     max_distance_from_sun = 1000
 
     spawn_odds = @gas_giant_planet_spawn_odds

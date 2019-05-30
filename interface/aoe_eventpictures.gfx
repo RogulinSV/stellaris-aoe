@@ -144,6 +144,12 @@ spriteTypes = {
         alwaystransparent = yes
     }
     spriteType = {
+        name = "GFX_aoe_chlorum_worlds"
+        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
         name = "GFX_aoe_celestial_worlds"
         texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
@@ -188,6 +194,162 @@ spriteTypes = {
     spriteType = {
         name = "GFX_aoe_resources_mining_project"
         texturefile = "gfx/event_pictures/strategic_resources_mining_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_crystalline_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_crystalline_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_metalline_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_metalline_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_methanum_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_methanum_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_carbonium_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_carbonium_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_nitrogenium_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_nitrogenium_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_sulphureum_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_sulphureum_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_argonium_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_argonium_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_phosphorium_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_phosphorium_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_ammonium_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_ammonium_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_mercurium_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_mercurium_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_barium_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_barium_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_chlorum_adaptation"
+        texturefile = "gfx/event_pictures/pop_genome_adapted.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_chlorum_adaptation_project"
+        texturefile = "gfx/event_pictures/environment_adaptation_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_adaptation_collapsed"
+        texturefile = "gfx/event_pictures/scientific_accident.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_adaptation_exploded"
+        texturefile = "gfx/event_pictures/scientific_accident.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }

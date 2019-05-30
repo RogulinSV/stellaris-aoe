@@ -10,12 +10,12 @@
 @habitable_planet_moon_max_size = 7
 @habitable_planet_survey_factor = 5
 
-### Crystalline planets
+### Crystalline Planets
 
 pc_crystalline = {
     entity = "crystalline_planet"
     entity_scale = @habitable_planet_standard_scale
-    icon_frame = 1
+    icon_frame = 53
 
     climate = "climate_crystalline"
 
@@ -44,7 +44,9 @@ pc_crystalline = {
 
     modifier = {
         planet_jobs_minerals_produces_mult = 0.25
-        planet_buildings_cost_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
     }
 
     ideal = no
@@ -61,12 +63,12 @@ pc_crystalline = {
     survey_time_factor = @habitable_planet_survey_factor
 }
 
-### Metalline planets
+### Metalline Planets
 
 pc_metalline = {
     entity = "metalline_planet"
     entity_scale = @habitable_planet_standard_scale
-    icon_frame = 1
+    icon_frame = 62
 
     climate = "climate_metalline"
 
@@ -95,7 +97,9 @@ pc_metalline = {
 
     modifier = {
         planet_jobs_alloys_produces_mult = 0.25
-        planet_buildings_cost_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
     }
 
     ideal = no
@@ -112,19 +116,19 @@ pc_metalline = {
     survey_time_factor = @habitable_planet_survey_factor
 }
 
-### Methanum planets
+### Methanum Planets
 
 pc_methanum = {
     entity = "methanum_planet"
     entity_scale = @habitable_planet_standard_scale
-    icon_frame = 1
+    icon_frame = 45
 
     climate = "climate_methanum"
 
     atmosphere_color        = hsv { 0.53 1.0 0.99 }
     atmosphere_intensity    = 0.5
     atmosphere_width        = 0.5
-    city_color_lut = "gfx/portraits/misc/colorcorrection_tundra.dds"
+    city_color_lut = "gfx/portraits/misc/colorcorrection_methane.dds"
 
     min_distance_from_sun = 80
     max_distance_from_sun = 170
@@ -146,7 +150,9 @@ pc_methanum = {
 
     modifier = {
         planet_jobs_energy_produces_mult = 0.25
-        planet_buildings_cost_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
     }
 
     ideal = no
@@ -163,22 +169,287 @@ pc_methanum = {
     survey_time_factor = @habitable_planet_survey_factor
 }
 
-### Barium planets
+### Carbonium Planets
 
-pc_barium = {
-    entity = "barium_planet"
+pc_carbonium = {
+    entity = "carbonium_planet"
     entity_scale = @habitable_planet_standard_scale
-    icon_frame = 1
+    icon_frame = 50
 
-    climate = "climate_barium"
+    climate = "climate_carbonium"
 
-    atmosphere_color        = hsv { 1.0 0.49 0.32 }
-    atmosphere_intensity    = 0.9
-    atmosphere_width        = 0.9
-    city_color_lut = "gfx/portraits/misc/colorcorrection_savannah.dds"
+    atmosphere_color        = hsv { 0.14 1.0 0.99 }
+    atmosphere_intensity    = 0.4
+    atmosphere_width        = 0.8
+    city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
 
-    min_distance_from_sun = 60
-    max_distance_from_sun = 160
+    min_distance_from_sun = 80
+    max_distance_from_sun = 130
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_jobs_specialist_produces_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+### Nitrogenium Planets
+
+pc_nitrogenium = {
+    entity = "nitrogenium_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 61
+
+    climate = "climate_nitrogenium"
+
+    atmosphere_color        = hsv { 0.11 0.9 0.99 }
+    atmosphere_intensity    = 0.6
+    atmosphere_width        = 0.8
+    city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+
+    min_distance_from_sun = 70
+    max_distance_from_sun = 120
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+### Sulphureum Planets
+
+pc_sulphureum = {
+    entity = "sulphureum_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 46
+
+    climate = "climate_sulphureum"
+
+    atmosphere_color        = hsv { 0.3 0.82 0.99 }
+    atmosphere_intensity    = 0.8
+    atmosphere_width        = 0.8
+    city_color_lut = "gfx/portraits/misc/colorcorrection_biolumen.dds"
+
+    min_distance_from_sun = 90
+    max_distance_from_sun = 140
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_jobs_worker_produces_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+### Argonium Planets
+
+pc_argonium = {
+    entity = "argonium_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 87
+
+    climate = "climate_argonium"
+
+    atmosphere_color        = hsv { 0.01 0.68 0.99 }
+    atmosphere_intensity    = 0.5
+    atmosphere_width        = 0.5
+    city_color_lut = "gfx/portraits/misc/colorcorrection_tropical.dds"
+
+    min_distance_from_sun = 70
+    max_distance_from_sun = 140
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_jobs_physics_research_produces_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+### Phosphorium Planets
+
+pc_phosphorium = {
+    entity = "phosphorium_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 34
+
+    climate = "climate_phosphorium"
+
+    atmosphere_color        = hsv { 0.89 0.99 0.99 }
+    atmosphere_intensity    = 0.3
+    atmosphere_width        = 0.6
+    city_color_lut = "gfx/portraits/misc/colorcorrection_tundra.dds"
+
+    min_distance_from_sun = 70
+    max_distance_from_sun = 140
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_jobs_robotic_produces_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+### Ammonium Planets
+
+pc_ammonium = {
+    entity = "ammonium_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 38
+
+    climate = "climate_ammonium"
+
+    atmosphere_color        = hsv { 0.49 0.60 0.67 }
+    atmosphere_intensity    = 0.4
+    atmosphere_width        = 0.5
+    city_color_lut = "gfx/portraits/misc/colorcorrection_ammonia.dds"
+
+    min_distance_from_sun = 70
+    max_distance_from_sun = 130
 
     spawn_odds = @habitable_planet_spawn_odds
     extra_orbit_size = @habitable_planet_extra_orbit_size
@@ -197,7 +468,782 @@ pc_barium = {
 
     modifier = {
         planet_jobs_unity_produces_mult = 0.25
-        planet_buildings_cost_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+### Mercurium Planets
+
+pc_mercurium = {
+    entity = "mercurium_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 37
+
+    climate = "climate_mercurium"
+
+    atmosphere_color        = hsv { 0.99 0.25 0.67 }
+    atmosphere_intensity    = 0.2
+    atmosphere_width        = 0.5
+    city_color_lut = "gfx/portraits/misc/colorcorrection_alpine.dds"
+
+    min_distance_from_sun = 110
+    max_distance_from_sun = 180
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_jobs_simple_drone_produces_mult = 0.25
+        planet_jobs_complex_drone_produces_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+### Barium Planets
+
+pc_barium = {
+    entity = "barium_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 43
+
+    climate = "climate_barium"
+
+    atmosphere_color        = hsv { 1.0 0.49 0.32 }
+    atmosphere_intensity    = 0.9
+    atmosphere_width        = 0.9
+    city_color_lut = "gfx/portraits/misc/colorcorrection_savannah.dds"
+
+    min_distance_from_sun = 80
+    max_distance_from_sun = 160
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_jobs_consumer_goods_produces_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+### Chlorum Planets
+
+pc_chlorum = {
+    entity = "chlorum_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 59
+
+    climate = "climate_chlorum"
+
+    atmosphere_color        = hsv { 0.22 0.44 0.98 }
+    atmosphere_intensity    = 0.8
+    atmosphere_width        = 0.8
+    city_color_lut = "gfx/portraits/misc/colorcorrection_tropical.dds"
+
+    min_distance_from_sun = 90
+    max_distance_from_sun = 140
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_chemists_produces_mult = 0.25
+        planet_buildings_cost_mult = 0.15
+        planet_districts_cost_mult = 0.15
+        planet_clear_blocker_time_mult = 0.25
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+### Dry Planets
+
+pc_sandsea = {
+    entity = "sandsea_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 44
+
+    climate = "dry"
+
+    atmosphere_color        = hsv { 0.5 0.2 0.8 }
+    atmosphere_intensity    = 1.0
+    atmosphere_width        = 0.65
+    city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+
+    min_distance_from_sun = 40
+    max_distance_from_sun = 60
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_refiners_produces_mult = 0.05
+        planet_clear_blocker_time_mult = 0.15
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+pc_oasis = {
+    entity = "oasis_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 44
+
+    climate = "dry"
+
+    atmosphere_color        = hsv { 0.5 0.2 0.8 }
+    atmosphere_intensity    = 1.0
+    atmosphere_width        = 0.65
+    city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+
+    min_distance_from_sun = 50
+    max_distance_from_sun = 80
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_artisans_produces_mult = 0.05
+        planet_clear_blocker_time_mult = 0.15
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+pc_geoprairie = {
+    entity = "geoprairie_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 33
+
+    climate = "dry"
+
+    atmosphere_color        = hsv { 0.5 0.3 0.7 }
+    atmosphere_intensity    = 1.0
+    atmosphere_width        = 0.65
+    city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+
+    min_distance_from_sun = 50
+    max_distance_from_sun = 90
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_technician_energy_produces_mult = 0.05
+        planet_technician_produces_mult = 0.05
+        planet_clear_blocker_time_mult = 0.1
+        planet_pops_consumer_goods_upkeep_mult = 0.05
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+### Wet Planets
+
+pc_greenlush = {
+    entity = "greenlush_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 51
+
+    climate = "wet"
+
+    atmosphere_color        = hsv { 0.59 0.45 0.95 }
+    atmosphere_intensity    = 1.0
+    atmosphere_width        = 0.5
+    city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+
+    min_distance_from_sun = 70
+    max_distance_from_sun = 110
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_farmers_food_produces_mult = 0.05
+        planet_farmers_produces_mult = 0.05
+        planet_clear_blocker_time_mult = 0.2
+        planet_colony_development_speed_mult = -0.05
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+pc_exogarden = {
+    entity = "exogarden_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 61
+
+    climate = "wet"
+
+    atmosphere_color        = hsv { 0.68 0.55 0.99 }
+    atmosphere_intensity    = 1.0
+    atmosphere_width        = 0.9
+    city_color_lut = "gfx/portraits/misc/colorcorrection_tropical.dds"
+
+    min_distance_from_sun = 80
+    max_distance_from_sun = 110
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_pops_organics_food_upkeep_mult = -0.1
+        planet_pops_robotics_upkeep_mult = 0.1
+        planet_artisans_produces_mult = 0.05
+        planet_miners_minerals_produces_mult = -0.05
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+pc_xenovalley = {
+    entity = "xenovalley_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 47
+
+    climate = "wet"
+
+    atmosphere_color        = hsv { 0.71 0.63 0.99 }
+    atmosphere_intensity    = 1.0
+    atmosphere_width        = 0.9
+    city_color_lut = "gfx/portraits/misc/colorcorrection_tundra.dds"
+
+    min_distance_from_sun = 90
+    max_distance_from_sun = 120
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_jobs_society_research_produces_mult = 0.05
+        planet_jobs_engineering_research_produces_mult = -0.05
+        planet_jobs_physics_research_produces_mult = -0.05
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+pc_floating = {
+    entity = "floating_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 53
+
+    climate = "wet"
+
+    atmosphere_color        = hsv { 0.33 0.35 0.99 }
+    atmosphere_intensity    = 0.9
+    atmosphere_width        = 0.9
+    city_color_lut = "gfx/portraits/misc/colorcorrection_tropical.dds"
+
+    min_distance_from_sun = 70
+    max_distance_from_sun = 100
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_artisans_produces_mult = 0.05
+        planet_jobs_unity_produces_mult = 0.05
+        planet_refiners_produces_mult = -0.05
+        planet_translucers_produces_mult = -0.05
+        planet_chemists_produces_mult = -0.05
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+pc_mangrove = {
+    entity = "mangrove_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 54
+
+    climate = "wet"
+
+    atmosphere_color        = hsv { 0.3 0.99 0.72 }
+    atmosphere_intensity    = 0.9
+    atmosphere_width        = 0.9
+    city_color_lut = "gfx/portraits/misc/colorcorrection_tundra.dds"
+
+    min_distance_from_sun = 80
+    max_distance_from_sun = 110
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_pops_robotics_upkeep_mult = 0.05
+        planet_pops_organics_food_upkeep_mult = -0.05
+        planet_clear_blocker_time_mult = 0.15
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+### Cold Planets
+
+pc_steppe = {
+    entity = "steppe_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 41
+
+    climate = "cold"
+
+    atmosphere_color        = hsv { 0.07 0.47 0.63 }
+    atmosphere_intensity    = 0.8
+    atmosphere_width        = 0.6
+    city_color_lut = "gfx/portraits/misc/colorcorrection_tundra.dds"
+
+    min_distance_from_sun = 100
+    max_distance_from_sun = 130
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_jobs_simple_drone_produces_mult = 0.05
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_pops_consumer_goods_upkeep_mult = 0.05
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+pc_tidallylocked = {
+    entity = "tidallylocked_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 36
+
+    climate = "cold"
+
+    atmosphere_color        = hsv { 0.15 0.77 0.75 }
+    atmosphere_intensity    = 0.7
+    atmosphere_width        = 0.5
+    city_color_lut = "gfx/portraits/misc/colorcorrection_tundra.dds"
+
+    min_distance_from_sun = 90
+    max_distance_from_sun = 140
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_buildings_cost_mult = -0.05
+        planet_districts_cost_mult = -0.05
+        planet_building_build_speed_mult = -0.05
+        planet_districts_upkeep_mult = 0.05
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+pc_geothermal = {
+    entity = "geothermal_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 39
+
+    climate = "cold"
+
+    atmosphere_color        = hsv { 0.52 0.99 0.99 }
+    atmosphere_intensity    = 0.7
+    atmosphere_width        = 0.7
+    city_color_lut = "gfx/portraits/misc/colorcorrection_alpine.dds"
+
+    min_distance_from_sun = 110
+    max_distance_from_sun = 150
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_jobs_slave_produces_mult = 0.15
+        planet_farmers_food_produces_mult = -0.1
+        planet_farmers_produces_mult = -0.1
+        planet_clear_blocker_time_mult = 0.05
+    }
+
+    ideal = no
+    colonizable = yes
+    can_be_moon = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    can_be_invaded = yes
+    enable_tilt = yes
+    show_health_bar_in_planet_view = yes
+    uses_alternative_skies_for_moons = no
+    has_colonization_influence_cost = yes
+    survey_time_factor = @habitable_planet_survey_factor
+}
+
+pc_glacial = {
+    entity = "glacial_planet"
+    entity_scale = @habitable_planet_standard_scale
+    icon_frame = 45
+
+    climate = "cold"
+
+    atmosphere_color        = hsv { 0.56 0.46 0.99 }
+    atmosphere_intensity    = 0.5
+    atmosphere_width        = 0.5
+    city_color_lut = "gfx/portraits/misc/colorcorrection_arctic.dds"
+
+    min_distance_from_sun = 130
+    max_distance_from_sun = 170
+
+    spawn_odds = @habitable_planet_spawn_odds
+    extra_orbit_size = @habitable_planet_extra_orbit_size
+    extra_planet_count = @habitable_planet_extra_planet_count
+    chance_of_ring = @habitable_planet_chance_of_ring
+    production_spawn_chance = @habitable_planet_production_spawn_chance
+
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_planet_moon_min_size
+        max = @habitable_planet_moon_max_size
+    }
+
+    modifier = {
+        planet_miners_minerals_produces_mult = 0.1
+        planet_miners_produces_mult = 0.1
+        planet_farmers_food_produces_mult = -0.1
+        planet_farmers_produces_mult = -0.1
+        planet_clear_blocker_time_mult = 0.1
     }
 
     ideal = no

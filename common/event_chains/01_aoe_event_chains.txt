@@ -1,5 +1,5 @@
 crystalline_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_crystalline_worlds"
     counter = {
         crystalline_worlds_surveyed = {
@@ -15,7 +15,7 @@ crystalline_worlds_chain = {
 }
 
 metalline_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_metalline_worlds"
     counter = {
         metalline_worlds_surveyed = {
@@ -31,7 +31,7 @@ metalline_worlds_chain = {
 }
 
 methanum_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_methanum_worlds"
     counter = {
         methanum_worlds_surveyed = {
@@ -47,9 +47,12 @@ methanum_worlds_chain = {
 }
 
 carbonium_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_carbonium_worlds"
     counter = {
+        carbonium_worlds_surveyed = {
+            max = 1
+        }
         carbonium_uninhabitable_worlds_surveyed = {
             max = 5
         }
@@ -60,9 +63,12 @@ carbonium_worlds_chain = {
 }
 
 nitrogenium_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_nitrogenium_worlds"
     counter = {
+        nitrogenium_worlds_surveyed = {
+            max = 1
+        }
         nitrogenium_uninhabitable_worlds_surveyed = {
             max = 5
         }
@@ -73,9 +79,12 @@ nitrogenium_worlds_chain = {
 }
 
 sulphureum_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_sulphureum_worlds"
     counter = {
+        sulphureum_worlds_surveyed = {
+            max = 1
+        }
         sulphureum_uninhabitable_worlds_surveyed = {
             max = 5
         }
@@ -86,9 +95,12 @@ sulphureum_worlds_chain = {
 }
 
 argonium_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_argonium_worlds"
     counter = {
+        argonium_worlds_surveyed = {
+            max = 1
+        }
         argonium_uninhabitable_worlds_surveyed = {
             max = 5
         }
@@ -99,9 +111,12 @@ argonium_worlds_chain = {
 }
 
 phosphorium_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_phosphorium_worlds"
     counter = {
+        phosphorium_worlds_surveyed = {
+            max = 1
+        }
         phosphorium_uninhabitable_worlds_surveyed = {
             max = 5
         }
@@ -112,9 +127,12 @@ phosphorium_worlds_chain = {
 }
 
 ammonium_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_ammonium_worlds"
     counter = {
+        ammonium_worlds_surveyed = {
+            max = 1
+        }
         ammonium_uninhabitable_worlds_surveyed = {
             max = 5
         }
@@ -125,9 +143,12 @@ ammonium_worlds_chain = {
 }
 
 mercurium_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_mercurium_worlds"
     counter = {
+        mercurium_worlds_surveyed = {
+            max = 1
+        }
         mercurium_uninhabitable_worlds_surveyed = {
             max = 5
         }
@@ -138,7 +159,7 @@ mercurium_worlds_chain = {
 }
 
 barium_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_barium_worlds"
     counter = {
         barium_worlds_surveyed = {
@@ -153,8 +174,24 @@ barium_worlds_chain = {
     }
 }
 
+chlorum_worlds_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+    picture = "GFX_aoe_chlorum_worlds"
+    counter = {
+        chlorum_worlds_surveyed = {
+            max = 1
+        }
+        chlorum_uninhabitable_worlds_surveyed = {
+            max = 5
+        }
+        chlorum_gas_giant_worlds_surveyed = {
+            max = 9
+        }
+    }
+}
+
 celestial_worlds_chain = {
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
     picture = "GFX_aoe_celestial_worlds"
     counter = {
         celestial_barren_worlds_surveyed = {
@@ -182,7 +219,7 @@ celestial_worlds_chain = {
 }
 
 # %RESOURCE%_worlds_chain = {
-#     icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+#     icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
 #     picture = "GFX_aoe_%RESOURCE%_worlds"
 #     counter = {
 #         %RESOURCE%_worlds_surveyed = {

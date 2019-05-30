@@ -1,5 +1,5 @@
 tech_gas_giant_compacting = {
-    cost = @technology_medium_cost
+    cost = @technology_high_cost
     area = society
     tier = 3
     is_rare = yes
@@ -27,21 +27,52 @@ tech_gas_giant_compacting = {
 
     weight_modifier = {
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 2
+            factor = 0.6
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.7
+            NOR = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            NOR = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
             has_valid_civic = "civic_environmentalist"
         }
         modifier = {
-            factor = 1.05
+            factor = 1.1
             research_leader = {
                 area = society
                 has_level > 2
@@ -49,7 +80,7 @@ tech_gas_giant_compacting = {
             }
         }
         modifier = {
-            factor = 1.15
+            factor = 1.2
             research_leader = {
                 area = society
                 has_level > 3
@@ -57,7 +88,7 @@ tech_gas_giant_compacting = {
             }
         }
         modifier = {
-            factor = 1.30
+            factor = 1.3
             research_leader = {
                 area = society
                 has_level > 4
@@ -65,12 +96,52 @@ tech_gas_giant_compacting = {
             }
         }
     }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.6
+            NOR = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 0.7
+            NOR = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 0.8
+            NOR = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 0.9
+            NOT = {
+                has_tradition = "tr_discovery_finish"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
 }
 
 tech_crystalline_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -78,7 +149,7 @@ tech_crystalline_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -102,14 +173,43 @@ tech_crystalline_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -149,9 +249,9 @@ tech_crystalline_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
@@ -164,7 +264,7 @@ tech_crystalline_sculpting = {
 tech_metalline_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -172,7 +272,7 @@ tech_metalline_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -196,14 +296,43 @@ tech_metalline_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -243,9 +372,9 @@ tech_metalline_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
@@ -258,7 +387,7 @@ tech_metalline_sculpting = {
 tech_methanum_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -266,7 +395,7 @@ tech_methanum_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -290,14 +419,43 @@ tech_methanum_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -337,9 +495,9 @@ tech_methanum_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
@@ -352,7 +510,7 @@ tech_methanum_sculpting = {
 tech_carbonium_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -360,7 +518,7 @@ tech_carbonium_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -384,14 +542,43 @@ tech_carbonium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -431,9 +618,9 @@ tech_carbonium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
@@ -446,7 +633,7 @@ tech_carbonium_sculpting = {
 tech_nitrogenium_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -454,7 +641,7 @@ tech_nitrogenium_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -478,14 +665,43 @@ tech_nitrogenium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -525,9 +741,9 @@ tech_nitrogenium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
@@ -540,7 +756,7 @@ tech_nitrogenium_sculpting = {
 tech_sulphureum_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -548,7 +764,7 @@ tech_sulphureum_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -572,14 +788,43 @@ tech_sulphureum_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -619,9 +864,9 @@ tech_sulphureum_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
@@ -634,7 +879,7 @@ tech_sulphureum_sculpting = {
 tech_argonium_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -642,7 +887,7 @@ tech_argonium_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -666,14 +911,43 @@ tech_argonium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -713,9 +987,9 @@ tech_argonium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
@@ -728,7 +1002,7 @@ tech_argonium_sculpting = {
 tech_phosphorium_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -736,7 +1010,7 @@ tech_phosphorium_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -760,14 +1034,43 @@ tech_phosphorium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -807,9 +1110,9 @@ tech_phosphorium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
@@ -822,7 +1125,7 @@ tech_phosphorium_sculpting = {
 tech_ammonium_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -830,7 +1133,7 @@ tech_ammonium_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -854,14 +1157,43 @@ tech_ammonium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -901,9 +1233,9 @@ tech_ammonium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
@@ -916,7 +1248,7 @@ tech_ammonium_sculpting = {
 tech_mercurium_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -924,7 +1256,7 @@ tech_mercurium_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -948,14 +1280,43 @@ tech_mercurium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -995,9 +1356,9 @@ tech_mercurium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
@@ -1010,7 +1371,7 @@ tech_mercurium_sculpting = {
 tech_barium_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -1018,7 +1379,7 @@ tech_barium_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -1042,14 +1403,43 @@ tech_barium_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -1089,9 +1479,132 @@ tech_barium_sculpting = {
             }
         }
         modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+    }
+}
+
+tech_chlorum_sculpting = {
+    cost = @technology_medium_cost
+    area = society
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { new_worlds }
+    prerequisites = {
+        "tech_terrestrial_sculpting"
+    }
+    weight = @tier1weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_chlorum_sculpting_title"
+            desc = "tech_chlorum_sculpting_desc"
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
             factor = 0
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_country_flag = "chlorum_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = "civic_environmentalist"
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.2
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = "chlorum_worlds_surveyed"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
@@ -1104,7 +1617,7 @@ tech_barium_sculpting = {
 tech_celestial_sculpting = {
     cost = @technology_medium_cost
     area = society
-    tier = 2
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -1112,7 +1625,7 @@ tech_celestial_sculpting = {
     prerequisites = {
         "tech_terrestrial_sculpting"
     }
-    weight = @tier2weight3
+    weight = @tier1weight1
 
     prereqfor_desc = {
         feature = {
@@ -1136,14 +1649,43 @@ tech_celestial_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {
-            factor = 3
+            factor = 1.05
+            AND = {
+                has_tradition = "tr_discovery_to_boldly_go"
+                has_tradition = "tr_discovery_science_division"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_polytechnic_education"
+            }
+        }
+        modifier = {
+            factor = 1.15
+            AND = {
+                has_tradition = "tr_discovery_databank_uplinks"
+                has_tradition = "tr_discovery_faith_in_science"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_discovery_finish"
+        }
+        modifier = {
+            factor = 1.5
             has_ascension_perk = "ap_mastery_of_nature"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_world_shaper"
         }
         modifier = {
             factor = 0.5
@@ -1183,9 +1725,9 @@ tech_celestial_sculpting = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = {
-                has_tradition = "tr_expansion_adopt"
+                has_tradition = "tr_discovery_adopt"
             }
         }
         modifier = {

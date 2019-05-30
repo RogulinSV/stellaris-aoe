@@ -1,0 +1,2403 @@
+namespace = aoe_tech_actions
+
+country_event = {
+    id = aoe_tech_actions.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            has_technology = "tech_crystalline_adaptation"
+            has_technology = "tech_metalline_adaptation"
+            has_technology = "tech_methanum_adaptation"
+            has_technology = "tech_carbonium_adaptation"
+            has_technology = "tech_nitrogenium_adaptation"
+            has_technology = "tech_sulphureum_adaptation"
+            has_technology = "tech_argonium_adaptation"
+            has_technology = "tech_phosphorium_adaptation"
+            has_technology = "tech_ammonium_adaptation"
+            has_technology = "tech_mercurium_adaptation"
+            has_technology = "tech_barium_adaptation"
+            has_technology = "tech_chlorum_adaptation"
+        }
+        any_owned_leader = {
+            leader_class = scientist
+            is_researching_area = society
+            has_skill > 2
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                has_technology = "tech_crystalline_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_crystalline_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_crystalline_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_crystalline_adaptation_project_engaged"
+                }
+                # owner_species = {
+                #     NOR = {
+                #         has_trait = "trait_crystalline_species"
+                #         has_trait = "trait_xenomorphic_species"
+                #     }
+                # }
+                
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_crystalline_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.2
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.2
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.2
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.2
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.2
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.2
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.2
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_technology = "tech_metalline_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_metalline_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_metalline_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_metalline_adaptation_project_engaged"
+                }
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_metalline_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.3
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.3
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.3
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.3
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.3
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.3
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.3
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_technology = "tech_methanum_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_methanum_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_methanum_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_methanum_adaptation_project_engaged"
+                }
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_methanum_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.4
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.4
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.4
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.4
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.4
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.4
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.4
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_technology = "tech_carbonium_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_carbonium_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_carbonium_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_carbonium_adaptation_project_engaged"
+                }
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_carbonium_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.5
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.5
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.5
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.5
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.5
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.5
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.5
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_technology = "tech_nitrogenium_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_nitrogenium_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_nitrogenium_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_nitrogenium_adaptation_project_engaged"
+                }
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_nitrogenium_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.6
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.6
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.6
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.6
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.6
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.6
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.6
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_technology = "tech_sulphureum_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_sulphureum_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_sulphureum_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_sulphureum_adaptation_project_engaged"
+                }
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_sulphureum_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.7
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.7
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.7
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.7
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.7
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.7
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.7
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_technology = "tech_argonium_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_argonium_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_argonium_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_argonium_adaptation_project_engaged"
+                }
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_argonium_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.8
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.8
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.8
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.8
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.8
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.8
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.8
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_technology = "tech_phosphorium_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_phosphorium_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_phosphorium_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_phosphorium_adaptation_project_engaged"
+                }
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_phosphorium_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.9
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.9
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.9
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.9
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.9
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.9
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.9
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_technology = "tech_ammonium_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_ammonium_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_ammonium_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_ammonium_adaptation_project_engaged"
+                }
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_ammonium_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.10
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.10
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.10
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.10
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.10
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.10
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.10
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_technology = "tech_mercurium_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_mercurium_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_mercurium_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_mercurium_adaptation_project_engaged"
+                }
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_mercurium_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.11
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.11
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.11
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.11
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.11
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.11
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.11
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_technology = "tech_barium_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_barium_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_barium_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_barium_adaptation_project_engaged"
+                }
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_barium_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.12
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.12
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.12
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.12
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.12
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.12
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.12
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                has_technology = "tech_chlorum_adaptation"
+                count_species = {
+                    limit = {
+                        OR = {
+                            has_trait = "trait_chlorum_species"
+                            has_trait = "trait_xenomorphic_species"
+                        }
+                    }
+                    count = 0
+                }
+                NOT = {
+                    has_special_project = "aoe_chlorum_adaptation_project"
+                }
+                NOT = {
+                    has_country_flag = "aoe_chlorum_adaptation_project_engaged"
+                }
+            }
+
+            set_timed_country_flag = {
+                flag = "aoe_chlorum_adaptation_project_engaged"
+                days = 3600
+            }
+
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                    is_researching_area = society
+                }
+                save_event_target_as = "adaptation_project_scientist"
+            }
+
+            random_list = {
+                5 = {
+                    country_event = {
+                        id = aoe_tech_actions.13
+                        days = 30
+                        random = 15
+                    }
+                }
+                8 = {
+                    country_event = {
+                        id = aoe_tech_actions.13
+                        days = 60
+                        random = 30
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.13
+                        days = 120
+                        random = 60
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.13
+                        days = 240
+                        random = 120
+                    }
+                }
+                24 = {
+                    country_event = {
+                        id = aoe_tech_actions.13
+                        days = 480
+                        random = 240
+                    }
+                }
+                18 = {
+                    country_event = {
+                        id = aoe_tech_actions.13
+                        days = 960
+                        random = 480
+                    }
+                }
+                12 = {
+                    country_event = {
+                        id = aoe_tech_actions.13
+                        days = 1920
+                        random = 960
+                    }
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.2
+    title = aoe_tech_actions.2.title
+    desc = aoe_tech_actions.2.desc
+    picture = GFX_aoe_crystalline_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.2.a
+        custom_tooltip = aoe_tech_actions.2.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_crystalline_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.2.b
+        custom_tooltip = aoe_tech_actions.2.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_crystalline_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.2.c
+        custom_tooltip = aoe_tech_actions.2.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_crystalline_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.3
+    title = aoe_tech_actions.3.title
+    desc = aoe_tech_actions.3.desc
+    picture = GFX_aoe_metalline_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.3.a
+        custom_tooltip = aoe_tech_actions.3.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_metalline_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.3.b
+        custom_tooltip = aoe_tech_actions.3.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_metalline_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.3.c
+        custom_tooltip = aoe_tech_actions.3.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_metalline_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.4
+    title = aoe_tech_actions.4.title
+    desc = aoe_tech_actions.4.desc
+    picture = GFX_aoe_methanum_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.4.a
+        custom_tooltip = aoe_tech_actions.4.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_methanum_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.4.b
+        custom_tooltip = aoe_tech_actions.4.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_methanum_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.4.c
+        custom_tooltip = aoe_tech_actions.4.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_methanum_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.5
+    title = aoe_tech_actions.5.title
+    desc = aoe_tech_actions.5.desc
+    picture = GFX_aoe_carbonium_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.5.a
+        custom_tooltip = aoe_tech_actions.5.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_carbonium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.5.b
+        custom_tooltip = aoe_tech_actions.5.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_carbonium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.5.c
+        custom_tooltip = aoe_tech_actions.5.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_carbonium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.6
+    title = aoe_tech_actions.6.title
+    desc = aoe_tech_actions.6.desc
+    picture = GFX_aoe_nitrogenium_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.6.a
+        custom_tooltip = aoe_tech_actions.6.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_nitrogenium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.6.b
+        custom_tooltip = aoe_tech_actions.6.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_nitrogenium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.6.c
+        custom_tooltip = aoe_tech_actions.6.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_nitrogenium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.7
+    title = aoe_tech_actions.7.title
+    desc = aoe_tech_actions.7.desc
+    picture = GFX_aoe_sulphureum_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.7.a
+        custom_tooltip = aoe_tech_actions.7.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_sulphureum_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.7.b
+        custom_tooltip = aoe_tech_actions.7.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_sulphureum_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.7.c
+        custom_tooltip = aoe_tech_actions.7.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_sulphureum_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.8
+    title = aoe_tech_actions.8.title
+    desc = aoe_tech_actions.8.desc
+    picture = GFX_aoe_argonium_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.8.a
+        custom_tooltip = aoe_tech_actions.8.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_argonium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.8.b
+        custom_tooltip = aoe_tech_actions.8.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_argonium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.8.c
+        custom_tooltip = aoe_tech_actions.8.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_argonium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.9
+    title = aoe_tech_actions.9.title
+    desc = aoe_tech_actions.9.desc
+    picture = GFX_aoe_phosphorium_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.9.a
+        custom_tooltip = aoe_tech_actions.9.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_phosphorium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.9.b
+        custom_tooltip = aoe_tech_actions.9.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_phosphorium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.9.c
+        custom_tooltip = aoe_tech_actions.9.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_phosphorium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.10
+    title = aoe_tech_actions.10.title
+    desc = aoe_tech_actions.10.desc
+    picture = GFX_aoe_ammonium_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.10.a
+        custom_tooltip = aoe_tech_actions.10.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_ammonium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.10.b
+        custom_tooltip = aoe_tech_actions.10.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_ammonium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.10.c
+        custom_tooltip = aoe_tech_actions.10.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_ammonium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.11
+    title = aoe_tech_actions.11.title
+    desc = aoe_tech_actions.11.desc
+    picture = GFX_aoe_mercurium_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.11.a
+        custom_tooltip = aoe_tech_actions.11.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_mercurium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.11.b
+        custom_tooltip = aoe_tech_actions.11.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_mercurium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.11.c
+        custom_tooltip = aoe_tech_actions.11.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_mercurium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.12
+    title = aoe_tech_actions.12.title
+    desc = aoe_tech_actions.12.desc
+    picture = GFX_aoe_barium_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.12.a
+        custom_tooltip = aoe_tech_actions.12.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_barium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.12.b
+        custom_tooltip = aoe_tech_actions.12.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_barium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.12.c
+        custom_tooltip = aoe_tech_actions.12.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_barium_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.13
+    title = aoe_tech_actions.13.title
+    desc = aoe_tech_actions.13.desc
+    picture = GFX_aoe_chlorum_adaptation
+    show_sound = event_laboratory_sound
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = aoe_tech_actions.13.a
+        custom_tooltip = aoe_tech_actions.13.a.tooltip
+        hidden_effect = {
+            random_list = {
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_chlorum_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.13.b
+        custom_tooltip = aoe_tech_actions.13.b.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_chlorum_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.13.c
+        custom_tooltip = aoe_tech_actions.13.c.tooltip
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.16
+                        days = 5
+                    }
+                }
+                10 = {
+                    country_event = {
+                        id = aoe_tech_actions.17
+                        days = 5
+                    }
+                }
+                80 = {
+                    capital_scope = {
+                        enable_special_project = {
+                            name = "aoe_chlorum_adaptation_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_tech_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.16
+    title = aoe_tech_actions.16.title
+    desc = aoe_tech_actions.16.desc
+    picture = GFX_aoe_adaptation_collapsed
+    show_sound = event_structural_collapse
+    is_triggered_only = yes
+    hide_window = no
+
+    trigger = {
+        any_owned_leader = {
+            leader_class = scientist
+            is_researching_area = society
+            # has_skill < 4
+        }
+    }
+
+    immediate = {
+        random_owned_leader = {
+            limit = {
+                leader_class = scientist
+                is_researching_area = society
+                # has_skill < 4
+            }
+            kill_leader = {
+                show_notification = yes
+            }
+        }
+    }
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = aoe_tech_actions.17
+    title = aoe_tech_actions.17.title
+    desc = aoe_tech_actions.17.desc
+    picture = GFX_aoe_adaptation_exploded
+    show_sound = event_super_explosion
+    is_triggered_only = yes
+    hide_window = no
+
+    trigger = {
+        any_owned_planet = {
+            has_ground_combat = no
+            is_occupied_flag = no
+            num_pops > 0
+            OR = {
+                has_building = "building_research_lab_1"
+                has_building = "building_research_lab_2"
+                has_building = "building_research_lab_3"
+                has_building = "building_institute"
+                has_building = "building_supercomputer"
+            }
+        }
+    }
+
+    immediate = {
+        random_owned_planet = {
+            limit = {
+                has_ground_combat = no
+                is_occupied_flag = no
+                num_pops > 0
+                OR = {
+                    has_building = "building_research_lab_1"
+                    has_building = "building_research_lab_2"
+                    has_building = "building_research_lab_3"
+                    has_building = "building_institute"
+                    has_building = "building_supercomputer"
+                }
+            }
+            if = {
+                limit = {
+                    has_building = "building_supercomputer"
+                }
+                remove_building = "building_supercomputer"
+            }
+            else_if = {
+                limit = {
+                    has_building = "building_institute"
+                }
+                remove_building = "building_institute"
+            }
+            else_if = {
+                limit = {
+                    has_building = "building_research_lab_3"
+                }
+                remove_building = "building_research_lab_3"
+            }
+            else_if = {
+                limit = {
+                    has_building = "building_research_lab_2"
+                }
+                remove_building = "building_research_lab_2"
+            }
+            else_if = {
+                limit = {
+                    has_building = "building_research_lab_1"
+                }
+                remove_building = "building_research_lab_1"
+            }
+            while = {
+                count = 1
+                random_owned_pop = {
+                    limit = {
+                        is_pop_category = specialist
+                    }
+                    kill_pop = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = OK
+    }
+}

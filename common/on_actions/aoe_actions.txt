@@ -79,12 +79,23 @@ on_survey = {
         aoe_planet_actions.31
         # Barium world surveyed
         aoe_planet_actions.32
-        # Celestial world discovered
+        # Chlorum world discovered
         aoe_planet_actions.34
-        # Celestial world surveyed
+        # Chlorum world surveyed
         aoe_planet_actions.35
+        # Celestial world discovered
+        aoe_planet_actions.39
+        # Celestial world surveyed
+        aoe_planet_actions.40
     }
     # random_events = {
     #    100 = 0
     # }
+}
+
+on_tech_increased = {
+    events = {
+        # Environment adaptation
+        aoe_tech_actions.1
+    }
 }

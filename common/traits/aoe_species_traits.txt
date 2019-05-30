@@ -10,10 +10,10 @@
 @denary     = 0.00
 
 trait_crystalline_species = {
-    icon = "gfx/interface/icons/traits/trait_undefined_habitable_preference.dds"
+    icon = "gfx/interface/icons/traits/trait_crystalline_habitable_preference.dds"
 
-    cost = 1
-    initial = no
+    cost = 2
+    initial = yes
     randomized = no
     modification = yes
     advanced_trait = yes
@@ -24,17 +24,21 @@ trait_crystalline_species = {
     allowed_archetypes = { BIOLOGICAL }
     custom_tooltip = TRAIT_CRYSTALLINE_SPECIES_EFFECT
 
+    prerequisites = {
+        "tech_crystalline_adaptation"
+    }
+
     modifier = {
         pc_crystalline_habitability = @primary
     }
 
     ai_weight = {
-        weight = 0
+        weight = 100
     }
 }
 
 trait_pc_crystalline_preference = {
-    icon = "gfx/interface/icons/traits/trait_undefined_habitable_preference.dds"
+    icon = "gfx/interface/icons/traits/trait_crystalline_habitable_preference.dds"
     allowed_archetypes = { BIOLOGICAL }
     sorting_priority = 30
     initial = no
@@ -47,15 +51,15 @@ trait_pc_crystalline_preference = {
     }
 
     ai_weight = {
-        weight = 0
+        weight = 100
     }
 }
 
 trait_metalline_species = {
-    icon = "gfx/interface/icons/traits/trait_undefined_habitable_preference.dds"
+    icon = "gfx/interface/icons/traits/trait_metalline_habitable_preference.dds"
 
-    cost = 1
-    initial = no
+    cost = 2
+    initial = yes
     randomized = no
     modification = yes
     advanced_trait = yes
@@ -66,17 +70,21 @@ trait_metalline_species = {
     allowed_archetypes = { BIOLOGICAL }
     custom_tooltip = TRAIT_METALLINE_SPECIES_EFFECT
 
+    prerequisites = {
+        "tech_metalline_adaptation"
+    }
+
     modifier = {
         pc_metalline_habitability = @primary
     }
 
     ai_weight = {
-        weight = 0
+        weight = 100
     }
 }
 
 trait_pc_metalline_preference = {
-    icon = "gfx/interface/icons/traits/trait_undefined_habitable_preference.dds"
+    icon = "gfx/interface/icons/traits/trait_metalline_habitable_preference.dds"
     allowed_archetypes = { BIOLOGICAL }
     sorting_priority = 30
     initial = no
@@ -89,15 +97,15 @@ trait_pc_metalline_preference = {
     }
 
     ai_weight = {
-        weight = 0
+        weight = 100
     }
 }
 
 trait_methanum_species = {
-    icon = "gfx/interface/icons/traits/trait_undefined_habitable_preference.dds"
+    icon = "gfx/interface/icons/traits/trait_methanum_habitable_preference.dds"
 
-    cost = 1
-    initial = no
+    cost = 2
+    initial = yes
     randomized = no
     modification = yes
     advanced_trait = yes
@@ -108,17 +116,21 @@ trait_methanum_species = {
     allowed_archetypes = { BIOLOGICAL }
     custom_tooltip = TRAIT_METHANUM_SPECIES_EFFECT
 
+    prerequisites = {
+        "tech_methanum_adaptation"
+    }
+
     modifier = {
         pc_methanum_habitability = @primary
     }
 
     ai_weight = {
-        weight = 0
+        weight = 100
     }
 }
 
 trait_pc_methanum_preference = {
-    icon = "gfx/interface/icons/traits/trait_undefined_habitable_preference.dds"
+    icon = "gfx/interface/icons/traits/trait_methanum_habitable_preference.dds"
     allowed_archetypes = { BIOLOGICAL }
     sorting_priority = 30
     initial = no
@@ -131,15 +143,337 @@ trait_pc_methanum_preference = {
     }
 
     ai_weight = {
-        weight = 0
+        weight = 100
+    }
+}
+
+trait_carbonium_species = {
+    icon = "gfx/interface/icons/traits/trait_carbonium_habitable_preference.dds"
+
+    cost = 2
+    initial = yes
+    randomized = no
+    modification = yes
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_CARBONIUM_SPECIES_EFFECT
+
+    prerequisites = {
+        "tech_carbonium_adaptation"
+    }
+
+    modifier = {
+        pc_carbonium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_pc_carbonium_preference = {
+    icon = "gfx/interface/icons/traits/trait_carbonium_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL }
+    sorting_priority = 30
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    modification = yes
+
+    modifier = {
+        pc_carbonium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_nitrogenium_species = {
+    icon = "gfx/interface/icons/traits/trait_nitrogenium_habitable_preference.dds"
+
+    cost = 2
+    initial = yes
+    randomized = no
+    modification = yes
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_NITROGENIUM_SPECIES_EFFECT
+
+    prerequisites = {
+        "tech_nitrogenium_adaptation"
+    }
+
+    modifier = {
+        pc_nitrogenium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_pc_nitrogenium_preference = {
+    icon = "gfx/interface/icons/traits/trait_nitrogenium_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL }
+    sorting_priority = 30
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    modification = yes
+
+    modifier = {
+        pc_nitrogenium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_sulphureum_species = {
+    icon = "gfx/interface/icons/traits/trait_sulphureum_habitable_preference.dds"
+
+    cost = 2
+    initial = yes
+    randomized = no
+    modification = yes
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_SULPHUREUM_SPECIES_EFFECT
+
+    prerequisites = {
+        "tech_sulphureum_adaptation"
+    }
+
+    modifier = {
+        pc_sulphureum_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_pc_sulphureum_preference = {
+    icon = "gfx/interface/icons/traits/trait_sulphureum_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL }
+    sorting_priority = 30
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    modification = yes
+
+    modifier = {
+        pc_sulphureum_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_argonium_species = {
+    icon = "gfx/interface/icons/traits/trait_argonium_habitable_preference.dds"
+
+    cost = 2
+    initial = yes
+    randomized = no
+    modification = yes
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_ARGONIUM_SPECIES_EFFECT
+
+    prerequisites = {
+        "tech_argonium_adaptation"
+    }
+
+    modifier = {
+        pc_argonium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_pc_argonium_preference = {
+    icon = "gfx/interface/icons/traits/trait_argonium_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL }
+    sorting_priority = 30
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    modification = yes
+
+    modifier = {
+        pc_argonium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_phosphorium_species = {
+    icon = "gfx/interface/icons/traits/trait_phosphorium_habitable_preference.dds"
+
+    cost = 2
+    initial = yes
+    randomized = no
+    modification = yes
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_PHOSPHORIUM_SPECIES_EFFECT
+
+    prerequisites = {
+        "tech_phosphorium_adaptation"
+    }
+
+    modifier = {
+        pc_phosphorium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_pc_phosphorium_preference = {
+    icon = "gfx/interface/icons/traits/trait_phosphorium_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL }
+    sorting_priority = 30
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    modification = yes
+
+    modifier = {
+        pc_phosphorium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_ammonium_species = {
+    icon = "gfx/interface/icons/traits/trait_ammonium_habitable_preference.dds"
+
+    cost = 2
+    initial = yes
+    randomized = no
+    modification = yes
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_AMMONIUM_SPECIES_EFFECT
+
+    prerequisites = {
+        "tech_ammonium_adaptation"
+    }
+
+    modifier = {
+        pc_ammonium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_pc_ammonium_preference = {
+    icon = "gfx/interface/icons/traits/trait_ammonium_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL }
+    sorting_priority = 30
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    modification = yes
+
+    modifier = {
+        pc_ammonium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_mercurium_species = {
+    icon = "gfx/interface/icons/traits/trait_mercurium_habitable_preference.dds"
+
+    cost = 2
+    initial = yes
+    randomized = no
+    modification = yes
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_MERCURIUM_SPECIES_EFFECT
+
+    prerequisites = {
+        "tech_mercurium_adaptation"
+    }
+
+    modifier = {
+        pc_mercurium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_pc_mercurium_preference = {
+    icon = "gfx/interface/icons/traits/trait_mercurium_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL }
+    sorting_priority = 30
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    modification = yes
+
+    modifier = {
+        pc_mercurium_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
     }
 }
 
 trait_barium_species = {
-    icon = "gfx/interface/icons/traits/trait_undefined_habitable_preference.dds"
+    icon = "gfx/interface/icons/traits/trait_barium_habitable_preference.dds"
 
-    cost = 1
-    initial = no
+    cost = 2
+    initial = yes
     randomized = no
     modification = yes
     advanced_trait = yes
@@ -150,17 +484,21 @@ trait_barium_species = {
     allowed_archetypes = { BIOLOGICAL }
     custom_tooltip = TRAIT_BARIUM_SPECIES_EFFECT
 
+    prerequisites = {
+        "tech_barium_adaptation"
+    }
+
     modifier = {
         pc_barium_habitability = @primary
     }
 
     ai_weight = {
-        weight = 0
+        weight = 100
     }
 }
 
 trait_pc_barium_preference = {
-    icon = "gfx/interface/icons/traits/trait_undefined_habitable_preference.dds"
+    icon = "gfx/interface/icons/traits/trait_barium_habitable_preference.dds"
     allowed_archetypes = { BIOLOGICAL }
     sorting_priority = 30
     initial = no
@@ -173,15 +511,15 @@ trait_pc_barium_preference = {
     }
 
     ai_weight = {
-        weight = 0
+        weight = 100
     }
 }
 
-trait_xenomorphic_species = {
-    icon = "gfx/interface/icons/traits/trait_undefined_habitable_preference.dds"
+trait_chlorum_species = {
+    icon = "gfx/interface/icons/traits/trait_chlorum_habitable_preference.dds"
 
-    cost = 1
-    initial = no
+    cost = 2
+    initial = yes
     randomized = no
     modification = yes
     advanced_trait = yes
@@ -190,16 +528,120 @@ trait_xenomorphic_species = {
 
     opposites = {}
     allowed_archetypes = { BIOLOGICAL }
-    custom_tooltip = TRAIT_XENOMORPHIC_SPECIES_EFFECT
+    custom_tooltip = TRAIT_CHLORUM_SPECIES_EFFECT
+
+    prerequisites = {
+        "tech_chlorum_adaptation"
+    }
 
     modifier = {
-        pc_crystalline_habitability = @tertiary
-        pc_metalline_habitability = @tertiary
-        pc_methanum_habitability = @tertiary
-        pc_barium_habitability = @tertiary
+        pc_chlorum_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_pc_chlorum_preference = {
+    icon = "gfx/interface/icons/traits/trait_chlorum_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL }
+    sorting_priority = 30
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    modification = yes
+
+    modifier = {
+        pc_chlorum_habitability = @primary
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+trait_pc_sandsea_preference = {
+    icon = "gfx/interface/icons/traits/trait_sandsea_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.9
+        pc_oasis_habitability = 0.8
+        pc_geoprairie_habitability = 0.7
+        pc_greenlush_habitability = 0.6
+        pc_exogarden_habitability = 0.5
+        pc_floating_habitability = 0.5
+        pc_mangrove_habitability = 0.4
+        pc_steppe_habitability = 0.5
+        pc_tidallylocked_habitability = 0.7
+        pc_geothermal_habitability = 0.3
+        pc_glacial_habitability = 0.3
+
+        pc_desert_habitability = 0.9
+        pc_arid_habitability = 0.8
+        pc_savannah_habitability = 0.7
+        pc_tropical_habitability = 0.7
+        pc_continental_habitability = 0.6
+        pc_tundra_habitability = 0.5
+        pc_arctic_habitability = 0.3
+        pc_ocean_habitability = 0.6
+        pc_alpine_habitability = 0.4
     }
 
     ai_weight = {
         weight = 0
+    }
+}
+
+trait_xenomorphic_species = {
+    icon = "gfx/interface/icons/traits/trait_xenomorphic_habitable_preference.dds"
+
+    cost = 10
+    initial = no
+    randomized = no
+    modification = yes
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = yes
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_XENOMORPHIC_SPECIES_EFFECT
+
+    modifier = {
+        pc_sandsea_habitability = @secondary
+        pc_oasis_habitability = @secondary
+        pc_geoprairie_habitability = @secondary
+        pc_greenlush_habitability = @secondary
+        pc_exogarden_habitability = @secondary
+        pc_floating_habitability = @secondary
+        pc_mangrove_habitability = @secondary
+        pc_steppe_habitability = @secondary
+        pc_tidallylocked_habitability = @secondary
+        pc_geothermal_habitability = @secondary
+        pc_glacial_habitability = @secondary
+
+        pc_crystalline_habitability = @secondary
+        pc_metalline_habitability = @secondary
+        pc_methanum_habitability = @secondary
+        pc_carbonium_habitability = @secondary
+        pc_nitrogenium_habitability = @secondary
+        pc_sulphureum_habitability = @secondary
+        pc_argonium_habitability = @secondary
+        pc_phosphorium_habitability = @secondary
+        pc_ammonium_habitability = @secondary
+        pc_mercurium_habitability = @secondary
+        pc_barium_habitability = @secondary
+        pc_chlorum_habitability = @secondary
+    }
+
+    ai_weight = {
+        weight = 100
     }
 }
