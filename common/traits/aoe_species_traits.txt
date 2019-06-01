@@ -574,14 +574,24 @@ trait_pc_sandsea_preference = {
         pc_sandsea_habitability = 0.9
         pc_oasis_habitability = 0.8
         pc_geoprairie_habitability = 0.7
+        pc_desertislands_habitability = 0.7
+        pc_hadesert_habitability = 0.6
         pc_greenlush_habitability = 0.6
         pc_exogarden_habitability = 0.5
+        pc_xenovalley_habitability = 0.5
         pc_floating_habitability = 0.5
         pc_mangrove_habitability = 0.4
+        pc_bioforge_habitability = 0.4
+        pc_biolumen_habitability = 0.4
+        pc_boreal_habitability = 0.5
+        pc_irassia_habitability = 0.4
+        pc_frozen_desert_habitability = 0.4
         pc_steppe_habitability = 0.5
-        pc_tidallylocked_habitability = 0.7
+        pc_tidallylocked_habitability = 0.5
         pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
         pc_glacial_habitability = 0.3
+        pc_antarctic_habitability = 0.2
 
         pc_desert_habitability = 0.9
         pc_arid_habitability = 0.8
@@ -589,9 +599,969 @@ trait_pc_sandsea_preference = {
         pc_tropical_habitability = 0.7
         pc_continental_habitability = 0.6
         pc_tundra_habitability = 0.5
-        pc_arctic_habitability = 0.3
-        pc_ocean_habitability = 0.6
+        pc_arctic_habitability = 0.2
+        pc_ocean_habitability = 0.5
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_oasis_preference = {
+    icon = "gfx/interface/icons/traits/trait_oasis_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.8
+        pc_oasis_habitability = 0.9
+        pc_geoprairie_habitability = 0.8
+        pc_desertislands_habitability = 0.7
+        pc_hadesert_habitability = 0.6
+        pc_greenlush_habitability = 0.6
+        pc_exogarden_habitability = 0.5
+        pc_xenovalley_habitability = 0.5
+        pc_floating_habitability = 0.5
+        pc_mangrove_habitability = 0.4
+        pc_bioforge_habitability = 0.4
+        pc_biolumen_habitability = 0.4
+        pc_boreal_habitability = 0.5
+        pc_irassia_habitability = 0.6
+        pc_frozen_desert_habitability = 0.4
+        pc_steppe_habitability = 0.5
+        pc_tidallylocked_habitability = 0.5
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.3
+        pc_antarctic_habitability = 0.2
+
+        pc_desert_habitability = 0.8
+        pc_arid_habitability = 0.9
+        pc_savannah_habitability = 0.7
+        pc_tropical_habitability = 0.7
+        pc_continental_habitability = 0.6
+        pc_tundra_habitability = 0.5
+        pc_arctic_habitability = 0.2
+        pc_ocean_habitability = 0.5
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_geoprairie_preference = {
+    icon = "gfx/interface/icons/traits/trait_geoprairie_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.7
+        pc_oasis_habitability = 0.8
+        pc_geoprairie_habitability = 0.9
+        pc_desertislands_habitability = 0.7
+        pc_hadesert_habitability = 0.6
+        pc_greenlush_habitability = 0.6
+        pc_exogarden_habitability = 0.5
+        pc_xenovalley_habitability = 0.5
+        pc_floating_habitability = 0.5
+        pc_mangrove_habitability = 0.5
+        pc_bioforge_habitability = 0.5
+        pc_biolumen_habitability = 0.5
+        pc_boreal_habitability = 0.4
+        pc_irassia_habitability = 0.4
+        pc_frozen_desert_habitability = 0.4
+        pc_steppe_habitability = 0.4
+        pc_tidallylocked_habitability = 0.5
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.3
+        pc_antarctic_habitability = 0.2
+
+        pc_desert_habitability = 0.7
+        pc_arid_habitability = 0.8
+        pc_savannah_habitability = 0.8
+        pc_tropical_habitability = 0.6
+        pc_continental_habitability = 0.5
+        pc_tundra_habitability = 0.5
+        pc_arctic_habitability = 0.2
+        pc_ocean_habitability = 0.4
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_desertislands_preference = {
+    icon = "gfx/interface/icons/traits/trait_desertislands_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.8
+        pc_oasis_habitability = 0.7
+        pc_geoprairie_habitability = 0.7
+        pc_desertislands_habitability = 0.9
+        pc_hadesert_habitability = 0.7
+        pc_greenlush_habitability = 0.6
+        pc_exogarden_habitability = 0.6
+        pc_xenovalley_habitability = 0.7
+        pc_floating_habitability = 0.5
+        pc_mangrove_habitability = 0.4
+        pc_bioforge_habitability = 0.4
+        pc_biolumen_habitability = 0.4
+        pc_boreal_habitability = 0.5
+        pc_irassia_habitability = 0.5
+        pc_frozen_desert_habitability = 0.4
+        pc_steppe_habitability = 0.4
+        pc_tidallylocked_habitability = 0.5
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.3
+        pc_antarctic_habitability = 0.2
+
+        pc_desert_habitability = 0.8
+        pc_arid_habitability = 0.8
+        pc_savannah_habitability = 0.7
+        pc_tropical_habitability = 0.6
+        pc_continental_habitability = 0.5
+        pc_tundra_habitability = 0.5
+        pc_arctic_habitability = 0.2
+        pc_ocean_habitability = 0.4
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_hadesert_preference = {
+    icon = "gfx/interface/icons/traits/trait_hadesert_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.8
+        pc_oasis_habitability = 0.7
+        pc_geoprairie_habitability = 0.7
+        pc_desertislands_habitability = 0.8
+        pc_hadesert_habitability = 0.9
+        pc_greenlush_habitability = 0.6
+        pc_exogarden_habitability = 0.6
+        pc_xenovalley_habitability = 0.7
+        pc_floating_habitability = 0.5
+        pc_mangrove_habitability = 0.4
+        pc_bioforge_habitability = 0.4
+        pc_biolumen_habitability = 0.4
+        pc_boreal_habitability = 0.5
+        pc_irassia_habitability = 0.5
+        pc_frozen_desert_habitability = 0.4
+        pc_steppe_habitability = 0.4
+        pc_tidallylocked_habitability = 0.5
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.3
+        pc_antarctic_habitability = 0.2
+
+        pc_desert_habitability = 0.8
+        pc_arid_habitability = 0.8
+        pc_savannah_habitability = 0.7
+        pc_tropical_habitability = 0.6
+        pc_continental_habitability = 0.5
+        pc_tundra_habitability = 0.5
+        pc_arctic_habitability = 0.2
+        pc_ocean_habitability = 0.4
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_greenlush_preference = {
+    icon = "gfx/interface/icons/traits/trait_greenlush_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.3
+        pc_oasis_habitability = 0.5
+        pc_geoprairie_habitability = 0.4
+        pc_desertislands_habitability = 0.5
+        pc_hadesert_habitability = 0.4
+        pc_greenlush_habitability = 0.9
+        pc_exogarden_habitability = 0.7
+        pc_xenovalley_habitability = 0.6
+        pc_floating_habitability = 0.8
+        pc_mangrove_habitability = 0.6
+        pc_bioforge_habitability = 0.5
+        pc_biolumen_habitability = 0.5
+        pc_boreal_habitability = 0.7
+        pc_irassia_habitability = 0.6
+        pc_frozen_desert_habitability = 0.4
+        pc_steppe_habitability = 0.4
+        pc_tidallylocked_habitability = 0.5
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.3
+        pc_antarctic_habitability = 0.2
+
+        pc_desert_habitability = 0.3
+        pc_arid_habitability = 0.4
+        pc_savannah_habitability = 0.4
+        pc_tropical_habitability = 0.7
+        pc_continental_habitability = 0.7
+        pc_tundra_habitability = 0.4
+        pc_arctic_habitability = 0.2
+        pc_ocean_habitability = 0.4
         pc_alpine_habitability = 0.4
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_exogarden_preference = {
+    icon = "gfx/interface/icons/traits/trait_exogarden_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.2
+        pc_oasis_habitability = 0.4
+        pc_geoprairie_habitability = 0.3
+        pc_desertislands_habitability = 0.4
+        pc_hadesert_habitability = 0.3
+        pc_greenlush_habitability = 0.7
+        pc_exogarden_habitability = 0.9
+        pc_xenovalley_habitability = 0.6
+        pc_floating_habitability = 0.8
+        pc_mangrove_habitability = 0.6
+        pc_bioforge_habitability = 0.4
+        pc_biolumen_habitability = 0.4
+        pc_boreal_habitability = 0.5
+        pc_irassia_habitability = 0.7
+        pc_frozen_desert_habitability = 0.3
+        pc_steppe_habitability = 0.3
+        pc_tidallylocked_habitability = 0.4
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.2
+        pc_antarctic_habitability = 0.1
+
+        pc_desert_habitability = 0.2
+        pc_arid_habitability = 0.3
+        pc_savannah_habitability = 0.3
+        pc_tropical_habitability = 0.7
+        pc_continental_habitability = 0.6
+        pc_tundra_habitability = 0.3
+        pc_arctic_habitability = 0.1
+        pc_ocean_habitability = 0.3
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_xenovalley_preference = {
+    icon = "gfx/interface/icons/traits/trait_xenovalley_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.2
+        pc_oasis_habitability = 0.4
+        pc_geoprairie_habitability = 0.6
+        pc_desertislands_habitability = 0.4
+        pc_hadesert_habitability = 0.3
+        pc_greenlush_habitability = 0.6
+        pc_exogarden_habitability = 0.8
+        pc_xenovalley_habitability = 0.9
+        pc_floating_habitability = 0.8
+        pc_mangrove_habitability = 0.6
+        pc_bioforge_habitability = 0.4
+        pc_biolumen_habitability = 0.4
+        pc_boreal_habitability = 0.5
+        pc_irassia_habitability = 0.5
+        pc_frozen_desert_habitability = 0.3
+        pc_steppe_habitability = 0.3
+        pc_tidallylocked_habitability = 0.4
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.2
+        pc_antarctic_habitability = 0.1
+
+        pc_desert_habitability = 0.2
+        pc_arid_habitability = 0.3
+        pc_savannah_habitability = 0.3
+        pc_tropical_habitability = 0.5
+        pc_continental_habitability = 0.7
+        pc_tundra_habitability = 0.3
+        pc_arctic_habitability = 0.1
+        pc_ocean_habitability = 0.3
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_floating_preference = {
+    icon = "gfx/interface/icons/traits/trait_floating_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.2
+        pc_oasis_habitability = 0.4
+        pc_geoprairie_habitability = 0.3
+        pc_desertislands_habitability = 0.4
+        pc_hadesert_habitability = 0.3
+        pc_greenlush_habitability = 0.7
+        pc_exogarden_habitability = 0.8
+        pc_xenovalley_habitability = 0.6
+        pc_floating_habitability = 0.9
+        pc_mangrove_habitability = 0.6
+        pc_bioforge_habitability = 0.4
+        pc_biolumen_habitability = 0.4
+        pc_boreal_habitability = 0.5
+        pc_irassia_habitability = 0.6
+        pc_frozen_desert_habitability = 0.3
+        pc_steppe_habitability = 0.3
+        pc_tidallylocked_habitability = 0.4
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.2
+        pc_antarctic_habitability = 0.1
+
+        pc_desert_habitability = 0.2
+        pc_arid_habitability = 0.3
+        pc_savannah_habitability = 0.3
+        pc_tropical_habitability = 0.7
+        pc_continental_habitability = 0.6
+        pc_tundra_habitability = 0.3
+        pc_arctic_habitability = 0.1
+        pc_ocean_habitability = 0.3
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_mangrove_preference = {
+    icon = "gfx/interface/icons/traits/trait_mangrove_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.2
+        pc_oasis_habitability = 0.4
+        pc_geoprairie_habitability = 0.3
+        pc_desertislands_habitability = 0.4
+        pc_hadesert_habitability = 0.3
+        pc_greenlush_habitability = 0.6
+        pc_exogarden_habitability = 0.6
+        pc_xenovalley_habitability = 0.6
+        pc_floating_habitability = 0.7
+        pc_mangrove_habitability = 0.9
+        pc_bioforge_habitability = 0.5
+        pc_biolumen_habitability = 0.5
+        pc_boreal_habitability = 0.5
+        pc_irassia_habitability = 0.6
+        pc_frozen_desert_habitability = 0.3
+        pc_steppe_habitability = 0.5
+        pc_tidallylocked_habitability = 0.5
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.2
+        pc_antarctic_habitability = 0.2
+
+        pc_desert_habitability = 0.2
+        pc_arid_habitability = 0.3
+        pc_savannah_habitability = 0.5
+        pc_tropical_habitability = 0.6
+        pc_continental_habitability = 0.7
+        pc_tundra_habitability = 0.5
+        pc_arctic_habitability = 0.2
+        pc_ocean_habitability = 0.5
+        pc_alpine_habitability = 0.6
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_bioforge_preference = {
+    icon = "gfx/interface/icons/traits/trait_bioforge_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.2
+        pc_oasis_habitability = 0.3
+        pc_geoprairie_habitability = 0.3
+        pc_desertislands_habitability = 0.3
+        pc_hadesert_habitability = 0.3
+        pc_greenlush_habitability = 0.6
+        pc_exogarden_habitability = 0.6
+        pc_xenovalley_habitability = 0.6
+        pc_floating_habitability = 0.6
+        pc_mangrove_habitability = 0.5
+        pc_bioforge_habitability = 0.9
+        pc_biolumen_habitability = 0.7
+        pc_boreal_habitability = 0.4
+        pc_irassia_habitability = 0.6
+        pc_frozen_desert_habitability = 0.3
+        pc_steppe_habitability = 0.4
+        pc_tidallylocked_habitability = 0.4
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.1
+        pc_antarctic_habitability = 0.1
+
+        pc_desert_habitability = 0.1
+        pc_arid_habitability = 0.3
+        pc_savannah_habitability = 0.3
+        pc_tropical_habitability = 0.6
+        pc_continental_habitability = 0.7
+        pc_tundra_habitability = 0.4
+        pc_arctic_habitability = 0.1
+        pc_ocean_habitability = 0.3
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_biolumen_preference = {
+    icon = "gfx/interface/icons/traits/trait_biolumen_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.2
+        pc_oasis_habitability = 0.3
+        pc_geoprairie_habitability = 0.3
+        pc_desertislands_habitability = 0.3
+        pc_hadesert_habitability = 0.3
+        pc_greenlush_habitability = 0.6
+        pc_exogarden_habitability = 0.6
+        pc_xenovalley_habitability = 0.6
+        pc_floating_habitability = 0.6
+        pc_mangrove_habitability = 0.5
+        pc_bioforge_habitability = 0.7
+        pc_biolumen_habitability = 0.9
+        pc_boreal_habitability = 0.4
+        pc_irassia_habitability = 0.6
+        pc_frozen_desert_habitability = 0.3
+        pc_steppe_habitability = 0.4
+        pc_tidallylocked_habitability = 0.4
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.1
+        pc_antarctic_habitability = 0.1
+
+        pc_desert_habitability = 0.1
+        pc_arid_habitability = 0.3
+        pc_savannah_habitability = 0.3
+        pc_tropical_habitability = 0.6
+        pc_continental_habitability = 0.7
+        pc_tundra_habitability = 0.4
+        pc_arctic_habitability = 0.1
+        pc_ocean_habitability = 0.3
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_boreal_preference = {
+    icon = "gfx/interface/icons/traits/trait_boreal_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.2
+        pc_oasis_habitability = 0.3
+        pc_geoprairie_habitability = 0.3
+        pc_desertislands_habitability = 0.3
+        pc_hadesert_habitability = 0.4
+        pc_greenlush_habitability = 0.6
+        pc_exogarden_habitability = 0.6
+        pc_xenovalley_habitability = 0.5
+        pc_floating_habitability = 0.6
+        pc_mangrove_habitability = 0.5
+        pc_bioforge_habitability = 0.6
+        pc_biolumen_habitability = 0.5
+        pc_boreal_habitability = 0.9
+        pc_irassia_habitability = 0.5
+        pc_frozen_desert_habitability = 0.3
+        pc_steppe_habitability = 0.3
+        pc_tidallylocked_habitability = 0.4
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.2
+        pc_antarctic_habitability = 0.2
+
+        pc_desert_habitability = 0.2
+        pc_arid_habitability = 0.3
+        pc_savannah_habitability = 0.4
+        pc_tropical_habitability = 0.6
+        pc_continental_habitability = 0.7
+        pc_tundra_habitability = 0.5
+        pc_arctic_habitability = 0.2
+        pc_ocean_habitability = 0.3
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_irassia_preference = {
+    icon = "gfx/interface/icons/traits/trait_irassia_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.2
+        pc_oasis_habitability = 0.3
+        pc_geoprairie_habitability = 0.3
+        pc_desertislands_habitability = 0.3
+        pc_hadesert_habitability = 0.4
+        pc_greenlush_habitability = 0.5
+        pc_exogarden_habitability = 0.7
+        pc_xenovalley_habitability = 0.5
+        pc_floating_habitability = 0.6
+        pc_mangrove_habitability = 0.5
+        pc_bioforge_habitability = 0.6
+        pc_biolumen_habitability = 0.5
+        pc_boreal_habitability = 0.6
+        pc_irassia_habitability = 0.9
+        pc_frozen_desert_habitability = 0.3
+        pc_steppe_habitability = 0.3
+        pc_tidallylocked_habitability = 0.4
+        pc_geothermal_habitability = 0.3
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.2
+        pc_antarctic_habitability = 0.2
+
+        pc_desert_habitability = 0.2
+        pc_arid_habitability = 0.3
+        pc_savannah_habitability = 0.4
+        pc_tropical_habitability = 0.6
+        pc_continental_habitability = 0.5
+        pc_tundra_habitability = 0.4
+        pc_arctic_habitability = 0.2
+        pc_ocean_habitability = 0.3
+        pc_alpine_habitability = 0.3
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_frozen_desert_preference = {
+    icon = "gfx/interface/icons/traits/trait_frozen_desert_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.4
+        pc_oasis_habitability = 0.4
+        pc_geoprairie_habitability = 0.4
+        pc_desertislands_habitability = 0.4
+        pc_hadesert_habitability = 0.6
+        pc_greenlush_habitability = 0.3
+        pc_exogarden_habitability = 0.3
+        pc_xenovalley_habitability = 0.4
+        pc_floating_habitability = 0.3
+        pc_mangrove_habitability = 0.4
+        pc_bioforge_habitability = 0.2
+        pc_biolumen_habitability = 0.2
+        pc_boreal_habitability = 0.4
+        pc_irassia_habitability = 0.2
+        pc_frozen_desert_habitability = 0.9
+        pc_steppe_habitability = 0.7
+        pc_tidallylocked_habitability = 0.6
+        pc_geothermal_habitability = 0.4
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.2
+        pc_antarctic_habitability = 0.2
+
+        pc_desert_habitability = 0.4
+        pc_arid_habitability = 0.5
+        pc_savannah_habitability = 0.6
+        pc_tropical_habitability = 0.5
+        pc_continental_habitability = 0.3
+        pc_tundra_habitability = 0.7
+        pc_arctic_habitability = 0.2
+        pc_ocean_habitability = 0.3
+        pc_alpine_habitability = 0.4
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_steppe_preference = {
+    icon = "gfx/interface/icons/traits/trait_steppe_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.3
+        pc_oasis_habitability = 0.3
+        pc_geoprairie_habitability = 0.3
+        pc_desertislands_habitability = 0.4
+        pc_hadesert_habitability = 0.4
+        pc_greenlush_habitability = 0.3
+        pc_exogarden_habitability = 0.2
+        pc_xenovalley_habitability = 0.4
+        pc_floating_habitability = 0.2
+        pc_mangrove_habitability = 0.3
+        pc_bioforge_habitability = 0.2
+        pc_biolumen_habitability = 0.2
+        pc_boreal_habitability = 0.4
+        pc_irassia_habitability = 0.2
+        pc_frozen_desert_habitability = 0.6
+        pc_steppe_habitability = 0.9
+        pc_tidallylocked_habitability = 0.6
+        pc_geothermal_habitability = 0.4
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.2
+        pc_antarctic_habitability = 0.2
+
+        pc_desert_habitability = 0.3
+        pc_arid_habitability = 0.3
+        pc_savannah_habitability = 0.4
+        pc_tropical_habitability = 0.3
+        pc_continental_habitability = 0.3
+        pc_tundra_habitability = 0.8
+        pc_arctic_habitability = 0.3
+        pc_ocean_habitability = 0.3
+        pc_alpine_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_tidallylocked_preference = {
+    icon = "gfx/interface/icons/traits/trait_tidallylocked_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.5
+        pc_oasis_habitability = 0.4
+        pc_geoprairie_habitability = 0.2
+        pc_desertislands_habitability = 0.4
+        pc_hadesert_habitability = 0.5
+        pc_greenlush_habitability = 0.3
+        pc_exogarden_habitability = 0.2
+        pc_xenovalley_habitability = 0.4
+        pc_floating_habitability = 0.2
+        pc_mangrove_habitability = 0.2
+        pc_bioforge_habitability = 0.2
+        pc_biolumen_habitability = 0.2
+        pc_boreal_habitability = 0.3
+        pc_irassia_habitability = 0.2
+        pc_frozen_desert_habitability = 0.4
+        pc_steppe_habitability = 0.6
+        pc_tidallylocked_habitability = 0.9
+        pc_geothermal_habitability = 0.4
+        pc_subarctic_habitability = 0.3
+        pc_glacial_habitability = 0.2
+        pc_antarctic_habitability = 0.2
+
+        pc_desert_habitability = 0.4
+        pc_arid_habitability = 0.5
+        pc_savannah_habitability = 0.6
+        pc_tropical_habitability = 0.3
+        pc_continental_habitability = 0.3
+        pc_tundra_habitability = 0.5
+        pc_arctic_habitability = 0.3
+        pc_ocean_habitability = 0.3
+        pc_alpine_habitability = 0.5
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_geothermal_preference = {
+    icon = "gfx/interface/icons/traits/trait_geothermal_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.2
+        pc_oasis_habitability = 0.2
+        pc_geoprairie_habitability = 0.2
+        pc_desertislands_habitability = 0.3
+        pc_hadesert_habitability = 0.3
+        pc_greenlush_habitability = 0.2
+        pc_exogarden_habitability = 0.1
+        pc_xenovalley_habitability = 0.3
+        pc_floating_habitability = 0.1
+        pc_mangrove_habitability = 0.2
+        pc_bioforge_habitability = 0.1
+        pc_biolumen_habitability = 0.1
+        pc_boreal_habitability = 0.2
+        pc_irassia_habitability = 0.1
+        pc_frozen_desert_habitability = 0.4
+        pc_steppe_habitability = 0.5
+        pc_tidallylocked_habitability = 0.5
+        pc_geothermal_habitability = 0.9
+        pc_subarctic_habitability = 0.7
+        pc_glacial_habitability = 0.6
+        pc_antarctic_habitability = 0.5
+
+        pc_desert_habitability = 0.2
+        pc_arid_habitability = 0.2
+        pc_savannah_habitability = 0.2
+        pc_tropical_habitability = 0.1
+        pc_continental_habitability = 0.1
+        pc_tundra_habitability = 0.5
+        pc_arctic_habitability = 0.7
+        pc_ocean_habitability = 0.2
+        pc_alpine_habitability = 0.4
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_subarctic_preference = {
+    icon = "gfx/interface/icons/traits/trait_subarctic_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.2
+        pc_oasis_habitability = 0.2
+        pc_geoprairie_habitability = 0.2
+        pc_desertislands_habitability = 0.3
+        pc_hadesert_habitability = 0.3
+        pc_greenlush_habitability = 0.2
+        pc_exogarden_habitability = 0.1
+        pc_xenovalley_habitability = 0.2
+        pc_floating_habitability = 0.1
+        pc_mangrove_habitability = 0.2
+        pc_bioforge_habitability = 0.1
+        pc_biolumen_habitability = 0.1
+        pc_boreal_habitability = 0.2
+        pc_irassia_habitability = 0.1
+        pc_frozen_desert_habitability = 0.4
+        pc_steppe_habitability = 0.5
+        pc_tidallylocked_habitability = 0.5
+        pc_geothermal_habitability = 0.7
+        pc_subarctic_habitability = 0.9
+        pc_glacial_habitability = 0.7
+        pc_antarctic_habitability = 0.8
+
+        pc_desert_habitability = 0.2
+        pc_arid_habitability = 0.2
+        pc_savannah_habitability = 0.2
+        pc_tropical_habitability = 0.1
+        pc_continental_habitability = 0.1
+        pc_tundra_habitability = 0.4
+        pc_arctic_habitability = 0.8
+        pc_ocean_habitability = 0.2
+        pc_alpine_habitability = 0.4
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_glacial_preference = {
+    icon = "gfx/interface/icons/traits/trait_glacial_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.1
+        pc_oasis_habitability = 0.1
+        pc_geoprairie_habitability = 0.1
+        pc_desertislands_habitability = 0.1
+        pc_hadesert_habitability = 0.2
+        pc_greenlush_habitability = 0.1
+        pc_exogarden_habitability = 0.1
+        pc_xenovalley_habitability = 0.2
+        pc_floating_habitability = 0.1
+        pc_mangrove_habitability = 0.1
+        pc_bioforge_habitability = 0.1
+        pc_biolumen_habitability = 0.1
+        pc_boreal_habitability = 0.1
+        pc_irassia_habitability = 0.1
+        pc_frozen_desert_habitability = 0.4
+        pc_steppe_habitability = 0.4
+        pc_tidallylocked_habitability = 0.3
+        pc_geothermal_habitability = 0.6
+        pc_subarctic_habitability = 0.8
+        pc_glacial_habitability = 0.9
+        pc_antarctic_habitability = 0.8
+
+        pc_desert_habitability = 0.1
+        pc_arid_habitability = 0.1
+        pc_savannah_habitability = 0.1
+        pc_tropical_habitability = 0.1
+        pc_continental_habitability = 0.1
+        pc_tundra_habitability = 0.4
+        pc_arctic_habitability = 0.8
+        pc_ocean_habitability = 0.1
+        pc_alpine_habitability = 0.2
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_pc_antarctic_preference = {
+    icon = "gfx/interface/icons/traits/trait_antarctic_habitable_preference.dds"
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    sorting_priority = 30
+    initial = yes
+    randomized = yes
+    advanced_trait = no
+    modification = yes
+
+    modifier = {
+        pc_sandsea_habitability = 0.1
+        pc_oasis_habitability = 0.1
+        pc_geoprairie_habitability = 0.1
+        pc_desertislands_habitability = 0.1
+        pc_hadesert_habitability = 0.1
+        pc_greenlush_habitability = 0.1
+        pc_exogarden_habitability = 0.1
+        pc_xenovalley_habitability = 0.1
+        pc_floating_habitability = 0.1
+        pc_mangrove_habitability = 0.1
+        pc_bioforge_habitability = 0.1
+        pc_biolumen_habitability = 0.1
+        pc_boreal_habitability = 0.1
+        pc_irassia_habitability = 0.1
+        pc_frozen_desert_habitability = 0.3
+        pc_steppe_habitability = 0.3
+        pc_tidallylocked_habitability = 0.3
+        pc_geothermal_habitability = 0.6
+        pc_subarctic_habitability = 0.8
+        pc_glacial_habitability = 0.8
+        pc_antarctic_habitability = 0.9
+
+        pc_desert_habitability = 0.1
+        pc_arid_habitability = 0.1
+        pc_savannah_habitability = 0.1
+        pc_tropical_habitability = 0.1
+        pc_continental_habitability = 0.1
+        pc_tundra_habitability = 0.3
+        pc_arctic_habitability = 0.8
+        pc_ocean_habitability = 0.1
+        pc_alpine_habitability = 0.2
     }
 
     ai_weight = {
@@ -618,14 +1588,24 @@ trait_xenomorphic_species = {
         pc_sandsea_habitability = @secondary
         pc_oasis_habitability = @secondary
         pc_geoprairie_habitability = @secondary
+        pc_desertislands_habitability = @secondary
+        pc_hadesert_habitability = @secondary
         pc_greenlush_habitability = @secondary
         pc_exogarden_habitability = @secondary
+        pc_xenovalley_habitability = @secondary
         pc_floating_habitability = @secondary
         pc_mangrove_habitability = @secondary
+        pc_bioforge_habitability = @secondary
+        pc_biolumen_habitability = @secondary
+        pc_boreal_habitability = @secondary
+        pc_irassia_habitability = @secondary
+        pc_frozen_desert_habitability = @secondary
         pc_steppe_habitability = @secondary
         pc_tidallylocked_habitability = @secondary
         pc_geothermal_habitability = @secondary
+        pc_subarctic_habitability = @secondary
         pc_glacial_habitability = @secondary
+        pc_antarctic_habitability = @secondary
 
         pc_crystalline_habitability = @secondary
         pc_metalline_habitability = @secondary
