@@ -260,7 +260,7 @@ entity = {
     meshsettings = {
         name = "planet_geosphereShape"
         texture_diffuse = "ammonium_01_diffuse.dds"
-        texture_normal = "ammonium_01_normals.dds"
+        texture_normal = "ammonium_01_normal.dds"
         texture_specular = "ammonium_01_specular.dds"
     }
 

@@ -472,15 +472,15 @@ entity = {
     ##cloud texture override
     meshsettings = {
         name = "clouds_geosphereShape"
-        texture_diffuse = "celestial_wet_clouds_06_diffuse.dds"
-        texture_normal = "celestial_wet_clouds_06_normal.dds"
+        texture_diffuse = "celestial_wet_clouds_07_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_07_normal.dds"
         texture_specular = "clouds_medium_specular.dds"
     }
 
     ##cloud shadow texture override
     meshsettings = {
         name = "clouds_shadow_geosphereShape"
-        texture_diffuse = "celestial_wet_clouds_shadow_06_diffuse.dds"
+        texture_diffuse = "celestial_wet_clouds_shadow_07_diffuse.dds"
         texture_normal = "nonormal.dds"
         texture_specular = "nospec.dds"
     }
@@ -2937,15 +2937,15 @@ entity = {
     ##cloud texture override
     meshsettings = {
         name = "clouds_geosphereShape"
-        texture_diffuse = "celestial_wet_clouds_06_diffuse.dds"
-        texture_normal = "celestial_wet_clouds_06_normal.dds"
+        texture_diffuse = "celestial_wet_clouds_07_diffuse.dds"
+        texture_normal = "celestial_wet_clouds_07_normal.dds"
         texture_specular = "clouds_thin_specular.dds"
     }
 
     ##cloud shadow texture override
     meshsettings = {
         name = "clouds_shadow_geosphereShape"
-        texture_diffuse = "celestial_wet_clouds_shadow_06_diffuse.dds"
+        texture_diffuse = "celestial_wet_clouds_shadow_07_diffuse.dds"
         texture_normal = "nonormal.dds"
         texture_specular = "nospec.dds"
     }
