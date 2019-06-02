@@ -79,79 +79,79 @@ spriteTypes = {
     }
     spriteType = {
         name = "GFX_aoe_crystalline_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/crystalline_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_metalline_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/metalline_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_methanum_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/methanum_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_carbonium_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/carbonium_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_nitrogenium_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/nitrogenium_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_sulphureum_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/sulphureum_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_argonium_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/argonium_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_phosphorium_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/phosphorium_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_ammonium_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/ammonium_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_mercurium_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/mercurium_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_barium_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/barium_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_chlorum_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/chlorum_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_celestial_worlds"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/celestial_worlds_exploring.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
@@ -349,7 +349,7 @@ spriteTypes = {
     }
     spriteType = {
         name = "GFX_aoe_adaptation_exploded"
-        texturefile = "gfx/event_pictures/scientific_accident.dds"
+        texturefile = "gfx/event_pictures/scientific_breakdown.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }

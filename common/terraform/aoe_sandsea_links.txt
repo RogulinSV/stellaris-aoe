@@ -1,0 +1,1957 @@
+@habitable_energy_cost = 9000
+@habitable_duration_cost = 3600
+
+@special_energy_cost = 15000
+@special_duration_cost = 7200
+
+@uninhabitable_energy_cost = 7000
+@uninhabitable_duration_cost = 3600
+
+@machine_energy_cost = 13000
+@machine_duration_cost = 7200
+
+@hive_energy_cost = 13000
+@hive_duration_cost = 7200
+
+### ############## ###
+### Transform Into ###
+### ############## ###
+
+### Wet
+
+terraform_link = {
+    from = "pc_continental"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_ocean"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_tropical"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_greenlush"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_exogarden"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_xenovalley"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_floating"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_mangrove"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_bioforge"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_biolumen"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_boreal"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_irassia"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+
+### Cold
+
+terraform_link = {
+    from = "pc_alpine"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_tundra"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_arctic"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_frozen_desert"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_steppe"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_tidallylocked"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_geothermal"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_subarctic"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_glacial"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_antarctic"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+### Dry
+
+terraform_link = {
+    from = "pc_desert"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_savannah"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_arid"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+# terraform_link = {
+#     from = "pc_sandsea"
+#     to = "pc_sandsea"
+
+#     energy = @habitable_energy_cost
+#     duration = @habitable_duration_cost
+
+#     condition = {
+#         has_technology = "tech_terrestrial_sculpting"
+#     }
+
+#     ai_weight = {
+#         weight = 0
+#     }
+# }
+
+terraform_link = {
+    from = "pc_oasis"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_geoprairie"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_desertislands"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_hadesert"
+    to = "pc_sandsea"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+### Special
+
+terraform_link = {
+    from = "pc_nuked"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_gaia"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 40000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_crystalline"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_crystalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_methanum"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_methanum_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_carbonium"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_carbonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogenium"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_nitrogenium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_sulphureum"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_sulphureum_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_argonium"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_argonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_phosphorium"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_phosphorium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_ammonium"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_ammonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_mercurium"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_mercurium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_barium"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_barium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_chlorum"
+    to = "pc_sandsea"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_chlorum_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+### Uninhabitable
+
+terraform_link = {
+    from = "pc_barren"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    potential = {
+        from = {
+            has_modifier = "terraforming_candidate"
+        }
+    }
+
+    effect = {
+        from = {
+            remove_modifier = "terraforming_candidate"
+        }
+    }
+
+    ai_weight = {
+        weight = 5
+    }
+}
+
+terraform_link = {
+    from = "pc_barren_cold"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    potential = {
+        from = {
+            has_modifier = "terraforming_candidate"
+        }
+    }
+
+    effect = {
+        from = {
+            remove_modifier = "terraforming_candidate"
+        }
+    }
+
+    ai_weight = {
+        weight = 5
+    }
+}
+
+terraform_link = {
+    from = "pc_crystalline_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_crystalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_metalline_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_metalline_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_methanum_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_methanum_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_carbonium_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_carbonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_nitrogenium_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_nitrogenium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_sulphureum_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_sulphureum_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_argonium_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_argonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_phosphorium_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_phosphorium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_ammonium_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_ammonium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_mercurium_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_mercurium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_barium_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_barium_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_chlorum_uninhabitable"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_chlorum_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_celestial_barren"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_celestial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 5
+    }
+}
+
+terraform_link = {
+    from = "pc_celestial_cold"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_celestial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 5
+    }
+}
+
+terraform_link = {
+    from = "pc_celestial_frozen"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_celestial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 5
+    }
+}
+
+terraform_link = {
+    from = "pc_celestial_hot"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_celestial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 5
+    }
+}
+
+terraform_link = {
+    from = "pc_celestial_molten"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_celestial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 5
+    }
+}
+
+terraform_link = {
+    from = "pc_celestial_wet"
+    to = "pc_sandsea"
+
+    energy = @uninhabitable_energy_cost
+    duration = @uninhabitable_duration_cost
+
+    condition = {
+        has_technology = "tech_celestial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 5
+    }
+}
+
+### Machine & Hive
+
+terraform_link = {
+    from = "pc_machine"
+    to = "pc_sandsea"
+
+    energy = @machine_energy_cost
+    duration = @machine_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_machine_worlds"
+    }
+
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOR = {
+                        has_trait = "trait_machine_unit"
+                        has_trait = "trait_mechanical"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_hive"
+    to = "pc_sandsea"
+
+    energy = @hive_energy_cost
+    duration = @hive_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_hive_worlds"
+    }
+
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOT = {
+                        has_trait = "trait_hive_mind"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+}
+
+### ############## ###
+### Transform From ###
+### ############## ###
+
+### Wet
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_continental"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_ocean"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_tropical"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+### Cold
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_alpine"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_tundra"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_arctic"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+### Dry
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_desert"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_savannah"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_arid"
+
+    energy = @habitable_energy_cost
+    duration = @habitable_duration_cost
+
+    condition = {
+        has_technology = "tech_terrestrial_sculpting"
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+### Special
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_nuked"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_gaia"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 40000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_crystalline"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_crystalline_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_crystalline"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_metalline"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_metalline_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_metalline"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_methanum"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_methanum_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_methanum"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_carbonium"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_carbonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_carbonium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_nitrogenium"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_nitrogenium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_nitrogenium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_sulphureum"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_sulphureum_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_sulphureum"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_argonium"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_argonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_argonium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_phosphorium"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_phosphorium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_phosphorium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_ammonium"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_ammonium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_ammonium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_mercurium"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_mercurium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_mercurium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_barium"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_barium_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_barium"
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_chlorum"
+
+    energy = @special_energy_cost
+    duration = @special_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+
+    condition = {
+        has_technology = "tech_chlorum_restoration"
+    }
+
+    ai_weight = {
+        weight = 2
+
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                ideal_planet_class = "pc_chlorum"
+            }
+        }
+    }
+}
+
+### Machine & Hive
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_machine"
+
+    energy = @machine_energy_cost
+    duration = @machine_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_machine_worlds"
+    }
+
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOR = {
+                        has_trait = "trait_machine_unit"
+                        has_trait = "trait_mechanical"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+}
+
+terraform_link = {
+    from = "pc_sandsea"
+    to = "pc_hive"
+
+    energy = @hive_energy_cost
+    duration = @hive_duration_cost
+
+    potential = {
+        has_ascension_perk = "ap_hive_worlds"
+    }
+
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOT = {
+                        has_trait = "trait_hive_mind"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+}
