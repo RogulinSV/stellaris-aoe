@@ -84,5 +84,110 @@
     trait_pc_chlorum_preference_desc:0 "Приспособленность к §Yхлорному§! миру"
     TRAIT_CHLORUM_SPECIES_EFFECT:0 "Приспособленность к климату §Yхлорного§! мира"
 
+    pc_sandsea_habitability:0 "Приспособленность к климату £planet£ мира §Sпесчаных морей§!"
+    mod_pc_sandsea_habitability:0 "Приспособленность к £planet£ миру §Sпесчаных морей§!"
+    trait_pc_sandsea_preference:0 "Приспособленность к миру §Sпесчаных морей§!"
+    trait_pc_sandsea_preference_desc:0 "Приспособленность к миру §Sпесчаных морей§!"
+
+    pc_oasis_habitability:0 "Приспособленность к климату £planet£ мира §Pоазиса§!"
+    mod_pc_oasis_habitability:0 "Приспособленность к £planet£ миру §Pоазиса§!"
+    trait_pc_oasis_preference:0 "Приспособленность к миру §Pоазиса§!"
+    trait_pc_oasis_preference_desc:0 "Приспособленность к миру §Pоазиса§!"
+
+    pc_geoprairie_habitability:0 "Приспособленность к климату £planet£ мира §Yгеопрерии§!"
+    mod_pc_geoprairie_habitability:0 "Приспособленность к £planet£ миру §Yгеопрерии§!"
+    trait_pc_geoprairie_preference:0 "Приспособленность к миру §Yгеопрерии§!"
+    trait_pc_geoprairie_preference_desc:0 "Приспособленность к миру §Yгеопрерии§!"
+
+    pc_desertislands_habitability:0 "Приспособленность к климату £planet£ мира §Hтропических островов§!"
+    mod_pc_desertislands_habitability:0 "Приспособленность к £planet£ миру §Hтропических островов§!"
+    trait_pc_desertislands_preference:0 "Приспособленность к миру §Hтропических островов§!"
+    trait_pc_desertislands_preference_desc:0 "Приспособленность к миру §Hтропических островов§!"
+
+    pc_hadesert_habitability:0 "Приспособленность к климату £planet£ мира §Sпустынных равнин§!"
+    mod_pc_hadesert_habitability:0 "Приспособленность к £planet£ миру §Sпустынных равнин§!"
+    trait_pc_hadesert_preference:0 "Приспособленность к миру §Sпустынных равнин§!"
+    trait_pc_hadesert_preference_desc:0 "Приспособленность к миру §Sпустынных равнин§!"
+
+    pc_greenlush_habitability:0 "Приспособленность к климату £planet£ мира §Gзелёных лесов§!"
+    mod_pc_greenlush_habitability:0 "Приспособленность к £planet£ миру §Gзелёных лесов§!"
+    trait_pc_greenlush_preference:0 "Приспособленность к миру §Gзелёных лесов§!"
+    trait_pc_greenlush_preference_desc:0 "Приспособленность к миру §Gзелёных лесов§!"
+
+    pc_exogarden_habitability:0 "Приспособленность к климату £planet£ мира §Mэкзогенных садов§!"
+    mod_pc_exogarden_habitability:0 "Приспособленность к £planet£ миру §Mэкзогенных садов§!"
+    trait_pc_exogarden_preference:0 "Приспособленность к миру §Mэкзогенных садов§!"
+    trait_pc_exogarden_preference_desc:0 "Приспособленность к миру §Mэкзогенных садов§!"
+
+    pc_xenovalley_habitability:0 "Приспособленность к климату £planet£ мира §Hксеногенных долин§!"
+    mod_pc_xenovalley_habitability:0 "Приспособленность к £planet£ миру §Hксеногенных долин§!"
+    trait_pc_xenovalley_preference:0 "Приспособленность к миру §Hксеногенных долин§!"
+    trait_pc_xenovalley_preference_desc:0 "Приспособленность к миру §Hксеногенных долин§!"
+
+    pc_floating_habitability:0 "Приспособленность к климату £planet£ мира §Gпарящих островов§!"
+    mod_pc_floating_habitability:0 "Приспособленность к £planet£ миру §Gпарящих островов§!"
+    trait_pc_floating_preference:0 "Приспособленность к миру §Gпарящих островов§!"
+    trait_pc_floating_preference_desc:0 "Приспособленность к миру §Gпарящих островов§!"
+
+    pc_mangrove_habitability:0 "Приспособленность к климату £planet£ мира §Gмангровых лесов§!"
+    mod_pc_mangrove_habitability:0 "Приспособленность к £planet£ миру §Gмангровых лесов§!"
+    trait_pc_mangrove_preference:0 "Приспособленность к миру §Gмангровых лесов§!"
+    trait_pc_mangrove_preference_desc:0 "Приспособленность к миру §Gмангровых лесов§!"
+
+    pc_bioforge_habitability:0 "Приспособленность к климату £planet£ мира §Gбиотеррария§!"
+    mod_pc_bioforge_habitability:0 "Приспособленность к £planet£ миру §Gбиотеррария§!"
+    trait_pc_bioforge_preference:0 "Приспособленность к миру §Gбиотеррария§!"
+    trait_pc_bioforge_preference_desc:0 "Приспособленность к миру §Gбиотеррария§!"
+
+    pc_biolumen_habitability:0 "Приспособленность к климату £planet£ мира §Mбиолюмена§!"
+    mod_pc_biolumen_habitability:0 "Приспособленность к £planet£ миру §Mбиолюмена§!"
+    trait_pc_biolumen_preference:0 "Приспособленность к миру §Mбиолюмена§!"
+    trait_pc_biolumen_preference_desc:0 "Приспособленность к миру §Mбиолюмена§!"
+
+    pc_boreal_habitability:0 "Приспособленность к климату £planet£ мира §Gгиперборея§!"
+    mod_pc_boreal_habitability:0 "Приспособленность к £planet£ миру §Gгиперборея§!"
+    trait_pc_boreal_preference:0 "Приспособленность к миру §Gгиперборея§!"
+    trait_pc_boreal_preference_desc:0 "Приспособленность к миру §Gгиперборея§!"
+
+    pc_irassia_habitability:0 "Приспособленность к климату £planet£ мира §Pцветущего ирассия§!"
+    mod_pc_irassia_habitability:0 "Приспособленность к £planet£ миру §Pцветущего ирассия§!"
+    trait_pc_irassia_preference:0 "Приспособленность к миру §Pцветущего ирассия§!"
+    trait_pc_irassia_preference_desc:0 "Приспособленность к миру §Pцветущего ирассия§!"
+
+    pc_frozen_desert_habitability:0 "Приспособленность к климату £planet£ мира §Yзамёрзшей пустыни§!"
+    mod_pc_frozen_desert_habitability:0 "Приспособленность к £planet£ миру §Yзамёрзшей пустыни§!"
+    trait_pc_frozen_desert_preference:0 "Приспособленность к миру §Yзамёрзшей пустыни§!"
+    trait_pc_frozen_desert_preference_desc:0 "Приспособленность к миру §Yзамёрзшей пустыни§!"
+
+    pc_steppe_habitability:0 "Приспособленность к климату £planet£ мира §Lвеликих степей§!"
+    mod_pc_steppe_habitability:0 "Приспособленность к £planet£ миру §Lвеликих степей§!"
+    trait_pc_steppe_preference:0 "Приспособленность к миру §Lвеликих степей§!"
+    trait_pc_steppe_preference_desc:0 "Приспособленность к миру §Lвеликих степей§!"
+
+    pc_tidallylocked_habitability:0 "Приспособленность к климату £planet£ мира §Pприливных циклонов§!"
+    mod_pc_tidallylocked_habitability:0 "Приспособленность к £planet£ миру §Pприливных циклонов§!"
+    trait_pc_tidallylocked_preference:0 "Приспособленность к миру §Pприливных циклонов§!"
+    trait_pc_tidallylocked_preference_desc:0 "Приспособленность к миру §Pприливных циклонов§!"
+
+    pc_geothermal_habitability:0 "Приспособленность к климату £planet£ мира §Bгеотермальных источников§!"
+    mod_pc_geothermal_habitability:0 "Приспособленность к £planet£ миру §Bгеотермальных источников§!"
+    trait_pc_geothermal_preference:0 "Приспособленность к миру §Bгеотермальных источников§!"
+    trait_pc_geothermal_preference_desc:0 "Приспособленность к миру §Bгеотермальных источников§!"
+
+    pc_subarctic_habitability:0 "Приспособленность к климату £planet£ мира §Bсубарктики§!"
+    mod_pc_subarctic_habitability:0 "Приспособленность к £planet£ миру §Bсубарктики§!"
+    trait_pc_subarctic_preference:0 "Приспособленность к миру §Bсубарктики§!"
+    trait_pc_subarctic_preference_desc:0 "Приспособленность к миру §Bсубарктики§!"
+
+    pc_glacial_habitability:0 "Приспособленность к климату £planet£ мира §Bледниковых морей§!"
+    mod_pc_glacial_habitability:0 "Приспособленность к £planet£ миру §Bледниковых морей§!"
+    trait_pc_glacial_preference:0 "Приспособленность к миру §Bледниковых морей§!"
+    trait_pc_glacial_preference_desc:0 "Приспособленность к миру §Bледниковых морей§!"
+
+    pc_antarctic_habitability:0 "Приспособленность к климату £planet£ мира §Bантарктики§!"
+    mod_pc_antarctic_habitability:0 "Приспособленность к £planet£ миру §Bантарктики§!"
+    trait_pc_antarctic_preference:0 "Приспособленность к миру §Bантарктики§!"
+    trait_pc_antarctic_preference_desc:0 "Приспособленность к миру §Bантарктики§!"
+
     trait_xenomorphic_species:0 "Ксеноморфная среда обитания"
     trait_xenomorphic_species_desc:0 "Ксеноморфная среда обитания"

@@ -52,6 +52,63 @@ country_event = {
             id = aoe_begin_actions.14
             days = 6
         }
+        country_event = {
+            id = aoe_begin_actions.15
+            days = 2
+        }
+    }
+}
+
+country_event = {
+    id = aoe_begin_actions.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+    }
+
+    immediate = {
+        country_event = {
+            id = aoe_begin_actions.11
+            days = 3
+        }
+        country_event = {
+            id = aoe_begin_actions.12
+            days = 4
+        }
+        country_event = {
+            id = aoe_begin_actions.13
+            days = 5
+        }
+        country_event = {
+            id = aoe_begin_actions.14
+            days = 6
+        }
+        country_event = {
+            id = aoe_begin_actions.15
+            days = 2
+        }
+    }
+}
+
+event = {
+    id = aoe_begin_actions.3
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        every_planet = {
+            limit = {
+                OR = {
+                    habitable_planet = yes
+                    is_extraterrestrial_planet = yes
+                }
+                planet_size < 10
+            }
+            change_planet_size = 15
+            reroll_planet = yes
+        }
     }
 }
 
@@ -145,9 +202,12 @@ country_event = {
         }
         hidden_effect = {
             capital_scope = {
-                change_pc = pc_gaia
-                effects_set_planet_size_50 = yes
-                add_deposit = "d_sr_elerium_deposit"
+                while = {
+                    count = 10
+                    create_pop = {
+                        species = owner_main_species
+                    }
+                }
             }
         }
     }
@@ -268,7 +328,7 @@ country_event = {
         custom_tooltip = aoe_begin_actions.13.b.tooltip
         hidden_effect = {
             set_country_flag = "flags_aoe_science_ascension"
-            give_technology = { tech = "tech_mine_elerium" }
+            # give_technology = { tech = "" }
         }
     }
     option = {
@@ -298,5 +358,976 @@ country_event = {
     }
     option = {
         name = aoe_begin_actions.decline
+    }
+}
+
+country_event = {
+    id = aoe_begin_actions.15
+    title = aoe_begin_actions.15.title
+    desc = aoe_begin_actions.15.desc
+    picture = GFX_aoe_actions_species_homeworld
+    show_sound = event_solar_fusion
+    hide_window = no
+    is_triggered_only = yes
+
+    after = {
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = "aoe_disable_action_15"
+                }
+            }
+            capital_scope = {
+                effects_set_planet_size_50 = yes
+            }
+        }
+    }
+
+    option = {
+        name = aoe_begin_actions.15.a
+        custom_tooltip = aoe_begin_actions.15.a.tooltip
+        trigger = {
+            capital_scope = {
+                is_dry = yes
+                NOT = {
+                    is_planet_class = "pc_sandsea"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_sandsea"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_sandsea"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.b
+        custom_tooltip = aoe_begin_actions.15.b.tooltip
+        trigger = {
+            capital_scope = {
+                is_dry = yes
+                NOT = {
+                    is_planet_class = "pc_oasis"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_oasis"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_oasis"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.c
+        custom_tooltip = aoe_begin_actions.15.c.tooltip
+        trigger = {
+            capital_scope = {
+                is_dry = yes
+                NOT = {
+                    is_planet_class = "pc_geoprairie"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_geoprairie"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_geoprairie"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.d
+        custom_tooltip = aoe_begin_actions.15.d.tooltip
+        trigger = {
+            capital_scope = {
+                is_dry = yes
+                NOT = {
+                    is_planet_class = "pc_desertislands"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_desertislands"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_desertislands"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.e
+        custom_tooltip = aoe_begin_actions.15.e.tooltip
+        trigger = {
+            capital_scope = {
+                is_dry = yes
+                NOT = {
+                    is_planet_class = "pc_hadesert"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_hadesert"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_hadesert"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.f
+        custom_tooltip = aoe_begin_actions.15.f.tooltip
+        trigger = {
+            capital_scope = {
+                is_wet = yes
+                NOT = {
+                    is_planet_class = "pc_greenlush"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_greenlush"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_greenlush"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.g
+        custom_tooltip = aoe_begin_actions.15.g.tooltip
+        trigger = {
+            capital_scope = {
+                is_wet = yes
+                NOT = {
+                    is_planet_class = "pc_exogarden"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_exogarden"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_exogarden"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.h
+        custom_tooltip = aoe_begin_actions.15.h.tooltip
+        trigger = {
+            capital_scope = {
+                is_wet = yes
+                NOT = {
+                    is_planet_class = "pc_xenovalley"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_xenovalley"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_xenovalley"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.j
+        custom_tooltip = aoe_begin_actions.15.j.tooltip
+        trigger = {
+            capital_scope = {
+                is_wet = yes
+                NOT = {
+                    is_planet_class = "pc_floating"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_floating"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_floating"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.k
+        custom_tooltip = aoe_begin_actions.15.k.tooltip
+        trigger = {
+            capital_scope = {
+                is_wet = yes
+                NOT = {
+                    is_planet_class = "pc_mangrove"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_mangrove"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_mangrove"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.l
+        custom_tooltip = aoe_begin_actions.15.l.tooltip
+        trigger = {
+            capital_scope = {
+                is_wet = yes
+                NOT = {
+                    is_planet_class = "pc_bioforge"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_bioforge"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_bioforge"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.m
+        custom_tooltip = aoe_begin_actions.15.m.tooltip
+        trigger = {
+            capital_scope = {
+                is_wet = yes
+                NOT = {
+                    is_planet_class = "pc_biolumen"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_biolumen"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_biolumen"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.n
+        custom_tooltip = aoe_begin_actions.15.n.tooltip
+        trigger = {
+            capital_scope = {
+                is_wet = yes
+                NOT = {
+                    is_planet_class = "pc_boreal"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_boreal"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_boreal"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.o
+        custom_tooltip = aoe_begin_actions.15.o.tooltip
+        trigger = {
+            capital_scope = {
+                is_wet = yes
+                NOT = {
+                    is_planet_class = "pc_irassia"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_irassia"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_irassia"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.p
+        custom_tooltip = aoe_begin_actions.15.p.tooltip
+        trigger = {
+            capital_scope = {
+                is_cold = yes
+                NOT = {
+                    is_planet_class = "pc_frozen_desert"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_frozen_desert"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_frozen_desert"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.q
+        custom_tooltip = aoe_begin_actions.15.q.tooltip
+        trigger = {
+            capital_scope = {
+                is_cold = yes
+                NOT = {
+                    is_planet_class = "pc_steppe"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_steppe"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_steppe"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.r
+        custom_tooltip = aoe_begin_actions.15.r.tooltip
+        trigger = {
+            capital_scope = {
+                is_cold = yes
+                NOT = {
+                    is_planet_class = "pc_tidallylocked"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_tidallylocked"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_tidallylocked"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.s
+        custom_tooltip = aoe_begin_actions.15.s.tooltip
+        trigger = {
+            capital_scope = {
+                is_cold = yes
+                NOT = {
+                    is_planet_class = "pc_geothermal"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_geothermal"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_geothermal"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.t
+        custom_tooltip = aoe_begin_actions.15.t.tooltip
+        trigger = {
+            capital_scope = {
+                is_cold = yes
+                NOT = {
+                    is_planet_class = "pc_subarctic"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_subarctic"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_subarctic"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.v
+        custom_tooltip = aoe_begin_actions.15.v.tooltip
+        trigger = {
+            capital_scope = {
+                is_cold = yes
+                NOT = {
+                    is_planet_class = "pc_glacial"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_glacial"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_glacial"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.w
+        custom_tooltip = aoe_begin_actions.15.w.tooltip
+        trigger = {
+            capital_scope = {
+                is_cold = yes
+                NOT = {
+                    is_planet_class = "pc_antarctic"
+                }
+            }
+        }
+        hidden_effect = {
+            capital_scope = {
+                change_pc = "pc_antarctic"
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = no
+                        is_sapient = yes
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = "pc_antarctic"
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.15.x
+        custom_tooltip = aoe_begin_actions.15.x.tooltip
+    }
+    option = {
+        name = aoe_begin_actions.15.y
+        custom_tooltip = aoe_begin_actions.15.y.tooltip
+        hidden_effect = {
+            capital_scope = {
+                random_list = {
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_antarctic"
+                        }
+                        change_pc = "pc_antarctic"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_antarctic"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_glacial"
+                        }
+                        change_pc = "pc_glacial"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_glacial"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_subarctic"
+                        }
+                        change_pc = "pc_subarctic"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_subarctic"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_geothermal"
+                        }
+                        change_pc = "pc_geothermal"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_geothermal"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_tidallylocked"
+                        }
+                        change_pc = "pc_tidallylocked"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_tidallylocked"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_steppe"
+                        }
+                        change_pc = "pc_steppe"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_steppe"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_frozen_desert"
+                        }
+                        change_pc = "pc_frozen_desert"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_frozen_desert"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_irassia"
+                        }
+                        change_pc = "pc_irassia"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_irassia"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_boreal"
+                        }
+                        change_pc = "pc_boreal"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_boreal"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_biolumen"
+                        }
+                        change_pc = "pc_biolumen"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_biolumen"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_bioforge"
+                        }
+                        change_pc = "pc_bioforge"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_bioforge"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_mangrove"
+                        }
+                        change_pc = "pc_mangrove"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_mangrove"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_floating"
+                        }
+                        change_pc = "pc_floating"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_floating"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_xenovalley"
+                        }
+                        change_pc = "pc_xenovalley"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_xenovalley"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_exogarden"
+                        }
+                        change_pc = "pc_exogarden"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_exogarden"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_greenlush"
+                        }
+                        change_pc = "pc_greenlush"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_greenlush"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_hadesert"
+                        }
+                        change_pc = "pc_hadesert"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_hadesert"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_desertislands"
+                        }
+                        change_pc = "pc_desertislands"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_desertislands"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_geoprairie"
+                        }
+                        change_pc = "pc_geoprairie"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_geoprairie"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_oasis"
+                        }
+                        change_pc = "pc_oasis"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_oasis"
+                            }
+                        }
+                    }
+                    4 = {
+                        modifier = {
+                            factor = 0
+                            is_planet_class = "pc_sandsea"
+                        }
+                        change_pc = "pc_sandsea"
+                        every_owned_pop = {
+                            limit = {
+                                is_robot_pop = no
+                                is_sapient = yes
+                            }
+                            modify_species = {
+                                species = this
+                                ideal_planet_class = "pc_sandsea"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = aoe_begin_actions.decline
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = "aoe_disable_action_15"
+                days = 2
+            }
+        }
     }
 }

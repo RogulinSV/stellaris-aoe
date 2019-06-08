@@ -1,0 +1,25 @@
+soundeffect = {
+    name = "pc_crystalline"
+    volume = 0.7
+    loop = no
+    sounds = {
+        sound = "sfx_planet_01"
+    }
+    playbackrate_random_offset = { -10.0 10.0 }
+    fade_out = 0.3
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+
+soundeffect = {
+    name = "pc_chlorum"
+    volume = 0.8
+    loop = no
+    sounds = {
+        sound = "sfx_planet_02"
+    }
+    playbackrate_random_offset = { -10.0 10.0 }
+    fade_out = 0.3
+    max_audible = 1
+    max_audible_behaviour = fail
+}

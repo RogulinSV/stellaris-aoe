@@ -1,0 +1,11 @@
+sound = {
+    name = "sfx_planet_01"
+    file = "ambient/sound_01.wav"
+    always_load = no
+}
+
+sound = {
+    name = "sfx_planet_02"
+    file = "ambient/sound_02.wav"
+    always_load = no
+}

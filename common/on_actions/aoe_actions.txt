@@ -4,6 +4,8 @@ on_press_begin = {
         aoe_begin_actions.1
         # Economic and Military Event
         aoe_begin_actions.2
+        # Fix Planets Size Event
+        aoe_begin_actions.3
     }
 }
 
