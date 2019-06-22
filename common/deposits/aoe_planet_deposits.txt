@@ -694,6 +694,162 @@ d_extraterrestrial_isolated_biomes = {
     }
 }
 
+## Outer Worlds
+
+d_blooming_fields = {
+    icon = "d_blooming_fields"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_food
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        "d_lichen_fields"
+        "d_bountiful_plains"
+        "d_green_hills"
+        "d_fertile_lands"
+    }
+
+    planet_modifier = {
+        district_farming_max = 1
+    }
+
+    potential = {
+        is_outerworlds_planet = yes
+        is_wet = yes
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+    }
+}
+
+d_wildness_fields = {
+    icon = "d_wildness_fields"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_food
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        "d_lichen_fields"
+        "d_bountiful_plains"
+        "d_green_hills"
+        "d_fertile_lands"
+    }
+
+    planet_modifier = {
+        district_farming_max = 1
+    }
+
+    potential = {
+        is_outerworlds_planet = yes
+        is_wet = yes
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+    }
+}
+
+d_underwater_oasis = {
+    icon = "d_underwater_oasis"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_food
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        "d_great_river"
+        "d_teeming_reef"
+        "d_marvelous_oasis"
+    }
+
+    planet_modifier = {
+        district_farming_max = 1
+    }
+
+    potential = {
+        is_outerworlds_planet = yes
+        is_wet = yes
+    }
+
+    drop_weight = {
+        weight = @deposit_high_drop_weight
+    }
+}
+
+d_shrouded_mountains = {
+    icon = "d_shrouded_mountains"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_food
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        "d_green_hills"
+        "d_fungal_caves"
+        "d_lush_jungle"
+        "d_fungal_forest"
+    }
+
+    planet_modifier = {
+        district_farming_max = 2
+        is_wet = yes
+    }
+
+    potential = {
+        is_outerworlds_planet = yes
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+    }
+}
+
+d_cascade_oasis = {
+    icon = "d_cascade_oasis"
+
+    is_for_colonizeable = yes
+    category = deposit_cat_food
+
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+
+    terraforming_swap_types = {
+        "d_nutritious_mudland"
+        "d_fertile_lands"
+        "d_great_river"
+        "d_marvelous_oasis"
+    }
+
+    planet_modifier = {
+        district_farming_max = 2
+    }
+
+    potential = {
+        is_outerworlds_planet = yes
+        is_wet = yes
+    }
+
+    drop_weight = {
+        weight = @deposit_medium_drop_weight
+    }
+}
+
 ### Crystal Deposits
 
 d_extraterrestrial_crystal_caves = {

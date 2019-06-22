@@ -919,16 +919,6 @@ anthem_of_eternity = {
         initializer = "anthem_of_eternity_neighbor_d"
         trigger = { always = no }
     }
-    neighbor_system = {
-        distance = { min = 10 max = 40 }
-        initializer = "anthem_of_eternity_neighbor_test"
-        trigger = { always = yes }
-    }
-    neighbor_system = {
-        distance = { min = 10 max = 40 }
-        initializer = "anthem_of_eternity_neighbor_test2"
-        trigger = { always = yes }
-    }
 }
 
 anthem_of_eternity_neighbor_a = {
@@ -980,7 +970,7 @@ anthem_of_eternity_neighbor_a = {
     planet = {
         name = "NAME_Anthem_Of_Eternity_Planet_B1"
         count = 1
-        class = pc_gaia
+        class = "rl_habitable_dry_outerworld"
         orbit_distance = { min = 60 max = 70 }
         orbit_angle = { min = 10 max = 350 }
         size = 25
@@ -1123,7 +1113,7 @@ anthem_of_eternity_neighbor_a = {
     planet = {
         name = "NAME_Anthem_Of_Eternity_Planet_B2"
         count = 1
-        class = pc_gaia
+        class = "rl_habitable_dry_outerworld"
         orbit_distance = { min = 30 max = 40 }
         orbit_angle = { min = 90 max = 270 }
         size = 25
@@ -1318,7 +1308,7 @@ anthem_of_eternity_neighbor_a = {
 
         moon = {
             name = "NAME_Anthem_Of_Eternity_Planet_B301"
-            class = pc_ocean
+            class = "rl_habitable_dry_outerworld"
             size = { min = 17 max = 25 }
             count = 1
             orbit_distance = 6
@@ -1333,7 +1323,7 @@ anthem_of_eternity_neighbor_a = {
 
         moon = {
             name = "NAME_Anthem_Of_Eternity_Planet_B302"
-            class = pc_savannah
+            class = "rl_habitable_wet_outerworld"
             size = { min = 17 max = 25 }
             count = 1
             orbit_distance = 6
@@ -1348,7 +1338,7 @@ anthem_of_eternity_neighbor_a = {
 
         moon = {
             name = "NAME_Anthem_Of_Eternity_Planet_B303"
-            class = pc_alpine
+            class = "rl_habitable_cold_outerworld"
             size = { min = 17 max = 25 }
             count = 1
             orbit_distance = 6
@@ -1436,7 +1426,7 @@ anthem_of_eternity_neighbor_b = {
     planet = {
         name = "NAME_Anthem_Of_Eternity_Planet_C1"
         count = 1
-        class = pc_gaia
+        class = "rl_habitable_dry_outerworld"
         orbit_distance = { min = 5 max = 15 }
         orbit_angle = { min = 10 max = 350 }
         size = 25
@@ -1488,7 +1478,7 @@ anthem_of_eternity_neighbor_b = {
 
         moon = {
             name = "NAME_Anthem_Of_Eternity_Planet_C101"
-            class = pc_tropical
+            class = "rl_habitable_dry_outerworld"
             size = { min = 17 max = 25 }
             count = 1
             orbit_distance = 10
@@ -1545,7 +1535,7 @@ anthem_of_eternity_neighbor_b = {
 
         moon = {
             name = "NAME_Anthem_Of_Eternity_Planet_C102"
-            class = pc_arid
+            class = "rl_habitable_wet_outerworld"
             size = { min = 17 max = 25 }
             count = 1
             orbit_distance = 8
@@ -1985,7 +1975,7 @@ anthem_of_eternity_neighbor_c = {
     planet = {
         name = "NAME_Anthem_Of_Eternity_Planet_D3"
         count = 1
-        class = pc_desert
+        class = "rl_habitable_dry_outerworld"
         orbit_distance = { min = 20 max = 30 }
         orbit_angle = { min = 90 max = 270 }
         size = 25
@@ -2107,7 +2097,7 @@ anthem_of_eternity_neighbor_c = {
 
         moon = {
             name = "NAME_Anthem_Of_Eternity_Planet_D301"
-            class = pc_arid
+            class = "rl_habitable_dry_outerworld"
             size = { min = 17 max = 21 }
             count = 1
             orbit_distance = 13
@@ -2129,7 +2119,7 @@ anthem_of_eternity_neighbor_c = {
     planet = {
         name = "NAME_Anthem_Of_Eternity_Planet_D4"
         count = 1
-        class = pc_gaia
+        class = "rl_habitable_wet_outerworld"
         orbit_distance = { min = 25 max = 35 }
         orbit_angle = { min = 90 max = 270 }
         size = 25
@@ -2153,7 +2143,7 @@ anthem_of_eternity_neighbor_c = {
 
         moon = {
             name = "NAME_Anthem_Of_Eternity_Planet_D402"
-            class = pc_continental
+            class = "rl_habitable_wet_outerworld"
             size = { min = 18 max = 22 }
             count = 1
             orbit_distance = 7
@@ -2314,7 +2304,7 @@ anthem_of_eternity_neighbor_d = {
     planet = {
         name = "NAME_Anthem_Of_Eternity_Planet_E1"
         count = 1
-        class = pc_tundra
+        class = "rl_habitable_cold_outerworld"
         orbit_distance = { min = 5 max = 10 }
         orbit_angle = { min = 10 max = 350 }
         size = 25
@@ -2344,7 +2334,7 @@ anthem_of_eternity_neighbor_d = {
     planet = {
         name = "NAME_Anthem_Of_Eternity_Planet_E2"
         count = 1
-        class = pc_alpine
+        class = "rl_habitable_cold_outerworld"
         orbit_distance = { min = 15 max = 25 }
         orbit_angle = { min = 90 max = 270 }
         size = 25
@@ -2374,7 +2364,7 @@ anthem_of_eternity_neighbor_d = {
     planet = {
         name = "NAME_Anthem_Of_Eternity_Planet_E3"
         count = 1
-        class = pc_arctic
+        class = "rl_habitable_cold_outerworld"
         orbit_distance = { min = 15 max = 25 }
         orbit_angle = { min = 90 max = 270 }
         size = 25
@@ -2404,7 +2394,7 @@ anthem_of_eternity_neighbor_d = {
     planet = {
         name = "NAME_Anthem_Of_Eternity_Planet_E4"
         count = 1
-        class = pc_frozen
+        class = "rl_habitable_cold_outerworld"
         orbit_distance = { min = 15 max = 25 }
         orbit_angle = { min = 90 max = 270 }
         size = { min = 19 max = 25 }
@@ -2479,485 +2469,6 @@ anthem_of_eternity_neighbor_d = {
             type = "gateway_ruined"
             random_pos = yes
             orbit_angle = 360
-        }
-    }
-}
-
-anthem_of_eternity_neighbor_test = {
-    name = "Test System"
-    class = "rl_standard_stars"
-
-    # Effects
-    prevent_anomalies = yes
-
-    # Stars
-    planet = {
-        name = "Test Star"
-        count = 1
-        class = star
-        orbit_distance = 0
-        orbit_angle = 1
-        size = { min = 25 max = 30 }
-        has_ring = no
-
-        init_effect = {
-            prevent_anomaly = yes
-            effects_add_rich_resources_star = yes
-        }
-    }
-
-    change_orbit = 45
-
-    # Planets
-    planet = {
-        name = "Metalline Gas Giant"
-        count = 1
-        class = pc_metalline_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Lapitelie"
-            count = 1
-            class = pc_oasis
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = yes
-
-            change_orbit = 15
-        }
-
-        init_effect = {
-            prevent_anomaly = yes
-            effects_add_rich_resources_gas_giant = yes
-        }
-    }
-
-    change_orbit = 20
-
-    planet = {
-        name = "Chlorum Gas Giant"
-        count = 1
-        class = pc_chlorum_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Calisto"
-            count = 1
-            class = pc_chlorum
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = yes
-
-            change_orbit = 15
-        }
-
-        init_effect = {
-            prevent_anomaly = yes
-            effects_add_rich_resources_gas_giant = yes
-        }
-    }
-
-    change_orbit = 20
-
-    planet = {
-        name = "carbonium Gas Giant"
-        count = 1
-        class = pc_carbonium_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Priolan"
-            count = 1
-            class = pc_chlorum_uninhabitable
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = yes
-
-            change_orbit = 15
-        }
-
-        init_effect = {
-            prevent_anomaly = yes
-            effects_add_rich_resources_gas_giant = yes
-        }
-    }
-
-    change_orbit = 20
-
-    planet = {
-        name = "nitrogenium Gas Giant"
-        count = 1
-        class = pc_nitrogenium_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Geotopia"
-            count = 1
-            class = pc_sulphureum
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = yes
-
-            change_orbit = 15
-        }
-
-        init_effect = {
-            prevent_anomaly = yes
-            effects_add_rich_resources_gas_giant = yes
-        }
-    }
-
-    change_orbit = 20
-
-    planet = {
-        name = "sulphureum Gas Giant"
-        count = 1
-        class = pc_sulphureum_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Violan"
-            count = 1
-            class = pc_geoprairie
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = yes
-
-            change_orbit = 15
-        }
-
-        init_effect = {
-            prevent_anomaly = yes
-            effects_add_rich_resources_gas_giant = yes
-        }
-    }
-
-    change_orbit = 20
-
-    planet = {
-        name = "argonium Gas Giant"
-        count = 1
-        class = pc_argonium_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Fatilon"
-            count = 1
-            class = pc_greenlush
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = yes
-
-            change_orbit = 15
-        }
-
-        init_effect = {
-            prevent_anomaly = yes
-            effects_add_rich_resources_gas_giant = yes
-        }
-    }
-}
-
-anthem_of_eternity_neighbor_test2 = {
-    name = "Test2 System"
-    class = "rl_standard_stars"
-
-    # Effects
-    prevent_anomalies = yes
-
-    # Stars
-    planet = {
-        name = "Test2 Star"
-        count = 1
-        class = star
-        orbit_distance = 0
-        orbit_angle = 1
-        size = { min = 25 max = 30 }
-        has_ring = no
-
-        init_effect = {
-            prevent_anomaly = yes
-            effects_add_rich_resources_star = yes
-        }
-    }
-
-    change_orbit = 45
-
-    # Planets
-    planet = {
-        name = "Phosphorium Gas Giant"
-        count = 1
-        class = pc_phosphorium_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Phosphorium Uninhabitable"
-            count = 1
-            class = pc_phosphorium_uninhabitable
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = yes
-
-            change_orbit = 15
-
-            init_effect = {
-                prevent_anomaly = yes
-                effects_add_rich_resources_barren_planet = yes
-            }
-        }
-
-        init_effect = {
-            prevent_anomaly = yes
-            effects_add_rich_resources_gas_giant = yes
-        }
-    }
-
-    change_orbit = 25
-
-    # Planets
-    planet = {
-        name = "Crystalline Gas Giant"
-        count = 1
-        class = pc_crystalline_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Crystalline"
-            count = 1
-            class = pc_crystalline
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = yes
-        }
-
-        init_effect = {
-            prevent_anomaly = yes
-            effects_add_rich_resources_gas_giant = yes
-        }
-    }
-
-    change_orbit = 25
-
-    # Planets
-    planet = {
-        name = "Ammonium Gas Giant"
-        count = 1
-        class = pc_ammonium_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Metalline"
-            count = 1
-            class = pc_glacial
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = yes
-        }
-    }
-
-    change_orbit = 25
-
-    # Planets
-    planet = {
-        name = "Mercurium Gas Giant"
-        count = 1
-        class = pc_mercurium_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Methanum"
-            count = 1
-            class = pc_geothermal
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = yes
-        }
-    }
-
-    change_orbit = 25
-
-    # Planets
-    planet = {
-        name = "Barium Gas Giant"
-        count = 1
-        class = pc_barium_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Barium"
-            count = 1
-            class = pc_steppe
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = yes
-        }
-    }
-
-    change_orbit = 40
-
-    # Planets
-    planet = {
-        name = "Celestial Gas Giant"
-        count = 1
-        class = pc_celestial_gas_giant
-        orbit_distance = { min = 1 max = 10 }
-        orbit_angle = { min = 10 max = 350 }
-        size = 35
-        has_ring = yes
-
-        change_orbit = 15
-
-        moon = {
-            name = "Trilan"
-            count = 1
-            class = pc_exogarden
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = no
-
-            change_orbit = 12
-        }
-        moon = {
-            name = "Julmen"
-            count = 1
-            class = pc_floating
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = no
-
-            change_orbit = 12
-        }
-        moon = {
-            name = "Perocul"
-            count = 1
-            class = pc_mangrove
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = no
-
-            change_orbit = 12
-        }
-        moon = {
-            name = "Celestial wet"
-            count = 1
-            class = pc_celestial_wet
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = no
-
-            change_orbit = 12
-
-            init_effect = {
-                prevent_anomaly = yes
-                effects_add_rich_resources_barren_planet = yes
-            }
-        }
-        moon = {
-            name = "Celestial cold"
-            count = 1
-            class = pc_celestial_cold
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = no
-
-            change_orbit = 12
-
-            init_effect = {
-                prevent_anomaly = yes
-                effects_add_rich_resources_barren_planet = yes
-            }
-        }
-        moon = {
-            name = "Celestial frozen"
-            count = 1
-            class = pc_celestial_frozen
-            orbit_distance = { min = 1 max = 10 }
-            orbit_angle = { min = 10 max = 350 }
-            size = 25
-            has_ring = no
-
-            change_orbit = 12
-
-            init_effect = {
-                prevent_anomaly = yes
-                effects_add_rich_resources_barren_planet = yes
-            }
-        }
-
-        init_effect = {
-            prevent_anomaly = yes
-            effects_add_rich_resources_gas_giant = yes
         }
     }
 }

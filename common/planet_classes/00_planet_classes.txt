@@ -1487,3 +1487,45 @@ random_list = {
 		"pc_chlorum_gas_giant"
 	}
 }
+
+### Patch
+random_list = {
+	name = "rl_habitable_dry_outerworld"
+	planets = {
+		"pc_sandsea"
+		"pc_oasis"
+		"pc_geoprairie"
+		"pc_desertislands"
+		"pc_hadesert"
+	}
+}
+
+### Patch
+random_list = {
+	name = "rl_habitable_wet_outerworld"
+	planets = {
+		"pc_greenlush"
+		"pc_exogarden"
+		"pc_xenovalley"
+		"pc_floating"
+		"pc_mangrove"
+		"pc_bioforge"
+		"pc_biolumen"
+		"pc_boreal"
+		"pc_irassia"
+	}
+}
+
+### Patch
+random_list = {
+	name = "rl_habitable_cold_outerworld"
+	planets = {
+		"pc_frozen_desert"
+		"pc_steppe"
+		"pc_tidallylocked"
+		"pc_geothermal"
+		"pc_subarctic"
+		"pc_glacial"
+		"pc_antarctic"
+	}
+}

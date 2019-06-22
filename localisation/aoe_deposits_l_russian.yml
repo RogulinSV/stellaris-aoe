@@ -89,6 +89,17 @@
     d_sr_kryptonite_deposit:0 "Залежи $kryptonite_genitive$"
     d_sr_kryptonite_deposit_desc:0 "Залежи £kryptonite£ §R$kryptonite_genitive$§!"
 
+    d_blooming_fields:0 "Цветущие поля"
+    d_blooming_fields_desc:0 "Цветущие поля"
+    d_wildness_fields:0 "Дикорастущие поля"
+    d_wildness_fields_desc:0 "Дикорастущие поля"
+    d_underwater_oasis:0 "Подземные оазисы"
+    d_underwater_oasis_desc:0 "Подземные оазисы"
+    d_shrouded_mountains:0 "Окутанные горы"
+    d_shrouded_mountains_desc:0 "Окутанные горы"
+    d_cascade_oasis:0 "Каскадные оазисы"
+    d_cascade_oasis_desc:0 "Каскадные оазисы"
+
     d_extraterrestrial_windy_highlands:0 "Ветреная возвышенность"
     d_extraterrestrial_windy_highlands_desc:0 "Ветреная возвышенность"
     d_extraterrestrial_gaseus_emissions:0 "Газовые выбросы"

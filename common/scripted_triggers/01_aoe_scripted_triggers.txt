@@ -640,6 +640,33 @@ is_extraterrestrial_planet = {
 }
 
 # Scope: planet
+is_outerworlds_planet = {
+    OR = {
+        is_planet_class = "pc_greenlush"
+        is_planet_class = "pc_exogarden"
+        is_planet_class = "pc_xenovalley"
+        is_planet_class = "pc_floating"
+        is_planet_class = "pc_mangrove"
+        is_planet_class = "pc_bioforge"
+        is_planet_class = "pc_biolumen"
+        is_planet_class = "pc_boreal"
+        is_planet_class = "pc_irassia"
+        is_planet_class = "pc_sandsea"
+        is_planet_class = "pc_oasis"
+        is_planet_class = "pc_geoprairie"
+        is_planet_class = "pc_desertislands"
+        is_planet_class = "pc_hadesert"
+        is_planet_class = "pc_frozen_desert"
+        is_planet_class = "pc_steppe"
+        is_planet_class = "pc_tidallylocked"
+        is_planet_class = "pc_geothermal"
+        is_planet_class = "pc_subarctic"
+        is_planet_class = "pc_glacial"
+        is_planet_class = "pc_antarctic"
+    }
+}
+
+# Scope: planet
 is_sovereign_colony = {
     NOR = {
         has_modifier = "resort_colony"
