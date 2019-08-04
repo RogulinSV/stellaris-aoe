@@ -807,11 +807,11 @@ d_shrouded_mountains = {
 
     planet_modifier = {
         district_farming_max = 2
-        is_wet = yes
     }
 
     potential = {
         is_outerworlds_planet = yes
+        is_wet = yes
     }
 
     drop_weight = {

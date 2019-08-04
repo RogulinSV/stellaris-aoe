@@ -627,7 +627,7 @@ pc_chlorum = {
     }
 
     modifier = {
-        planet_chemists_produces_mult = 0.25
+        planet_technician_produces_mult = 0.25
         planet_buildings_cost_mult = 0.15
         planet_districts_cost_mult = 0.15
         planet_clear_blocker_time_mult = 0.25
@@ -680,7 +680,7 @@ pc_sandsea = {
     }
 
     modifier = {
-        planet_refiners_produces_mult = 0.05
+        planet_metallurgists_produces_mult = 0.05
         planet_clear_blocker_time_mult = 0.15
     }
 
@@ -1085,9 +1085,9 @@ pc_floating = {
     modifier = {
         planet_artisans_produces_mult = 0.05
         planet_jobs_unity_produces_mult = 0.05
-        planet_refiners_produces_mult = -0.05
-        planet_translucers_produces_mult = -0.05
-        planet_chemists_produces_mult = -0.05
+        planet_miners_produces_mult = -0.05
+        planet_metallurgists_produces_mult = -0.05
+        planet_technician_produces_mult = -0.05
     }
 
     ideal = no
@@ -1185,8 +1185,8 @@ pc_bioforge = {
     }
 
     modifier = {
-        planet_refiners_produces_mult = 0.05
-        planet_translucers_produces_mult = 0.05
+        planet_miners_produces_mult = 0.05
+        planet_researchers_produces_mult = 0.05
         planet_clear_blocker_time_mult = 0.15
         planet_building_build_speed_mult = 0.15
     }

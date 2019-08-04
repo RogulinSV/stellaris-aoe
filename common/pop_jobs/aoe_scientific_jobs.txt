@@ -655,7 +655,7 @@ scientific_complex_engineering_scientist = {
     }
 
     planet_modifier = {
-        planet_refiners_produces_mult = -0.01
+        planet_artisans_produces_mult = -0.01
     }
 
     weight = {
@@ -835,7 +835,7 @@ scientific_complex_physics_scientist = {
     }
 
     planet_modifier = {
-        planet_chemists_produces_mult = -0.01
+        planet_miners_produces_mult = -0.01
     }
 
     weight = {
@@ -1154,7 +1154,7 @@ scientific_complex_engineering_drone = {
     }
 
     planet_modifier = {
-        planet_translucers_produces_mult = -0.01
+        planet_miners_produces_mult = -0.01
     }
 
     weight = {
@@ -1640,7 +1640,7 @@ scientific_complex_engineering_calculator = {
     }
 
     planet_modifier = {
-        planet_translucers_produces_mult = -0.01
+        planet_miners_produces_mult = -0.01
     }
 
     weight = {
@@ -2098,7 +2098,7 @@ scientific_complex_engineering_brain_drone = {
     }
 
     planet_modifier = {
-        planet_translucers_produces_mult = -0.01
+        planet_miners_produces_mult = -0.01
     }
 
     weight = {

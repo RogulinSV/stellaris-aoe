@@ -1566,7 +1566,7 @@ d_stalagmite_plains = {
     planet_modifier = {
         planet_max_districts_add = -1
         pop_housing_usage_mult = -0.1
-        planet_chemists_produces_mult = -0.1
+        planet_metallurgists_produces_mult = -0.1
     }
 
     on_cleared = {
@@ -1682,7 +1682,7 @@ d_carbon_pillars = {
 
     planet_modifier = {
         planet_max_districts_add = -1
-        planet_chemists_produces_mult = -0.03
+        planet_metallurgists_produces_mult = -0.03
         planet_farmers_produces_mult = -0.03
     }
 
