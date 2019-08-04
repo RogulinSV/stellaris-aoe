@@ -1,0 +1,939 @@
+### Propaganda Center
+
+building_propaganda_center_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 400
+    base_cap_amount = 1
+    category = unity
+
+    upgrades = {
+        "building_propaganda_center_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 1000
+            nevarrit = 500
+        }
+        upkeep = {
+            nevarrit = 2
+            minerals = 4
+        }
+    }
+
+    planet_modifier = {
+        planet_jobs_unity_produces_mult = 0.1
+    }
+
+    country_modifier = {
+        country_unity_produces_mult = 0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_unity_propagandist_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_unity_propagandist_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = nevarrit
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 5
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_terrestrial_propaganda"
+    }
+}
+
+building_propaganda_center_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 800
+    base_cap_amount = 1
+    category = unity
+
+    upgrades = {
+        "building_propaganda_center_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 2000
+            nevarrit = 750
+        }
+        upkeep = {
+            nevarrit = 4
+            minerals = 8
+        }
+    }
+
+    planet_modifier = {
+        planet_jobs_unity_produces_mult = 0.2
+    }
+
+    country_modifier = {
+        country_unity_produces_mult = 0.1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_unity_propagandist_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_unity_propagandist_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = nevarrit
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 9
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_interstellar_propaganda"
+    }
+}
+
+building_propaganda_center_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1200
+    base_cap_amount = 1
+    category = unity
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 3000
+            nevarrit = 1000
+        }
+        upkeep = {
+            nevarrit = 6
+            minerals = 12
+        }
+    }
+
+    planet_modifier = {
+        planet_jobs_unity_produces_mult = 0.3
+    }
+
+    country_modifier = {
+        country_unity_produces_mult = 0.15
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_unity_propagandist_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_unity_propagandist_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = nevarrit
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 13
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_transgalactic_propaganda"
+    }
+}
+
+### Temple Of Unity
+
+building_unity_temple_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 360
+    base_cap_amount = 1
+    category = unity
+
+    upgrades = {
+        "building_unity_temple_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 500
+            nevarrit = 250
+        }
+        upkeep = {
+            nevarrit = 1
+            minerals = 1
+        }
+    }
+
+    planet_modifier = {
+        planet_jobs_unity_produces_mult = 0.1
+    }
+
+    country_modifier = {
+        country_unity_produces_mult = 0.01
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_unity_templar_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_unity_templar_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = nevarrit
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 2
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_unity_temple_1"
+    }
+}
+
+building_unity_temple_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 720
+    base_cap_amount = 1
+    category = unity
+
+    upgrades = {
+        "building_unity_temple_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 1000
+            nevarrit = 500
+        }
+        upkeep = {
+            nevarrit = 2
+            minerals = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_jobs_unity_produces_mult = 0.2
+    }
+
+    country_modifier = {
+        country_unity_produces_mult = 0.02
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_unity_templar_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_unity_templar_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = nevarrit
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 3
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_unity_temple_2"
+    }
+}
+
+building_unity_temple_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1080
+    base_cap_amount = 1
+    category = unity
+
+    upgrades = {
+        "building_unity_temple_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 1500
+            nevarrit = 750
+        }
+        upkeep = {
+            nevarrit = 3
+            minerals = 3
+        }
+    }
+
+    planet_modifier = {
+        planet_jobs_unity_produces_mult = 0.3
+    }
+
+    country_modifier = {
+        country_unity_produces_mult = 0.03
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_unity_templar_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_unity_templar_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = nevarrit
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 4
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_unity_temple_3"
+    }
+}
+
+building_unity_temple_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1440
+    base_cap_amount = 1
+    category = unity
+
+    upgrades = {
+        "building_unity_temple_5"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 2000
+            nevarrit = 1000
+        }
+        upkeep = {
+            nevarrit = 4
+            minerals = 4
+        }
+    }
+
+    planet_modifier = {
+        planet_jobs_unity_produces_mult = 0.4
+    }
+
+    country_modifier = {
+        country_unity_produces_mult = 0.04
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_unity_templar_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_unity_templar_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = nevarrit
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 5
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_unity_temple_4"
+    }
+}
+
+building_unity_temple_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1800
+    base_cap_amount = 1
+    category = unity
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 2500
+            nevarrit = 1250
+        }
+        upkeep = {
+            nevarrit = 5
+            minerals = 5
+        }
+    }
+
+    planet_modifier = {
+        planet_jobs_unity_produces_mult = 0.5
+    }
+
+    country_modifier = {
+        country_unity_produces_mult = 0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_unity_templar_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_unity_templar_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = nevarrit
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 6
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_unity_temple_5"
+    }
+}
