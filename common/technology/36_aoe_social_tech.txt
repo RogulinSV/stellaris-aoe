@@ -1,0 +1,1837 @@
+### Defence Paradigm
+
+tech_planetary_defence = {
+    # Unlocks "Ministery Of Defence I" building
+    # Unlocks "Mercenary Starbase I" building
+
+    cost = @technology_ultralow_cost
+    area = society
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { military_theory }
+    prerequisites = {
+        "tech_planetary_defenses"
+    }
+    weight = @tier1weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_planetary_defence_title"
+            desc = "tech_planetary_defence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_claim_influence_cost_mult = -0.05
+        army_defense_health_mult = 0.05
+        army_defense_damage_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 1
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                is_pacifist = yes
+                is_at_war = no
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_militarist = yes
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 1
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 2
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 3
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 4
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+        modifier = {
+            factor = 4
+            has_ascension_perk = "ap_eternal_vigilance"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 1
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_adopt"
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                is_pacifist = yes
+                is_at_war = no
+            }
+        }
+    }
+}
+
+tech_solar_defence = {
+    # Unlocks "Ministery Of Defence II" building
+    # Unlocks "Mercenary Starbase II" building
+
+    cost = @technology_low_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { military_theory }
+    prerequisites = {
+        "tech_planetary_defence"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_solar_defence_title"
+            desc = "tech_solar_defence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_claim_influence_cost_mult = -0.05
+        army_defense_health_mult = 0.05
+        army_defense_damage_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                is_pacifist = yes
+                is_at_war = no
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_militarist = yes
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 2
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 3
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 4
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_eternal_vigilance"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 2
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                is_pacifist = yes
+                is_at_war = no
+            }
+        }
+    }
+}
+
+tech_stellar_defence = {
+    # Unlocks "Ministery Of Defence III" building
+    # Unlocks "Mercenary Starbase III" building
+
+    cost = @technology_medium_cost
+    area = society
+    tier = 3
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { military_theory }
+    prerequisites = {
+        "tech_solar_defence"
+    }
+    weight = @tier3weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_stellar_defence_title"
+            desc = "tech_stellar_defence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_claim_influence_cost_mult = -0.05
+        army_defense_health_mult = 0.05
+        army_defense_damage_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                is_pacifist = yes
+                is_at_war = no
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_militarist = yes
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 3
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 4
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_eternal_vigilance"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                is_pacifist = yes
+                is_at_war = no
+            }
+        }
+    }
+}
+
+tech_galactic_defence = {
+    # Unlocks "Ministery Of Defence IV" building
+    # Unlocks "Mercenary Starbase IV" building
+
+    cost = @technology_high_cost
+    area = society
+    tier = 4
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { military_theory }
+    prerequisites = {
+        "tech_stellar_defence"
+    }
+    weight = @tier4weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_galactic_defence_title"
+            desc = "tech_galactic_defence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_claim_influence_cost_mult = -0.05
+        army_defense_health_mult = 0.05
+        army_defense_damage_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = "tech_ground_defense_planning"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                is_pacifist = yes
+                is_at_war = no
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_militarist = yes
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 4
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = "tech_ground_defense_planning"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 4
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                is_pacifist = yes
+                is_at_war = no
+            }
+        }
+    }
+}
+
+tech_universe_defence = {
+    # Unlocks "Ministery Of Defence V" building
+    # Unlocks "Mercenary Starbase V" building
+
+    cost = @technology_ultrahigh_cost
+    area = society
+    tier = 5
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { military_theory }
+    prerequisites = {
+        "tech_galactic_defence"
+    }
+    weight = @tier5weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_universe_defence_title"
+            desc = "tech_universe_defence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_claim_influence_cost_mult = -0.05
+        army_defense_health_mult = 0.05
+        army_defense_damage_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NAND = {
+                has_technology = "tech_ground_defense_planning"
+                has_technology = "tech_global_defense_grid"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                is_pacifist = yes
+                is_at_war = no
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_militarist = yes
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 5
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_eternal_vigilance"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NAND = {
+                has_technology = "tech_ground_defense_planning"
+                has_technology = "tech_global_defense_grid"
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 5
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_eternal_vigilance"
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                is_pacifist = yes
+                is_at_war = no
+            }
+        }
+    }
+}
+
+### Offence Paradigm
+
+tech_planetary_offence = {
+    # Unlocks "Ministery Of Offence I" building
+    # Unlocks "Starship Foundry I" building
+    # Unlocks "Starship Academy I" building
+
+    cost = @technology_ultralow_cost
+    area = society
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { military_theory }
+    prerequisites = {
+        "tech_centralized_command"
+    }
+    weight = @tier1weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_planetary_offence_title"
+            desc = "tech_planetary_offence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_occupation_armies_add = 1
+        country_war_exhaustion_mult = -0.05
+        army_attack_morale_mult = 0.05
+        army_attack_damage_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "counter_space_battles_total_won"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 1
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_militarist = yes
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 2
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 3
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 4
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+        modifier = {
+            factor = 4
+            has_ascension_perk = "ap_nihilistic_acquisition"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "counter_space_battles_total_won"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 2
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_adopt"
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+    }
+}
+
+tech_solar_offence = {
+    # Unlocks "Ministery Of Offence II" building
+    # Unlocks "Starship Foundry II" building
+    # Unlocks "Starship Academy II" building
+
+    cost = @technology_low_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { military_theory }
+    prerequisites = {
+        "tech_planetary_offence"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_solar_offence_title"
+            desc = "tech_solar_offence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_occupation_armies_add = 1
+        country_war_exhaustion_mult = -0.05
+        army_attack_morale_mult = 0.05
+        army_attack_damage_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "counter_space_battles_total_won"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_militarist = yes
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 3
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 4
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+        modifier = {
+            factor = 3
+            has_ascension_perk = "ap_nihilistic_acquisition"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "counter_space_battles_total_won"
+                value < 10
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+    }
+}
+
+tech_stellar_offence = {
+    # Unlocks "Ministery Of Offence III" building
+    # Unlocks "Starship Foundry III" building
+    # Unlocks "Starship Academy III" building
+
+    cost = @technology_medium_cost
+    area = society
+    tier = 3
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { military_theory }
+    prerequisites = {
+        "tech_solar_offence"
+    }
+    weight = @tier3weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_stellar_offence_title"
+            desc = "tech_stellar_offence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_occupation_armies_add = 1
+        country_war_exhaustion_mult = -0.05
+        army_attack_morale_mult = 0.05
+        army_attack_damage_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "counter_space_battles_total_won"
+                value < 15
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_militarist = yes
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 4
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_nihilistic_acquisition"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "counter_space_battles_total_won"
+                value < 15
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 4
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+    }
+}
+
+tech_galactic_offence = {
+    # Unlocks "Ministery Of Offence IV" building
+    # Unlocks "Starship Foundry IV" building
+    # Unlocks "Starship Academy IV" building
+
+    cost = @technology_high_cost
+    area = society
+    tier = 4
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { military_theory }
+    prerequisites = {
+        "tech_stellar_offence"
+    }
+    weight = @tier4weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_galactic_offence_title"
+            desc = "tech_galactic_offence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_occupation_armies_add = 1
+        country_war_exhaustion_mult = -0.05
+        army_attack_morale_mult = 0.05
+        army_attack_damage_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "counter_space_battles_total_won"
+                value < 20
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_militarist = yes
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 5
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "counter_space_battles_total_won"
+                value < 20
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 5
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+    }
+}
+
+tech_universe_offence = {
+    # Unlocks "Ministery Of Offence V" building
+    # Unlocks "Starship Foundry V" building
+    # Unlocks "Starship Academy V" building
+
+    cost = @technology_ultrahigh_cost
+    area = society
+    tier = 5
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { military_theory }
+    prerequisites = {
+        "tech_galactic_offence"
+    }
+    weight = @tier5weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_universe_offence_title"
+            desc = "tech_universe_offence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_occupation_armies_add = 1
+        country_war_exhaustion_mult = -0.05
+        army_attack_morale_mult = 0.05
+        army_attack_damage_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "counter_space_battles_total_won"
+                value < 25
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_militarist = yes
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 6
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_nihilistic_acquisition"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "counter_space_battles_total_won"
+                value < 25
+            }
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_expertise_military_theory"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 6
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = "ap_nihilistic_acquisition"
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+    }
+}

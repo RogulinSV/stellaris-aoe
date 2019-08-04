@@ -1,0 +1,3742 @@
+### Ministery Of Defence
+
+building_defence_ministery_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 600
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_defence_ministery_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+            engos = 500
+            helium = 500
+        }
+        upkeep = {
+            engos = 1
+            helium = 1
+            minerals = 5
+        }
+    }
+
+    country_modifier = {
+        armies_cost_mult = -0.1
+        country_claim_influence_cost_mult = -0.1
+    }
+
+    army_modifier = {
+        army_starting_experience_add = 100
+        army_defense_damage_mult = 0.05
+        army_defense_health_mult = 0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_defence_supervisor_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_defence_supervisor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = engos
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = helium
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_at_war = no
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 10000
+            owner = {
+                is_at_war = yes
+                is_pacifist = no
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_defence"
+    }
+}
+
+building_defence_ministery_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 900
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_defence_ministery_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 4000
+            engos = 1000
+            helium = 1000
+        }
+        upkeep = {
+            engos = 2
+            helium = 2
+            minerals = 10
+        }
+    }
+
+    country_modifier = {
+        armies_cost_mult = -0.15
+        country_claim_influence_cost_mult = -0.15
+    }
+
+    army_modifier = {
+        army_starting_experience_add = 125
+        army_defense_damage_mult = 0.1
+        army_defense_health_mult = 0.1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_defence_supervisor_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_defence_supervisor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = engos
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = helium
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_at_war = no
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 10000
+            owner = {
+                is_at_war = yes
+                is_pacifist = no
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_solar_defence"
+    }
+}
+
+building_defence_ministery_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1200
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_defence_ministery_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 8000
+            engos = 2000
+            helium = 2000
+        }
+        upkeep = {
+            engos = 4
+            helium = 4
+            minerals = 15
+        }
+    }
+
+    country_modifier = {
+        armies_cost_mult = -0.2
+        country_claim_influence_cost_mult = -0.2
+    }
+
+    army_modifier = {
+        army_starting_experience_add = 150
+        army_defense_damage_mult = 0.15
+        army_defense_health_mult = 0.15
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_defence_supervisor_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_defence_supervisor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 16
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = engos
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = helium
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_at_war = no
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 10000
+            owner = {
+                is_at_war = yes
+                is_pacifist = no
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_stellar_defence"
+    }
+}
+
+building_defence_ministery_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1500
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_defence_ministery_5"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 15000
+            engos = 4000
+            helium = 4000
+        }
+        upkeep = {
+            engos = 6
+            helium = 6
+            minerals = 20
+        }
+    }
+
+    country_modifier = {
+        armies_cost_mult = -0.25
+        country_claim_influence_cost_mult = -0.25
+    }
+
+    army_modifier = {
+        army_starting_experience_add = 175
+        army_defense_damage_mult = 0.2
+        army_defense_health_mult = 0.2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_defence_supervisor_add = 8
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_defence_supervisor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 21
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = engos
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = helium
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_at_war = no
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 10000
+            owner = {
+                is_at_war = yes
+                is_pacifist = no
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_galactic_defence"
+    }
+}
+
+building_defence_ministery_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1800
+    base_cap_amount = 1
+    category = army
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 30000
+            engos = 8000
+            helium = 8000
+        }
+        upkeep = {
+            engos = 8
+            helium = 8
+            minerals = 25
+        }
+    }
+
+    country_modifier = {
+        armies_cost_mult = -0.3
+        country_claim_influence_cost_mult = -0.3
+    }
+
+    army_modifier = {
+        army_starting_experience_add = 200
+        army_defense_damage_mult = 0.25
+        army_defense_health_mult = 0.25
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_defence_supervisor_add = 10
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_defence_supervisor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 26
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = engos
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = helium
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_at_war = no
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 10000
+            owner = {
+                is_at_war = yes
+                is_pacifist = no
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_universe_defence"
+    }
+}
+
+### Mercenary Starbase
+
+building_mercenary_starbase_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 300
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_mercenary_starbase_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_defence_ministery_1"
+            has_building = "building_defence_ministery_2"
+            has_building = "building_defence_ministery_3"
+            has_building = "building_defence_ministery_4"
+            has_building = "building_defence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_defence_ministery_1"
+                has_building = "building_defence_ministery_2"
+                has_building = "building_defence_ministery_3"
+                has_building = "building_defence_ministery_4"
+                has_building = "building_defence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            lirium = 500
+        }
+        upkeep = {
+            lirium = 1
+            minerals = 1
+        }
+    }
+
+    country_modifier = {
+        army_morale = 0.01
+        army_health = 0.01
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_defender_recruiter_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_defender_recruiter_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_defence"
+    }
+}
+
+building_mercenary_starbase_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 500
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_mercenary_starbase_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_defence_ministery_2"
+            has_building = "building_defence_ministery_3"
+            has_building = "building_defence_ministery_4"
+            has_building = "building_defence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_defence_ministery_2"
+                has_building = "building_defence_ministery_3"
+                has_building = "building_defence_ministery_4"
+                has_building = "building_defence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+            lirium = 1000
+        }
+        upkeep = {
+            lirium = 2
+            minerals = 2
+        }
+    }
+
+    country_modifier = {
+        army_morale = 0.02
+        army_health = 0.02
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_defender_recruiter_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_defender_recruiter_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_solar_defence"
+    }
+}
+
+building_mercenary_starbase_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 700
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_mercenary_starbase_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_defence_ministery_3"
+            has_building = "building_defence_ministery_4"
+            has_building = "building_defence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_defence_ministery_3"
+                has_building = "building_defence_ministery_4"
+                has_building = "building_defence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 4000
+            lirium = 2000
+        }
+        upkeep = {
+            lirium = 4
+            minerals = 4
+        }
+    }
+
+    country_modifier = {
+        army_morale = 0.03
+        army_health = 0.03
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_defender_recruiter_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_defender_recruiter_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_stellar_defence"
+    }
+}
+
+building_mercenary_starbase_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1100
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_mercenary_starbase_5"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_defence_ministery_4"
+            has_building = "building_defence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_defence_ministery_4"
+                has_building = "building_defence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 8000
+            lirium = 4000
+        }
+        upkeep = {
+            lirium = 7
+            minerals = 7
+        }
+    }
+
+    country_modifier = {
+        army_morale = 0.04
+        army_health = 0.04
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_defender_recruiter_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_defender_recruiter_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_galactic_defence"
+    }
+}
+
+building_mercenary_starbase_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1600
+    base_cap_amount = 1
+    category = army
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_building = "building_defence_ministery_5"
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOT = {
+                has_building = "building_defence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 15000
+            lirium = 8000
+        }
+        upkeep = {
+            lirium = 10
+            minerals = 10
+        }
+    }
+
+    country_modifier = {
+        army_morale = 0.05
+        army_health = 0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_defender_recruiter_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_defender_recruiter_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_universe_defence"
+    }
+}
+
+### Ministery Of Offence
+
+building_offence_ministery_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 600
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_offence_ministery_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+            itildeen = 500
+            satramene = 500
+        }
+        upkeep = {
+            itildeen = 1
+            satramene = 1
+            minerals = 5
+        }
+    }
+
+    country_modifier = {
+        country_war_exhaustion_mult = -0.1
+    }
+
+    army_modifier = {
+        army_attack_damage_mult = 0.1
+        army_attack_morale_mult = 0.1
+        army_disengage_chance_mult = -0.1
+        army_collateral_damage_mult = 0.1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_offence_supervisor_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_offence_supervisor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = itildeen
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_at_war = no
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 10000
+            owner = {
+                is_at_war = yes
+                is_pacifist = no
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_offence"
+    }
+}
+
+building_offence_ministery_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 900
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_offence_ministery_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 4000
+            itildeen = 1000
+            satramene = 1000
+        }
+        upkeep = {
+            itildeen = 2
+            satramene = 2
+            minerals = 10
+        }
+    }
+
+    country_modifier = {
+        country_war_exhaustion_mult = -0.15
+    }
+
+    army_modifier = {
+        army_attack_damage_mult = 0.15
+        army_attack_morale_mult = 0.15
+        army_disengage_chance_mult = -0.15
+        army_collateral_damage_mult = 0.15
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_offence_supervisor_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_offence_supervisor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = itildeen
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_at_war = no
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 10000
+            owner = {
+                is_at_war = yes
+                is_pacifist = no
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_solar_offence"
+    }
+}
+
+building_offence_ministery_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1200
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_offence_ministery_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 8000
+            itildeen = 2000
+            satramene = 2000
+        }
+        upkeep = {
+            itildeen = 4
+            satramene = 4
+            minerals = 15
+        }
+    }
+
+    country_modifier = {
+        country_war_exhaustion_mult = -0.2
+    }
+
+    army_modifier = {
+        army_attack_damage_mult = 0.2
+        army_attack_morale_mult = 0.2
+        army_disengage_chance_mult = -0.2
+        army_collateral_damage_mult = 0.2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_offence_supervisor_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_offence_supervisor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 16
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = itildeen
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_at_war = no
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 10000
+            owner = {
+                is_at_war = yes
+                is_pacifist = no
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_stellar_offence"
+    }
+}
+
+building_offence_ministery_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1500
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_offence_ministery_5"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 15000
+            itildeen = 4000
+            satramene = 4000
+        }
+        upkeep = {
+            itildeen = 6
+            satramene = 6
+            minerals = 20
+        }
+    }
+
+    country_modifier = {
+        country_war_exhaustion_mult = -0.25
+    }
+
+    army_modifier = {
+        army_attack_damage_mult = 0.25
+        army_attack_morale_mult = 0.25
+        army_disengage_chance_mult = -0.25
+        army_collateral_damage_mult = 0.25
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_offence_supervisor_add = 8
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_offence_supervisor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 21
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = itildeen
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_at_war = no
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 10000
+            owner = {
+                is_at_war = yes
+                is_pacifist = no
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_galactic_offence"
+    }
+}
+
+building_offence_ministery_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1800
+    base_cap_amount = 1
+    category = army
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 30000
+            itildeen = 8000
+            satramene = 8000
+        }
+        upkeep = {
+            itildeen = 8
+            satramene = 8
+            minerals = 25
+        }
+    }
+
+    country_modifier = {
+        country_war_exhaustion_mult = -0.3
+    }
+
+    army_modifier = {
+        army_attack_damage_mult = 0.3
+        army_attack_morale_mult = 0.3
+        army_disengage_chance_mult = -0.3
+        army_collateral_damage_mult = 0.3
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_offence_supervisor_add = 10
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_offence_supervisor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 26
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = itildeen
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_at_war = no
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 10000
+            owner = {
+                is_at_war = yes
+                is_pacifist = no
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_universe_offence"
+    }
+}
+
+### Starship Academy
+
+building_starship_academy_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 400
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_starship_academy_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_offence_ministery_1"
+            has_building = "building_offence_ministery_2"
+            has_building = "building_offence_ministery_3"
+            has_building = "building_offence_ministery_4"
+            has_building = "building_offence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_offence_ministery_1"
+                has_building = "building_offence_ministery_2"
+                has_building = "building_offence_ministery_3"
+                has_building = "building_offence_ministery_4"
+                has_building = "building_offence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+            energy = 1000
+            mithril = 400
+        }
+        upkeep = {
+            mithril = 1
+            energy = 3
+            minerals = 2
+        }
+    }
+
+    country_modifier = {
+        army_experience_gain_mult = 0.1
+    }
+
+    planet_modifier = {
+        planet_army_build_speed_mult = 0.15
+    }
+
+    army_modifier = {
+        army_disengage_chance_mult = 0.1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_academy_instructor_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_academy_instructor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = mithril
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_offence"
+    }
+}
+
+building_starship_academy_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 700
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_starship_academy_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_offence_ministery_2"
+            has_building = "building_offence_ministery_3"
+            has_building = "building_offence_ministery_4"
+            has_building = "building_offence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_offence_ministery_2"
+                has_building = "building_offence_ministery_3"
+                has_building = "building_offence_ministery_4"
+                has_building = "building_offence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1600
+            energy = 2000
+            mithril = 800
+        }
+        upkeep = {
+            mithril = 2
+            energy = 5
+            minerals = 4
+        }
+    }
+
+    country_modifier = {
+        army_experience_gain_mult = 0.15
+    }
+
+    planet_modifier = {
+        planet_army_build_speed_mult = 0.3
+    }
+
+    army_modifier = {
+        army_disengage_chance_mult = 0.15
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_academy_instructor_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_academy_instructor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = mithril
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_solar_offence"
+    }
+}
+
+building_starship_academy_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1000
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_starship_academy_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_offence_ministery_3"
+            has_building = "building_offence_ministery_4"
+            has_building = "building_offence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_offence_ministery_3"
+                has_building = "building_offence_ministery_4"
+                has_building = "building_offence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 3200
+            energy = 4000
+            mithril = 1600
+        }
+        upkeep = {
+            mithril = 3
+            energy = 7
+            minerals = 6
+        }
+    }
+
+    country_modifier = {
+        army_experience_gain_mult = 0.2
+    }
+
+    planet_modifier = {
+        planet_army_build_speed_mult = 0.45
+    }
+
+    army_modifier = {
+        army_disengage_chance_mult = 0.2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_academy_instructor_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_academy_instructor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = mithril
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_stellar_offence"
+    }
+}
+
+building_starship_academy_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1500
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_starship_academy_5"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_offence_ministery_4"
+            has_building = "building_offence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_offence_ministery_4"
+                has_building = "building_offence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 6500
+            energy = 8000
+            mithril = 3000
+        }
+        upkeep = {
+            mithril = 4
+            energy = 9
+            minerals = 8
+        }
+    }
+
+    country_modifier = {
+        army_experience_gain_mult = 0.25
+    }
+
+    planet_modifier = {
+        planet_army_build_speed_mult = 0.6
+    }
+
+    army_modifier = {
+        army_disengage_chance_mult = 0.25
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_academy_instructor_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_academy_instructor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = mithril
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_galactic_offence"
+    }
+}
+
+building_starship_academy_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 2000
+    base_cap_amount = 1
+    category = army
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_building = "building_offence_ministery_5"
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOT = {
+                has_building = "building_offence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 13000
+            energy = 16000
+            mithril = 6000
+        }
+        upkeep = {
+            mithril = 5
+            energy = 12
+            minerals = 10
+        }
+    }
+
+    country_modifier = {
+        army_experience_gain_mult = 0.3
+    }
+
+    planet_modifier = {
+        planet_army_build_speed_mult = 0.75
+    }
+
+    army_modifier = {
+        army_disengage_chance_mult = 0.3
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_academy_instructor_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_academy_instructor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 13
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = mithril
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_universe_offence"
+    }
+}
+
+### Starship Foundry
+
+building_starship_foundry_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 400
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_starship_foundry_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_offence_ministery_1"
+            has_building = "building_offence_ministery_2"
+            has_building = "building_offence_ministery_3"
+            has_building = "building_offence_ministery_4"
+            has_building = "building_offence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_offence_ministery_1"
+                has_building = "building_offence_ministery_2"
+                has_building = "building_offence_ministery_3"
+                has_building = "building_offence_ministery_4"
+                has_building = "building_offence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+            energy = 1000
+            tiberium = 400
+        }
+        upkeep = {
+            tiberium = 1
+            energy = 3
+            minerals = 2
+        }
+    }
+
+    country_modifier = {
+        shipsize_corvette_build_speed_mult = 0.01
+        starbase_shipyard_build_speed_mult = 0.01
+    }
+
+    planet_modifier = {
+        planet_jobs_robotic_produces_mult = 0.1
+        planet_army_build_speed_mult = 0.1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_foundry_inventor_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_foundry_inventor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tiberium
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_offence"
+        "tech_corvettes"
+    }
+}
+
+building_starship_foundry_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 700
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_starship_foundry_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_offence_ministery_2"
+            has_building = "building_offence_ministery_3"
+            has_building = "building_offence_ministery_4"
+            has_building = "building_offence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_offence_ministery_2"
+                has_building = "building_offence_ministery_3"
+                has_building = "building_offence_ministery_4"
+                has_building = "building_offence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1600
+            energy = 2000
+            tiberium = 800
+        }
+        upkeep = {
+            tiberium = 2
+            energy = 5
+            minerals = 4
+        }
+    }
+
+    country_modifier = {
+        shipsize_corvette_build_speed_mult = 0.02
+        shipsize_destroyer_build_speed_mult = 0.01
+        starbase_shipyard_build_speed_mult = 0.02
+    }
+
+    planet_modifier = {
+        planet_jobs_robotic_produces_mult = 0.2
+        planet_army_build_speed_mult = 0.15
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_foundry_inventor_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_foundry_inventor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tiberium
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_solar_offence"
+        "tech_destroyers"
+    }
+}
+
+building_starship_foundry_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1000
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_starship_foundry_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_offence_ministery_3"
+            has_building = "building_offence_ministery_4"
+            has_building = "building_offence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_offence_ministery_3"
+                has_building = "building_offence_ministery_4"
+                has_building = "building_offence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 3200
+            energy = 4000
+            tiberium = 1600
+        }
+        upkeep = {
+            tiberium = 3
+            energy = 7
+            minerals = 6
+        }
+    }
+
+    country_modifier = {
+        shipsize_corvette_build_speed_mult = 0.03
+        shipsize_destroyer_build_speed_mult = 0.02
+        shipsize_cruiser_build_speed_mult = 0.01
+        starbase_shipyard_build_speed_mult = 0.03
+    }
+
+    planet_modifier = {
+        planet_jobs_robotic_produces_mult = 0.3
+        planet_army_build_speed_mult = 0.2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_foundry_inventor_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_foundry_inventor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tiberium
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_stellar_offence"
+        "tech_cruisers"
+    }
+}
+
+building_starship_foundry_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1500
+    base_cap_amount = 1
+    category = army
+
+    upgrades = {
+        "building_starship_foundry_5"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_offence_ministery_4"
+            has_building = "building_offence_ministery_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_offence_ministery_4"
+                has_building = "building_offence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 6500
+            energy = 8000
+            tiberium = 3000
+        }
+        upkeep = {
+            tiberium = 4
+            energy = 9
+            minerals = 8
+        }
+    }
+
+    country_modifier = {
+        shipsize_corvette_build_speed_mult = 0.04
+        shipsize_destroyer_build_speed_mult = 0.03
+        shipsize_cruiser_build_speed_mult = 0.02
+        shipsize_battleship_build_speed_mult = 0.01
+        starbase_shipyard_build_speed_mult = 0.04
+    }
+
+    planet_modifier = {
+        planet_jobs_robotic_produces_mult = 0.4
+        planet_army_build_speed_mult = 0.25
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_foundry_inventor_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_foundry_inventor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tiberium
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_galactic_offence"
+        "tech_battleships"
+    }
+}
+
+building_starship_foundry_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 2000
+    base_cap_amount = 1
+    category = army
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_building = "building_offence_ministery_5"
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOT = {
+                has_building = "building_offence_ministery_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 13000
+            energy = 16000
+            tiberium = 6000
+        }
+        upkeep = {
+            tiberium = 5
+            energy = 12
+            minerals = 10
+        }
+    }
+
+    country_modifier = {
+        shipsize_corvette_build_speed_mult = 0.05
+        shipsize_destroyer_build_speed_mult = 0.04
+        shipsize_cruiser_build_speed_mult = 0.03
+        shipsize_battleship_build_speed_mult = 0.02
+        starbase_shipyard_build_speed_mult = 0.05
+    }
+
+    planet_modifier = {
+        planet_jobs_robotic_produces_mult = 0.5
+        planet_army_build_speed_mult = 0.3
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_foundry_inventor_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_foundry_inventor_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 13
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tiberium
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            factor = 1000
+            owner = {
+                is_militarist = yes
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_universe_offence"
+        "tech_titans"
+    }
+}
