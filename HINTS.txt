@@ -164,6 +164,20 @@ country_trust_cap_add = 50
 country_synthetic_trust_cap_add = 50
 country_trust_growth = 0.33
 
+planet_army_build_speed_mult = 1.0
+armies_cost_mult = -0.2
+army_morale = 0.25
+army_health = 0.1
+army_damage_mult = 0.2
+army_experience_gain_mult = 0.33
+army_morale_damage_mult = 0.10
+army_collateral_damage_mult = 0.20
+army_disengage_chance_mult = 0.20
+army_defense_health_mult = 0.20
+army_defense_damage_mult = 0.1
+army_attack_damage_mult = 0.15
+army_attack_morale_mult = 0.15
+
 ROBOT_species_trait_points_add = 1
 category_statecraft_research_speed_mult = 0.1
 category_biology_research_speed_mult = 0.1
