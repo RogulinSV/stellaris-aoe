@@ -1,0 +1,1127 @@
+### Liquid Matrix
+
+building_liquid_matrix = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 900
+    base_cap_amount = 1
+    category = resource
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_building = "building_energy_nexus"
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOT = {
+                has_building = "building_energy_nexus"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 3000
+            energon = 2000
+        }
+        upkeep = {
+            energon = 5
+            minerals = 5
+        }
+        produces = {
+            energy = 25
+        }
+    }
+
+    planet_modifier = {
+        district_generator_max = 2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_liquid_matrix_operator_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_liquid_matrix_operator_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energon
+                    value < 6
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_power_hub_3"
+    }
+}
+
+### Power Processor
+
+building_power_processor_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 400
+    base_cap_amount = 1
+    category = resource
+
+    upgrades = {
+        "building_power_processor_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_energy_grid"
+            has_building = "building_energy_nexus"
+            has_building = "building_liquid_matrix"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_energy_grid"
+                has_building = "building_energy_nexus"
+                has_building = "building_liquid_matrix"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            energon = 500
+        }
+        upkeep = {
+            energon = 1
+            minerals = 3
+        }
+    }
+
+    planet_modifier = {
+        planet_technician_energy_produces_mult = 0.1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_power_processor_operator_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_power_processor_operator_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energon
+                    value < 2
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_basic_power_processing"
+    }
+}
+
+building_power_processor_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 800
+    base_cap_amount = 1
+    category = resource
+
+    upgrades = {
+        "building_power_processor_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_energy_grid"
+            has_building = "building_energy_nexus"
+            has_building = "building_liquid_matrix"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = {
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_energy_grid"
+                has_building = "building_energy_nexus"
+                has_building = "building_liquid_matrix"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+            energon = 1000
+        }
+        upkeep = {
+            energon = 2
+            minerals = 5
+        }
+    }
+
+    planet_modifier = {
+        planet_technician_energy_produces_mult = 0.2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_power_processor_operator_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_power_processor_operator_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energon
+                    value < 3
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_advanced_power_processing"
+    }
+}
+
+building_power_processor_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1200
+    base_cap_amount = 1
+    category = resource
+
+    upgrades = {
+        "building_power_processor_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_populous_capital = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_energy_nexus"
+            has_building = "building_liquid_matrix"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = {
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_energy_nexus"
+                has_building = "building_liquid_matrix"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 3000
+            energon = 1500
+        }
+        upkeep = {
+            energon = 3
+            minerals = 7
+        }
+    }
+
+    planet_modifier = {
+        planet_technician_energy_produces_mult = 0.3
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_power_processor_operator_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_power_processor_operator_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energon
+                    value < 4
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_supreme_power_processing"
+    }
+}
+
+building_power_processor_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1600
+    base_cap_amount = 1
+    category = resource
+
+    upgrades = {
+        "building_power_processor_5"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_energy_nexus"
+            has_building = "building_liquid_matrix"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = {
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_energy_nexus"
+                has_building = "building_liquid_matrix"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 4000
+            energon = 2000
+        }
+        upkeep = {
+            energon = 4
+            minerals = 9
+        }
+    }
+
+    planet_modifier = {
+        planet_technician_energy_produces_mult = 0.4
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_power_processor_operator_add = 8
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_power_processor_operator_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energon
+                    value < 5
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_transcendence_power_processing"
+    }
+}
+
+building_power_processor_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 2000
+    base_cap_amount = 1
+    category = resource
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_building = "building_liquid_matrix"
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = {
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOT = {
+                has_building = "building_liquid_matrix"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 5000
+            energon = 2500
+        }
+        upkeep = {
+            energon = 5
+            minerals = 12
+        }
+    }
+
+    planet_modifier = {
+        planet_technician_energy_produces_mult = 0.5
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_power_processor_operator_add = 10
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_power_processor_operator_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 13
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energon
+                    value < 6
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_infinitum_power_processing"
+    }
+}
+
+### Power Holder
+
+building_power_holder_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 500
+    base_cap_amount = 1
+    category = resource
+
+    upgrades = {
+        "building_power_holder_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_power_processor_1"
+            has_building = "building_power_processor_2"
+            has_building = "building_power_processor_3"
+            has_building = "building_power_processor_4"
+            has_building = "building_power_processor_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_power_processor_1"
+                has_building = "building_power_processor_2"
+                has_building = "building_power_processor_3"
+                has_building = "building_power_processor_4"
+                has_building = "building_power_processor_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+            engos = 500
+            helium = 500
+        }
+        upkeep = {
+            engos = 1
+            helium = 1
+            minerals = 4
+        }
+    }
+
+    country_modifier = {
+        country_energy_produces_mult = 0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_power_holder_operator_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_power_holder_operator_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = engos
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = helium
+                    value < 2
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_basic_power_processing"
+    }
+}
+
+building_power_holder_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1000
+    base_cap_amount = 1
+    category = resource
+
+    upgrades = {
+        "building_power_holder_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_power_processor_3"
+            has_building = "building_power_processor_4"
+            has_building = "building_power_processor_5"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_power_processor_3"
+                has_building = "building_power_processor_4"
+                has_building = "building_power_processor_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 5000
+            engos = 1000
+            helium = 1000
+        }
+        upkeep = {
+            engos = 3
+            helium = 3
+            minerals = 8
+        }
+    }
+
+    country_modifier = {
+        country_energy_produces_mult = 0.1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_power_holder_operator_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_power_holder_operator_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = engos
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = helium
+                    value < 4
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_supreme_power_processing"
+    }
+}
+
+building_power_holder_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1500
+    base_cap_amount = 1
+    category = resource
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        has_building = "building_power_processor_5"
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOT = {
+                has_building = "building_power_processor_5"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 9000
+            engos = 2000
+            helium = 2000
+        }
+        upkeep = {
+            engos = 5
+            helium = 5
+            minerals = 12
+        }
+    }
+
+    country_modifier = {
+        country_energy_produces_mult = 0.15
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_power_holder_operator_add = 9
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_power_holder_operator_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 13
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = engos
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = helium
+                    value < 6
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_infinitum_power_processing"
+    }
+}
