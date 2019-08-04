@@ -1,0 +1,1531 @@
+### Planetary Construction
+
+tech_planetary_construction_1 = {
+    # Unlocks "Urban Condominium I" building
+    # Unlocks "Megacity I" building
+
+    cost = @technology_ultralow_cost
+    area = society
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_planetary_government"
+    }
+    weight = @tier1weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_planetary_construction_1_title"
+            desc = "tech_planetary_construction_1_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 1
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_harmony_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_the_greater_good"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_kinship"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_mind_and_body"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_bulwark_of_harmony"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_utopian_dream"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_harmony_adopt"
+            }
+        }
+    }
+}
+
+tech_planetary_construction_2 = {
+    # Unlocks "Urban Condominium II" building
+    # Unlocks "Urban Apartments I" building
+    # Unlocks "Megacity II" building
+    # Unlocks "Elitcity I" building
+
+    cost = @technology_low_cost
+    area = society
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_planetary_construction_1"
+    }
+    weight = @tier1weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_planetary_construction_2_title"
+            desc = "tech_planetary_construction_2_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 1
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_harmony_the_greater_good"
+                has_tradition = "tr_harmony_kinship"
+                has_tradition = "tr_harmony_mind_and_body"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_bulwark_of_harmony"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_utopian_dream"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_harmony_the_greater_good"
+                has_tradition = "tr_harmony_kinship"
+                has_tradition = "tr_harmony_mind_and_body"
+            }
+        }
+    }
+}
+
+tech_planetary_construction_3 = {
+    # Unlocks "Urban Condominium III" building
+    # Unlocks "Megacity III" building
+
+    cost = @technology_low_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_planetary_construction_2"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_planetary_construction_3_title"
+            desc = "tech_planetary_construction_3_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                AND = {
+                    has_tradition = "tr_harmony_mind_and_body"
+                    has_tradition = "tr_harmony_the_greater_good"
+                }
+                AND = {
+                    has_tradition = "tr_harmony_kinship"
+                    has_tradition = "tr_harmony_the_greater_good"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_bulwark_of_harmony"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_utopian_dream"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                AND = {
+                    has_tradition = "tr_harmony_mind_and_body"
+                    has_tradition = "tr_harmony_the_greater_good"
+                }
+                AND = {
+                    has_tradition = "tr_harmony_kinship"
+                    has_tradition = "tr_harmony_the_greater_good"
+                }
+            }
+        }
+    }
+}
+
+tech_planetary_construction_4 = {
+    # Unlocks "Urban Condominium IV" building
+    # Unlocks "Urban Apartments II" building
+    # Unlocks "Megacity IV" building
+    # Unlocks "Elitcity II" building
+
+    cost = @technology_medium_cost
+    area = society
+    tier = 3
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_planetary_construction_3"
+    }
+    weight = @tier3weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_planetary_construction_4_title"
+            desc = "tech_planetary_construction_4_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_harmony_mind_and_body"
+                has_tradition = "tr_harmony_the_greater_good"
+                has_tradition = "tr_harmony_kinship"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_bulwark_of_harmony"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_utopian_dream"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_harmony_mind_and_body"
+                has_tradition = "tr_harmony_the_greater_good"
+                has_tradition = "tr_harmony_kinship"
+            }
+        }
+    }
+}
+
+tech_planetary_construction_5 = {
+    # Unlocks "Urban Condominium V" building
+    # Unlocks "Megacity V" building
+
+    cost = @technology_high_cost
+    area = society
+    tier = 4
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_planetary_construction_4"
+    }
+    weight = @tier4weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_planetary_construction_5_title"
+            desc = "tech_planetary_construction_5_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_harmony_bulwark_of_harmony"
+                has_tradition = "tr_harmony_utopian_dream"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_harmony_bulwark_of_harmony"
+                has_tradition = "tr_harmony_utopian_dream"
+            }
+        }
+    }
+}
+
+tech_planetary_construction_6 = {
+    # Unlocks "Urban Condominium VI" building
+    # Unlocks "Urban Apartments III" building
+    # Unlocks "Megacity VI" building
+    # Unlocks "Elitcity III" building
+
+    cost = @technology_high_cost
+    area = society
+    tier = 4
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_planetary_construction_5"
+    }
+    weight = @tier4weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_planetary_construction_6_title"
+            desc = "tech_planetary_construction_6_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_harmony_bulwark_of_harmony"
+                has_tradition = "tr_harmony_utopian_dream"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_harmony_bulwark_of_harmony"
+                has_tradition = "tr_harmony_utopian_dream"
+            }
+        }
+    }
+}
+
+tech_planetary_construction_7 = {
+    # Unlocks "Urban Condominium VII" building
+    # Unlocks "Megacity VII" building
+
+    cost = @technology_ultrahigh_cost
+    area = society
+    tier = 5
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_planetary_construction_6"
+    }
+    weight = @tier5weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_planetary_construction_7_title"
+            desc = "tech_planetary_construction_7_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_harmony_finish"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_expertise_industry"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_harmony_finish"
+            }
+        }
+    }
+}
+
+### Anticrime Campaign
+
+tech_crime_reduction = {
+    # Unlocks "Department Of Legality I" building
+
+    cost = @technology_ultralow_cost
+    area = society
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_planetary_government"
+    }
+    weight = @tier1weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_crime_reduction_title"
+            desc = "tech_crime_reduction_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_subject_trust_cap_add = 10
+        country_subject_power_penalty_mult = -0.05
+        country_trust_growth = 0.05
+        planet_crime_no_happiness_add = -1
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 1
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_harmony_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_the_greater_good"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_kinship"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_mind_and_body"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_bulwark_of_harmony"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_utopian_dream"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_harmony_adopt"
+            }
+        }
+    }
+}
+
+tech_crime_warfare = {
+    # Unlocks "Department Of Legality II" building
+
+    cost = @technology_low_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_crime_reduction"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_crime_warfare_title"
+            desc = "tech_crime_warfare_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_subject_trust_cap_add = 20
+        country_subject_power_penalty_mult = -0.05
+        country_trust_growth = 0.05
+        planet_crime_no_happiness_add = -2
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                AND = {
+                    has_tradition = "tr_harmony_mind_and_body"
+                    has_tradition = "tr_harmony_the_greater_good"
+                }
+                AND = {
+                    has_tradition = "tr_harmony_kinship"
+                    has_tradition = "tr_harmony_the_greater_good"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_bulwark_of_harmony"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_utopian_dream"
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                AND = {
+                    has_tradition = "tr_harmony_mind_and_body"
+                    has_tradition = "tr_harmony_the_greater_good"
+                }
+                AND = {
+                    has_tradition = "tr_harmony_kinship"
+                    has_tradition = "tr_harmony_the_greater_good"
+                }
+            }
+        }
+    }
+}
+
+tech_crime_annihilation = {
+    # Unlocks "Department Of Legality III" building
+
+    cost = @technology_medium_cost
+    area = society
+    tier = 3
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_crime_warfare"
+    }
+    weight = @tier3weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_crime_annihilation_title"
+            desc = "tech_crime_annihilation_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_subject_trust_cap_add = 30
+        country_subject_power_penalty_mult = -0.05
+        country_trust_growth = 0.05
+        planet_crime_no_happiness_add = -3
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_harmony_bulwark_of_harmony"
+                has_tradition = "tr_harmony_utopian_dream"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_harmony_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_harmony_bulwark_of_harmony"
+                has_tradition = "tr_harmony_utopian_dream"
+            }
+        }
+    }
+}
+
+tech_crime_direction = {
+    # Unlocks "Department Of Legality IV" building
+
+    cost = @technology_high_cost
+    area = society
+    tier = 4
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_crime_annihilation"
+    }
+    weight = @tier4weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_crime_direction_title"
+            desc = "tech_crime_direction_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_subject_trust_cap_add = 40
+        country_subject_power_penalty_mult = -0.05
+        country_trust_growth = 0.05
+        planet_crime_no_happiness_add = -4
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_harmony_bulwark_of_harmony"
+                has_tradition = "tr_harmony_utopian_dream"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NAND = {
+                has_tradition = "tr_harmony_bulwark_of_harmony"
+                has_tradition = "tr_harmony_utopian_dream"
+            }
+        }
+    }
+}
+
+tech_crime_purification = {
+    # Unlocks "Department Of Legality V" building
+
+    cost = @technology_ultrahigh_cost
+    area = society
+    tier = 5
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_crime_direction"
+    }
+    weight = @tier5weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_crime_purification_title"
+            desc = "tech_crime_purification_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    modifier = {
+        country_subject_trust_cap_add = 50
+        country_subject_power_penalty_mult = -0.05
+        country_trust_growth = 0.05
+        planet_crime_no_happiness_add = -5
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_harmony_finish"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 5
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_harmony_finish"
+            }
+        }
+    }
+}
+
+### Advanced Intelligence
+
+tech_interstellar_intelligence = {
+    # Unlocks "Intelligence Agency I" building
+
+    cost = @technology_low_cost
+    area = society
+    tier = 3
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_planetary_government"
+    }
+    weight = @tier3weight3
+}
+
+tech_galactic_intelligence = {
+    # Unlocks "Intelligence Agency II" building
+
+    cost = @technology_medium_cost
+    area = society
+    tier = 4
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_interstellar_intelligence"
+    }
+    weight = @tier4weight3
+}
+
+tech_universe_intelligence = {
+    # Unlocks "Intelligence Agency I" building
+
+    cost = @technology_high_cost
+    area = society
+    tier = 5
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_galactic_intelligence"
+    }
+    weight = @tier5weight3
+}

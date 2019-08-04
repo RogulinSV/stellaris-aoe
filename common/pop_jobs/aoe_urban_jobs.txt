@@ -1,0 +1,956 @@
+trade_guild_manager = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = "building_megacity_7a"
+    clothes_texture_index = 3
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+
+    possible = {
+        complex_specialist_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    resources = {
+        category = planet_managers
+        upkeep = {
+            minerals = 2
+            food = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    NOT = {
+                        is_sovereign_colony = yes
+                        has_orbital_bombardment = no
+                    }
+                }
+            }
+            minerals = 2
+            food = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = pop
+                pop = {
+                    is_pop_purged = yes
+                }
+            }
+            minerals = 2
+            food = 3
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = rare_crystals
+                        value < 500
+                    }
+                    has_technology = "tech_mine_rare_crystals"
+                }
+            }
+            rare_crystals = 2
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = exotic_gases
+                        value < 500
+                    }
+                    has_technology = "tech_mine_exotic_gases"
+                }
+            }
+            exotic_gases = 2
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = volatile_motes
+                        value < 500
+                    }
+                    has_technology = "tech_mine_volatile_motes"
+                }
+            }
+            volatile_motes = 2
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value < 1000
+                    }
+                }
+            }
+            energy = 2
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = minerals
+                        value < 1000
+                    }
+                }
+            }
+            minerals = 2
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = food
+                        value < 500
+                    }
+                }
+            }
+            food = 2
+        }
+        produces = {
+            unity = 1
+            consumer_goods = 2
+        }
+    }
+
+    planet_modifier = {
+        pop_cat_ruler_happiness = 0.025
+        pop_cat_specialist_happiness = 0.025
+        planet_amenities_add = 1
+        trade_value_add = 2
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+
+        modifier = {
+            factor = 2
+            has_trait = "trait_conservational"
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = "trait_thrifty"
+        }
+        modifier = {
+            factor = 1.25
+            has_trait = "trait_quick_learners"
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = "trait_communal"
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = "trait_conformists"
+        }
+        modifier = {
+            factor = 0.25
+            has_trait = "trait_wasteful"
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+science_guild_consul = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = "building_megacity_7b"
+    clothes_texture_index = 3
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+
+    possible = {
+        complex_specialist_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    resources = {
+        category = planet_managers
+        upkeep = {
+            consumer_goods = 2
+            food = 2
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    NOT = {
+                        is_sovereign_colony = yes
+                        has_orbital_bombardment = no
+                    }
+                }
+            }
+            consumer_goods = 3
+            food = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = pop
+                pop = {
+                    is_pop_purged = yes
+                }
+            }
+            consumer_goods = 3
+            food = 3
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = physics_research
+                        value < 25
+                    }
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = physics_research
+                        value < 50
+                    }
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = physics_research
+                        value < 100
+                    }
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = physics_research
+                        value < 200
+                    }
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = physics_research
+                        value < 500
+                    }
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = physics_research
+                        value < 1000
+                    }
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = physics_research
+                        value < 2500
+                    }
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = physics_research
+                        value < 5000
+                    }
+                }
+            }
+            physics_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = society_research
+                        value < 25
+                    }
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = society_research
+                        value < 50
+                    }
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = society_research
+                        value < 100
+                    }
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = society_research
+                        value < 200
+                    }
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = society_research
+                        value < 500
+                    }
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = society_research
+                        value < 1000
+                    }
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = society_research
+                        value < 2500
+                    }
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = society_research
+                        value < 5000
+                    }
+                }
+            }
+            society_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = engineering_research
+                        value < 25
+                    }
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = engineering_research
+                        value < 50
+                    }
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = engineering_research
+                        value < 100
+                    }
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = engineering_research
+                        value < 200
+                    }
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = engineering_research
+                        value < 500
+                    }
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = engineering_research
+                        value < 1000
+                    }
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = engineering_research
+                        value < 2500
+                    }
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    has_monthly_income = {
+                        resource = engineering_research
+                        value < 5000
+                    }
+                }
+            }
+            engineering_research = 1
+        }
+        produces = {
+            physics_research = 1
+            engineering_research = 1
+            society_research = 1
+        }
+    }
+
+    planet_modifier = {
+        planet_researchers_produces_mult = 0.05
+        planet_amenities_add = 1
+        trade_value_add = 2
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+
+        modifier = {
+            factor = 2
+            has_trait = "trait_conservational"
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = "trait_thrifty"
+        }
+        modifier = {
+            factor = 1.25
+            has_trait = "trait_quick_learners"
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = "trait_communal"
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = "trait_conformists"
+        }
+        modifier = {
+            factor = 0.25
+            has_trait = "trait_wasteful"
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+industrial_guild_engineer = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = "building_megacity_7c"
+    clothes_texture_index = 3
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+
+    possible = {
+        complex_specialist_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    resources = {
+        category = planet_managers
+        upkeep = {
+            energy = 2
+            food = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    NOT = {
+                        is_sovereign_colony = yes
+                        has_orbital_bombardment = no
+                    }
+                }
+            }
+            energy = 2
+            food = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = pop
+                pop = {
+                    is_pop_purged = yes
+                }
+            }
+            energy = 2
+            food = 3
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = sr_living_metal
+                        value < 500
+                    }
+                    has_technology = "tech_mine_living_metal"
+                }
+            }
+            sr_living_metal = 2
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = sr_zro
+                        value < 500
+                    }
+                    has_technology = "tech_mine_zro"
+                }
+            }
+            sr_zro = 2
+        }
+        produces = {
+            trigger = { 
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = sr_dark_matter
+                        value < 500
+                    }
+                    has_technology = "tech_mine_dark_matter"
+                }
+            }
+            sr_dark_matter = 2
+        }
+        produces = {
+            influence = 1
+            alloys = 2
+        }
+    }
+
+    planet_modifier = {
+        pop_government_ethic_attraction = 0.025
+        pop_growth_speed = 0.025
+        planet_amenities_add = 1
+        trade_value_add = 2
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+
+        modifier = {
+            factor = 2
+            has_trait = "trait_conservational"
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = "trait_thrifty"
+        }
+        modifier = {
+            factor = 1.25
+            has_trait = "trait_quick_learners"
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = "trait_communal"
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = "trait_conformists"
+        }
+        modifier = {
+            factor = 0.25
+            has_trait = "trait_wasteful"
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+elite_merchant = {
+    category = criminal
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = "building_elitcity_3"
+    clothes_texture_index = 2
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+
+    possible = {
+        complex_specialist_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    resources = {
+        category = planet_managers
+        upkeep = {
+            consumer_goods = 1
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    NOT = {
+                        is_sovereign_colony = yes
+                        has_orbital_bombardment = no
+                    }
+                }
+            }
+            consumer_goods = 2
+            minerals = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = pop
+                pop = {
+                    is_pop_purged = yes
+                }
+            }
+            consumer_goods = 2
+            minerals = 3
+        }
+    }
+
+    planet_modifier = {
+        planet_amenities_no_happiness_add = 1
+        planet_crime_no_happiness_add = 1
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+
+        modifier = {
+            factor = 2
+            has_trait = "trait_conservational"
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = "trait_thrifty"
+        }
+        modifier = {
+            factor = 1.25
+            has_trait = "trait_quick_learners"
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = "trait_communal"
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = "trait_conformists"
+        }
+        modifier = {
+            factor = 0.25
+            has_trait = "trait_wasteful"
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
+
+elite_prostitute = {
+    category = criminal
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = "building_elitcity_3"
+    clothes_texture_index = 2
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+
+    possible = {
+        complex_specialist_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    resources = {
+        category = planet_managers
+        upkeep = {
+            consumer_goods = 1
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    NOT = {
+                        is_sovereign_colony = yes
+                        has_orbital_bombardment = no
+                    }
+                }
+            }
+            consumer_goods = 2
+            minerals = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = pop
+                pop = {
+                    is_pop_purged = yes
+                }
+            }
+            consumer_goods = 2
+            minerals = 3
+        }
+    }
+
+    planet_modifier = {
+        planet_amenities_no_happiness_add = 1
+        planet_crime_no_happiness_add = 1
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+
+        modifier = {
+            factor = 2
+            has_trait = "trait_conservational"
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = "trait_thrifty"
+        }
+        modifier = {
+            factor = 1.25
+            has_trait = "trait_quick_learners"
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = "trait_communal"
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = "trait_conformists"
+        }
+        modifier = {
+            factor = 0.25
+            has_trait = "trait_wasteful"
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}

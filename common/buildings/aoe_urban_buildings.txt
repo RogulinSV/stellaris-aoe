@@ -1,0 +1,3922 @@
+### Urban Condominium
+
+building_condominium_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 100
+    category = amenity
+
+    upgrades = {
+        "building_condominium_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 9
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        free_housing > 10
+        free_jobs = 0
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 300
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = "building_apartment_1"
+                has_building = "building_apartment_2"
+                has_building = "building_apartment_3"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_1"
+    }
+}
+
+building_condominium_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 200
+    category = amenity
+
+    upgrades = {
+        "building_condominium_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 19
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        free_housing > 10
+        free_jobs = 0
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 3
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = "building_apartment_1"
+                has_building = "building_apartment_2"
+                has_building = "building_apartment_3"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_2"
+    }
+}
+
+building_condominium_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 300
+    category = amenity
+
+    upgrades = {
+        "building_condominium_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 29
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        free_housing > 10
+        free_jobs = 0
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 700
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 4
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = "building_apartment_1"
+                has_building = "building_apartment_2"
+                has_building = "building_apartment_3"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_3"
+    }
+}
+
+building_condominium_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 400
+    category = amenity
+
+    upgrades = {
+        "building_condominium_5"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 39
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        free_housing > 10
+        free_jobs = 0
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 900
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 5
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = "building_apartment_1"
+                has_building = "building_apartment_2"
+                has_building = "building_apartment_3"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_4"
+    }
+}
+
+building_condominium_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 500
+    category = amenity
+
+    upgrades = {
+        "building_condominium_6"
+        "building_apartment_1"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 49
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        free_housing > 10
+        free_jobs = 0
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1200
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 6
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = "building_apartment_1"
+                has_building = "building_apartment_2"
+                has_building = "building_apartment_3"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_5"
+    }
+}
+
+building_condominium_6 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 600
+    category = amenity
+
+    upgrades = {
+        "building_condominium_7"
+        "building_apartment_1"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 59
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        free_housing > 10
+        free_jobs = 0
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1500
+        }
+        upkeep = {
+            energy = 6
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 7
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = "building_apartment_1"
+                has_building = "building_apartment_2"
+                has_building = "building_apartment_3"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_6"
+    }
+}
+
+building_condominium_7 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 700
+    category = amenity
+
+    upgrades = {
+        "building_apartment_1"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 69
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        free_housing > 10
+        free_jobs = 0
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1800
+        }
+        upkeep = {
+            energy = 7
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 8
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = "building_apartment_1"
+                has_building = "building_apartment_2"
+                has_building = "building_apartment_3"
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_7"
+    }
+}
+
+### Urban Apartments
+
+building_apartment_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 600
+    category = amenity
+
+    upgrades = {
+        "building_apartment_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 49
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 5
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            energy = 500
+        }
+        upkeep = {
+            energy = 5
+            minerals = 3
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 6
+        planet_amenities_add = 5
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_2"
+    }
+}
+
+building_apartment_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 1200
+    category = amenity
+
+    upgrades = {
+        "building_apartment_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 64
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 5
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+            energy = 1000
+        }
+        upkeep = {
+            energy = 7
+            minerals = 5
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 9
+        planet_amenities_add = 7
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_4"
+    }
+}
+
+building_apartment_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 1800
+    category = amenity
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 79
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 5
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 3000
+            energy = 1500
+        }
+        upkeep = {
+            energy = 9
+            minerals = 7
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 12
+        planet_amenities_add = 10
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 4
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_6"
+    }
+}
+
+### Megacity
+
+building_megacity_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 500
+    base_cap_amount = 1
+    category = amenity
+
+    upgrades = {
+        "building_megacity_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 9
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 20
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            energy = 1000
+            tylium = 250
+        }
+        upkeep = {
+            energy = 3
+            minerals = 3
+            tylium = 1
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 3
+        planet_amenities_add = 3
+        planet_immigration_pull_mult = 0.05
+        planet_crime_no_happiness_add = 1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_trade_guild_manager_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_trade_guild_manager_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_industrial_guild_engineer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_industrial_guild_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_science_guild_consul_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_science_guild_consul_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_1"
+    }
+}
+
+building_megacity_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 800
+    base_cap_amount = 1
+    category = amenity
+
+    upgrades = {
+        "building_megacity_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 19
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 20
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+            energy = 2000
+            tylium = 500
+        }
+        upkeep = {
+            energy = 4
+            minerals = 4
+            tylium = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 6
+        planet_amenities_add = 6
+        planet_immigration_pull_mult = 0.1
+        planet_crime_no_happiness_add = 2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_trade_guild_manager_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_trade_guild_manager_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_industrial_guild_engineer_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_industrial_guild_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_science_guild_consul_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_science_guild_consul_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_2"
+    }
+}
+
+building_megacity_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 1200
+    base_cap_amount = 1
+    category = amenity
+
+    upgrades = {
+        "building_megacity_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        num_pops > 29
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 20
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 3000
+            energy = 3000
+            tylium = 750
+        }
+        upkeep = {
+            energy = 5
+            minerals = 5
+            tylium = 3
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 9
+        planet_amenities_add = 9
+        planet_immigration_pull_mult = 0.15
+        planet_crime_no_happiness_add = 4
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_trade_guild_manager_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_trade_guild_manager_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_industrial_guild_engineer_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_industrial_guild_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_science_guild_consul_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_science_guild_consul_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_3"
+    }
+}
+
+building_megacity_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 1600
+    base_cap_amount = 1
+    category = amenity
+
+    upgrades = {
+        "building_megacity_5"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 20
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 4000
+            energy = 4000
+            tylium = 1000
+        }
+        upkeep = {
+            energy = 7
+            minerals = 7
+            tylium = 4
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 12
+        planet_amenities_add = 12
+        planet_immigration_pull_mult = 0.2
+        planet_crime_no_happiness_add = 8
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_trade_guild_manager_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_trade_guild_manager_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_industrial_guild_engineer_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_industrial_guild_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_science_guild_consul_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_science_guild_consul_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_4"
+    }
+}
+
+building_megacity_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 2000
+    base_cap_amount = 1
+    category = amenity
+
+    upgrades = {
+        "building_megacity_6a"
+        "building_megacity_6b"
+        "building_megacity_6c"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 20
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 5000
+            energy = 5000
+            tylium = 1500
+        }
+        upkeep = {
+            energy = 9
+            minerals = 9
+            tylium = 6
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 15
+        planet_amenities_add = 15
+        planet_immigration_pull_mult = 0.25
+        planet_crime_no_happiness_add = 15
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_trade_guild_manager_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_trade_guild_manager_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_industrial_guild_engineer_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_industrial_guild_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_science_guild_consul_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_science_guild_consul_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_5"
+    }
+}
+
+building_megacity_6a = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 2500
+    base_cap_amount = 1
+    category = amenity
+
+    upgrades = {
+        "building_megacity_7a"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 20
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 7000
+            energy = 7000
+            tylium = 2500
+        }
+        upkeep = {
+            energy = 13
+            minerals = 13
+            tylium = 9
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 17
+        planet_amenities_add = 17
+        planet_immigration_pull_mult = 0.3
+        planet_crime_no_happiness_add = 30
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 4
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_trade_guild_manager_add = 7
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_trade_guild_manager_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_industrial_guild_engineer_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_industrial_guild_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_science_guild_consul_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_science_guild_consul_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 14
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 14
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_6"
+    }
+}
+
+building_megacity_6b = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 2500
+    base_cap_amount = 1
+    category = amenity
+
+    upgrades = {
+        "building_megacity_7b"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 20
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 7000
+            energy = 7000
+            tylium = 2500
+        }
+        upkeep = {
+            energy = 13
+            minerals = 13
+            tylium = 9
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 17
+        planet_amenities_add = 17
+        planet_immigration_pull_mult = 0.3
+        planet_crime_no_happiness_add = 30
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 4
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_trade_guild_manager_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_trade_guild_manager_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_industrial_guild_engineer_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_industrial_guild_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_science_guild_consul_add = 7
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_science_guild_consul_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 14
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 14
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_6"
+    }
+}
+
+building_megacity_6c = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 2500
+    base_cap_amount = 1
+    category = amenity
+
+    upgrades = {
+        "building_megacity_7c"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 20
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 7000
+            energy = 7000
+            tylium = 2500
+        }
+        upkeep = {
+            energy = 13
+            minerals = 13
+            tylium = 9
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 17
+        planet_amenities_add = 17
+        planet_immigration_pull_mult = 0.3
+        planet_crime_no_happiness_add = 30
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 4
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_trade_guild_manager_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_trade_guild_manager_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_industrial_guild_engineer_add = 7
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_industrial_guild_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_science_guild_consul_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_science_guild_consul_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 14
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 14
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_6"
+    }
+}
+
+building_megacity_7a = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 3000
+    base_cap_amount = 1
+    category = amenity
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 20
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 10000
+            energy = 10000
+            tylium = 5000
+        }
+        upkeep = {
+            energy = 18
+            minerals = 18
+            tylium = 14
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 20
+        planet_amenities_add = 20
+        planet_immigration_pull_mult = 0.35
+        planet_crime_no_happiness_add = 50
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 5
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_trade_guild_manager_add = 10
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_trade_guild_manager_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_industrial_guild_engineer_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_industrial_guild_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_science_guild_consul_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_science_guild_consul_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 19
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 19
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value < 15
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_7"
+    }
+}
+
+building_megacity_7b = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 3000
+    base_cap_amount = 1
+    category = amenity
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 20
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 10000
+            energy = 10000
+            tylium = 5000
+        }
+        upkeep = {
+            energy = 18
+            minerals = 18
+            tylium = 14
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 20
+        planet_amenities_add = 20
+        planet_immigration_pull_mult = 0.35
+        planet_crime_no_happiness_add = 50
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 5
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_trade_guild_manager_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_trade_guild_manager_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_industrial_guild_engineer_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_industrial_guild_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_science_guild_consul_add = 10
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_science_guild_consul_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 19
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 19
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value < 15
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_7"
+    }
+}
+
+building_megacity_7c = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 3000
+    base_cap_amount = 1
+    category = amenity
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 20
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 10000
+            energy = 10000
+            tylium = 5000
+        }
+        upkeep = {
+            energy = 18
+            minerals = 18
+            tylium = 14
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 20
+        planet_amenities_add = 20
+        planet_immigration_pull_mult = 0.35
+        planet_crime_no_happiness_add = 50
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 5
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_trade_guild_manager_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_trade_guild_manager_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_industrial_guild_engineer_add = 10
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_industrial_guild_engineer_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_science_guild_consul_add = 5
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_science_guild_consul_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 19
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 19
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value < 15
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 3
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_7"
+    }
+}
+
+### Elitcity
+
+building_elitcity_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 700
+    base_cap_amount = 1
+    category = amenity
+
+    upgrades = {
+        "building_elitcity_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 10
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 5000
+            orihalk = 1000
+            lirium = 1000
+        }
+        upkeep = {
+            energy = 5
+            lirium = 3
+            orihalk = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 4
+        planet_amenities_add = 6
+        planet_immigration_pull_mult = 0.1
+        planet_structures_cost_mult = 0.1
+        pop_amenities_usage_mult = 0.1
+        pop_factions_produces_mult = 0.5
+        pop_cat_ruler_happiness = 0.25
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_elite_merchant_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_elite_merchant_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_elite_prostitute_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_elite_prostitute_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = orihalk
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 5
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_2"
+    }
+}
+
+building_elitcity_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 1400
+    base_cap_amount = 1
+    category = amenity
+
+    upgrades = {
+        "building_elitcity_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 10
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 10000
+            orihalk = 2500
+            lirium = 2500
+        }
+        upkeep = {
+            energy = 10
+            lirium = 7
+            orihalk = 5
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 8
+        planet_amenities_add = 15
+        planet_immigration_pull_mult = 0.25
+        planet_structures_cost_mult = 0.2
+        pop_amenities_usage_mult = 0.25
+        pop_factions_produces_mult = 1
+        pop_cat_ruler_happiness = 0.5
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_elite_merchant_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_elite_merchant_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_elite_prostitute_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_elite_prostitute_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = orihalk
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 5
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_4"
+    }
+}
+
+building_elitcity_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 2100
+    base_cap_amount = 1
+    category = amenity
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_housing > 10
+                free_jobs = 0
+            }
+            is_sovereign_colony = no
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 25000
+            orihalk = 5000
+            lirium = 5000
+        }
+        upkeep = {
+            energy = 16
+            lirium = 12
+            orihalk = 8
+        }
+    }
+
+    planet_modifier = {
+        planet_housing_add = 12
+        planet_amenities_add = 20
+        planet_immigration_pull_mult = 0.5
+        planet_structures_cost_mult = 0.3
+        pop_amenities_usage_mult = 0.5
+        pop_factions_produces_mult = 2
+        pop_cat_ruler_happiness = 1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = "tr_domination_imperious_architecture"
+            }
+        }
+        modifier = {
+            planet_housing_add = 4
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_elite_merchant_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_elite_merchant_effect_desc"
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_elite_prostitute_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_elite_prostitute_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 17
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 13
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = orihalk
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_district_slots = 0
+        }
+        modifier = {
+            factor = 1000
+            free_housing < 5
+            OR = {
+                free_jobs > 0
+                AND = {
+                    free_housing <= 0
+                    NOT = {
+                        any_owned_pop = {
+                            is_unemployed = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_construction_6"
+    }
+}
