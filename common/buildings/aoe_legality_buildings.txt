@@ -1,0 +1,745 @@
+### Department Of Legality
+
+building_legality_department_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 250
+    category = government
+
+    upgrades = {
+        "building_legality_department_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = yes
+                is_fallen_empire = yes
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 500
+            minerals = 500
+            orihalk = 250
+        }
+        upkeep = {
+            energy = 1
+            minerals = 1
+            orihalk = 1
+        }
+    }
+
+    planet_modifier = {
+        planet_crime_no_happiness_add = -1
+        planet_emigration_push_add = 1
+        planet_stability_add = 1
+        pop_demotion_time_mult = -0.01
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_vice_squad_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_vice_squad_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = orihalk
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 1000
+            OR = {
+                has_planet_modifier = "planet_stability_high"
+                has_planet_modifier = "planet_stability_no_happiness_high"
+                has_planet_modifier = "planet_crime"
+                has_planet_modifier = "planet_crime_no_happiness"
+                planet_crime > 20
+            }
+        }
+        modifier = {
+            factor = 100
+            OR = {
+                has_planet_modifier = "planet_stability_low"
+                has_planet_modifier = "planet_stability_no_happiness_low"
+                planet_crime > 10
+            }
+        }
+        modifier = {
+            factor = 10
+            planet_crime > 2
+        }
+        modifier = {
+            factor = 0
+            planet_crime < 1
+        }
+    }
+
+    prerequisites = {
+        "tech_crime_reduction"
+    }
+}
+
+building_legality_department_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 400
+    category = government
+
+    upgrades = {
+        "building_legality_department_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = yes
+                is_fallen_empire = yes
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 750
+            minerals = 750
+            orihalk = 400
+        }
+        upkeep = {
+            energy = 2
+            minerals = 2
+            orihalk = 2
+        }
+    }
+
+    planet_modifier = {
+        planet_crime_no_happiness_add = -2
+        planet_emigration_push_add = 2
+        planet_stability_add = 2
+        pop_demotion_time_mult = -0.02
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_vice_squad_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_vice_squad_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = orihalk
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 1000
+            OR = {
+                has_planet_modifier = "planet_stability_high"
+                has_planet_modifier = "planet_stability_no_happiness_high"
+                has_planet_modifier = "planet_crime"
+                has_planet_modifier = "planet_crime_no_happiness"
+                planet_crime > 25
+            }
+        }
+        modifier = {
+            factor = 100
+            OR = {
+                has_planet_modifier = "planet_stability_low"
+                has_planet_modifier = "planet_stability_no_happiness_low"
+                planet_crime > 15
+            }
+        }
+        modifier = {
+            factor = 10
+            planet_crime > 5
+        }
+        modifier = {
+            factor = 0
+            planet_crime < 2
+        }
+    }
+
+    prerequisites = {
+        "tech_crime_warfare"
+    }
+}
+
+building_legality_department_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 700
+    category = government
+
+    upgrades = {
+        "building_legality_department_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = yes
+                is_fallen_empire = yes
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 1250
+            minerals = 1250
+            orihalk = 700
+        }
+        upkeep = {
+            energy = 3
+            minerals = 3
+            orihalk = 3
+        }
+    }
+
+    planet_modifier = {
+        planet_crime_no_happiness_add = -3
+        planet_emigration_push_add = 3
+        planet_stability_add = 3
+        pop_demotion_time_mult = -0.03
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_vice_squad_add = 6
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_vice_squad_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = orihalk
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 1000
+            OR = {
+                has_planet_modifier = "planet_stability_high"
+                has_planet_modifier = "planet_stability_no_happiness_high"
+                has_planet_modifier = "planet_crime"
+                has_planet_modifier = "planet_crime_no_happiness"
+                planet_crime > 30
+            }
+        }
+        modifier = {
+            factor = 100
+            OR = {
+                has_planet_modifier = "planet_stability_low"
+                has_planet_modifier = "planet_stability_no_happiness_low"
+                planet_crime > 20
+            }
+        }
+        modifier = {
+            factor = 10
+            planet_crime > 10
+        }
+        modifier = {
+            factor = 0
+            planet_crime < 3
+        }
+    }
+
+    prerequisites = {
+        "tech_crime_annihilation"
+    }
+}
+
+building_legality_department_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 1050
+    category = government
+
+    upgrades = {
+        "building_legality_department_5"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = yes
+                is_fallen_empire = yes
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 1750
+            minerals = 1750
+            orihalk = 1000
+        }
+        upkeep = {
+            energy = 4
+            minerals = 4
+            orihalk = 4
+        }
+    }
+
+    planet_modifier = {
+        planet_crime_no_happiness_add = -4
+        planet_emigration_push_add = 4
+        planet_stability_add = 4
+        pop_demotion_time_mult = -0.04
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_vice_squad_add = 8
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_vice_squad_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = orihalk
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 1000
+            OR = {
+                has_planet_modifier = "planet_stability_high"
+                has_planet_modifier = "planet_stability_no_happiness_high"
+                has_planet_modifier = "planet_crime"
+                has_planet_modifier = "planet_crime_no_happiness"
+                planet_crime > 35
+            }
+        }
+        modifier = {
+            factor = 100
+            OR = {
+                has_planet_modifier = "planet_stability_low"
+                has_planet_modifier = "planet_stability_no_happiness_low"
+                planet_crime > 25
+            }
+        }
+        modifier = {
+            factor = 10
+            planet_crime > 15
+        }
+        modifier = {
+            factor = 0
+            planet_crime < 4
+        }
+    }
+
+    prerequisites = {
+        "tech_crime_direction"
+    }
+}
+
+building_legality_department_5 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 1400
+    category = government
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = yes
+                is_fallen_empire = yes
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 2350
+            minerals = 2350
+            orihalk = 1250
+        }
+        upkeep = {
+            energy = 5
+            minerals = 5
+            orihalk = 5
+        }
+    }
+
+    planet_modifier = {
+        planet_crime_no_happiness_add = -5
+        planet_emigration_push_add = 5
+        planet_stability_add = 5
+        pop_demotion_time_mult = -0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_vice_squad_add = 10
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_vice_squad_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = orihalk
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 1000
+            OR = {
+                has_planet_modifier = "planet_stability_high"
+                has_planet_modifier = "planet_stability_no_happiness_high"
+                has_planet_modifier = "planet_crime"
+                has_planet_modifier = "planet_crime_no_happiness"
+                planet_crime > 40
+            }
+        }
+        modifier = {
+            factor = 100
+            OR = {
+                has_planet_modifier = "planet_stability_low"
+                has_planet_modifier = "planet_stability_no_happiness_low"
+                planet_crime > 30
+            }
+        }
+        modifier = {
+            factor = 10
+            planet_crime > 20
+        }
+        modifier = {
+            factor = 0
+            planet_crime < 5
+        }
+    }
+
+    prerequisites = {
+        "tech_crime_purification"
+    }
+}
