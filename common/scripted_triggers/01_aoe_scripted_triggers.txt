@@ -709,3 +709,102 @@ is_pop_purged = {
         has_pop_flag = "event_purge"
     }
 }
+
+# Scope: planet
+has_major_populous_capital = {
+    has_major_upgraded_capital = yes
+    num_pops >= 60
+}
+
+# Scope: planet
+has_fully_upgraded_populous_capital = {
+    has_fully_upgraded_capital = yes
+    num_pops >= 100
+}
+
+# Scope: pop
+is_intelligencer = {
+    has_job = "intelligencer"
+}
+
+# Scope: pop
+is_disengaged_intelligencer = {
+    is_intelligencer = yes
+    NOR = {
+        has_pop_flag = "espionage_purpose_steal_resources"
+        has_pop_flag = "espionage_purpose_steal_technologies"
+    }
+}
+
+# Scope: pop
+is_unassignment_intelligencer = {
+    is_intelligencer = yes
+    NOT = {
+        has_pop_flag = "intelligencer_on_assignment"
+    }
+}
+
+# Scope: pop
+is_intelligencer_has_purpose_steal_resources = {
+    is_intelligencer = yes
+    has_pop_flag = "espionage_purpose_steal_resources"
+}
+
+# Scope: pop
+is_intelligencer_has_purpose_steal_technologies = {
+    is_intelligencer = yes
+    has_pop_flag = "espionage_purpose_steal_technologies"
+}
+
+# Scope: country
+possibly_affected_by_espionage = {
+    NOT = {
+        is_same_value = event_target:espionage_origin_country
+    }
+    # has_established_contact = event_target:espionage_origin_country
+    has_communications = event_target:espionage_origin_country
+    NOT = {
+        has_country_flag = espionage_target_country@event_target:espionage_origin_country
+    }
+    NOR = {
+        is_country_type = "enclave"
+        is_country_type = "nomad"
+        is_country_type = "dormant_marauders"
+        is_country_type = "awakened_marauders"
+        is_country_type = "swarm"
+        is_country_type = "extradimensional"
+        is_country_type = "extradimensional_2"
+        is_country_type = "extradimensional_3"
+        is_country_type = "gray_goo"
+        is_country_type = "ai_empire"
+        is_country_type = "primitive"
+        is_guardian_country = yes
+    }
+}
+
+# This: target country
+# Prev: attacker country
+can_declare_war_to = {
+    NOR = {
+        AND = {
+            OR = {
+                is_subject_type = "vassal"
+                is_subject_type = "protectorate"
+                is_subject_type = "signatory"
+            }
+            overlord = {
+                is_same_value = prev
+            }
+        }
+        prev = {
+            has_policy_flag = "no_wars"
+            OR = {
+                is_subject = no
+                overlord = {
+                    is_same_value = this
+                }
+            }
+        }
+        is_at_war_with = prev
+    }
+}

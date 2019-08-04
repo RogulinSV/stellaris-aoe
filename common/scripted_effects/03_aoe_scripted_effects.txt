@@ -1,0 +1,914 @@
+# Scope: pop
+engage_intelligencer_espionage_purpose_steal_resources = {
+    set_pop_flag = "espionage_purpose_steal_resources"
+}
+
+# Scope: pop
+engage_intelligencer_espionage_purpose_steal_technologies = {
+    set_pop_flag = "espionage_purpose_steal_technologies"
+}
+
+# Scope: pop
+disengage_intelligencer = {
+    if = {
+        limit = { has_pop_flag = "espionage_purpose_steal_resources" }
+        remove_pop_flag = "espionage_purpose_steal_resources"
+    }
+    else_if = {
+        limit = { has_pop_flag = "espionage_purpose_steal_technologies" }
+        remove_pop_flag = "espionage_purpose_steal_technologies"
+    }
+}
+
+# Scope: pop
+set_intelligencer_on_assignment = {
+    set_timed_pop_flag = {
+        flag = "intelligencer_on_assignment"
+        days = $ARG1$
+    }
+}
+
+# Scope: country
+count_possibly_affected_by_espionage = {
+    set_variable = {
+        which = "possibly_affected_by_espionage_counter"
+        value = 0
+    }
+    every_country = {
+        limit = {
+            possibly_affected_by_espionage = yes
+        }
+        prev = {
+            change_variable = {
+                which = "possibly_affected_by_espionage_counter"
+                value = 1
+            }
+        }
+    }
+}
+
+# Scope: origin country
+search_espionage_victim = {
+    random_country = {
+        limit = {
+            possibly_affected_by_espionage = yes
+        }
+        set_timed_country_flag = {
+            flag = espionage_target_country@event_target:espionage_origin_country
+            days = 5
+        }
+        save_event_target_as = "espionage_target_country"
+    }
+}
+
+# Scope: country
+try_steal_resources = {
+    set_variable = {
+        which = "stolen_by_espionage_value"
+        value = 0
+    }
+    prev = {
+        set_variable = {
+            which = "gained_by_espionage_value"
+            value = 0
+        }
+    }
+    random_list = {
+        10 = {
+            modifier = {
+                factor = 100
+                is_fallen_empire = yes
+            }
+            modifier = {
+                factor = 2.5
+                exists = event_target:espionage_target_planet
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        limit = {
+                            is_intelligencer_has_purpose_steal_resources = yes
+                            is_unassignment_intelligencer = yes
+                        }
+                        count > 2
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                exists = event_target:espionage_target_planet
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        limit = {
+                            is_intelligencer_has_purpose_steal_resources = yes
+                            is_unassignment_intelligencer = yes
+                        }
+                        count < 2
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                exists = event_target:espionage_target_planet
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        limit = {
+                            is_intelligencer_has_purpose_steal_resources = yes
+                            is_unassignment_intelligencer = yes
+                        }
+                        count = 0
+                    }
+                    NOR = {
+                        has_building = "building_intelligence_agency_1"
+                        has_building = "building_intelligence_agency_2"
+                        has_building = "building_intelligence_agency_3"
+                    }
+                }
+            }
+        }
+        1 = {
+            prev = {
+                add_monthly_resource_mult = {
+                    resource = minerals
+                    value = @tier1materialreward
+                    min = @tier1materialmin
+                    max = @tier1materialmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 25000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_MINERALS
+                    localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET scope = prev }
+                }
+            }
+        }
+        1 = {
+            modifier = {
+                factor = 10
+                prev = {
+                    resource_stockpile_compare = {
+                        resource = minerals
+                        value < 1000
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                prev = {
+                    resource_stockpile_compare = {
+                        resource = minerals
+                        value >= 25000
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 25000
+                    }
+                }
+                add_resource = {
+                    minerals = -25000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 25000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 25000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 25000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 22500
+                    }
+                }
+                add_resource = {
+                    minerals = -22500
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 22500
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 22500
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 22500
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 20000
+                    }
+                }
+                add_resource = {
+                    minerals = -20000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 20000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 20000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 20000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 17500
+                    }
+                }
+                add_resource = {
+                    minerals = -17500
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 17500
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 17500
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 17500
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 15000
+                    }
+                }
+                add_resource = {
+                    minerals = -15000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 15000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 15000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 15000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 12500
+                    }
+                }
+                add_resource = {
+                    minerals = -12500
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 12500
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 12500
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 12500
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 10000
+                    }
+                }
+                add_resource = {
+                    minerals = -10000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 10000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 10000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 10000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 9000
+                    }
+                }
+                add_resource = {
+                    minerals = -9000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 9000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 9000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 9000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 8000
+                    }
+                }
+                add_resource = {
+                    minerals = -8000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 8000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 8000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 8000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 7000
+                    }
+                }
+                add_resource = {
+                    minerals = -7000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 7000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 7000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 7000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 6000
+                    }
+                }
+                add_resource = {
+                    minerals = -6000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 6000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 6000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 6000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 5000
+                    }
+                }
+                add_resource = {
+                    minerals = -5000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 5000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 5000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 5000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 4000
+                    }
+                }
+                add_resource = {
+                    minerals = -4000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 4000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 4000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 4000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 3000
+                    }
+                }
+                add_resource = {
+                    minerals = -3000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 3000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 3000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 3000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 2000
+                    }
+                }
+                add_resource = {
+                    minerals = -2000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 2000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 2000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 2000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 1000
+                    }
+                }
+                add_resource = {
+                    minerals = -1000
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 1000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 1000
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 1000
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 500
+                    }
+                }
+                add_resource = {
+                    minerals = -500
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 500
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 500
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 500
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 250
+                    }
+                }
+                add_resource = {
+                    minerals = -250
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 250
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 250
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 250
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_resource = {
+                        type = minerals
+                        amount >= 100
+                    }
+                }
+                add_resource = {
+                    minerals = -100
+                }
+                set_variable = {
+                    which = "stolen_by_espionage_value"
+                    value = 100
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_MINERALS
+                    localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN scope = prev }
+                }
+                prev = {
+                    add_resource = {
+                        minerals = 100
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 100
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+            else = {
+                prev = {
+                    add_resource = {
+                        minerals = 50
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 50
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET scope = prev }
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Scope: origin country
+try_steal_technologies = {
+    
+}

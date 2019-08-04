@@ -1,0 +1,456 @@
+### Intelligence Agency
+
+building_intelligence_agency_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 600
+    base_cap_amount = 1
+    category = government
+
+    upgrades = {
+        "building_intelligence_agency_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = yes
+                is_fallen_empire = yes
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 2500
+            minerals = 2500
+            kryptonite = 1000
+        }
+        upkeep = {
+            energy = 5
+            minerals = 5
+            kryptonite = 3
+        }
+    }
+
+    planet_modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.1
+    }
+
+    country_modifier = {
+        country_claim_influence_cost_mult = -0.05
+        country_subject_power_penalty_mult = -0.05
+        damage_vs_country_type_fallen_empire_mult = 0.01
+        damage_vs_country_type_awakened_fallen_empire_mult = 0.01
+        damage_vs_country_type_gate_builders_mult = 0.01
+        damage_vs_country_type_swarm_mult = 0.01
+        damage_vs_country_type_extradimensional_mult = 0.01
+        damage_vs_country_type_extradimensional_2_mult = 0.01
+        damage_vs_country_type_extradimensional_3_mult = 0.01
+        damage_vs_country_type_ai_empire_mult = 0.01
+        damage_vs_country_type_gray_goo_mult = 0.01
+        damage_vs_country_type_crystal_mult = 0.01
+        damage_vs_country_type_amoeba_mult = 0.01
+        damage_vs_country_type_cloud_mult = 0.01
+        damage_vs_country_type_drone_mult = 0.01
+        damage_vs_country_type_guardian_dragon_mult = 0.01
+        damage_vs_country_type_guardian_stellarite_mult = 0.01
+        damage_vs_country_type_guardian_sphere_mult = 0.01
+        damage_vs_country_type_guardian_horror_mult = 0.01
+        damage_vs_country_type_guardian_dreadnought_mult = 0.01
+        damage_vs_country_type_guardian_hiver_mult = 0.01
+        damage_vs_country_type_guardian_scavenger_bot_mult = 0.01
+        damage_vs_country_type_guardian_elderly_tiyanki_mult = 0.01
+        damage_vs_country_type_guardian_hatchling_mult = 0.01
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_intelligencer_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_intelligencer_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = kryptonite
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            has_planet_flag = "espionage_target_planet"
+        }
+    }
+
+    prerequisites = {
+        "tech_interstellar_intelligence"
+    }
+}
+
+building_intelligence_agency_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 900
+    base_cap_amount = 1
+    category = government
+
+    upgrades = {
+        "building_intelligence_agency_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = yes
+                is_fallen_empire = yes
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 5000
+            minerals = 5000
+            kryptonite = 2500
+        }
+        upkeep = {
+            energy = 8
+            minerals = 8
+            kryptonite = 5
+        }
+    }
+
+    planet_modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.15
+    }
+
+    country_modifier = {
+        country_claim_influence_cost_mult = -0.1
+        country_subject_power_penalty_mult = -0.1
+        damage_vs_country_type_fallen_empire_mult = 0.03
+        damage_vs_country_type_awakened_fallen_empire_mult = 0.03
+        damage_vs_country_type_gate_builders_mult = 0.03
+        damage_vs_country_type_swarm_mult = 0.03
+        damage_vs_country_type_extradimensional_mult = 0.03
+        damage_vs_country_type_extradimensional_2_mult = 0.03
+        damage_vs_country_type_extradimensional_3_mult = 0.03
+        damage_vs_country_type_ai_empire_mult = 0.03
+        damage_vs_country_type_gray_goo_mult = 0.03
+        damage_vs_country_type_crystal_mult = 0.03
+        damage_vs_country_type_amoeba_mult = 0.03
+        damage_vs_country_type_cloud_mult = 0.03
+        damage_vs_country_type_drone_mult = 0.03
+        damage_vs_country_type_guardian_dragon_mult = 0.03
+        damage_vs_country_type_guardian_stellarite_mult = 0.03
+        damage_vs_country_type_guardian_sphere_mult = 0.03
+        damage_vs_country_type_guardian_horror_mult = 0.03
+        damage_vs_country_type_guardian_dreadnought_mult = 0.03
+        damage_vs_country_type_guardian_hiver_mult = 0.03
+        damage_vs_country_type_guardian_scavenger_bot_mult = 0.03
+        damage_vs_country_type_guardian_elderly_tiyanki_mult = 0.03
+        damage_vs_country_type_guardian_hatchling_mult = 0.03
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_intelligencer_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_intelligencer_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = kryptonite
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            has_planet_flag = "espionage_target_planet"
+        }
+    }
+
+    prerequisites = {
+        "tech_galactic_intelligence"
+    }
+}
+
+building_intelligence_agency_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 1200
+    base_cap_amount = 1
+    category = government
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = yes
+                is_fallen_empire = yes
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 10000
+            minerals = 10000
+            kryptonite = 5000
+        }
+        upkeep = {
+            energy = 12
+            minerals = 12
+            kryptonite = 8
+        }
+    }
+
+    planet_modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.2
+    }
+
+    country_modifier = {
+        country_claim_influence_cost_mult = -0.15
+        country_subject_power_penalty_mult = -0.15
+        damage_vs_country_type_fallen_empire_mult = 0.05
+        damage_vs_country_type_awakened_fallen_empire_mult = 0.05
+        damage_vs_country_type_gate_builders_mult = 0.05
+        damage_vs_country_type_swarm_mult = 0.05
+        damage_vs_country_type_extradimensional_mult = 0.05
+        damage_vs_country_type_extradimensional_2_mult = 0.05
+        damage_vs_country_type_extradimensional_3_mult = 0.05
+        damage_vs_country_type_ai_empire_mult = 0.05
+        damage_vs_country_type_gray_goo_mult = 0.05
+        damage_vs_country_type_crystal_mult = 0.05
+        damage_vs_country_type_amoeba_mult = 0.05
+        damage_vs_country_type_cloud_mult = 0.05
+        damage_vs_country_type_drone_mult = 0.05
+        damage_vs_country_type_guardian_dragon_mult = 0.05
+        damage_vs_country_type_guardian_stellarite_mult = 0.05
+        damage_vs_country_type_guardian_sphere_mult = 0.05
+        damage_vs_country_type_guardian_horror_mult = 0.05
+        damage_vs_country_type_guardian_dreadnought_mult = 0.05
+        damage_vs_country_type_guardian_hiver_mult = 0.05
+        damage_vs_country_type_guardian_scavenger_bot_mult = 0.05
+        damage_vs_country_type_guardian_elderly_tiyanki_mult = 0.05
+        damage_vs_country_type_guardian_hatchling_mult = 0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_intelligencer_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_intelligencer_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 13
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 13
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = kryptonite
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            has_planet_flag = "espionage_target_planet"
+        }
+    }
+
+    prerequisites = {
+        "tech_universe_intelligence"
+    }
+}

@@ -2,3 +2,7 @@
     decision_planet_interstellar_research:0 "Межзвёздный поиск ресурсов"
     decision_planet_interstellar_research_desc:0 "Межзвёздный поиск полезных ресурсов"
     decision_planet_interstellar_research_effects_short:0 "Межзвёздный поиск полезных ресурсов"
+    decision_planet_intelligencer_training:0 "Подготовка тайных агентов"
+    decision_planet_intelligencer_training_desc:0 "Подготовка тайных агентов разведки"
+    decision_planet_intelligencer_training_effect:0 "Подготовка тайных агентов разведки"
+    decision_planet_intelligencer_training_effects_short:0 "Подготовка тайных агентов разведки"

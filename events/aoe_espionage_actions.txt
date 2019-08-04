@@ -1,0 +1,1582 @@
+namespace = aoe_espionage_actions
+
+country_event = {
+    id = aoe_espionage_actions.2
+    title = aoe_espionage_actions.2.title
+    desc = aoe_espionage_actions.2.desc
+    show_sound = event_conversation
+    is_triggered_only = yes
+    diplomatic = yes
+    location = event_target:espionage_origin_planet
+
+    picture_event_data = {
+        portrait = root
+        planet_background = root
+        graphical_culture = root
+        city_level = root
+        room = root.ruler
+    }
+
+    trigger = {
+        exists = event_target:espionage_origin_planet
+        exists = event_target:espionage_origin_country
+        event_target:espionage_origin_planet = {
+            owner = {
+                is_same_value = event_target:espionage_origin_country
+            }
+            any_pop = {
+                is_unassignment_intelligencer = yes
+                is_disengaged_intelligencer = yes
+            }
+        }
+        any_country = {
+            possibly_affected_by_espionage = yes
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.2.a.name"
+        custom_tooltip = "aoe_espionage_actions.2.a.tooltip"
+        trigger = {
+            resource_stockpile_compare = {
+                resource = minerals
+                value >= 200
+            }
+        }
+        add_resource = {
+            minerals = -200
+        }
+        hidden_effect = {
+            event_target:espionage_origin_planet = {
+                random_pop = {
+                    limit = {
+                        is_unassignment_intelligencer = yes
+                        is_disengaged_intelligencer = yes
+                    }
+                    engage_intelligencer_espionage_purpose_steal_resources = yes
+                    save_event_target_as = "espionage_origin_spy"
+                }
+            }
+            search_espionage_victim = yes
+            country_event = {
+                id = aoe_espionage_actions.3
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.2.b.name"
+        custom_tooltip = "aoe_espionage_actions.2.b.tooltip"
+        trigger = {
+            resource_stockpile_compare = {
+                resource = minerals
+                value >= 300
+            }
+        }
+        add_resource = {
+            minerals = -300
+        }
+        hidden_effect = {
+            event_target:espionage_origin_planet = {
+                random_pop = {
+                    limit = {
+                        is_unassignment_intelligencer = yes
+                        is_disengaged_intelligencer = yes
+                    }
+                    engage_intelligencer_espionage_purpose_steal_technologies = yes
+                    save_event_target_as = "espionage_origin_spy"
+                }
+            }
+            search_espionage_victim = yes
+            country_event = {
+                id = aoe_espionage_actions.3
+            }
+        }
+    }
+    option = {
+        name = "aoe_espionage_actions.2.c.name"
+        custom_tooltip = "aoe_espionage_actions.2.c.tooltip"
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.3
+    title = aoe_espionage_actions.3.title
+    desc = aoe_espionage_actions.3.desc
+    show_sound = event_conversation
+    is_triggered_only = yes
+    diplomatic = yes
+    location = event_target:espionage_origin_planet
+
+    picture_event_data = {
+        portrait = event_target:espionage_target_country
+        planet_background = event_target:espionage_target_country
+        graphical_culture = event_target:espionage_target_country
+        city_level = event_target:espionage_target_country
+        room = event_target:espionage_target_country.ruler
+    }
+
+    trigger = {
+        exists = event_target:espionage_origin_country
+        exists = event_target:espionage_origin_planet
+        exists = event_target:espionage_origin_spy
+        exists = event_target:espionage_target_country
+        event_target:espionage_origin_planet = {
+            owner = {
+                is_same_value = event_target:espionage_origin_country
+            }
+            any_pop = {
+                is_same_value = event_target:espionage_origin_spy
+            }
+        }
+        event_target:espionage_origin_spy = {
+            is_unassignment_intelligencer = yes
+            is_disengaged_intelligencer = no
+        }
+    }
+
+    immediate = {
+        count_possibly_affected_by_espionage = yes
+    }
+
+    option = {
+        name = "aoe_espionage_actions.3.a.name"
+        custom_tooltip = "aoe_espionage_actions.3.a.tooltip"
+        trigger = {
+            event_target:espionage_origin_planet = {
+                has_building = "building_intelligence_agency_1"
+            }
+        }
+        hidden_effect = {
+            event_target:espionage_origin_spy = {
+                set_intelligencer_on_assignment = { ARG1 = 900 }
+            }
+            event_target:espionage_origin_country = {
+                country_event = {
+                    id = aoe_espionage_actions.4
+                    days = 900
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.3.b.name"
+        custom_tooltip = "aoe_espionage_actions.3.b.tooltip"
+        trigger = {
+            event_target:espionage_origin_planet = {
+                has_building = "building_intelligence_agency_2"
+            }
+        }
+        hidden_effect = {
+            event_target:espionage_origin_spy = {
+                set_intelligencer_on_assignment = { ARG1 = 600 }
+            }
+            event_target:espionage_origin_country = {
+                country_event = {
+                    id = aoe_espionage_actions.4
+                    days = 600
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.3.c.name"
+        custom_tooltip = "aoe_espionage_actions.3.c.tooltip"
+        trigger = {
+            event_target:espionage_origin_planet = {
+                has_building = "building_intelligence_agency_3"
+            }
+        }
+        hidden_effect = {
+            event_target:espionage_origin_spy = {
+                set_intelligencer_on_assignment = { ARG1 = 300 }
+            }
+            event_target:espionage_origin_country = {
+                country_event = {
+                    id = aoe_espionage_actions.4
+                    days = 300
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.3.d.name"
+        custom_tooltip = "aoe_espionage_actions.3.d.tooltip"
+        trigger = {
+            any_country = {
+                possibly_affected_by_espionage = yes
+            }
+        }
+        hidden_effect = {
+            search_espionage_victim = yes
+            country_event = {
+                id = aoe_espionage_actions.3
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.3.e.name"
+        custom_tooltip = "aoe_espionage_actions.3.e.tooltip"
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.4
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = event_target:espionage_origin_country
+        exists = event_target:espionage_origin_planet
+        exists = event_target:espionage_origin_spy
+        exists = event_target:espionage_target_country
+        event_target:espionage_origin_planet = {
+            owner = {
+                is_same_value = event_target:espionage_origin_country
+            }
+        }
+        event_target:espionage_origin_spy = {
+            is_unassignment_intelligencer = no
+            is_disengaged_intelligencer = no
+        }
+    }
+
+    immediate = {
+        event_target:espionage_target_country = {
+            random_owned_planet = {
+                save_event_target_as = "espionage_target_planet"
+            }
+        }
+        if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_purpose_steal_resources = yes
+                }
+            }
+            random_list = {
+                1 = {
+                    modifier = {
+                        factor = 3
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_steal_resources = yes
+                                is_unassignment_intelligencer = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1000
+                        event_target:espionage_target_coutry = {
+                            is_fallen_empire = yes
+                        }
+                    }
+                    event_target:espionage_target_country = {
+                        try_steal_resources = yes
+                    }
+                    # We are exposed by the victim
+                    country_event = {
+                        id = aoe_espionage_actions.6
+                        days = 1
+                    }
+                }
+                1 = {
+                    event_target:espionage_target_country = {
+                        try_steal_resources = yes
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_purpose_steal_technologies = yes
+                }
+            }
+            try_steal_technologies = yes
+        }
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.5
+    title = aoe_espionage_actions.5.title
+    show_sound = event_conversation
+    is_triggered_only = yes
+    location = event_target:espionage_target_planet
+
+    # They are apologized
+    desc = {
+        trigger = {
+            NOT = {
+                has_country_flag = espionage_charges_denied@event_target:espionage_origin_country
+            }
+        }
+        text = aoe_espionage_actions.5.desc_01
+    }
+
+    # They are not apologized
+    desc = {
+        trigger = {
+            has_country_flag = espionage_charges_denied@event_target:espionage_origin_country
+        }
+        text = aoe_espionage_actions.5.desc_02
+    }
+
+    trigger = {
+        exists = event_target:espionage_origin_country
+    }
+
+    # We can declare war
+    option = {
+        name = "aoe_espionage_actions.6.a.name"
+        custom_tooltip = "aoe_espionage_actions.6.a.tooltip"
+        trigger = {
+            event_target:espionage_origin_country = {
+                can_declare_war_to = yes
+            }
+            is_pacifist = no
+        }
+        ai_chance = {
+            factor = 100
+            modifier = {
+                factor = 0.1
+                relative_power = {
+                    who = event_target:espionage_origin_country
+                    category = fleet
+                    value = pathetic
+                }
+            }
+            modifier = {
+                factor = 0.5
+                OR = {
+                    is_friendly_to = event_target:espionage_origin_country
+                    is_cordial_to = event_target:espionage_origin_country
+                    is_protective_to = event_target:espionage_origin_country
+                    is_loyal_to = event_target:espionage_origin_country
+                }
+            }
+            modifier = {
+                factor = 5
+                relative_power = {
+                    who = event_target:espionage_origin_country
+                    category = fleet
+                    value = superior
+                }
+            }
+            modifier = {
+                factor = 5
+                is_militarist = yes
+            }
+            modifier = {
+                factor = 10
+                OR = {
+                    is_domineering_to = event_target:espionage_origin_country
+                    is_unfriendly_to = event_target:espionage_origin_country
+                    is_patronizing_to = event_target:espionage_origin_country
+                    is_dismissive_to = event_target:espionage_origin_country
+                    is_hostile_to = event_target:espionage_origin_country
+                }
+            }
+            modifier = {
+                factor = 100
+                is_fallen_empire = yes
+            }
+        }
+        add_threat = {
+            who = event_target:espionage_origin_country
+            amount = 10
+        }
+        add_opinion_modifier = {
+            who = event_target:espionage_origin_country
+            modifier = opinion_discarded
+        }
+        add_casus_belli = {
+            type = cb_hunger
+            who = event_target:espionage_origin_country
+            days = 900
+        }
+        declare_war = {
+            target = event_target:espionage_origin_country
+            name = "NAME_Holy_World_War"
+            attacker_war_goal = wg_absorption
+        }
+        hidden_effect = {
+            random_list = {
+                50 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            exists = event_target:espionage_origin_spy
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        is_xenophobe = yes
+                    }
+                    modifier = {
+                        factor = 0.1
+                        is_xenophile = yes
+                    }
+                    event_target:espionage_origin_spy = {
+                        kill_pop = yes
+                    }
+                }
+                50 = {}
+            }
+        }
+    }
+
+    # We are xenophobe OR they not apologized
+    option = {
+        name = "aoe_espionage_actions.6.b.name"
+        custom_tooltip = "aoe_espionage_actions.6.b.tooltip"
+        trigger = {
+            exists = event_target:espionage_origin_spy
+            OR = {
+                is_xenophobe = yes
+                is_authoritarian = yes
+                has_country_flag = espionage_charges_denied@event_target:espionage_origin_country
+            }
+        }
+        ai_chance = {
+            factor = 100
+            modifier = {
+                factor = 0.1
+                OR = {
+                    is_xenophile = yes
+                    is_spiritualist = yes
+                }
+            }
+            modifier = {
+                factor = 0.8
+                OR = {
+                    is_friendly_to = event_target:espionage_origin_country
+                    is_cordial_to = event_target:espionage_origin_country
+                    is_protective_to = event_target:espionage_origin_country
+                    is_loyal_to = event_target:espionage_origin_country
+                }
+            }
+            modifier = {
+                factor = 5
+                OR = {
+                    is_domineering_to = event_target:espionage_origin_country
+                    is_unfriendly_to = event_target:espionage_origin_country
+                    is_patronizing_to = event_target:espionage_origin_country
+                    is_dismissive_to = event_target:espionage_origin_country
+                    is_hostile_to = event_target:espionage_origin_country
+                }
+            }
+        }
+        add_threat = {
+            who = event_target:espionage_origin_country
+            amount = 50
+        }
+        add_opinion_modifier = {
+            who = event_target:espionage_origin_country
+            modifier = opinion_discarded
+        }
+        event_target:espionage_origin_spy = {
+            kill_pop = yes
+        }
+    }
+
+    # We are xenophile OR they are apologized
+    option = {
+        name = "aoe_espionage_actions.6.c.name"
+        custom_tooltip = "aoe_espionage_actions.6.c.tooltip"
+        trigger = {
+            OR = {
+                is_xenophile = yes
+                is_spiritualist = yes
+                NOT = {
+                    has_country_flag = espionage_charges_denied@event_target:espionage_origin_country
+                }
+            }
+        }
+        ai_chance = {
+            factor = 100
+            modifier = {
+                factor = 0.1
+                OR = {
+                    is_xenophobe = yes
+                    is_authoritarian = yes
+                }
+            }
+            modifier = {
+                factor = 0.1
+                OR = {
+                    is_domineering_to = event_target:espionage_origin_country
+                    is_unfriendly_to = event_target:espionage_origin_country
+                    is_patronizing_to = event_target:espionage_origin_country
+                    is_dismissive_to = event_target:espionage_origin_country
+                    is_hostile_to = event_target:espionage_origin_country
+                }
+            }
+            modifier = {
+                factor = 10
+                OR = {
+                    is_friendly_to = event_target:espionage_origin_country
+                    is_cordial_to = event_target:espionage_origin_country
+                    is_protective_to = event_target:espionage_origin_country
+                    is_loyal_to = event_target:espionage_origin_country
+                }
+            }
+        }
+        add_threat = {
+            who = event_target:espionage_origin_country
+            amount = 100
+        }
+    }
+
+    # Another...
+    option = {
+        name = "aoe_espionage_actions.6.d.name"
+        custom_tooltip = "aoe_espionage_actions.6.d.tooltip"
+        trigger = {
+            is_ai = yes
+        }
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            if = {
+                # We are fallen empire
+                limit = {
+                    is_fallen_empire = yes
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_casus_belli = {
+                                target = event_target:espionage_origin_country
+                                type = cb_hunger
+                            }
+                        }
+                    }
+                    add_casus_belli = {
+                        type = cb_hunger
+                        who = event_target:espionage_origin_country
+                        days = 900
+                    }
+                }
+                if = {
+                    limit = {
+                        event_target:espionage_origin_country = {
+                            can_declare_war_to = yes
+                        }
+                    }
+                    declare_war = {
+                        target = event_target:espionage_origin_country
+                        name = "NAME_Holy_World_War"
+                        attacker_war_goal = wg_absorption_vs_fe
+                    }
+                }
+            }
+            else_if = {
+                # We are militarists
+                limit = {
+                    OR = {
+                        is_militarist = yes
+                        is_authoritarian = yes
+                        is_xenophobe = yes
+                    }
+                }
+                # They not apologized
+                if = {
+                    limit = {
+                        has_country_flag = espionage_charges_denied@event_target:espionage_origin_country
+                    }
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_casus_belli = {
+                                    target = event_target:espionage_origin_country
+                                    type = cb_hunger
+                                }
+                            }
+                        }
+                        add_casus_belli = {
+                            type = cb_hunger
+                            who = event_target:espionage_origin_country
+                            days = 600
+                        }
+                    }
+                    add_threat = {
+                        who = event_target:espionage_origin_country
+                        amount = 100
+                    }
+                    add_opinion_modifier = {
+                        who = event_target:espionage_origin_country
+                        modifier = opinion_discarded
+                    }
+                    # They are weaker than us
+                    # They are not at war with us, but we can
+                    if = {
+                        limit = {
+                            relative_power = {
+                                who = event_target:espionage_origin_country
+                                category = fleet
+                                value >= equivalent
+                            }
+                            event_target:espionage_origin_country = {
+                                can_declare_war_to = yes
+                            }
+                        }
+                        random_list = {
+                            30 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_absorption
+                                }
+                            }
+                            20 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_absorption
+                                }
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            30 = {
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            20 = {}
+                        }
+                    }
+                    else_if = {
+                        # They are stronger than us
+                        # They are not at war with us, but we can
+                        limit = {
+                            relative_power = {
+                                who = event_target:espionage_origin_country
+                                category = fleet
+                                value < equivalent
+                            }
+                            event_target:espionage_origin_country = {
+                                can_declare_war_to = yes
+                            }
+                        }
+                        random_list = {
+                            10 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_absorption
+                                }
+                            }
+                            5 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_absorption
+                                }
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            50 = {
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            35 = {}
+                        }
+                    }
+                    else = {
+                        # They are at war with us
+                        random_list = {
+                            50 = {
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            50 = {}
+                        }
+                    }
+                }
+                else = {
+                    # They are apologized
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_casus_belli = {
+                                    target = event_target:espionage_origin_country
+                                    type = cb_hunger
+                                }
+                            }
+                        }
+                        add_casus_belli = {
+                            type = cb_hunger
+                            who = event_target:espionage_origin_country
+                            days = 300
+                        }
+                    }
+                    add_threat = {
+                        who = event_target:espionage_origin_country
+                        amount = 50
+                    }
+                    add_opinion_modifier = {
+                        who = event_target:espionage_origin_country
+                        modifier = opinion_discarded
+                    }
+                    random_list = {
+                        30 = {
+                            if = {
+                                limit = {
+                                    exists = event_target:espionage_origin_spy
+                                }
+                                event_target:espionage_origin_spy = {
+                                    kill_pop = yes
+                                }
+                            }
+                        }
+                        70 = {}
+                    }
+                }
+            }
+            else_if = {
+                # We are pacifists
+                limit = {
+                    OR = {
+                        is_pacifist = yes
+                        is_xenophile = yes
+                    }
+                }
+                # They not apologized
+                if = {
+                    limit = {
+                        has_country_flag = espionage_charges_denied@event_target:espionage_origin_country
+                    }
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_casus_belli = {
+                                    target = event_target:espionage_origin_country
+                                    type = cb_sublimation
+                                }
+                            }
+                        }
+                        add_casus_belli = {
+                            type = cb_sublimation
+                            who = event_target:espionage_origin_country
+                            days = 300
+                        }
+                    }
+                    add_threat = {
+                        who = event_target:espionage_origin_country
+                        amount = 100
+                    }
+                    add_opinion_modifier = {
+                        who = event_target:espionage_origin_country
+                        modifier = opinion_discarded
+                    }
+                    # They are weaker than us
+                    # They are not at war with us, but we can
+                    if = {
+                        limit = {
+                            relative_power = {
+                                who = event_target:espionage_origin_country
+                                category = fleet
+                                value >= equivalent
+                            }
+                            event_target:espionage_origin_country = {
+                                can_declare_war_to = yes
+                            }
+                        }
+                        random_list = {
+                            10 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_assimilation
+                                }
+                            }
+                            10 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_assimilation
+                                }
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            30 = {
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            50 = {}
+                        }
+                    }
+                    else_if = {
+                        # They are stronger than us
+                        # They are not at war with us, but we can
+                        limit = {
+                            relative_power = {
+                                who = event_target:espionage_origin_country
+                                category = fleet
+                                value < equivalent
+                            }
+                            event_target:espionage_origin_country = {
+                                can_declare_war_to = yes
+                            }
+                        }
+                        random_list = {
+                            5 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_assimilation
+                                }
+                            }
+                            5 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_assimilation
+                                }
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            30 = {
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            60 = {}
+                        }
+                    }
+                    else = {
+                        # They are at war with us
+                        random_list = {
+                            30 = {
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            70 = {}
+                        }
+                    }
+                }
+                else = {
+                    # They are apologized
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_casus_belli = {
+                                    target = event_target:espionage_origin_country
+                                    type = cb_sublimation
+                                }
+                            }
+                        }
+                        add_casus_belli = {
+                            type = cb_sublimation
+                            who = event_target:espionage_origin_country
+                            days = 300
+                        }
+                    }
+                    add_threat = {
+                        who = event_target:espionage_origin_country
+                        amount = 50
+                    }
+                    add_opinion_modifier = {
+                        who = event_target:espionage_origin_country
+                        modifier = opinion_discarded
+                    }
+                    random_list = {
+                        20 = {
+                            if = {
+                                limit = {
+                                    exists = event_target:espionage_origin_spy
+                                }
+                                event_target:espionage_origin_spy = {
+                                    kill_pop = yes
+                                }
+                            }
+                        }
+                        80 = {}
+                    }
+                }
+            }
+            else = {
+                # They not apologized
+                if = {
+                    limit = {
+                        has_country_flag = espionage_charges_denied@event_target:espionage_origin_country
+                    }
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_casus_belli = {
+                                    target = event_target:espionage_origin_country
+                                    type = cb_subjugation
+                                }
+                            }
+                        }
+                        add_casus_belli = {
+                            type = cb_subjugation
+                            who = event_target:espionage_origin_country
+                            days = 300
+                        }
+                    }
+                    add_threat = {
+                        who = event_target:espionage_origin_country
+                        amount = 100
+                    }
+                    add_opinion_modifier = {
+                        who = event_target:espionage_origin_country
+                        modifier = opinion_discarded
+                    }
+                    # They are weaker than us
+                    # They are not at war with us, but we can
+                    if = {
+                        limit = {
+                            relative_power = {
+                                who = event_target:espionage_origin_country
+                                category = fleet
+                                value >= equivalent
+                            }
+                            event_target:espionage_origin_country = {
+                                can_declare_war_to = yes
+                            }
+                        }
+                        random_list = {
+                            10 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_subjugation
+                                }
+                            }
+                            10 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_subjugation
+                                }
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            50 = {
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            30 = {}
+                        }
+                    }
+                    else_if = {
+                        # They are stronger than us
+                        # They are not at war with us, but we can
+                        limit = {
+                            relative_power = {
+                                who = event_target:espionage_origin_country
+                                category = fleet
+                                value < equivalent
+                            }
+                            event_target:espionage_origin_country = {
+                                can_declare_war_to = yes
+                            }
+                        }
+                        random_list = {
+                            8 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_subjugation
+                                }
+                            }
+                            7 = {
+                                declare_war = {
+                                    target = event_target:espionage_origin_country
+                                    name = "NAME_Holy_World_War"
+                                    attacker_war_goal = wg_subjugation
+                                }
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            50 = {
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            35 = {}
+                        }
+                    }
+                    else = {
+                        # They are at war with us
+                        random_list = {
+                            50 = {
+                                if = {
+                                    limit = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                    event_target:espionage_origin_spy = {
+                                        kill_pop = yes
+                                    }
+                                }
+                            }
+                            50 = {}
+                        }
+                    }
+                }
+                else = {
+                    # They apologized
+                    if = {
+                        limit = {
+                            NOT = {
+                                has_casus_belli = {
+                                    target = event_target:espionage_origin_country
+                                    type = cb_subjugation
+                                }
+                            }
+                        }
+                        add_casus_belli = {
+                            type = cb_subjugation
+                            who = event_target:espionage_origin_country
+                            days = 500
+                        }
+                    }
+                    add_threat = {
+                        who = event_target:espionage_origin_country
+                        amount = 50
+                    }
+                    add_opinion_modifier = {
+                        who = event_target:espionage_origin_country
+                        modifier = opinion_discarded
+                    }
+                    random_list = {
+                        50 = {
+                            if = {
+                                limit = {
+                                    exists = event_target:espionage_origin_spy
+                                }
+                                event_target:espionage_origin_spy = {
+                                    kill_pop = yes
+                                }
+                            }
+                        }
+                        50 = {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.6
+    title = aoe_espionage_actions.6.title
+    desc = aoe_espionage_actions.6.desc
+    show_sound = event_conversation
+    is_triggered_only = yes
+    diplomatic = yes
+
+    picture_event_data = {
+        portrait = event_target:espionage_target_country
+        planet_background = event_target:espionage_target_country
+        graphical_culture = event_target:espionage_target_country
+        city_level = event_target:espionage_target_country
+        room = event_target:espionage_target_country.ruler
+    }
+
+    trigger = {
+        exists = event_target:espionage_target_country
+    }
+
+    # They are fallen empire
+    desc = {
+        trigger = {
+            event_target:espionage_target_country = {
+                OR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
+            }
+        }
+        text = aoe_espionage_actions.6.desc_01
+    }
+
+    # They are militarists
+    # They are friendly to us
+    desc = {
+        trigger = {
+            event_target:espionage_target_country = {
+                OR = {
+                    is_militarist = yes
+                    is_authoritarian = yes
+                    is_xenophobe = yes
+                }
+                OR = {
+                    is_friendly_to = root
+                    is_cordial_to = root
+                    is_protective_to = root
+                    is_loyal_to = root
+                }
+            }
+        }
+        text = aoe_espionage_actions.6.desc_02
+    }
+
+    # They are militarists
+    # They are hostile to us
+    desc = {
+        trigger = {
+            event_target:espionage_target_country = {
+                OR = {
+                    is_militarist = yes
+                    is_authoritarian = yes
+                    is_xenophobe = yes
+                }
+                OR = {
+                    is_domineering_to = root
+                    is_unfriendly_to = root
+                    is_threatened_to = root
+                    is_hostile_to = root
+                }
+            }
+        }
+        text = aoe_espionage_actions.6.desc_03
+    }
+
+    # They are militarists
+    # They are neutral to us
+    desc = {
+        trigger = {
+            event_target:espionage_target_country = {
+                OR = {
+                    is_militarist = yes
+                    is_authoritarian = yes
+                    is_xenophobe = yes
+                }
+                NOR = {
+                    is_friendly_to = root
+                    is_cordial_to = root
+                    is_protective_to = root
+                    is_loyal_to = root
+                    is_domineering_to = root
+                    is_unfriendly_to = root
+                    is_threatened_to = root
+                    is_hostile_to = root
+                }
+            }
+        }
+        text = aoe_espionage_actions.6.desc_04
+    }
+
+    # They are pacifists
+    # They are friendly to us
+    desc = {
+        trigger = {
+            event_target:espionage_target_country = {
+                OR = {
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                OR = {
+                    is_friendly_to = root
+                    is_cordial_to = root
+                    is_protective_to = root
+                    is_loyal_to = root
+                }
+            }
+        }
+        text = aoe_espionage_actions.6.desc_05
+    }
+
+    # They are pacifists
+    # They are hostile to us
+    desc = {
+        trigger = {
+            event_target:espionage_target_country = {
+                OR = {
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                OR = {
+                    is_domineering_to = root
+                    is_unfriendly_to = root
+                    is_threatened_to = root
+                    is_hostile_to = root
+                }
+            }
+        }
+        text = aoe_espionage_actions.6.desc_06
+    }
+
+    # They are pacifists
+    # They are neutral to us
+    desc = {
+        trigger = {
+            event_target:espionage_target_country = {
+                OR = {
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                NOR = {
+                    is_friendly_to = root
+                    is_cordial_to = root
+                    is_protective_to = root
+                    is_loyal_to = root
+                    is_domineering_to = root
+                    is_unfriendly_to = root
+                    is_threatened_to = root
+                    is_hostile_to = root
+                }
+            }
+        }
+        text = aoe_espionage_actions.6.desc_07
+    }
+
+    # They are not pacifists and not militarists
+    # They are friendly to us
+    desc = {
+        trigger = {
+            event_target:espionage_target_country = {
+                NOR = {
+                    is_militarist = yes
+                    is_authoritarian = yes
+                    is_xenophobe = yes
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                OR = {
+                    is_friendly_to = root
+                    is_cordial_to = root
+                    is_protective_to = root
+                    is_loyal_to = root
+                }
+            }
+        }
+        text = aoe_espionage_actions.6.desc_08
+    }
+
+    # They are not pacifists and not militarists
+    # They are hostile to us
+    desc = {
+        trigger = {
+            event_target:espionage_target_country = {
+                NOR = {
+                    is_militarist = yes
+                    is_authoritarian = yes
+                    is_xenophobe = yes
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                OR = {
+                    is_domineering_to = root
+                    is_unfriendly_to = root
+                    is_threatened_to = root
+                    is_hostile_to = root
+                }
+            }
+        }
+        text = aoe_espionage_actions.6.desc_09
+    }
+
+    # They are not pacifists and not militarists
+    # They are neutral to us
+    desc = {
+        trigger = {
+            event_target:espionage_target_country = {
+                NOR = {
+                    is_militarist = yes
+                    is_authoritarian = yes
+                    is_xenophobe = yes
+                    is_pacifist = yes
+                    is_xenophile = yes
+                }
+                NOR = {
+                    is_friendly_to = root
+                    is_cordial_to = root
+                    is_protective_to = root
+                    is_loyal_to = root
+                    is_domineering_to = root
+                    is_unfriendly_to = root
+                    is_threatened_to = root
+                    is_hostile_to = root
+                }
+            }
+        }
+        text = aoe_espionage_actions.6.desc_10
+    }
+
+    option = {
+        name = "aoe_espionage_actions.6.a.name"
+        custom_tooltip = "aoe_espionage_actions.6.a.tooltip"
+        trigger = {
+            is_militarist = yes
+        }
+        add_resource = {
+            unity = 200
+        }
+        hidden_effect = {
+            event_target:espionage_target_country = {
+                set_timed_country_flag = {
+                    flag = espionage_charges_denied@root
+                    days = 2
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.6.b.name"
+        custom_tooltip = "aoe_espionage_actions.6.b.tooltip"
+        trigger = {
+            is_authoritarian = yes
+        }
+        add_resource = {
+            influence = 200
+        }
+        hidden_effect = {
+            event_target:espionage_target_country = {
+                set_timed_country_flag = {
+                    flag = espionage_charges_denied@root
+                    days = 2
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.6.c.name"
+        custom_tooltip = "aoe_espionage_actions.6.c.tooltip"
+        trigger = {
+            is_xenophobe = yes
+        }
+        add_resource = {
+            consumer_goods = 250
+        }
+        hidden_effect = {
+            event_target:espionage_target_country = {
+                set_timed_country_flag = {
+                    flag = espionage_charges_denied@root
+                    days = 2
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.6.d.name"
+        custom_tooltip = "aoe_espionage_actions.6.d.tooltip"
+        trigger = {
+            NOR = {
+                is_militarist = yes
+                is_authoritarian = yes
+                is_xenophobe = yes
+            }
+        }
+        hidden_effect = {
+            event_target:espionage_target_country = {
+                set_timed_country_flag = {
+                    flag = espionage_charges_denied@root
+                    days = 2
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.6.e.name"
+        custom_tooltip = "aoe_espionage_actions.6.e.tooltip"
+        trigger = {
+            OR = {
+                is_pacifist = yes
+                is_xenophile = yes
+            }
+            has_country_resource = {
+                type = minerals
+                amount > 500
+            }
+        }
+        add_resource = {
+            minerals = -500
+        }
+        hidden_effect = {
+            event_target:espionage_target_country = {
+                add_resource = {
+                    minerals = 1000
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.6.f.name"
+        custom_tooltip = "aoe_espionage_actions.6.f.tooltip"
+        trigger = {
+            OR = {
+                is_pacifist = yes
+                is_xenophile = yes
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                50 = {
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_target_country = {
+                            is_xenophile = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 10
+                        event_target:espionage_target_country = {
+                            is_fallen_empire = yes
+                        }
+                    }
+                    event_target:espionage_target_country = {
+                        set_timed_country_flag = {
+                            flag = espionage_charges_denied@root
+                            days = 2
+                        }
+                    }
+                }
+                50 = {}
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.6.g.name"
+        custom_tooltip = "aoe_espionage_actions.6.g.tooltip"
+        trigger = {
+            NOR = {
+                is_pacifist = yes
+                is_xenophile = yes
+            }
+            has_country_resource = {
+                type = minerals
+                amount > 1000
+            }
+        }
+        add_resource = {
+            minerals = -1000
+        }
+        hidden_effect = {
+            event_target:espionage_target_country = {
+                add_resource = {
+                    minerals = 1000
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.6.h.name"
+        custom_tooltip = "aoe_espionage_actions.6.h.tooltip"
+        trigger = {
+            NOR = {
+                is_pacifist = yes
+                is_xenophile = yes
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                70 = {
+                    event_target:espionage_target_country = {
+                        set_timed_country_flag = {
+                            flag = espionage_charges_denied@root
+                            days = 2
+                        }
+                    }
+                }
+                30 = {}
+            }
+        }
+    }
+
+    after = {
+        event_target:espionage_target_country = {
+            country_event = {
+                id = aoe_espionage_actions.5
+                days = 1
+            }
+        }
+    }
+}

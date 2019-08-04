@@ -1,0 +1,128 @@
+intelligencer = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = "building_intelligence_agency_3"
+    clothes_texture_index = 1
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+
+    possible = {
+        ruler_job_check_trigger = yes
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    resources = {
+        category = planet_administrators
+        upkeep = {
+            unity = 2
+            influence = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    NOT = {
+                        is_sovereign_colony = yes
+                        has_orbital_bombardment = no
+                    }
+                }
+            }
+            minerals = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = pop
+                pop = {
+                    is_pop_purged = yes
+                }
+            }
+            minerals = 3
+        }
+    }
+
+    country_modifier = {
+        country_naval_cap_add = 2
+    }
+
+    planet_modifier = {
+        planet_amenities_add = 10
+        trade_value_add = 5
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = "trait_latent_psionic"
+        }
+        modifier = {
+            planet_amenities_add = 3
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = "trait_psionic"
+        }
+        modifier = {
+            planet_amenities_add = 6
+        }
+    }
+
+    weight = {
+        weight = @ruler_job_weight
+
+        modifier = {
+            factor = 10000
+            has_job = "intelligencer"
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = "trait_latent_psionic"
+                has_trait = "trait_psionic"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = "ethic_fanatic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = "ethic_militarist"
+        }
+        modifier = {
+            factor = 1.25
+            has_trait = "trait_brainslug"
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                OR = {
+                    has_orbital_bombardment = yes
+                    has_ground_combat = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            is_pop_purged = yes
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}
