@@ -1,0 +1,1250 @@
+### Agency Of Nexus
+
+building_nexus_agency_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 300
+    base_cap_amount = 1
+    category = influence
+
+    upgrades = {
+        "building_nexus_agency_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 1000
+            lirium = 500
+        }
+        upkeep = {
+            lirium = 2
+            minerals = 3
+        }
+    }
+
+    country_modifier = {
+        country_influence_produces_mult = 0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_nexus_agent_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_nexus_agent_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 4
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_influence"
+    }
+}
+
+building_nexus_agency_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 600
+    base_cap_amount = 1
+    category = influence
+
+    upgrades = {
+        "building_nexus_agency_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 2000
+            lirium = 1000
+        }
+        upkeep = {
+            lirium = 4
+            minerals = 6
+        }
+    }
+
+    country_modifier = {
+        country_influence_produces_mult = 0.1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_nexus_agent_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_nexus_agent_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 7
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_stellar_influence"
+    }
+}
+
+building_nexus_agency_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 900
+    base_cap_amount = 1
+    category = influence
+
+    upgrades = {
+        "building_nexus_agency_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 3000
+            lirium = 2000
+        }
+        upkeep = {
+            lirium = 6
+            minerals = 9
+        }
+    }
+
+    country_modifier = {
+        country_influence_produces_mult = 0.15
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_nexus_agent_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_nexus_agent_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 10
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_galactic_influence"
+    }
+}
+
+building_nexus_agency_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1200
+    base_cap_amount = 1
+    category = influence
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 4000
+            lirium = 3000
+        }
+        upkeep = {
+            lirium = 8
+            minerals = 12
+        }
+    }
+
+    country_modifier = {
+        country_influence_produces_mult = 0.2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_nexus_agent_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_nexus_agent_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 13
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_universe_influence"
+    }
+}
+
+### Obelisk Of Nexus
+
+building_nexus_obelisk_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 150
+    base_cap_amount = 1
+    category = influence
+
+    upgrades = {
+        "building_nexus_obelisk_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_nexus_agency_1"
+            has_building = "building_nexus_agency_2"
+            has_building = "building_nexus_agency_3"
+            has_building = "building_nexus_agency_4"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_nexus_agency_1"
+                has_building = "building_nexus_agency_2"
+                has_building = "building_nexus_agency_3"
+                has_building = "building_nexus_agency_4"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            lirium = 200
+        }
+        upkeep = {
+            lirium = 1
+        }
+    }
+
+    planet_modifier = {
+        pop_citizen_happiness = 0.03
+        pop_government_ethic_attraction = 0.05
+    }
+
+    country_modifier = {
+        country_claim_influence_cost_mult = -0.04
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 2
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_influence"
+    }
+}
+
+building_nexus_obelisk_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 350
+    base_cap_amount = 1
+    category = influence
+
+    upgrades = {
+        "building_nexus_obelisk_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_nexus_agency_2"
+            has_building = "building_nexus_agency_3"
+            has_building = "building_nexus_agency_4"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_nexus_agency_2"
+                has_building = "building_nexus_agency_3"
+                has_building = "building_nexus_agency_4"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            lirium = 400
+        }
+        upkeep = {
+            lirium = 2
+        }
+    }
+
+    planet_modifier = {
+        pop_citizen_happiness = 0.06
+        pop_government_ethic_attraction = 0.1
+    }
+
+    country_modifier = {
+        country_claim_influence_cost_mult = -0.08
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 3
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_stellar_influence"
+    }
+}
+
+building_nexus_obelisk_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = no
+    base_buildtime = 850
+    base_cap_amount = 1
+    category = influence
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+        OR = {
+            has_building = "building_nexus_agency_3"
+            has_building = "building_nexus_agency_4"
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+            NOR = {
+                has_building = "building_nexus_agency_3"
+                has_building = "building_nexus_agency_4"
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+            lirium = 600
+        }
+        upkeep = {
+            lirium = 3
+        }
+    }
+
+    planet_modifier = {
+        pop_citizen_happiness = 0.09
+        pop_government_ethic_attraction = 0.15
+    }
+
+    country_modifier = {
+        country_claim_influence_cost_mult = -0.12
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 4
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_galactic_influence"
+    }
+}
+
+### Imperium Colosseum
+
+building_imperium_colosseum_1 = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 500
+    base_cap_amount = 1
+    category = influence
+
+    upgrades = {
+        "building_imperium_colosseum_2"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 1000
+            minerals = 2000
+            lirium = 500
+        }
+        upkeep = {
+            lirium = 1
+            energy = 2
+            minerals = 3
+        }
+    }
+
+    planet_modifier = {
+        pop_factions_influence_produces_add = 1
+    }
+
+    country_modifier = {
+        country_base_influence_produces_add = 1
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_ceremonies_master_add = 1
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_ceremonies_master_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 4
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_ceremonies"
+    }
+}
+
+building_imperium_colosseum_2 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1000
+    base_cap_amount = 1
+    category = influence
+
+    upgrades = {
+        "building_imperium_colosseum_3"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 2000
+            minerals = 4000
+            lirium = 1000
+        }
+        upkeep = {
+            lirium = 2
+            energy = 3
+            minerals = 5
+        }
+    }
+
+    planet_modifier = {
+        pop_factions_influence_produces_add = 2
+    }
+
+    country_modifier = {
+        country_base_influence_produces_add = 2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_ceremonies_master_add = 2
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_ceremonies_master_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 6
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_stellar_ceremonies"
+    }
+}
+
+building_imperium_colosseum_3 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 1500
+    base_cap_amount = 1
+    category = influence
+
+    upgrades = {
+        "building_imperium_colosseum_4"
+    }
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 4000
+            minerals = 5000
+            lirium = 2000
+        }
+        upkeep = {
+            lirium = 5
+            energy = 6
+            minerals = 9
+        }
+    }
+
+    planet_modifier = {
+        pop_factions_influence_produces_add = 3
+    }
+
+    country_modifier = {
+        country_base_influence_produces_add = 3
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_ceremonies_master_add = 3
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_ceremonies_master_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 7
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 10
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_galactic_ceremonies"
+    }
+}
+
+building_imperium_colosseum_4 = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = yes
+    can_be_disabled = yes
+    base_buildtime = 2000
+    base_cap_amount = 1
+    category = influence
+
+    potential = {
+        is_colonizeable_planet = yes
+        has_fully_upgraded_populous_capital = yes
+        exists = owner
+        owner = { 
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            is_sovereign_colony = no
+            owner = { 
+                OR = {
+                    is_gestalt = yes
+                    is_fallen_empire = yes
+                }
+            }
+        }
+    }
+
+    show_tech_unlock_if = {
+        is_gestalt = no
+        is_fallen_empire = no
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 7000
+            minerals = 10000
+            lirium = 3000
+        }
+        upkeep = {
+            lirium = 8
+            energy = 10
+            minerals = 14
+        }
+    }
+
+    planet_modifier = {
+        pop_factions_influence_produces_add = 4
+    }
+
+    country_modifier = {
+        country_base_influence_produces_add = 4
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_ceremonies_master_add = 4
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        text = "job_ceremonies_master_effect_desc"
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value < 9
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 11
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 15
+                }
+            }
+        }
+    }
+
+    prerequisites = {
+        "tech_universe_ceremonies"
+    }
+}

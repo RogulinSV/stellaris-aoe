@@ -1,0 +1,1098 @@
+tech_planetary_influence = {
+    # Unlocks "Nexus Agency I" building
+    # Unlocks "Nexus Obelisk I" building
+
+    cost = @technology_ultralow_cost
+    area = society
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_galactic_ambitions"
+    }
+    weight = @tier1weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_planetary_influence_title"
+            desc = "tech_planetary_influence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 1
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 1
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 2
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 3
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 4
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 1
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_adopt"
+            }
+        }
+    }
+}
+
+tech_stellar_influence = {
+    # Unlocks "Nexus Agency II" building
+    # Unlocks "Nexus Obelisk II" building
+
+    cost = @technology_low_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_manifest_destiny"
+        "tech_planetary_influence"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_stellar_influence_title"
+            desc = "tech_stellar_influence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 3
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 3
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 4
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+    }
+}
+
+tech_galactic_influence = {
+    # Unlocks "Nexus Agency III" building
+    # Unlocks "Nexus Obelisk III" building
+
+    cost = @technology_medium_cost
+    area = society
+    tier = 3
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_interstellar_campaigns"
+        "tech_stellar_influence"
+    }
+    weight = @tier3weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_galactic_influence_title"
+            desc = "tech_galactic_influence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 5
+            }
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 6
+        }
+        modifier = {
+            factor = 1.1
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 5
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+    }
+}
+
+tech_universe_influence = {
+    # Unlocks "Nexus Agency IV" building
+
+    cost = @technology_high_cost
+    area = society
+    tier = 4
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_galactic_campaigns"
+        "tech_galactic_influence"
+    }
+    weight = @tier4weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_universe_influence_title"
+            desc = "tech_universe_influence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 7
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 7
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+    }
+}
+
+tech_planetary_ceremonies = {
+    # Unlocks "Imperium Colosseum I" building
+
+    cost = @technology_low_cost
+    area = society
+    tier = 1
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_planetary_government"
+    }
+    weight = @tier1weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_planetary_ceremonies_title"
+            desc = "tech_planetary_ceremonies_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 1
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_adopt"
+            }
+        }
+    }
+}
+
+tech_stellar_ceremonies = {
+    # Unlocks "Imperium Colosseum II" building
+
+    cost = @technology_medium_cost
+    area = society
+    tier = 2
+    is_rare = no
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_planetary_unification"
+        "tech_planetary_ceremonies"
+    }
+    weight = @tier2weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_stellar_ceremonies_title"
+            desc = "tech_stellar_ceremonies_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_ascension_perks < 1
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            AND = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            num_ascension_perks < 1
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_imperious_architecture"
+                has_tradition = "tr_domination_judgment_corps"
+            }
+        }
+    }
+}
+
+tech_galactic_ceremonies = {
+    # Unlocks "Imperium Colosseum III" building
+
+    cost = @technology_high_cost
+    area = society
+    tier = 3
+    is_rare = yes
+    is_dangerous = no
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_colonial_centralization"
+        "tech_stellar_ceremonies"
+    }
+    weight = @tier3weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_galactic_ceremonies_title"
+            desc = "tech_galactic_ceremonies_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_ascension_perks < 2
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_tradition = "tr_domination_finish"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            num_ascension_perks < 2
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_tradition = "tr_domination_grand_council"
+                has_tradition = "tr_domination_workplace_motivators"
+            }
+        }
+    }
+}
+
+tech_universe_ceremonies = {
+    # Unlocks "Imperium Colosseum IV" building
+
+    cost = @technology_ultrahigh_cost
+    area = society
+    tier = 4
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    category = { statecraft }
+    prerequisites = {
+        "tech_galactic_administration"
+        "tech_galactic_ceremonies"
+    }
+    weight = @tier4weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_universe_ceremonies_title"
+            desc = "tech_universe_ceremonies_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+        OR = {
+            has_country_flag = "flags_aoe_science_ascension"
+            has_global_flag = "flags_aoe_science_ascension"
+        }
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            num_ascension_perks < 3
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            num_ascension_perks < 3
+        }
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_domination_finish"
+            }
+        }
+    }
+}
