@@ -24,11 +24,11 @@ ship_event = {
                     which = "counter_ship_corvettes_built"
                     value = 1
                 }
-                else = {
-                    change_variable = {
-                        which = "counter_ship_corvettes_built"
-                        value = 1
-                    }
+            }
+            else = {
+                change_variable = {
+                    which = "counter_ship_corvettes_built"
+                    value = 1
                 }
             }
         }
@@ -57,11 +57,11 @@ ship_event = {
                     which = "counter_ship_destroyer_built"
                     value = 1
                 }
-                else = {
-                    change_variable = {
-                        which = "counter_ship_destroyer_built"
-                        value = 1
-                    }
+            }
+            else = {
+                change_variable = {
+                    which = "counter_ship_destroyer_built"
+                    value = 1
                 }
             }
         }
@@ -90,11 +90,11 @@ ship_event = {
                     which = "counter_ship_cruiser_built"
                     value = 1
                 }
-                else = {
-                    change_variable = {
-                        which = "counter_ship_cruiser_built"
-                        value = 1
-                    }
+            }
+            else = {
+                change_variable = {
+                    which = "counter_ship_cruiser_built"
+                    value = 1
                 }
             }
         }
@@ -123,11 +123,11 @@ ship_event = {
                     which = "counter_ship_battleship_built"
                     value = 1
                 }
-                else = {
-                    change_variable = {
-                        which = "counter_ship_battleship_built"
-                        value = 1
-                    }
+            }
+            else = {
+                change_variable = {
+                    which = "counter_ship_battleship_built"
+                    value = 1
                 }
             }
         }
@@ -156,11 +156,11 @@ ship_event = {
                     which = "counter_ship_titan_built"
                     value = 1
                 }
-                else = {
-                    change_variable = {
-                        which = "counter_ship_titan_built"
-                        value = 1
-                    }
+            }
+            else = {
+                change_variable = {
+                    which = "counter_ship_titan_built"
+                    value = 1
                 }
             }
         }
@@ -192,11 +192,11 @@ ship_event = {
                     which = "counter_ship_colonizer_built"
                     value = 1
                 }
-                else = {
-                    change_variable = {
-                        which = "counter_ship_colonizer_built"
-                        value = 1
-                    }
+            }
+            else = {
+                change_variable = {
+                    which = "counter_ship_colonizer_built"
+                    value = 1
                 }
             }
         }
@@ -225,11 +225,11 @@ ship_event = {
                     which = "counter_ship_transport_built"
                     value = 1
                 }
-                else = {
-                    change_variable = {
-                        which = "counter_ship_transport_built"
-                        value = 1
-                    }
+            }
+            else = {
+                change_variable = {
+                    which = "counter_ship_transport_built"
+                    value = 1
                 }
             }
         }

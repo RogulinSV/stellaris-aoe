@@ -1,0 +1,62 @@
+namespace = aoe_jobs_actions
+
+event = {
+    id = aoe_jobs_actions.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        every_playable_country = {
+            every_owned_pop = {
+                limit = {
+                    has_job = "elite_prostitute"
+                }
+                owner = {
+                    if = {
+                        limit = {
+                            check_variable = {
+                                which = "owned_cc_var"
+                                value < 1
+                            }
+                        }
+                        set_variable = {
+                            which = "owned_cc_var"
+                            value = 1
+                        }
+                    }
+                    else = {
+                        change_variable = {
+                            which = "owned_cc_var"
+                            value = 1
+                        }
+                    }
+
+                    log = "aoe_jobs_actions.1: [This.GetName] Gained 1 CaravanCoin"
+                }
+            }
+        }
+    }
+}
+
+event = {
+    id = aoe_jobs_actions.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        every_playable_country = {
+            every_owned_pop = {
+                limit = {
+                    has_job = "elite_merchant"
+                }
+                owner = {
+                    add_resource = {
+                        minor_artifacts = 1
+                    }
+
+                    log = "aoe_jobs_actions.1: [This.GetName] Gained 1 Artifact"
+                }
+            }
+        }
+    }
+}

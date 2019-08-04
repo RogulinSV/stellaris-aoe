@@ -79,7 +79,7 @@ spriteTypes = {
     }
     spriteType = {
         name = "GFX_aoe_planet_deposits_discovered"
-        texturefile = "gfx/event_pictures/planet_deposits_discovered.dds"
+        texturefile = "gfx/event_pictures/planet_deposits_discovered_2.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }

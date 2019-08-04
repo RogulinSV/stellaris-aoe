@@ -1,0 +1,520 @@
+namespace = aoe_battle_actions
+
+country_event = {
+    id = aoe_battle_actions.1
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_total_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_total_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_total_won"
+                value = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.2
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            OR = {
+                is_synthetic_empire = yes
+                is_mechanical_empire = yes
+                is_robot_empire = yes
+                is_cyborg_empire = yes
+                is_machine_empire = yes
+            }
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_se_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_se_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_se_won"
+                value = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.3
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_hive_empire = yes
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_he_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_he_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_he_won"
+                value = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.4
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_regular_empire = yes
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_re_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_re_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_re_won"
+                value = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.5
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_country_type = "swarm"
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_swarm_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_swarm_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_swarm_won"
+                value = 1
+            }
+        }
+
+        log = "{This.GetName} won against Swarm"
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.6
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            OR = {
+                is_country_type = "extradimensional"
+                is_country_type = "extradimensional_2"
+                is_country_type = "extradimensional_3"
+            }
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_extra_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_extra_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_extra_won"
+                value = 1
+            }
+        }
+
+        log = "{This.GetName} won against Extradimensional"
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.7
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_country_type = "gray_goo"
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_goo_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_goo_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_goo_won"
+                value = 1
+            }
+        }
+
+        log = "{This.GetName} won against Gray Goo"
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.8
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_country_type = "crystal"
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_crystal_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_crystal_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_crystal_won"
+                value = 1
+            }
+        }
+
+        log = "{This.GetName} won against Crystal"
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.9
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_country_type = "amoeba"
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_amoeba_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_amoeba_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_amoeba_won"
+                value = 1
+            }
+        }
+
+        log = "{This.GetName} won against Amoeba"
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.10
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_country_type = "cloud"
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_cloud_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_cloud_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_cloud_won"
+                value = 1
+            }
+        }
+
+        log = "{This.GetName} won against Cloud"
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.11
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_country_type = "drone"
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_drone_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_drone_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_drone_won"
+                value = 1
+            }
+        }
+
+        log = "{This.GetName} won against Drone"
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.12
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_country_type = "tiyanki"
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_tiyanki_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_tiyanki_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_tiyanki_won"
+                value = 1
+            }
+        }
+
+        log = "{This.GetName} won against Tiyanki"
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.13
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_guardian_country = yes
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_guardian_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_guardian_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_guardian_won"
+                value = 1
+            }
+        }
+
+        log = "{This.GetName} won against Guardians"
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.14
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_country_type = "gate_builders"
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_builders_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_builders_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_builders_won"
+                value = 1
+            }
+        }
+
+        log = "{This.GetName} won against Gate Builders"
+    }
+}
+
+country_event = {
+    id = aoe_battle_actions.15
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_fallen_empire = yes
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "counter_space_battles_vs_fe_won"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "counter_space_battles_vs_fe_won"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "counter_space_battles_vs_fe_won"
+                value = 1
+            }
+        }
+    }
+}

@@ -9,6 +9,18 @@ on_press_begin = {
     }
 }
 
+on_monthly_pulse = {
+    events = {
+        # Special jobs monthly CaravanCoin income
+        aoe_jobs_actions.1
+    }
+    random_events = {
+        80 = 0
+        # Special jobs monthly Artifact income
+        20 = aoe_jobs_actions.2
+    }
+}
+
 on_bi_yearly_pulse = {
     events = {
         # Searching resources Event
@@ -99,5 +111,40 @@ on_tech_increased = {
     events = {
         # Environment adaptation
         aoe_tech_actions.1
+    }
+}
+
+on_space_battle_won = {
+    events= {
+        # Won against anybody
+        aoe_battle_actions.1
+        # Won against Synthetic Empire
+        aoe_battle_actions.2
+        # Won against Hive Empire
+        aoe_battle_actions.3
+        # Won against Regular Empire
+        aoe_battle_actions.4
+        # Won against Swarm
+        aoe_battle_actions.5
+        # Won against Extradimensional
+        aoe_battle_actions.6
+        # Won against Gray Goo
+        aoe_battle_actions.7
+        # Won against Crystal
+        aoe_battle_actions.8
+        # Won against Amoeba
+        aoe_battle_actions.9
+        # Won against Cloud
+        aoe_battle_actions.10
+        # Won against Drone
+        aoe_battle_actions.11
+        # Won against Tiyanki
+        aoe_battle_actions.12
+        # Won against Guardian
+        aoe_battle_actions.13
+        # Won against Gate Builders
+        aoe_battle_actions.14
+        # Won against Fallen Empire
+        aoe_battle_actions.15
     }
 }
