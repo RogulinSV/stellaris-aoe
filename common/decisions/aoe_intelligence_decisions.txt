@@ -7,30 +7,19 @@ decision_planet_intelligencer_training = {
         category = decisions
         cost = {
             energy = 500
-            minerals = 2000
+            minerals = 500
             influence = 10
         }
     }
 
     potential = {
         owner = {
-            NOR = {
-                is_country_type = "fallen_empire"
-                is_country_type = "awakened_fallen_empire"
-                is_country_type = "enclave"
-                is_country_type = "nomad"
-                is_country_type = "dormant_marauders"
-                is_country_type = "awakened_marauders"
-                is_country_type = "swarm"
-                is_country_type = "extradimensional"
-                is_country_type = "extradimensional_2"
-                is_country_type = "extradimensional_3"
-                is_country_type = "gray_goo"
-                is_country_type = "ai_empire"
-                is_country_type = "primitive"
-                is_guardian_country = yes
-            }
+            is_regular_country = yes
             has_technology = "tech_interstellar_intelligence"
+            any_relation = {
+                has_communications = root.owner
+                is_regular_country = yes
+            }
         }
     }
 
@@ -64,17 +53,16 @@ decision_planet_intelligencer_training = {
                     limit = {
                         is_unassignment_intelligencer = yes
                     }
-                    disengage_intelligencer = yes
-                    root = {
-                        save_event_target_as = "espionage_origin_planet"
-                    }
-                    root.owner = {
-                        save_event_target_as = "espionage_origin_country"
-                        country_event = {
-                            id = aoe_espionage_actions.2
-                            days = 200
-                            random = 90
-                        }
+                    save_event_target_as = "espionage_origin_spy"
+                }
+                disengage_intelligencer = yes
+                save_event_target_as = "espionage_origin_planet"
+                owner = {
+                    save_event_target_as = "espionage_origin_country"
+                    country_event = {
+                        id = aoe_espionage_actions.2
+                        days = 200
+                        random = 90
                     }
                 }
             }
@@ -90,17 +78,16 @@ decision_planet_intelligencer_training = {
                     limit = {
                         is_unassignment_intelligencer = yes
                     }
-                    disengage_intelligencer = yes
-                    root = {
-                        save_event_target_as = "espionage_origin_planet"
-                    }
-                    root.owner = {
-                        save_event_target_as = "espionage_origin_country"
-                        country_event = {
-                            id = aoe_espionage_actions.2
-                            days = 120
-                            random = 70
-                        }
+                    save_event_target_as = "espionage_origin_spy"
+                }
+                disengage_intelligencer = yes
+                save_event_target_as = "espionage_origin_planet"
+                owner = {
+                    save_event_target_as = "espionage_origin_country"
+                    country_event = {
+                        id = aoe_espionage_actions.2
+                        days = 120
+                        random = 70
                     }
                 }
             }
@@ -113,17 +100,16 @@ decision_planet_intelligencer_training = {
                     limit = {
                         is_unassignment_intelligencer = yes
                     }
-                    disengage_intelligencer = yes
-                    root = {
-                        save_event_target_as = "espionage_origin_planet"
-                    }
-                    root.owner = {
-                        save_event_target_as = "espionage_origin_country"
-                        country_event = {
-                            id = aoe_espionage_actions.2
-                            days = 60
-                            random = 30
-                        }
+                    save_event_target_as = "espionage_origin_spy"
+                }
+                disengage_intelligencer = yes
+                save_event_target_as = "espionage_origin_planet"
+                owner = {
+                    save_event_target_as = "espionage_origin_country"
+                    country_event = {
+                        id = aoe_espionage_actions.2
+                        days = 60
+                        random = 30
                     }
                 }
             }
@@ -131,10 +117,10 @@ decision_planet_intelligencer_training = {
     }
 
     ai_weight = {
-        weight = 1
+        weight = 10
 
         modifier = {
-            factor = 1000
+            factor = 100
             owner = {
                 OR = {
                     is_militarist = yes
@@ -145,7 +131,7 @@ decision_planet_intelligencer_training = {
             }
         }
         modifier = {
-            factor = 0
+            factor = 0.1
             owner = {
                 has_pacifist_government = yes
             }

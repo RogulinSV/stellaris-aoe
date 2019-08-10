@@ -758,33 +758,17 @@ is_intelligencer_has_purpose_steal_technologies = {
 
 # Scope: country
 possibly_affected_by_espionage = {
+    is_regular_country = yes
     NOT = {
         is_same_value = event_target:espionage_origin_country
     }
-    # has_established_contact = event_target:espionage_origin_country
-    has_communications = event_target:espionage_origin_country
+    has_established_contact = event_target:espionage_origin_country
     NOT = {
         has_country_flag = espionage_target_country@event_target:espionage_origin_country
     }
-    NOR = {
-        is_country_type = "enclave"
-        is_country_type = "nomad"
-        is_country_type = "dormant_marauders"
-        is_country_type = "awakened_marauders"
-        is_country_type = "swarm"
-        is_country_type = "extradimensional"
-        is_country_type = "extradimensional_2"
-        is_country_type = "extradimensional_3"
-        is_country_type = "gray_goo"
-        is_country_type = "ai_empire"
-        is_country_type = "primitive"
-        is_guardian_country = yes
-    }
 }
 
-# This: target country
-# Prev: attacker country
-can_declare_war_to = {
+can_declare_espionage_war = {
     NOR = {
         AND = {
             OR = {
@@ -793,18 +777,63 @@ can_declare_war_to = {
                 is_subject_type = "signatory"
             }
             overlord = {
-                is_same_value = prev
+                is_same_value = $TARGET$
+            }
+            NOT = {
+                is_at_war_with = $TARGET$
             }
         }
-        prev = {
+        $TARGET$ = {
             has_policy_flag = "no_wars"
             OR = {
                 is_subject = no
                 overlord = {
-                    is_same_value = this
+                    is_same_value = $TARGET$
                 }
             }
         }
-        is_at_war_with = prev
     }
+}
+
+# Scope: country
+is_regular_country = {
+    # NOR = {
+    #     is_country_type = "fallen_empire"
+    #     is_country_type = "awakened_fallen_empire"
+    #     is_country_type = "enclave"
+    #     is_country_type = "nomad"
+    #     is_country_type = "dormant_marauders"
+    #     is_country_type = "awakened_marauders"
+    #     is_country_type = "marauder_raiders"
+    #     is_country_type = "ruined_marauders"
+    #     is_country_type = "caravaneer_fleet"
+    #     is_country_type = "caravaneer_home"
+    #     is_country_type = "adversary"
+    #     is_country_type = "swarm"
+    #     is_country_type = "vol"
+    #     is_country_type = "ratlings"
+    #     is_country_type = "crystal"
+    #     is_country_type = "drone"
+    #     is_country_type = "amoeba"
+    #     is_country_type = "cloud"
+    #     is_country_type = "tiyanki"
+    #     is_country_type = "pirate"
+    #     is_country_type = "extradimensional"
+    #     is_country_type = "extradimensional_2"
+    #     is_country_type = "extradimensional_3"
+    #     is_country_type = "gate_builders"
+    #     is_country_type = "portal_holder"
+    #     is_country_type = "gray"
+    #     is_country_type = "gray_goo"
+    #     is_country_type = "ai_empire"
+    #     is_country_type = "cybrex_empire"
+    #     is_country_type = "primitive"
+    #     is_country_type = "neutral_faction"
+    #     is_country_type = "rebel"
+    #     is_country_type = "faction"
+    #     is_country_type = "ldragon_country"
+    #     is_country_type = "global_event"
+    #     is_guardian_country = yes
+    # }
+    is_country_type = default
 }

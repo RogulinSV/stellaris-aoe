@@ -1,0 +1,18 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_message_spy_stole_minerals"
+        texturefile = "gfx/interface/icons/message/message_spy_stole_minerals.dds"
+    }
+    spriteType = {
+        name = "GFX_message_spy_gained_minerals"
+        texturefile = "gfx/interface/icons/message/message_spy_gained_minerals.dds"
+    }
+    spriteType = {
+        name = "GFX_message_spy_stole_energy"
+        texturefile = "gfx/interface/icons/message/message_spy_stole_energy.dds"
+    }
+    spriteType = {
+        name = "GFX_message_spy_gained_energy"
+        texturefile = "gfx/interface/icons/message/message_spy_gained_energy.dds"
+    }
+}

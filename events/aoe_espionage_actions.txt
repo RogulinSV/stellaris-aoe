@@ -18,16 +18,20 @@ country_event = {
     }
 
     trigger = {
-        exists = event_target:espionage_origin_planet
         exists = event_target:espionage_origin_country
+        exists = event_target:espionage_origin_planet
+        exists = event_target:espionage_origin_spy
         event_target:espionage_origin_planet = {
             owner = {
                 is_same_value = event_target:espionage_origin_country
             }
             any_pop = {
-                is_unassignment_intelligencer = yes
-                is_disengaged_intelligencer = yes
+                is_same_value = event_target:espionage_origin_spy
             }
+        }
+        event_target:espionage_origin_spy = {
+            is_unassignment_intelligencer = yes
+            is_disengaged_intelligencer = yes
         }
         any_country = {
             possibly_affected_by_espionage = yes
@@ -35,7 +39,7 @@ country_event = {
     }
 
     option = {
-        name = "aoe_espionage_actions.2.a.name"
+        name = "aoe_espionage_actions.2.a"
         custom_tooltip = "aoe_espionage_actions.2.a.tooltip"
         trigger = {
             resource_stockpile_compare = {
@@ -47,25 +51,27 @@ country_event = {
             minerals = -200
         }
         hidden_effect = {
-            event_target:espionage_origin_planet = {
-                random_pop = {
-                    limit = {
-                        is_unassignment_intelligencer = yes
-                        is_disengaged_intelligencer = yes
-                    }
-                    engage_intelligencer_espionage_purpose_steal_resources = yes
-                    save_event_target_as = "espionage_origin_spy"
-                }
-            }
+            engage_intelligencer_espionage_purpose_steal_resources = yes
             search_espionage_victim = yes
             country_event = {
                 id = aoe_espionage_actions.3
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        has_pop_flag = "espionage_purpose_steal_resources"
+                    }
+                }
+                log = "aoe_espionage_actions.2: spy got purpose steal resources"
+            }
+            else = {
+                log = "aoe_espionage_actions.2: ERROR spy got purpose steal resources"
             }
         }
     }
 
     option = {
-        name = "aoe_espionage_actions.2.b.name"
+        name = "aoe_espionage_actions.2.b"
         custom_tooltip = "aoe_espionage_actions.2.b.tooltip"
         trigger = {
             resource_stockpile_compare = {
@@ -77,16 +83,7 @@ country_event = {
             minerals = -300
         }
         hidden_effect = {
-            event_target:espionage_origin_planet = {
-                random_pop = {
-                    limit = {
-                        is_unassignment_intelligencer = yes
-                        is_disengaged_intelligencer = yes
-                    }
-                    engage_intelligencer_espionage_purpose_steal_technologies = yes
-                    save_event_target_as = "espionage_origin_spy"
-                }
-            }
+            engage_intelligencer_espionage_purpose_steal_technologies = yes
             search_espionage_victim = yes
             country_event = {
                 id = aoe_espionage_actions.3
@@ -94,8 +91,8 @@ country_event = {
         }
     }
     option = {
-        name = "aoe_espionage_actions.2.c.name"
-        custom_tooltip = "aoe_espionage_actions.2.c.tooltip"
+        name = "aoe_espionage_actions.2.z"
+        custom_tooltip = "aoe_espionage_actions.2.z.tooltip"
     }
 }
 
@@ -140,7 +137,7 @@ country_event = {
     }
 
     option = {
-        name = "aoe_espionage_actions.3.a.name"
+        name = "aoe_espionage_actions.3.a"
         custom_tooltip = "aoe_espionage_actions.3.a.tooltip"
         trigger = {
             event_target:espionage_origin_planet = {
@@ -148,20 +145,29 @@ country_event = {
             }
         }
         hidden_effect = {
-            event_target:espionage_origin_spy = {
-                set_intelligencer_on_assignment = { ARG1 = 900 }
-            }
+            set_intelligencer_on_assignment = { ARG1 = 10 }
             event_target:espionage_origin_country = {
                 country_event = {
                     id = aoe_espionage_actions.4
-                    days = 900
+                    days = 3
                 }
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        has_pop_flag = "intelligencer_on_assignment"
+                    }
+                }
+                log = "aoe_espionage_actions.3: spy got assignment"
+            }
+            else = {
+                log = "aoe_espionage_actions.3: ERROR spy got assignment"
             }
         }
     }
 
     option = {
-        name = "aoe_espionage_actions.3.b.name"
+        name = "aoe_espionage_actions.3.b"
         custom_tooltip = "aoe_espionage_actions.3.b.tooltip"
         trigger = {
             event_target:espionage_origin_planet = {
@@ -169,20 +175,29 @@ country_event = {
             }
         }
         hidden_effect = {
-            event_target:espionage_origin_spy = {
-                set_intelligencer_on_assignment = { ARG1 = 600 }
-            }
+            set_intelligencer_on_assignment = { ARG1 = 10 }
             event_target:espionage_origin_country = {
                 country_event = {
                     id = aoe_espionage_actions.4
-                    days = 600
+                    days = 2
                 }
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        has_pop_flag = "intelligencer_on_assignment"
+                    }
+                }
+                log = "aoe_espionage_actions.3: spy got assignment"
+            }
+            else = {
+                log = "aoe_espionage_actions.3: ERROR spy got assignment"
             }
         }
     }
 
     option = {
-        name = "aoe_espionage_actions.3.c.name"
+        name = "aoe_espionage_actions.3.c"
         custom_tooltip = "aoe_espionage_actions.3.c.tooltip"
         trigger = {
             event_target:espionage_origin_planet = {
@@ -190,20 +205,18 @@ country_event = {
             }
         }
         hidden_effect = {
-            event_target:espionage_origin_spy = {
-                set_intelligencer_on_assignment = { ARG1 = 300 }
-            }
+            set_intelligencer_on_assignment = { ARG1 = 10 }
             event_target:espionage_origin_country = {
                 country_event = {
                     id = aoe_espionage_actions.4
-                    days = 300
+                    days = 1
                 }
             }
         }
     }
 
     option = {
-        name = "aoe_espionage_actions.3.d.name"
+        name = "aoe_espionage_actions.3.d"
         custom_tooltip = "aoe_espionage_actions.3.d.tooltip"
         trigger = {
             any_country = {
@@ -219,7 +232,7 @@ country_event = {
     }
 
     option = {
-        name = "aoe_espionage_actions.3.e.name"
+        name = "aoe_espionage_actions.3.e"
         custom_tooltip = "aoe_espionage_actions.3.e.tooltip"
     }
 }
@@ -270,13 +283,11 @@ country_event = {
                     }
                     modifier = {
                         factor = 1000
-                        event_target:espionage_target_coutry = {
+                        event_target:espionage_target_country = {
                             is_fallen_empire = yes
                         }
                     }
-                    event_target:espionage_target_country = {
-                        try_steal_resources = yes
-                    }
+                    try_steal_resources = yes
                     # We are exposed by the victim
                     country_event = {
                         id = aoe_espionage_actions.6
@@ -284,9 +295,7 @@ country_event = {
                     }
                 }
                 1 = {
-                    event_target:espionage_target_country = {
-                        try_steal_resources = yes
-                    }
+                    try_steal_resources = yes
                 }
             }
         }
@@ -305,8 +314,17 @@ country_event = {
     id = aoe_espionage_actions.5
     title = aoe_espionage_actions.5.title
     show_sound = event_conversation
+    diplomatic = yes
     is_triggered_only = yes
     location = event_target:espionage_target_planet
+
+    picture_event_data = {
+        portrait = event_target:espionage_origin_country
+        planet_background = event_target:espionage_origin_country
+        graphical_culture = event_target:espionage_origin_country
+        city_level = event_target:espionage_origin_country
+        room = event_target:espionage_origin_country.ruler
+    }
 
     # They are apologized
     desc = {
@@ -332,11 +350,11 @@ country_event = {
 
     # We can declare war
     option = {
-        name = "aoe_espionage_actions.6.a.name"
+        name = "aoe_espionage_actions.6.a"
         custom_tooltip = "aoe_espionage_actions.6.a.tooltip"
         trigger = {
-            event_target:espionage_origin_country = {
-                can_declare_war_to = yes
+            can_declare_espionage_war = {
+                TARGET = event_target:espionage_origin_country
             }
             is_pacifist = no
         }
@@ -432,7 +450,7 @@ country_event = {
 
     # We are xenophobe OR they not apologized
     option = {
-        name = "aoe_espionage_actions.6.b.name"
+        name = "aoe_espionage_actions.6.b"
         custom_tooltip = "aoe_espionage_actions.6.b.tooltip"
         trigger = {
             exists = event_target:espionage_origin_spy
@@ -486,7 +504,7 @@ country_event = {
 
     # We are xenophile OR they are apologized
     option = {
-        name = "aoe_espionage_actions.6.c.name"
+        name = "aoe_espionage_actions.6.c"
         custom_tooltip = "aoe_espionage_actions.6.c.tooltip"
         trigger = {
             OR = {
@@ -534,7 +552,7 @@ country_event = {
 
     # Another...
     option = {
-        name = "aoe_espionage_actions.6.d.name"
+        name = "aoe_espionage_actions.6.d"
         custom_tooltip = "aoe_espionage_actions.6.d.tooltip"
         trigger = {
             is_ai = yes
@@ -565,8 +583,8 @@ country_event = {
                 }
                 if = {
                     limit = {
-                        event_target:espionage_origin_country = {
-                            can_declare_war_to = yes
+                        can_declare_espionage_war = {
+                            TARGET = event_target:espionage_origin_country
                         }
                     }
                     declare_war = {
@@ -622,8 +640,8 @@ country_event = {
                                 category = fleet
                                 value >= equivalent
                             }
-                            event_target:espionage_origin_country = {
-                                can_declare_war_to = yes
+                            can_declare_espionage_war = {
+                                TARGET = event_target:espionage_origin_country
                             }
                         }
                         random_list = {
@@ -671,8 +689,8 @@ country_event = {
                                 category = fleet
                                 value < equivalent
                             }
-                            event_target:espionage_origin_country = {
-                                can_declare_war_to = yes
+                            can_declare_espionage_war = {
+                                TARGET = event_target:espionage_origin_country
                             }
                         }
                         random_list = {
@@ -813,8 +831,8 @@ country_event = {
                                 category = fleet
                                 value >= equivalent
                             }
-                            event_target:espionage_origin_country = {
-                                can_declare_war_to = yes
+                            can_declare_espionage_war = {
+                                TARGET = event_target:espionage_origin_country
                             }
                         }
                         random_list = {
@@ -862,8 +880,8 @@ country_event = {
                                 category = fleet
                                 value < equivalent
                             }
-                            event_target:espionage_origin_country = {
-                                can_declare_war_to = yes
+                            can_declare_espionage_war = {
+                                TARGET = event_target:espionage_origin_country
                             }
                         }
                         random_list = {
@@ -997,8 +1015,8 @@ country_event = {
                                 category = fleet
                                 value >= equivalent
                             }
-                            event_target:espionage_origin_country = {
-                                can_declare_war_to = yes
+                            can_declare_espionage_war = {
+                                TARGET = event_target:espionage_origin_country
                             }
                         }
                         random_list = {
@@ -1046,8 +1064,8 @@ country_event = {
                                 category = fleet
                                 value < equivalent
                             }
-                            event_target:espionage_origin_country = {
-                                can_declare_war_to = yes
+                            can_declare_espionage_war = {
+                                TARGET = event_target:espionage_origin_country
                             }
                         }
                         random_list = {
@@ -1150,7 +1168,6 @@ country_event = {
 country_event = {
     id = aoe_espionage_actions.6
     title = aoe_espionage_actions.6.title
-    desc = aoe_espionage_actions.6.desc
     show_sound = event_conversation
     is_triggered_only = yes
     diplomatic = yes
@@ -1385,7 +1402,7 @@ country_event = {
     }
 
     option = {
-        name = "aoe_espionage_actions.6.a.name"
+        name = "aoe_espionage_actions.6.a"
         custom_tooltip = "aoe_espionage_actions.6.a.tooltip"
         trigger = {
             is_militarist = yes
@@ -1404,7 +1421,7 @@ country_event = {
     }
 
     option = {
-        name = "aoe_espionage_actions.6.b.name"
+        name = "aoe_espionage_actions.6.b"
         custom_tooltip = "aoe_espionage_actions.6.b.tooltip"
         trigger = {
             is_authoritarian = yes
@@ -1423,7 +1440,7 @@ country_event = {
     }
 
     option = {
-        name = "aoe_espionage_actions.6.c.name"
+        name = "aoe_espionage_actions.6.c"
         custom_tooltip = "aoe_espionage_actions.6.c.tooltip"
         trigger = {
             is_xenophobe = yes
@@ -1442,7 +1459,7 @@ country_event = {
     }
 
     option = {
-        name = "aoe_espionage_actions.6.d.name"
+        name = "aoe_espionage_actions.6.d"
         custom_tooltip = "aoe_espionage_actions.6.d.tooltip"
         trigger = {
             NOR = {
@@ -1462,7 +1479,7 @@ country_event = {
     }
 
     option = {
-        name = "aoe_espionage_actions.6.e.name"
+        name = "aoe_espionage_actions.6.e"
         custom_tooltip = "aoe_espionage_actions.6.e.tooltip"
         trigger = {
             OR = {
@@ -1487,7 +1504,7 @@ country_event = {
     }
 
     option = {
-        name = "aoe_espionage_actions.6.f.name"
+        name = "aoe_espionage_actions.6.f"
         custom_tooltip = "aoe_espionage_actions.6.f.tooltip"
         trigger = {
             OR = {
@@ -1523,7 +1540,7 @@ country_event = {
     }
 
     option = {
-        name = "aoe_espionage_actions.6.g.name"
+        name = "aoe_espionage_actions.6.g"
         custom_tooltip = "aoe_espionage_actions.6.g.tooltip"
         trigger = {
             NOR = {
@@ -1548,7 +1565,7 @@ country_event = {
     }
 
     option = {
-        name = "aoe_espionage_actions.6.h.name"
+        name = "aoe_espionage_actions.6.h"
         custom_tooltip = "aoe_espionage_actions.6.h.tooltip"
         trigger = {
             NOR = {
