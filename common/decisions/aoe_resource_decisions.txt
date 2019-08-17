@@ -23,8 +23,9 @@ decision_planet_interstellar_research = {
             has_building = "building_observatory_1"
             has_building = "building_observatory_2"
         }
-        NOT = {
+        NOR = {
             has_modifier = "planet_interstellar_research"
+            is_attacked_planet = yes
         }
     }
 
