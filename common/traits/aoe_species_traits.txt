@@ -1625,3 +1625,143 @@ trait_xenomorphic_species = {
         weight = 100
     }
 }
+
+### Intelligence Traits
+
+trait_intelligencer_neophyte = {
+    icon = "gfx/interface/icons/traits/trait_intelligencer_neophyte.dds"
+
+    cost = 0
+    potential_crossbreeding_chance = 0.1
+    initial = no
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {}
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_INTELLIGENCER_NEOPHYTE_SPECIES_EFFECT
+
+    modifier = {
+        pop_happiness = 0.05
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_intelligencer_acolyte = {
+    icon = "gfx/interface/icons/traits/trait_intelligencer_acolyte.dds"
+
+    cost = 0
+    potential_crossbreeding_chance = 0.1
+    initial = no
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {
+        "trait_intelligencer_neophyte"
+    }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_INTELLIGENCER_ACOLYTE_SPECIES_EFFECT
+
+    modifier = {
+        pop_happiness = 0.1
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_intelligencer_adept = {
+    icon = "gfx/interface/icons/traits/trait_intelligencer_adept.dds"
+
+    cost = 0
+    potential_crossbreeding_chance = 0.1
+    initial = no
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {
+        "trait_intelligencer_neophyte"
+        "trait_intelligencer_acolyte"
+    }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_INTELLIGENCER_ADEPT_SPECIES_EFFECT
+
+    modifier = {
+        pop_happiness = 0.15
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_intelligencer_master = {
+    icon = "gfx/interface/icons/traits/trait_intelligencer_master.dds"
+
+    cost = 0
+    potential_crossbreeding_chance = 0.1
+    initial = no
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {
+        "trait_intelligencer_neophyte"
+        "trait_intelligencer_acolyte"
+        "trait_intelligencer_adept"
+    }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_INTELLIGENCER_MASTER_SPECIES_EFFECT
+
+    modifier = {
+        pop_happiness = 0.2
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_intelligencer_prophet = {
+    icon = "gfx/interface/icons/traits/trait_intelligencer_prophet.dds"
+
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    advanced_trait = no
+    improves_leaders = no
+    forced_happiness = no
+
+    opposites = {
+        "trait_intelligencer_neophyte"
+        "trait_intelligencer_acolyte"
+        "trait_intelligencer_adept"
+        "trait_intelligencer_master"
+    }
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_INTELLIGENCER_PROPHET_SPECIES_EFFECT
+
+    modifier = {
+        pop_happiness = 0.25
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}

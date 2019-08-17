@@ -1,3 +1,6 @@
+@cost_resource = 500
+@cost_influence = 10
+
 decision_planet_intelligencer_training = {
     owned_planets_only = yes
     sound = event_administrative_work
@@ -6,9 +9,9 @@ decision_planet_intelligencer_training = {
     resources = {
         category = decisions
         cost = {
-            energy = 500
-            minerals = 500
-            influence = 10
+            energy = @cost_resource
+            minerals = @cost_resource
+            influence = @cost_influence
         }
     }
 
@@ -31,7 +34,8 @@ decision_planet_intelligencer_training = {
         }
         NOR = {
             has_modifier = "planet_intelligencer_training"
-            has_orbital_bombardment = yes
+            is_attacked_planet = yes
+            is_captured_planet = yes
         }
         any_pop = {
             is_unassignment_intelligencer = yes
@@ -41,77 +45,8 @@ decision_planet_intelligencer_training = {
     effect = {
         custom_tooltip = decision_planet_intelligencer_training_effect
         hidden_effect = {
-            if = {
-                limit = {
-                    has_building = "building_intelligence_agency_1"
-                }
-                add_modifier = {
-                    modifier = "planet_intelligencer_training"
-                    days = 300
-                }
-                random_pop = {
-                    limit = {
-                        is_unassignment_intelligencer = yes
-                    }
-                    save_event_target_as = "espionage_origin_spy"
-                }
-                disengage_intelligencer = yes
-                save_event_target_as = "espionage_origin_planet"
-                owner = {
-                    save_event_target_as = "espionage_origin_country"
-                    country_event = {
-                        id = aoe_espionage_actions.2
-                        days = 200
-                        random = 90
-                    }
-                }
-            }
-            else_if = {
-                limit = {
-                    has_building = "building_intelligence_agency_2"
-                }
-                add_modifier = {
-                    modifier = "planet_intelligencer_training"
-                    days = 200
-                }
-                random_pop = {
-                    limit = {
-                        is_unassignment_intelligencer = yes
-                    }
-                    save_event_target_as = "espionage_origin_spy"
-                }
-                disengage_intelligencer = yes
-                save_event_target_as = "espionage_origin_planet"
-                owner = {
-                    save_event_target_as = "espionage_origin_country"
-                    country_event = {
-                        id = aoe_espionage_actions.2
-                        days = 120
-                        random = 70
-                    }
-                }
-            }
-            else = {
-                add_modifier = {
-                    modifier = "planet_intelligencer_training"
-                    days = 100
-                }
-                random_pop = {
-                    limit = {
-                        is_unassignment_intelligencer = yes
-                    }
-                    save_event_target_as = "espionage_origin_spy"
-                }
-                disengage_intelligencer = yes
-                save_event_target_as = "espionage_origin_planet"
-                owner = {
-                    save_event_target_as = "espionage_origin_country"
-                    country_event = {
-                        id = aoe_espionage_actions.2
-                        days = 60
-                        random = 30
-                    }
-                }
+            planet_event = {
+                id = aoe_espionage_actions.1
             }
         }
     }

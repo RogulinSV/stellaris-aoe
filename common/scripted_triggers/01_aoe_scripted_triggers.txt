@@ -728,6 +728,47 @@ is_intelligencer = {
 }
 
 # Scope: pop
+is_intelligencer_not_ranked = {
+    NOR = {
+        pop_has_trait = "trait_intelligencer_neophyte"
+        pop_has_trait = "trait_intelligencer_acolyte"
+        pop_has_trait = "trait_intelligencer_adept"
+        pop_has_trait = "trait_intelligencer_master"
+        pop_has_trait = "trait_intelligencer_prophet"
+    }
+}
+
+# Scope: pop
+is_intelligencer_top_ranked = {
+    pop_has_trait = "trait_intelligencer_prophet"
+}
+
+# Scope: pop
+is_intelligencer_has_rank_1 = {
+    pop_has_trait = "trait_intelligencer_neophyte"
+}
+
+# Scope: pop
+is_intelligencer_has_rank_2 = {
+    pop_has_trait = "trait_intelligencer_acolyte"
+}
+
+# Scope: pop
+is_intelligencer_has_rank_3 = {
+    pop_has_trait = "trait_intelligencer_adept"
+}
+
+# Scope: pop
+is_intelligencer_has_rank_4 = {
+    pop_has_trait = "trait_intelligencer_master"
+}
+
+# Scope: pop
+is_intelligencer_has_rank_5 = {
+    pop_has_trait = "trait_intelligencer_prophet"
+}
+
+# Scope: pop
 is_disengaged_intelligencer = {
     is_intelligencer = yes
     NOR = {
@@ -757,8 +798,11 @@ is_intelligencer_has_purpose_steal_technologies = {
 }
 
 # Scope: country
-possibly_affected_by_espionage = {
-    is_regular_country = yes
+is_subject_of_espionage = {
+    OR = {
+        is_regular_country = yes
+        is_fallen_empire = yes
+    }
     NOT = {
         is_same_value = event_target:espionage_origin_country
     }
@@ -768,29 +812,35 @@ possibly_affected_by_espionage = {
     }
 }
 
-can_declare_espionage_war = {
+# Scope: country
+has_espionage_ground = {
+    is_subject_of_espionage = yes
+    num_owned_planets > 0
+}
+
+is_possible_declare_espionage_war = {
     NOR = {
-        AND = {
+        event_target:espionage_origin_country = {
             OR = {
                 is_subject_type = "vassal"
                 is_subject_type = "protectorate"
                 is_subject_type = "signatory"
             }
             overlord = {
-                is_same_value = $TARGET$
-            }
-            NOT = {
-                is_at_war_with = $TARGET$
+                is_same_value = event_target:espionage_target_country
             }
         }
-        $TARGET$ = {
+        event_target:espionage_target_country = {
             has_policy_flag = "no_wars"
             OR = {
                 is_subject = no
                 overlord = {
-                    is_same_value = $TARGET$
+                    is_same_value = event_target:espionage_target_country
                 }
             }
+        }
+        event_target:espionage_target_country = {
+            is_at_war_with = event_target:espionage_origin_country
         }
     }
 }
@@ -836,4 +886,19 @@ is_regular_country = {
     #     is_guardian_country = yes
     # }
     is_country_type = default
+}
+
+# Scope: planet
+is_attacked_planet = {
+    OR = {
+        has_orbital_bombardment = yes
+        has_ground_combat = yes
+    }
+}
+
+# Scope: planet
+is_captured_planet = {
+    NOT = {
+        is_controlled_by = owner
+    }
 }

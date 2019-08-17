@@ -1,12 +1,14 @@
 engage_intelligencer_espionage_purpose_steal_resources = {
     event_target:espionage_origin_spy = {
         set_pop_flag = "espionage_purpose_steal_resources"
+        log = ">>> engage_intelligencer_espionage_purpose_steal_technologies effect: pop was engaged from stealing resources"
     }
 }
 
 engage_intelligencer_espionage_purpose_steal_technologies = {
     event_target:espionage_origin_spy = {
         set_pop_flag = "espionage_purpose_steal_technologies"
+        log = ">>> engage_intelligencer_espionage_purpose_steal_technologies effect: pop was engaged from stealing technologies"
     }
 }
 
@@ -17,12 +19,14 @@ disengage_intelligencer = {
                 has_pop_flag = "espionage_purpose_steal_resources"
             }
             remove_pop_flag = "espionage_purpose_steal_resources"
+            log = ">>> disengage_intelligencer effect: pop was disengaged from stealing resources"
         }
-        else_if = {
+        if = {
             limit = {
                 has_pop_flag = "espionage_purpose_steal_technologies"
             }
             remove_pop_flag = "espionage_purpose_steal_technologies"
+            log = ">>> disengage_intelligencer effect: pop was disengaged from stealing technologies"
         }
     }
 }
@@ -31,21 +35,22 @@ set_intelligencer_on_assignment = {
     event_target:espionage_origin_spy = {
         set_timed_pop_flag = {
             flag = "intelligencer_on_assignment"
-            days = $ARG1$
+            days = 10
         }
+        log = ">>> set_intelligencer_on_assignment effect: pop was assigned for espionage action"
     }
 }
 
-count_possibly_affected_by_espionage = {
+count_espionage_subjects = {
     event_target:espionage_origin_country = {
         set_variable = {
             which = "possibly_affected_by_espionage_counter"
-            value = 0
+            value = 1
         }
     }
     every_country = {
         limit = {
-            possibly_affected_by_espionage = yes
+            is_subject_of_espionage = yes
         }
         event_target:espionage_origin_country = {
             change_variable = {
@@ -54,20 +59,20 @@ count_possibly_affected_by_espionage = {
             }
         }
     }
+    log = ">>> count_espionage_subjects effect: countries [event_target:espionage_origin_country.possibly_affected_by_espionage_counter] was counted as possible espionage subject for [event_target:espionage_origin_country.GetName]"
 }
 
-# Scope: origin country
-search_espionage_victim = {
+find_espionage_subject = {
     random_country = {
         limit = {
-            possibly_affected_by_espionage = yes
+            is_subject_of_espionage = yes
         }
         set_timed_country_flag = {
             flag = espionage_target_country@event_target:espionage_origin_country
-            days = 5
+            days = 3
         }
         save_event_target_as = "espionage_target_country"
-        log = "search_espionage_victim_effect: country [This.GetName] selected as victim for epsionage"
+        log = ">>> find_espionage_subject effect: country [event_target:espionage_target_country.GetName] was selected as espionage subject for [event_target:espionage_origin_country.GetName]"
     }
 }
 
@@ -118,7 +123,7 @@ try_steal_resources = {
                 }
             }
             modifier = {
-                factor = 0
+                factor = 0.1
                 exists = event_target:espionage_target_planet
                 event_target:espionage_target_planet = {
                     count_pops = {
@@ -135,7 +140,6 @@ try_steal_resources = {
                     }
                 }
             }
-            log = "try_steal_resources_effect: nothing was stolen"
         }
         1 = {
             event_target:espionage_origin_country = {
@@ -151,16 +155,15 @@ try_steal_resources = {
                 }
                 create_message = {
                     type = MESSAGE_SPY_GAINED_MINERALS
-                    localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                    localization = MESSAGE_SPY_GAINED_MINERALS_MULT_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
-                    variable = { type = value localization = VALUE scope = event_target:espionage_origin_country.gained_by_espionage_value }
                 }
             }
-            log = "try_steal_resources_effect: monthly resource minerals mult was stolen"
+            log = ">>> try_steal_resources effect: monthly minerals mult was gained"
         }
         1 = {
             modifier = {
@@ -186,6 +189,53 @@ try_steal_resources = {
                     event_target:espionage_target_country = {
                         has_country_resource = {
                             type = minerals
+                            amount >= 200
+                        }
+                    }
+                }
+                event_target:espionage_target_country = {
+                    add_resource = {
+                        minerals = -200
+                    }
+                    set_variable = {
+                        which = "stolen_by_espionage_value"
+                        value = 200
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_STOLE_MINERALS
+                        localization = MESSAGE_SPY_STOLE_MINERALS_X200_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = ORIGIN_COUNTRY scope = event_target:espionage_origin_country }
+                        variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                        variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    }
+                }
+                event_target:espionage_origin_country = {
+                    add_resource = {
+                        minerals = 200
+                    }
+                    set_variable = {
+                        which = "gained_by_espionage_value"
+                        value = 200
+                    }
+                    create_message = {
+                        type = MESSAGE_SPY_GAINED_MINERALS
+                        localization = MESSAGE_SPY_GAINED_MINERALS_X200_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                        variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                        variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    }
+                }
+                log = ">>> try_steal_resources effect: 200 minerals was stolen"
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_target_country = {
+                        has_country_resource = {
+                            type = minerals
                             amount >= 100
                         }
                     }
@@ -200,13 +250,12 @@ try_steal_resources = {
                     }
                     create_message = {
                         type = MESSAGE_SPY_STOLE_MINERALS
-                        localization = MESSAGE_SPY_STOLE_MINERALS_LOCALISATION
+                        localization = MESSAGE_SPY_STOLE_MINERALS_X100_LOCALISATION
                         days = 30
                         target = this
                         variable = { type = name localization = ORIGIN_COUNTRY scope = event_target:espionage_origin_country }
                         variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                         variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
-                        variable = { type = value localization = VALUE scope = event_target:espionage_target_country.stolen_by_espionage_value }
                     }
                 }
                 event_target:espionage_origin_country = {
@@ -219,16 +268,15 @@ try_steal_resources = {
                     }
                     create_message = {
                         type = MESSAGE_SPY_GAINED_MINERALS
-                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        localization = MESSAGE_SPY_GAINED_MINERALS_X100_LOCALISATION
                         days = 30
                         target = this
                         variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                         variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                         variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
-                        variable = { type = value localization = VALUE scope = event_target:espionage_origin_country.gained_by_espionage_value }
                     }
                 }
-                log = "try_steal_resources_effect: resource minerals was stolen [event_target:espionage_origin_country.gained_by_espionage_value]"
+                log = ">>> try_steal_resources effect: 100 minerals was stolen"
             }
             else = {
                 event_target:espionage_origin_country = {
@@ -241,14 +289,14 @@ try_steal_resources = {
                     }
                     create_message = {
                         type = MESSAGE_SPY_GAINED_MINERALS
-                        localization = MESSAGE_SPY_GAINED_MINERALS_LOCALISATION
+                        localization = MESSAGE_SPY_GAINED_MINERALS_X50_LOCALISATION
                         days = 30
                         target = this
                         variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                         variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                         variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
-                        variable = { type = value localization = VALUE scope = event_target:espionage_origin_country.gained_by_espionage_value }
                     }
+                    log = ">>> try_steal_resources effect: 50 minerals was stolen"
                 }
             }
         }
@@ -257,5 +305,26 @@ try_steal_resources = {
 
 # Scope: origin country
 try_steal_technologies = {
-    
+    event_target:espionage_origin_country = {
+        set_variable = {
+            which = "gained_by_espionage_value"
+            value = 0
+        }
+    }
+    event_target:espionage_target_country = {
+        set_variable = {
+            which = "stolen_by_espionage_value"
+            value = 0
+        }
+    }
+    create_message = {
+        type = MESSAGE_SPY_GAINED_MINERALS
+        localization = MESSAGE_SPY_GAINED_MINERALS_X50_LOCALISATION
+        days = 30
+        target = this
+        variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+        variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+        variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+        variable = { type = variable localization = VALUE scope = event_target:espionage_origin_country.gained_by_espionage_value }
+    }
 }

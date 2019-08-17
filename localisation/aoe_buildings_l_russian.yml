@@ -259,6 +259,9 @@
     building_intelligence_agency_3:0 "Галактическое разведывательное агентство"
     building_intelligence_agency_3_desc:0 "Галактическое разведывательное агентство"
 
+    building_spy_memorial:0 "Мемориал павших шпионов"
+    building_spy_memorial_desc:0 "Мемориал павших шпионов"
+
     building_mithril_harvester:0 "Завод по выработке £mithril£ §R$mithril_genitive$§!"
     building_mithril_harvester_desc:0 "Завод по выработке £mithril£ §R$mithril_genitive$§!"
     mod_building_mithril_harvester_max:0 "$building_mithril_harvester$: максимум"

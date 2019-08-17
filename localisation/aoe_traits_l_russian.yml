@@ -191,3 +191,23 @@
 
     trait_xenomorphic_species:0 "Ксеноморфная среда обитания"
     trait_xenomorphic_species_desc:0 "Ксеноморфная среда обитания"
+
+    trait_intelligencer_neophyte:0 "Шпион в звании §Bновичок§!"
+    trait_intelligencer_neophyte_desc:0 "Шпион в звании §Bновичок§!"
+    TRAIT_INTELLIGENCER_NEOPHYTE_SPECIES_EFFECT:0 "Шпион в звании §Bновичок§!"
+
+    trait_intelligencer_acolyte:0 "Шпион в звании §Gпомощник§!"
+    trait_intelligencer_acolyte_desc:0 "Шпион в звании §Gпомощник§!"
+    TRAIT_INTELLIGENCER_ACOLYTE_SPECIES_EFFECT:0 "Шпион в звании §Gпомощник§!"
+
+    trait_intelligencer_adept:0 "Шпион в звании §Yадепт§!"
+    trait_intelligencer_adept_desc:0 "Шпион в звании §Yадепт§!"
+    TRAIT_INTELLIGENCER_ADEPT_SPECIES_EFFECT:0 "Шпион в звании §Yадепт§!"
+
+    trait_intelligencer_master:0 "Шпион в звании §Pмастер§!"
+    trait_intelligencer_master_desc:0 "Шпион в звании §Pмастер§!"
+    TRAIT_INTELLIGENCER_MASTER_SPECIES_EFFECT:0 "Шпион в звании §Pмастер§!"
+
+    trait_intelligencer_prophet:0 "Шпион в звании §Rмагистр§!"
+    trait_intelligencer_prophet_desc:0 "Шпион в звании §Rмагистр§!"
+    TRAIT_INTELLIGENCER_PROPHET_SPECIES_EFFECT:0 "Шпион в звании §Rмагистр§!"

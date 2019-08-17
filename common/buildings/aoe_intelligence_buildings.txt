@@ -101,6 +101,15 @@ building_intelligence_agency_1 = {
         }
     }
 
+    triggered_planet_modifier = {
+        potential = {
+            has_building = "building_spy_memorial"
+        }
+        modifier = {
+            job_intelligencer_add = 1
+        }
+    }
+
     triggered_desc = {
         trigger = {
             exists = owner
@@ -254,6 +263,15 @@ building_intelligence_agency_2 = {
         }
     }
 
+    triggered_planet_modifier = {
+        potential = {
+            has_building = "building_spy_memorial"
+        }
+        modifier = {
+            job_intelligencer_add = 1
+        }
+    }
+
     triggered_desc = {
         trigger = {
             exists = owner
@@ -403,6 +421,15 @@ building_intelligence_agency_3 = {
         }
     }
 
+    triggered_planet_modifier = {
+        potential = {
+            has_building = "building_spy_memorial"
+        }
+        modifier = {
+            job_intelligencer_add = 1
+        }
+    }
+
     triggered_desc = {
         trigger = {
             exists = owner
@@ -452,5 +479,43 @@ building_intelligence_agency_3 = {
 
     prerequisites = {
         "tech_universe_intelligence"
+    }
+}
+
+### Memorial of Fallen Spies
+
+building_spy_memorial = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    can_be_disabled = no
+    base_cap_amount = 1
+
+    potential = {
+        is_colonizeable_planet = yes
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+    }
+
+    allow = {
+        is_sovereign_colony = yes
+    }
+
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = yes
+                is_fallen_empire = yes
+            }
+        }
+    }
+
+    planet_modifier = {
+        planet_amenities_add = 5
     }
 }

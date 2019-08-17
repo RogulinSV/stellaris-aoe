@@ -54,40 +54,16 @@ country_event = {
         }
         country_event = {
             id = aoe_begin_actions.15
-            days = 2
+            days = 1
         }
-    }
-}
-
-country_event = {
-    id = aoe_begin_actions.2
-    hide_window = yes
-    is_triggered_only = yes
-
-    trigger = {
-        is_ai = no
-    }
-
-    immediate = {
-        country_event = {
-            id = aoe_begin_actions.11
-            days = 3
-        }
-        country_event = {
-            id = aoe_begin_actions.12
-            days = 4
-        }
-        country_event = {
-            id = aoe_begin_actions.13
-            days = 5
-        }
-        country_event = {
-            id = aoe_begin_actions.14
-            days = 6
-        }
-        country_event = {
-            id = aoe_begin_actions.15
-            days = 2
+        random_country = {
+            limit = {
+                NOR = {
+                    is_same_value = root
+                }
+                is_regular_country = yes
+            }
+            establish_communications_no_message = root
         }
     }
 }
@@ -195,10 +171,34 @@ country_event = {
         name = aoe_begin_actions.11.a
         custom_tooltip = aoe_begin_actions.11.a.tooltip
         add_resource = {
-            minerals = 2000
-            energy = 2000
+            minerals = 10000
+            energy = 10000
             food = 1000
             influence = 1000
+            mithril = 2000
+            orihalk = 2000
+            yuranic = 2000
+            adamantium = 2000
+            vibranium = 2000
+            cobaltium = 2000
+            itildeen = 2000
+            satramene = 2000
+            lirium = 2000
+            nevarrit = 2000
+            thiotimoline = 2000
+            unobtanium = 2000
+            stalgrim = 2000
+            tiberium = 2000
+            elerium = 2000
+            gravitoid = 2000
+            tylium = 2000
+            chalcolivan = 2000
+            terrigen = 2000
+            corenite = 2000
+            energon = 2000
+            engos = 2000
+            helium = 2000
+            kryptonite = 2000
         }
         hidden_effect = {
             capital_scope = {
@@ -208,6 +208,8 @@ country_event = {
                         species = owner_main_species
                     }
                 }
+                add_building = "building_intelligence_agency_1"
+                add_building = "building_observatory_1"
             }
         }
     }
@@ -313,7 +315,7 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-         add_research_option = "tech_deep_space_survey"
+         # add_research_option = "tech_deep_space_survey"
     }
 
     option = {
@@ -328,7 +330,17 @@ country_event = {
         custom_tooltip = aoe_begin_actions.13.b.tooltip
         hidden_effect = {
             set_country_flag = "flags_aoe_science_ascension"
-            # give_technology = { tech = "" }
+            give_technology = { tech = "tech_deep_space_survey" message = no }
+            give_technology = { tech = "tech_power_hub_3" message = no }
+            give_technology = { tech = "tech_basic_power_processing" message = no }
+            give_technology = { tech = "tech_planetary_influence" message = no }
+            give_technology = { tech = "tech_planetary_ceremonies" message = no }
+            give_technology = { tech = "tech_planetary_offence" message = no }
+            give_technology = { tech = "tech_planetary_defence" message = no }
+            give_technology = { tech = "tech_planetary_construction_1" message = no }
+            give_technology = { tech = "tech_planetary_construction_2" message = no }
+            give_technology = { tech = "tech_crime_reduction" message = no }
+            give_technology = { tech = "tech_interstellar_intelligence" message = no }
         }
     }
     option = {

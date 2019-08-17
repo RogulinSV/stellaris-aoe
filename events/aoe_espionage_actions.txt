@@ -1,13 +1,90 @@
 namespace = aoe_espionage_actions
 
+planet_event = {
+    id = aoe_espionage_actions.1
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        any_pop = {
+            is_unassignment_intelligencer = yes
+        }
+        NOT = {
+            has_modifier = "planet_intelligencer_training"
+        }
+    }
+
+    immediate = {
+        random_pop = {
+            limit = {
+                is_unassignment_intelligencer = yes
+            }
+            save_event_target_as = "espionage_origin_spy"
+        }
+        owner = {
+            save_event_target_as = "espionage_origin_country"
+        }
+        save_event_target_as = "espionage_origin_planet"
+
+        disengage_intelligencer = yes
+
+        if = {
+            limit = {
+                has_building = "building_intelligence_agency_1"
+            }
+            add_modifier = {
+                modifier = "planet_intelligencer_training"
+                days = 300
+            }
+            owner = {
+                country_event = {
+                    id = aoe_espionage_actions.2
+                    days = 200
+                    random = 90
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                has_building = "building_intelligence_agency_2"
+            }
+            add_modifier = {
+                modifier = "planet_intelligencer_training"
+                days = 200
+            }
+            owner = {
+                country_event = {
+                    id = aoe_espionage_actions.2
+                    days = 130
+                    random = 60
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                has_building = "building_intelligence_agency_3"
+            }
+            add_modifier = {
+                modifier = "planet_intelligencer_training"
+                days = 100
+            }
+            owner = {
+                country_event = {
+                    id = aoe_espionage_actions.2
+                    days = 60
+                    random = 30
+                }
+            }
+        }
+    }
+}
+
 country_event = {
     id = aoe_espionage_actions.2
     title = aoe_espionage_actions.2.title
-    desc = aoe_espionage_actions.2.desc
-    show_sound = event_conversation
+    show_sound = event_administrative_work
     is_triggered_only = yes
     diplomatic = yes
-    location = event_target:espionage_origin_planet
 
     picture_event_data = {
         portrait = root
@@ -15,6 +92,60 @@ country_event = {
         graphical_culture = root
         city_level = root
         room = root.ruler
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_not_ranked = yes
+            }
+        }
+        text = aoe_espionage_actions.2.desc_01
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_1 = yes
+            }
+        }
+        text = aoe_espionage_actions.2.desc_02
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_2 = yes
+            }
+        }
+        text = aoe_espionage_actions.2.desc_03
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_3 = yes
+            }
+        }
+        text = aoe_espionage_actions.2.desc_04
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_4 = yes
+            }
+        }
+        text = aoe_espionage_actions.2.desc_05
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_5 = yes
+            }
+        }
+        text = aoe_espionage_actions.2.desc_06
     }
 
     trigger = {
@@ -34,7 +165,7 @@ country_event = {
             is_disengaged_intelligencer = yes
         }
         any_country = {
-            possibly_affected_by_espionage = yes
+            is_subject_of_espionage = yes
         }
     }
 
@@ -52,20 +183,9 @@ country_event = {
         }
         hidden_effect = {
             engage_intelligencer_espionage_purpose_steal_resources = yes
-            search_espionage_victim = yes
+            find_espionage_subject = yes
             country_event = {
                 id = aoe_espionage_actions.3
-            }
-            if = {
-                limit = {
-                    event_target:espionage_origin_spy = {
-                        has_pop_flag = "espionage_purpose_steal_resources"
-                    }
-                }
-                log = "aoe_espionage_actions.2: spy got purpose steal resources"
-            }
-            else = {
-                log = "aoe_espionage_actions.2: ERROR spy got purpose steal resources"
             }
         }
     }
@@ -84,12 +204,13 @@ country_event = {
         }
         hidden_effect = {
             engage_intelligencer_espionage_purpose_steal_technologies = yes
-            search_espionage_victim = yes
+            find_espionage_subject = yes
             country_event = {
                 id = aoe_espionage_actions.3
             }
         }
     }
+
     option = {
         name = "aoe_espionage_actions.2.z"
         custom_tooltip = "aoe_espionage_actions.2.z.tooltip"
@@ -100,10 +221,9 @@ country_event = {
     id = aoe_espionage_actions.3
     title = aoe_espionage_actions.3.title
     desc = aoe_espionage_actions.3.desc
-    show_sound = event_conversation
+    show_sound = event_scanner
     is_triggered_only = yes
     diplomatic = yes
-    location = event_target:espionage_origin_planet
 
     picture_event_data = {
         portrait = event_target:espionage_target_country
@@ -133,7 +253,7 @@ country_event = {
     }
 
     immediate = {
-        count_possibly_affected_by_espionage = yes
+        count_espionage_subjects = yes
     }
 
     option = {
@@ -145,23 +265,12 @@ country_event = {
             }
         }
         hidden_effect = {
-            set_intelligencer_on_assignment = { ARG1 = 10 }
+            set_intelligencer_on_assignment = yes
             event_target:espionage_origin_country = {
                 country_event = {
                     id = aoe_espionage_actions.4
-                    days = 3
+                    days = 6
                 }
-            }
-            if = {
-                limit = {
-                    event_target:espionage_origin_spy = {
-                        has_pop_flag = "intelligencer_on_assignment"
-                    }
-                }
-                log = "aoe_espionage_actions.3: spy got assignment"
-            }
-            else = {
-                log = "aoe_espionage_actions.3: ERROR spy got assignment"
             }
         }
     }
@@ -175,23 +284,12 @@ country_event = {
             }
         }
         hidden_effect = {
-            set_intelligencer_on_assignment = { ARG1 = 10 }
+            set_intelligencer_on_assignment = yes
             event_target:espionage_origin_country = {
                 country_event = {
                     id = aoe_espionage_actions.4
-                    days = 2
+                    days = 5
                 }
-            }
-            if = {
-                limit = {
-                    event_target:espionage_origin_spy = {
-                        has_pop_flag = "intelligencer_on_assignment"
-                    }
-                }
-                log = "aoe_espionage_actions.3: spy got assignment"
-            }
-            else = {
-                log = "aoe_espionage_actions.3: ERROR spy got assignment"
             }
         }
     }
@@ -205,11 +303,11 @@ country_event = {
             }
         }
         hidden_effect = {
-            set_intelligencer_on_assignment = { ARG1 = 10 }
+            set_intelligencer_on_assignment = yes
             event_target:espionage_origin_country = {
                 country_event = {
                     id = aoe_espionage_actions.4
-                    days = 1
+                    days = 4
                 }
             }
         }
@@ -220,11 +318,11 @@ country_event = {
         custom_tooltip = "aoe_espionage_actions.3.d.tooltip"
         trigger = {
             any_country = {
-                possibly_affected_by_espionage = yes
+                is_subject_of_espionage = yes
             }
         }
         hidden_effect = {
-            search_espionage_victim = yes
+            find_espionage_subject = yes
             country_event = {
                 id = aoe_espionage_actions.3
             }
@@ -234,6 +332,25 @@ country_event = {
     option = {
         name = "aoe_espionage_actions.3.e"
         custom_tooltip = "aoe_espionage_actions.3.e.tooltip"
+    }
+
+    after = {
+        if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_unassignment_intelligencer = yes
+                }
+            }
+            log = "espionage_actions.3: ERROR! spy not assigned"
+        }
+        if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_disengaged_intelligencer = yes
+                }
+            }
+            log = "espionage_actions.3: ERROR! spy not engaged"
+        }
     }
 }
 
@@ -256,12 +373,21 @@ country_event = {
             is_unassignment_intelligencer = no
             is_disengaged_intelligencer = no
         }
+        event_target:espionage_target_country = {
+            has_espionage_ground = yes
+        }
     }
 
     immediate = {
+        log = ">>> espionage_actions.4: [This.GetName] has begun espionage action for subject [event_target:espionage_target_country.GetName]"
         event_target:espionage_target_country = {
             random_owned_planet = {
                 save_event_target_as = "espionage_target_planet"
+                set_timed_planet_flag = {
+                    flag = "espionage_target_planet"
+                    days = 300
+                }
+                log = ">>> espionage_actions.4: [Prev.GetName] chose the planet [This.GetName] for espionage action"
             }
         }
         if = {
@@ -271,18 +397,59 @@ country_event = {
                 }
             }
             random_list = {
-                1 = {
+                100 = {
                     modifier = {
-                        factor = 3
+                        factor = 1.05
                         event_target:espionage_target_planet = {
                             any_pop = {
                                 is_intelligencer_has_purpose_steal_resources = yes
                                 is_unassignment_intelligencer = yes
+                                is_intelligencer_has_rank_1 = yes
                             }
                         }
                     }
                     modifier = {
-                        factor = 1000
+                        factor = 1.1
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_steal_resources = yes
+                                is_unassignment_intelligencer = yes
+                                is_intelligencer_has_rank_2 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1.15
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_steal_resources = yes
+                                is_unassignment_intelligencer = yes
+                                is_intelligencer_has_rank_3 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1.2
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_steal_resources = yes
+                                is_unassignment_intelligencer = yes
+                                is_intelligencer_has_rank_4 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_steal_resources = yes
+                                is_unassignment_intelligencer = yes
+                                is_intelligencer_has_rank_5 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 5
                         event_target:espionage_target_country = {
                             is_fallen_empire = yes
                         }
@@ -293,9 +460,57 @@ country_event = {
                         id = aoe_espionage_actions.6
                         days = 1
                     }
+                    log = ">>> espionage_actions.4: [This.GetName] stole resources but was exposed"
                 }
-                1 = {
+                80 = {
+                    modifier = {
+                        factor = 1.1
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_1 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.2
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_2 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.3
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_3 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.4
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_4 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.5
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_5 = yes
+                        }
+                    }
                     try_steal_resources = yes
+                    log = ">>> espionage_actions.4: [This.GetName] stole resources"
+                }
+                20 = {
+                    modifier = {
+                        factor = 0
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_top_ranked = yes
+                        }
+                    }
+                    try_steal_resources = yes
+                    # Promote spy
+                    country_event = {
+                        id = aoe_espionage_actions.11
+                        days = 5
+                        random = 4
+                    }
+                    log = ">>> espionage_actions.4: [This.GetName] stole resources and will be promoted"
                 }
             }
         }
@@ -313,10 +528,9 @@ country_event = {
 country_event = {
     id = aoe_espionage_actions.5
     title = aoe_espionage_actions.5.title
-    show_sound = event_conversation
+    show_sound = event_red_alert
     diplomatic = yes
     is_triggered_only = yes
-    location = event_target:espionage_target_planet
 
     picture_event_data = {
         portrait = event_target:espionage_origin_country
@@ -346,16 +560,15 @@ country_event = {
 
     trigger = {
         exists = event_target:espionage_origin_country
+        exists = event_target:espionage_origin_spy
     }
 
     # We can declare war
     option = {
-        name = "aoe_espionage_actions.6.a"
-        custom_tooltip = "aoe_espionage_actions.6.a.tooltip"
+        name = "aoe_espionage_actions.5.a"
+        custom_tooltip = "aoe_espionage_actions.5.a.tooltip"
         trigger = {
-            can_declare_espionage_war = {
-                TARGET = event_target:espionage_origin_country
-            }
+            is_possible_declare_espionage_war = yes
             is_pacifist = no
         }
         ai_chance = {
@@ -424,7 +637,7 @@ country_event = {
         }
         hidden_effect = {
             random_list = {
-                50 = {
+                100 = {
                     modifier = {
                         factor = 0
                         NOT = {
@@ -436,11 +649,49 @@ country_event = {
                         is_xenophobe = yes
                     }
                     modifier = {
-                        factor = 0.1
+                        factor = 0.2
                         is_xenophile = yes
                     }
-                    event_target:espionage_origin_spy = {
-                        kill_pop = yes
+                    modifier = {
+                        factor = 0.9
+                        exists = event_target:espionage_origin_spy
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_1 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.8
+                        exists = event_target:espionage_origin_spy
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_2 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.7
+                        exists = event_target:espionage_origin_spy
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_3 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.6
+                        exists = event_target:espionage_origin_spy
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_4 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        exists = event_target:espionage_origin_spy
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_5 = yes
+                        }
+                    }
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.7
+                            days = 1
+                        }
                     }
                 }
                 50 = {}
@@ -450,8 +701,8 @@ country_event = {
 
     # We are xenophobe OR they not apologized
     option = {
-        name = "aoe_espionage_actions.6.b"
-        custom_tooltip = "aoe_espionage_actions.6.b.tooltip"
+        name = "aoe_espionage_actions.5.b"
+        custom_tooltip = "aoe_espionage_actions.5.b.tooltip"
         trigger = {
             exists = event_target:espionage_origin_spy
             OR = {
@@ -497,8 +748,48 @@ country_event = {
             who = event_target:espionage_origin_country
             modifier = opinion_discarded
         }
-        event_target:espionage_origin_spy = {
-            kill_pop = yes
+        hidden_effect = {
+            random_list = {
+                100 = {
+                    modifier = {
+                        factor = 0.9
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_1 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.8
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_2 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.7
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_3 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.6
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_4 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_5 = yes
+                        }
+                    }
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.7
+                            days = 1
+                        }
+                    }
+                }
+                50 = {}
+            }
         }
     }
 
@@ -561,6 +852,7 @@ country_event = {
             factor = 100
         }
         hidden_effect = {
+            log = "aoe_espionage_actions.6: [Root.GetName] call random to [event_target:espionage_origin_country.GetName]"
             if = {
                 # We are fallen empire
                 limit = {
@@ -583,9 +875,7 @@ country_event = {
                 }
                 if = {
                     limit = {
-                        can_declare_espionage_war = {
-                            TARGET = event_target:espionage_origin_country
-                        }
+                        is_possible_declare_espionage_war = yes
                     }
                     declare_war = {
                         target = event_target:espionage_origin_country
@@ -640,9 +930,7 @@ country_event = {
                                 category = fleet
                                 value >= equivalent
                             }
-                            can_declare_espionage_war = {
-                                TARGET = event_target:espionage_origin_country
-                            }
+                            is_possible_declare_espionage_war = yes
                         }
                         random_list = {
                             30 = {
@@ -653,27 +941,105 @@ country_event = {
                                 }
                             }
                             20 = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
                                 declare_war = {
                                     target = event_target:espionage_origin_country
                                     name = "NAME_Holy_World_War"
                                     attacker_war_goal = wg_absorption
                                 }
-                                if = {
-                                    limit = {
-                                        exists = event_target:espionage_origin_spy
-                                    }
-                                    event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
                             30 = {
-                                if = {
-                                    limit = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
                                         exists = event_target:espionage_origin_spy
                                     }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
                                     event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
@@ -689,9 +1055,7 @@ country_event = {
                                 category = fleet
                                 value < equivalent
                             }
-                            can_declare_espionage_war = {
-                                TARGET = event_target:espionage_origin_country
-                            }
+                            is_possible_declare_espionage_war = yes
                         }
                         random_list = {
                             10 = {
@@ -702,27 +1066,105 @@ country_event = {
                                 }
                             }
                             5 = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
                                 declare_war = {
                                     target = event_target:espionage_origin_country
                                     name = "NAME_Holy_World_War"
                                     attacker_war_goal = wg_absorption
                                 }
-                                if = {
-                                    limit = {
-                                        exists = event_target:espionage_origin_spy
-                                    }
-                                    event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
                             50 = {
-                                if = {
-                                    limit = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
                                         exists = event_target:espionage_origin_spy
                                     }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
                                     event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
@@ -733,12 +1175,51 @@ country_event = {
                         # They are at war with us
                         random_list = {
                             50 = {
-                                if = {
-                                    limit = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
                                         exists = event_target:espionage_origin_spy
                                     }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
                                     event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
@@ -773,12 +1254,51 @@ country_event = {
                     }
                     random_list = {
                         30 = {
-                            if = {
-                                limit = {
+                            modifier = {
+                                factor = 0
+                                NOT = {
                                     exists = event_target:espionage_origin_spy
                                 }
+                            }
+                            modifier = {
+                                factor = 0.9
+                                exists = event_target:espionage_origin_spy
                                 event_target:espionage_origin_spy = {
-                                    kill_pop = yes
+                                    is_intelligencer_has_rank_1 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.8
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_2 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.7
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_3 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.6
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_4 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.5
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_5 = yes
+                                }
+                            }
+                            event_target:espionage_origin_country = {
+                                country_event = {
+                                    id = aoe_espionage_actions.7
+                                    days = 1
                                 }
                             }
                         }
@@ -831,9 +1351,7 @@ country_event = {
                                 category = fleet
                                 value >= equivalent
                             }
-                            can_declare_espionage_war = {
-                                TARGET = event_target:espionage_origin_country
-                            }
+                            is_possible_declare_espionage_war = yes
                         }
                         random_list = {
                             10 = {
@@ -844,27 +1362,105 @@ country_event = {
                                 }
                             }
                             10 = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
                                 declare_war = {
                                     target = event_target:espionage_origin_country
                                     name = "NAME_Holy_World_War"
                                     attacker_war_goal = wg_assimilation
                                 }
-                                if = {
-                                    limit = {
-                                        exists = event_target:espionage_origin_spy
-                                    }
-                                    event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
                             30 = {
-                                if = {
-                                    limit = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
                                         exists = event_target:espionage_origin_spy
                                     }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
                                     event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
@@ -880,9 +1476,7 @@ country_event = {
                                 category = fleet
                                 value < equivalent
                             }
-                            can_declare_espionage_war = {
-                                TARGET = event_target:espionage_origin_country
-                            }
+                            is_possible_declare_espionage_war = yes
                         }
                         random_list = {
                             5 = {
@@ -893,27 +1487,105 @@ country_event = {
                                 }
                             }
                             5 = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
                                 declare_war = {
                                     target = event_target:espionage_origin_country
                                     name = "NAME_Holy_World_War"
                                     attacker_war_goal = wg_assimilation
                                 }
-                                if = {
-                                    limit = {
-                                        exists = event_target:espionage_origin_spy
-                                    }
-                                    event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
                             30 = {
-                                if = {
-                                    limit = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
                                         exists = event_target:espionage_origin_spy
                                     }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
                                     event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
@@ -924,12 +1596,51 @@ country_event = {
                         # They are at war with us
                         random_list = {
                             30 = {
-                                if = {
-                                    limit = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
                                         exists = event_target:espionage_origin_spy
                                     }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
                                     event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
@@ -964,12 +1675,51 @@ country_event = {
                     }
                     random_list = {
                         20 = {
-                            if = {
-                                limit = {
+                            modifier = {
+                                factor = 0
+                                NOT = {
                                     exists = event_target:espionage_origin_spy
                                 }
+                            }
+                            modifier = {
+                                factor = 0.9
+                                exists = event_target:espionage_origin_spy
                                 event_target:espionage_origin_spy = {
-                                    kill_pop = yes
+                                    is_intelligencer_has_rank_1 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.8
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_2 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.7
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_3 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.6
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_4 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.5
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_5 = yes
+                                }
+                            }
+                            event_target:espionage_origin_country = {
+                                country_event = {
+                                    id = aoe_espionage_actions.7
+                                    days = 1
                                 }
                             }
                         }
@@ -1015,9 +1765,7 @@ country_event = {
                                 category = fleet
                                 value >= equivalent
                             }
-                            can_declare_espionage_war = {
-                                TARGET = event_target:espionage_origin_country
-                            }
+                            is_possible_declare_espionage_war = yes
                         }
                         random_list = {
                             10 = {
@@ -1028,27 +1776,105 @@ country_event = {
                                 }
                             }
                             10 = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
                                 declare_war = {
                                     target = event_target:espionage_origin_country
                                     name = "NAME_Holy_World_War"
                                     attacker_war_goal = wg_subjugation
                                 }
-                                if = {
-                                    limit = {
-                                        exists = event_target:espionage_origin_spy
-                                    }
-                                    event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
                             50 = {
-                                if = {
-                                    limit = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
                                         exists = event_target:espionage_origin_spy
                                     }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
                                     event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
@@ -1064,9 +1890,7 @@ country_event = {
                                 category = fleet
                                 value < equivalent
                             }
-                            can_declare_espionage_war = {
-                                TARGET = event_target:espionage_origin_country
-                            }
+                            is_possible_declare_espionage_war = yes
                         }
                         random_list = {
                             8 = {
@@ -1077,27 +1901,105 @@ country_event = {
                                 }
                             }
                             7 = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
+                                        exists = event_target:espionage_origin_spy
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
                                 declare_war = {
                                     target = event_target:espionage_origin_country
                                     name = "NAME_Holy_World_War"
                                     attacker_war_goal = wg_subjugation
                                 }
-                                if = {
-                                    limit = {
-                                        exists = event_target:espionage_origin_spy
-                                    }
-                                    event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
                             50 = {
-                                if = {
-                                    limit = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
                                         exists = event_target:espionage_origin_spy
                                     }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
                                     event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
@@ -1108,12 +2010,51 @@ country_event = {
                         # They are at war with us
                         random_list = {
                             50 = {
-                                if = {
-                                    limit = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
                                         exists = event_target:espionage_origin_spy
                                     }
+                                }
+                                modifier = {
+                                    factor = 0.9
+                                    exists = event_target:espionage_origin_spy
                                     event_target:espionage_origin_spy = {
-                                        kill_pop = yes
+                                        is_intelligencer_has_rank_1 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.8
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_2 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.7
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_3 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.6
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_4 = yes
+                                    }
+                                }
+                                modifier = {
+                                    factor = 0.5
+                                    exists = event_target:espionage_origin_spy
+                                    event_target:espionage_origin_spy = {
+                                        is_intelligencer_has_rank_5 = yes
+                                    }
+                                }
+                                event_target:espionage_origin_country = {
+                                    country_event = {
+                                        id = aoe_espionage_actions.7
+                                        days = 1
                                     }
                                 }
                             }
@@ -1148,12 +2089,51 @@ country_event = {
                     }
                     random_list = {
                         50 = {
-                            if = {
-                                limit = {
+                            modifier = {
+                                factor = 0
+                                NOT = {
                                     exists = event_target:espionage_origin_spy
                                 }
+                            }
+                            modifier = {
+                                factor = 0.9
+                                exists = event_target:espionage_origin_spy
                                 event_target:espionage_origin_spy = {
-                                    kill_pop = yes
+                                    is_intelligencer_has_rank_1 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.8
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_2 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.7
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_3 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.6
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_4 = yes
+                                }
+                            }
+                            modifier = {
+                                factor = 0.5
+                                exists = event_target:espionage_origin_spy
+                                event_target:espionage_origin_spy = {
+                                    is_intelligencer_has_rank_5 = yes
+                                }
+                            }
+                            event_target:espionage_origin_country = {
+                                country_event = {
+                                    id = aoe_espionage_actions.7
+                                    days = 1
                                 }
                             }
                         }
@@ -1595,5 +2575,220 @@ country_event = {
                 days = 1
             }
         }
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.7
+    title = aoe_espionage_actions.7.title
+    desc = aoe_espionage_actions.7.desc
+    picture = GFX_aoe_espionage_kill_spy
+    show_sound = event_conversation
+    is_triggered_only = yes
+    hide_window = no
+    location = event_target:espionage_origin_planet
+
+    trigger = {
+        exists = event_target:espionage_origin_planet
+        exists = event_target:espionage_origin_spy
+    }
+
+    immediate = {
+        event_target:espionage_origin_spy = {
+            kill_pop = yes
+        }
+        event_target:espionage_origin_planet = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "spies_was_killed_counter"
+                        value < 1
+                    }
+                }
+                set_variable = {
+                    which = "spies_was_killed_counter"
+                    value = 1
+                }
+            }
+            else = {
+                change_variable = {
+                    which = "spies_was_killed_counter"
+                    value = 1
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.7.a"
+        custom_tooltip = "aoe_espionage_actions.7.a.tooltip"
+        event_target:espionage_origin_planet = {
+            every_pop = {
+                limit = {
+                    is_intelligencer = yes
+                }
+                add_modifier = {
+                    modifier = "pop_recently_conquered"
+                    days = 300
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.7.b"
+        custom_tooltip = "aoe_espionage_actions.7.b.tooltip"
+        trigger = {
+            event_target:espionage_origin_planet = {
+                check_variable = {
+                    which = "spies_was_killed_counter"
+                    value > 4
+                }
+                NOT = {
+                    has_building = "building_spy_memorial"
+                }
+                free_building_slots > 0
+            }
+            has_country_resource = {
+                type = minerals
+                amount > 500
+            }
+        }
+        add_resource = {
+            minerals = -500
+        }
+        event_target:espionage_origin_planet = {
+            add_building = "building_spy_memorial"
+        }
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.11
+    title = aoe_espionage_actions.11.title
+    picture = GFX_aoe_espionage_promote_spy
+    show_sound = event_conversation
+    is_triggered_only = yes
+    hide_window = no
+    location = event_target:espionage_origin_planet
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_not_ranked = yes
+            }
+        }
+        text = aoe_espionage_actions.11.desc_01
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_1 = yes
+            }
+        }
+        text = aoe_espionage_actions.11.desc_02
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_2 = yes
+            }
+        }
+        text = aoe_espionage_actions.11.desc_03
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_3 = yes
+            }
+        }
+        text = aoe_espionage_actions.11.desc_04
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_4 = yes
+            }
+        }
+        text = aoe_espionage_actions.11.desc_05
+    }
+
+    trigger = {
+        exists = event_target:espionage_origin_planet
+        exists = event_target:espionage_origin_spy
+        event_target:espionage_origin_spy = {
+            is_intelligencer_top_ranked = no
+        }
+    }
+
+    immediate = {
+        event_target:espionage_origin_spy = {
+            if = {
+                limit = {
+                    NOR = {
+                        pop_has_trait = "trait_intelligencer_neophyte"
+                        pop_has_trait = "trait_intelligencer_acolyte"
+                        pop_has_trait = "trait_intelligencer_adept"
+                        pop_has_trait = "trait_intelligencer_master"
+                        pop_has_trait = "trait_intelligencer_prophet"
+                    }
+                }
+                add_trait = "trait_intelligencer_neophyte"
+            }
+            else_if = {
+                limit = {
+                    pop_has_trait = "trait_intelligencer_neophyte"
+                    NOR = {
+                        pop_has_trait = "trait_intelligencer_acolyte"
+                        pop_has_trait = "trait_intelligencer_adept"
+                        pop_has_trait = "trait_intelligencer_master"
+                        pop_has_trait = "trait_intelligencer_prophet"
+                    }
+                }
+                remove_trait = "trait_intelligencer_neophyte"
+                add_trait = "trait_intelligencer_acolyte"
+            }
+            else_if = {
+                limit = {
+                    pop_has_trait = "trait_intelligencer_acolyte"
+                    NOR = {
+                        pop_has_trait = "trait_intelligencer_adept"
+                        pop_has_trait = "trait_intelligencer_master"
+                        pop_has_trait = "trait_intelligencer_prophet"
+                    }
+                }
+                remove_trait = "trait_intelligencer_acolyte"
+                add_trait = "trait_intelligencer_adept"
+            }
+            else_if = {
+                limit = {
+                    pop_has_trait = "trait_intelligencer_adept"
+                    NOR = {
+                        pop_has_trait = "trait_intelligencer_master"
+                        pop_has_trait = "trait_intelligencer_prophet"
+                    }
+                }
+                remove_trait = "trait_intelligencer_adept"
+                add_trait = "trait_intelligencer_master"
+            }
+            else_if = {
+                limit = {
+                    pop_has_trait = "trait_intelligencer_master"
+                    NOT = {
+                        pop_has_trait = "trait_intelligencer_prophet"
+                    }
+                }
+                remove_trait = "trait_intelligencer_master"
+                add_trait = "trait_intelligencer_prophet"
+            }
+        }
+    }
+
+    option = {
+        name = OK
     }
 }
