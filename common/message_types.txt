@@ -1571,6 +1571,36 @@ message_type = {
 ### Patch
 
 message_type = {
+    key = "MESSAGE_SPY_NONE_GAINED"
+    icon = "GFX_message_spy_stole_nothing"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_NONE_GAINED_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_red"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_FOOD"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_FOOD_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_FOOD"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_FOOD_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
     key = "MESSAGE_SPY_STOLE_MINERALS"
     icon = "GFX_message_spy_stole_minerals"
     icon_frame = 1
@@ -1606,6 +1636,66 @@ message_type = {
     icon_frame = 1
 
     name = "MESSAGE_SPY_GAINED_ENERGY_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_ALLOYS"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_ALLOYS_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_ALLOYS"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_ALLOYS_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_CONSUMER_GOODS"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_CONSUMER_GOODS_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_CONSUMER_GOODS"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_CONSUMER_GOODS_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_VOLATILE_MOTES"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_VOLATILE_MOTES_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_VOLATILE_MOTES"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_VOLATILE_MOTES_TITLE"
     sound = "diplomatic_notification"
     ping = "ping_notification_yellow"
 }

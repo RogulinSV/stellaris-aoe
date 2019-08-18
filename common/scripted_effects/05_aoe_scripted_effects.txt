@@ -1,0 +1,2282 @@
+# Scope: country
+try_steal_technologies = {
+    event_target:espionage_origin_country = {
+        set_variable = {
+            which = "gained_by_espionage_value"
+            value = 0
+        }
+    }
+    event_target:espionage_target_country = {
+        set_variable = {
+            which = "stolen_by_espionage_value"
+            value = 0
+        }
+    }
+    random_list = {
+        # Nothing stolen...
+        10 = {
+            modifier = {
+                factor = 1.05
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_steal_technologies = yes
+                        is_unassignment_intelligencer = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 1.1
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_steal_technologies = yes
+                        is_unassignment_intelligencer = yes
+                        is_intelligencer_has_rank_1 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 1.2
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_steal_technologies = yes
+                        is_unassignment_intelligencer = yes
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 1.3
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_steal_technologies = yes
+                        is_unassignment_intelligencer = yes
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 1.4
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_steal_technologies = yes
+                        is_unassignment_intelligencer = yes
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 1.5
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_steal_technologies = yes
+                        is_unassignment_intelligencer = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_target_country = {
+                    is_fallen_empire = yes
+                }
+            }
+            modifier = {
+                factor = 0.25
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        any_pop = {
+                            is_intelligencer = yes
+                        }
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_NONE_GAINED
+                    localization = MESSAGE_SPY_NONE_GAINED_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: nothing was gained"
+        }
+        # Stolen physics_research mult
+        10 = {
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = physics_research
+                    value = @tier1researchreward
+                    min = @tier1researchmin
+                    max = @tier1researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier1researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly physics_research mult was gained"
+        }
+        # Stolen physics_research mult 2x
+        10 = {
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value > equivalent
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = physics_research
+                    value = @tier2researchreward
+                    min = @tier2researchmin
+                    max = @tier2researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier2researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly physics_research 2x mult was gained"
+        }
+        # Stolen physics_research mult 3x
+        10 = {
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = physics_research
+                    value = @tier3researchreward
+                    min = @tier3researchmin
+                    max = @tier3researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier3researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly physics_research 3x mult was gained"
+        }
+        # Stolen physics_research mult 4x
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value > superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 2.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value < equivalent
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = physics_research
+                    value = @tier4researchreward
+                    min = @tier4researchmin
+                    max = @tier4researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier4researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly physics_research 4x mult was gained"
+        }
+        # Stolen physics_research mult 5x
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 2.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = physics_research
+                    value = @tier5researchreward
+                    min = @tier5researchmin
+                    max = @tier5researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier5researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly physics_research 5x mult was gained"
+        }
+        # Slolen 250 physics_research
+        5 = {
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    physics_research = 250
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 250
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_X250_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 250 physics_research was stolen"
+        }
+        # Slolen 500 physics_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    physics_research = 500
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 500
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_X500_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 500 physics_research was stolen"
+        }
+        # Slolen 750 physics_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    physics_research = 750
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 750
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_X750_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 750 physics_research was stolen"
+        }
+        # Slolen 1000 physics_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    physics_research = 1000
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 1000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_X1000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 1000 physics_research was stolen"
+        }
+        # Slolen 1500 physics_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    physics_research = 1500
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 1500
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_X1500_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 1500 physics_research was stolen"
+        }
+        # Slolen 2000 physics_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    physics_research = 2000
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 2000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_X2000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 2000 physics_research was stolen"
+        }
+        # Stolen society_research mult
+        10 = {
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier1researchreward
+                    min = @tier1researchmin
+                    max = @tier1researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier1researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly society_research mult was gained"
+        }
+        # Stolen society_research mult 2x
+        10 = {
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value > equivalent
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier2researchreward
+                    min = @tier2researchmin
+                    max = @tier2researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier2researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly society_research 2x mult was gained"
+        }
+        # Stolen society_research mult 3x
+        10 = {
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier3researchreward
+                    min = @tier3researchmin
+                    max = @tier3researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier3researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly society_research 3x mult was gained"
+        }
+        # Stolen society_research mult 4x
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value > superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 2.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value < equivalent
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier4researchreward
+                    min = @tier4researchmin
+                    max = @tier4researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier4researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly society_research 4x mult was gained"
+        }
+        # Stolen society_research mult 5x
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 2.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier5researchreward
+                    min = @tier5researchmin
+                    max = @tier5researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier5researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly society_research 5x mult was gained"
+        }
+        # Slolen 250 society_research
+        5 = {
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    society_research = 250
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 250
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_X250_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 250 society_research was stolen"
+        }
+        # Slolen 500 society_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    society_research = 500
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 500
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_X500_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 500 society_research was stolen"
+        }
+        # Slolen 750 society_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    society_research = 750
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 750
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_X750_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 750 society_research was stolen"
+        }
+        # Slolen 1000 society_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    society_research = 1000
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 1000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_X1000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 1000 society_research was stolen"
+        }
+        # Slolen 1500 society_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    society_research = 1500
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 1500
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_X1500_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 1500 society_research was stolen"
+        }
+        # Slolen 2000 society_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    society_research = 2000
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 2000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_X2000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 2000 society_research was stolen"
+        }
+        # Stolen engineering_research mult
+        10 = {
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier1researchreward
+                    min = @tier1researchmin
+                    max = @tier1researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier1researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly engineering_research mult was gained"
+        }
+        # Stolen engineering_research mult 2x
+        10 = {
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value > equivalent
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier2researchreward
+                    min = @tier2researchmin
+                    max = @tier2researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier2researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly engineering_research 2x mult was gained"
+        }
+        # Stolen engineering_research mult 3x
+        10 = {
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier3researchreward
+                    min = @tier3researchmin
+                    max = @tier3researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier3researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly engineering_research 3x mult was gained"
+        }
+        # Stolen engineering_research mult 4x
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value > superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 2.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value < equivalent
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier4researchreward
+                    min = @tier4researchmin
+                    max = @tier4researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier4researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly engineering_research 4x mult was gained"
+        }
+        # Stolen engineering_research mult 5x
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 2.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_monthly_resource_mult = {
+                    resource = engineering_research
+                    value = @tier5researchreward
+                    min = @tier5researchmin
+                    max = @tier5researchmax
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = @tier5researchreward
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: monthly engineering_research 5x mult was gained"
+        }
+        # Slolen 250 engineering_research
+        5 = {
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    engineering_research = 250
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 250
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_X250_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 250 engineering_research was stolen"
+        }
+        # Slolen 500 engineering_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    engineering_research = 500
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 500
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_X500_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 500 engineering_research was stolen"
+        }
+        # Slolen 750 engineering_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    engineering_research = 750
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 750
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_X750_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 750 engineering_research was stolen"
+        }
+        # Slolen 1000 engineering_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    engineering_research = 1000
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 1000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_X1000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 1000 engineering_research was stolen"
+        }
+        # Slolen 1500 engineering_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    engineering_research = 1500
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 1500
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_X1500_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 1500 engineering_research was stolen"
+        }
+        # Slolen 2000 engineering_research
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    engineering_research = 2000
+                }
+                set_variable = {
+                    which = "gained_by_espionage_value"
+                    value = 2000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_X2000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 2000 engineering_research was stolen"
+        }
+        # Stolen physics technology 100%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 1
+                    area = physics
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = physics_research
+                            value = @tier5researchreward
+                            min = @tier5researchmin
+                            max = @tier5researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_P100_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 100% physics_research was stolen"
+        }
+        # Stolen physics technology 80%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.8
+                    area = physics
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = physics_research
+                            value = @tier4researchreward
+                            min = @tier4researchmin
+                            max = @tier4researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_P80_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 80% physics_research was stolen"
+        }
+        # Stolen physics technology 60%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.6
+                    area = physics
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = physics_research
+                            value = @tier3researchreward
+                            min = @tier3researchmin
+                            max = @tier3researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_P60_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 60% physics_research was stolen"
+        }
+        # Stolen physics technology 40%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.4
+                    area = physics
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = physics_research
+                            value = @tier2researchreward
+                            min = @tier2researchmin
+                            max = @tier2researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_P40_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 40% physics_research was stolen"
+        }
+        # Stolen physics technology 20%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.2
+                    area = physics
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = physics_research
+                            value = @tier1researchreward
+                            min = @tier1researchmin
+                            max = @tier1researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_P20_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 20% physics_research was stolen"
+        }
+        # Stolen society technology 100%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 1
+                    area = society
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = society_research
+                            value = @tier5researchreward
+                            min = @tier5researchmin
+                            max = @tier5researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_P100_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 100% society_research was stolen"
+        }
+        # Stolen society technology 80%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.8
+                    area = society
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = society_research
+                            value = @tier4researchreward
+                            min = @tier4researchmin
+                            max = @tier4researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_P80_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 80% society_research was stolen"
+        }
+        # Stolen society technology 60%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.6
+                    area = society
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = society_research
+                            value = @tier3researchreward
+                            min = @tier3researchmin
+                            max = @tier3researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_P60_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 60% society_research was stolen"
+        }
+        # Stolen society technology 40%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.4
+                    area = society
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = society_research
+                            value = @tier2researchreward
+                            min = @tier2researchmin
+                            max = @tier2researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_P40_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 40% society_research was stolen"
+        }
+        # Stolen society technology 20%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.2
+                    area = society
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = society_research
+                            value = @tier1researchreward
+                            min = @tier1researchmin
+                            max = @tier1researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_P20_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 20% society_research was stolen"
+        }
+        # Stolen engineering technology 100%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 1
+                    area = engineering
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = engineering_research
+                            value = @tier5researchreward
+                            min = @tier5researchmin
+                            max = @tier5researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_P100_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 100% engineering_research was stolen"
+        }
+        # Stolen engineering technology 80%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.8
+                    area = engineering
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = engineering_research
+                            value = @tier4researchreward
+                            min = @tier4researchmin
+                            max = @tier4researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_P80_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 80% engineering_research was stolen"
+        }
+        # Stolen engineering technology 60%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.6
+                    area = engineering
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = engineering_research
+                            value = @tier3researchreward
+                            min = @tier3researchmin
+                            max = @tier3researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_P60_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 60% engineering_research was stolen"
+        }
+        # Stolen engineering technology 40%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.4
+                    area = engineering
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = engineering_research
+                            value = @tier2researchreward
+                            min = @tier2researchmin
+                            max = @tier2researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_P40_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 40% engineering_research was stolen"
+        }
+        # Stolen engineering technology 20%
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= superior
+                     }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value <= inferior
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_random_research_option = {
+                    add_progress = 0.2
+                    area = engineering
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = engineering_research
+                            value = @tier1researchreward
+                            min = @tier1researchmin
+                            max = @tier1researchmax
+                        }
+                    }
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_P20_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 20% engineering_research was stolen"
+        }
+    }
+}

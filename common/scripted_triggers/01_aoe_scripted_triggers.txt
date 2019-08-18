@@ -803,11 +803,9 @@ is_subject_of_espionage = {
         is_regular_country = yes
         is_fallen_empire = yes
     }
-    NOT = {
-        is_same_value = event_target:espionage_origin_country
-    }
     has_established_contact = event_target:espionage_origin_country
-    NOT = {
+    NOR = {
+        is_same_value = event_target:espionage_origin_country
         has_country_flag = espionage_target_country@event_target:espionage_origin_country
     }
 }

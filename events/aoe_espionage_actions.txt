@@ -259,13 +259,10 @@ country_event = {
     option = {
         name = "aoe_espionage_actions.3.a"
         custom_tooltip = "aoe_espionage_actions.3.a.tooltip"
-        trigger = {
-            event_target:espionage_origin_planet = {
-                has_building = "building_intelligence_agency_1"
-            }
-        }
         hidden_effect = {
-            set_intelligencer_on_assignment = yes
+            set_intelligencer_on_assignment = {
+                ARG1 = 7
+            }
             event_target:espionage_origin_country = {
                 country_event = {
                     id = aoe_espionage_actions.4
@@ -282,9 +279,16 @@ country_event = {
             event_target:espionage_origin_planet = {
                 has_building = "building_intelligence_agency_2"
             }
+            NOT = {
+                event_target:espionage_target_country = {
+                    has_closed_borders = root
+                }
+            }
         }
         hidden_effect = {
-            set_intelligencer_on_assignment = yes
+            set_intelligencer_on_assignment = {
+                ARG1 = 6
+            }
             event_target:espionage_origin_country = {
                 country_event = {
                     id = aoe_espionage_actions.4
@@ -301,9 +305,19 @@ country_event = {
             event_target:espionage_origin_planet = {
                 has_building = "building_intelligence_agency_3"
             }
+            NOR = {
+                event_target:espionage_target_country = {
+                    has_closed_borders = root
+                }
+                event_target:espionage_target_country = {
+                    is_at_war_with = root
+                }
+            }
         }
         hidden_effect = {
-            set_intelligencer_on_assignment = yes
+            set_intelligencer_on_assignment = {
+                ARG1 = 5
+            }
             event_target:espionage_origin_country = {
                 country_event = {
                     id = aoe_espionage_actions.4
@@ -332,25 +346,6 @@ country_event = {
     option = {
         name = "aoe_espionage_actions.3.e"
         custom_tooltip = "aoe_espionage_actions.3.e.tooltip"
-    }
-
-    after = {
-        if = {
-            limit = {
-                event_target:espionage_origin_spy = {
-                    is_unassignment_intelligencer = yes
-                }
-            }
-            log = "espionage_actions.3: ERROR! spy not assigned"
-        }
-        if = {
-            limit = {
-                event_target:espionage_origin_spy = {
-                    is_disengaged_intelligencer = yes
-                }
-            }
-            log = "espionage_actions.3: ERROR! spy not engaged"
-        }
     }
 }
 
@@ -397,6 +392,48 @@ country_event = {
                 }
             }
             random_list = {
+                10 = {
+                    modifier = {
+                        factor = 10
+                        event_target:espionage_target_country = {
+                            is_fallen_empire = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            has_closed_borders = root
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            is_at_war_with = root
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            OR = {
+                                is_authoritarian = yes
+                                is_xenophobe = yes
+                                has_ethic = "ethic_gestalt_consciousness"
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_target_country = {
+                            is_xenophile = yes
+                        }
+                    }
+                    # We are exposed by the victim
+                    country_event = {
+                        id = aoe_espionage_actions.6
+                        days = 1
+                    }
+                    log = ">>> espionage_actions.4: [This.GetName] unable to stole resources and was exposed"
+                }
                 100 = {
                     modifier = {
                         factor = 1.05
@@ -520,7 +557,165 @@ country_event = {
                     is_intelligencer_has_purpose_steal_technologies = yes
                 }
             }
-            try_steal_technologies = yes
+            random_list = {
+                10 = {
+                    modifier = {
+                        factor = 10
+                        event_target:espionage_target_country = {
+                            is_fallen_empire = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            has_closed_borders = root
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            is_at_war_with = root
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            OR = {
+                                is_authoritarian = yes
+                                is_xenophobe = yes
+                                has_ethic = "ethic_gestalt_consciousness"
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_target_country = {
+                            is_xenophile = yes
+                        }
+                    }
+                    # We are exposed by the victim
+                    country_event = {
+                        id = aoe_espionage_actions.6
+                        days = 1
+                    }
+                    log = ">>> espionage_actions.4: [This.GetName] unable to stole technologies and was exposed"
+                }
+                100 = {
+                    modifier = {
+                        factor = 1.05
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_steal_technologies = yes
+                                is_unassignment_intelligencer = yes
+                                is_intelligencer_has_rank_1 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1.1
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_steal_technologies = yes
+                                is_unassignment_intelligencer = yes
+                                is_intelligencer_has_rank_2 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1.15
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_steal_technologies = yes
+                                is_unassignment_intelligencer = yes
+                                is_intelligencer_has_rank_3 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1.2
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_steal_technologies = yes
+                                is_unassignment_intelligencer = yes
+                                is_intelligencer_has_rank_4 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_steal_technologies = yes
+                                is_unassignment_intelligencer = yes
+                                is_intelligencer_has_rank_5 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 5
+                        event_target:espionage_target_country = {
+                            is_fallen_empire = yes
+                        }
+                    }
+                    try_steal_technologies = yes
+                    # We are exposed by the victim
+                    country_event = {
+                        id = aoe_espionage_actions.6
+                        days = 1
+                    }
+                    log = ">>> espionage_actions.4: [This.GetName] stole technologies but was exposed"
+                }
+                80 = {
+                    modifier = {
+                        factor = 1.1
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_1 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.2
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_2 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.3
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_3 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.4
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_4 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.5
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_5 = yes
+                        }
+                    }
+                    try_steal_technologies = yes
+                    log = ">>> espionage_actions.4: [This.GetName] stole technologies"
+                }
+                20 = {
+                    modifier = {
+                        factor = 0
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_top_ranked = yes
+                        }
+                    }
+                    try_steal_technologies = yes
+                    # Promote spy
+                    country_event = {
+                        id = aoe_espionage_actions.11
+                        days = 5
+                        random = 4
+                    }
+                    log = ">>> espionage_actions.4: [This.GetName] stole technologies and will be promoted"
+                }
+            }
         }
     }
 }
@@ -2737,7 +2932,10 @@ country_event = {
                         pop_has_trait = "trait_intelligencer_prophet"
                     }
                 }
-                add_trait = "trait_intelligencer_neophyte"
+                modify_species = {
+                    species = this
+                    add_trait = "trait_intelligencer_neophyte"
+                }
             }
             else_if = {
                 limit = {
@@ -2749,8 +2947,11 @@ country_event = {
                         pop_has_trait = "trait_intelligencer_prophet"
                     }
                 }
-                remove_trait = "trait_intelligencer_neophyte"
-                add_trait = "trait_intelligencer_acolyte"
+                modify_species = {
+                    species = this
+                    remove_trait = "trait_intelligencer_neophyte"
+                    add_trait = "trait_intelligencer_acolyte"
+                }
             }
             else_if = {
                 limit = {
@@ -2761,8 +2962,11 @@ country_event = {
                         pop_has_trait = "trait_intelligencer_prophet"
                     }
                 }
-                remove_trait = "trait_intelligencer_acolyte"
-                add_trait = "trait_intelligencer_adept"
+                modify_species = {
+                    species = this
+                    remove_trait = "trait_intelligencer_acolyte"
+                    add_trait = "trait_intelligencer_adept"
+                }
             }
             else_if = {
                 limit = {
@@ -2772,8 +2976,11 @@ country_event = {
                         pop_has_trait = "trait_intelligencer_prophet"
                     }
                 }
-                remove_trait = "trait_intelligencer_adept"
-                add_trait = "trait_intelligencer_master"
+                modify_species = {
+                    species = this
+                    remove_trait = "trait_intelligencer_adept"
+                    add_trait = "trait_intelligencer_master"
+                }
             }
             else_if = {
                 limit = {
@@ -2782,8 +2989,11 @@ country_event = {
                         pop_has_trait = "trait_intelligencer_prophet"
                     }
                 }
-                remove_trait = "trait_intelligencer_master"
-                add_trait = "trait_intelligencer_prophet"
+                modify_species = {
+                    species = this
+                    remove_trait = "trait_intelligencer_master"
+                    add_trait = "trait_intelligencer_prophet"
+                }
             }
         }
     }

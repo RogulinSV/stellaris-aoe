@@ -196,3 +196,29 @@ every_pool_leader = {
         show_notification = no
     }
 }
+
+has_ai_personality_behaviour = demands_clear_borders
+is_neighbor_of = root
+is_inside_border = from
+
+every_planet_within_border = {
+    surveyed = {
+        set_surveyed = yes
+        surveyor = event_target:second_diadochi
+    }
+}
+
+add_random_research_option = {
+    add_progress = 0.99
+    area = engineering
+    tier = 2
+    ignore_prereqs = no
+    fail_effects = {
+        add_monthly_resource_mult = {
+            resource = engineering_research
+            value = @tier5researchreward
+            min = @tier5researchmin
+            max = @tier5researchmax
+        }
+    }
+}

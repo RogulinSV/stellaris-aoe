@@ -1,5 +1,13 @@
 spriteTypes = {
     spriteType = {
+        name = "GFX_message_spy_default"
+        texturefile = "gfx/interface/icons/message/message_spy_default.dds"
+    }
+    spriteType = {
+        name = "GFX_message_spy_stole_nothing"
+        texturefile = "gfx/interface/icons/message/message_spy_stole_nothing.dds"
+    }
+    spriteType = {
         name = "GFX_message_spy_stole_minerals"
         texturefile = "gfx/interface/icons/message/message_spy_stole_minerals.dds"
     }
