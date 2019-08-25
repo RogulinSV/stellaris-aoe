@@ -1,5 +1,6 @@
 @cost_resource = 500
-@cost_influence = 10
+@cost_influence = 20
+@cost_unity = 20
 
 decision_planet_intelligencer_training = {
     owned_planets_only = yes
@@ -34,6 +35,7 @@ decision_planet_intelligencer_training = {
         }
         NOR = {
             has_modifier = "planet_intelligencer_training"
+            has_modifier = "planet_intelligencer_protecting"
             is_attacked_planet = yes
             is_captured_planet = yes
         }
@@ -71,5 +73,61 @@ decision_planet_intelligencer_training = {
                 has_pacifist_government = yes
             }
         }
+    }
+}
+
+decision_planet_intelligencer_disclosing = {
+    owned_planets_only = yes
+    sound = event_administrative_work
+    icon = decision_intelligencer_disclosing
+
+    resources = {
+        category = decisions
+        cost = {
+            energy = @cost_resource
+            minerals = @cost_resource
+            unity = @cost_unity
+        }
+    }
+
+    potential = {
+        owner = {
+            is_regular_country = yes
+            has_technology = "tech_interstellar_intelligence"
+            any_relation = {
+                has_communications = root.owner
+                is_regular_country = yes
+            }
+        }
+    }
+
+    allow = {
+        OR = {
+            has_building = "building_intelligence_agency_1"
+            has_building = "building_intelligence_agency_2"
+            has_building = "building_intelligence_agency_3"
+        }
+        NOR = {
+            has_modifier = "planet_intelligencer_training"
+            has_modifier = "planet_intelligencer_disclosing"
+            is_attacked_planet = yes
+            is_captured_planet = yes
+        }
+        any_pop = {
+            is_unassignment_intelligencer = yes
+        }
+    }
+
+    effect = {
+        custom_tooltip = decision_planet_intelligencer_disclosing_effect
+        hidden_effect = {
+            planet_event = {
+                id = aoe_espionage_actions.12
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
     }
 }

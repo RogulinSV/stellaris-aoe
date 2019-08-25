@@ -1,0 +1,3995 @@
+# Scope: country
+try_recruit_defector = {
+    random_list = {
+        # Nothing stolen...
+        100 = {
+            modifier = {
+                factor = 1.5
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_1 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2.5
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 3.5
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_target_country = {
+                    is_fallen_empire = yes
+                }
+            }
+            modifier = {
+                factor = 0.1
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        any_pop = {
+                            is_intelligencer = yes
+                        }
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_NONE_GAINED
+                    localization = MESSAGE_SPY_NONE_GAINED_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: nobody was recruited"
+        }
+        # Random pop
+        100 = {
+            modifier = {
+                factor = 0.9
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_1 = yes
+                }
+            }
+            modifier = {
+                factor = 0.8
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 0.7
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 0.6
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        count < 3
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                random_pop = {
+                    kill_pop = yes
+                }
+            }
+            event_target:espionage_target_country = {
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_POP
+                    localization = MESSAGE_SPY_STOLE_POP_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_planet = {
+                create_pop = {
+                    species = event_target:espionage_target_species
+                    ethos = random
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_POP
+                    localization = MESSAGE_SPY_GAINED_POP_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: pop was recruited"
+        }
+        # Recruited scientist lvl1
+        5 = {
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_technologists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_technologists = yes
+                }
+            }
+             modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = scientist
+                            has_level < 2
+                        }
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level < 2
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level < 2
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level < 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level < 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SCIENTIST
+                    localization = MESSAGE_SPY_STOLE_SCIENTIST_L1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = scientist
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 1
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SCIENTIST
+                    localization = MESSAGE_SPY_GAINED_SCIENTIST_L1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: scientist of 1st level was recruited"
+        }
+        # Recruited scientist lvl2
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_technologists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_technologists = yes
+                }
+            }
+             modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = scientist
+                            has_level = 2
+                        }
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 2
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 2
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SCIENTIST
+                    localization = MESSAGE_SPY_STOLE_SCIENTIST_L2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = scientist
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 2
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SCIENTIST
+                    localization = MESSAGE_SPY_GAINED_SCIENTIST_L2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: scientist of 2nd level was recruited"
+        }
+        # Recruited scientist lvl3
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_technologists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_technologists = yes
+                }
+            }
+             modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = scientist
+                            has_level = 3
+                        }
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 3
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 3
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 3
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 3
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SCIENTIST
+                    localization = MESSAGE_SPY_STOLE_SCIENTIST_L3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = scientist
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 3
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SCIENTIST
+                    localization = MESSAGE_SPY_GAINED_SCIENTIST_L3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: scientist of 3rd level was recruited"
+        }
+        # Recruited scientist lvl4
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_technologists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_technologists = yes
+                }
+            }
+             modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = scientist
+                            has_level = 4
+                        }
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 4
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 4
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 4
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 4
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SCIENTIST
+                    localization = MESSAGE_SPY_STOLE_SCIENTIST_L4_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = scientist
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 4
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SCIENTIST
+                    localization = MESSAGE_SPY_GAINED_SCIENTIST_L4_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: scientist of 4th level was recruited"
+        }
+        # Recruited scientist lvl5
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_technologists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_technologists = yes
+                }
+            }
+             modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = scientist
+                            has_level = 5
+                        }
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 5
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 5
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 5
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 5
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SCIENTIST
+                    localization = MESSAGE_SPY_STOLE_SCIENTIST_L5_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = scientist
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 5
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SCIENTIST
+                    localization = MESSAGE_SPY_GAINED_SCIENTIST_L5_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: scientist of 5th level was recruited"
+        }
+        # Recruited scientist lvl6
+        4 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_technologists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_technologists = yes
+                }
+            }
+             modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = scientist
+                            has_level = 6
+                        }
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 6
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 6
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 6
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 6
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SCIENTIST
+                    localization = MESSAGE_SPY_STOLE_SCIENTIST_L6_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = scientist
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 6
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SCIENTIST
+                    localization = MESSAGE_SPY_GAINED_SCIENTIST_L6_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: scientist of 6th level was recruited"
+        }
+        # Recruited scientist lvl7
+        3 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_technologists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_technologists = yes
+                }
+            }
+             modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = scientist
+                            has_level = 7
+                        }
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 7
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 7
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 7
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 7
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SCIENTIST
+                    localization = MESSAGE_SPY_STOLE_SCIENTIST_L7_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = scientist
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 7
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SCIENTIST
+                    localization = MESSAGE_SPY_GAINED_SCIENTIST_L7_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: scientist of 7th level was recruited"
+        }
+        # Recruited scientist lvl8
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_technologists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_technologists = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = scientist
+                            has_level = 8
+                        }
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 8
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = scientist
+                            has_level = 8
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 8
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = scientist
+                            has_level = 8
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = scientist
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SCIENTIST
+                    localization = MESSAGE_SPY_STOLE_SCIENTIST_L8_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = scientist
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 8
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SCIENTIST
+                    localization = MESSAGE_SPY_GAINED_SCIENTIST_L8_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: scientist of 8th level was recruited"
+        }
+        # Recruited admiral lvl1
+        5 = {
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = admiral
+                            has_level < 2
+                        }
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level < 2
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level < 2
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level < 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level < 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ADMIRAL
+                    localization = MESSAGE_SPY_STOLE_ADMIRAL_L1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = admiral
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 1
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ADMIRAL
+                    localization = MESSAGE_SPY_GAINED_ADMIRAL_L1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: admiral of 1st level was recruited"
+        }
+        # Recruited admiral lvl2
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = admiral
+                            has_level = 2
+                        }
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 2
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 2
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ADMIRAL
+                    localization = MESSAGE_SPY_STOLE_ADMIRAL_L2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = admiral
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 2
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ADMIRAL
+                    localization = MESSAGE_SPY_GAINED_ADMIRAL_L2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: admiral of 2nd level was recruited"
+        }
+        # Recruited admiral lvl3
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = admiral
+                            has_level = 3
+                        }
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 3
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 3
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 3
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 3
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ADMIRAL
+                    localization = MESSAGE_SPY_STOLE_ADMIRAL_L3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = admiral
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 3
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ADMIRAL
+                    localization = MESSAGE_SPY_GAINED_ADMIRAL_L3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: admiral of 3rd level was recruited"
+        }
+        # Recruited admiral lvl4
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = admiral
+                            has_level = 4
+                        }
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 4
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 4
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 4
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 4
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ADMIRAL
+                    localization = MESSAGE_SPY_STOLE_ADMIRAL_L4_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = admiral
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 4
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ADMIRAL
+                    localization = MESSAGE_SPY_GAINED_ADMIRAL_L4_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: admiral of 4th level was recruited"
+        }
+        # Recruited admiral lvl5
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = admiral
+                            has_level = 5
+                        }
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 5
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 5
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 5
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 5
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ADMIRAL
+                    localization = MESSAGE_SPY_STOLE_ADMIRAL_L5_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = admiral
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 5
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ADMIRAL
+                    localization = MESSAGE_SPY_GAINED_ADMIRAL_L5_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: admiral of 5th level was recruited"
+        }
+        # Recruited admiral lvl6
+        4 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = admiral
+                            has_level = 6
+                        }
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 6
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 6
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 6
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 6
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ADMIRAL
+                    localization = MESSAGE_SPY_STOLE_ADMIRAL_L6_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = admiral
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 6
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ADMIRAL
+                    localization = MESSAGE_SPY_GAINED_ADMIRAL_L6_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: admiral of 6th level was recruited"
+        }
+        # Recruited admiral lvl7
+        3 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = admiral
+                            has_level = 7
+                        }
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 7
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 7
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 7
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 7
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ADMIRAL
+                    localization = MESSAGE_SPY_STOLE_ADMIRAL_L7_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = admiral
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 7
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ADMIRAL
+                    localization = MESSAGE_SPY_GAINED_ADMIRAL_L7_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: admiral of 7th level was recruited"
+        }
+        # Recruited admiral lvl8
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_imperialists = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = fleet
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = admiral
+                            has_level = 8
+                        }
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 8
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = admiral
+                            has_level = 8
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 8
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = admiral
+                            has_level = 8
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = admiral
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ADMIRAL
+                    localization = MESSAGE_SPY_STOLE_ADMIRAL_L8_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = admiral
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 8
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ADMIRAL
+                    localization = MESSAGE_SPY_GAINED_ADMIRAL_L8_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: admiral of 8th level was recruited"
+        }
+        # Recruited general lvl1
+        5 = {
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = general
+                            has_level < 2
+                        }
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level < 2
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level < 2
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level < 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level < 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GENERAL
+                    localization = MESSAGE_SPY_STOLE_GENERAL_L1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = general
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 1
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GENERAL
+                    localization = MESSAGE_SPY_GAINED_GENERAL_L1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: general of 1st level was recruited"
+        }
+        # Recruited general lvl2
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = general
+                            has_level = 2
+                        }
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 2
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 2
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GENERAL
+                    localization = MESSAGE_SPY_STOLE_GENERAL_L2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = general
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 2
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GENERAL
+                    localization = MESSAGE_SPY_GAINED_GENERAL_L2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: general of 2nd level was recruited"
+        }
+        # Recruited general lvl3
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = general
+                            has_level = 3
+                        }
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 3
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 3
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 3
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 3
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GENERAL
+                    localization = MESSAGE_SPY_STOLE_GENERAL_L3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = general
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 3
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GENERAL
+                    localization = MESSAGE_SPY_GAINED_GENERAL_L3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: general of 3rd level was recruited"
+        }
+        # Recruited general lvl4
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = general
+                            has_level = 4
+                        }
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 4
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 4
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 4
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 4
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GENERAL
+                    localization = MESSAGE_SPY_STOLE_GENERAL_L4_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = general
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 4
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GENERAL
+                    localization = MESSAGE_SPY_GAINED_GENERAL_L4_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: general of 4th level was recruited"
+        }
+        # Recruited general lvl5
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = general
+                            has_level = 5
+                        }
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 5
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 5
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 5
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 5
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GENERAL
+                    localization = MESSAGE_SPY_STOLE_GENERAL_L5_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = general
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 5
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GENERAL
+                    localization = MESSAGE_SPY_GAINED_GENERAL_L5_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: general of 5th level was recruited"
+        }
+        # Recruited general lvl6
+        4 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = general
+                            has_level = 6
+                        }
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 6
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 6
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 6
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 6
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GENERAL
+                    localization = MESSAGE_SPY_STOLE_GENERAL_L6_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = general
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 6
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GENERAL
+                    localization = MESSAGE_SPY_GAINED_GENERAL_L6_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: general of 6th level was recruited"
+        }
+        # Recruited general lvl7
+        3 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = general
+                            has_level = 7
+                        }
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 7
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 7
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 7
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 7
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GENERAL
+                    localization = MESSAGE_SPY_STOLE_GENERAL_L7_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = general
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 7
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GENERAL
+                    localization = MESSAGE_SPY_GAINED_GENERAL_L7_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: general of 7th level was recruited"
+        }
+        # Recruited general lvl8
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_purifiers = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = general
+                            has_level = 8
+                        }
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 8
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = general
+                            has_level = 8
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 8
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = general
+                            has_level = 8
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = general
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GENERAL
+                    localization = MESSAGE_SPY_STOLE_GENERAL_L8_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = general
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 8
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GENERAL
+                    localization = MESSAGE_SPY_GAINED_GENERAL_L8_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: general of 8th level was recruited"
+        }
+        # Recruited governor lvl1
+        5 = {
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = governor
+                            has_level < 2
+                        }
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level < 2
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level < 2
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level < 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level < 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GOVERNOR
+                    localization = MESSAGE_SPY_STOLE_GOVERNOR_L1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = governor
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 1
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GOVERNOR
+                    localization = MESSAGE_SPY_GAINED_GOVERNOR_L1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: governor of 1st level was recruited"
+        }
+        # Recruited governor lvl2
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = governor
+                            has_level = 2
+                        }
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 2
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 2
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 2
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GOVERNOR
+                    localization = MESSAGE_SPY_STOLE_GOVERNOR_L2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = governor
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 2
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GOVERNOR
+                    localization = MESSAGE_SPY_GAINED_GOVERNOR_L2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: governor of 2nd level was recruited"
+        }
+        # Recruited governor lvl3
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = governor
+                            has_level = 3
+                        }
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 3
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 3
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 3
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 3
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GOVERNOR
+                    localization = MESSAGE_SPY_STOLE_GOVERNOR_L3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = governor
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 3
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GOVERNOR
+                    localization = MESSAGE_SPY_GAINED_GOVERNOR_L3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: governor of 3rd level was recruited"
+        }
+        # Recruited governor lvl4
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = governor
+                            has_level = 4
+                        }
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 4
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 4
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 4
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 4
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GOVERNOR
+                    localization = MESSAGE_SPY_STOLE_GOVERNOR_L4_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = governor
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 4
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GOVERNOR
+                    localization = MESSAGE_SPY_GAINED_GOVERNOR_L4_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: governor of 4th level was recruited"
+        }
+        # Recruited governor lvl5
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = governor
+                            has_level = 5
+                        }
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 5
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 5
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 5
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 5
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GOVERNOR
+                    localization = MESSAGE_SPY_STOLE_GOVERNOR_L5_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = governor
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 5
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GOVERNOR
+                    localization = MESSAGE_SPY_GAINED_GOVERNOR_L5_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: governor of 5th level was recruited"
+        }
+        # Recruited governor lvl6
+        4 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = governor
+                            has_level = 6
+                        }
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 6
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 6
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 6
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 6
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GOVERNOR
+                    localization = MESSAGE_SPY_STOLE_GOVERNOR_L6_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = governor
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 6
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GOVERNOR
+                    localization = MESSAGE_SPY_GAINED_GOVERNOR_L6_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: governor of 6th level was recruited"
+        }
+        # Recruited governor lvl7
+        3 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = governor
+                            has_level = 7
+                        }
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 7
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 7
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 7
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 7
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GOVERNOR
+                    localization = MESSAGE_SPY_STOLE_GOVERNOR_L7_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = governor
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 7
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GOVERNOR
+                    localization = MESSAGE_SPY_GAINED_GOVERNOR_L7_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: governor of 7th level was recruited"
+        }
+        # Recruited governor lvl8
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    is_corporates = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value <= inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        value >= superior
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOR = {
+                        any_owned_leader = {
+                            leader_class = governor
+                            has_level = 8
+                        }
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 8
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        any_pool_leader = {
+                            leader_class = governor
+                            has_level = 8
+                        }
+                    }
+                    random_pool_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 8
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                else = {
+                    random_owned_leader = {
+                        limit = {
+                            leader_class = governor
+                            has_level = 8
+                        }
+                        kill_leader = {
+                            show_notification = no
+                            type = governor
+                        }
+                    }
+                }
+                owner_species = {
+                    save_event_target_as = espionage_target_species
+                }
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_GOVERNOR
+                    localization = MESSAGE_SPY_STOLE_GOVERNOR_L8_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_leader = {
+                    class = governor
+                    species = event_target:espionage_target_species
+                    name = random
+                    skill = 8
+                }
+                last_created_leader = {
+                    add_random_leader_trait = yes
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_GOVERNOR
+                    localization = MESSAGE_SPY_GAINED_GOVERNOR_L8_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: governor of 8th level was recruited"
+        }
+    }
+}

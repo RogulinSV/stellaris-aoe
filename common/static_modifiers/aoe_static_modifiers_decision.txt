@@ -7,3 +7,8 @@ planet_intelligencer_training = {
     icon = "gfx/interface/icons/planet_modifiers/pm_interstellar_research.dds"
     icon_frame = 1
 }
+
+planet_intelligencer_disclosing = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_interstellar_research.dds"
+    icon_frame = 1
+}

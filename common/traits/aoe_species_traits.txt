@@ -1640,7 +1640,13 @@ trait_intelligencer_neophyte = {
     improves_leaders = no
     forced_happiness = no
 
-    opposites = {}
+    opposites = {
+        "trait_intelligencer_acolyte"
+        "trait_intelligencer_adept"
+        "trait_intelligencer_master"
+        "trait_intelligencer_prophet"
+    }
+
     allowed_archetypes = { BIOLOGICAL }
     custom_tooltip = TRAIT_INTELLIGENCER_NEOPHYTE_SPECIES_EFFECT
 
@@ -1667,7 +1673,11 @@ trait_intelligencer_acolyte = {
 
     opposites = {
         "trait_intelligencer_neophyte"
+        "trait_intelligencer_adept"
+        "trait_intelligencer_master"
+        "trait_intelligencer_prophet"
     }
+
     allowed_archetypes = { BIOLOGICAL }
     custom_tooltip = TRAIT_INTELLIGENCER_ACOLYTE_SPECIES_EFFECT
 
@@ -1695,7 +1705,10 @@ trait_intelligencer_adept = {
     opposites = {
         "trait_intelligencer_neophyte"
         "trait_intelligencer_acolyte"
+        "trait_intelligencer_master"
+        "trait_intelligencer_prophet"
     }
+
     allowed_archetypes = { BIOLOGICAL }
     custom_tooltip = TRAIT_INTELLIGENCER_ADEPT_SPECIES_EFFECT
 
@@ -1724,7 +1737,9 @@ trait_intelligencer_master = {
         "trait_intelligencer_neophyte"
         "trait_intelligencer_acolyte"
         "trait_intelligencer_adept"
+        "trait_intelligencer_prophet"
     }
+
     allowed_archetypes = { BIOLOGICAL }
     custom_tooltip = TRAIT_INTELLIGENCER_MASTER_SPECIES_EFFECT
 
@@ -1754,6 +1769,7 @@ trait_intelligencer_prophet = {
         "trait_intelligencer_adept"
         "trait_intelligencer_master"
     }
+
     allowed_archetypes = { BIOLOGICAL }
     custom_tooltip = TRAIT_INTELLIGENCER_PROPHET_SPECIES_EFFECT
 

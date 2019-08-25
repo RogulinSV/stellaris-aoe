@@ -262,6 +262,14 @@
     building_spy_memorial:0 "Мемориал павших шпионов"
     building_spy_memorial_desc:0 "Мемориал павших шпионов"
 
+    building_debris:0 "Обломки разрушенного сооружения"
+    building_debris_desc:0 "Обломки разрушенного сооружения"
+    building_scrapyard:0 "Свалка строительного мусора"
+    building_scrapyard_desc:0 "Свалка строительного мусора"
+
+    building_biosanctuary:0 "Биологический заповедник"
+    building_biosanctuary_desc:0 "Биологический заповедник планетарной флоры и фауны"
+
     building_mithril_harvester:0 "Завод по выработке £mithril£ §R$mithril_genitive$§!"
     building_mithril_harvester_desc:0 "Завод по выработке £mithril£ §R$mithril_genitive$§!"
     mod_building_mithril_harvester_max:0 "$building_mithril_harvester$: максимум"

@@ -772,8 +772,23 @@ is_intelligencer_has_rank_5 = {
 is_disengaged_intelligencer = {
     is_intelligencer = yes
     NOR = {
+        has_pop_flag = "espionage_purpose_disclose_spies"
         has_pop_flag = "espionage_purpose_steal_resources"
         has_pop_flag = "espionage_purpose_steal_technologies"
+        has_pop_flag = "espionage_purpose_recruit_defector"
+        has_pop_flag = "espionage_purpose_commit_sabotage"
+    }
+}
+
+# Scope: pop
+is_engaged_intelligencer = {
+    is_intelligencer = yes
+    OR = {
+        has_pop_flag = "espionage_purpose_disclose_spies"
+        has_pop_flag = "espionage_purpose_steal_resources"
+        has_pop_flag = "espionage_purpose_steal_technologies"
+        has_pop_flag = "espionage_purpose_recruit_defector"
+        has_pop_flag = "espionage_purpose_commit_sabotage"
     }
 }
 
@@ -783,6 +798,18 @@ is_unassignment_intelligencer = {
     NOT = {
         has_pop_flag = "intelligencer_on_assignment"
     }
+}
+
+# Scope: pop
+is_appointed_intelligencer = {
+    is_intelligencer = yes
+    has_pop_flag = "intelligencer_on_assignment"
+}
+
+# Scope: pop
+is_intelligencer_has_purpose_disclose_spies = {
+    is_intelligencer = yes
+    has_pop_flag = "espionage_purpose_disclose_spies"
 }
 
 # Scope: pop
@@ -797,6 +824,27 @@ is_intelligencer_has_purpose_steal_technologies = {
     has_pop_flag = "espionage_purpose_steal_technologies"
 }
 
+# Scope: pop
+is_intelligencer_has_purpose_recruit_defector = {
+    is_intelligencer = yes
+    has_pop_flag = "espionage_purpose_recruit_defector"
+}
+
+# Scope: pop
+is_intelligencer_has_purpose_commit_sabotage = {
+    is_intelligencer = yes
+    has_pop_flag = "espionage_purpose_commit_sabotage"
+}
+
+# Scope: planet
+is_possible_ground_espionage = {
+    NOR = {
+        has_planet_flag = espionage_target_planet@event_target:espionage_origin_country
+        has_modifier = "planet_intelligencer_disclosing"
+        is_attacked_planet = yes
+    }
+}
+
 # Scope: country
 is_subject_of_espionage = {
     OR = {
@@ -804,16 +852,15 @@ is_subject_of_espionage = {
         is_fallen_empire = yes
     }
     has_established_contact = event_target:espionage_origin_country
+    has_communications = event_target:espionage_origin_country
     NOR = {
         is_same_value = event_target:espionage_origin_country
         has_country_flag = espionage_target_country@event_target:espionage_origin_country
     }
-}
-
-# Scope: country
-has_espionage_ground = {
-    is_subject_of_espionage = yes
     num_owned_planets > 0
+    any_owned_planet = {
+        is_possible_ground_espionage = yes
+    }
 }
 
 is_possible_declare_espionage_war = {
@@ -898,5 +945,78 @@ is_attacked_planet = {
 is_captured_planet = {
     NOT = {
         is_controlled_by = owner
+    }
+}
+
+# Scope: country
+is_technologists = {
+    OR = {
+        has_authority = "auth_machine_intelligence"
+        has_authority = "auth_ancient_machine_intelligence"
+        has_government = "gov_technocratic_dictatorship"
+        has_government = "gov_science_directorate"
+        has_government = "gov_machine_research"
+    }
+}
+
+# Scope: country
+has_technologists = {
+    has_faction = "technologist"
+}
+
+# Scope: country
+is_imperialists = {
+    OR = {
+        has_authority = "auth_imperial"
+        has_authority = "auth_dictatorial"
+        has_government = "gov_military_dictatorship"
+        has_government = "gov_military_junta"
+        has_government = "gov_military_commissariat"
+        has_government = "gov_machine_terminator"
+    }
+}
+
+# Scope: country
+has_imperialists = {
+    has_faction = "imperialist"
+}
+
+# Scope: country
+is_theocratics = {
+    OR = {
+        has_government = "gov_theocratic_monarchy"
+        has_government = "gov_theocratic_dictatorship"
+        has_government = "gov_theocratic_oligarchy"
+        has_government = "gov_theocratic_republic"
+        has_government = "gov_holy_tribunal"
+        has_government = "gov_megachurch"
+    }
+}
+
+# Scope: country
+is_purifiers = {
+    OR = {
+        has_government = "gov_blood_court"
+        has_government = "gov_purity_order"
+        has_government = "gov_purification_committee"
+        has_government = "gov_purity_assembly"
+    }
+}
+
+# Scope: country
+has_purifiers = {
+    has_faction = "isolationist"
+}
+
+# Scope: country
+is_corporates = {
+    OR = {
+        has_authority = "auth_oligarchic"
+        has_authority = "auth_corporate"
+        has_government = "gov_plutocratic_oligarchy"
+        has_government = "gov_megacorporation"
+        has_government = "gov_trade_league"
+        has_government = "gov_criminal_syndicate"
+        has_government = "gov_machine_industrial"
     }
 }

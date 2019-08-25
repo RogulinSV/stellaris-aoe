@@ -208,6 +208,8 @@ every_planet_within_border = {
     }
 }
 
+any_bordering_country = {}
+
 add_random_research_option = {
     add_progress = 0.99
     area = engineering
@@ -222,3 +224,5 @@ add_random_research_option = {
         }
     }
 }
+
+remove_all_buildings = yes

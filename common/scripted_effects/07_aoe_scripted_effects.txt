@@ -1,0 +1,303 @@
+try_commit_sabotage = {
+    random_list = {
+        # Nothing organized...
+        10 = {
+            modifier = {
+                factor = 1.5
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_1 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2.5
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 3.5
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_target_country = {
+                    is_fallen_empire = yes
+                }
+            }
+            modifier = {
+                factor = 0.1
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        any_pop = {
+                            is_intelligencer = yes
+                        }
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_NONE_GAINED
+                    localization = MESSAGE_SPY_NONE_GAINED_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_recruit_defector effect: nothing was organized"
+        }
+        # Demolish Hydroponics Farm
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_hydroponics_farm"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_hydroponics_farm"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_HYDROPONICS_FARM_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_HYDROPONICS_FARM_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+        }
+        # Demolish Food Processing Facility
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_food_processing_facility"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_food_processing_facility"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_FOOD_PROCESSING_FACILITY_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_FOOD_PROCESSING_FACILITY_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+        }
+        # Demolish Food Processing Center
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_food_processing_center"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_food_processing_center"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_FOOD_PROCESSING_CENTER_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_FOOD_PROCESSING_CENTER_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+        }
+        # Demolish Mineral Purification Plant
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_mineral_purification_plant"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_mineral_purification_plant"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_MINERAL_PURIFICATION_PLANT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MINERAL_PURIFICATION_PLANT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+        }
+        # Demolish Mineral Purification Hub
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_mineral_purification_hub"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_mineral_purification_hub"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_MINERAL_PURIFICATION_HUB_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MINERAL_PURIFICATION_HUB_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+        }
+    }
+}

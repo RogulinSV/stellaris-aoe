@@ -1,19 +1,48 @@
+engage_intelligencer_espionage_purpose_disclose_spies = {
+    event_target:espionage_origin_spy = {
+        set_pop_flag = "espionage_purpose_disclose_spies"
+        log = ">>> engage_intelligencer_espionage_purpose_disclose_spies effect: pop was engaged for disclose spies"
+    }
+}
+
 engage_intelligencer_espionage_purpose_steal_resources = {
     event_target:espionage_origin_spy = {
         set_pop_flag = "espionage_purpose_steal_resources"
-        log = ">>> engage_intelligencer_espionage_purpose_steal_technologies effect: pop was engaged from stealing resources"
+        log = ">>> engage_intelligencer_espionage_purpose_steal_resources effect: pop was engaged for stealing resources"
     }
 }
 
 engage_intelligencer_espionage_purpose_steal_technologies = {
     event_target:espionage_origin_spy = {
         set_pop_flag = "espionage_purpose_steal_technologies"
-        log = ">>> engage_intelligencer_espionage_purpose_steal_technologies effect: pop was engaged from stealing technologies"
+        log = ">>> engage_intelligencer_espionage_purpose_steal_technologies effect: pop was engaged for stealing technologies"
     }
 }
 
+engage_intelligencer_espionage_purpose_recruit_defector = {
+    event_target:espionage_origin_spy = {
+        set_pop_flag = "espionage_purpose_recruit_defector"
+        log = ">>> engage_intelligencer_espionage_purpose_recruit_defector effect: pop was engaged for recruit defector"
+    }
+}
+
+engage_intelligencer_espionage_purpose_commit_sabotage = {
+    event_target:espionage_origin_spy = {
+        set_pop_flag = "espionage_purpose_commit_sabotage"
+        log = ">>> engage_intelligencer_espionage_purpose_commit_sabotage effect: pop was engaged for commit sabotage"
+    }
+}
+
+
 disengage_intelligencer = {
     event_target:espionage_origin_spy = {
+        if = {
+            limit = {
+                has_pop_flag = "espionage_purpose_disclose_spies"
+            }
+            remove_pop_flag = "espionage_purpose_disclose_spies"
+            log = ">>> disengage_intelligencer effect: pop was disengaged from disclose spies"
+        }
         if = {
             limit = {
                 has_pop_flag = "espionage_purpose_steal_resources"
@@ -28,6 +57,20 @@ disengage_intelligencer = {
             remove_pop_flag = "espionage_purpose_steal_technologies"
             log = ">>> disengage_intelligencer effect: pop was disengaged from stealing technologies"
         }
+        if = {
+            limit = {
+                has_pop_flag = "espionage_purpose_recruit_defector"
+            }
+            remove_pop_flag = "espionage_purpose_recruit_defector"
+            log = ">>> disengage_intelligencer effect: pop was disengaged from recruit defector"
+        }
+        if = {
+            limit = {
+                has_pop_flag = "espionage_purpose_commit_sabotage"
+            }
+            remove_pop_flag = "espionage_purpose_commit_sabotage"
+            log = ">>> disengage_intelligencer effect: pop was disengaged from commit sabotage"
+        }
     }
 }
 
@@ -38,6 +81,18 @@ set_intelligencer_on_assignment = {
             days = $ARG1$
         }
         log = ">>> set_intelligencer_on_assignment effect: pop was assigned for espionage action"
+    }
+}
+
+revoke_intelligencer_from_assignment = {
+    event_target:espionage_origin_spy = {
+        if = {
+            limit = {
+                has_pop_flag = "intelligencer_on_assignment"
+            }
+            remove_pop_flag = "intelligencer_on_assignment"
+            log = ">>> revoke_intelligencer_from_assignment effect: pop was revoked from espionage action"
+        }
     }
 }
 
@@ -59,7 +114,7 @@ count_espionage_subjects = {
             }
         }
     }
-    log = ">>> count_espionage_subjects effect: countries [event_target:espionage_origin_country.possibly_affected_by_espionage_counter] was counted as possible espionage subject for [event_target:espionage_origin_country.GetName]"
+    log = ">>> count_espionage_subjects effect: countries was counted as possible espionage subject"
 }
 
 find_espionage_subject = {
@@ -72,6 +127,6 @@ find_espionage_subject = {
             days = 3
         }
         save_event_target_as = "espionage_target_country"
-        log = ">>> find_espionage_subject effect: country [event_target:espionage_target_country.GetName] was selected as espionage subject for [event_target:espionage_origin_country.GetName]"
+        log = ">>> find_espionage_subject effect: country was selected as espionage subject"
     }
 }
