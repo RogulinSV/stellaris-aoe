@@ -11,12 +11,43 @@ event = {
                 limit = {
                     has_modifier = "planet_interstellar_research"
                 }
-                log = "aoe_pulse_actions.1: planet [This.GetName] has modifier"
+                save_event_target_as = "observatory_owner_planet"
+                prev = {
+                    save_event_target_as = "observatory_owner_country"
+                }
                 if = {
                     limit = {
                         has_building = "building_observatory_1"
                     }
-                    log = "aoe_pulse_actions.1: planet [This.GetName] has building"
+                    planet_event = {
+                        id = aoe_pulse_actions.4
+                        days = 60
+                        random = 30
+                    }
+                    random = {
+                        chance = 70
+                        planet_event = {
+                            id = aoe_pulse_actions.4
+                            days = 120
+                            random = 60
+                        }
+                    }
+                    random = {
+                        chance = 40
+                        planet_event = {
+                            id = aoe_pulse_actions.4
+                            days = 180
+                            random = 90
+                        }
+                    }
+                    random = {
+                        chance = 10
+                        planet_event = {
+                            id = aoe_pulse_actions.4
+                            days = 240
+                            random = 120
+                        }
+                    }
                     while = {
                         count = 1
                         closest_system = {
@@ -28,8 +59,6 @@ event = {
                                         habitable_planet = yes
                                         is_outerworlds_planet = yes
                                         is_extraterrestrial_planet = yes
-                                        is_colony = yes
-                                        is_capital = yes
                                     }
                                     NOT = {
                                         is_same_value = prevprev
@@ -40,10 +69,10 @@ event = {
                                             is_same_value = prevprevprev
                                         }
                                     }
-                                    # is_surveyed = {
-                                    #     who = prevprevprev
-                                    #     status = yes
-                                    # }
+                                    check_variable = {
+                                        which = "observed_resources_planet_counter"
+                                        value < 5
+                                    }
                                 }
                             }
                             random_system_planet = {
@@ -52,8 +81,6 @@ event = {
                                         habitable_planet = yes
                                         is_outerworlds_planet = yes
                                         is_extraterrestrial_planet = yes
-                                        is_colony = yes
-                                        is_capital = yes
                                     }
                                     NOT = {
                                         is_same_value = prevprev
@@ -64,15 +91,8 @@ event = {
                                             is_same_value = prevprevprev
                                         }
                                     }
-                                    # is_surveyed = {
-                                    #    who = prevprevprev
-                                    #    status = yes
-                                    # }
                                 }
                                 log = "aoe_pulse_actions.1: planet [This.GetName] was selected"
-                                prevprevprev = {
-                                    save_event_target_as = "observatory_owner_country"
-                                }
                                 planet_event = {
                                     id = aoe_pulse_actions.2
                                     days = 720
@@ -86,6 +106,48 @@ event = {
                     limit = {
                         has_building = "building_observatory_2"
                     }
+                    planet_event = {
+                        id = aoe_pulse_actions.4
+                        days = 60
+                        random = 30
+                    }
+                    planet_event = {
+                        id = aoe_pulse_actions.4
+                        days = 120
+                        random = 60
+                    }
+                    random = {
+                        chance = 80
+                        planet_event = {
+                            id = aoe_pulse_actions.4
+                            days = 180
+                            random = 90
+                        }
+                    }
+                    random = {
+                        chance = 60
+                        planet_event = {
+                            id = aoe_pulse_actions.4
+                            days = 240
+                            random = 120
+                        }
+                    }
+                    random = {
+                        chance = 40
+                        planet_event = {
+                            id = aoe_pulse_actions.4
+                            days = 300
+                            random = 150
+                        }
+                    }
+                    random = {
+                        chance = 20
+                        planet_event = {
+                            id = aoe_pulse_actions.4
+                            days = 360
+                            random = 180
+                        }
+                    }
                     while = {
                         count = 2
                         closest_system = {
@@ -97,8 +159,6 @@ event = {
                                         habitable_planet = yes
                                         is_outerworlds_planet = yes
                                         is_extraterrestrial_planet = yes
-                                        is_colony = yes
-                                        is_capital = yes
                                     }
                                     NOT = {
                                         is_same_value = prevprev
@@ -108,6 +168,10 @@ event = {
                                         owner = {
                                             is_same_value = prevprevprev
                                         }
+                                    }
+                                    check_variable = {
+                                        which = "observed_resources_planet_counter"
+                                        value < 10
                                     }
                                 }
                             }
@@ -117,8 +181,6 @@ event = {
                                         habitable_planet = yes
                                         is_outerworlds_planet = yes
                                         is_extraterrestrial_planet = yes
-                                        is_colony = yes
-                                        is_capital = yes
                                     }
                                     NOT = {
                                         is_same_value = prevprev
@@ -129,9 +191,6 @@ event = {
                                             is_same_value = prevprevprev
                                         }
                                     }
-                                }
-                                prevprevprev = {
-                                    save_event_target_as = "observatory_owner_country"
                                 }
                                 planet_event = {
                                     id = aoe_pulse_actions.2
@@ -1157,6 +1216,25 @@ planet_event = {
 
         if = {
             limit = {
+                check_variable = {
+                    which = "observed_resources_planet_counter"
+                    value < 1
+                }
+            }
+            set_variable = {
+                which = "observed_resources_planet_counter"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "observed_resources_planet_counter"
+                value = 1
+            }
+        }
+
+        if = {
+            limit = {
                 exists = event_target:observatory_owner_country
             }
             event_target:observatory_owner_country = {
@@ -1166,7 +1244,6 @@ planet_event = {
             }
         }
 
-        print_scope_effect = yes
         log = "aoe_pulse_actions.2: Deposits added into the planet «[This.GetName]» from «[This.solar_system.GetName]» system"
     }
 }
@@ -1181,12 +1258,91 @@ country_event = {
     location = event_target:observatory_target_planet
 
     immediate = {
-        print_scope_effect = yes
         log = "aoe_pulse_actions.3: Deposits added into the planet «[event_target:observatory_target_planet.GetName]» from «[event_target:observatory_target_planet.solar_system.GetName]» system"
     }
 
     option = {
         name = aoe_pulse_actions.3.a
         custom_tooltip = aoe_pulse_actions.3.a.tooltip
+    }
+}
+
+planet_event = {
+    id = aoe_pulse_actions.4
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = event_target:observatory_owner_country
+        exists = owner
+        owner = {
+            is_same_value = event_target:observatory_owner_country
+        }
+        OR = {
+            has_building = "building_observatory_1"
+            has_building = "building_observatory_2"
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                has_building = "building_observatory_2"
+            }
+            solar_system = {
+                closest_system = {
+                    min_steps = 1
+                    max_steps = 20
+                    limit = {
+                        any_system_planet = {
+                            is_surveyed = {
+                                who = event_target:observatory_owner_country
+                                status = no
+                            }
+                        }
+                    }
+                    every_system_planet = {
+                        limit = {
+                            is_surveyed = {
+                                who = event_target:observatory_owner_country
+                                status = no
+                            }
+                        }
+                        surveyed = {
+                            set_surveyed = yes
+                            surveyor = event_target:observatory_owner_country
+                        }
+                    }
+                }
+            }
+        }
+        else = {
+            solar_system = {
+                closest_system = {
+                    min_steps = 1
+                    max_steps = 10
+                    limit = {
+                        any_system_planet = {
+                            is_surveyed = {
+                                who = event_target:observatory_owner_country
+                                status = no
+                            }
+                        }
+                    }
+                    every_system_planet = {
+                        limit = {
+                            is_surveyed = {
+                                who = event_target:observatory_owner_country
+                                status = no
+                            }
+                        }
+                        surveyed = {
+                            set_surveyed = yes
+                            surveyor = event_target:observatory_owner_country
+                        }
+                    }
+                }
+            }
+        }
     }
 }
