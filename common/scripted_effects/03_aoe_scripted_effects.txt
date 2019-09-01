@@ -96,37 +96,51 @@ revoke_intelligencer_from_assignment = {
     }
 }
 
-count_espionage_subjects = {
-    event_target:espionage_origin_country = {
-        set_variable = {
-            which = "possibly_affected_by_espionage_counter"
-            value = 1
-        }
-    }
-    every_country = {
-        limit = {
-            is_subject_of_espionage = yes
-        }
-        event_target:espionage_origin_country = {
-            change_variable = {
-                which = "possibly_affected_by_espionage_counter"
-                value = 1
-            }
-        }
-    }
-    log = ">>> count_espionage_subjects effect: countries was counted as possible espionage subject"
-}
+# count_espionage_subjects = {
+#     event_target:espionage_origin_country = {
+#         set_variable = {
+#             which = "possibly_affected_by_espionage_counter"
+#             value = 0
+#         }
+#     }
+#     every_country = {
+#         limit = {
+#             is_subject_of_espionage = yes
+#         }
+#         event_target:espionage_origin_country = {
+#             if = {
+#                 limit = {
+#                     check_variable = {
+#                         which = "possibly_affected_by_espionage_counter"
+#                         value < 1
+#                     }
+#                 }
+#                 set_variable = {
+#                     which = "possibly_affected_by_espionage_counter"
+#                     value = 1
+#                 }
+#             }
+#             else = {
+#                 change_variable = {
+#                     which = "possibly_affected_by_espionage_counter"
+#                     value = 1
+#                 }
+#             }
+#         }
+#     }
+#     log = ">>> count_espionage_subjects effect: countries was counted as possible espionage subject"
+# }
 
-find_espionage_subject = {
-    random_country = {
-        limit = {
-            is_subject_of_espionage = yes
-        }
-        set_timed_country_flag = {
-            flag = espionage_target_country@event_target:espionage_origin_country
-            days = 3
-        }
-        save_event_target_as = "espionage_target_country"
-        log = ">>> find_espionage_subject effect: country was selected as espionage subject"
-    }
-}
+# find_espionage_subject = {
+#     random_country = {
+#         limit = {
+#             is_subject_of_espionage = yes
+#         }
+#         set_timed_country_flag = {
+#             flag = espionage_target_country@event_target:espionage_origin_country
+#             days = 3
+#         }
+#         save_event_target_as = "espionage_target_country"
+#         log = ">>> find_espionage_subject effect: country was selected as espionage subject"
+#     }
+# }

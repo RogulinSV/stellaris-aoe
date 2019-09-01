@@ -1,7 +1,7 @@
 try_commit_sabotage = {
     random_list = {
         # Nothing organized...
-        10 = {
+        100 = {
             modifier = {
                 factor = 1.5
                 event_target:espionage_target_planet = {
@@ -88,10 +88,21 @@ try_commit_sabotage = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
-            log = ">>> try_recruit_defector effect: nothing was organized"
+            log = ">>> try_commit_sabotage effect: nothing was organized"
         }
         # Demolish Hydroponics Farm
         5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
             modifier = {
                 factor = 0
                 event_target:espionage_target_planet = {
@@ -124,13 +135,18 @@ try_commit_sabotage = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            log = ">>> try_commit_sabotage effect: Hydroponics Farm was demolished"
         }
         # Demolish Food Processing Facility
         5 = {
             modifier = {
                 factor = 0
                 event_target:espionage_origin_spy = {
-                    is_intelligencer_not_ranked = yes
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
                 }
             }
             modifier = {
@@ -165,6 +181,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            log = ">>> try_commit_sabotage effect: Food Processing Facility was demolished"
         }
         # Demolish Food Processing Center
         5 = {
@@ -172,8 +189,6 @@ try_commit_sabotage = {
                 factor = 0
                 event_target:espionage_origin_spy = {
                     NOR = {
-                        is_intelligencer_has_rank_2 = yes
-                        is_intelligencer_has_rank_3 = yes
                         is_intelligencer_has_rank_4 = yes
                         is_intelligencer_has_rank_5 = yes
                     }
@@ -211,13 +226,18 @@ try_commit_sabotage = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            log = ">>> try_commit_sabotage effect: Food Processing Center was demolished"
         }
         # Demolish Mineral Purification Plant
         5 = {
             modifier = {
                 factor = 0
                 event_target:espionage_origin_spy = {
-                    is_intelligencer_not_ranked = yes
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
                 }
             }
             modifier = {
@@ -252,6 +272,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            log = ">>> try_commit_sabotage effect: Mineral Purification Plant was demolished"
         }
         # Demolish Mineral Purification Hub
         5 = {
@@ -259,8 +280,6 @@ try_commit_sabotage = {
                 factor = 0
                 event_target:espionage_origin_spy = {
                     NOR = {
-                        is_intelligencer_has_rank_2 = yes
-                        is_intelligencer_has_rank_3 = yes
                         is_intelligencer_has_rank_4 = yes
                         is_intelligencer_has_rank_5 = yes
                     }
@@ -298,6 +317,2576 @@ try_commit_sabotage = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            log = ">>> try_commit_sabotage effect: Mineral Purification Hub was demolished"
+        }
+        # Demolish Energy Grid
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_energy_grid"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_energy_grid"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_ENERGY_GRID_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_ENERGY_GRID_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Energy Grid was demolished"
+        }
+        # Demolish Energy Nexus
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_energy_nexus"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_energy_nexus"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_ENERGY_NEXUS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_ENERGY_NEXUS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Energy Nexus was demolished"
+        }
+        # Demolish Resource Silo
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_resource_silo"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_resource_silo"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_RESOURCE_SILO_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_RESOURCE_SILO_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Resource Silo was demolished"
+        }
+        # Demolish Bio Reactor
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_bio_reactor"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_bio_reactor"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_BIO_REACTOR_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_BIO_REACTOR_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Bio Reactor was demolished"
+        }
+        # Demolish Foundry I
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_foundry_1"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_foundry_1"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_FOUNDRY_1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_FOUNDRY_1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Foundry I was demolished"
+        }
+        # Demolish Foundry II
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_foundry_2"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_foundry_2"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_FOUNDRY_2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_FOUNDRY_2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Foundry II was demolished"
+        }
+        # Demolish Foundry III
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_foundry_3"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_foundry_3"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_FOUNDRY_3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_FOUNDRY_3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Foundry III was demolished"
+        }
+        # Demolish Factory I
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_factory_1"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_factory_1"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_FACTORY_1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_FACTORY_1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Factory I was demolished"
+        }
+        # Demolish Factory II
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_factory_2"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_factory_2"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_FACTORY_2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_FACTORY_2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Factory II was demolished"
+        }
+        # Demolish Factory III
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_factory_3"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_factory_3"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_FACTORY_3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_FACTORY_3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Factory III was demolished"
+        }
+        # Demolish Refinery
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_refinery"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_refinery"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_REFINERY_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_REFINERY_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Refinery was demolished"
+        }
+        # Demolish Chemical Plant
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_chemical_plant"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_chemical_plant"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_CHEMICAL_PLANT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_CHEMICAL_PLANT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Chemical Plant was demolished"
+        }
+        # Demolish Crystal Plant
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_crystal_plant"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_crystal_plant"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_CRYSTAL_PLANT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_CRYSTAL_PLANT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Crystal Plant was demolished"
+        }
+        # Demolish Nanite Transmuter
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_nanite_transmuter"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_nanite_transmuter"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_NANITE_TRANSMUTER_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_NANITE_TRANSMUTER_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Nanite Transmuter was demolished"
+        }
+        # Demolish Ministry Production
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_ministry_production"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_ministry_production"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_MINISTRY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MINISTRY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Ministry Production was demolished"
+        }
+        # Demolish Production Center
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_production_center"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_production_center"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_PRODUCTION_CENTER_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_PRODUCTION_CENTER_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Production Center was demolished"
+        }
+        # Demolish Research Lab I
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_research_lab_1"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_research_lab_1"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_RESEARCH_LAB_1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_RESEARCH_LAB_1_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Research Lab I was demolished"
+        }
+        # Demolish Research Lab II
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_research_lab_2"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_research_lab_2"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_RESEARCH_LAB_2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_RESEARCH_LAB_2_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Research Lab II was demolished"
+        }
+        # Demolish Research Lab III
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_research_lab_3"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_research_lab_3"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_RESEARCH_LAB_3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_RESEARCH_LAB_3_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Research Lab III was demolished"
+        }
+        # Demolish Institute
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_institute"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_institute"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_INSTITUTE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_INSTITUTE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Institute was demolished"
+        }
+        # Demolish Supercomputer
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_supercomputer"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_supercomputer"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_SUPERCOMPUTER_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_SUPERCOMPUTER_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Supercomputer was demolished"
+        }
+        # Demolish Commercial Zone
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_commercial_zone"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_commercial_zone"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_COMMERCIAL_ZONE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_COMMERCIAL_ZONE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Commercial Zone was demolished"
+        }
+        # Demolish Commercial Megaplex
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_commercial_megaplex"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_commercial_megaplex"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_COMMERCIAL_MEGAPLEX_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_COMMERCIAL_MEGAPLEX_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Commercial Megaplex was demolished"
+        }
+        # Demolish Galactic Stock Exchange
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_galactic_stock_exchange"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_galactic_stock_exchange"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_GALACTIC_STOCK_EXCHANGE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_GALACTIC_STOCK_EXCHANGE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Galactic Stock Exchange was demolished"
+        }
+        # Demolish Luxury Residence
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_luxury_residence"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_luxury_residence"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_LUXURY_RESIDENCE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_LUXURY_RESIDENCE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Luxury Residence was demolished"
+        }
+        # Demolish Paradise Dome
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_paradise_dome"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_paradise_dome"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_PARADISE_DOME_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_PARADISE_DOME_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Paradise Dome was demolished"
+        }
+        # Demolish Communal Housing
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_communal_housing"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_communal_housing"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_COMMUNAL_HOUSING_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_COMMUNAL_HOUSING_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Communal Housing was demolished"
+        }
+        # Demolish Communal Housing Large
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_communal_housing_large"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_communal_housing_large"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_COMMUNAL_HOUSING_LARGE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_COMMUNAL_HOUSING_LARGE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Communal Housing Large was demolished"
+        }
+        # Demolish Drone Storage
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_drone_storage"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_drone_storage"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_DRONE_STORAGE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_DRONE_STORAGE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Drone Storage was demolished"
+        }
+        # Demolish Drone Megastorage
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        has_building = "building_drone_megastorage"
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                remove_building = "building_drone_megastorage"
+                add_building = "building_debris"
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_DRONE_MEGASTORAGE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_DRONE_MEGASTORAGE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: Drone Megastorage was demolished"
+        }
+        # Disrupt military production on 100 days
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        NOT = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_module = shipyard
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.8
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starport
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.6
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starhold
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.4
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starfortress
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.2
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_citadel
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    set_timed_star_flag = {
+                        flag = "espionage_disrupt_military_production"
+                        days = 100
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DISRUPT_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military production was disrupted on 100 days"
+        }
+        # Disrupt military production on 200 days
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        NOT = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_module = shipyard
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.8
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starport
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.6
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starhold
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.4
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starfortress
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.2
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_citadel
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    set_timed_star_flag = {
+                        flag = "espionage_disrupt_military_production"
+                        days = 200
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DISRUPT_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military production was disrupted on 200 days"
+        }
+        # Disrupt military production on 300 days
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        NOT = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_module = shipyard
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.8
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starport
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.6
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starhold
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.4
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starfortress
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.2
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_citadel
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    set_timed_star_flag = {
+                        flag = "espionage_disrupt_military_production"
+                        days = 300
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DISRUPT_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military production was disrupted on 300 days"
+        }
+        # Disrupt military production on 400 days
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        NOT = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_module = shipyard
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.8
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starport
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.6
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starhold
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.4
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starfortress
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.2
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_citadel
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    set_timed_star_flag = {
+                        flag = "espionage_disrupt_military_production"
+                        days = 400
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DISRUPT_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military production was disrupted on 400 days"
+        }
+        # Disrupt military production on 500 days
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        NOT = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_module = shipyard
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.8
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starport
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.6
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starhold
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.4
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starfortress
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.2
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_citadel
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    set_timed_star_flag = {
+                        flag = "espionage_disrupt_military_production"
+                        days = 500
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DISRUPT_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military production was disrupted on 500 days"
+        }
+        # Disrupt military production on 600 days
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        NOT = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_module = shipyard
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.8
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starport
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.6
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starhold
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.4
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_starfortress
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.2
+                event_target:espionage_target_planet = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            has_starbase_size = starbase_citadel
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    set_timed_star_flag = {
+                        flag = "espionage_disrupt_military_production"
+                        days = 600
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DISRUPT_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_PRODUCTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military production was disrupted on 600 days"
+        }
+        # Demolish fleet <= 500
+        10 = {
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            any_ship_in_system = {
+                                exists = owner
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                                exists = fleet
+                                fleet = {
+                                    fleet_power <= 500
+                                }
+                                is_ship_class = "shipclass_military"
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    random_fleet_in_system = {
+                        limit = {
+                            exists = owner
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            fleet_power <= 500
+                        }
+                        if = {
+                            limit = {
+                                exists = leader
+                            }
+                            leader = {
+                                kill_leader = {
+                                    type = admiral
+                                    show_notification = yes
+                                }
+                            }
+                        }
+                        destroy_fleet = this
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military fleet with power <= 500 was demolished"
+        }
+        # Demolish fleet <= 1000
+        8 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            any_ship_in_system = {
+                                exists = owner
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                                exists = fleet
+                                fleet = {
+                                    fleet_power <= 1000
+                                }
+                                is_ship_class = "shipclass_military"
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    random_fleet_in_system = {
+                        limit = {
+                            exists = owner
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            fleet_power <= 1000
+                        }
+                        if = {
+                            limit = {
+                                exists = leader
+                            }
+                            leader = {
+                                kill_leader = {
+                                    type = admiral
+                                    show_notification = yes
+                                }
+                            }
+                        }
+                        destroy_fleet = this
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military fleet with power <= 1000 was demolished"
+        }
+        # Demolish fleet <= 5000
+        6 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            any_ship_in_system = {
+                                exists = owner
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                                exists = fleet
+                                fleet = {
+                                    fleet_power <= 5000
+                                }
+                                is_ship_class = "shipclass_military"
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    random_fleet_in_system = {
+                        limit = {
+                            exists = owner
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            fleet_power <= 5000
+                        }
+                        if = {
+                            limit = {
+                                exists = leader
+                            }
+                            leader = {
+                                kill_leader = {
+                                    type = admiral
+                                    show_notification = yes
+                                }
+                            }
+                        }
+                        destroy_fleet = this
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military fleet with power <= 5000 was demolished"
+        }
+        # Demolish fleet <= 10000
+        4 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            any_ship_in_system = {
+                                exists = owner
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                                exists = fleet
+                                fleet = {
+                                    fleet_power <= 10000
+                                }
+                                is_ship_class = "shipclass_military"
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    random_fleet_in_system = {
+                        limit = {
+                            exists = owner
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            fleet_power <= 10000
+                        }
+                        if = {
+                            limit = {
+                                exists = leader
+                            }
+                            leader = {
+                                kill_leader = {
+                                    type = admiral
+                                    show_notification = yes
+                                }
+                            }
+                        }
+                        destroy_fleet = this
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military fleet with power <= 10000 was demolished"
+        }
+        # Demolish fleet <= 25000
+        3 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            any_ship_in_system = {
+                                exists = owner
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                                exists = fleet
+                                fleet = {
+                                    fleet_power <= 25000
+                                }
+                                is_ship_class = "shipclass_military"
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    random_fleet_in_system = {
+                        limit = {
+                            exists = owner
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            fleet_power <= 25000
+                        }
+                        if = {
+                            limit = {
+                                exists = leader
+                            }
+                            leader = {
+                                kill_leader = {
+                                    type = admiral
+                                    show_notification = yes
+                                }
+                            }
+                        }
+                        destroy_fleet = this
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military fleet with power <= 25000 was demolished"
+        }
+        # Demolish fleet <= 50000
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            any_ship_in_system = {
+                                exists = owner
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                                exists = fleet
+                                fleet = {
+                                    fleet_power <= 50000
+                                }
+                                is_ship_class = "shipclass_military"
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    random_fleet_in_system = {
+                        limit = {
+                            exists = owner
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            fleet_power <= 50000
+                        }
+                        if = {
+                            limit = {
+                                exists = leader
+                            }
+                            leader = {
+                                kill_leader = {
+                                    type = admiral
+                                    show_notification = yes
+                                }
+                            }
+                        }
+                        destroy_fleet = this
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military fleet with power <= 50000 was demolished"
+        }
+        # Demolish fleet <= 100000
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            any_ship_in_system = {
+                                exists = owner
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                                exists = fleet
+                                fleet = {
+                                    fleet_power <= 100000
+                                }
+                                is_ship_class = "shipclass_military"
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    random_fleet_in_system = {
+                        limit = {
+                            exists = owner
+                            owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            fleet_power <= 100000
+                        }
+                        if = {
+                            limit = {
+                                exists = leader
+                            }
+                            leader = {
+                                kill_leader = {
+                                    type = admiral
+                                    show_notification = yes
+                                }
+                            }
+                        }
+                        destroy_fleet = this
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MILITARY_FLEET_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: military fleet with power <= 100000 was demolished"
         }
     }
 }

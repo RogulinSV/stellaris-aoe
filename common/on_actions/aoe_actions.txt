@@ -44,6 +44,8 @@ on_ship_built = {
         aoe_ship_actions.8
         # Transport built Event
         aoe_ship_actions.9
+        # Disrupt military production
+        aoe_espionage_actions.8
     }
 }
 

@@ -371,4 +371,10 @@ spriteTypes = {
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
+    spriteType = {
+        name = "GFX_aoe_espionage_military_ship_explosion"
+        texturefile = "gfx/event_pictures/espionage_military_ship_explosion.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
 }
