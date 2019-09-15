@@ -211,3 +211,19 @@
     trait_intelligencer_prophet:0 "Шпион в звании §Rмагистр§!"
     trait_intelligencer_prophet_desc:0 "Шпион в звании §Rмагистр§!"
     TRAIT_INTELLIGENCER_PROPHET_SPECIES_EFFECT:0 "Шпион в звании §Rмагистр§!"
+
+    trait_deprivated_pop:0 "Сенсорная депривация"
+    trait_deprivated_pop_desc:0 "Сенсорная депривация"
+    TRAIT_DEPRIVATED_POP_EFFECT:0 "Сенсорная депривация"
+
+    trait_frustrated_pop:0 "Ментальная фрустрация"
+    trait_frustrated_pop_desc:0 "Ментальная фрустрация"
+    TRAIT_FRUSTRATED_POP_EFFECT:0 "Ментальная фрустрация"
+
+    trait_malfunctioned_pop:0 "Перманентный аварийный режим"
+    trait_malfunctioned_pop_desc:0 "Перманентный аварийный режим"
+    TRAIT_MALFUNCTIONED_POP_EFFECT:0 "Перманентный аварийный режим"
+
+    trait_marginalized_pop:0 "Социальная маргинализация"
+    trait_marginalized_pop_desc:0 "Социальная маргинализация"
+    TRAIT_MARGINALIZED_POP_EFFECT:0 "Социальная маргинализация"

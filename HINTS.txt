@@ -130,6 +130,7 @@ pop_growth_from_immigration = -0.5
 pop_citizen_happiness = 0.05
 pop_housing_usage_mult = -0.10
 pop_amenities_usage_mult = -0.10
+pop_demotion_time_mult = -0.45
 
 biological_pop_happiness = 0.10
 colony_start_num_pops_add = 1
@@ -222,6 +223,24 @@ add_random_research_option = {
             min = @tier5researchmin
             max = @tier5researchmax
         }
+    }
+}
+
+owner = {
+    add_static_war_exhaustion = {
+        attacker = from.fleet.owner
+        location = root
+        value_for_planet_destruction = 1.0
+    }
+    create_fleet_from_naval_cap = 0.4
+}
+
+any_relation = {
+    OR = {
+        is_in_federation_with = root
+        has_defensive_pact = root
+        has_commercial_pact = root
+        has_migration_access = root
     }
 }
 

@@ -80,6 +80,13 @@ intelligencer = {
         weight = @ruler_job_weight
 
         modifier = {
+            factor = 0
+            NOR = {
+                is_unemployed = yes
+                has_job = "intelligencer"
+            }
+        }
+        modifier = {
             factor = 10000
             has_job = "intelligencer"
         }

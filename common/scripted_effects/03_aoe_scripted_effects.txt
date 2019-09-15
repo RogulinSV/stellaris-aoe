@@ -33,6 +33,12 @@ engage_intelligencer_espionage_purpose_commit_sabotage = {
     }
 }
 
+engage_intelligencer_espionage_purpose_broadcast_propaganda = {
+    event_target:espionage_origin_spy = {
+        set_pop_flag = "espionage_purpose_broadcast_propaganda"
+        log = ">>> engage_intelligencer_espionage_purpose_broadcast_propaganda effect: pop was engaged for broadcast propaganda"
+    }
+}
 
 disengage_intelligencer = {
     event_target:espionage_origin_spy = {
@@ -71,6 +77,13 @@ disengage_intelligencer = {
             remove_pop_flag = "espionage_purpose_commit_sabotage"
             log = ">>> disengage_intelligencer effect: pop was disengaged from commit sabotage"
         }
+        if = {
+            limit = {
+                has_pop_flag = "espionage_purpose_broadcast_propaganda"
+            }
+            remove_pop_flag = "espionage_purpose_broadcast_propaganda"
+            log = ">>> disengage_intelligencer effect: pop was disengaged from broadcast propaganda"
+        }
     }
 }
 
@@ -96,51 +109,91 @@ revoke_intelligencer_from_assignment = {
     }
 }
 
-# count_espionage_subjects = {
-#     event_target:espionage_origin_country = {
-#         set_variable = {
-#             which = "possibly_affected_by_espionage_counter"
-#             value = 0
-#         }
-#     }
-#     every_country = {
-#         limit = {
-#             is_subject_of_espionage = yes
-#         }
-#         event_target:espionage_origin_country = {
-#             if = {
-#                 limit = {
-#                     check_variable = {
-#                         which = "possibly_affected_by_espionage_counter"
-#                         value < 1
-#                     }
-#                 }
-#                 set_variable = {
-#                     which = "possibly_affected_by_espionage_counter"
-#                     value = 1
-#                 }
-#             }
-#             else = {
-#                 change_variable = {
-#                     which = "possibly_affected_by_espionage_counter"
-#                     value = 1
-#                 }
-#             }
-#         }
-#     }
-#     log = ">>> count_espionage_subjects effect: countries was counted as possible espionage subject"
-# }
-
-# find_espionage_subject = {
-#     random_country = {
-#         limit = {
-#             is_subject_of_espionage = yes
-#         }
-#         set_timed_country_flag = {
-#             flag = espionage_target_country@event_target:espionage_origin_country
-#             days = 3
-#         }
-#         save_event_target_as = "espionage_target_country"
-#         log = ">>> find_espionage_subject effect: country was selected as espionage subject"
-#     }
-# }
+# Scope: pop
+promote_intelligencer = {
+    if = {
+        limit = {
+            NOR = {
+                pop_has_trait = "trait_intelligencer_neophyte"
+                pop_has_trait = "trait_intelligencer_acolyte"
+                pop_has_trait = "trait_intelligencer_adept"
+                pop_has_trait = "trait_intelligencer_master"
+                pop_has_trait = "trait_intelligencer_prophet"
+            }
+        }
+        modify_species = {
+            species = this
+            add_trait = "trait_intelligencer_neophyte"
+        }
+    }
+    else_if = {
+        limit = {
+            pop_has_trait = "trait_intelligencer_neophyte"
+            NOR = {
+                pop_has_trait = "trait_intelligencer_acolyte"
+                pop_has_trait = "trait_intelligencer_adept"
+                pop_has_trait = "trait_intelligencer_master"
+                pop_has_trait = "trait_intelligencer_prophet"
+            }
+        }
+        modify_species = {
+            species = this
+            remove_trait = "trait_intelligencer_neophyte"
+        }
+        modify_species = {
+            species = this
+            add_trait = "trait_intelligencer_acolyte"
+        }
+    }
+    else_if = {
+        limit = {
+            pop_has_trait = "trait_intelligencer_acolyte"
+            NOR = {
+                pop_has_trait = "trait_intelligencer_adept"
+                pop_has_trait = "trait_intelligencer_master"
+                pop_has_trait = "trait_intelligencer_prophet"
+            }
+        }
+        modify_species = {
+            species = this
+            remove_trait = "trait_intelligencer_acolyte"
+        }
+        modify_species = {
+            species = this
+            add_trait = "trait_intelligencer_adept"
+        }
+    }
+    else_if = {
+        limit = {
+            pop_has_trait = "trait_intelligencer_adept"
+            NOR = {
+                pop_has_trait = "trait_intelligencer_master"
+                pop_has_trait = "trait_intelligencer_prophet"
+            }
+        }
+        modify_species = {
+            species = this
+            remove_trait = "trait_intelligencer_adept"
+        }
+        modify_species = {
+            species = this
+            add_trait = "trait_intelligencer_master"
+        }
+    }
+    else_if = {
+        limit = {
+            pop_has_trait = "trait_intelligencer_master"
+            NOT = {
+                pop_has_trait = "trait_intelligencer_prophet"
+            }
+        }
+        modify_species = {
+            species = this
+            remove_trait = "trait_intelligencer_master"
+        }
+        modify_species = {
+            species = this
+            add_trait = "trait_intelligencer_prophet"
+        }
+    }
+}

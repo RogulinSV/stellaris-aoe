@@ -1,0 +1,3614 @@
+try_broadcast_propaganda = {
+    random_list = {
+        # Unsuccessful propaganda...
+        100 = {
+            modifier = {
+                factor = 1.5
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_1 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2.5
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 3.5
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_target_planet = {
+                    any_pop = {
+                        is_intelligencer_has_purpose_disclose_spies = yes
+                        is_appointed_intelligencer = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_target_country = {
+                    is_fallen_empire = yes
+                }
+            }
+            modifier = {
+                factor = 0.1
+                event_target:espionage_target_planet = {
+                    NOT = {
+                        any_pop = {
+                            is_intelligencer = yes
+                        }
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_NONE_GAINED
+                    localization = MESSAGE_SPY_NONE_GAINED_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: nothing was organized"
+        }
+        # Propaganda: change pop ethics to spiritualism
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_spiritualist = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "traditionalist"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "traditionalist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    is_spiritualist = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_in_federation_with = event_target:espionage_origin_country
+                        has_defensive_pact = event_target:espionage_origin_country
+                        has_commercial_pact = event_target:espionage_origin_country
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    has_faction = "technologist"
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "technologist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_materialist = yes
+                }
+            }
+            modifier = {
+                factor = 0.75
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_hostile_to = event_target:espionage_origin_country
+                        is_domineering_to = event_target:espionage_origin_country
+                        is_rival = event_target:espionage_origin_country
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 2
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 3
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 4
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 5
+                    }
+                }
+            }
+            else = {
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                }
+            }
+            while = {
+                limit = {
+                    event_target:espionage_target_planet = {
+                        check_variable = {
+                            which = "espionage_propaganda_affected_pops_counter"
+                            value > 0
+                        }
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    subtract_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                    random_owned_pop = {
+                        limit = {
+                            is_spiritualist = no
+                            is_being_purged = no
+                            NOT = {
+                                has_pop_flag = "changed_pop"
+                            }
+                        }
+                        if = {
+                            limit = {
+                                is_sapient = yes
+                                is_robot_pop = no
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_frustration = yes
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_deprivation = yes
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                is_sapient = no
+                                is_robot_pop = yes
+                            }
+                            pop_provoke_malfunction = yes
+                        }
+                        wipe_pop_ethos = yes
+                        pop_change_ethic = "ethic_spiritualist"
+                        set_timed_pop_flag = {
+                            flag = "changed_pop"
+                            days = 90
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: culture was perverted into spiritualism"
+        }
+        # Propaganda: change pop ethics to materialism
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_materialist = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "technologist"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "technologist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    is_materialist = yes
+                }
+            }
+            modifier = {
+                factor = 1.5
+                event_target:espionage_target_country = {
+                    has_policy_flag = "ai_full_rights"
+                }
+            }
+            modifier = {
+                factor = 1.5
+                event_target:espionage_target_planet = {
+                    any_owned_pop = {
+                        OR = {
+                            has_trait = "trait_natural_sociologists"
+                            has_trait = "trait_natural_engineers"
+                            has_trait = "trait_natural_physicists"
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    has_faction = "traditionalist"
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "traditionalist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_spiritualist = yes
+                }
+            }
+            modifier = {
+                factor = 0.75
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_hostile_to = event_target:espionage_origin_country
+                        is_domineering_to = event_target:espionage_origin_country
+                        is_rival = event_target:espionage_origin_country
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 2
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 3
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 4
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 5
+                    }
+                }
+            }
+            else = {
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                }
+            }
+            while = {
+                limit = {
+                    event_target:espionage_target_planet = {
+                        check_variable = {
+                            which = "espionage_propaganda_affected_pops_counter"
+                            value > 0
+                        }
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    subtract_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                    random_owned_pop = {
+                        limit = {
+                            is_materialist = no
+                            is_being_purged = no
+                            NOT = {
+                                has_pop_flag = "changed_pop"
+                            }
+                        }
+                        if = {
+                            limit = {
+                                is_sapient = yes
+                                is_robot_pop = no
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_frustration = yes
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_deprivation = yes
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                is_sapient = no
+                                is_robot_pop = yes
+                            }
+                            pop_provoke_malfunction = yes
+                        }
+                        wipe_pop_ethos = yes
+                        pop_change_ethic = "ethic_materialist"
+                        set_timed_pop_flag = {
+                            flag = "changed_pop"
+                            days = 90
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: culture was perverted into materialism"
+        }
+        # Propaganda: change pop ethics to authoritarianism
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_authoritarian = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "totalitarian"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "totalitarian"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    is_authoritarian = yes
+                }
+            }
+            modifier = {
+                factor = 1.5
+                event_target:espionage_target_country = {
+                    has_election_type = none
+                }
+            }
+            modifier = {
+                factor = 1.5
+                event_target:espionage_target_planet = {
+                    any_owned_pop = {
+                        is_enslaved = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    has_faction = "progressive"
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "progressive"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_egalitarian = yes
+                }
+            }
+            modifier = {
+                factor = 0.75
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_hostile_to = event_target:espionage_origin_country
+                        is_domineering_to = event_target:espionage_origin_country
+                        is_rival = event_target:espionage_origin_country
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 2
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 3
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 4
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 5
+                    }
+                }
+            }
+            else = {
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                }
+            }
+            while = {
+                limit = {
+                    event_target:espionage_target_planet = {
+                        check_variable = {
+                            which = "espionage_propaganda_affected_pops_counter"
+                            value > 0
+                        }
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    subtract_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                    random_owned_pop = {
+                        limit = {
+                            is_authoritarian = no
+                            is_being_purged = no
+                            NOT = {
+                                has_pop_flag = "changed_pop"
+                            }
+                        }
+                        if = {
+                            limit = {
+                                is_sapient = yes
+                                is_robot_pop = no
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_frustration = yes
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_deprivation = yes
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                is_sapient = no
+                                is_robot_pop = yes
+                            }
+                            pop_provoke_malfunction = yes
+                        }
+                        wipe_pop_ethos = yes
+                        pop_change_ethic = "ethic_authoritarian"
+                        set_timed_pop_flag = {
+                            flag = "changed_pop"
+                            days = 90
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: culture was perverted into authoritarianism"
+        }
+        # Propaganda: change pop ethics to egalitarianism
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_egalitarian = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "progressive"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "progressive"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    is_egalitarian = yes
+                }
+            }
+            modifier = {
+                factor = 1.5
+                event_target:espionage_target_country = {
+                    has_election_type = democratic
+                }
+            }
+            modifier = {
+                factor = 1.5
+                event_target:espionage_target_country = {
+                    AND = {
+                        is_subject = no
+                        has_migration_access = event_target:espionage_origin_country
+                    }
+                    OR = {
+                        is_in_federation_with = event_target:espionage_origin_country
+                        has_defensive_pact = event_target:espionage_origin_country
+                        has_commercial_pact = event_target:espionage_origin_country
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    has_faction = "totalitarian"
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "totalitarian"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_authoritarian = yes
+                }
+            }
+            modifier = {
+                factor = 0.75
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_hostile_to = event_target:espionage_origin_country
+                        is_domineering_to = event_target:espionage_origin_country
+                        is_rival = event_target:espionage_origin_country
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 2
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 3
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 4
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 5
+                    }
+                }
+            }
+            else = {
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                }
+            }
+            while = {
+                limit = {
+                    event_target:espionage_target_planet = {
+                        check_variable = {
+                            which = "espionage_propaganda_affected_pops_counter"
+                            value > 0
+                        }
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    subtract_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                    random_owned_pop = {
+                        limit = {
+                            is_egalitarian = no
+                            is_being_purged = no
+                            NOT = {
+                                has_pop_flag = "changed_pop"
+                            }
+                        }
+                        if = {
+                            limit = {
+                                is_sapient = yes
+                                is_robot_pop = no
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_frustration = yes
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_deprivation = yes
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                is_sapient = no
+                                is_robot_pop = yes
+                            }
+                            pop_provoke_malfunction = yes
+                        }
+                        wipe_pop_ethos = yes
+                        pop_change_ethic = "ethic_egalitarian"
+                        set_timed_pop_flag = {
+                            flag = "changed_pop"
+                            days = 90
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: culture was perverted into egalitarianism"
+        }
+        # Propaganda: change pop ethics to militarism
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_militarist = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "imperialist"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "imperialist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    is_militarist = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_at_war = yes
+                        recently_lost_war = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    has_faction = "prosperity"
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "prosperity"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_pacifist = yes
+                }
+            }
+            modifier = {
+                factor = 0.75
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_hostile_to = event_target:espionage_origin_country
+                        is_domineering_to = event_target:espionage_origin_country
+                        is_rival = event_target:espionage_origin_country
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 2
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 3
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 4
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 5
+                    }
+                }
+            }
+            else = {
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                }
+            }
+            while = {
+                limit = {
+                    event_target:espionage_target_planet = {
+                        check_variable = {
+                            which = "espionage_propaganda_affected_pops_counter"
+                            value > 0
+                        }
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    subtract_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                    random_owned_pop = {
+                        limit = {
+                            is_militarist = no
+                            is_being_purged = no
+                            NOT = {
+                                has_pop_flag = "changed_pop"
+                            }
+                        }
+                        if = {
+                            limit = {
+                                is_sapient = yes
+                                is_robot_pop = no
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_frustration = yes
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_deprivation = yes
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                is_sapient = no
+                                is_robot_pop = yes
+                            }
+                            pop_provoke_malfunction = yes
+                        }
+                        wipe_pop_ethos = yes
+                        pop_change_ethic = "ethic_militarist"
+                        set_timed_pop_flag = {
+                            flag = "changed_pop"
+                            days = 90
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: culture was perverted into militarism"
+        }
+        # Propaganda: change pop ethics to pacifism
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_pacifist = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "prosperity"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "prosperity"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    is_pacifist = yes
+                }
+            }
+            modifier = {
+                factor = 1.33
+                event_target:espionage_target_country = {
+                    years_of_peace = {
+                        value > 20
+                        delay = 50
+                    }
+                }
+            }
+            modifier = {
+                factor = 1.33
+                event_target:espionage_target_country = {
+                    years_of_peace = {
+                        value > 40
+                        delay = 50
+                    }
+                }
+            }
+            modifier = {
+                factor = 1.33
+                event_target:espionage_target_country = {
+                    years_of_peace = {
+                        value > 60
+                        delay = 50
+                    }
+                }
+            }
+            modifier = {
+                factor = 1.33
+                event_target:espionage_target_country = {
+                    years_of_peace = {
+                        value > 80
+                        delay = 50
+                    }
+                }
+            }
+            modifier = {
+                factor = 1.33
+                event_target:espionage_target_country = {
+                    years_of_peace = {
+                        value > 100
+                        delay = 50
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    has_faction = "imperialist"
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "imperialist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_militarist = yes
+                }
+            }
+            modifier = {
+                factor = 0.75
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_hostile_to = event_target:espionage_origin_country
+                        is_domineering_to = event_target:espionage_origin_country
+                        is_rival = event_target:espionage_origin_country
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 2
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 3
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 4
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 5
+                    }
+                }
+            }
+            else = {
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                }
+            }
+            while = {
+                limit = {
+                    event_target:espionage_target_planet = {
+                        check_variable = {
+                            which = "espionage_propaganda_affected_pops_counter"
+                            value > 0
+                        }
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    subtract_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                    random_owned_pop = {
+                        limit = {
+                            is_pacifist = no
+                            is_being_purged = no
+                            NOT = {
+                                has_pop_flag = "changed_pop"
+                            }
+                        }
+                        if = {
+                            limit = {
+                                is_sapient = yes
+                                is_robot_pop = no
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_frustration = yes
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_deprivation = yes
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                is_sapient = no
+                                is_robot_pop = yes
+                            }
+                            pop_provoke_malfunction = yes
+                        }
+                        wipe_pop_ethos = yes
+                        pop_change_ethic = "ethic_pacifist"
+                        set_timed_pop_flag = {
+                            flag = "changed_pop"
+                            days = 90
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: culture was perverted into pacifism"
+        }
+        # Propaganda: change pop ethics to xenophilia
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_xenophile = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "xenoist"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "xenoist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    is_xenophile = yes
+                }
+            }
+            modifier = {
+                factor = 1.33
+                event_target:espionage_target_country = {
+                    is_subject = no
+                    has_migration_access = event_target:espionage_origin_country
+                }
+            }
+            modifier = {
+                factor = 1.33
+                event_target:espionage_target_country = {
+                    allows_alien_leaders = yes
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    OR = {
+                        has_faction = "supremacist"
+                        has_faction = "isolationist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        OR = {
+                            leader_of_faction = "supremacist"
+                            leader_of_faction = "isolationist"
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_xenophobe = yes
+                }
+            }
+            modifier = {
+                factor = 0.75
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_hostile_to = event_target:espionage_origin_country
+                        is_domineering_to = event_target:espionage_origin_country
+                        is_rival = event_target:espionage_origin_country
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    has_opinion_modifier = {
+                        who = event_target:espionage_target_country
+                        modifier = "opinion_genocidal_our_species"
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 2
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 3
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 4
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 5
+                    }
+                }
+            }
+            else = {
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                }
+            }
+            while = {
+                limit = {
+                    event_target:espionage_target_planet = {
+                        check_variable = {
+                            which = "espionage_propaganda_affected_pops_counter"
+                            value > 0
+                        }
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    subtract_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                    random_owned_pop = {
+                        limit = {
+                            is_xenophile = no
+                            is_being_purged = no
+                            NOT = {
+                                has_pop_flag = "changed_pop"
+                            }
+                        }
+                        if = {
+                            limit = {
+                                is_sapient = yes
+                                is_robot_pop = no
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_frustration = yes
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_deprivation = yes
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                is_sapient = no
+                                is_robot_pop = yes
+                            }
+                            pop_provoke_malfunction = yes
+                        }
+                        wipe_pop_ethos = yes
+                        pop_change_ethic = "ethic_xenophile"
+                        set_timed_pop_flag = {
+                            flag = "changed_pop"
+                            days = 90
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: culture was perverted into xenophilia"
+        }
+        # Propaganda: change pop ethics to xenophobia
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_xenophobe = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    OR = {
+                        has_faction = "supremacist"
+                        has_faction = "isolationist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        OR = {
+                            leader_of_faction = "supremacist"
+                            leader_of_faction = "isolationist"
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    is_xenophobe = yes
+                }
+            }
+            modifier = {
+                factor = 1.5
+                event_target:espionage_target_country = {
+                    OR = {
+                        has_valid_civic = "civic_fanatic_purifiers"
+                        has_valid_civic = "civic_inwards_perfection"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    any_war = {
+                        any_defender = {
+                            is_same_value = prevprev
+                        }
+                        any_attacker = {
+                            is_same_species = event_target:espionage_origin_country
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    has_faction = "xenoist"
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "xenoist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_country = {
+                    is_xenophile = yes
+                }
+            }
+            modifier = {
+                factor = 0.75
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_hostile_to = event_target:espionage_origin_country
+                        is_domineering_to = event_target:espionage_origin_country
+                        is_rival = event_target:espionage_origin_country
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_origin_country = {
+                    has_opinion_modifier = {
+                        who = event_target:espionage_target_country
+                        modifier = "opinion_genocidal_our_species"
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 2
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 3
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 4
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 5
+                    }
+                }
+            }
+            else = {
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                }
+            }
+            while = {
+                limit = {
+                    event_target:espionage_target_planet = {
+                        check_variable = {
+                            which = "espionage_propaganda_affected_pops_counter"
+                            value > 0
+                        }
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    subtract_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                    random_owned_pop = {
+                        limit = {
+                            is_xenophobe = no
+                            is_being_purged = no
+                            NOT = {
+                                has_pop_flag = "changed_pop"
+                            }
+                        }
+                        if = {
+                            limit = {
+                                is_sapient = yes
+                                is_robot_pop = no
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_frustration = yes
+                            }
+                            random = {
+                                chance = 50
+                                pop_provoke_deprivation = yes
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                is_sapient = no
+                                is_robot_pop = yes
+                            }
+                            pop_provoke_malfunction = yes
+                        }
+                        wipe_pop_ethos = yes
+                        pop_change_ethic = "ethic_xenophobe"
+                        set_timed_pop_flag = {
+                            flag = "changed_pop"
+                            days = 90
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: culture was perverted into xenophobia"
+        }
+        # Spiritual revolt
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        limit = {
+                            is_spiritualist = yes
+                        }
+                        count < 1
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    planet_stability < @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel3
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel2
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_spiritualist = no
+                }
+            }
+            event_target:espionage_target_planet = {
+                create_rebels = {
+                    species = event_target:espionage_target_country
+                    ethos = {
+                        ethic = "ethic_fanatic_spiritualist"
+                    }
+                    authority = event_target:espionage_origin_country
+                    name = random
+                    flag = random
+                    effect = {
+                        set_country_flag = "standard_unrest_rebels"
+                        save_event_target_as = spiritual_rebels
+                        establish_communications_no_message = event_target:espionage_origin_country
+                        event_target:espionage_origin_country = {
+                            every_relation = {
+                                establish_communications_no_message = prevprev
+                            }
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_organic_species = yes
+                        is_spiritualist = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:spiritual_rebels
+                            species = event_target:spiritual_rebels
+                            type = "assault_army"
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = yes
+                        is_spiritualist = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:spiritual_rebels
+                            species = event_target:spiritual_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                set_timed_planet_flag = {
+                    flag = "recent_unrest_event"
+                    days = 720
+                }
+                add_modifier = {
+                    modifier = "spiritualist_unrest"
+                    days = 1800
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_REVOLT
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_REVOLT
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: spiritual revolt was inspired"
+        }
+        # Materialistic revolt
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        limit = {
+                            is_materialist = yes
+                        }
+                        count < 1
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    planet_stability < @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel3
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel2
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_materialist = no
+                }
+            }
+            event_target:espionage_target_planet = {
+                create_rebels = {
+                    species = event_target:espionage_target_country
+                    ethos = {
+                        ethic = "ethic_fanatic_materialist"
+                    }
+                    authority = event_target:espionage_origin_country
+                    name = random
+                    flag = random
+                    effect = {
+                        set_country_flag = "standard_unrest_rebels"
+                        save_event_target_as = materialistic_rebels
+                        establish_communications_no_message = event_target:espionage_origin_country
+                        event_target:espionage_origin_country = {
+                            every_relation = {
+                                establish_communications_no_message = prevprev
+                            }
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_organic_species = yes
+                        is_materialist = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:materialistic_rebels
+                            species = event_target:materialistic_rebels
+                            type = "assault_army"
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = yes
+                        is_materialist = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:materialistic_rebels
+                            species = event_target:materialistic_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                set_timed_planet_flag = {
+                    flag = "recent_unrest_event"
+                    days = 720
+                }
+                add_modifier = {
+                    modifier = "materialist_unrest"
+                    days = 1800
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_REVOLT
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_REVOLT
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: materialistic revolt was inspired"
+        }
+        # Authoritarian revolt
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        limit = {
+                            is_authoritarian = yes
+                        }
+                        count < 1
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    planet_stability < @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel3
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel2
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_authoritarian = no
+                }
+            }
+            event_target:espionage_target_planet = {
+                create_rebels = {
+                    species = event_target:espionage_target_country
+                    ethos = {
+                        ethic = "ethic_fanatic_authoritarian"
+                    }
+                    authority = event_target:espionage_origin_country
+                    name = random
+                    flag = random
+                    effect = {
+                        set_country_flag = "standard_unrest_rebels"
+                        save_event_target_as = authoritarian_rebels
+                        establish_communications_no_message = event_target:espionage_origin_country
+                        event_target:espionage_origin_country = {
+                            every_relation = {
+                                establish_communications_no_message = prevprev
+                            }
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_organic_species = yes
+                        is_authoritarian = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:authoritarian_rebels
+                            species = event_target:authoritarian_rebels
+                            type = "assault_army"
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = yes
+                        is_authoritarian = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:authoritarian_rebels
+                            species = event_target:authoritarian_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                set_timed_planet_flag = {
+                    flag = "recent_unrest_event"
+                    days = 720
+                }
+                add_modifier = {
+                    modifier = "authoritarian_unrest"
+                    days = 1800
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_REVOLT
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_REVOLT
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: authoritarian revolt was inspired"
+        }
+        # Egalitarian revolt
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        limit = {
+                            is_egalitarian = yes
+                        }
+                        count < 1
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    planet_stability < @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel3
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel2
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_egalitarian = no
+                }
+            }
+            event_target:espionage_target_planet = {
+                create_rebels = {
+                    species = event_target:espionage_target_country
+                    ethos = {
+                        ethic = "ethic_fanatic_egalitarian"
+                    }
+                    authority = event_target:espionage_origin_country
+                    name = random
+                    flag = random
+                    effect = {
+                        set_country_flag = "standard_unrest_rebels"
+                        save_event_target_as = egalitarian_rebels
+                        establish_communications_no_message = event_target:espionage_origin_country
+                        event_target:espionage_origin_country = {
+                            every_relation = {
+                                establish_communications_no_message = prevprev
+                            }
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_organic_species = yes
+                        is_egalitarian = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:egalitarian_rebels
+                            species = event_target:egalitarian_rebels
+                            type = "assault_army"
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = yes
+                        is_egalitarian = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:egalitarian_rebels
+                            species = event_target:egalitarian_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                set_timed_planet_flag = {
+                    flag = "recent_unrest_event"
+                    days = 720
+                }
+                add_modifier = {
+                    modifier = "egalitarian_unrest"
+                    days = 1800
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_REVOLT
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_REVOLT
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: egalitarian revolt was inspired"
+        }
+        # Militaristic revolt
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        limit = {
+                            is_militarist = yes
+                        }
+                        count < 1
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    planet_stability < @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel3
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel2
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_militarist = no
+                }
+            }
+            event_target:espionage_target_planet = {
+                create_rebels = {
+                    species = event_target:espionage_target_country
+                    ethos = {
+                        ethic = "ethic_fanatic_militarist"
+                    }
+                    authority = event_target:espionage_origin_country
+                    name = random
+                    flag = random
+                    effect = {
+                        set_country_flag = "standard_unrest_rebels"
+                        save_event_target_as = militaristic_rebels
+                        establish_communications_no_message = event_target:espionage_origin_country
+                        event_target:espionage_origin_country = {
+                            every_relation = {
+                                establish_communications_no_message = prevprev
+                            }
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_organic_species = yes
+                        is_militarist = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:militaristic_rebels
+                            species = event_target:militaristic_rebels
+                            type = "assault_army"
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = yes
+                        is_militarist = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:militaristic_rebels
+                            species = event_target:militaristic_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                set_timed_planet_flag = {
+                    flag = "recent_unrest_event"
+                    days = 720
+                }
+                add_modifier = {
+                    modifier = "militarist_unrest"
+                    days = 1800
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_REVOLT
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_REVOLT
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: militaristic revolt was inspired"
+        }
+        # Pacifist revolt
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        limit = {
+                            is_pacifist = yes
+                        }
+                        count < 1
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    planet_stability < @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel3
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel2
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_pacifist = no
+                }
+            }
+            event_target:espionage_target_planet = {
+                create_rebels = {
+                    species = event_target:espionage_target_country
+                    ethos = {
+                        ethic = "ethic_fanatic_pacifist"
+                    }
+                    authority = event_target:espionage_origin_country
+                    name = random
+                    flag = random
+                    effect = {
+                        set_country_flag = "standard_unrest_rebels"
+                        save_event_target_as = pacifist_rebels
+                        establish_communications_no_message = event_target:espionage_origin_country
+                        event_target:espionage_origin_country = {
+                            every_relation = {
+                                establish_communications_no_message = prevprev
+                            }
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_organic_species = yes
+                        is_pacifist = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:pacifist_rebels
+                            species = event_target:pacifist_rebels
+                            type = "assault_army"
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = yes
+                        is_pacifist = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:pacifist_rebels
+                            species = event_target:pacifist_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                set_timed_planet_flag = {
+                    flag = "recent_unrest_event"
+                    days = 720
+                }
+                add_modifier = {
+                    modifier = "pacifist_unrest"
+                    days = 1800
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_REVOLT
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_REVOLT
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: pacifist revolt was inspired"
+        }
+        # Хenophilic revolt
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        limit = {
+                            is_xenophile = yes
+                        }
+                        count < 1
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    planet_stability < @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel3
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel2
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_xenophile = no
+                }
+            }
+            event_target:espionage_target_planet = {
+                create_rebels = {
+                    species = event_target:espionage_target_country
+                    ethos = {
+                        ethic = "ethic_fanatic_xenophile"
+                    }
+                    authority = event_target:espionage_origin_country
+                    name = random
+                    flag = random
+                    effect = {
+                        set_country_flag = "standard_unrest_rebels"
+                        save_event_target_as = xenophilic_rebels
+                        establish_communications_no_message = event_target:espionage_origin_country
+                        event_target:espionage_origin_country = {
+                            every_relation = {
+                                establish_communications_no_message = prevprev
+                            }
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_organic_species = yes
+                        is_xenophile = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:xenophilic_rebels
+                            species = event_target:xenophilic_rebels
+                            type = "assault_army"
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = yes
+                        is_xenophile = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:xenophilic_rebels
+                            species = event_target:xenophilic_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                set_timed_planet_flag = {
+                    flag = "recent_unrest_event"
+                    days = 720
+                }
+                add_modifier = {
+                    modifier = "xenophile_unrest"
+                    days = 1800
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_REVOLT
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_REVOLT
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: xenophilic revolt was inspired"
+        }
+        # Хenophobic revolt
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    count_pops = {
+                        limit = {
+                            is_xenophobe = yes
+                        }
+                        count < 1
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    planet_stability < @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel3
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel2
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    is_xenophobe = no
+                }
+            }
+            event_target:espionage_target_planet = {
+                create_rebels = {
+                    species = event_target:espionage_target_country
+                    ethos = {
+                        ethic = "ethic_fanatic_xenophobe"
+                    }
+                    authority = event_target:espionage_origin_country
+                    name = random
+                    flag = random
+                    effect = {
+                        set_country_flag = "standard_unrest_rebels"
+                        save_event_target_as = xenophobic_rebels
+                        establish_communications_no_message = event_target:espionage_origin_country
+                        event_target:espionage_origin_country = {
+                            every_relation = {
+                                establish_communications_no_message = prevprev
+                            }
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_organic_species = yes
+                        is_xenophobe = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:xenophobic_rebels
+                            species = event_target:xenophobic_rebels
+                            type = "assault_army"
+                        }
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_robot_pop = yes
+                        is_xenophobe = yes
+                    }
+                    planet = {
+                        create_army = {
+                            owner = event_target:xenophobic_rebels
+                            species = event_target:xenophobic_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                set_timed_planet_flag = {
+                    flag = "recent_unrest_event"
+                    days = 720
+                }
+                add_modifier = {
+                    modifier = "xenophobe_unrest"
+                    days = 1800
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_REVOLT
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_REVOLT
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: xenophobic revolt was inspired"
+        }
+        # Crime rate and decrease of stability
+        50 = {
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    OR = {
+                        has_planet_modifier = "crime_wave"
+                        has_planet_modifier = "cartel_war"
+                        has_planet_modifier = "unemployment_benefits"
+                        has_planet_modifier = "activity_program"
+                        has_planet_modifier = "standby_mode"
+                        has_planet_modifier = "criminal_underworld"
+                        has_planet_modifier = "drone_deviancy"
+                        has_planet_modifier = "drone_corruption"
+                        has_planet_modifier = "gang_wars"
+                        has_planet_modifier = "center_of_drug_trade"
+                        has_planet_modifier = "mob_rule"
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 2
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 3
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 4
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 5
+                    }
+                }
+            }
+            else = {
+                event_target:espionage_target_planet = {
+                    set_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                }
+            }
+            while = {
+                limit = {
+                    event_target:espionage_target_planet = {
+                        check_variable = {
+                            which = "espionage_propaganda_affected_pops_counter"
+                            value > 0
+                        }
+                    }
+                }
+                event_target:espionage_target_planet = {
+                    subtract_variable = {
+                        which = "espionage_propaganda_affected_pops_counter"
+                        value = 1
+                    }
+                    random_owned_pop = {
+                        limit = {
+                            OR = {
+                                is_being_purged = yes
+                                is_enslaved = yes
+                                happiness <= 0.5
+                            }
+                            NOT = {
+                                has_pop_flag = "changed_pop"
+                            }
+                        }
+                        pop_provoke_marginalization = yes
+                        set_timed_pop_flag = {
+                            flag = "changed_pop"
+                            days = 90
+                        }
+                    }
+                    random = {
+                        chance = 50
+                        add_planet_devastation = 1
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_LOYALTY_PROPAGANDA
+                    localization = MESSAGE_SPY_PERVERT_LOYALTY_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_LOYALTY_PROPAGANDA
+                    localization = MESSAGE_SPY_ORGANIZED_LOYALTY_PERVERSION_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: loyalty was perverted"
+        }
+        # Crime: criminal underworld
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 10
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 25
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 50
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    has_ethic = "ethic_gestalt_consciousness"
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    has_planet_modifier = "criminal_underworld"
+                }
+            }
+            event_target:espionage_target_planet = {
+                add_modifier = {
+                    modifier = "criminal_underworld"
+                    days = -1
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CRIME_RATE
+                    localization = MESSAGE_SPY_ENCOUNTERED_CRIME_RATE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CRIME_RATE
+                    localization = MESSAGE_SPY_ORGANIZED_CRIME_RATE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: crime rate was arranged"
+        }
+        # Crime: drone deviancy
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 10
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 25
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 50
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOT = {
+                        has_authority = "auth_hive_mind"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    has_planet_modifier = "drone_deviancy"
+                }
+            }
+            event_target:espionage_target_planet = {
+                add_modifier = {
+                    modifier = "drone_deviancy"
+                    days = -1
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CRIME_RATE
+                    localization = MESSAGE_SPY_ENCOUNTERED_CRIME_RATE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CRIME_RATE
+                    localization = MESSAGE_SPY_ORGANIZED_CRIME_RATE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: crime rate was arranged"
+        }
+        # Crime: drone corruption
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 10
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 25
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 50
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    NOT = {
+                        has_authority = "auth_machine_intelligence"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    has_planet_modifier = "drone_corruption"
+                }
+            }
+            event_target:espionage_target_planet = {
+                add_modifier = {
+                    modifier = "drone_corruption"
+                    days = -1
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CRIME_RATE
+                    localization = MESSAGE_SPY_ENCOUNTERED_CRIME_RATE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CRIME_RATE
+                    localization = MESSAGE_SPY_ORGANIZED_CRIME_RATE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: crime rate was arranged"
+        }
+        # Crime: criminal wave
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 10
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 25
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 50
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    OR = {
+                        has_planet_modifier = "crime_wave"
+                        NOT = {
+                            has_modifier = "criminal_underworld"
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                # @see crime.6
+                add_modifier = {
+                    modifier = "crime_wave"
+                    days = 3600
+                }
+                set_timed_planet_flag = {
+                    flag = "planet_crime_flag"
+                    days = 3600
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CRIME_WAVE
+                    localization = MESSAGE_SPY_ENCOUNTERED_CRIME_WAVE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CRIME_WAVE
+                    localization = MESSAGE_SPY_ORGANIZED_CRIME_WAVE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: crime wave was arranged"
+        }
+        # Crime: deviant drone interference
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 10
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 25
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 50
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    OR = {
+                        has_planet_modifier = "deviant_interference"
+                        NOT = {
+                            has_modifier = "drone_deviancy"
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                # @see crime.501
+                add_modifier = {
+                    modifier = "deviant_interference"
+                    days = 3600
+                }
+                set_timed_planet_flag = {
+                    flag = "planet_crime_flag"
+                    days = 3600
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CRIME_WAVE
+                    localization = MESSAGE_SPY_ENCOUNTERED_CRIME_WAVE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CRIME_WAVE
+                    localization = MESSAGE_SPY_ORGANIZED_CRIME_WAVE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: crime wave was arranged"
+        }
+        # Crime: drone unit signal interference
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 10
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 25
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 50
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    OR = {
+                        has_planet_modifier = "drone_signal_interference"
+                        NOT = {
+                            has_modifier = "drone_corruption"
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                # @see crime.551
+                add_modifier = {
+                    modifier = "drone_signal_interference"
+                    days = 3600
+                }
+                set_timed_planet_flag = {
+                    flag = "planet_crime_flag"
+                    days = 3600
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_CRIME_WAVE
+                    localization = MESSAGE_SPY_ENCOUNTERED_CRIME_WAVE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_CRIME_WAVE
+                    localization = MESSAGE_SPY_ORGANIZED_CRIME_WAVE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: crime wave was arranged"
+        }
+    }
+}

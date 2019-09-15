@@ -777,6 +777,7 @@ is_disengaged_intelligencer = {
         has_pop_flag = "espionage_purpose_steal_technologies"
         has_pop_flag = "espionage_purpose_recruit_defector"
         has_pop_flag = "espionage_purpose_commit_sabotage"
+        has_pop_flag = "espionage_purpose_broadcast_propaganda"
     }
 }
 
@@ -789,6 +790,7 @@ is_engaged_intelligencer = {
         has_pop_flag = "espionage_purpose_steal_technologies"
         has_pop_flag = "espionage_purpose_recruit_defector"
         has_pop_flag = "espionage_purpose_commit_sabotage"
+        has_pop_flag = "espionage_purpose_broadcast_propaganda"
     }
 }
 
@@ -834,6 +836,12 @@ is_intelligencer_has_purpose_recruit_defector = {
 is_intelligencer_has_purpose_commit_sabotage = {
     is_intelligencer = yes
     has_pop_flag = "espionage_purpose_commit_sabotage"
+}
+
+# Scope: pop
+is_intelligencer_has_purpose_broadcast_propaganda = {
+    is_intelligencer = yes
+    has_pop_flag = "espionage_purpose_broadcast_propaganda"
 }
 
 # Scope: planet
@@ -943,9 +951,30 @@ is_attacked_planet = {
 
 # Scope: planet
 is_captured_planet = {
-    NOT = {
+    NOR = {
         is_controlled_by = owner
+        is_occupied_flag = no
     }
+}
+
+# Scope: pop
+is_deprivated_pop = {
+    pop_has_trait = "trait_deprivated_pop"
+}
+
+# Scope: pop
+is_frustrated_pop = {
+    pop_has_trait = "trait_frustrated_pop"
+}
+
+# Scope: pop
+is_malfunctioned_pop = {
+    pop_has_trait = "trait_malfunctioned_pop"
+}
+
+# Scope: pop
+is_marginalized_pop = {
+    pop_has_trait = "trait_marginalized_pop"
 }
 
 # Scope: country

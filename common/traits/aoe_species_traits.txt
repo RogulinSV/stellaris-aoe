@@ -1629,7 +1629,7 @@ trait_xenomorphic_species = {
 ### Intelligence Traits
 
 trait_intelligencer_neophyte = {
-    icon = "gfx/interface/icons/traits/trait_intelligencer_neophyte.dds"
+    icon = "gfx/interface/icons/traits/trait_intelligencer_1.dds"
 
     cost = 0
     potential_crossbreeding_chance = 0.1
@@ -1660,7 +1660,7 @@ trait_intelligencer_neophyte = {
 }
 
 trait_intelligencer_acolyte = {
-    icon = "gfx/interface/icons/traits/trait_intelligencer_acolyte.dds"
+    icon = "gfx/interface/icons/traits/trait_intelligencer_2.dds"
 
     cost = 0
     potential_crossbreeding_chance = 0.1
@@ -1691,7 +1691,7 @@ trait_intelligencer_acolyte = {
 }
 
 trait_intelligencer_adept = {
-    icon = "gfx/interface/icons/traits/trait_intelligencer_adept.dds"
+    icon = "gfx/interface/icons/traits/trait_intelligencer_3.dds"
 
     cost = 0
     potential_crossbreeding_chance = 0.1
@@ -1722,7 +1722,7 @@ trait_intelligencer_adept = {
 }
 
 trait_intelligencer_master = {
-    icon = "gfx/interface/icons/traits/trait_intelligencer_master.dds"
+    icon = "gfx/interface/icons/traits/trait_intelligencer_4.dds"
 
     cost = 0
     potential_crossbreeding_chance = 0.1
@@ -1753,7 +1753,7 @@ trait_intelligencer_master = {
 }
 
 trait_intelligencer_prophet = {
-    icon = "gfx/interface/icons/traits/trait_intelligencer_prophet.dds"
+    icon = "gfx/interface/icons/traits/trait_intelligencer_5.dds"
 
     cost = 0
     initial = no
@@ -1775,6 +1775,112 @@ trait_intelligencer_prophet = {
 
     modifier = {
         pop_happiness = 0.25
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+### Evil Eye Traits
+
+trait_deprivated_pop = {
+    icon = "gfx/interface/icons/traits/trait_deprivated_pop.dds"
+
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = no
+
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_DEPRIVATED_POP_EFFECT
+
+    modifier = {
+        pop_happiness = -0.05
+        planet_jobs_minerals_produces_mult = -0.1
+        planet_jobs_energy_produces_mult = -0.1
+        planet_jobs_unity_produces_mult = -0.1
+        planet_jobs_consumer_goods_produces_mult = -0.1
+        planet_jobs_alloys_produces_mult = -0.1
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_frustrated_pop = {
+    icon = "gfx/interface/icons/traits/trait_frustrated_pop.dds"
+
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = no
+
+    allowed_archetypes = { BIOLOGICAL }
+    custom_tooltip = TRAIT_FRUSTRATED_POP_EFFECT
+
+    modifier = {
+        pop_happiness = -0.05
+        planet_jobs_engineering_research_produces_mult = -0.1
+        planet_jobs_physics_research_produces_mult = -0.1
+        planet_jobs_society_research_produces_mult = -0.1
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_malfunctioned_pop = {
+    icon = "gfx/interface/icons/traits/trait_malfunctioned_pop.dds"
+
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = no
+
+    allowed_archetypes = { ROBOT MACHINE }
+    custom_tooltip = TRAIT_MALFUNCTIONED_POP_EFFECT
+
+    modifier = {
+        pop_happiness = -0.05
+        pop_assembly_speed = -0.1
+        planet_pops_robotics_upkeep_mult = 0.1
+        planet_pop_assemblers_upkeep_mult = -0.1
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+trait_marginalized_pop = {
+    icon = "gfx/interface/icons/traits/trait_marginalized_pop.dds"
+
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    advanced_trait = yes
+    improves_leaders = no
+    forced_happiness = no
+
+    allowed_archetypes = { BIOLOGICAL ROBOT MACHINE }
+    custom_tooltip = TRAIT_MARGINALIZED_POP_EFFECT
+
+    modifier = {
+        planet_crime_add = 5
+        planet_stability_add = -5
     }
 
     ai_weight = {

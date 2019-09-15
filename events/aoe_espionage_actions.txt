@@ -228,9 +228,6 @@ country_event = {
             is_unassignment_intelligencer = yes
             is_disengaged_intelligencer = yes
         }
-        # any_country = {
-        #     is_subject_of_espionage = yes
-        # }
     }
 
     option = {
@@ -250,7 +247,6 @@ country_event = {
         }
         hidden_effect = {
             engage_intelligencer_espionage_purpose_steal_resources = yes
-            # find_espionage_subject = yes
             country_event = {
                 id = aoe_espionage_actions.13
             }
@@ -274,7 +270,6 @@ country_event = {
         }
         hidden_effect = {
             engage_intelligencer_espionage_purpose_steal_technologies = yes
-            # find_espionage_subject = yes
             country_event = {
                 id = aoe_espionage_actions.13
             }
@@ -303,7 +298,6 @@ country_event = {
         }
         hidden_effect = {
             engage_intelligencer_espionage_purpose_recruit_defector = yes
-            # find_espionage_subject = yes
             country_event = {
                 id = aoe_espionage_actions.13
             }
@@ -332,7 +326,34 @@ country_event = {
         }
         hidden_effect = {
             engage_intelligencer_espionage_purpose_commit_sabotage = yes
-            # find_espionage_subject = yes
+            country_event = {
+                id = aoe_espionage_actions.13
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.2.e"
+        custom_tooltip = "aoe_espionage_actions.2.e.tooltip"
+        trigger = {
+            resource_stockpile_compare = {
+                resource = minerals
+                value >= 500
+            }
+            resource_stockpile_compare = {
+                resource = influence
+                value >= 50
+            }
+            any_country = {
+                is_subject_of_espionage = yes
+            }
+        }
+        add_resource = {
+            minerals = -500
+            influence = -50
+        }
+        hidden_effect = {
+            engage_intelligencer_espionage_purpose_broadcast_propaganda = yes
             country_event = {
                 id = aoe_espionage_actions.13
             }
@@ -1469,6 +1490,18 @@ country_event = {
                 is_same_value = event_target:espionage_target_country
             }
         }
+        # event_target:espionage_target_country = {
+        #     is_subject_of_espionage = yes
+        # }
+    }
+
+    after = {
+        if = {
+            limit = {
+                has_country_flag = "espionage_action_has_complications"
+            }
+            remove_country_flag = "espionage_action_has_complications"
+        }
     }
 
     option = {
@@ -1480,6 +1513,10 @@ country_event = {
             }
         }
         hidden_effect = {
+            random = {
+                chance = 30
+                set_country_flag = "espionage_action_has_complications"
+            }
             if = {
                 limit = {
                     event_target:espionage_target_country = {
@@ -1489,10 +1526,25 @@ country_event = {
                 set_intelligencer_on_assignment = {
                     ARG1 = 10
                 }
-                event_target:espionage_origin_country = {
-                    country_event = {
-                        id = aoe_espionage_actions.4
-                        days = 9
+                if = {
+                    limit = {
+                        event_target:espionage_origin_country = {
+                            has_country_flag = "espionage_action_has_complications"
+                        }
+                    }
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.20
+                            days = 9
+                        }
+                    }
+                }
+                else = {
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.4
+                            days = 9
+                        }
                     }
                 }
                 event_target:espionage_target_planet = {
@@ -1516,10 +1568,25 @@ country_event = {
                 set_intelligencer_on_assignment = {
                     ARG1 = 9
                 }
-                event_target:espionage_origin_country = {
-                    country_event = {
-                        id = aoe_espionage_actions.4
-                        days = 8
+                if = {
+                    limit = {
+                        event_target:espionage_origin_country = {
+                            has_country_flag = "espionage_action_has_complications"
+                        }
+                    }
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.20
+                            days = 8
+                        }
+                    }
+                }
+                else = {
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.4
+                            days = 8
+                        }
                     }
                 }
                 event_target:espionage_target_planet = {
@@ -1538,10 +1605,25 @@ country_event = {
                 set_intelligencer_on_assignment = {
                     ARG1 = 8
                 }
-                event_target:espionage_origin_country = {
-                    country_event = {
-                        id = aoe_espionage_actions.4
-                        days = 7
+                if = {
+                    limit = {
+                        event_target:espionage_origin_country = {
+                            has_country_flag = "espionage_action_has_complications"
+                        }
+                    }
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.20
+                            days = 7
+                        }
+                    }
+                }
+                else = {
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.4
+                            days = 7
+                        }
                     }
                 }
                 event_target:espionage_target_planet = {
@@ -1568,6 +1650,10 @@ country_event = {
             }
         }
         hidden_effect = {
+            random = {
+                chance = 20
+                set_country_flag = "espionage_action_has_complications"
+            }
             if = {
                 limit = {
                     event_target:espionage_target_country = {
@@ -1577,10 +1663,25 @@ country_event = {
                 set_intelligencer_on_assignment = {
                     ARG1 = 7
                 }
-                event_target:espionage_origin_country = {
-                    country_event = {
-                        id = aoe_espionage_actions.4
-                        days = 6
+                if = {
+                    limit = {
+                        event_target:espionage_origin_country = {
+                            has_country_flag = "espionage_action_has_complications"
+                        }
+                    }
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.20
+                            days = 6
+                        }
+                    }
+                }
+                else = {
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.4
+                            days = 6
+                        }
                     }
                 }
                 event_target:espionage_target_planet = {
@@ -1604,10 +1705,25 @@ country_event = {
                 set_intelligencer_on_assignment = {
                     ARG1 = 6
                 }
-                event_target:espionage_origin_country = {
-                    country_event = {
-                        id = aoe_espionage_actions.4
-                        days = 5
+                if = {
+                    limit = {
+                        event_target:espionage_origin_country = {
+                            has_country_flag = "espionage_action_has_complications"
+                        }
+                    }
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.20
+                            days = 5
+                        }
+                    }
+                }
+                else = {
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.4
+                            days = 5
+                        }
                     }
                 }
                 event_target:espionage_target_planet = {
@@ -1626,10 +1742,25 @@ country_event = {
                 set_intelligencer_on_assignment = {
                     ARG1 = 5
                 }
-                event_target:espionage_origin_country = {
-                    country_event = {
-                        id = aoe_espionage_actions.4
-                        days = 4
+                if = {
+                    limit = {
+                        event_target:espionage_origin_country = {
+                            has_country_flag = "espionage_action_has_complications"
+                        }
+                    }
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.20
+                            days = 4
+                        }
+                    }
+                }
+                else = {
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.4
+                            days = 4
+                        }
                     }
                 }
                 event_target:espionage_target_planet = {
@@ -1656,6 +1787,10 @@ country_event = {
             }
         }
         hidden_effect = {
+            random = {
+                chance = 10
+                set_country_flag = "espionage_action_has_complications"
+            }
             if = {
                 limit = {
                     event_target:espionage_target_country = {
@@ -1665,10 +1800,25 @@ country_event = {
                 set_intelligencer_on_assignment = {
                     ARG1 = 4
                 }
-                event_target:espionage_origin_country = {
-                    country_event = {
-                        id = aoe_espionage_actions.4
-                        days = 3
+                if = {
+                    limit = {
+                        event_target:espionage_origin_country = {
+                            has_country_flag = "espionage_action_has_complications"
+                        }
+                    }
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.20
+                            days = 3
+                        }
+                    }
+                }
+                else = {
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.4
+                            days = 3
+                        }
                     }
                 }
                 event_target:espionage_target_planet = {
@@ -1692,10 +1842,25 @@ country_event = {
                 set_intelligencer_on_assignment = {
                     ARG1 = 3
                 }
-                event_target:espionage_origin_country = {
-                    country_event = {
-                        id = aoe_espionage_actions.4
-                        days = 2
+                if = {
+                    limit = {
+                        event_target:espionage_origin_country = {
+                            has_country_flag = "espionage_action_has_complications"
+                        }
+                    }
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.20
+                            days = 2
+                        }
+                    }
+                }
+                else = {
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.4
+                            days = 2
+                        }
                     }
                 }
                 event_target:espionage_target_planet = {
@@ -1714,10 +1879,25 @@ country_event = {
                 set_intelligencer_on_assignment = {
                     ARG1 = 2
                 }
-                event_target:espionage_origin_country = {
-                    country_event = {
-                        id = aoe_espionage_actions.4
-                        days = 1
+                if = {
+                    limit = {
+                        event_target:espionage_origin_country = {
+                            has_country_flag = "espionage_action_has_complications"
+                        }
+                    }
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.20
+                            days = 1
+                        }
+                    }
+                }
+                else = {
+                    event_target:espionage_origin_country = {
+                        country_event = {
+                            id = aoe_espionage_actions.4
+                            days = 1
+                        }
                     }
                 }
                 event_target:espionage_target_planet = {
@@ -1751,14 +1931,25 @@ country_event = {
         exists = event_target:espionage_origin_planet
         exists = event_target:espionage_origin_spy
         exists = event_target:espionage_target_country
+        exists = event_target:espionage_target_planet
         event_target:espionage_origin_planet = {
+            exists = owner
             owner = {
                 is_same_value = event_target:espionage_origin_country
+            }
+            any_pop = {
+                is_same_value = event_target:espionage_origin_spy
             }
         }
         event_target:espionage_origin_spy = {
             is_appointed_intelligencer = yes
             is_engaged_intelligencer = yes
+        }
+        event_target:espionage_target_planet = {
+            exists = owner
+            owner = {
+                is_same_value = event_target:espionage_target_country
+            }
         }
         event_target:espionage_target_country = {
             is_subject_of_espionage = yes
@@ -2455,6 +2646,179 @@ country_event = {
                         random = 4
                     }
                     log = ">>> espionage_actions.4: [This.GetName] commit sabotage and will be promoted"
+                }
+            }
+        }
+        # Try broadcast propaganda
+        else_if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_purpose_broadcast_propaganda = yes
+                }
+            }
+            random_list = {
+                10 = {
+                    modifier = {
+                        factor = 10
+                        event_target:espionage_target_country = {
+                            is_fallen_empire = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            has_closed_borders = root
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            is_at_war_with = root
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            OR = {
+                                is_authoritarian = yes
+                                is_xenophobe = yes
+                                has_ethic = "ethic_gestalt_consciousness"
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_target_country = {
+                            is_xenophile = yes
+                        }
+                    }
+                    # We are exposed by the victim
+                    country_event = {
+                        id = aoe_espionage_actions.6
+                        days = 1
+                    }
+                    log = ">>> espionage_actions.4: [This.GetName] unable to broadcast propaganda and was exposed"
+                }
+                100 = {
+                    modifier = {
+                        factor = 1.05
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_disclose_spies = yes
+                                is_appointed_intelligencer = yes
+                                is_intelligencer_has_rank_1 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1.1
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_disclose_spies = yes
+                                is_appointed_intelligencer = yes
+                                is_intelligencer_has_rank_2 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1.15
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_disclose_spies = yes
+                                is_appointed_intelligencer = yes
+                                is_intelligencer_has_rank_3 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1.2
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_disclose_spies = yes
+                                is_appointed_intelligencer = yes
+                                is_intelligencer_has_rank_4 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        event_target:espionage_target_planet = {
+                            any_pop = {
+                                is_intelligencer_has_purpose_disclose_spies = yes
+                                is_appointed_intelligencer = yes
+                                is_intelligencer_has_rank_5 = yes
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            is_fallen_empire = yes
+                        }
+                    }
+                    try_broadcast_propaganda = yes
+                    # We are exposed by the victim
+                    country_event = {
+                        id = aoe_espionage_actions.6
+                        days = 1
+                    }
+                    log = ">>> espionage_actions.4: [This.GetName] broadcast propaganda but was exposed"
+                }
+                80 = {
+                    modifier = {
+                        factor = 1.1
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_1 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.2
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_2 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.3
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_3 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.4
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_4 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.5
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_5 = yes
+                        }
+                    }
+                    try_broadcast_propaganda = yes
+                    log = ">>> espionage_actions.4: [This.GetName] broadcast propaganda"
+                }
+                20 = {
+                    modifier = {
+                        factor = 0
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_top_ranked = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_origin_country = {
+                            has_valid_civic = "civic_natural_spies"
+                        }
+                    }
+                    try_broadcast_propaganda = yes
+                    # Promote spy
+                    country_event = {
+                        id = aoe_espionage_actions.11
+                        days = 5
+                        random = 4
+                    }
+                    log = ">>> espionage_actions.4: [This.GetName] broadcast propaganda and will be promoted"
                 }
             }
         }
@@ -4517,12 +4881,65 @@ country_event = {
 country_event = {
     id = aoe_espionage_actions.7
     title = aoe_espionage_actions.7.title
-    desc = aoe_espionage_actions.7.desc
     picture = GFX_aoe_espionage_kill_spy
     show_sound = event_conversation
     is_triggered_only = yes
     hide_window = no
     location = event_target:espionage_origin_planet
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_not_ranked = yes
+            }
+        }
+        text = aoe_espionage_actions.7.desc_01
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_1 = yes
+            }
+        }
+        text = aoe_espionage_actions.7.desc_02
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_2 = yes
+            }
+        }
+        text = aoe_espionage_actions.7.desc_03
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_3 = yes
+            }
+        }
+        text = aoe_espionage_actions.7.desc_04
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_4 = yes
+            }
+        }
+        text = aoe_espionage_actions.7.desc_05
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_5 = yes
+            }
+        }
+        text = aoe_espionage_actions.7.desc_06
+    }
 
     trigger = {
         exists = event_target:espionage_origin_planet
@@ -4614,13 +5031,10 @@ ship_event = {
     }
 
     immediate = {
-        save_event_target_as = "espionage_broken_military_ship"
-        owner = {
-            country_event = {
-                id = aoe_espionage_actions.9
-                days = 300
-                random = 200
-            }
+        ship_event = {
+            id = aoe_espionage_actions.9
+            days = 300
+            random = 200
         }
         random = {
             chance = 10
@@ -4633,152 +5047,138 @@ ship_event = {
     }
 }
 
-country_event = {
+ship_event = {
     id = aoe_espionage_actions.9
-    title = aoe_espionage_actions.9.title
-    desc = aoe_espionage_actions.9.desc
-    picture = GFX_aoe_espionage_military_ship_explosion
-    show_sound = event_ship_explosion
     is_triggered_only = yes
-    hide_window = no
-    location = event_target:espionage_broken_military_ship
-
-    trigger = {
-        exists = event_target:espionage_broken_military_ship
-    }
+    hide_window = yes
 
     immediate = {
+        if = {
+            limit = {
+                is_disabled = yes
+            }
+            log = ">>> espionage_actions.9: [Root.Onwer.GetName] lost ship in an explosion"
+            destroy_ship = this
+            break = yes
+        }
+
+        save_event_target_as = "espionage_broken_ship"
+        owner = {
+            country_event = {
+                id = aoe_espionage_actions.10
+            }
+        }
+
         random_list = {
             10 = {
                 modifier = {
                     factor = 0
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = colossus
-                    }
+                    is_ship_size = colossus
                 }
                 modifier = {
                     factor = 0.1
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = titan
-                    }
+                    is_ship_size = titan
                 }
                 modifier = {
                     factor = 0.2
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = battleship
-                    }
+                    is_ship_size = battleship
                 }
                 modifier = {
                     factor = 0.5
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = cruiser
-                    }
+                    is_ship_size = cruiser
                 }
                 modifier = {
                     factor = 0.8
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = destroyer
-                    }
+                    is_ship_size = destroyer
                 }
-                destroy_ship = event_target:espionage_broken_military_ship
-                log = ">>> espionage_actions.9: [Root.GetName] lost ship in an explosion"
+                set_disabled = yes
+                ship_event = {
+                    id = aoe_espionage_actions.9
+                    days = 1
+                }
+                log = ">>> espionage_actions.9: [Root.Onwer.GetName] encountered the deactivation of one of the ships"
             }
             10 = {
                 modifier = {
                     factor = 0.1
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = colossus
-                    }
+                    is_ship_size = colossus
                 }
                 modifier = {
                     factor = 0.2
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = titan
-                    }
+                    is_ship_size = titan
                 }
                 modifier = {
                     factor = 0.5
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = battleship
-                    }
+                    is_ship_size = battleship
                 }
                 modifier = {
                     factor = 0.8
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = cruiser
-                    }
+                    is_ship_size = cruiser
                 }
-                event_target:espionage_broken_military_ship = {
-                    reduce_hp_percent = 50
-                }
-                log = ">>> espionage_actions.9: [Root.GetName] received 50% damage to the ship as a result of the explosion"
+                reduce_hp_percent = 80
+                log = ">>> espionage_actions.9: [Root.Onwer.GetName] received 80% damage to the ship as a result of the explosion"
             }
             10 = {
                 modifier = {
                     factor = 0.2
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = colossus
-                    }
+                    is_ship_size = colossus
                 }
                 modifier = {
                     factor = 0.5
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = titan
-                    }
+                    is_ship_size = titan
                 }
                 modifier = {
                     factor = 0.8
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = battleship
-                    }
+                    is_ship_size = battleship
                 }
-                event_target:espionage_broken_military_ship = {
-                    reduce_hp_percent = 40
-                }
-                log = ">>> espionage_actions.9: [Root.GetName] received 40% damage to the ship as a result of the explosion"
+                reduce_hp_percent = 60
+                log = ">>> espionage_actions.9: [Root.Onwer.GetName] received 60% damage to the ship as a result of the explosion"
             }
             10 = {
                 modifier = {
                     factor = 0.5
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = colossus
-                    }
+                    is_ship_size = colossus
                 }
                 modifier = {
                     factor = 0.8
-                    event_target:espionage_broken_military_ship = {
-                        is_ship_size = titan
-                    }
+                    is_ship_size = titan
                 }
-                event_target:espionage_broken_military_ship = {
-                    reduce_hp_percent = 30
-                }
-                log = ">>> espionage_actions.9: [Root.GetName] received 30% damage to the ship as a result of the explosion"
+                reduce_hp_percent = 40
+                log = ">>> espionage_actions.9: [Root.Onwer.GetName] received 40% damage to the ship as a result of the explosion"
             }
             10 = {
                 modifier = {
                     factor = 0.8
-                    event_target:espionage_broken_military_ship = {
                         is_ship_size = colossus
-                    }
                 }
-                event_target:espionage_broken_military_ship = {
-                    reduce_hp_percent = 20
-                }
-                log = ">>> espionage_actions.9: [Root.GetName] received 20% damage to the ship as a result of the explosion"
+                reduce_hp_percent = 20
+                log = ">>> espionage_actions.9: [Root.Onwer.GetName] received 20% damage to the ship as a result of the explosion"
             }
             10 = {
-                event_target:espionage_broken_military_ship = {
-                    reduce_hp_percent = 10
-                }
-                log = ">>> espionage_actions.9: [Root.GetName] received 10% damage to the ship as a result of the explosion"
+                reduce_hp_percent = 10
+                log = ">>> espionage_actions.9: [Root.Onwer.GetName] received 10% damage to the ship as a result of the explosion"
             }
         }
     }
+}
+
+country_event = {
+    id = aoe_espionage_actions.10
+    title = aoe_espionage_actions.10.title
+    desc = aoe_espionage_actions.10.desc
+    picture = GFX_aoe_espionage_military_ship_explosion
+    show_sound = event_ship_explosion
+    is_triggered_only = yes
+    hide_window = no
+    location = event_target:espionage_broken_ship
+
+    trigger = {
+        exists = event_target:espionage_broken_ship
+    }
 
     option = {
-        name = "aoe_espionage_actions.9.a"
-        custom_tooltip = "aoe_espionage_actions.9.a.tooltip"
+        name = "aoe_espionage_actions.10.a"
+        custom_tooltip = "aoe_espionage_actions.10.a.tooltip"
     }
 }
 
@@ -4846,79 +5246,7 @@ country_event = {
 
     immediate = {
         event_target:espionage_origin_spy = {
-            if = {
-                limit = {
-                    NOR = {
-                        pop_has_trait = "trait_intelligencer_neophyte"
-                        pop_has_trait = "trait_intelligencer_acolyte"
-                        pop_has_trait = "trait_intelligencer_adept"
-                        pop_has_trait = "trait_intelligencer_master"
-                        pop_has_trait = "trait_intelligencer_prophet"
-                    }
-                }
-                modify_species = {
-                    species = this
-                    add_trait = "trait_intelligencer_neophyte"
-                }
-            }
-            else_if = {
-                limit = {
-                    pop_has_trait = "trait_intelligencer_neophyte"
-                    NOR = {
-                        pop_has_trait = "trait_intelligencer_acolyte"
-                        pop_has_trait = "trait_intelligencer_adept"
-                        pop_has_trait = "trait_intelligencer_master"
-                        pop_has_trait = "trait_intelligencer_prophet"
-                    }
-                }
-                modify_species = {
-                    species = this
-                    remove_trait = "trait_intelligencer_neophyte"
-                    add_trait = "trait_intelligencer_acolyte"
-                }
-            }
-            else_if = {
-                limit = {
-                    pop_has_trait = "trait_intelligencer_acolyte"
-                    NOR = {
-                        pop_has_trait = "trait_intelligencer_adept"
-                        pop_has_trait = "trait_intelligencer_master"
-                        pop_has_trait = "trait_intelligencer_prophet"
-                    }
-                }
-                modify_species = {
-                    species = this
-                    remove_trait = "trait_intelligencer_acolyte"
-                    add_trait = "trait_intelligencer_adept"
-                }
-            }
-            else_if = {
-                limit = {
-                    pop_has_trait = "trait_intelligencer_adept"
-                    NOR = {
-                        pop_has_trait = "trait_intelligencer_master"
-                        pop_has_trait = "trait_intelligencer_prophet"
-                    }
-                }
-                modify_species = {
-                    species = this
-                    remove_trait = "trait_intelligencer_adept"
-                    add_trait = "trait_intelligencer_master"
-                }
-            }
-            else_if = {
-                limit = {
-                    pop_has_trait = "trait_intelligencer_master"
-                    NOT = {
-                        pop_has_trait = "trait_intelligencer_prophet"
-                    }
-                }
-                modify_species = {
-                    species = this
-                    remove_trait = "trait_intelligencer_master"
-                    add_trait = "trait_intelligencer_prophet"
-                }
-            }
+            promote_intelligencer = yes
         }
     }
 
@@ -5003,6 +5331,1023 @@ planet_event = {
                 modifier = "planet_intelligencer_disclosing"
                 days = 300
             }
+        }
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.19
+    title = aoe_espionage_actions.19.title
+    desc = aoe_espionage_actions.19.desc
+    picture = GFX_aoe_espionage_spy_escaped
+    show_sound = event_conversation
+    is_triggered_only = yes
+    hide_window = no
+    location = event_target:espionage_target_planet
+
+    trigger = {
+        exists = event_target:espionage_target_planet
+        exists = event_target:espionage_origin_spy
+    }
+
+    option = {
+        name = OK
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.20
+    title = aoe_espionage_actions.20.title
+    show_sound = event_criminal_activity
+    is_triggered_only = yes
+    hide_window = no
+    location = event_target:espionage_target_planet
+
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_resources = yes
+            }
+        }
+        picture = GFX_aoe_espionage_steal_resources_complications
+    }
+
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_technologies = yes
+            }
+        }
+        picture = GFX_aoe_espionage_steal_technologies_complications
+    }
+
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_recruit_defector = yes
+            }
+        }
+        picture = GFX_aoe_espionage_recruit_defector_complications
+    }
+
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_commit_sabotage = yes
+            }
+        }
+        picture = GFX_aoe_espionage_commit_sabotage_complications
+    }
+
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+        }
+        picture = GFX_aoe_espionage_broadcast_propaganda_complications
+    }
+
+    # Steal resources
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_resources = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_not_ranked = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_01
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_resources = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_1 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_02
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_resources = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_2 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_03
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_resources = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_3 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_04
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_resources = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_4 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_05
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_resources = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_5 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_06
+    }
+
+    # Steal technologies
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_technologies = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_not_ranked = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_07
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_technologies = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_1 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_08
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_technologies = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_2 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_09
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_technologies = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_3 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_10
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_technologies = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_4 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_11
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_technologies = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_5 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_12
+    }
+
+    # Recruit defector
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_recruit_defector = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_not_ranked = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_13
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_recruit_defector = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_1 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_14
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_recruit_defector = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_2 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_15
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_recruit_defector = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_3 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_16
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_recruit_defector = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_4 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_17
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_recruit_defector = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_5 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_18
+    }
+
+    # Commit sabotage
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_commit_sabotage = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_not_ranked = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_19
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_commit_sabotage = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_1 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_20
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_commit_sabotage = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_2 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_21
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_commit_sabotage = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_3 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_22
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_commit_sabotage = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_4 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_23
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_commit_sabotage = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_5 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_24
+    }
+
+    # Broadcast propaganda
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_not_ranked = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_25
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_1 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_26
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_2 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_27
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_3 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_28
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_4 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_29
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_5 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_30
+    }
+
+    trigger = {
+        exists = event_target:espionage_origin_country
+        exists = event_target:espionage_origin_planet
+        exists = event_target:espionage_origin_spy
+        exists = event_target:espionage_target_country
+        exists = event_target:espionage_target_planet
+        event_target:espionage_origin_planet = {
+            exists = owner
+            owner = {
+                is_same_value = event_target:espionage_origin_country
+            }
+            any_pop = {
+                is_same_value = event_target:espionage_origin_spy
+            }
+        }
+        event_target:espionage_origin_spy = {
+            is_appointed_intelligencer = yes
+            is_engaged_intelligencer = yes
+        }
+        event_target:espionage_target_planet = {
+            exists = owner
+            owner = {
+                is_same_value = event_target:espionage_target_country
+            }
+        }
+        event_target:espionage_target_country = {
+            is_subject_of_espionage = yes
+        }
+    }
+
+    after = {
+        if = {
+            limit = {
+                has_country_flag = "espionage_action_has_complications"
+            }
+            remove_country_flag = "espionage_action_has_complications"
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.20.a"
+        custom_tooltip = "aoe_espionage_actions.20.a.tooltip"
+        hidden_effect = {
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_1 = yes
+                    }
+                }
+                random = {
+                    chance = 50
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                random = {
+                    chance = 40
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                random = {
+                    chance = 30
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                random = {
+                    chance = 20
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                random = {
+                    chance = 10
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else = {
+                random = {
+                    chance = 60
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = "espionage_action_has_complications"
+                }
+                country_event = {
+                    id = aoe_espionage_actions.7
+                }
+            }
+            else = {
+                country_event = {
+                    id = aoe_espionage_actions.4
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.20.b"
+        custom_tooltip = "aoe_espionage_actions.20.b.tooltip"
+        trigger = {
+            resource_stockpile_compare = {
+                resource = minerals
+                value >= 50
+            }
+            resource_stockpile_compare = {
+                resource = influence
+                value >= 10
+            }
+        }
+        add_resource = {
+            minerals = -50
+            influence = -10
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_1 = yes
+                    }
+                }
+                random = {
+                    chance = 25
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                random = {
+                    chance = 20
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                random = {
+                    chance = 15
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                random = {
+                    chance = 10
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                random = {
+                    chance = 5
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else = {
+                random = {
+                    chance = 30
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = "espionage_action_has_complications"
+                }
+                country_event = {
+                    id = aoe_espionage_actions.7
+                }
+            }
+            else = {
+                country_event = {
+                    id = aoe_espionage_actions.4
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.20.c"
+        custom_tooltip = "aoe_espionage_actions.20.c.tooltip"
+        trigger = {
+            resource_stockpile_compare = {
+                resource = unity
+                value >= 20
+            }
+        }
+        add_resource = {
+            unity = -20
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_1 = yes
+                    }
+                }
+                random = {
+                    chance = 25
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                random = {
+                    chance = 20
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                random = {
+                    chance = 15
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                random = {
+                    chance = 10
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                random = {
+                    chance = 5
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else = {
+                random = {
+                    chance = 30
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = "espionage_action_has_complications"
+                }
+                country_event = {
+                    id = aoe_espionage_actions.7
+                }
+            }
+            else = {
+                country_event = {
+                    id = aoe_espionage_actions.4
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.20.d"
+        custom_tooltip = "aoe_espionage_actions.20.d.tooltip"
+        hidden_effect = {
+            if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_1 = yes
+                    }
+                }
+                random = {
+                    chance = 25
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_2 = yes
+                    }
+                }
+                random = {
+                    chance = 20
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_3 = yes
+                    }
+                }
+                random = {
+                    chance = 15
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_4 = yes
+                    }
+                }
+                random = {
+                    chance = 10
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else_if = {
+                limit = {
+                    event_target:espionage_origin_spy = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+                random = {
+                    chance = 5
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            else = {
+                random = {
+                    chance = 30
+                    set_country_flag = "espionage_action_has_complications"
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = "espionage_action_has_complications"
+                }
+                country_event = {
+                    id = aoe_espionage_actions.7
+                }
+            }
+            else = {
+                country_event = {
+                    id = aoe_espionage_actions.19
+                    days = 5
+                }
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = aoe_espionage_actions.21
+    is_triggered_only = no
+    hide_window = yes
+
+    mean_time_to_happen = {
+        months = 24
+
+        modifier = {
+            factor = 0.75
+            count_pops = {
+                limit = { 
+                    OR = {
+                        has_job = "enforcer"
+                        has_job = "patrol_drone"
+                    }
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 0.75
+            count_pops = {
+                limit = { 
+                    OR = {
+                        has_job = "enforcer"
+                        has_job = "patrol_drone"
+                    }
+                }
+                count > 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            count_pops = {
+                limit = { 
+                    OR = {
+                        has_job = "enforcer"
+                        has_job = "patrol_drone"
+                    }
+                }
+                count > 6
+            }
+        }
+        modifier = {
+            factor = 1.25
+            planet_crime >= 30
+        }
+        modifier = {
+            factor = 1.25
+            planet_crime >= 50
+        }
+        modifier = {
+            factor = 1.25
+            planet_crime >= 70
+        }
+        modifier = {
+            factor = 1.25
+            planet_crime >= 90
+        }
+    }
+
+    trigger = {
+        is_colonizeable_planet = yes
+        is_captured_planet = no
+        is_attacked_planet = no
+        # OR = {
+        #     has_building = "building_hall_judgment"
+        #     has_building = "building_sentinel_posts"
+        #     exists = owner
+        #     owner = {
+        #         is_fallen_empire = yes
+        #     }
+        # }
+        any_owned_pop = {
+            is_marginalized_pop = yes
+        }
+    }
+
+    immediate = {
+        random_owned_pop = {
+            limit = {
+                is_marginalized_pop = yes
+            }
+            wipe_pop_deviations = yes
+            log = ">>> aoe_espionage_actions.21: [Root.GetName] pop deviations was wiped"
+        }
+    }
+}
+
+planet_event = {
+    id = aoe_espionage_actions.22
+    is_triggered_only = no
+    hide_window = yes
+
+    mean_time_to_happen = {
+        months = 18
+
+        modifier = {
+            factor = 0.75
+            count_pops = {
+                limit = { 
+                    OR = {
+                        has_job = "healthcare"
+                        has_job = "priest"
+                        has_job = "maintenance_drone"
+                    }
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 0.75
+            count_pops = {
+                limit = { 
+                    OR = {
+                        has_job = "healthcare"
+                        has_job = "priest"
+                        has_job = "maintenance_drone"
+                    }
+                }
+                count > 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            count_pops = {
+                limit = { 
+                    OR = {
+                        has_job = "healthcare"
+                        has_job = "priest"
+                        has_job = "maintenance_drone"
+                    }
+                }
+                count > 6
+            }
+        }
+        modifier = {
+            factor = 1.25
+            planet_stability < @stabilitylevel3
+        }
+        modifier = {
+            factor = 1.25
+            planet_stability < @stabilitylevel2
+        }
+        modifier = {
+            factor = 1.25
+            planet_stability < @stabilitylevel1
+        }
+    }
+
+    trigger = {
+        is_colonizeable_planet = yes
+        is_captured_planet = no
+        is_attacked_planet = no
+        # OR = {
+        #     has_building = "building_clinic"
+        #     has_building = "building_hospital"
+        #     has_building = "building_temple"
+        #     has_building = "building_holotemple"
+        #     has_building = "building_sacred_nexus"
+        #     has_building = "building_citadel_of_faith"
+        #     has_building = "building_maintenance_depot"
+        #     owner = {
+        #         is_fallen_empire = yes
+        #     }
+        # }
+        any_owned_pop = {
+            OR = {
+                is_deprivated_pop = yes
+                is_frustrated_pop = yes
+                is_malfunctioned_pop = yes
+            }
+        }
+    }
+
+    immediate = {
+        random_owned_pop = {
+            limit = {
+                OR = {
+                    is_deprivated_pop = yes
+                    is_frustrated_pop = yes
+                    is_malfunctioned_pop = yes
+                }
+            }
+            wipe_pop_deviations = yes
+            log = ">>> aoe_espionage_actions.22: [Root.GetName] pop deviations was wiped"
         }
     }
 }

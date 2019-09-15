@@ -361,13 +361,49 @@ spriteTypes = {
     }
     spriteType = {
         name = "GFX_aoe_espionage_kill_spy"
-        texturefile = "gfx/event_pictures/espionage_kill_spy.dds"
+        texturefile = "gfx/event_pictures/espionage_spy_killed.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
         name = "GFX_aoe_espionage_promote_spy"
         texturefile = "gfx/event_pictures/espionage_promote_spy.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_spy_escaped"
+        texturefile = "gfx/event_pictures/espionage_spy_escaped.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_steal_resources_complications"
+        texturefile = "gfx/event_pictures/espionage_steal_resources_complications.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_steal_technologies_complications"
+        texturefile = "gfx/event_pictures/espionage_steal_technologies_complications.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_recruit_defector_complications"
+        texturefile = "gfx/event_pictures/espionage_recruit_defector_complications.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_commit_sabotage_complications"
+        texturefile = "gfx/event_pictures/espionage_commit_sabotage_complications.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_broadcast_propaganda_complications"
+        texturefile = "gfx/event_pictures/espionage_broadcast_propaganda_complications.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
