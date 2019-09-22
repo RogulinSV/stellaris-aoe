@@ -1699,3 +1699,763 @@ message_type = {
     sound = "diplomatic_notification"
     ping = "ping_notification_yellow"
 }
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_EXOTIC_GASES"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_EXOTIC_GASES_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_EXOTIC_GASES"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_EXOTIC_GASES_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_RARE_CRYSTALS"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_RARE_CRYSTALS_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_RARE_CRYSTALS"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_RARE_CRYSTALS_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_LIVING_METAL"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_LIVING_METAL_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_LIVING_METAL"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_LIVING_METAL_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_ZRO"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_ZRO_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_ZRO"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_ZRO_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_DARK_MATTER"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_DARK_MATTER_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_DARK_MATTER"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_DARK_MATTER_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_MITHRIL"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_MITHRIL_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_MITHRIL"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_MITHRIL_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_ORIHALK"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_ORIHALK_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_ORIHALK"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_ORIHALK_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_YURANIC"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_YURANIC_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_YURANIC"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_YURANIC_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_ADAMANTIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_ADAMANTIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_ADAMANTIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_ADAMANTIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_VIBRANIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_VIBRANIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_VIBRANIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_VIBRANIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_COBALTIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_COBALTIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_COBALTIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_COBALTIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_ITILDEEN"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_ITILDEEN_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_ITILDEEN"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_ITILDEEN_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_SATRAMENE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_SATRAMENE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_SATRAMENE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_SATRAMENE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_LIRIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_LIRIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_LIRIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_LIRIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_NEVARRIT"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_NEVARRIT_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_NEVARRIT"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_NEVARRIT_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_THIOTIMOLINE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_THIOTIMOLINE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_THIOTIMOLINE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_THIOTIMOLINE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_UNOBTANIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_UNOBTANIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_UNOBTANIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_UNOBTANIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_STALGRIM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_STALGRIM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_STALGRIM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_STALGRIM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_TIBERIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_TIBERIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_TIBERIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_TIBERIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_ELERIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_ELERIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_ELERIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_ELERIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_GRAVITOID"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_GRAVITOID_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_GRAVITOID"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_GRAVITOID_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_TYLIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_TYLIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_TYLIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_TYLIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_CHALCOLIVAN"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_CHALCOLIVAN_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_CHALCOLIVAN"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_CHALCOLIVAN_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_TERRIGEN"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_TERRIGEN_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_TERRIGEN"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_TERRIGEN_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_CORENITE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_CORENITE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_CORENITE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_CORENITE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_ENERGON"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_ENERGON_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_ENERGON"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_ENERGON_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_ENGOS"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_ENGOS_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_ENGOS"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_ENGOS_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_HELIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_HELIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_HELIUM"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_HELIUM_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_KRYPTONITE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_KRYPTONITE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_KRYPTONITE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_KRYPTONITE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_PHYSICS_RESEARCH"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_PHYSICS_RESEARCH"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_SOCIETY_RESEARCH"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_SOCIETY_RESEARCH"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_POP"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_POP_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_POP"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_POP_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_SCIENTIST"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_SCIENTIST_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_SCIENTIST"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_SCIENTIST_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_ADMIRAL"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_ADMIRAL_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_ADMIRAL"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_ADMIRAL_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_GENERAL"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_GENERAL_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_GENERAL"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_GENERAL_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_STOLE_GOVERNOR"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_STOLE_GOVERNOR_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_GAINED_GOVERNOR"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_GAINED_GOVERNOR_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}

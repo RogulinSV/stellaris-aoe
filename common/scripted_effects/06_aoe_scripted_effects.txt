@@ -125,6 +125,12 @@ try_recruit_defector = {
             }
             modifier = {
                 factor = 0
+                event_target:espionage_origin_country = {
+                    is_xenophobe = yes
+                }
+            }
+            modifier = {
+                factor = 0
                 event_target:espionage_target_planet = {
                     count_pops = {
                         count < 3

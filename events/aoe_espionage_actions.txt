@@ -2000,6 +2000,12 @@ country_event = {
                             is_xenophile = yes
                         }
                     }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_origin_country = {
+                            has_ascension_perk = "ap_disunity_reapers"
+                        }
+                    }
                     # We are exposed by the victim
                     country_event = {
                         id = aoe_espionage_actions.6
@@ -2062,6 +2068,12 @@ country_event = {
                         factor = 2
                         event_target:espionage_target_country = {
                             is_fallen_empire = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_origin_country = {
+                            has_ascension_perk = "ap_disunity_reapers"
                         }
                     }
                     try_steal_resources = yes
@@ -2173,6 +2185,12 @@ country_event = {
                             is_xenophile = yes
                         }
                     }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_origin_country = {
+                            has_ascension_perk = "ap_disunity_reapers"
+                        }
+                    }
                     # We are exposed by the victim
                     country_event = {
                         id = aoe_espionage_actions.6
@@ -2235,6 +2253,12 @@ country_event = {
                         factor = 2
                         event_target:espionage_target_country = {
                             is_fallen_empire = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_origin_country = {
+                            has_ascension_perk = "ap_disunity_reapers"
                         }
                     }
                     try_steal_technologies = yes
@@ -2346,6 +2370,12 @@ country_event = {
                             is_xenophile = yes
                         }
                     }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_origin_country = {
+                            has_ascension_perk = "ap_disunity_reapers"
+                        }
+                    }
                     # We are exposed by the victim
                     country_event = {
                         id = aoe_espionage_actions.6
@@ -2408,6 +2438,12 @@ country_event = {
                         factor = 2
                         event_target:espionage_target_country = {
                             is_fallen_empire = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_origin_country = {
+                            has_ascension_perk = "ap_disunity_reapers"
                         }
                     }
                     try_recruit_defector = yes
@@ -2519,6 +2555,12 @@ country_event = {
                             is_xenophile = yes
                         }
                     }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_origin_country = {
+                            has_ascension_perk = "ap_disunity_reapers"
+                        }
+                    }
                     # We are exposed by the victim
                     country_event = {
                         id = aoe_espionage_actions.6
@@ -2581,6 +2623,12 @@ country_event = {
                         factor = 2
                         event_target:espionage_target_country = {
                             is_fallen_empire = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_origin_country = {
+                            has_ascension_perk = "ap_disunity_reapers"
                         }
                     }
                     try_commit_sabotage = yes
@@ -2692,6 +2740,12 @@ country_event = {
                             is_xenophile = yes
                         }
                     }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_origin_country = {
+                            has_ascension_perk = "ap_disunity_reapers"
+                        }
+                    }
                     # We are exposed by the victim
                     country_event = {
                         id = aoe_espionage_actions.6
@@ -2754,6 +2808,12 @@ country_event = {
                         factor = 2
                         event_target:espionage_target_country = {
                             is_fallen_empire = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_origin_country = {
+                            has_ascension_perk = "ap_disunity_reapers"
                         }
                     }
                     try_broadcast_propaganda = yes
@@ -2822,6 +2882,7 @@ country_event = {
                 }
             }
         }
+        gather_intelligence_data = yes
     }
 }
 
@@ -6349,5 +6410,45 @@ planet_event = {
             wipe_pop_deviations = yes
             log = ">>> aoe_espionage_actions.22: [Root.GetName] pop deviations was wiped"
         }
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.23
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        every_owned_planet = {
+            limit = {
+                is_colonizeable_planet = yes
+                any_owned_pop = {
+                    is_intelligencer = yes
+                }
+            }
+            every_owned_pop = {
+                limit = {
+                    is_intelligencer = yes
+                }
+                while = {
+                    count = 5
+                    promote_intelligencer = yes
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.24
+    title = aoe_espionage_actions.24.title
+    desc = aoe_espionage_actions.24.desc
+    picture = GFX_aoe_espionage_military_ship_explosion
+    show_sound = event_ship_explosion
+    is_triggered_only = yes
+    hide_window = no
+
+    option = {
+        name = OK
     }
 }

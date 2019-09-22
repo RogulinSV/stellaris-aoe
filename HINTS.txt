@@ -171,6 +171,7 @@ army_morale = 0.25
 army_health = 0.1
 army_damage_mult = 0.2
 army_experience_gain_mult = 0.33
+army_starting_experience_add = 100
 army_morale_damage_mult = 0.10
 army_collateral_damage_mult = 0.20
 army_disengage_chance_mult = 0.20
@@ -201,6 +202,7 @@ every_pool_leader = {
 has_ai_personality_behaviour = demands_clear_borders
 is_neighbor_of = root
 is_inside_border = from
+has_commercial_pact = root
 
 every_planet_within_border = {
     surveyed = {

@@ -197,3 +197,147 @@ promote_intelligencer = {
         }
     }
 }
+
+gather_intelligence_data = {
+    event_target:espionage_target_country = {
+        set_variable = {
+            which = "espionage_data_ship_corvette_count"
+            value = 0
+        }
+        set_variable = {
+            which = "espionage_data_ship_destroyer_count"
+            value = 0
+        }
+        set_variable = {
+            which = "espionage_data_ship_cruiser_count"
+            value = 0
+        }
+        set_variable = {
+            which = "espionage_data_ship_battleship_count"
+            value = 0
+        }
+        set_variable = {
+            which = "espionage_data_ship_colossus_count"
+            value = 0
+        }
+        set_variable = {
+            which = "espionage_data_transport_ship_count"
+            value = 0
+        }
+        set_variable = {
+            which = "espionage_data_military_fleet_count"
+            value = 0
+        }
+        set_variable = {
+            which = "espionage_data_military_station_fleet_count"
+            value = 0
+        }
+        set_variable = {
+            which = "espionage_data_transport_fleet_count"
+            value = 0
+        }
+
+        every_owned_ship = {
+            if = {
+                limit = {
+                    is_ship_class = "shipclass_military"
+                }
+                switch = {
+                    trigger = is_ship_size
+                    corvette = {
+                        prev = {
+                            change_variable = {
+                                which = "espionage_data_ship_corvette_count"
+                                value = 1
+                            }
+                        }
+                    }
+                    destroyer = {
+                        prev = {
+                            change_variable = {
+                                which = "espionage_data_ship_destroyer_count"
+                                value = 1
+                            }
+                        }
+                    }
+                    cruiser = {
+                        prev = {
+                            change_variable = {
+                                which = "espionage_data_ship_cruiser_count"
+                                value = 1
+                            }
+                        }
+                    }
+                    battleship = {
+                        prev = {
+                            change_variable = {
+                                which = "espionage_data_ship_battleship_count"
+                                value = 1
+                            }
+                        }
+                    }
+                    colossus = {
+                        prev = {
+                            change_variable = {
+                                which = "espionage_data_ship_colossus_count"
+                                value = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        every_owned_ship = {
+            if = {
+                limit = {
+                    is_ship_class = "shipclass_transport"
+                }
+                prev = {
+                    change_variable = {
+                        which = "espionage_data_transport_ship_count"
+                        value = 1
+                    }
+                }
+            }
+        }
+        every_owned_fleet = {
+            limit = {
+                is_ship_class = "shipclass_military"
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_military_fleet_count"
+                    value = 1
+                }
+            }
+        }
+        every_owned_fleet = {
+            limit = {
+                is_ship_class = "shipclass_military_station"
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_military_station_fleet_count"
+                    value = 1
+                }
+            }
+        }
+        every_owned_fleet = {
+            limit = {
+                is_ship_class = "shipclass_transport"
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_transport_fleet_count"
+                    value = 1
+                }
+            }
+        }
+    }
+
+    event_target:espionage_origin_country = {
+        country_event = {
+            id = aoe_espionage_actions.24
+        }
+    }
+}

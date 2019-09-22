@@ -110,6 +110,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: monthly physics_research mult was gained"
         }
         # Stolen physics_research mult 2x
@@ -144,6 +153,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -199,6 +217,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: monthly physics_research 3x mult was gained"
         }
         # Stolen physics_research mult 4x
@@ -247,6 +274,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -300,6 +336,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: monthly physics_research 5x mult was gained"
         }
         # Slolen 250 physics_research
@@ -315,6 +360,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_X250_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -339,6 +393,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_X500_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -378,6 +441,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_X1000_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -429,6 +501,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_X2000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 2000 physics_research was stolen"
         }
         # Slolen 4000 physics_research
@@ -473,6 +554,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_X4000_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -522,7 +612,116 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_X8000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 8000 physics_research was stolen"
+        }
+        # Slolen 15000 physics_research
+        3 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value <= inferior
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    physics_research = 15000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_X15000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_X15000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 15000 physics_research was stolen"
+        }
+        # Slolen 30000 physics_research
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    physics_research = 30000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_PHYSICS_RESEARCH_X30000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_X30000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 30000 physics_research was stolen"
         }
         # Stolen society_research mult
         10 = {
@@ -540,6 +739,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -577,6 +785,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -632,6 +849,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: monthly society_research 3x mult was gained"
         }
         # Stolen society_research mult 4x
@@ -680,6 +906,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -733,6 +968,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: monthly society_research 5x mult was gained"
         }
         # Slolen 250 society_research
@@ -748,6 +992,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_X250_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -772,6 +1025,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_X500_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -811,6 +1073,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_X1000_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -862,6 +1133,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_X2000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 2000 society_research was stolen"
         }
         # Slolen 4000 society_research
@@ -906,6 +1186,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_X4000_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -955,7 +1244,116 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_X8000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 8000 society_research was stolen"
+        }
+        # Slolen 15000 society_research
+        3 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value <= inferior
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    society_research = 15000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_X15000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_X15000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 15000 society_research was stolen"
+        }
+        # Slolen 30000 society_research
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    society_research = 30000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_SOCIETY_RESEARCH_X30000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_X30000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 30000 society_research was stolen"
         }
         # Stolen engineering_research mult
         10 = {
@@ -973,6 +1371,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1010,6 +1417,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1065,6 +1481,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: monthly engineering_research 3x mult was gained"
         }
         # Stolen engineering_research mult 4x
@@ -1113,6 +1538,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1166,6 +1600,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_MULT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: monthly engineering_research 5x mult was gained"
         }
         # Slolen 250 engineering_research
@@ -1181,6 +1624,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_X250_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1205,6 +1657,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_X500_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1244,6 +1705,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_X1000_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1295,6 +1765,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_X2000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 2000 engineering_research was stolen"
         }
         # Slolen 4000 engineering_research
@@ -1339,6 +1818,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_X4000_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1388,7 +1876,116 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_X8000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 8000 engineering_research was stolen"
+        }
+        # Slolen 15000 engineering_research
+        3 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                        who = event_target:espionage_target_country
+                        category = technology
+                        value <= inferior
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    engineering_research = 15000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_X15000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_X15000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 15000 engineering_research was stolen"
+        }
+        # Slolen 30000 engineering_research
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    relative_power = {
+                         who = event_target:espionage_target_country
+                         category = technology
+                         value >= equivalent
+                     }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            event_target:espionage_origin_country = {
+                add_resource = {
+                    engineering_research = 30000
+                }
+                create_message = {
+                    type = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_GAINED_ENGINEERING_RESEARCH_X30000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_X30000_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            log = ">>> try_steal_technologies effect: 30000 engineering_research was stolen"
         }
         # Stolen physics technology 100%
         2 = {
@@ -1441,6 +2038,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_P100_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1498,6 +2104,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_P80_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1559,6 +2174,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_P60_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 60% physics_research was stolen"
         }
         # Stolen physics technology 40%
@@ -1608,6 +2232,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_P40_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 40% physics_research was stolen"
         }
         # Stolen physics technology 20%
@@ -1639,6 +2272,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_PHYSICS_RESEARCH_P20_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1698,6 +2340,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_P100_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 100% society_research was stolen"
         }
         # Stolen society technology 80%
@@ -1752,6 +2403,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_P80_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1813,6 +2473,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_P60_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 60% society_research was stolen"
         }
         # Stolen society technology 40%
@@ -1862,6 +2531,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_P40_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 40% society_research was stolen"
         }
         # Stolen society technology 20%
@@ -1893,6 +2571,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_SOCIETY_RESEARCH_P20_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -1952,6 +2639,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_P100_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 100% engineering_research was stolen"
         }
         # Stolen engineering technology 80%
@@ -2006,6 +2702,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_P80_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
@@ -2067,6 +2772,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_P60_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 60% engineering_research was stolen"
         }
         # Stolen engineering technology 40%
@@ -2116,6 +2830,15 @@ try_steal_technologies = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_P40_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
             log = ">>> try_steal_technologies effect: 40% engineering_research was stolen"
         }
         # Stolen engineering technology 20%
@@ -2147,6 +2870,15 @@ try_steal_technologies = {
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH
+                    localization = MESSAGE_SPY_STOLE_ENGINEERING_RESEARCH_P20_LOCALISATION
+                    days = 30
+                    target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }

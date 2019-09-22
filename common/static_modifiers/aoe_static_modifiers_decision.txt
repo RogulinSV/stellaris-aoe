@@ -4,11 +4,11 @@ planet_interstellar_research = {
 }
 
 planet_intelligencer_training = {
-    icon = "gfx/interface/icons/planet_modifiers/pm_interstellar_research.dds"
+    icon = "gfx/interface/icons/planet_modifiers/pm_intelligencer_training.dds"
     icon_frame = 1
 }
 
 planet_intelligencer_disclosing = {
-    icon = "gfx/interface/icons/planet_modifiers/pm_interstellar_research.dds"
+    icon = "gfx/interface/icons/planet_modifiers/pm_intelligencer_disclosing.dds"
     icon_frame = 1
 }

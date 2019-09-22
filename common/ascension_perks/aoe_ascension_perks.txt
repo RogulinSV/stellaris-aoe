@@ -1,0 +1,38 @@
+ap_disunity_reapers = {
+    potential = {
+        NOT = {
+            has_ascension_perk = "ap_disunity_reapers"
+        }
+        is_machine_empire = no
+        is_hive_empire = no
+    }
+
+    possible = {
+        has_technology = "tech_interstellar_intelligence"
+    }
+
+    on_enabled = {
+        custom_tooltip = "ap_disunity_reapers_tooltip"
+        hidden_effect = {
+            country_event = {
+                id = aoe_espionage_actions.23
+            }
+        }
+    }
+
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 10
+            has_valid_civic = "civic_natural_spies"
+        }
+        modifier = {
+            factor = 2.5
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 0.1
+            is_pacifist = yes
+        }
+    }
+}

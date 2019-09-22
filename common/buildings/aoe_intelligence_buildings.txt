@@ -110,12 +110,41 @@ building_intelligence_agency_1 = {
         }
     }
 
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = "ap_disunity_reapers"
+            }
+        }
+        modifier = {
+            job_intelligencer_add = 1
+        }
+    }
+
     triggered_desc = {
         trigger = {
             exists = owner
             owner = {
                 is_gestalt = no
                 is_fallen_empire = no
+            }
+        }
+        text = "job_intelligencer_effect_desc"
+    }
+
+    triggered_desc = {
+        trigger = {
+            has_building = "building_spy_memorial"
+        }
+        text = "job_intelligencer_effect_desc"
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_ascension_perk = "ap_disunity_reapers"
             }
         }
         text = "job_intelligencer_effect_desc"
@@ -272,12 +301,41 @@ building_intelligence_agency_2 = {
         }
     }
 
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = "ap_disunity_reapers"
+            }
+        }
+        modifier = {
+            job_intelligencer_add = 1
+        }
+    }
+
     triggered_desc = {
         trigger = {
             exists = owner
             owner = {
                 is_gestalt = no
                 is_fallen_empire = no
+            }
+        }
+        text = "job_intelligencer_effect_desc"
+    }
+
+    triggered_desc = {
+        trigger = {
+            has_building = "building_spy_memorial"
+        }
+        text = "job_intelligencer_effect_desc"
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_ascension_perk = "ap_disunity_reapers"
             }
         }
         text = "job_intelligencer_effect_desc"
@@ -430,12 +488,41 @@ building_intelligence_agency_3 = {
         }
     }
 
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = "ap_disunity_reapers"
+            }
+        }
+        modifier = {
+            job_intelligencer_add = 1
+        }
+    }
+
     triggered_desc = {
         trigger = {
             exists = owner
             owner = {
                 is_gestalt = no
                 is_fallen_empire = no
+            }
+        }
+        text = "job_intelligencer_effect_desc"
+    }
+
+    triggered_desc = {
+        trigger = {
+            has_building = "building_spy_memorial"
+        }
+        text = "job_intelligencer_effect_desc"
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_ascension_perk = "ap_disunity_reapers"
             }
         }
         text = "job_intelligencer_effect_desc"

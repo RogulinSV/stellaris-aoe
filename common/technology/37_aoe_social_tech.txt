@@ -1480,14 +1480,14 @@ tech_crime_purification = {
     }
 }
 
-### Advanced Intelligence
+### Intelligence
 
 tech_interstellar_intelligence = {
     # Unlocks "Intelligence Agency I" building
 
     cost = @technology_low_cost
     area = society
-    tier = 3
+    tier = 1
     is_rare = no
     is_dangerous = no
     is_reverse_engineerable = no
@@ -1495,7 +1495,155 @@ tech_interstellar_intelligence = {
     prerequisites = {
         "tech_planetary_government"
     }
-    weight = @tier3weight3
+    weight = @tier1weight1
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_interstellar_intelligence_title"
+            desc = "tech_interstellar_intelligence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.33
+            research_leader = {
+                area = society
+                has_level > 1
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.33
+            research_leader = {
+                area = society
+                has_level > 2
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.33
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.33
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.33
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 0.66
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 1
+            }
+        }
+        modifier = {
+            factor = 1.33
+            num_communications > 1
+        }
+        modifier = {
+            factor = 1.33
+            num_communications > 3
+        }
+        modifier = {
+            factor = 1.33
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.33
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_diplomacy_adopt"
+            }
+        }
+        modifier = {
+            factor = 1.33
+            has_tradition = "tr_diplomacy_the_federation"
+        }
+        modifier = {
+            factor = 1.33
+            has_tradition = "tr_diplomacy_entente_coordination"
+        }
+        modifier = {
+            factor = 1.33
+            has_tradition = "tr_diplomacy_open_markets"
+        }
+        modifier = {
+            factor = 1.33
+            has_tradition = "tr_diplomacy_insider_trading"
+        }
+        modifier = {
+            factor = 1.33
+            has_tradition = "tr_diplomacy_secure_shipping"
+        }
+        modifier = {
+            factor = 1.33
+            has_tradition = "tr_diplomacy_finish"
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = "ap_disunity_reapers"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0.66
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 1
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_diplomacy_adopt"
+            }
+        }
+    }
 }
 
 tech_galactic_intelligence = {
@@ -1503,7 +1651,7 @@ tech_galactic_intelligence = {
 
     cost = @technology_medium_cost
     area = society
-    tier = 4
+    tier = 3
     is_rare = yes
     is_dangerous = no
     is_reverse_engineerable = no
@@ -1511,11 +1659,163 @@ tech_galactic_intelligence = {
     prerequisites = {
         "tech_interstellar_intelligence"
     }
-    weight = @tier4weight3
+    weight = @tier3weight2
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_galactic_intelligence_title"
+            desc = "tech_galactic_intelligence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 3
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 0.5
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            num_communications > 5
+        }
+        modifier = {
+            factor = 1.25
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_diplomacy_entente_coordination"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_diplomacy_insider_trading"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_diplomacy_secure_shipping"
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = "tr_diplomacy_finish"
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = "ap_disunity_reapers"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 2
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 3
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_diplomacy_entente_coordination"
+            }
+        }
+    }
 }
 
 tech_universe_intelligence = {
-    # Unlocks "Intelligence Agency I" building
+    # Unlocks "Intelligence Agency III" building
 
     cost = @technology_high_cost
     area = society
@@ -1528,4 +1828,128 @@ tech_universe_intelligence = {
         "tech_galactic_intelligence"
     }
     weight = @tier5weight3
+
+    prereqfor_desc = {
+        feature = {
+            title = "tech_universe_intelligence_title"
+            desc = "tech_universe_intelligence_desc"
+        }
+    }
+
+    potential = {
+        is_machine_empire = no
+        is_hive_empire = no
+    }
+
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = society
+                has_level > 4
+                OR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.15
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 0.25
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 5
+            }
+        }
+        modifier = {
+            factor = 1.15
+            num_communications > 7
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_diplomacy_finish"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = "ap_disunity_reapers"
+        }
+    }
+
+    ai_weight = {
+        modifier = {
+            factor = 0
+            research_leader = {
+                area = society
+                has_level < 3
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            research_leader = {
+                area = society
+                has_level < 4
+                NOR = {
+                    has_trait = "leader_trait_expertise_statecraft"
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_encountered_other_species = no
+                num_communications < 5
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = "tr_diplomacy_finish"
+            }
+        }
+    }
 }

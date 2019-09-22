@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_ap_disunity_reapers"
+        texturefile = "gfx/interface/icons/ascension_perks/ap_disunity_reapers.dds"
+        alwaystransparent = yes
+    }
+}
