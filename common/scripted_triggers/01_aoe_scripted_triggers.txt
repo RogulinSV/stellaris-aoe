@@ -957,6 +957,42 @@ is_captured_planet = {
     }
 }
 
+# Scope: army
+is_defensive_army = {
+    OR = {
+        army_type = "defense_army"
+        army_type = "robotic_defense_army"
+        army_type = "machine_defense"
+        army_type = "rebel_slave_defense_army"
+        army_type = "primitive_army"
+        army_type = "industrial_army"
+        army_type = "postatomic_army"
+        army_type = "subterranean_industrial_army"
+        army_type = "subterranean_postatomic_army"
+        army_type = "mutant_army"
+        army_type = "tree_army"
+        army_type = "enraged_army"
+        army_type = "ketling_army"
+        army_type = "titanic_guardian_army"
+        army_type = "care_defensive_protocols"
+    }
+}
+
+# Scope: army
+is_occupation_army = {
+    OR = {
+        army_type = "occupation_army"
+        army_type = "robotic_occupation_army"
+        army_type = "machine_occupation_army"
+    }
+}
+
+# Scope: army
+is_offensive_army = {
+    is_defensive_army = no
+    is_occupation_army = no
+}
+
 # Scope: pop
 is_deprivated_pop = {
     pop_has_trait = "trait_deprivated_pop"

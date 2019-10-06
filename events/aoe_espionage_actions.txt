@@ -2882,7 +2882,9 @@ country_event = {
                 }
             }
         }
-        gather_intelligence_data = yes
+        event_target:espionage_origin_country = {
+            country_event = { id = aoe_espionage_actions.24 }
+        }
     }
 }
 
@@ -6442,13 +6444,256 @@ country_event = {
 country_event = {
     id = aoe_espionage_actions.24
     title = aoe_espionage_actions.24.title
-    desc = aoe_espionage_actions.24.desc
     picture = GFX_aoe_espionage_military_ship_explosion
     show_sound = event_ship_explosion
     is_triggered_only = yes
     hide_window = no
 
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_commit_sabotage = yes
+            }
+        }
+        text = aoe_espionage_actions.24.desc_01
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_resources = yes
+            }
+        }
+        text = aoe_espionage_actions.24.desc_11
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_technologies = yes
+            }
+        }
+        text = aoe_espionage_actions.24.desc_21
+    }
+
+    trigger = {
+        is_ai = no
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_purpose_commit_sabotage = yes
+                }
+            }
+            event_target:espionage_target_country = {
+                intelligence_gather_army_data = yes
+                intelligence_gather_ship_data = {
+                    ARG1 = corvette
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = destroyer
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = cruiser
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = battleship
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = titan
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = colossus
+                }
+                # Module (683230077) (-NSC2 Season 4-): 7 ships discovered
+                intelligence_gather_ship_data = {
+                    ARG1 = Battlecruiser
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = Carrier
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = StrikeCruiser
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = Flagship
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = escortcarrier
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = supportship
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = Dreadnought
+                }
+                intelligence_gather_shipclass_data = {
+                    ARG1 = shipclass_military
+                }
+                intelligence_gather_fleet_data = {
+                    ARG1 = shipclass_transport
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = outpost
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = starport
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = starhold
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = starfortress
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = citadel
+                }
+                # Module (683230077) (-NSC2 Season 4-): 2 starbases discovered
+                intelligence_gather_starbase_data = {
+                    ARG1 = stronghold
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = headquarters
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_purpose_steal_resources = yes
+                }
+            }
+            event_target:espionage_target_country = {
+                intelligence_gather_resource_data = {
+                    ARG1 = energy
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = minerals
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = food
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = influence
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = unity
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = alloys
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = consumer_goods
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = volatile_motes
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = exotic_gases
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = rare_crystals
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = sr_living_metal
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = sr_zro
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = sr_dark_matter
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = nanites
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = minor_artifacts
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = mithril
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_purpose_steal_technologies = yes
+                }
+            }
+            event_target:espionage_target_country = {
+                intelligence_gather_technology_data = yes
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 1
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 2
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 3
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 4
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 5
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 6
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 7
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 8
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 9
+                }
+            }
+        }
+    }
+
     option = {
         name = OK
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.25
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        is_ai = yes
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_technology_count"
+                    value = 0
+                }
+            }
+            set_variable = {
+                which = "espionage_data_technology_count"
+                value = 1
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_technology_count"
+                value = 1
+            }
+        }
     }
 }

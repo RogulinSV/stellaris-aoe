@@ -203,6 +203,8 @@ has_ai_personality_behaviour = demands_clear_borders
 is_neighbor_of = root
 is_inside_border = from
 has_commercial_pact = root
+has_defensive_pact = root
+has_migration_pact = root
 
 every_planet_within_border = {
     surveyed = {
@@ -247,3 +249,11 @@ any_relation = {
 }
 
 remove_all_buildings = yes
+
+add_trust = {
+	who = prev
+	amount = 1
+}
+
+auto_move_to_planet = {}
+destroy_country = yes

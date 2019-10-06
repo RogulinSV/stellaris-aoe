@@ -198,146 +198,745 @@ promote_intelligencer = {
     }
 }
 
-gather_intelligence_data = {
-    event_target:espionage_target_country = {
-        set_variable = {
-            which = "espionage_data_ship_corvette_count"
-            value = 0
-        }
-        set_variable = {
-            which = "espionage_data_ship_destroyer_count"
-            value = 0
-        }
-        set_variable = {
-            which = "espionage_data_ship_cruiser_count"
-            value = 0
-        }
-        set_variable = {
-            which = "espionage_data_ship_battleship_count"
-            value = 0
-        }
-        set_variable = {
-            which = "espionage_data_ship_colossus_count"
-            value = 0
-        }
-        set_variable = {
-            which = "espionage_data_transport_ship_count"
-            value = 0
-        }
-        set_variable = {
-            which = "espionage_data_military_fleet_count"
-            value = 0
-        }
-        set_variable = {
-            which = "espionage_data_military_station_fleet_count"
-            value = 0
-        }
-        set_variable = {
-            which = "espionage_data_transport_fleet_count"
-            value = 0
-        }
+# Scope: country
+# Arg1: corvette destroyer cruiser battleship colossus
+# Arg1: shipclass_military shipclass_military_station shipclass_transport
+intelligence_gather_ship_data = {
+    set_variable = {
+        which = espionage_data_ship_count_$ARG1$
+        value = 0
+    }
 
-        every_owned_ship = {
-            if = {
-                limit = {
-                    is_ship_class = "shipclass_military"
-                }
-                switch = {
-                    trigger = is_ship_size
-                    corvette = {
-                        prev = {
-                            change_variable = {
-                                which = "espionage_data_ship_corvette_count"
-                                value = 1
-                            }
-                        }
-                    }
-                    destroyer = {
-                        prev = {
-                            change_variable = {
-                                which = "espionage_data_ship_destroyer_count"
-                                value = 1
-                            }
-                        }
-                    }
-                    cruiser = {
-                        prev = {
-                            change_variable = {
-                                which = "espionage_data_ship_cruiser_count"
-                                value = 1
-                            }
-                        }
-                    }
-                    battleship = {
-                        prev = {
-                            change_variable = {
-                                which = "espionage_data_ship_battleship_count"
-                                value = 1
-                            }
-                        }
-                    }
-                    colossus = {
-                        prev = {
-                            change_variable = {
-                                which = "espionage_data_ship_colossus_count"
-                                value = 1
-                            }
-                        }
-                    }
-                }
+    every_owned_ship = {
+        limit = {
+            is_ship_size = $ARG1$
+        }
+        prev = {
+            change_variable = {
+                which = espionage_data_ship_count_$ARG1$
+                value = 1
             }
         }
-        every_owned_ship = {
-            if = {
-                limit = {
-                    is_ship_class = "shipclass_transport"
-                }
-                prev = {
-                    change_variable = {
-                        which = "espionage_data_transport_ship_count"
-                        value = 1
-                    }
-                }
+    }
+}
+
+# Scope: country
+# Arg1: shipclass_military shipclass_military_station shipclass_transport
+intelligence_gather_shipclass_data = {
+    set_variable = {
+        which = espionage_data_ship_count_$ARG1$
+        value = 0
+    }
+
+    every_owned_ship = {
+        limit = {
+            is_ship_class = $ARG1$
+        }
+        prev = {
+            change_variable = {
+                which = espionage_data_ship_count_$ARG1$
+                value = 1
             }
         }
-        every_owned_fleet = {
+    }
+}
+
+# Scope: country
+# Arg1: shipclass_military shipclass_military_station shipclass_transport
+intelligence_gather_fleet_data = {
+    set_variable = {
+        which = espionage_data_fleet_count_$ARG1$
+        value = 0
+    }
+
+    every_owned_fleet = {
+        limit = {
+            is_ship_class = $ARG1$
+        }
+        prev = {
+            change_variable = {
+                which = espionage_data_fleet_count_$ARG1$
+                value = 1
+            }
+        }
+    }
+}
+
+# Scope: country
+# Arg1: outpost starport starhold starfortress citadel
+intelligence_gather_starbase_data = {
+    set_variable = {
+        which = espionage_data_starbase_count_$ARG1$
+        value = 0
+    }
+
+    every_owned_starbase = {
+        limit = {
+            has_starbase_size = starbase_$ARG1$
+        }
+        prev = {
+            change_variable = {
+                which = espionage_data_starbase_count_$ARG1$
+                value = 1
+            }
+        }
+    }
+}
+
+# Scope: country planet
+intelligence_gather_army_data = {
+    set_variable = {
+        which = "espionage_data_offensive_army_count"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_defensive_army_count"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_occupation_army_count"
+        value = 0
+    }
+
+    every_owned_army = {
+        if = {
             limit = {
-                is_ship_class = "shipclass_military"
+                is_defensive_army = yes
             }
             prev = {
                 change_variable = {
-                    which = "espionage_data_military_fleet_count"
+                    which = "espionage_data_defensive_army_count"
                     value = 1
                 }
             }
         }
-        every_owned_fleet = {
+        else_if = {
             limit = {
-                is_ship_class = "shipclass_military_station"
+                is_occupation_army = yes
             }
             prev = {
                 change_variable = {
-                    which = "espionage_data_military_station_fleet_count"
+                    which = "espionage_data_occupation_army_count"
                     value = 1
                 }
             }
         }
-        every_owned_fleet = {
-            limit = {
-                is_ship_class = "shipclass_transport"
-            }
+        else = {
             prev = {
                 change_variable = {
-                    which = "espionage_data_transport_fleet_count"
+                    which = "espionage_data_offensive_army_count"
                     value = 1
                 }
             }
         }
     }
+}
 
-    event_target:espionage_origin_country = {
-        country_event = {
-            id = aoe_espionage_actions.24
+# Scope: country
+# Arg1: scientist admiral general
+# Arg2: 1..10
+intelligence_gather_leader_data = {
+    set_variable = {
+        which = espionage_data_leader_count_$ARG1$_$ARG2$
+        value = 0
+    }
+
+    every_pool_leader = {
+        limit = {
+            leader_class = $ARG1$
+            has_level = $ARG2$
+        }
+        prev = {
+            change_variable = {
+                which = espionage_data_leader_count_$ARG1$_$ARG2$
+                value = 1
+            }
+        }
+    }
+    every_owned_leader = {
+        limit = {
+            leader_class = $ARG1$
+            has_level = $ARG2$
+        }
+        prev = {
+            change_variable = {
+                which = espionage_data_leader_$ARG2$_count_$ARG1$
+                value = 1
+            }
+        }
+    }
+}
+
+# Scope: country
+intelligence_gather_planet_data = {
+    set_variable = {
+        which = "espionage_data_planet_count_terraforming"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_planet_count_under_colonization"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_planet_count_occupied_self"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_planet_count_occupied_other"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_planet_count_colonized"
+        value = 0
+    }
+
+    every_owned_planet = {
+        if = {
+            limit = {
+                is_terraforming = yes
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_planet_count_terraforming"
+                    value = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                is_under_colonization = yes
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_planet_count_under_colonization"
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                is_occupied_flag = yes
+            }
+            if = {
+                limit = {
+                    is_controlled_by = prev
+                }
+                prev = {
+                    change_variable = {
+                        which = "espionage_data_planet_count_occupied_self"
+                        value = 1
+                    }
+                }
+            }
+            else = {
+                prev = {
+                    change_variable = {
+                        which = "espionage_data_planet_count_occupied_other"
+                        value = 1
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    is_capital = yes
+                    is_colony = yes
+                }
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_planet_count_colonized"
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+# Scope: country planet
+intelligence_gather_pop_data = {
+    set_variable = {
+        which = "espionage_data_pop_count_total"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_pop_count_robot"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_pop_count_organic"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_pop_count_being_purged"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_pop_count_being_assimilated"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_pop_count_enslaved"
+        value = 0
+    }
+
+    every_owned_pop = {
+        if = {
+            limit = {
+                is_robot_pop = yes
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_pop_count_robot"
+                    value = 1
+                }
+            }
+        }
+        else = {
+            # is_organic_species = yes
+            prev = {
+                change_variable = {
+                    which = "espionage_data_pop_count_organic"
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                is_being_purged = yes
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_pop_count_being_purged"
+                    value = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                is_being_assimilated = yes
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_pop_count_being_assimilated"
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                is_enslaved = yes
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_pop_count_enslaved"
+                    value = 1
+                }
+            }
+        }
+        prev = {
+            change_variable = {
+                which = "espionage_data_pop_count_total"
+                value = 1
+            }
+        }
+    }
+}
+
+# Scope: country planet
+# Arg1: spiritualist materialist authoritarian egalitarian militarist pacifist xenophile xenophobe
+intelligence_gather_pop_ethics_data = {
+    set_variable = {
+        which = espionage_data_pop_count_$ARG1$
+        value = 0
+    }
+
+    every_owned_pop = {
+        if = {
+            limit = {
+                OR = {
+                    has_ethic = ethic_$ARG1$
+                    has_ethic = ethic_fanatic_$ARG1$
+                }
+            }
+            prev = {
+                change_variable = {
+                    which = espionage_data_pop_count_$ARG1$
+                    value = 1
+                }
+            }
+        }
+    }
+}
+
+# Scope: country
+# Arg1: minerals energy ...
+intelligence_gather_resource_data = {
+    set_variable = {
+        which = "espionage_data_resource_count"
+        value = 0
+    }
+    set_variable = {
+        which = espionage_data_resource_count_$ARG1$
+        value = 0
+    }
+
+    while = {
+        limit = {
+            resource_stockpile_compare = {
+                resource = $ARG1$
+                value > 0
+            }
+        }
+        if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 50000
+                }
+            }
+            add_resource = {
+                $ARG1$ = -50000
+            }
+            change_variable = {
+                which = espionage_data_resource_count_$ARG1$
+                value = 50000
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = 50000
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 10000
+                }
+            }
+            add_resource = {
+                $ARG1$ = -10000
+            }
+            change_variable = {
+                which = espionage_data_resource_count_$ARG1$
+                value = 10000
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = 10000
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 5000
+                }
+            }
+            add_resource = {
+                $ARG1$ = -5000
+            }
+            change_variable = {
+                which = espionage_data_resource_count_$ARG1$
+                value = 5000
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = 5000
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 1000
+                }
+            }
+            add_resource = {
+                $ARG1$ = -1000
+            }
+            change_variable = {
+                which = espionage_data_resource_count_$ARG1$
+                value = 1000
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = 1000
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 500
+                }
+            }
+            add_resource = {
+                $ARG1$ = -500
+            }
+            change_variable = {
+                which = espionage_data_resource_count_$ARG1$
+                value = 500
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = 500
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 100
+                }
+            }
+            add_resource = {
+                $ARG1$ = -100
+            }
+            change_variable = {
+                which = espionage_data_resource_count_$ARG1$
+                value = 100
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = 100
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 50
+                }
+            }
+            add_resource = {
+                $ARG1$ = -50
+            }
+            change_variable = {
+                which = espionage_data_resource_count_$ARG1$
+                value = 50
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = 50
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 10
+                }
+            }
+            add_resource = {
+                $ARG1$ = -10
+            }
+            change_variable = {
+                which = espionage_data_resource_count_$ARG1$
+                value = 10
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = 10
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 5
+                }
+            }
+            add_resource = {
+                $ARG1$ = -5
+            }
+            change_variable = {
+                which = espionage_data_resource_count_$ARG1$
+                value = 5
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = 5
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 1
+                }
+            }
+            add_resource = {
+                $ARG1$ = -1
+            }
+            change_variable = {
+                which = espionage_data_resource_count_$ARG1$
+                value = 1
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = 1
+            }
+        }
+    }
+
+    while = {
+        limit = {
+            check_variable = {
+                which = "espionage_data_resource_count"
+                value > 0
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_resource_count"
+                    value >= 50000
+                }
+            }
+            add_resource = {
+                $ARG1$ = 50000
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = -50000
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_resource_count"
+                    value >= 10000
+                }
+            }
+            add_resource = {
+                $ARG1$ = 10000
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = -10000
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_resource_count"
+                    value >= 5000
+                }
+            }
+            add_resource = {
+                $ARG1$ = 5000
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = -5000
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_resource_count"
+                    value >= 1000
+                }
+            }
+            add_resource = {
+                $ARG1$ = 1000
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = -1000
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_resource_count"
+                    value >= 500
+                }
+            }
+            add_resource = {
+                $ARG1$ = 500
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = -500
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_resource_count"
+                    value >= 100
+                }
+            }
+            add_resource = {
+                $ARG1$ = 100
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = -100
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_resource_count"
+                    value >= 50
+                }
+            }
+            add_resource = {
+                $ARG1$ = 50
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = -50
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_resource_count"
+                    value >= 10
+                }
+            }
+            add_resource = {
+                $ARG1$ = 10
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = -10
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_resource_count"
+                    value >= 5
+                }
+            }
+            add_resource = {
+                $ARG1$ = 5
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = -5
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_resource_count"
+                    value >= 1
+                }
+            }
+            add_resource = {
+                $ARG1$ = 1
+            }
+            change_variable = {
+                which = "espionage_data_resource_count"
+                value = -1
+            }
         }
     }
 }
