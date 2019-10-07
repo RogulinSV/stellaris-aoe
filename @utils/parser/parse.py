@@ -5,81 +5,56 @@ import os
 import re
 import argparse
 import logging
-import urllib.request
 from pprint import pprint
-from urllib.error import URLError
-from string import Template
 from pyparsing import ParseException
 
-from parsing import parse_string, parse_settings, BlockToken, EnumerationToken
-from domains import Building, Buildings, Technology, Technologies, Ship, Ships, Module, Settings
+from parsing import parse_string, parse_settings, BlockToken, EnumerationToken, PropertyToken
+from domains import Building, Buildings, Technology, Technologies, Ship, Ships, Module, Settings, detect_module
+from templating import GatheringTechnologyDataTemplate
 from caching import Cache
 from zipfile import ZipFile
 from zipfile import ZipInfo
 
+from templating.building import DemolishBuildingRulesTemplate
+
 parser = argparse.ArgumentParser(description='Parse and extract data from Stellaris modules')
 parser.add_argument('locations', type=str, help='Path to directory with module data', nargs='*', default=[os.getcwd()])
+parser.add_argument('-s', '--settings', type=str, help='Path to file with game settings')
 parser.add_argument('-l', '--log', type=str, help='Logging level')
 arguments = parser.parse_args()
 
 level = logging.DEBUG
-if arguments.log is not None and hasattr(logging, arguments.log):
-    level = getattr(logging, arguments.log)
+if arguments.log is not None and hasattr(logging, arguments.log.upper()):
+    level = getattr(logging, arguments.log.upper())
 logging.basicConfig(format='%(asctime)s: [%(levelname)s] %(message)s', level=level)
 
+dirs_list = list()
 for i, dir_path in enumerate(arguments.locations):
     if not os.path.isabs(dir_path):
-        arguments.locations[i] = os.path.realpath(dir_path)
+        dir_path = os.path.realpath(dir_path)
     if not os.path.exists(dir_path):
         logging.error('Unable to find location "%s"' % dir_path)
         exit(1)
     if not os.path.isdir(dir_path):
         logging.error('The indicated location "%s" is not an directory' % dir_path)
         exit(1)
-# arguments.locations = [os.path.abspath(os.path.join(os.getcwd(), '..', 'tmp'))]
+    dirs_list.append(dir_path)
 
+if len(dirs_list) == 0:
+    logging.error('No directories specified for data extraction')
+    exit(1)
 
-def fetch_url(url: str) -> bytes:
-    with urllib.request.urlopen(url) as response:
-        return response.read()
-
-
-def set_module_name(module: Module, cache: Cache = None) -> bool:
-    module_id = str(module.id)
-    if cache is not None and cache.has('modules', module_id):
-        module.name = cache.get('modules', module_id)
-        return True
-
-    module_url = module.url
-    page_content = None
-    logging.debug('-> fetching module (%s) name from %s...' % (module_id, module_url))
-    try:
-        page_content = fetch_url(module_url).decode('UTF-8')
-    except URLError as err:
-        logging.error('Error occurred while fetching url %s: %s' % (module_url, err))
-    except OSError as err:
-        logging.error('Error occurred while fetching module data: %s' % err)
-
-    if page_content is not None:
-        module_name = re.search(r'<title>([^>]+)</title>', page_content).group(1)
-
-        if module_name is not None:
-            module_name = module_name.replace('Steam Workshop ::', '')
-            module_name = module_name.strip()
-            module.name = module_name
-            logging.debug('-> fetched module (%s) name as "%s"' % (module_id, module_name))
-
-            if cache is not None:
-                cache.set(module_name, module_id, 'modules')
-            return True
-
-    return False
-
-# s = '''
-# '''
-# t = parse_string(s)
-# pprint(t)
-# exit(0)
+user_settings = None
+if arguments.settings is not None:
+    user_settings = arguments.settings + os.sep + 'settings.txt'
+    if not os.path.isabs(user_settings):
+        user_settings = os.path.realpath(user_settings)
+    if not os.path.exists(user_settings):
+        logging.error('Unable to find location "%s" with user settings' % user_settings)
+        exit(1)
+    if not os.path.isfile(user_settings):
+        logging.error('The indicated location "%s" with user settings is not an file' % user_settings)
+        exit(1)
 
 
 def parse_technology(tokens, processor: callable):
@@ -103,13 +78,26 @@ def parse_building(tokens, processor: callable):
     for token in tokens:  # type: BlockToken
         if not isinstance(token, BlockToken):
             continue
-        if 'base_buildtime' not in token.properties:
-            continue
+        if not token.name.startswith('building_'):
+            if 'can_build' not in token.properties and 'can_demolish' not in token.properties \
+                    and 'base_cap_amount' not in token.properties \
+                    and 'destroy_trigger' not in token.includes:
+                continue
 
         building = Building.from_token(token)
         if 'capital' in token.properties and token.properties.get('capital') == 'yes':
             logging.debug('* ignored capital building: ' + building.name)
             continue
+        if 'potential' in token.includes:
+            potential = token.includes.get('potential')  # type: BlockToken
+            if 'owner' in potential.includes:
+                owner = potential.includes.get('owner')  # type: BlockToken
+                if 'is_country_type' in owner.properties and owner.properties.get('is_country_type') == 'primitive':
+                    logging.warning('* ignored primitive building: ' + building.name)
+                    continue
+                if 'is_primitive' in owner.properties and owner.properties.get('is_primitive') == 'yes':
+                    logging.warning('* ignored primitive building: ' + building.name)
+                    continue
         if processor(building):
             logging.debug('* discovered building: ' + building.name)
         else:
@@ -177,58 +165,84 @@ def traverse_directory(dir_path: str, file_patterns: list = None):
                     yield (file_path, file_handler.read())
 
 
-def detect_module(file_path: str, cache: Cache = None) -> Module:
+def read_settings(settings_path) -> Settings:
+    settings = Settings()
+    for token in parse_settings(settings_path):
+        if isinstance(token, EnumerationToken):
+            if token.name == 'last_mods':
+                settings.set('modules', [re.sub(r'mod/(?:ugc_)?([^.]+)\.mod', '\\1', module) for module in token])
+            else:
+                settings.set(token.name, list(token))
+        elif isinstance(token, PropertyToken):
+            settings.set(token.name, token.value)
+
+    return settings
+
+
+def get_module(file_path: str, modules_list: dict = None, cache: Cache = None) -> Module:
     # it my be /path/to/<module_id>/archive.zip
     # or my be /path/to/<module_id>/archive.zip/path/to/file.txt
     # or my be /path/to/<module_id>/path/to/file.txt
     module = None
     dir_list = file_path.split(os.path.sep)
     dir_list.reverse()
-    for dir_name in dir_list:
+    for i, dir_name in enumerate(dir_list):
+        if i == 0 or i == len(dir_list) - 1:
+            continue
+
         if dir_name.isnumeric():
-            module = Module(int(dir_name))
-            set_module_name(module, cache)
+            module_id = int(dir_name)
+            if modules_list is not None and module_id in modules_list:
+                return modules_list.get(module_id)
+
+            module = Module(module_id)
+            module.name = detect_module(module_id, Module.url(module_id), cache)
             break
-        elif dir_name == 'aoe':
-            module = Module(1)
-            module.name = 'Anthem of Eternity'
-            break
+        elif dir_list[i + 1] == 'mod':
+            settings_path = file_path[:file_path.rindex(os.sep + dir_name + os.sep) + 1]  + dir_name + '.mod'
+
+            if os.path.exists(settings_path):
+                module_id = dir_name
+                if modules_list is not None and module_id in modules_list:
+                    return modules_list.get(module_id)
+
+                settings_data = read_settings(settings_path)
+                if 'name' in settings_data:
+                    module = Module(module_id)
+                    module.name = settings_data.get('name')
+                    break
 
     if module is None:
-        module = Module(0)
+        module_id = 0
+        if modules_list is not None and module_id in modules_list:
+            return modules_list.get(module_id)
+
+        module = Module(module_id)
         module.name = 'Stellaris'
+
+    if modules_list is not None:
+        modules_list[module.id] = module
+
+    module.technologies = Technologies()
+    module.buildings = Buildings()
+    module.ships = Ships()
 
     return module
 
 
-def read_settings(settings_path) -> Settings:
-    settings = Settings()
-    for token in parse_settings(settings_path):
-        if isinstance(token, EnumerationToken):
-            if token.name == 'last_mods':
-                for module in token:
-                    module = re.sub(r'mod/(?:ugc_)?([^.]+)\.mod', '\\1', str(module))
-                    if module == 'aoe':
-                        module = 1
-                    else:
-                        module = int(module)
-                    settings.add_module(module, True)
-
-    return settings
-
-
-user_settings = read_settings("C:\\Users\\Sergey\\Documents\\Paradox Interactive\\Stellaris\\settings.txt")
+user_modules = None
+if user_settings is not None:
+    user_modules = read_settings(user_settings).get('modules')
 cache_path = os.path.join(os.getcwd(), 'cache.json')
 cache_data = Cache(cache_path)
-
 modules_list = dict()
+
 file_patterns = [
     r'common/technology/[\w-]+(?=\.txt)',
     r'common/buildings/[\w-]+(?=\.txt)',
     r'common/ship_sizes/[\w-]+(?=\.txt)',
-    # r'\.txt$'
 ]
-for dir_path in arguments.locations:
+for dir_path in dirs_list:
     logging.debug('-> traversing dir %s' % dir_path)
 
     for file_path, file_content in traverse_directory(dir_path, file_patterns):
@@ -240,84 +254,40 @@ for dir_path in arguments.locations:
             logging.error('Error occurred while parsing file %s: %s' % (file_path, err))
             continue
 
-        module = detect_module(file_path, cache_data)
-        if module.id not in modules_list:
-            modules_list[module.id] = (module, Technologies(), Buildings(), Ships())
+        module = get_module(file_path, modules_list, cache_data)
+        parse_technology(tokens, module.technologies)
+        parse_building(tokens, module.buildings)
+        parse_ship(tokens, module.ships)
 
-        parse_technology(tokens, modules_list[module.id][1])
-        parse_building(tokens, modules_list[module.id][2])
-        parse_ship(tokens, modules_list[module.id][3])
-
-
-output = list()
-
-tpl_checker = Template('''\
-    if = {
-        limit = {
-            has_technology = "$name"
-        }
-$setters
-    }\
-''')
-tpl_setter = Template('''\
-        change_variable = {
-            which = "espionage_data_technology_count_$tag"
-            value = 1
-        }\
-''')
-
-technology_areas = set()
-# Technology Categories: 'biology', 'computing', 'field_manipulation', 'industry', 'materials', 'military_theory', 'new_worlds', 'particles', 'propulsion', 'psionics', 'statecraft', 'voidcraft'
-technology_categories = set()
+ships = list()
+templates = [
+    GatheringTechnologyDataTemplate(),
+    DemolishBuildingRulesTemplate()
+]
 for module_id in modules_list:
-    module, technologies, buildings, ships = modules_list.get(module_id)
-    if module_id != 0 and not user_settings.has_module(module):
-        logging.info('Module %s not enabled' % module)
+    module = modules_list.get(module_id)  # type: Module
+    if module_id and user_modules and str(module_id) not in user_modules:
+        logging.info('... module %s skipped' % module)
         continue
 
-    for technology in technologies:
-        technology_areas.add(technology.area)
-        for category in technology.categories:
-            technology_categories.add(category)
+    for technology in module.technologies.sorted():
+        for template in templates:
+            if template.supports(technology):
+                template.process(technology, module)
 
-    output.append('    # Module %s: %d technologies discovered' % (module, len(technologies)))
-    for technology in technologies:
-        setters = list()
-        setters.append(tpl_setter.substitute(tag='area_' + technology.area))
-        if technology.is_dangerous:
-            setters.append(tpl_setter.substitute(tag='type_dangerous'))
-        elif technology.is_rare:
-            setters.append(tpl_setter.substitute(tag='type_rare'))
-        for category in technology.categories:
-            setters.append(tpl_setter.substitute(tag='category_' + category))
-        if len(setters) > 0:
-            output.append(tpl_checker.substitute(name=technology.name, setters="\n".join(setters)))
+    for building in module.buildings.sorted():
+        for template in templates:
+            if template.supports(building):
+                template.process(building, module)
 
-    for ship in ships:
-        logging.info('Ship "%s" from %s' % (ship.name, module.name))
+    for ship in module.ships:
+        if ship.name in ships:
+            logging.info('... ship %s from module %s skipped' % (ship, module))
+            continue
+        ships.append(ship.name)
+        logging.info('Discovered military ship "%s" from module %s' % (ship.name, module.name))
 
 # Building Categories: 'amenity', 'army', 'government', 'manufacturing', 'pop_assembly', 'research', 'resource', 'trade', 'unity'
-template = Template('''\
-    set_variable = {
-        which = "espionage_data_technology_count_$tag"
-        value = 0
-    }\
-''')
-for area in technology_areas:
-    output.insert(0, template.substitute(tag='area_' + area))
-    logging.info('Technology area: %s' % area)
-for category in technology_categories:
-    output.insert(0, template.substitute(tag='category_' + category))
-    logging.info('Technology category: %s' % category)
-for type in ('rare', 'dangerous'):
-    output.insert(0, template.substitute(tag='type_' + type))
-
-with open('output.txt', 'wt') as handler:
-    handler.write('intelligence_gather_technology_data = {')
-    handler.write("\n")
-    for line in output:
-        handler.write(line)
-        handler.write("\n")
-    handler.write('}')
-
-
+for template in templates:
+    with open(template.name(), 'wt') as handler:
+        handler.writelines(template.compile())

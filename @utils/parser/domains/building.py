@@ -51,11 +51,20 @@ class Building(object):
     def __init__(self, name: str):
         self.__name = name
         self.__category = None
+        self.__buildtime = 0
         self.__upgrades = Upgrades()
 
     @property
     def name(self) -> str:
         return self.__name
+
+    @property
+    def description(self) -> str:
+        return ' '.join([part.lower().capitalize() for part in self.__name.replace('building_', '').split('_')])
+
+    @property
+    def localization(self) -> str:
+        return '_'.join([part.upper() for part in self.__name.replace('building_', '').split('_')])
 
     @property
     def category(self) -> str:
@@ -64,6 +73,14 @@ class Building(object):
     @category.setter
     def category(self, category: str):
         self.__category = category
+
+    @property
+    def buildtime(self) -> int:
+        return self.__buildtime
+
+    @buildtime.setter
+    def buildtime(self, value: int):
+        self.__buildtime = value
 
     @property
     def upgrade(self) -> list:
@@ -77,6 +94,8 @@ class Building(object):
     def from_token(token: BlockToken):
         building = Building(token.name)
         building.category = token.properties.get('category')
+        if 'base_buildtime' in token.properties:
+            building.buildtime = int(token.properties.get('base_buildtime'))
         if 'upgrades' in token.properties:
             for upgrade in token.properties.get('upgrades'):
                 building.upgrade = upgrade
@@ -104,7 +123,11 @@ class Buildings(Collection):
 
         self._items.add(building)
 
-    def categories(self) -> list:
+    def sorted(self):
+        for building in sorted(self._items, key=lambda building: str(building.category) + '_' + building.name):
+            yield building
+
+    def categories(self) -> set:
         categories = set()
         for building in self._items:
             if building.category is not None:

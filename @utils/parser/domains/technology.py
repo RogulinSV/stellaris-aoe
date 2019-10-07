@@ -81,6 +81,10 @@ class Technologies(Collection):
 
         self._items.add(technology)
 
+    def sorted(self):
+        for technology in sorted(self._items, key=lambda technology: technology.area + '_' + technology.name):
+            yield technology
+
     def names(self, category: str = None, area: str = None) -> list:
         _self = self
         if category is not None:
@@ -90,7 +94,7 @@ class Technologies(Collection):
 
         return _self.map(lambda technology: technology.name, sort=True)
 
-    def categories(self) -> list:
+    def categories(self) -> set:
         categories = set()
         for technology in self._items:
             for category in technology.categories:

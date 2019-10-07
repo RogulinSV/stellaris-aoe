@@ -11,6 +11,9 @@ class Ship(object):
         self.__size = None
         self.__class_name = None
 
+    def __str__(self):
+        return self.__name
+
     @property
     def name(self) -> str:
         return self.__name

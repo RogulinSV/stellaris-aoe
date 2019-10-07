@@ -87,6 +87,10 @@ class BlockToken(Token):
         self.__tokens.append(token)
 
     @property
+    def includes(self) -> dict:
+        return {token.name: token for token in self.__tokens if isinstance(token, BlockToken)}
+
+    @property
     def properties(self):
         return self.__properties
 
