@@ -6555,6 +6555,42 @@ country_event = {
                 intelligence_gather_starbase_data = {
                     ARG1 = headquarters
                 }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 1
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 2
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 3
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 4
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 5
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 6
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 7
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 8
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 9
+                }
             }
         }
         else_if = {
@@ -6611,6 +6647,111 @@ country_event = {
                 }
                 intelligence_gather_resource_data = {
                     ARG1 = mithril
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = orihalk
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = yuranic
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = adamantium
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = vibranium
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = cobaltium
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = itildeen
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = satramene
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = lirium
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = nevarrit
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = thiotimoline
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = unobtanium
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = stalgrim
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = tiberium
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = elerium
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = gravitoid
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = tylium
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = chalcolivan
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = terrigen
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = corenite
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = energon
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = engos
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = helium
+                }
+                intelligence_gather_resource_data = {
+                    ARG1 = kryptonite
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 1
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 2
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 3
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 4
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 5
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 6
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 7
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 8
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 9
                 }
             }
         }

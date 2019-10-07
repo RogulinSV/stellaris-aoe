@@ -360,7 +360,7 @@ intelligence_gather_leader_data = {
         }
         prev = {
             change_variable = {
-                which = espionage_data_leader_$ARG2$_count_$ARG1$
+                which = espionage_data_leader_count_$ARG1$_$ARG2$
                 value = 1
             }
         }
