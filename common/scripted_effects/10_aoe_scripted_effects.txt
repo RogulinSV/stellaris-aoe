@@ -1,0 +1,3977 @@
+intelligence_gather_traditions_data = {
+    set_variable = {
+        which = "espionage_data_tradition_count"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_adopted"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_finished"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_diplomacy"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_discovery"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_domination"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_expansion"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_harmony"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_prosperity"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_supremacy"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_affinity"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_anguish"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_aspiration"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_assault"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_biogenesis"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_cybernetics"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_defence"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_endure"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_experimentalism"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_faith"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_industry"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_kleptocracy"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_malice"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_mutagenesis"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_mysticism"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_order"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_tradition_count_plentiful_transformation"
+        value = 0
+    }
+
+    # Module (0) Stellaris: 49 traditions discovered
+    if = {
+        limit = {
+            has_tradition = "tr_diplomacy_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_diplomacy"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_diplomacy_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_diplomacy_entente_coordination"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_diplomacy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_diplomacy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_diplomacy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_diplomacy_insider_trading"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_diplomacy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_diplomacy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_diplomacy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_diplomacy_open_markets"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_diplomacy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_diplomacy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_diplomacy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_diplomacy_secure_shipping"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_diplomacy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_diplomacy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_diplomacy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_diplomacy_the_federation"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_diplomacy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_diplomacy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_diplomacy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_discovery_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_discovery"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_discovery_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_discovery_databank_uplinks"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_discovery"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_discovery"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_discovery"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_discovery_faith_in_science"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_discovery"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_discovery"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_discovery"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_discovery_polytechnic_education"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_discovery"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_discovery"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_discovery"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_discovery_science_division"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_discovery"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_discovery"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_discovery"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_discovery_to_boldly_go"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_discovery"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_discovery"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_discovery"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_domination_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_domination"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_domination_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_domination_colonial_viceroys"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_domination"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_domination"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_domination"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_domination_grand_council"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_domination"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_domination"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_domination"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_domination_imperious_architecture"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_domination"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_domination"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_domination"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_domination_judgment_corps"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_domination"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_domination"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_domination"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_domination_workplace_motivators"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_domination"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_domination"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_domination"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_expansion_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_expansion"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_expansion_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_expansion_a_new_life"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_expansion"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_expansion"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_expansion"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_expansion_colonization_fever"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_expansion"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_expansion"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_expansion"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_expansion_courier_network"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_expansion"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_expansion"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_expansion"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_expansion_galactic_ambition"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_expansion"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_expansion"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_expansion"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_expansion_reach_for_the_stars"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_expansion"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_expansion"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_expansion"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_harmony_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_harmony"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_harmony_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_harmony_bulwark_of_harmony"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_harmony"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_harmony"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_harmony"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_harmony_kinship"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_harmony"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_harmony"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_harmony"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_harmony_mind_and_body"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_harmony"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_harmony"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_harmony"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_harmony_the_greater_good"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_harmony"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_harmony"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_harmony"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_harmony_utopian_dream"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_harmony"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_harmony"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_harmony"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_prosperity_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_prosperity"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_prosperity_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_prosperity_administrative_operations"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_prosperity"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_prosperity"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_prosperity"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_prosperity_interstellar_franchising"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_prosperity"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_prosperity"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_prosperity"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_prosperity_public_works"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_prosperity"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_prosperity"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_prosperity"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_prosperity_pursuit_of_profit"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_prosperity"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_prosperity"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_prosperity"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_prosperity_sct"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_prosperity"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_prosperity"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_prosperity"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_supremacy_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_supremacy"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_supremacy_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_supremacy_fleet_logistical_corps"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_supremacy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_supremacy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_supremacy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_supremacy_great_game"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_supremacy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_supremacy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_supremacy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_supremacy_master_shipwrights"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_supremacy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_supremacy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_supremacy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_supremacy_overwhelming_force"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_supremacy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_supremacy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_supremacy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_supremacy_war_games"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_supremacy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_supremacy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_supremacy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    # Module (1311725711) Plentiful Traditions 2.3.3: 119 traditions discovered
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_affinity_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_affinity"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_affinity_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_affinity_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_affinity"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_affinity"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_affinity"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_affinity_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_affinity"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_affinity"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_affinity"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_affinity_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_affinity"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_affinity"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_affinity"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_affinity_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_affinity"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_affinity"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_affinity"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_affinity_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_affinity"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_affinity"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_affinity"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_anguish_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_anguish"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_anguish_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_anguish_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_anguish"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_anguish"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_anguish"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_anguish_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_anguish"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_anguish"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_anguish"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_anguish_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_anguish"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_anguish"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_anguish"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_anguish_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_anguish"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_anguish"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_anguish"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_anguish_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_anguish"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_anguish"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_anguish"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_aspiration_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_aspiration"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_aspiration_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_aspiration_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_aspiration"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_aspiration"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_aspiration"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_aspiration_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_aspiration"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_aspiration"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_aspiration"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_aspiration_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_aspiration"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_aspiration"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_aspiration"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_aspiration_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_aspiration"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_aspiration"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_aspiration"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_aspiration_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_aspiration"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_aspiration"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_aspiration"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_assault_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_assault"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_assault_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_assault_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_assault"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_assault"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_assault"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_assault_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_assault"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_assault"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_assault"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_assault_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_assault"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_assault"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_assault"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_assault_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_assault"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_assault"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_assault"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_assault_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_assault"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_assault"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_assault"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_biogenesis_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_biogenesis"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_biogenesis_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_biogenesis_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_biogenesis"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_biogenesis"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_biogenesis"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_biogenesis_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_biogenesis"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_biogenesis"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_biogenesis"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_biogenesis_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_biogenesis"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_biogenesis"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_biogenesis"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_biogenesis_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_biogenesis"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_biogenesis"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_biogenesis"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_biogenesis_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_biogenesis"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_biogenesis"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_biogenesis"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_cybernetics_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_cybernetics"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_cybernetics_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_cybernetics_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_cybernetics"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_cybernetics"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_cybernetics"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_cybernetics_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_cybernetics"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_cybernetics"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_cybernetics"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_cybernetics_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_cybernetics"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_cybernetics"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_cybernetics"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_cybernetics_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_cybernetics"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_cybernetics"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_cybernetics"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_cybernetics_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_cybernetics"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_cybernetics"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_cybernetics"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_defence_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_defence"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_defence_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_defence_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_defence"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_defence"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_defence"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_defence_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_defence"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_defence"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_defence"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_defence_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_defence"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_defence"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_defence"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_defence_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_defence"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_defence"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_defence"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_defence_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_defence"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_defence"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_defence"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_endure_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_endure"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_endure_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_endure_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_endure"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_endure"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_endure"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_endure_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_endure"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_endure"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_endure"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_endure_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_endure"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_endure"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_endure"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_endure_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_endure"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_endure"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_endure"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_endure_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_endure"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_endure"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_endure"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_experimentalism_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_experimentalism"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_experimentalism_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_experimentalism_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_experimentalism"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_experimentalism"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_experimentalism"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_experimentalism_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_experimentalism"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_experimentalism"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_experimentalism"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_experimentalism_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_experimentalism"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_experimentalism"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_experimentalism"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_experimentalism_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_experimentalism"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_experimentalism"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_experimentalism"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_experimentalism_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_experimentalism"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_experimentalism"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_experimentalism"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_faith_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_faith"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_faith_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_faith_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_faith"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_faith"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_faith"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_faith_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_faith"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_faith"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_faith"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_faith_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_faith"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_faith"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_faith"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_faith_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_faith"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_faith"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_faith"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_faith_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_faith"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_faith"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_faith"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_industry_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_industry"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_industry_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_industry_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_industry"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_industry"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_industry"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_industry_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_industry"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_industry"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_industry"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_industry_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_industry"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_industry"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_industry"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_industry_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_industry"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_industry"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_industry"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_industry_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_industry"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_industry"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_industry"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_kleptocracy_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_kleptocracy"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_kleptocracy_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_kleptocracy_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_kleptocracy_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_kleptocracy_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_kleptocracy_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_kleptocracy_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_kleptocracy"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_malice_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_malice"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_malice_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_malice_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_malice"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_malice"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_malice"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_malice_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_malice"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_malice"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_malice"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_malice_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_malice"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_malice"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_malice"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_malice_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_malice"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_malice"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_malice"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_malice_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_malice"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_malice"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_malice"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mutagenesis_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_mutagenesis"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mutagenesis_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mutagenesis_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mutagenesis_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mutagenesis_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mutagenesis_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mutagenesis_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_mutagenesis"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mysticism_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_mysticism"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mysticism_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mysticism_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_mysticism"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_mysticism"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_mysticism"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mysticism_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_mysticism"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_mysticism"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_mysticism"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mysticism_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_mysticism"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_mysticism"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_mysticism"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mysticism_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_mysticism"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_mysticism"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_mysticism"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_mysticism_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_mysticism"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_mysticism"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_mysticism"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_order_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_order"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_order_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_order_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_order"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_order"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_order"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_order_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_order"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_order"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_order"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_order_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_order"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_order"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_order"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_order_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_order"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_order"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_order"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_order_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_order"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_order"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_order"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_transformation_adopt"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_plentiful_transformation"
+            value = 5
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_adopted"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_transformation_finish"
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count_finished"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_transformation_1"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_transformation"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_transformation"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_transformation"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_transformation_2"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_transformation"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_transformation"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_transformation"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_transformation_3"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_transformation"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_transformation"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_transformation"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_transformation_4"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_transformation"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_transformation"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_transformation"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            has_tradition = "tr_plentiful_transformation_5"
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_tradition_count_plentiful_transformation"
+                    value = 5
+                }
+            }
+            set_variable = {
+                which = "espionage_data_tradition_count_plentiful_transformation"
+                value = 20
+            }
+        }
+        else = {
+            change_variable = {
+                which = "espionage_data_tradition_count_plentiful_transformation"
+                value = 20
+            }
+        }
+        change_variable = {
+            which = "espionage_data_tradition_count"
+            value = 1
+        }
+    }
+}

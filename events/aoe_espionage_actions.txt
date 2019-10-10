@@ -5010,9 +5010,6 @@ country_event = {
     }
 
     immediate = {
-        event_target:espionage_origin_spy = {
-            kill_pop = yes
-        }
         event_target:espionage_origin_planet = {
             if = {
                 limit = {
@@ -5032,6 +5029,12 @@ country_event = {
                     value = 1
                 }
             }
+        }
+    }
+
+    after = {
+        event_target:espionage_origin_spy = {
+            kill_pop = yes
         }
     }
 
@@ -6444,18 +6447,17 @@ country_event = {
 country_event = {
     id = aoe_espionage_actions.24
     title = aoe_espionage_actions.24.title
-    picture = GFX_aoe_espionage_military_ship_explosion
     show_sound = event_ship_explosion
     is_triggered_only = yes
     hide_window = no
 
-    desc = {
+    picture = {
         trigger = {
             event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_commit_sabotage = yes
+                is_intelligencer_has_purpose_steal_resources = yes
             }
         }
-        text = aoe_espionage_actions.24.desc_01
+        picture = GFX_aoe_espionage_steal_resources_information
     }
     desc = {
         trigger = {
@@ -6464,6 +6466,15 @@ country_event = {
             }
         }
         text = aoe_espionage_actions.24.desc_11
+    }
+
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_steal_technologies = yes
+            }
+        }
+        picture = GFX_aoe_espionage_steal_technologies_information
     }
     desc = {
         trigger = {
@@ -6474,126 +6485,183 @@ country_event = {
         text = aoe_espionage_actions.24.desc_21
     }
 
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_recruit_defector = yes
+            }
+        }
+        picture = GFX_aoe_espionage_recruit_defector_information
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_recruit_defector = yes
+            }
+        }
+        text = aoe_espionage_actions.24.desc_31
+    }
+
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_commit_sabotage = yes
+            }
+        }
+        picture = GFX_aoe_espionage_commit_sabotage_information
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_commit_sabotage = yes
+            }
+        }
+        text = aoe_espionage_actions.24.desc_41
+    }
+
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+        }
+        picture = GFX_aoe_espionage_broadcast_propaganda_information
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            NOT = {
+                exists = event_target:espionage_relationship_country_1
+            }
+        }
+        text = aoe_espionage_actions.24.desc_50
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            exists = event_target:espionage_relationship_country_1
+            NOT = {
+                exists = event_target:espionage_relationship_country_2
+            }
+        }
+        text = aoe_espionage_actions.24.desc_51
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            exists = event_target:espionage_relationship_country_2
+            NOT = {
+                exists = event_target:espionage_relationship_country_3
+            }
+        }
+        text = aoe_espionage_actions.24.desc_52
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            exists = event_target:espionage_relationship_country_3
+            NOT = {
+                exists = event_target:espionage_relationship_country_4
+            }
+        }
+        text = aoe_espionage_actions.24.desc_53
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            exists = event_target:espionage_relationship_country_4
+            NOT = {
+                exists = event_target:espionage_relationship_country_5
+            }
+        }
+        text = aoe_espionage_actions.24.desc_54
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            exists = event_target:espionage_relationship_country_5
+            NOT = {
+                exists = event_target:espionage_relationship_country_6
+            }
+        }
+        text = aoe_espionage_actions.24.desc_55
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            exists = event_target:espionage_relationship_country_6
+            NOT = {
+                exists = event_target:espionage_relationship_country_7
+            }
+        }
+        text = aoe_espionage_actions.24.desc_56
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            exists = event_target:espionage_relationship_country_7
+            NOT = {
+                exists = event_target:espionage_relationship_country_8
+            }
+        }
+        text = aoe_espionage_actions.24.desc_57
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            exists = event_target:espionage_relationship_country_8
+            NOT = {
+                exists = event_target:espionage_relationship_country_9
+            }
+        }
+        text = aoe_espionage_actions.24.desc_58
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            exists = event_target:espionage_relationship_country_9
+            NOT = {
+                exists = event_target:espionage_relationship_country_10
+            }
+        }
+        text = aoe_espionage_actions.24.desc_59
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            exists = event_target:espionage_relationship_country_10
+        }
+        text = aoe_espionage_actions.24.desc_60
+    }
+
     trigger = {
         is_ai = no
     }
 
     immediate = {
         if = {
-            limit = {
-                event_target:espionage_origin_spy = {
-                    is_intelligencer_has_purpose_commit_sabotage = yes
-                }
-            }
-            event_target:espionage_target_country = {
-                intelligence_gather_army_data = yes
-                intelligence_gather_ship_data = {
-                    ARG1 = corvette
-                }
-                intelligence_gather_ship_data = {
-                    ARG1 = destroyer
-                }
-                intelligence_gather_ship_data = {
-                    ARG1 = cruiser
-                }
-                intelligence_gather_ship_data = {
-                    ARG1 = battleship
-                }
-                intelligence_gather_ship_data = {
-                    ARG1 = titan
-                }
-                intelligence_gather_ship_data = {
-                    ARG1 = colossus
-                }
-                # Module (683230077) (-NSC2 Season 4-): 7 ships discovered
-                intelligence_gather_ship_data = {
-                    ARG1 = Battlecruiser
-                }
-                intelligence_gather_ship_data = {
-                    ARG1 = Carrier
-                }
-                intelligence_gather_ship_data = {
-                    ARG1 = StrikeCruiser
-                }
-                intelligence_gather_ship_data = {
-                    ARG1 = Flagship
-                }
-                intelligence_gather_ship_data = {
-                    ARG1 = escortcarrier
-                }
-                intelligence_gather_ship_data = {
-                    ARG1 = supportship
-                }
-                intelligence_gather_ship_data = {
-                    ARG1 = Dreadnought
-                }
-                intelligence_gather_shipclass_data = {
-                    ARG1 = shipclass_military
-                }
-                intelligence_gather_fleet_data = {
-                    ARG1 = shipclass_transport
-                }
-                intelligence_gather_starbase_data = {
-                    ARG1 = outpost
-                }
-                intelligence_gather_starbase_data = {
-                    ARG1 = starport
-                }
-                intelligence_gather_starbase_data = {
-                    ARG1 = starhold
-                }
-                intelligence_gather_starbase_data = {
-                    ARG1 = starfortress
-                }
-                intelligence_gather_starbase_data = {
-                    ARG1 = citadel
-                }
-                # Module (683230077) (-NSC2 Season 4-): 2 starbases discovered
-                intelligence_gather_starbase_data = {
-                    ARG1 = stronghold
-                }
-                intelligence_gather_starbase_data = {
-                    ARG1 = headquarters
-                }
-                intelligence_gather_leader_data = {
-                    ARG1 = admiral
-                    ARG2 = 1
-                }
-                intelligence_gather_leader_data = {
-                    ARG1 = admiral
-                    ARG2 = 2
-                }
-                intelligence_gather_leader_data = {
-                    ARG1 = admiral
-                    ARG2 = 3
-                }
-                intelligence_gather_leader_data = {
-                    ARG1 = admiral
-                    ARG2 = 4
-                }
-                intelligence_gather_leader_data = {
-                    ARG1 = admiral
-                    ARG2 = 5
-                }
-                intelligence_gather_leader_data = {
-                    ARG1 = admiral
-                    ARG2 = 6
-                }
-                intelligence_gather_leader_data = {
-                    ARG1 = admiral
-                    ARG2 = 7
-                }
-                intelligence_gather_leader_data = {
-                    ARG1 = admiral
-                    ARG2 = 8
-                }
-                intelligence_gather_leader_data = {
-                    ARG1 = admiral
-                    ARG2 = 9
-                }
-            }
-        }
-        else_if = {
             limit = {
                 event_target:espionage_origin_spy = {
                     is_intelligencer_has_purpose_steal_resources = yes
@@ -6603,22 +6671,43 @@ country_event = {
                 intelligence_gather_resource_data = {
                     ARG1 = energy
                 }
+                intelligence_gather_monthly_income_data = {
+                    ARG1 = energy
+                }
                 intelligence_gather_resource_data = {
+                    ARG1 = minerals
+                }
+                intelligence_gather_monthly_income_data = {
                     ARG1 = minerals
                 }
                 intelligence_gather_resource_data = {
                     ARG1 = food
                 }
+                intelligence_gather_monthly_income_data = {
+                    ARG1 = food
+                }
                 intelligence_gather_resource_data = {
+                    ARG1 = influence
+                }
+                intelligence_gather_monthly_income_data = {
                     ARG1 = influence
                 }
                 intelligence_gather_resource_data = {
                     ARG1 = unity
                 }
+                intelligence_gather_monthly_income_data = {
+                    ARG1 = unity
+                }
                 intelligence_gather_resource_data = {
                     ARG1 = alloys
                 }
+                intelligence_gather_monthly_income_data = {
+                    ARG1 = alloys
+                }
                 intelligence_gather_resource_data = {
+                    ARG1 = consumer_goods
+                }
+                intelligence_gather_monthly_income_data = {
                     ARG1 = consumer_goods
                 }
                 intelligence_gather_resource_data = {
@@ -6763,6 +6852,15 @@ country_event = {
             }
             event_target:espionage_target_country = {
                 intelligence_gather_technology_data = yes
+                intelligence_gather_monthly_income_data = {
+                    ARG1 = physics_research
+                }
+                intelligence_gather_monthly_income_data = {
+                    ARG1 = society_research
+                }
+                intelligence_gather_monthly_income_data = {
+                    ARG1 = engineering_research
+                }
                 intelligence_gather_leader_data = {
                     ARG1 = scientist
                     ARG2 = 1
@@ -6798,6 +6896,542 @@ country_event = {
                 intelligence_gather_leader_data = {
                     ARG1 = scientist
                     ARG2 = 9
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_purpose_recruit_defector = yes
+                }
+            }
+            event_target:espionage_target_country = {
+                intelligence_gather_traditions_data = yes
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 1
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 2
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 3
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 4
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 5
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 6
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 7
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 8
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 9
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 1
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 2
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 3
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 4
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 5
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 6
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 7
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 8
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 9
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 1
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 2
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 3
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 4
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 5
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 6
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 7
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 8
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = scientist
+                    ARG2 = 9
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 1
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 2
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 3
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 4
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 5
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 6
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 7
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 8
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = governor
+                    ARG2 = 9
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_purpose_commit_sabotage = yes
+                }
+            }
+            event_target:espionage_target_country = {
+                intelligence_gather_army_data = yes
+                intelligence_gather_ship_data = {
+                    ARG1 = corvette
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = destroyer
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = cruiser
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = battleship
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = titan
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = colossus
+                }
+                # Module (683230077) (-NSC2 Season 4-): 7 ships discovered
+                intelligence_gather_ship_data = {
+                    ARG1 = Battlecruiser
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = Carrier
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = StrikeCruiser
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = Flagship
+                }
+                intelligence_gather_ship_data = {
+                    ARG1 = escortcarrier
+                }
+                # intelligence_gather_ship_data = {
+                #     ARG1 = supportship
+                # }
+                intelligence_gather_ship_data = {
+                    ARG1 = Dreadnought
+                }
+                intelligence_gather_shipclass_data = {
+                    ARG1 = shipclass_military
+                }
+                intelligence_gather_fleet_data = {
+                    ARG1 = shipclass_transport
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = outpost
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = starport
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = starhold
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = starfortress
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = citadel
+                }
+                # Module (683230077) (-NSC2 Season 4-): 2 starbases discovered
+                intelligence_gather_starbase_data = {
+                    ARG1 = stronghold
+                }
+                intelligence_gather_starbase_data = {
+                    ARG1 = headquarters
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 1
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 2
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 3
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 4
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 5
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 6
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 7
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 8
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = admiral
+                    ARG2 = 9
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 1
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 2
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 3
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 4
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 5
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 6
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 7
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 8
+                }
+                intelligence_gather_leader_data = {
+                    ARG1 = general
+                    ARG2 = 9
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_purpose_broadcast_propaganda = yes
+                }
+            }
+            event_target:espionage_target_country = {
+                intelligence_gather_pop_data = yes
+                intelligence_gather_planet_data = yes
+                intelligence_gather_agreements_data = yes
+                intelligence_gather_pop_ethics_data = {
+                    ARG1 = spiritualist
+                }
+                intelligence_gather_pop_ethics_data = {
+                    ARG1 = materialist
+                }
+                intelligence_gather_pop_ethics_data = {
+                    ARG1 = authoritarian
+                }
+                intelligence_gather_pop_ethics_data = {
+                    ARG1 = egalitarian
+                }
+                intelligence_gather_pop_ethics_data = {
+                    ARG1 = militarist
+                }
+                intelligence_gather_pop_ethics_data = {
+                    ARG1 = pacifist
+                }
+                intelligence_gather_pop_ethics_data = {
+                    ARG1 = xenophile
+                }
+                intelligence_gather_pop_ethics_data = {
+                    ARG1 = xenophobe
+                }
+
+                set_variable = {
+                    which = "espionage_data_relationship_count"
+                    value = 10
+                }
+                every_country = {
+                    limit = {
+                        prev = {
+                            check_variable = {
+                                which = "espionage_data_relationship_count"
+                                value > 0
+                            }
+                        }
+                        NOR = {
+                            is_same_value = prev
+                            is_same_value = root
+                        }
+                        OR = {
+                            is_regular_country = yes
+                            is_fallen_empire = yes
+                        }
+                        has_established_contact = prev
+                        has_communications = prev
+                        has_established_contact = root
+                        has_communications = root
+                    }
+                    if = {
+                        limit = {
+                            prev = {
+                                check_variable = {
+                                    which = "espionage_data_relationship_count"
+                                    value = 10
+                                }
+                            }
+                        }
+                        intelligence_gather_relationship_data = {
+                            ARG1 = 1
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            prev = {
+                                check_variable = {
+                                    which = "espionage_data_relationship_count"
+                                    value = 9
+                                }
+                            }
+                        }
+                        intelligence_gather_relationship_data = {
+                            ARG1 = 2
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            prev = {
+                                check_variable = {
+                                    which = "espionage_data_relationship_count"
+                                    value = 8
+                                }
+                            }
+                        }
+                        intelligence_gather_relationship_data = {
+                            ARG1 = 3
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            prev = {
+                                check_variable = {
+                                    which = "espionage_data_relationship_count"
+                                    value = 7
+                                }
+                            }
+                        }
+                        intelligence_gather_relationship_data = {
+                            ARG1 = 4
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            prev = {
+                                check_variable = {
+                                    which = "espionage_data_relationship_count"
+                                    value = 6
+                                }
+                            }
+                        }
+                        intelligence_gather_relationship_data = {
+                            ARG1 = 5
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            prev = {
+                                check_variable = {
+                                    which = "espionage_data_relationship_count"
+                                    value = 5
+                                }
+                            }
+                        }
+                        intelligence_gather_relationship_data = {
+                            ARG1 = 6
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            prev = {
+                                check_variable = {
+                                    which = "espionage_data_relationship_count"
+                                    value = 4
+                                }
+                            }
+                        }
+                        intelligence_gather_relationship_data = {
+                            ARG1 = 7
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            prev = {
+                                check_variable = {
+                                    which = "espionage_data_relationship_count"
+                                    value = 3
+                                }
+                            }
+                        }
+                        intelligence_gather_relationship_data = {
+                            ARG1 = 8
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            prev = {
+                                check_variable = {
+                                    which = "espionage_data_relationship_count"
+                                    value = 2
+                                }
+                            }
+                        }
+                        intelligence_gather_relationship_data = {
+                            ARG1 = 9
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            prev = {
+                                check_variable = {
+                                    which = "espionage_data_relationship_count"
+                                    value = 1
+                                }
+                            }
+                        }
+                        intelligence_gather_relationship_data = {
+                            ARG1 = 10
+                        }
+                    }
+                    prev = {
+                        subtract_variable = {
+                            which = "espionage_data_relationship_count"
+                            value = 1
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        check_variable = {
+                            which = "espionage_data_relationship_count"
+                            value > 0
+                        }
+                    }
+                    set_variable = {
+                        which = "espionage_data_relationship_count"
+                        value = 0
+                    }
+                }
+                every_country = {
+                    limit = {
+                        NOT = {
+                            is_same_value = prev
+                        }
+                        OR = {
+                            is_regular_country = yes
+                            is_fallen_empire = yes
+                            is_country_type = "enclave"
+                            is_country_type = "nomad"
+                        }
+                        has_established_contact = prev
+                        has_communications = prev
+                    }
+                    prev = {
+                        change_variable = {
+                            which = "espionage_data_relationship_count"
+                            value = 1
+                        }
+                    }
                 }
             }
         }

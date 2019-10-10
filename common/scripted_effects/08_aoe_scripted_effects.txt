@@ -255,6 +255,8 @@ try_broadcast_propaganda = {
                                 chance = 50
                                 pop_provoke_deprivation = yes
                             }
+                            wipe_pop_ethos = yes
+                            pop_change_ethic = "ethic_spiritualist"
                         }
                         else_if = {
                             limit = {
@@ -263,8 +265,6 @@ try_broadcast_propaganda = {
                             }
                             pop_provoke_malfunction = yes
                         }
-                        wipe_pop_ethos = yes
-                        pop_change_ethic = "ethic_spiritualist"
                         set_timed_pop_flag = {
                             flag = "changed_pop"
                             days = 90
@@ -467,6 +467,8 @@ try_broadcast_propaganda = {
                                 chance = 50
                                 pop_provoke_deprivation = yes
                             }
+                            wipe_pop_ethos = yes
+                            pop_change_ethic = "ethic_materialist"
                         }
                         else_if = {
                             limit = {
@@ -475,8 +477,6 @@ try_broadcast_propaganda = {
                             }
                             pop_provoke_malfunction = yes
                         }
-                        wipe_pop_ethos = yes
-                        pop_change_ethic = "ethic_materialist"
                         set_timed_pop_flag = {
                             flag = "changed_pop"
                             days = 90
@@ -675,6 +675,8 @@ try_broadcast_propaganda = {
                                 chance = 50
                                 pop_provoke_deprivation = yes
                             }
+                            wipe_pop_ethos = yes
+                            pop_change_ethic = "ethic_authoritarian"
                         }
                         else_if = {
                             limit = {
@@ -683,8 +685,6 @@ try_broadcast_propaganda = {
                             }
                             pop_provoke_malfunction = yes
                         }
-                        wipe_pop_ethos = yes
-                        pop_change_ethic = "ethic_authoritarian"
                         set_timed_pop_flag = {
                             flag = "changed_pop"
                             days = 90
@@ -889,6 +889,8 @@ try_broadcast_propaganda = {
                                 chance = 50
                                 pop_provoke_deprivation = yes
                             }
+                            wipe_pop_ethos = yes
+                            pop_change_ethic = "ethic_egalitarian"
                         }
                         else_if = {
                             limit = {
@@ -897,8 +899,6 @@ try_broadcast_propaganda = {
                             }
                             pop_provoke_malfunction = yes
                         }
-                        wipe_pop_ethos = yes
-                        pop_change_ethic = "ethic_egalitarian"
                         set_timed_pop_flag = {
                             flag = "changed_pop"
                             days = 90
@@ -1092,6 +1092,8 @@ try_broadcast_propaganda = {
                                 chance = 50
                                 pop_provoke_deprivation = yes
                             }
+                            wipe_pop_ethos = yes
+                            pop_change_ethic = "ethic_militarist"
                         }
                         else_if = {
                             limit = {
@@ -1100,8 +1102,6 @@ try_broadcast_propaganda = {
                             }
                             pop_provoke_malfunction = yes
                         }
-                        wipe_pop_ethos = yes
-                        pop_change_ethic = "ethic_militarist"
                         set_timed_pop_flag = {
                             flag = "changed_pop"
                             days = 90
@@ -1331,6 +1331,8 @@ try_broadcast_propaganda = {
                                 chance = 50
                                 pop_provoke_deprivation = yes
                             }
+                            wipe_pop_ethos = yes
+                            pop_change_ethic = "ethic_pacifist"
                         }
                         else_if = {
                             limit = {
@@ -1339,8 +1341,6 @@ try_broadcast_propaganda = {
                             }
                             pop_provoke_malfunction = yes
                         }
-                        wipe_pop_ethos = yes
-                        pop_change_ethic = "ethic_pacifist"
                         set_timed_pop_flag = {
                             flag = "changed_pop"
                             days = 90
@@ -1553,6 +1553,8 @@ try_broadcast_propaganda = {
                                 chance = 50
                                 pop_provoke_deprivation = yes
                             }
+                            wipe_pop_ethos = yes
+                            pop_change_ethic = "ethic_xenophile"
                         }
                         else_if = {
                             limit = {
@@ -1561,8 +1563,6 @@ try_broadcast_propaganda = {
                             }
                             pop_provoke_malfunction = yes
                         }
-                        wipe_pop_ethos = yes
-                        pop_change_ethic = "ethic_xenophile"
                         set_timed_pop_flag = {
                             flag = "changed_pop"
                             days = 90
@@ -1784,6 +1784,8 @@ try_broadcast_propaganda = {
                                 chance = 50
                                 pop_provoke_deprivation = yes
                             }
+                            wipe_pop_ethos = yes
+                            pop_change_ethic = "ethic_xenophobe"
                         }
                         else_if = {
                             limit = {
@@ -1792,8 +1794,6 @@ try_broadcast_propaganda = {
                             }
                             pop_provoke_malfunction = yes
                         }
-                        wipe_pop_ethos = yes
-                        pop_change_ethic = "ethic_xenophobe"
                         set_timed_pop_flag = {
                             flag = "changed_pop"
                             days = 90

@@ -384,8 +384,20 @@ spriteTypes = {
         alwaystransparent = yes
     }
     spriteType = {
+        name = "GFX_aoe_espionage_steal_resources_information"
+        texturefile = "gfx/event_pictures/espionage_steal_resources_information.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
         name = "GFX_aoe_espionage_steal_technologies_complications"
         texturefile = "gfx/event_pictures/espionage_steal_technologies_complications.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_steal_technologies_information"
+        texturefile = "gfx/event_pictures/espionage_steal_technologies_information.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
@@ -396,14 +408,32 @@ spriteTypes = {
         alwaystransparent = yes
     }
     spriteType = {
+        name = "GFX_aoe_espionage_recruit_defector_information"
+        texturefile = "gfx/event_pictures/espionage_recruit_defector_information.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
         name = "GFX_aoe_espionage_commit_sabotage_complications"
         texturefile = "gfx/event_pictures/espionage_commit_sabotage_complications.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
     spriteType = {
+        name = "GFX_aoe_espionage_commit_sabotage_information"
+        texturefile = "gfx/event_pictures/espionage_commit_sabotage_information.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
         name = "GFX_aoe_espionage_broadcast_propaganda_complications"
         texturefile = "gfx/event_pictures/espionage_broadcast_propaganda_complications.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_broadcast_propaganda_information"
+        texturefile = "gfx/event_pictures/espionage_broadcast_propaganda_information.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }

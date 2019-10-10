@@ -389,6 +389,36 @@ intelligence_gather_planet_data = {
         which = "espionage_data_planet_count_colonized"
         value = 0
     }
+    set_variable = {
+        which = "espionage_data_system_count"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_system_count_claim"
+        value = 0
+    }
+
+    every_system_within_border = {
+        prev = {
+            change_variable = {
+                which = "espionage_data_system_count"
+                value = 1
+            }
+        }
+        if = {
+            limit = {
+                any_country = {
+                    has_claim = prev
+                }
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_system_count_claim"
+                    value = 1
+                }
+            }
+        }
+    }
 
     every_owned_planet = {
         if = {
@@ -480,6 +510,30 @@ intelligence_gather_pop_data = {
         which = "espionage_data_pop_count_enslaved"
         value = 0
     }
+    set_variable = {
+        which = "espionage_data_pop_count_citizenship_rights"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_pop_count_happines_20"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_pop_count_happines_40"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_pop_count_happines_60"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_pop_count_happines_80"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_pop_count_happines_100"
+        value = 0
+    }
 
     every_owned_pop = {
         if = {
@@ -535,6 +589,69 @@ intelligence_gather_pop_data = {
                 }
             }
         }
+        else_if = {
+            limit = {
+                has_citizenship_rights = yes
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_pop_count_citizenship_rights"
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                happiness <= 0.2
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_pop_count_happines_20"
+                    value = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                happiness <= 0.4
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_pop_count_happines_40"
+                    value = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                happiness <= 0.6
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_pop_count_happines_60"
+                    value = 1
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                happiness <= 0.8
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_pop_count_happines_80"
+                    value = 1
+                }
+            }
+        }
+        else = {
+            prev = {
+                change_variable = {
+                    which = "espionage_data_pop_count_happines_100"
+                    value = 1
+                }
+            }
+        }
         prev = {
             change_variable = {
                 which = "espionage_data_pop_count_total"
@@ -553,18 +670,16 @@ intelligence_gather_pop_ethics_data = {
     }
 
     every_owned_pop = {
-        if = {
-            limit = {
-                OR = {
-                    has_ethic = ethic_$ARG1$
-                    has_ethic = ethic_fanatic_$ARG1$
-                }
+        limit = {
+            OR = {
+                has_ethic = ethic_$ARG1$
+                has_ethic = ethic_fanatic_$ARG1$
             }
-            prev = {
-                change_variable = {
-                    which = espionage_data_pop_count_$ARG1$
-                    value = 1
-                }
+        }
+        prev = {
+            change_variable = {
+                which = espionage_data_pop_count_$ARG1$
+                value = 1
             }
         }
     }
@@ -936,6 +1051,740 @@ intelligence_gather_resource_data = {
             change_variable = {
                 which = "espionage_data_resource_count"
                 value = -1
+            }
+        }
+    }
+}
+
+# Scope: Country
+# Prev: Country
+# Arg1: 1..10
+intelligence_gather_relationship_data = {
+    save_event_target_as = espionage_relationship_country_$ARG1$
+
+    set_variable = {
+        which = "espionage_data_relationship_count"
+        value = 0
+    }
+
+    # [31...70]
+    # Hostile
+    if = {
+        limit = {
+            is_berserker_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 31
+        }
+    }
+    else_if = {
+        limit = {
+            is_hostile_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 33
+        }
+    }
+    else_if = {
+        limit = {
+            is_belligerent_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 35
+        }
+    }
+    else_if = {
+        limit = {
+            is_angry_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 37
+        }
+    }
+    else_if = {
+        limit = {
+            is_unfriendly_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 39
+        }
+    }
+    else_if = {
+        limit = {
+            is_disloyal_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 41
+        }
+    }
+    else_if = {
+        limit = {
+            is_arrogant_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 43
+        }
+    }
+    else_if = {
+        limit = {
+            is_domineering_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 45
+        }
+    }
+    else_if = {
+        limit = {
+            is_imperious_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 47
+        }
+    }
+    else_if = {
+        limit = {
+            is_custodial_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 49
+        }
+    }
+    else_if = {
+        limit = {
+            is_dismissive_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 51
+        }
+    }
+    # Neutral
+    else_if = {
+        limit = {
+            is_threatened_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 53
+        }
+    }
+    else_if = {
+        limit = {
+            is_overlord_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 55
+        }
+    }
+    else_if = {
+        limit = {
+            is_neutral_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 57
+        }
+    }
+    else_if = {
+        limit = {
+            is_enigmatic_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 59
+        }
+    }
+    # Friendly
+    else_if = {
+        limit = {
+            is_friendly_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 62
+        }
+    }
+    else_if = {
+        limit = {
+            is_loyal_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 64
+        }
+    }
+    else_if = {
+        limit = {
+            is_cordial_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 66
+        }
+    }
+    else_if = {
+        limit = {
+            is_patronizing_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 68
+        }
+    }
+    else_if = {
+        limit = {
+            is_protective_to = prev
+        }
+        set_variable = {
+            which = "espionage_data_relationship_count"
+            value = 70
+        }
+    }
+
+    # +25, -25
+    if = {
+        limit = {
+            is_at_war_with = prev
+        }
+        subtract_variable = {
+            which = "espionage_data_relationship_count"
+            value = 20 # -20
+        }
+    }
+    else_if = {
+        limit = {
+            has_defensive_pact = prev
+        }
+        change_variable = {
+            which = "espionage_data_relationship_count"
+            value = 5 # +5
+        }
+    }
+    if = {
+        limit = {
+            exists = overlord
+            overlord = {
+                is_same_value = prev
+            }
+        }
+        subtract_variable = {
+            which = "espionage_data_relationship_count"
+            value = 3 # -3
+        }
+    }
+    if = {
+        limit = {
+            has_commercial_pact = prev
+        }
+        change_variable = {
+            which = "espionage_data_relationship_count"
+            value = 3 # +3
+        }
+    }
+    if = {
+        limit = {
+            has_research_agreement = prev
+        }
+        change_variable = {
+            which = "espionage_data_relationship_count"
+            value = 3 # +3
+        }
+    }
+    if = {
+        limit = {
+            has_non_aggression_pact = prev
+        }
+        change_variable = {
+            which = "espionage_data_relationship_count"
+            value = 3 # +3
+        }
+    }
+    if = {
+        limit = {
+            is_guaranteeing = prev
+        }
+        change_variable = {
+            which = "espionage_data_relationship_count"
+            value = 4 # +4
+        }
+    }
+    if = {
+        limit = {
+            is_in_federation_with = prev
+        }
+        change_variable = {
+            which = "espionage_data_relationship_count"
+            value = 4 # +4
+        }
+    }
+    if = {
+        limit = {
+            has_migration_access = prev
+        }
+        change_variable = {
+            which = "espionage_data_relationship_count"
+            value = 3 # +3
+        }
+    }
+    if = {
+        limit = {
+            has_closed_borders = prev
+        }
+        subtract_variable = {
+            which = "espionage_data_relationship_count"
+            value = 2 # -2
+        }
+    }
+
+    # +5, -5
+    if = {
+        limit = {
+            has_ethic = "ethic_fanatic_xenophile"
+        }
+        change_variable = {
+            which = "espionage_data_relationship_count"
+            value = 3 # +3
+        }
+    }
+    else_if = {
+        limit = {
+            has_ethic = "ethic_xenophile"
+        }
+        change_variable = {
+            which = "espionage_data_relationship_count"
+            value = 2 # +2
+        }
+    }
+    if = {
+        limit = {
+            has_ethic = "ethic_fanatic_xenophobe"
+        }
+        subtract_variable = {
+            which = "espionage_data_relationship_count"
+            value = 3 # -3
+        }
+    }
+    else_if = {
+        limit = {
+            has_ethic = "ethic_xenophobe"
+        }
+        subtract_variable = {
+            which = "espionage_data_relationship_count"
+            value = 2 # -2
+        }
+    }
+
+    prev = {
+        set_variable = {
+            which = espionage_data_relationship_count_horrible_$ARG1$
+            value = 0
+        }
+        set_variable = {
+            which = espionage_data_relationship_count_bad_$ARG1$
+            value = 0
+        }
+        set_variable = {
+            which = espionage_data_relationship_count_normal_$ARG1$
+            value = 0
+        }
+        set_variable = {
+            which = espionage_data_relationship_count_good_$ARG1$
+            value = 0
+        }
+        set_variable = {
+            which = espionage_data_relationship_count_excellent_$ARG1$
+            value = 0
+        }
+    }
+    if = {
+        limit = {
+            check_variable = {
+                which = "espionage_data_relationship_count"
+                value < 31
+            }
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_relationship_count"
+                    value > 0
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "espionage_data_relationship_count"
+                        value >= 10
+                    }
+                }
+                subtract_variable = {
+                    which = "espionage_data_relationship_count"
+                    value = 10
+                }
+                prev = {
+                    change_variable = {
+                        which = espionage_data_relationship_count_horrible_$ARG1$
+                        value = 10
+                    }
+                }
+            }
+            else = {
+                subtract_variable = {
+                    which = "espionage_data_relationship_count"
+                    value = 1
+                }
+                prev = {
+                    change_variable = {
+                        which = espionage_data_relationship_count_horrible_$ARG1$
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            check_variable = {
+                which = "espionage_data_relationship_count"
+                value <= 45
+            }
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_relationship_count"
+                    value > 0
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "espionage_data_relationship_count"
+                        value >= 10
+                    }
+                }
+                subtract_variable = {
+                    which = "espionage_data_relationship_count"
+                    value = 10
+                }
+                prev = {
+                    change_variable = {
+                        which = espionage_data_relationship_count_bad_$ARG1$
+                        value = 10
+                    }
+                }
+            }
+            else = {
+                subtract_variable = {
+                    which = "espionage_data_relationship_count"
+                    value = 1
+                }
+                prev = {
+                    change_variable = {
+                        which = espionage_data_relationship_count_bad_$ARG1$
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            check_variable = {
+                which = "espionage_data_relationship_count"
+                value <= 61
+            }
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_relationship_count"
+                    value > 0
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "espionage_data_relationship_count"
+                        value >= 10
+                    }
+                }
+                subtract_variable = {
+                    which = "espionage_data_relationship_count"
+                    value = 10
+                }
+                prev = {
+                    change_variable = {
+                        which = espionage_data_relationship_count_normal_$ARG1$
+                        value = 10
+                    }
+                }
+            }
+            else = {
+                subtract_variable = {
+                    which = "espionage_data_relationship_count"
+                    value = 1
+                }
+                prev = {
+                    change_variable = {
+                        which = espionage_data_relationship_count_normal_$ARG1$
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            check_variable = {
+                which = "espionage_data_relationship_count"
+                value <= 65
+            }
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_relationship_count"
+                    value > 0
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "espionage_data_relationship_count"
+                        value >= 10
+                    }
+                }
+                subtract_variable = {
+                    which = "espionage_data_relationship_count"
+                    value = 10
+                }
+                prev = {
+                    change_variable = {
+                        which = espionage_data_relationship_count_good_$ARG1$
+                        value = 10
+                    }
+                }
+            }
+            else = {
+                subtract_variable = {
+                    which = "espionage_data_relationship_count"
+                    value = 1
+                }
+                prev = {
+                    change_variable = {
+                        which = espionage_data_relationship_count_good_$ARG1$
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+    else = {
+        while = {
+            limit = {
+                check_variable = {
+                    which = "espionage_data_relationship_count"
+                    value > 0
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "espionage_data_relationship_count"
+                        value >= 10
+                    }
+                }
+                subtract_variable = {
+                    which = "espionage_data_relationship_count"
+                    value = 10
+                }
+                prev = {
+                    change_variable = {
+                        which = espionage_data_relationship_count_excellent_$ARG1$
+                        value = 10
+                    }
+                }
+            }
+            else = {
+                subtract_variable = {
+                    which = "espionage_data_relationship_count"
+                    value = 1
+                }
+                prev = {
+                    change_variable = {
+                        which = espionage_data_relationship_count_excellent_$ARG1$
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Scope: Country
+intelligence_gather_agreements_data = {
+    set_variable = {
+        which = "espionage_data_agreements_count_at_war"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_agreements_count_in_federation"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_agreements_count_defensive_pact"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_agreements_count_commercial_pact"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_agreements_count_non_aggression_pact"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_agreements_count_research_agreement"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_agreements_count_is_guaranteeing"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_agreements_count_migration_access"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_agreements_count_closed_borders"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_agreements_count_opened_borders"
+        value = 0
+    }
+
+    every_country = {
+        limit = {
+            NOT = {
+                is_same_value = prev
+            }
+        }
+        if = {
+            limit = {
+                is_at_war_with = prev
+            }
+            change_variable = {
+                which = "espionage_data_agreements_count_at_war"
+                value = 1
+            }
+        }
+        if = {
+            limit = {
+                is_in_federation_with = prev
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_agreements_count_in_federation"
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_defensive_pact = prev
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_agreements_count_defensive_pact"
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_commercial_pact = prev
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_agreements_count_commercial_pact"
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_non_aggression_pact = prev
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_agreements_count_non_aggression_pact"
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_research_agreement = prev
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_agreements_count_research_agreement"
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                is_guaranteeing = prev
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_agreements_count_is_guaranteeing"
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_migration_access = prev
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_agreements_count_migration_access"
+                    value = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_closed_borders = prev
+            }
+            prev = {
+                change_variable = {
+                    which = "espionage_data_agreements_count_closed_borders"
+                    value = 1
+                }
+            }
+        }
+        else = {
+            prev = {
+                change_variable = {
+                    which = "espionage_data_agreements_count_opened_borders"
+                    value = 1
+                }
             }
         }
     }
