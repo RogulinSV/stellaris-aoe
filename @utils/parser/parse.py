@@ -9,13 +9,12 @@ from pprint import pprint
 from pyparsing import ParseException
 
 from parsing import parse_string, parse_settings, BlockToken, EnumerationToken, PropertyToken
-from domains import Building, Buildings, Technology, Technologies, Ship, Ships, Module, Settings, detect_module
-from templating import GatheringTechnologyDataTemplate
+from domains import Building, Buildings, Technology, Technologies, Ship, Ships, \
+    Category as TraditionCategory, Categories as TraditionCategories, Module, Settings, detect_module
+from templating import GatheringTechnologyDataTemplate, GatheringTraditionsDataTemplate, DemolishBuildingRulesTemplate
 from caching import Cache
 from zipfile import ZipFile
 from zipfile import ZipInfo
-
-from templating.building import DemolishBuildingRulesTemplate
 
 parser = argparse.ArgumentParser(description='Parse and extract data from Stellaris modules')
 parser.add_argument('locations', type=str, help='Path to directory with module data', nargs='*', default=[os.getcwd()])
@@ -127,6 +126,24 @@ def parse_ship(tokens, processor: callable):
             logging.debug('* ignored ship: ' + ship.name)
 
 
+def parse_tradition(tokens, processor: callable):
+    for token in tokens:  # type: BlockToken
+        if not isinstance(token, BlockToken):
+            continue
+        if 'adoption_bonus' not in token.properties or 'finish_bonus' not in token.properties or 'traditions' not in token.properties:
+            continue
+
+        category = TraditionCategory.from_token(token)
+        if processor(category):
+            logging.debug('* discovered traditions category: ' + category.name)
+            for tradition in category.traditions:
+                logging.debug('* discovered tradition: ' + category.traditions.get(tradition).name)
+        else:
+            logging.debug('* ignored traditions category: ' + category.name)
+            for tradition in category.traditions:
+                logging.debug('* ignored tradition: ' + category.traditions.get(tradition).name)
+
+
 def filter_file(file_path: str, file_patterns: list = None) -> bool:
     if file_patterns is None:
         return True
@@ -226,6 +243,7 @@ def get_module(file_path: str, modules_list: dict = None, cache: Cache = None) -
     module.technologies = Technologies()
     module.buildings = Buildings()
     module.ships = Ships()
+    module.traditions = TraditionCategories()
 
     return module
 
@@ -241,6 +259,7 @@ file_patterns = [
     r'common/technology/[\w-]+(?=\.txt)',
     r'common/buildings/[\w-]+(?=\.txt)',
     r'common/ship_sizes/[\w-]+(?=\.txt)',
+    r'common/tradition_categories/[\w-]+(?=\.txt)'
 ]
 for dir_path in dirs_list:
     logging.debug('-> traversing dir %s' % dir_path)
@@ -258,10 +277,12 @@ for dir_path in dirs_list:
         parse_technology(tokens, module.technologies)
         parse_building(tokens, module.buildings)
         parse_ship(tokens, module.ships)
+        parse_tradition(tokens, module.traditions)
 
 ships = list()
 templates = [
     GatheringTechnologyDataTemplate(),
+    GatheringTraditionsDataTemplate(),
     DemolishBuildingRulesTemplate()
 ]
 for module_id in modules_list:
@@ -279,6 +300,11 @@ for module_id in modules_list:
         for template in templates:
             if template.supports(building):
                 template.process(building, module)
+
+    for traditions in module.traditions.sorted():
+        for template in templates:
+            if template.supports(traditions):
+                template.process(traditions, module)
 
     for ship in module.ships:
         if ship.name in ships:

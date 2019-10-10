@@ -8,13 +8,13 @@ from .common import Collection
 class Upgrades(object):
     __instance = None
 
-    def __new__(class_name):
-        if class_name.__instance is None:
-            class_name.__instance = super(Upgrades, class_name).__new__(class_name)
-            class_name.__instance.__upgrades_from = dict()
-            class_name.__instance.__upgrades_into = dict()
+    def __new__(cls):
+        if cls.__instance is None:
+            cls.__instance = super(Upgrades, cls).__new__(cls)
+            cls.__instance.__upgrades_from = dict()
+            cls.__instance.__upgrades_into = dict()
 
-        return class_name.__instance
+        return cls.__instance
 
     def set(self, building: str, upgrades: list):
         for upgrade in upgrades:

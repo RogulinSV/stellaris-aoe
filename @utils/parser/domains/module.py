@@ -8,7 +8,7 @@ import urllib.request
 from urllib.error import URLError
 
 from caching import Cache
-from domains import Technologies, Buildings, Ships
+from domains import Technologies, Buildings, Ships, Categories as TraditionCategories
 
 
 def fetch_url(url: str) -> bytes:
@@ -52,6 +52,7 @@ class Module(object):
         self.__technologies = None
         self.__buildings = None
         self.__ships = None
+        self.__traditions = None
 
     def __str__(self):
         return '(%s) %s' % (str(self.__id), str(self.__name))
@@ -91,6 +92,14 @@ class Module(object):
     @ships.setter
     def ships(self, value: Ships):
         self.__ships = value
+
+    @property
+    def traditions(self) -> TraditionCategories:
+        return self.__traditions
+
+    @traditions.setter
+    def traditions(self, value: TraditionCategories):
+        self.__traditions = value
 
     @staticmethod
     def url(module_id: int) -> str:
