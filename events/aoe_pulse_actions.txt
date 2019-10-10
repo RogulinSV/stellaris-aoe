@@ -60,18 +60,15 @@ event = {
                                         is_outerworlds_planet = yes
                                         is_extraterrestrial_planet = yes
                                     }
-                                    NOT = {
+                                    NOR = {
                                         is_same_value = prevprev
+                                        has_planet_flag = "observed_planet_resources_found"
                                     }
                                     OR = {
                                         has_owner = no
                                         owner = {
                                             is_same_value = prevprevprev
                                         }
-                                    }
-                                    check_variable = {
-                                        which = "observed_resources_planet_counter"
-                                        value < 5
                                     }
                                 }
                             }
@@ -82,8 +79,9 @@ event = {
                                         is_outerworlds_planet = yes
                                         is_extraterrestrial_planet = yes
                                     }
-                                    NOT = {
+                                    NOR = {
                                         is_same_value = prevprev
+                                        has_planet_flag = "observed_planet_resources_found"
                                     }
                                     OR = {
                                         has_owner = no
@@ -92,23 +90,9 @@ event = {
                                         }
                                     }
                                 }
-                                if = {
-                                    limit = {
-                                        check_variable = {
-                                            which = "observed_resources_planet_counter"
-                                            value < 1
-                                        }
-                                    }
-                                    set_variable = {
-                                        which = "observed_resources_planet_counter"
-                                        value = 1
-                                    }
-                                }
-                                else = {
-                                    change_variable = {
-                                        which = "observed_resources_planet_counter"
-                                        value = 1
-                                    }
+                                set_timed_planet_flag = {
+                                    flag = "observed_planet_resources_found"
+                                    days = 3000
                                 }
                                 planet_event = {
                                     id = aoe_pulse_actions.2
@@ -183,18 +167,15 @@ event = {
                                         is_outerworlds_planet = yes
                                         is_extraterrestrial_planet = yes
                                     }
-                                    NOT = {
+                                    NOR = {
                                         is_same_value = prevprev
+                                        has_planet_flag = "observed_planet_resources_found"
                                     }
                                     OR = {
                                         has_owner = no
                                         owner = {
                                             is_same_value = prevprevprev
                                         }
-                                    }
-                                    check_variable = {
-                                        which = "observed_resources_planet_counter"
-                                        value < 10
                                     }
                                 }
                             }
@@ -205,8 +186,9 @@ event = {
                                         is_outerworlds_planet = yes
                                         is_extraterrestrial_planet = yes
                                     }
-                                    NOT = {
+                                    NOR = {
                                         is_same_value = prevprev
+                                        has_planet_flag = "observed_planet_resources_found"
                                     }
                                     OR = {
                                         has_owner = no
@@ -215,23 +197,9 @@ event = {
                                         }
                                     }
                                 }
-                                if = {
-                                    limit = {
-                                        check_variable = {
-                                            which = "observed_resources_planet_counter"
-                                            value < 1
-                                        }
-                                    }
-                                    set_variable = {
-                                        which = "observed_resources_planet_counter"
-                                        value = 1
-                                    }
-                                }
-                                else = {
-                                    change_variable = {
-                                        which = "observed_resources_planet_counter"
-                                        value = 1
-                                    }
+                                set_timed_planet_flag = {
+                                    flag = "observed_planet_resources_found"
+                                    days = 2000
                                 }
                                 planet_event = {
                                     id = aoe_pulse_actions.2
@@ -1322,6 +1290,14 @@ planet_event = {
                                 status = no
                             }
                         }
+                        NOT = {
+                            any_ship_in_system = {
+                                exists = owner
+                                owner = {
+                                    is_same_value = event_target:observatory_owner_country
+                                }
+                            }
+                        }
                     }
                     every_system_planet = {
                         limit = {
@@ -1333,6 +1309,16 @@ planet_event = {
                         surveyed = {
                             set_surveyed = yes
                             surveyor = event_target:observatory_owner_country
+                        }
+                    }
+                    event_target:observatory_owner_country = {
+                        create_message = {
+                            type = MESSAGE_SOLAR_SYSTEM_SURVEYED
+                            localization = MESSAGE_SOLAR_SYSTEM_SURVEYED_2_LOCALISATION
+                            days = 30
+                            target = this
+                            variable = { type = name localization = ORIGIN_PLANET scope = root }
+                            variable = { type = name localization = TARGET_SYSTEM scope = prev }
                         }
                     }
                 }
@@ -1350,6 +1336,14 @@ planet_event = {
                                 status = no
                             }
                         }
+                        NOT = {
+                            any_ship_in_system = {
+                                exists = owner
+                                owner = {
+                                    is_same_value = event_target:observatory_owner_country
+                                }
+                            }
+                        }
                     }
                     every_system_planet = {
                         limit = {
@@ -1361,6 +1355,16 @@ planet_event = {
                         surveyed = {
                             set_surveyed = yes
                             surveyor = event_target:observatory_owner_country
+                        }
+                    }
+                    event_target:observatory_owner_country = {
+                        create_message = {
+                            type = MESSAGE_SOLAR_SYSTEM_SURVEYED
+                            localization = MESSAGE_SOLAR_SYSTEM_SURVEYED_1_LOCALISATION
+                            days = 30
+                            target = this
+                            variable = { type = name localization = ORIGIN_PLANET scope = root }
+                            variable = { type = name localization = TARGET_SYSTEM scope = prev }
                         }
                     }
                 }

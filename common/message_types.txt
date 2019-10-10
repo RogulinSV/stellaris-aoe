@@ -1571,6 +1571,16 @@ message_type = {
 ### Patch
 
 message_type = {
+    key = "MESSAGE_SOLAR_SYSTEM_SURVEYED"
+    icon = "GFX_message_solar_system_surveyed"
+    icon_frame = 1
+
+    name = "MESSAGE_SOLAR_SYSTEM_SURVEYED_TITLE"
+    sound = "notification"
+    ping = "ping_notification_green"
+}
+
+message_type = {
     key = "MESSAGE_SPY_NONE_GAINED"
     icon = "GFX_message_spy_stole_nothing"
     icon_frame = 1

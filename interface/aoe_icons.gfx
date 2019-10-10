@@ -1,5 +1,9 @@
 spriteTypes = {
     spriteType = {
+        name = "GFX_message_solar_system_surveyed"
+        texturefile = "gfx/interface/icons/message/message_solar_system_surveyed.dds"
+    }
+    spriteType = {
         name = "GFX_message_spy_default"
         texturefile = "gfx/interface/icons/message/message_spy_default.dds"
     }

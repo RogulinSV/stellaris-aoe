@@ -245,6 +245,9 @@ any_relation = {
         has_defensive_pact = root
         has_commercial_pact = root
         has_migration_access = root
+        has_research_agreement = root
+        has_non_aggression_pact = root
+        is_guaranteeing = root
     }
 }
 
@@ -257,3 +260,14 @@ add_trust = {
 
 auto_move_to_planet = {}
 destroy_country = yes
+
+relative_power = {
+	who = event_target:exercise_neighbor
+	category = fleet
+	value = overwhelming superior inferior pathetic
+}
+
+last_created_leader = {
+	save_event_target_as = exercise_officer
+	set_age = 32
+}
