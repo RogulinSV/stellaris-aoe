@@ -438,6 +438,30 @@ spriteTypes = {
         alwaystransparent = yes
     }
     spriteType = {
+        name = "GFX_aoe_espionage_manipulate_relationship_complications"
+        texturefile = "gfx/event_pictures/espionage_manipulate_relationship_complications.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_manipulate_relationship_information"
+        texturefile = "gfx/event_pictures/espionage_manipulate_relationship_information.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_dormant_marauders_aggression_us"
+        texturefile = "gfx/event_pictures/espionage_dormant_marauders_aggression_us.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_dormant_marauders_aggression_we"
+        texturefile = "gfx/event_pictures/espionage_dormant_marauders_aggression_we.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
         name = "GFX_aoe_espionage_military_ship_explosion"
         texturefile = "gfx/event_pictures/espionage_military_ship_explosion.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"

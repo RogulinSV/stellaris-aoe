@@ -7311,6 +7311,7 @@ try_commit_sabotage = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             event_target:espionage_origin_country = {
@@ -7322,6 +7323,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             log = ">>> try_commit_sabotage effect: military production was disrupted on 100 days"
@@ -7426,6 +7428,7 @@ try_commit_sabotage = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             event_target:espionage_origin_country = {
@@ -7437,6 +7440,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             log = ">>> try_commit_sabotage effect: military production was disrupted on 200 days"
@@ -7540,6 +7544,7 @@ try_commit_sabotage = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             event_target:espionage_origin_country = {
@@ -7551,6 +7556,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             log = ">>> try_commit_sabotage effect: military production was disrupted on 300 days"
@@ -7653,6 +7659,7 @@ try_commit_sabotage = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             event_target:espionage_origin_country = {
@@ -7664,6 +7671,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             log = ">>> try_commit_sabotage effect: military production was disrupted on 400 days"
@@ -7766,6 +7774,7 @@ try_commit_sabotage = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             event_target:espionage_origin_country = {
@@ -7777,6 +7786,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             log = ">>> try_commit_sabotage effect: military production was disrupted on 500 days"
@@ -7878,6 +7888,7 @@ try_commit_sabotage = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             event_target:espionage_origin_country = {
@@ -7889,6 +7900,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                    variable = { type = name localization = TARGET_STARBASE scope = event_target:espionage_target_planet.solar_system.starbase }
                 }
             }
             log = ">>> try_commit_sabotage effect: military production was disrupted on 600 days"
@@ -8649,6 +8661,2071 @@ try_commit_sabotage = {
                 }
             }
             log = ">>> try_commit_sabotage effect: military ship was destroyed"
+        }
+        # Destroy 2-x starbase outpost
+        10 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 2
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_outpost
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_system_planet = {
+                                            OR = {
+                                                is_colony = yes
+                                                is_capital = yes
+                                                is_under_colonization = yes
+                                            }
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 2
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_outpost
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_system_planet = {
+                                    OR = {
+                                        is_colony = yes
+                                        is_capital = yes
+                                        is_under_colonization = yes
+                                    }
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            fleet  = {
+                                destroy_fleet = this
+                            }
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_OUTPOST_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_OUTPOST_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 2-x starbase outpost was destroyed"
+        }
+        # Destroy 4-x starbase outpost
+        8 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 4
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_outpost
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_system_planet = {
+                                            OR = {
+                                                is_colony = yes
+                                                is_capital = yes
+                                                is_under_colonization = yes
+                                            }
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 4
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_outpost
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_system_planet = {
+                                    OR = {
+                                        is_colony = yes
+                                        is_capital = yes
+                                        is_under_colonization = yes
+                                    }
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            fleet  = {
+                                destroy_fleet = this
+                            }
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_OUTPOST_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_OUTPOST_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 4-x starbase outpost was destroyed"
+        }
+        # Destroy 8-x starbase outpost
+        6 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 8
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_outpost
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_system_planet = {
+                                            OR = {
+                                                is_colony = yes
+                                                is_capital = yes
+                                                is_under_colonization = yes
+                                            }
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 8
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_outpost
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_system_planet = {
+                                    OR = {
+                                        is_colony = yes
+                                        is_capital = yes
+                                        is_under_colonization = yes
+                                    }
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            fleet  = {
+                                destroy_fleet = this
+                            }
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_OUTPOST_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_OUTPOST_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 8-x starbase outpost was destroyed"
+        }
+        # Destroy 14-x starbase outpost
+        4 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 14
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_outpost
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_system_planet = {
+                                            OR = {
+                                                is_colony = yes
+                                                is_capital = yes
+                                                is_under_colonization = yes
+                                            }
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 14
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_outpost
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_system_planet = {
+                                    OR = {
+                                        is_colony = yes
+                                        is_capital = yes
+                                        is_under_colonization = yes
+                                    }
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            fleet  = {
+                                destroy_fleet = this
+                            }
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_OUTPOST_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_OUTPOST_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 14-x starbase outpost was destroyed"
+        }
+        # Destroy 22-x starbase outpost
+        2 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 22
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_outpost
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_system_planet = {
+                                            OR = {
+                                                is_colony = yes
+                                                is_capital = yes
+                                                is_under_colonization = yes
+                                            }
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 22
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_outpost
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_system_planet = {
+                                    OR = {
+                                        is_colony = yes
+                                        is_capital = yes
+                                        is_under_colonization = yes
+                                    }
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            fleet  = {
+                                destroy_fleet = this
+                            }
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_OUTPOST_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_OUTPOST_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 22-x starbase outpost was destroyed"
+        }
+        # Destroy starbase starport
+        7 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_2 = yes
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_starport
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    starbase = {
+                        set_starbase_size = starbase_outpost
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STARPORT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STARPORT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: starbase starport was destroyed"
+        }
+        # Destroy 3-x starbase starport
+        6 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 3
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_starport
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 3
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_starport
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            set_starbase_size = starbase_outpost
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STARPORT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STARPORT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 3-x starbase starport was destroyed"
+        }
+        # Destroy 6-x starbase starport
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 6
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_starport
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 6
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_starport
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            set_starbase_size = starbase_outpost
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STARPORT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STARPORT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 6-x starbase starport was destroyed"
+        }
+        # Destroy 9-x starbase starport
+        4 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 9
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_starport
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 9
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_starport
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            set_starbase_size = starbase_outpost
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STARPORT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STARPORT_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 9-x starbase starport was destroyed"
+        }
+        # Destroy starbase starhold
+        6 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_3 = yes
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_starhold
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    starbase = {
+                        set_starbase_size = starbase_starport
+                        set_starbase_module = {
+                            slot = 1
+                            module = "broken_starbase_module"
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STARHOLD_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STARHOLD_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: starbase starhold was destroyed"
+        }
+        # Destroy 3-x starbase starhold
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 3
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_starhold
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 3
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_starhold
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            set_starbase_size = starbase_starport
+                            set_starbase_module = {
+                                slot = 1
+                                module = "broken_starbase_module"
+                            }
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STARHOLD_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STARHOLD_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 3-x starbase starhold was destroyed"
+        }
+        # Destroy 6-x starbase starhold
+        4 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 6
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_starhold
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 6
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_starhold
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            set_starbase_size = starbase_starport
+                            set_starbase_module = {
+                                slot = 1
+                                module = "broken_starbase_module"
+                            }
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STARHOLD_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STARHOLD_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 6-x starbase starhold was destroyed"
+        }
+        # Destroy 9-x starbase starhold
+        3 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_ascension_perk = "ap_disunity_reapers"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 9
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_starhold
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 9
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_starhold
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            set_starbase_size = starbase_starport
+                            set_starbase_module = {
+                                slot = 1
+                                module = "broken_starbase_module"
+                            }
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STARHOLD_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STARHOLD_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 9-x starbase starhold was destroyed"
+        }
+        # Destroy starbase starfortress
+        5 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOR = {
+                        is_intelligencer_has_rank_4 = yes
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_starfortress
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    starbase = {
+                        set_starbase_size = starbase_starhold
+                        set_starbase_module = {
+                            slot = 1
+                            module = "broken_starbase_module"
+                        }
+                        set_starbase_module = {
+                            slot = 2
+                            module = "broken_starbase_module"
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STARFORTRESS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STARFORTRESS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: starbase starfortress was destroyed"
+        }
+        # Destroy 3-x starbase starfortress
+        4 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 3
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_starfortress
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 3
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_starfortress
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            set_starbase_size = starbase_starhold
+                            set_starbase_module = {
+                                slot = 1
+                                module = "broken_starbase_module"
+                            }
+                            set_starbase_module = {
+                                slot = 2
+                                module = "broken_starbase_module"
+                            }
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STARFORTRESS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STARFORTRESS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 3-x starbase starfortress was destroyed"
+        }
+        # Destroy 6-x starbase starfortress
+        3 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_ascension_perk = "ap_disunity_reapers"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 6
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_starfortress
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 6
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_starfortress
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            set_starbase_size = starbase_starhold
+                            set_starbase_module = {
+                                slot = 1
+                                module = "broken_starbase_module"
+                            }
+                            set_starbase_module = {
+                                slot = 2
+                                module = "broken_starbase_module"
+                            }
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STARFORTRESS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STARFORTRESS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 6-x starbase starfortress was destroyed"
+        }
+        # Destroy starbase citadel
+        4 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_has_rank_5 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_citadel
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    starbase = {
+                        set_starbase_size = starbase_starfortress
+                        set_starbase_module = {
+                            slot = 1
+                            module = "broken_starbase_module"
+                        }
+                        set_starbase_module = {
+                            slot = 2
+                            module = "broken_starbase_module"
+                        }
+                        set_starbase_module = {
+                            slot = 3
+                            module = "broken_starbase_module"
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_CITADEL_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_CITADEL_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: starbase citadel was destroyed"
+        }
+        # Destroy 3-x starbase citadel
+        3 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_ascension_perk = "ap_disunity_reapers"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            closest_system = {
+                                min_steps = 1
+                                max_steps = 3
+                                limit = {
+                                    exists = space_owner
+                                    space_owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    exists = starbase
+                                    starbase = {
+                                        has_starbase_size = starbase_citadel
+                                        owner = {
+                                            is_same_value = event_target:espionage_target_country
+                                        }
+                                    }
+                                    NOT = {
+                                        any_ship_in_system = {
+                                            exists = owner
+                                            owner = {
+                                                is_same_value = event_target:espionage_target_country
+                                            }
+                                            is_ship_class = "shipclass_military"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    closest_system = {
+                        min_steps = 1
+                        max_steps = 3
+                        limit = {
+                            exists = space_owner
+                            space_owner = {
+                                is_same_value = event_target:espionage_target_country
+                            }
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_citadel
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                        starbase = {
+                            set_starbase_size = starbase_starfortress
+                            set_starbase_module = {
+                                slot = 1
+                                module = "broken_starbase_module"
+                            }
+                            set_starbase_module = {
+                                slot = 2
+                                module = "broken_starbase_module"
+                            }
+                            set_starbase_module = {
+                                slot = 3
+                                module = "broken_starbase_module"
+                            }
+                        }
+                        save_event_target_as = "espionage_target_system"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_CITADEL_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_CITADEL_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: 3-x starbase citadel was destroyed"
+        }
+        # Destroy starbase stronghold
+        2 = {
+            modifier = {
+                factor = 0
+                NOT = {
+                    has_global_flag = "has_nsc_active"
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_ascension_perk = "ap_disunity_reapers"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_stronghold
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    starbase = {
+                        set_starbase_size = starbase_citadel
+                        set_starbase_module = {
+                            slot = 1
+                            module = "broken_starbase_module"
+                        }
+                        set_starbase_module = {
+                            slot = 2
+                            module = "broken_starbase_module"
+                        }
+                        set_starbase_module = {
+                            slot = 3
+                            module = "broken_starbase_module"
+                        }
+                        set_starbase_module = {
+                            slot = 4
+                            module = "broken_starbase_module"
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_STRONGHOLD_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_STRONGHOLD_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: starbase stronghold was destroyed"
+        }
+        # Destroy starbase headquarters
+        1 = {
+            modifier = {
+                factor = 0
+                NOT = {
+                    has_global_flag = "has_nsc_active"
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    NOT = {
+                        is_intelligencer_top_ranked = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_ascension_perk = "ap_disunity_reapers"
+                        has_valid_civic = "civic_natural_spies"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    event_target:espionage_target_planet = {
+                        solar_system = {
+                            exists = starbase
+                            starbase = {
+                                has_starbase_size = starbase_headquarters
+                                owner = {
+                                    is_same_value = event_target:espionage_target_country
+                                }
+                            }
+                            NOT = {
+                                any_ship_in_system = {
+                                    exists = owner
+                                    owner = {
+                                        is_same_value = event_target:espionage_target_country
+                                    }
+                                    is_ship_class = "shipclass_military"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_planet = {
+                solar_system = {
+                    starbase = {
+                        set_starbase_size = starbase_stronghold
+                        set_starbase_module = {
+                            slot = 1
+                            module = "broken_starbase_module"
+                        }
+                        set_starbase_module = {
+                            slot = 2
+                            module = "broken_starbase_module"
+                        }
+                        set_starbase_module = {
+                            slot = 3
+                            module = "broken_starbase_module"
+                        }
+                        set_starbase_module = {
+                            slot = 4
+                            module = "broken_starbase_module"
+                        }
+                        set_starbase_module = {
+                            slot = 5
+                            module = "broken_starbase_module"
+                        }
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_DEMOLISH_STARBASE_HEADQUARTERS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_STARBASE_HEADQUARTERS_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_commit_sabotage effect: starbase headquarters was destroyed"
         }
         # Destroy outer 3-x military ship
         8 = {
@@ -9576,7 +11653,7 @@ try_commit_sabotage = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
-                    localization = MESSAGE_SPY_DEMOLISH_OUTER_MINING_STATION_LOCALISATION
+                    localization = MESSAGE_SPY_DEMOLISH_MINING_STATION_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_ORBIT scope = event_target:espionage_target_orbit }
@@ -9586,7 +11663,7 @@ try_commit_sabotage = {
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
-                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_OUTER_MINING_STATION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MINING_STATION_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
@@ -9661,7 +11738,7 @@ try_commit_sabotage = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
-                    localization = MESSAGE_SPY_DEMOLISH_OUTER_MINING_STATION_LOCALISATION
+                    localization = MESSAGE_SPY_DEMOLISH_MINING_STATION_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_ORBIT scope = event_target:espionage_target_orbit }
@@ -9671,7 +11748,7 @@ try_commit_sabotage = {
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
-                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_OUTER_MINING_STATION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MINING_STATION_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
@@ -9745,7 +11822,7 @@ try_commit_sabotage = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
-                    localization = MESSAGE_SPY_DEMOLISH_OUTER_MINING_STATION_LOCALISATION
+                    localization = MESSAGE_SPY_DEMOLISH_MINING_STATION_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_ORBIT scope = event_target:espionage_target_orbit }
@@ -9755,7 +11832,7 @@ try_commit_sabotage = {
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
-                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_OUTER_MINING_STATION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MINING_STATION_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
@@ -9828,7 +11905,7 @@ try_commit_sabotage = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
-                    localization = MESSAGE_SPY_DEMOLISH_OUTER_MINING_STATION_LOCALISATION
+                    localization = MESSAGE_SPY_DEMOLISH_MINING_STATION_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_ORBIT scope = event_target:espionage_target_orbit }
@@ -9838,7 +11915,7 @@ try_commit_sabotage = {
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
-                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_OUTER_MINING_STATION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MINING_STATION_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
@@ -9910,7 +11987,7 @@ try_commit_sabotage = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION
-                    localization = MESSAGE_SPY_DEMOLISH_OUTER_MINING_STATION_LOCALISATION
+                    localization = MESSAGE_SPY_DEMOLISH_MINING_STATION_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_ORBIT scope = event_target:espionage_target_orbit }
@@ -9920,7 +11997,7 @@ try_commit_sabotage = {
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION
-                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_OUTER_MINING_STATION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_DIVERSION_ON_MINING_STATION_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
@@ -13431,6 +15508,7 @@ try_commit_sabotage = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -13442,6 +15520,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             log = ">>> try_commit_sabotage effect: random pop was killed"
@@ -13484,6 +15563,7 @@ try_commit_sabotage = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -13495,6 +15575,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             log = ">>> try_commit_sabotage effect: random 2 pops was killed"
@@ -13536,6 +15617,7 @@ try_commit_sabotage = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -13547,6 +15629,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             log = ">>> try_commit_sabotage effect: random 3 pops was killed"
@@ -13587,6 +15670,7 @@ try_commit_sabotage = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -13598,6 +15682,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             log = ">>> try_commit_sabotage effect: random 4 pops was killed"
@@ -13637,6 +15722,7 @@ try_commit_sabotage = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -13648,6 +15734,7 @@ try_commit_sabotage = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             log = ">>> try_commit_sabotage effect: random 5 pops was killed"
@@ -13685,21 +15772,23 @@ try_commit_sabotage = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
-                    localization = MESSAGE_SPY_DESTROY_COLONY_LOCALISATION
+                    localization = MESSAGE_SPY_DESTROY_COLONY_NUKED_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
-                    localization = MESSAGE_SPY_ORGANIZED_COLONY_DESTRUCTION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_COLONY_DESTRUCTION_NUKED_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             log = ">>> try_commit_sabotage effect: colony was nuked"
@@ -13733,21 +15822,23 @@ try_commit_sabotage = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_PLANETARY_DIVERSION
-                    localization = MESSAGE_SPY_DESTROY_COLONY_LOCALISATION
+                    localization = MESSAGE_SPY_DESTROY_COLONY_POISONED_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_PLANETARY_DIVERSION
-                    localization = MESSAGE_SPY_ORGANIZED_COLONY_DESTRUCTION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_COLONY_DESTRUCTION_POISONED_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             log = ">>> try_commit_sabotage effect: colony was poisoned"

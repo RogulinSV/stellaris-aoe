@@ -88,7 +88,7 @@ try_broadcast_propaganda = {
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
                 }
             }
-            log = ">>> try_commit_sabotage effect: nothing was organized"
+            log = ">>> try_broadcast_propaganda effect: nothing was organized"
         }
         # Propaganda: change pop ethics to spiritualism
         10 = {
@@ -124,8 +124,7 @@ try_broadcast_propaganda = {
                 event_target:espionage_target_country = {
                     OR = {
                         is_in_federation_with = event_target:espionage_origin_country
-                        has_defensive_pact = event_target:espionage_origin_country
-                        has_commercial_pact = event_target:espionage_origin_country
+                        has_non_aggression_pact = event_target:espionage_origin_country
                     }
                 }
             }
@@ -275,24 +274,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_SPIRITUALIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_SPIRITUALIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: culture was perverted into spiritualism"
+            log = ">>> try_broadcast_propaganda effect: culture was perverted into spiritualism"
         }
         # Propaganda: change pop ethics to materialism
         10 = {
@@ -321,6 +322,15 @@ try_broadcast_propaganda = {
                 factor = 2
                 event_target:espionage_target_country = {
                     is_materialist = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_in_federation_with = event_target:espionage_origin_country
+                        has_research_agreement = event_target:espionage_origin_country
+                    }
                 }
             }
             modifier = {
@@ -487,24 +497,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_MATERIALIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_MATERIALIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: culture was perverted into materialism"
+            log = ">>> try_broadcast_propaganda effect: culture was perverted into materialism"
         }
         # Propaganda: change pop ethics to authoritarianism
         10 = {
@@ -695,24 +707,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_AUTHORITARIAN_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_AUTHORITARIAN_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: culture was perverted into authoritarianism"
+            log = ">>> try_broadcast_propaganda effect: culture was perverted into authoritarianism"
         }
         # Propaganda: change pop ethics to egalitarianism
         10 = {
@@ -741,6 +755,15 @@ try_broadcast_propaganda = {
                 factor = 2
                 event_target:espionage_target_country = {
                     is_egalitarian = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_in_federation_with = event_target:espionage_origin_country
+                        has_commercial_pact = event_target:espionage_origin_country
+                    }
                 }
             }
             modifier = {
@@ -909,24 +932,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_EGALITARIAN_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_EGALITARIAN_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: culture was perverted into egalitarianism"
+            log = ">>> try_broadcast_propaganda effect: culture was perverted into egalitarianism"
         }
         # Propaganda: change pop ethics to militarism
         10 = {
@@ -1112,24 +1137,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_MILITARIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_MILITARIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: culture was perverted into militarism"
+            log = ">>> try_broadcast_propaganda effect: culture was perverted into militarism"
         }
         # Propaganda: change pop ethics to pacifism
         10 = {
@@ -1158,6 +1185,16 @@ try_broadcast_propaganda = {
                 factor = 2
                 event_target:espionage_target_country = {
                     is_pacifist = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_in_federation_with = event_target:espionage_origin_country
+                        has_defensive_pact = event_target:espionage_origin_country
+                        is_guaranteeing = event_target:espionage_origin_country
+                    }
                 }
             }
             modifier = {
@@ -1351,24 +1388,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_PACIFIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_PACIFIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: culture was perverted into pacifism"
+            log = ">>> try_broadcast_propaganda effect: culture was perverted into pacifism"
         }
         # Propaganda: change pop ethics to xenophilia
         10 = {
@@ -1404,6 +1443,15 @@ try_broadcast_propaganda = {
                 event_target:espionage_target_country = {
                     is_subject = no
                     has_migration_access = event_target:espionage_origin_country
+                }
+            }
+            modifier = {
+                factor = 1.33
+                event_target:espionage_target_country = {
+                    is_subject = no
+                    NOT = {
+                        has_closed_borders = event_target:espionage_origin_country
+                    }
                 }
             }
             modifier = {
@@ -1573,24 +1621,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_XENOPHILE_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_XENOPHILE_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: culture was perverted into xenophilia"
+            log = ">>> try_broadcast_propaganda effect: culture was perverted into xenophilia"
         }
         # Propaganda: change pop ethics to xenophobia
         10 = {
@@ -1804,24 +1854,611 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_PERVERT_CULTURE_LOCALISATION
+                    localization = MESSAGE_SPY_PERVERT_CULTURE_XENOPHOBE_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA
-                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_CULTURAL_PERVERSION_XENOPHOBE_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: culture was perverted into xenophobia"
+            log = ">>> try_broadcast_propaganda effect: culture was perverted into xenophobia"
+        }
+        # Revolution: change government authority to democratic
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_top_ranked = no
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_ascension_perk = "ap_disunity_reapers"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_authority = "auth_democratic"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    has_authority = "auth_democratic"
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_regular_empire = no
+                        is_fallen_empire = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    is_capital = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "technologist"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "technologist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    has_valid_civic = "civic_natural_spies"
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        exists = ruler
+                        ruler = {
+                            NOT = {
+                                leader_of_faction = "technologist"
+                            }
+                        }
+                    }
+                    ruler = {
+                        kill_leader = {
+                            type = ruler
+                            show_notification = yes
+                        }
+                    }
+                }
+                change_government = {
+                    authority = "auth_democratic"
+                    civics = {
+                        civic = random
+                        civic = random
+                        civic = random
+                    }
+                }
+                change_country_flag = random
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_AUTHORITY_REVOLUTION
+                    localization = MESSAGE_SPY_INSPIRE_AUTHORITY_REVOLUTION_DEMOCRATIC_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION
+                    localization = MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION_DEMOCRATIC_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_broadcast_propaganda effect: government authority was changed to democratic"
+        }
+        # Revolution: change government authority to oligarchic
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_top_ranked = no
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_ascension_perk = "ap_disunity_reapers"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_authority = "auth_oligarchic"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    has_authority = "auth_oligarchic"
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_regular_empire = no
+                        is_fallen_empire = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    is_capital = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "prosperity"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "prosperity"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    has_valid_civic = "civic_natural_spies"
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        exists = ruler
+                        ruler = {
+                            NOT = {
+                                leader_of_faction = "prosperity"
+                            }
+                        }
+                    }
+                    ruler = {
+                        kill_leader = {
+                            type = ruler
+                            show_notification = yes
+                        }
+                    }
+                }
+                change_government = {
+                    authority = "auth_oligarchic"
+                    civics = {
+                        civic = random
+                        civic = random
+                        civic = random
+                    }
+                }
+                change_country_flag = random
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_AUTHORITY_REVOLUTION
+                    localization = MESSAGE_SPY_INSPIRE_AUTHORITY_REVOLUTION_OLIGARCHIC_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION
+                    localization = MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION_OLIGARCHIC_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_broadcast_propaganda effect: government authority was changed to oligarchic"
+        }
+        # Revolution: change government authority to dictatorial
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_top_ranked = no
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_ascension_perk = "ap_disunity_reapers"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_authority = "auth_dictatorial"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    has_authority = "auth_dictatorial"
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_regular_empire = no
+                        is_fallen_empire = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    is_capital = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "totalitarian"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "totalitarian"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    has_valid_civic = "civic_natural_spies"
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        exists = ruler
+                        ruler = {
+                            NOT = {
+                                leader_of_faction = "totalitarian"
+                            }
+                        }
+                    }
+                    ruler = {
+                        kill_leader = {
+                            type = ruler
+                            show_notification = yes
+                        }
+                    }
+                }
+                change_government = {
+                    authority = "auth_dictatorial"
+                    civics = {
+                        civic = random
+                        civic = random
+                        civic = random
+                    }
+                }
+                change_country_flag = random
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_AUTHORITY_REVOLUTION
+                    localization = MESSAGE_SPY_INSPIRE_AUTHORITY_REVOLUTION_DICTATORIAL_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION
+                    localization = MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION_DICTATORIAL_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_broadcast_propaganda effect: government authority was changed to dictatorial"
+        }
+        # Revolution: change government authority to imperial
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_top_ranked = no
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_ascension_perk = "ap_disunity_reapers"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_authority = "auth_imperial"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    has_authority = "auth_imperial"
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_regular_empire = no
+                        is_fallen_empire = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    is_capital = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "imperialist"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "imperialist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    has_valid_civic = "civic_natural_spies"
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        exists = ruler
+                        ruler = {
+                            NOT = {
+                                leader_of_faction = "imperialist"
+                            }
+                        }
+                    }
+                    ruler = {
+                        kill_leader = {
+                            type = ruler
+                            show_notification = yes
+                        }
+                    }
+                }
+                change_government = {
+                    authority = "auth_imperial"
+                    civics = {
+                        civic = random
+                        civic = random
+                        civic = random
+                    }
+                }
+                change_country_flag = random
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_AUTHORITY_REVOLUTION
+                    localization = MESSAGE_SPY_INSPIRE_AUTHORITY_REVOLUTION_IMPERIAL_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION
+                    localization = MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION_IMPERIAL_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_broadcast_propaganda effect: government authority was changed to imperial"
+        }
+        # Revolution: change government authority to corporate
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_top_ranked = no
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_ascension_perk = "ap_disunity_reapers"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_country = {
+                    NOT = {
+                        has_authority = "auth_corporate"
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    has_authority = "auth_corporate"
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    OR = {
+                        is_regular_empire = no
+                        is_fallen_empire = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_planet = {
+                    is_capital = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    has_faction = "traditionalist"
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_country = {
+                    exists = ruler
+                    ruler = {
+                        leader_of_faction = "traditionalist"
+                    }
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_country = {
+                    has_valid_civic = "civic_natural_spies"
+                }
+            }
+            event_target:espionage_target_country = {
+                if = {
+                    limit = {
+                        exists = ruler
+                        ruler = {
+                            NOT = {
+                                leader_of_faction = "traditionalist"
+                            }
+                        }
+                    }
+                    ruler = {
+                        kill_leader = {
+                            type = ruler
+                            show_notification = yes
+                        }
+                    }
+                }
+                change_government = {
+                    authority = "auth_corporate"
+                    civics = {
+                        civic = random
+                        civic = random
+                        civic = random
+                    }
+                }
+                change_country_flag = random
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_AUTHORITY_REVOLUTION
+                    localization = MESSAGE_SPY_INSPIRE_AUTHORITY_REVOLUTION_CORPORATE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION
+                    localization = MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION_CORPORATE_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_broadcast_propaganda effect: government authority was changed to corporate"
         }
         # Spiritual revolt
         1 = {
@@ -1954,24 +2591,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_REVOLT
-                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_SPIRITUALIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_REVOLT
-                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_SPIRITUALIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: spiritual revolt was inspired"
+            log = ">>> try_broadcast_propaganda effect: spiritual revolt was inspired"
         }
         # Materialistic revolt
         1 = {
@@ -2104,24 +2743,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_REVOLT
-                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_MATERIALIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_REVOLT
-                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_MATERIALIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: materialistic revolt was inspired"
+            log = ">>> try_broadcast_propaganda effect: materialistic revolt was inspired"
         }
         # Authoritarian revolt
         1 = {
@@ -2254,24 +2895,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_REVOLT
-                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_AUTHORITARIAN_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_REVOLT
-                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_AUTHORITARIAN_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: authoritarian revolt was inspired"
+            log = ">>> try_broadcast_propaganda effect: authoritarian revolt was inspired"
         }
         # Egalitarian revolt
         1 = {
@@ -2404,24 +3047,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_REVOLT
-                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_EGALITARIAN_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_REVOLT
-                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_EGALITARIAN_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: egalitarian revolt was inspired"
+            log = ">>> try_broadcast_propaganda effect: egalitarian revolt was inspired"
         }
         # Militaristic revolt
         1 = {
@@ -2554,24 +3199,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_REVOLT
-                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_MILITARIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_REVOLT
-                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_MILITARIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: militaristic revolt was inspired"
+            log = ">>> try_broadcast_propaganda effect: militaristic revolt was inspired"
         }
         # Pacifist revolt
         1 = {
@@ -2704,24 +3351,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_REVOLT
-                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_PACIFIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_REVOLT
-                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_PACIFIST_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: pacifist revolt was inspired"
+            log = ">>> try_broadcast_propaganda effect: pacifist revolt was inspired"
         }
         # Хenophilic revolt
         1 = {
@@ -2854,24 +3503,26 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_REVOLT
-                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_XENOPHILE_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_REVOLT
-                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_XENOPHILE_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: xenophilic revolt was inspired"
+            log = ">>> try_broadcast_propaganda effect: xenophilic revolt was inspired"
         }
         # Хenophobic revolt
         1 = {
@@ -3004,24 +3655,206 @@ try_broadcast_propaganda = {
             event_target:espionage_target_country = {
                 create_message = {
                     type = MESSAGE_SPY_ENCOUNTERED_REVOLT
-                    localization = MESSAGE_SPY_INSPIRE_REBELLION_LOCALISATION
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_XENOPHOBE_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
                 create_message = {
                     type = MESSAGE_SPY_ORGANIZED_REVOLT
-                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_LOCALISATION
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_XENOPHOBE_LOCALISATION
                     days = 30
                     target = this
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: xenophobic revolt was inspired"
+            log = ">>> try_broadcast_propaganda effect: xenophobic revolt was inspired"
+        }
+        # Robotic revolt
+        1 = {
+            modifier = {
+                factor = 0
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_not_ranked = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_2 = yes
+                }
+            }
+            modifier = {
+                factor = 3
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_3 = yes
+                }
+            }
+            modifier = {
+                factor = 4
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_4 = yes
+                }
+            }
+            modifier = {
+                factor = 5
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                event_target:espionage_target_country = {
+                    is_robot_empire = no
+                }
+            }
+            modifier = {
+                factor = 2
+                event_target:espionage_target_planet = {
+                    planet_stability < @stabilitylevel1
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel3
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel2
+                }
+            }
+            modifier = {
+                factor = 0.5
+                event_target:espionage_target_planet = {
+                    planet_stability >= @stabilitylevel1
+                }
+            }
+            event_target:espionage_target_planet = {
+                create_rebels = {
+                    species = event_target:espionage_target_country
+                    authority = random
+                    name = random
+                    flag = random
+                    effect = {
+                        set_country_flag = "standard_unrest_rebels"
+                        save_event_target_as = robotic_rebels
+                        establish_communications_no_message = event_target:espionage_origin_country
+                        event_target:espionage_origin_country = {
+                            every_relation = {
+                                establish_communications_no_message = prevprev
+                            }
+                        }
+                    }
+                }
+                every_owned_army = {
+                    prev = {
+                        create_army = {
+                            owner = event_target:robotic_rebels
+                            species = event_target:robotic_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_2 = yes
+                        }
+                    }
+                    while = {
+                        count = 2
+                        create_army = {
+                            owner = event_target:robotic_rebels
+                            species = event_target:robotic_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_3 = yes
+                        }
+                    }
+                    while = {
+                        count = 3
+                        create_army = {
+                            owner = event_target:robotic_rebels
+                            species = event_target:robotic_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_4 = yes
+                        }
+                    }
+                    while = {
+                        count = 4
+                        create_army = {
+                            owner = event_target:robotic_rebels
+                            species = event_target:robotic_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_5 = yes
+                        }
+                    }
+                    while = {
+                        count = 5
+                        create_army = {
+                            owner = event_target:robotic_rebels
+                            species = event_target:robotic_rebels
+                            type = "robotic_army"
+                        }
+                    }
+                }
+                else = {
+                    create_army = {
+                        owner = event_target:robotic_rebels
+                        species = event_target:robotic_rebels
+                        type = "robotic_army"
+                    }
+                }
+            }
+            event_target:espionage_target_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ENCOUNTERED_REVOLT
+                    localization = MESSAGE_SPY_INSPIRE_REBELLION_ROBOTIC_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            event_target:espionage_origin_country = {
+                create_message = {
+                    type = MESSAGE_SPY_ORGANIZED_REVOLT
+                    localization = MESSAGE_SPY_ORGANIZED_REVOLUTION_ROBOTIC_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
+                    variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
+                    variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
+                }
+            }
+            log = ">>> try_broadcast_propaganda effect: robotic revolt was inspired"
         }
         # Crime rate and decrease of stability
         50 = {
@@ -3138,6 +3971,10 @@ try_broadcast_propaganda = {
                         chance = 50
                         add_planet_devastation = 1
                     }
+                    random = {
+                        chance = 25
+                        add_planet_devastation = 2
+                    }
                 }
             }
             event_target:espionage_target_country = {
@@ -3147,6 +3984,7 @@ try_broadcast_propaganda = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -3158,9 +3996,10 @@ try_broadcast_propaganda = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: loyalty was perverted"
+            log = ">>> try_broadcast_propaganda effect: loyalty was perverted"
         }
         # Crime: criminal underworld
         1 = {
@@ -3219,6 +4058,7 @@ try_broadcast_propaganda = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -3230,9 +4070,10 @@ try_broadcast_propaganda = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: crime rate was arranged"
+            log = ">>> try_broadcast_propaganda effect: crime rate was arranged"
         }
         # Crime: drone deviancy
         1 = {
@@ -3293,6 +4134,7 @@ try_broadcast_propaganda = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -3304,9 +4146,10 @@ try_broadcast_propaganda = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: crime rate was arranged"
+            log = ">>> try_broadcast_propaganda effect: crime rate was arranged"
         }
         # Crime: drone corruption
         1 = {
@@ -3367,6 +4210,7 @@ try_broadcast_propaganda = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -3378,9 +4222,10 @@ try_broadcast_propaganda = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: crime rate was arranged"
+            log = ">>> try_broadcast_propaganda effect: crime rate was arranged"
         }
         # Crime: criminal wave
         1 = {
@@ -3443,6 +4288,7 @@ try_broadcast_propaganda = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -3454,9 +4300,10 @@ try_broadcast_propaganda = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: crime wave was arranged"
+            log = ">>> try_broadcast_propaganda effect: crime wave was arranged"
         }
         # Crime: deviant drone interference
         1 = {
@@ -3519,6 +4366,7 @@ try_broadcast_propaganda = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -3530,9 +4378,10 @@ try_broadcast_propaganda = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: crime wave was arranged"
+            log = ">>> try_broadcast_propaganda effect: crime wave was arranged"
         }
         # Crime: drone unit signal interference
         1 = {
@@ -3595,6 +4444,7 @@ try_broadcast_propaganda = {
                     days = 30
                     target = this
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
             event_target:espionage_origin_country = {
@@ -3606,9 +4456,10 @@ try_broadcast_propaganda = {
                     variable = { type = name localization = ORIGIN_PLANET scope = event_target:espionage_origin_planet }
                     variable = { type = name localization = TARGET_COUNTRY scope = event_target:espionage_target_country }
                     variable = { type = name localization = TARGET_PLANET scope = event_target:espionage_target_planet }
+                    variable = { type = name localization = TARGET_SYSTEM scope = event_target:espionage_target_planet.solar_system }
                 }
             }
-            log = ">>> try_commit_sabotage effect: crime wave was arranged"
+            log = ">>> try_broadcast_propaganda effect: crime wave was arranged"
         }
     }
 }

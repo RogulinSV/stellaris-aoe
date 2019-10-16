@@ -778,6 +778,7 @@ is_disengaged_intelligencer = {
         has_pop_flag = "espionage_purpose_recruit_defector"
         has_pop_flag = "espionage_purpose_commit_sabotage"
         has_pop_flag = "espionage_purpose_broadcast_propaganda"
+        has_pop_flag = "espionage_purpose_manipulate_relationship"
     }
 }
 
@@ -791,6 +792,7 @@ is_engaged_intelligencer = {
         has_pop_flag = "espionage_purpose_recruit_defector"
         has_pop_flag = "espionage_purpose_commit_sabotage"
         has_pop_flag = "espionage_purpose_broadcast_propaganda"
+        has_pop_flag = "espionage_purpose_manipulate_relationship"
     }
 }
 
@@ -842,6 +844,12 @@ is_intelligencer_has_purpose_commit_sabotage = {
 is_intelligencer_has_purpose_broadcast_propaganda = {
     is_intelligencer = yes
     has_pop_flag = "espionage_purpose_broadcast_propaganda"
+}
+
+# Scope: pop
+is_intelligencer_has_purpose_manipulate_relationship = {
+    is_intelligencer = yes
+    has_pop_flag = "espionage_purpose_manipulate_relationship"
 }
 
 # Scope: planet

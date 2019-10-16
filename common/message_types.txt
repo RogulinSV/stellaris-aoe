@@ -2469,3 +2469,353 @@ message_type = {
     sound = "diplomatic_notification"
     ping = "ping_notification_yellow"
 }
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_STELLAR_DIVERSION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_STELLAR_DIVERSION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_CULTURAL_PROPAGANDA_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_CULTURAL_PROPAGANDA_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_AUTHORITY_REVOLUTION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_AUTHORITY_REVOLUTION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_AUTHORITY_REVOLUTION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_REVOLT"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_REVOLT_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_REVOLT"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_REVOLT_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_LOYALTY_PROPAGANDA"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_LOYALTY_PROPAGANDA_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_LOYALTY_PROPAGANDA"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_LOYALTY_PROPAGANDA_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_CRIME_RATE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_CRIME_RATE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_CRIME_RATE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_CRIME_RATE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_CRIME_WAVE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_CRIME_WAVE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_CRIME_WAVE"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_CRIME_WAVE_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_THREATNESS_MANIPULATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_THREATNESS_MANIPULATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_THREATNESS_MANIPULATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_THREATNESS_MANIPULATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_TRUSTINESS_MANIPULATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_TRUSTINESS_MANIPULATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_OPINION_DEGRADATION_MANIPULATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_OPINION_DEGRADATION_MANIPULATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_OPINION_DEGRADATION_MANIPULATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_OPINION_DEGRADATION_MANIPULATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_OPINION_EVOLUTION_MANIPULATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_OPINION_EVOLUTION_MANIPULATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_CLOSING_BORDERS_PROVOCATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_CLOSING_BORDERS_PROVOCATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_CLOSING_BRANCH_OFFICE_PROVOCATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_CLOSING_BRANCH_OFFICE_PROVOCATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_CLOSING_BRANCH_OFFICE_PROVOCATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_CLOSING_BRANCH_OFFICE_PROVOCATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_ALLIANCE_INTRIGUES_PROVOCATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_ALLIANCE_INTRIGUES_PROVOCATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_ALLIANCE_INTRIGUES_PROVOCATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_ALLIANCE_INTRIGUES_PROVOCATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_STEALING_RELIC"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_STEALING_RELIC_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_STEALING_RELIC"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_STEALING_RELIC_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_CLAIMS_PROVOCATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_CLAIMS_PROVOCATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_CLAIMS_PROVOCATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_CLAIMS_PROVOCATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_WAR_CONQUEST_PROVOCATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_WAR_CONQUEST_PROVOCATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_WAR_CONQUEST_PROVOCATION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_WAR_CONQUEST_PROVOCATION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_MARAUDERS_AGGRESSION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_MARAUDERS_AGGRESSION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_MARAUDERS_AGGRESSION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_MARAUDERS_AGGRESSION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ENCOUNTERED_STARBASE_REBELLION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ENCOUNTERED_STARBASE_REBELLION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}
+
+message_type = {
+    key = "MESSAGE_SPY_ORGANIZED_STARBASE_REBELLION"
+    icon = "GFX_message_spy_default"
+    icon_frame = 1
+
+    name = "MESSAGE_SPY_ORGANIZED_STARBASE_REBELLION_TITLE"
+    sound = "diplomatic_notification"
+    ping = "ping_notification_yellow"
+}

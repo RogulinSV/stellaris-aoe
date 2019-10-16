@@ -40,6 +40,13 @@ engage_intelligencer_espionage_purpose_broadcast_propaganda = {
     }
 }
 
+engage_intelligencer_espionage_purpose_manipulate_relationship = {
+    event_target:espionage_origin_spy = {
+        set_pop_flag = "espionage_purpose_manipulate_relationship"
+        log = ">>> engage_intelligencer_espionage_purpose_manipulate_relationship effect: pop was engaged for manipulate relationship"
+    }
+}
+
 disengage_intelligencer = {
     event_target:espionage_origin_spy = {
         if = {
@@ -83,6 +90,13 @@ disengage_intelligencer = {
             }
             remove_pop_flag = "espionage_purpose_broadcast_propaganda"
             log = ">>> disengage_intelligencer effect: pop was disengaged from broadcast propaganda"
+        }
+        if = {
+            limit = {
+                has_pop_flag = "espionage_purpose_manipulate_relationship"
+            }
+            remove_pop_flag = "espionage_purpose_manipulate_relationship"
+            log = ">>> disengage_intelligencer effect: pop was disengaged from manipulate relationship"
         }
     }
 }

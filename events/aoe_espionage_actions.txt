@@ -361,6 +361,34 @@ country_event = {
     }
 
     option = {
+        name = "aoe_espionage_actions.2.f"
+        custom_tooltip = "aoe_espionage_actions.2.f.tooltip"
+        trigger = {
+            resource_stockpile_compare = {
+                resource = minerals
+                value >= 1000
+            }
+            resource_stockpile_compare = {
+                resource = influence
+                value >= 100
+            }
+            any_country = {
+                is_subject_of_espionage = yes
+            }
+        }
+        add_resource = {
+            minerals = -1000
+            influence = -100
+        }
+        hidden_effect = {
+            engage_intelligencer_espionage_purpose_manipulate_relationship = yes
+            country_event = {
+                id = aoe_espionage_actions.13
+            }
+        }
+    }
+
+    option = {
         name = "aoe_espionage_actions.2.y"
         custom_tooltip = "aoe_espionage_actions.2.y.tooltip"
         trigger = {
@@ -2879,6 +2907,111 @@ country_event = {
                         random = 4
                     }
                     log = ">>> espionage_actions.4: [This.GetName] broadcast propaganda and will be promoted"
+                }
+            }
+        }
+        # Try manipulate relationship
+        else_if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_purpose_manipulate_relationship = yes
+                }
+            }
+            random_list = {
+                10 = {
+                    modifier = {
+                        factor = 10
+                        event_target:espionage_target_country = {
+                            is_fallen_empire = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            has_closed_borders = root
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            is_at_war_with = root
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:espionage_target_country = {
+                            OR = {
+                                is_authoritarian = yes
+                                is_xenophobe = yes
+                                has_ethic = "ethic_gestalt_consciousness"
+                            }
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:espionage_target_country = {
+                            is_xenophile = yes
+                        }
+                    }
+                    # We are exposed by the victim
+                    country_event = {
+                        id = aoe_espionage_actions.6
+                        days = 1
+                    }
+                    log = ">>> espionage_actions.4: [This.GetName] unable to manipulate relationship and was exposed"
+                }
+                100 = {
+                    modifier = {
+                        factor = 1.1
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_1 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.2
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_2 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.3
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_3 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.4
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_4 = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 1.5
+                        event_target:espionage_origin_spy = {
+                            is_intelligencer_has_rank_5 = yes
+                        }
+                    }
+                    try_manipulate_relationship = yes
+                    log = ">>> espionage_actions.4: [This.GetName] manipulates relationship"
+                    # We are exposed by the victim
+                    random = {
+                        chance = 10
+                        country_event = {
+                            id = aoe_espionage_actions.6
+                            days = 1
+                        }
+                        log = ">>> espionage_actions.4: [This.GetName] was exposed"
+                    }
+                    # Promote spy
+                    random = {
+                        chance = 20
+                        country_event = {
+                            id = aoe_espionage_actions.11
+                            days = 5
+                            random = 4
+                        }
+                        log = ">>> espionage_actions.4: [This.GetName] was promoted"
+                    }
                 }
             }
         }
@@ -5474,6 +5607,15 @@ country_event = {
         picture = GFX_aoe_espionage_broadcast_propaganda_complications
     }
 
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+        }
+        picture = GFX_aoe_espionage_manipulate_relationship_complications
+    }
+
     # Steal resources
     desc = {
         trigger = {
@@ -5837,6 +5979,79 @@ country_event = {
             }
         }
         text = aoe_espionage_actions.20.desc_30
+    }
+
+    # Manipulate relationship
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_not_ranked = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_31
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_1 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_32
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_2 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_33
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_3 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_34
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_4 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_35
+    }
+
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_broadcast_propaganda = yes
+            }
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_5 = yes
+            }
+        }
+        text = aoe_espionage_actions.20.desc_36
     }
 
     trigger = {
@@ -6656,6 +6871,23 @@ country_event = {
         text = aoe_espionage_actions.24.desc_60
     }
 
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_commit_sabotage = yes
+            }
+        }
+        picture = GFX_aoe_espionage_manipulate_relationship_information
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+        }
+        text = aoe_espionage_actions.24.desc_70
+    }
+
     trigger = {
         is_ai = no
     }
@@ -7470,5 +7702,72 @@ country_event = {
                 value = 1
             }
         }
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.30
+    title = aoe_espionage_actions.30.title
+    show_sound = event_red_alert
+    is_triggered_only = yes
+    hide_window = no
+    location = event_target:espionage_target_system
+
+    picture = {
+        trigger = {
+            is_same_value = event_target:espionage_target_country
+        }
+        picture = GFX_aoe_espionage_dormant_marauders_aggression_us
+    }
+    desc = {
+        trigger = {
+            is_same_value = event_target:espionage_target_country
+        }
+        text = aoe_espionage_actions.30.desc_01
+    }
+
+    picture = {
+        trigger = {
+            is_same_value = event_target:espionage_origin_country
+        }
+        picture = GFX_aoe_espionage_dormant_marauders_aggression_we
+    }
+    desc = {
+        trigger = {
+            is_same_value = event_target:espionage_origin_country
+        }
+        text = aoe_espionage_actions.30.desc_02
+    }
+
+    option = {
+        name = "aoe_espionage_actions.30.a"
+        custom_tooltip = "aoe_espionage_actions.30.a.tooltip"
+        trigger = {
+            is_same_value = event_target:espionage_target_country
+        }
+    }
+
+    option = {
+        name = "aoe_espionage_actions.30.b"
+        custom_tooltip = "aoe_espionage_actions.30.b.tooltip"
+        trigger = {
+            is_same_value = event_target:espionage_origin_country
+        }
+    }
+}
+
+fleet_event = {
+    id = aoe_espionage_actions.31
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = this
+    }
+
+    immediate = {
+        clear_fleet_actions = this
+        destroy_fleet = this
+        log = ">>> aoe_espionage_actions.30: dormant marauders fleet destroyed"
     }
 }
