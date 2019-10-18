@@ -10,8 +10,10 @@ from pyparsing import ParseException
 
 from parsing import parse_string, parse_settings, BlockToken, EnumerationToken, PropertyToken
 from domains import Building, Buildings, Technology, Technologies, Ship, Ships, \
-    Category as TraditionCategory, Categories as TraditionCategories, Module, Settings, detect_module
-from templating import GatheringTechnologyDataTemplate, GatheringTraditionsDataTemplate, DemolishBuildingRulesTemplate
+    Relic, Relics, Category as TraditionCategory, Categories as TraditionCategories, \
+    Module, Settings, detect_module
+from templating import GatheringTechnologyDataTemplate, GatheringTraditionsDataTemplate, DemolishBuildingRulesTemplate, \
+    GatheringRelicsDataTemplate
 from caching import Cache
 from zipfile import ZipFile
 from zipfile import ZipInfo
@@ -124,6 +126,20 @@ def parse_ship(tokens, processor: callable):
             logging.debug('* discovered ship: ' + ship.name)
         else:
             logging.debug('* ignored ship: ' + ship.name)
+
+
+def parse_relic(tokens, processor: callable):
+    for token in tokens:  # type: BlockToken
+        if not isinstance(token, BlockToken):
+            continue
+        if not token.name.startswith('r_') or 'score' not in token.properties:
+            continue
+
+        relic = Relic.from_token(token)
+        if processor(relic):
+            logging.debug('* discovered relic: ' + relic.name)
+        else:
+            logging.debug('* ignored relic: ' + relic.name)
 
 
 def parse_tradition(tokens, processor: callable):
@@ -243,6 +259,7 @@ def get_module(file_path: str, modules_list: dict = None, cache: Cache = None) -
     module.technologies = Technologies()
     module.buildings = Buildings()
     module.ships = Ships()
+    module.relics = Relics()
     module.traditions = TraditionCategories()
 
     return module
@@ -259,7 +276,8 @@ file_patterns = [
     r'common/technology/[\w-]+(?=\.txt)',
     r'common/buildings/[\w-]+(?=\.txt)',
     r'common/ship_sizes/[\w-]+(?=\.txt)',
-    r'common/tradition_categories/[\w-]+(?=\.txt)'
+    r'common/relics/[\w-]+(?=\.txt)',
+    r'common/tradition_categories/[\w-]+(?=\.txt)',
 ]
 for dir_path in dirs_list:
     logging.debug('-> traversing dir %s' % dir_path)
@@ -278,11 +296,13 @@ for dir_path in dirs_list:
         parse_building(tokens, module.buildings)
         parse_ship(tokens, module.ships)
         parse_tradition(tokens, module.traditions)
+        parse_relic(tokens, module.relics)
 
 ships = list()
 templates = [
     GatheringTechnologyDataTemplate(),
     GatheringTraditionsDataTemplate(),
+    GatheringRelicsDataTemplate(),
     DemolishBuildingRulesTemplate()
 ]
 for module_id in modules_list:
@@ -312,6 +332,12 @@ for module_id in modules_list:
             continue
         ships.append(ship.name)
         logging.info('Discovered military ship "%s" from module %s' % (ship.name, module.name))
+
+    for relic in module.relics.sorted():
+        for template in templates:
+            if template.supports(relic):
+                template.process(relic, module)
+
 
 # Building Categories: 'amenity', 'army', 'government', 'manufacturing', 'pop_assembly', 'research', 'resource', 'trade', 'unity'
 for template in templates:
