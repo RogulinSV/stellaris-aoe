@@ -163,7 +163,7 @@ country_event = {
             }
         }
 
-        log = "{This.GetName} won against Swarm"
+        log = "[This.GetName] won against Swarm"
     }
 }
 
@@ -202,7 +202,7 @@ country_event = {
             }
         }
 
-        log = "{This.GetName} won against Extradimensional"
+        log = "[This.GetName] won against Extradimensional"
     }
 }
 
@@ -237,7 +237,7 @@ country_event = {
             }
         }
 
-        log = "{This.GetName} won against Gray Goo"
+        log = "[This.GetName] won against Gray Goo"
     }
 }
 
@@ -272,7 +272,7 @@ country_event = {
             }
         }
 
-        log = "{This.GetName} won against Crystal"
+        log = "[This.GetName] won against Crystal"
     }
 }
 
@@ -307,7 +307,7 @@ country_event = {
             }
         }
 
-        log = "{This.GetName} won against Amoeba"
+        log = "[This.GetName] won against Amoeba"
     }
 }
 
@@ -342,7 +342,7 @@ country_event = {
             }
         }
 
-        log = "{This.GetName} won against Cloud"
+        log = "[This.GetName] won against Cloud"
     }
 }
 
@@ -377,7 +377,7 @@ country_event = {
             }
         }
 
-        log = "{This.GetName} won against Drone"
+        log = "[This.GetName] won against Drone"
     }
 }
 
@@ -412,7 +412,7 @@ country_event = {
             }
         }
 
-        log = "{This.GetName} won against Tiyanki"
+        log = "[This.GetName] won against Tiyanki"
     }
 }
 
@@ -447,7 +447,7 @@ country_event = {
             }
         }
 
-        log = "{This.GetName} won against Guardians"
+        log = "[This.GetName] won against Guardians"
     }
 }
 
@@ -482,7 +482,7 @@ country_event = {
             }
         }
 
-        log = "{This.GetName} won against Gate Builders"
+        log = "[This.GetName] won against Gate Builders"
     }
 }
 
