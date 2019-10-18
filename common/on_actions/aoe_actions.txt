@@ -150,3 +150,10 @@ on_space_battle_won = {
         aoe_battle_actions.15
     }
 }
+
+on_ship_disabled = {
+    events = {
+        # Rebellion station disabled
+        aoe_espionage_actions.41
+    }
+}

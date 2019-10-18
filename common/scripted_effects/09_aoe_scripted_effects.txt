@@ -4616,9 +4616,10 @@ try_manipulate_relationship = {
                             }
                         }
                         random_system_planet = {
+                            save_event_target_as = espionage_pirate_planet
                             create_country = {
                                 name = "NAME_Pirates"
-                                type = "pirate"
+                                type = "rebellion_pirate"
                                 species = event_target:espionage_target_country.owner_species
                                 name_list = "PRT1"
                                 flag = {
@@ -4634,7 +4635,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                                 effect = {
-                                    save_event_target_as = espionage_pirate_band
+                                    save_event_target_as = espionage_pirate_country
                                     if = {
                                         limit = {
                                             event_target:espionage_target_country = {
@@ -4653,7 +4654,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                             }
-                            event_target:espionage_pirate_band = {
+                            event_target:espionage_pirate_country = {
                                 set_name = random
                                 create_leader = {
                                     class = admiral
@@ -4747,18 +4748,29 @@ try_manipulate_relationship = {
                                         set_aggro_range_measure_from = self
                                         set_aggro_range = 800
                                     }
+                                    settings = {
+                                        uses_naval_capacity = no
+                                    }
                                 }
                                 randomize_flag_symbol = "pirate"
                                 establish_communications_no_message = event_target:espionage_target_country
                                 establish_communications_no_message = event_target:espionage_origin_country
+                                country_event = {
+                                    id = aoe_espionage_actions.40
+                                    days = 300
+                                    random = 100
+                                }
                             }
                         }
                         save_event_target_as = "espionage_pirate_system"
                         starbase = {
-                            set_owner = event_target:espionage_pirate_band
+                            set_owner = event_target:espionage_pirate_country
                             set_starbase_module = {
                                 slot = 1
                                 module = "gun_battery"
+                            }
+                            fleet = {
+                                set_fleet_flag = "espionage_pirate_starbase"
                             }
                         }
                     }
@@ -4876,9 +4888,10 @@ try_manipulate_relationship = {
                             }
                         }
                         random_system_planet = {
+                            save_event_target_as = espionage_pirate_planet
                             create_country = {
                                 name = "NAME_Pirates"
-                                type = "pirate"
+                                type = "rebellion_pirate"
                                 species = event_target:espionage_target_country.owner_species
                                 name_list = "PRT1"
                                 flag = {
@@ -4894,7 +4907,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                                 effect = {
-                                    save_event_target_as = espionage_pirate_band
+                                    save_event_target_as = espionage_pirate_country
                                     if = {
                                         limit = {
                                             event_target:espionage_target_country = {
@@ -4913,7 +4926,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                             }
-                            event_target:espionage_pirate_band = {
+                            event_target:espionage_pirate_country = {
                                 set_name = random
                                 create_leader = {
                                     class = admiral
@@ -4991,15 +5004,23 @@ try_manipulate_relationship = {
                                         set_aggro_range_measure_from = self
                                         set_aggro_range = 800
                                     }
+                                    settings = {
+                                        uses_naval_capacity = no
+                                    }
                                 }
                                 randomize_flag_symbol = "pirate"
                                 establish_communications_no_message = event_target:espionage_target_country
                                 establish_communications_no_message = event_target:espionage_origin_country
+                                country_event = {
+                                    id = aoe_espionage_actions.40
+                                    days = 300
+                                    random = 100
+                                }
                             }
                         }
                         save_event_target_as = "espionage_pirate_system"
                         starbase = {
-                            set_owner = event_target:espionage_pirate_band
+                            set_owner = event_target:espionage_pirate_country
                             set_starbase_module = {
                                 slot = 1
                                 module = "gun_battery"
@@ -5007,6 +5028,9 @@ try_manipulate_relationship = {
                             set_starbase_module = {
                                 slot = 2
                                 module = "gun_battery"
+                            }
+                            fleet = {
+                                set_fleet_flag = "espionage_pirate_starbase"
                             }
                         }
                     }
@@ -5123,9 +5147,10 @@ try_manipulate_relationship = {
                             }
                         }
                         random_system_planet = {
+                            save_event_target_as = espionage_pirate_planet
                             create_country = {
                                 name = "NAME_Pirates"
-                                type = "pirate"
+                                type = "rebellion_pirate"
                                 species = event_target:espionage_target_country.owner_species
                                 name_list = "PRT1"
                                 flag = {
@@ -5141,7 +5166,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                                 effect = {
-                                    save_event_target_as = espionage_pirate_band
+                                    save_event_target_as = espionage_pirate_country
                                     if = {
                                         limit = {
                                             event_target:espionage_target_country = {
@@ -5160,7 +5185,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                             }
-                            event_target:espionage_pirate_band = {
+                            event_target:espionage_pirate_country = {
                                 set_name = random
                                 create_leader = {
                                     class = admiral
@@ -5222,15 +5247,23 @@ try_manipulate_relationship = {
                                         set_aggro_range_measure_from = self
                                         set_aggro_range = 800
                                     }
+                                    settings = {
+                                        uses_naval_capacity = no
+                                    }
                                 }
                                 randomize_flag_symbol = "pirate"
                                 establish_communications_no_message = event_target:espionage_target_country
                                 establish_communications_no_message = event_target:espionage_origin_country
+                                country_event = {
+                                    id = aoe_espionage_actions.40
+                                    days = 300
+                                    random = 100
+                                }
                             }
                         }
                         save_event_target_as = "espionage_pirate_system"
                         starbase = {
-                            set_owner = event_target:espionage_pirate_band
+                            set_owner = event_target:espionage_pirate_country
                             set_starbase_module = {
                                 slot = 1
                                 module = "gun_battery"
@@ -5242,6 +5275,9 @@ try_manipulate_relationship = {
                             set_starbase_module = {
                                 slot = 3
                                 module = "missile_battery"
+                            }
+                            fleet = {
+                                set_fleet_flag = "espionage_pirate_starbase"
                             }
                         }
                     }
@@ -5357,9 +5393,10 @@ try_manipulate_relationship = {
                             }
                         }
                         random_system_planet = {
+                            save_event_target_as = espionage_pirate_planet
                             create_country = {
                                 name = "NAME_Pirates"
-                                type = "pirate"
+                                type = "rebellion_pirate"
                                 species = event_target:espionage_target_country.owner_species
                                 name_list = "PRT1"
                                 flag = {
@@ -5375,7 +5412,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                                 effect = {
-                                    save_event_target_as = espionage_pirate_band
+                                    save_event_target_as = espionage_pirate_country
                                     if = {
                                         limit = {
                                             event_target:espionage_target_country = {
@@ -5394,7 +5431,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                             }
-                            event_target:espionage_pirate_band = {
+                            event_target:espionage_pirate_country = {
                                 set_name = random
                                 create_leader = {
                                     class = admiral
@@ -5440,15 +5477,23 @@ try_manipulate_relationship = {
                                         set_aggro_range_measure_from = self
                                         set_aggro_range = 800
                                     }
+                                    settings = {
+                                        uses_naval_capacity = no
+                                    }
                                 }
                                 randomize_flag_symbol = "pirate"
                                 establish_communications_no_message = event_target:espionage_target_country
                                 establish_communications_no_message = event_target:espionage_origin_country
+                                country_event = {
+                                    id = aoe_espionage_actions.40
+                                    days = 300
+                                    random = 100
+                                }
                             }
                         }
                         save_event_target_as = "espionage_pirate_system"
                         starbase = {
-                            set_owner = event_target:espionage_pirate_band
+                            set_owner = event_target:espionage_pirate_country
                             set_starbase_module = {
                                 slot = 1
                                 module = "gun_battery"
@@ -5464,6 +5509,9 @@ try_manipulate_relationship = {
                             set_starbase_module = {
                                 slot = 4
                                 module = "missile_battery"
+                            }
+                            fleet = {
+                                set_fleet_flag = "espionage_pirate_starbase"
                             }
                         }
                     }
@@ -5584,9 +5632,10 @@ try_manipulate_relationship = {
                             }
                         }
                         random_system_planet = {
+                            save_event_target_as = espionage_pirate_planet
                             create_country = {
                                 name = "NAME_Pirates"
-                                type = "pirate"
+                                type = "rebellion_pirate"
                                 species = event_target:espionage_target_country.owner_species
                                 name_list = "PRT1"
                                 flag = {
@@ -5602,7 +5651,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                                 effect = {
-                                    save_event_target_as = espionage_pirate_band
+                                    save_event_target_as = espionage_pirate_country
                                     if = {
                                         limit = {
                                             event_target:espionage_target_country = {
@@ -5621,7 +5670,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                             }
-                            event_target:espionage_pirate_band = {
+                            event_target:espionage_pirate_country = {
                                 set_name = random
                                 create_leader = {
                                     class = admiral
@@ -5647,15 +5696,23 @@ try_manipulate_relationship = {
                                         set_aggro_range_measure_from = self
                                         set_aggro_range = 800
                                     }
+                                    settings = {
+                                        uses_naval_capacity = no
+                                    }
                                 }
                                 randomize_flag_symbol = "pirate"
                                 establish_communications_no_message = event_target:espionage_target_country
                                 establish_communications_no_message = event_target:espionage_origin_country
+                                country_event = {
+                                    id = aoe_espionage_actions.40
+                                    days = 300
+                                    random = 100
+                                }
                             }
                         }
                         save_event_target_as = "espionage_pirate_system"
                         starbase = {
-                            set_owner = event_target:espionage_pirate_band
+                            set_owner = event_target:espionage_pirate_country
                             set_starbase_module = {
                                 slot = 1
                                 module = "gun_battery"
@@ -5675,6 +5732,9 @@ try_manipulate_relationship = {
                             set_starbase_module = {
                                 slot = 5
                                 module = "missile_battery"
+                            }
+                            fleet = {
+                                set_fleet_flag = "espionage_pirate_starbase"
                             }
                         }
                     }
@@ -5795,9 +5855,10 @@ try_manipulate_relationship = {
                             }
                         }
                         random_system_planet = {
+                            save_event_target_as = espionage_pirate_planet
                             create_country = {
                                 name = "NAME_Pirates"
-                                type = "pirate"
+                                type = "rebellion_pirate"
                                 species = event_target:espionage_target_country.owner_species
                                 name_list = "PRT1"
                                 flag = {
@@ -5813,7 +5874,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                                 effect = {
-                                    save_event_target_as = espionage_pirate_band
+                                    save_event_target_as = espionage_pirate_country
                                     if = {
                                         limit = {
                                             event_target:espionage_target_country = {
@@ -5832,7 +5893,7 @@ try_manipulate_relationship = {
                                     }
                                 }
                             }
-                            event_target:espionage_pirate_band = {
+                            event_target:espionage_pirate_country = {
                                 set_name = random
                                 create_leader = {
                                     class = admiral
@@ -5859,15 +5920,23 @@ try_manipulate_relationship = {
                                         set_aggro_range_measure_from = self
                                         set_aggro_range = 800
                                     }
+                                    settings = {
+                                        uses_naval_capacity = no
+                                    }
                                 }
                                 randomize_flag_symbol = "pirate"
                                 establish_communications_no_message = event_target:espionage_target_country
                                 establish_communications_no_message = event_target:espionage_origin_country
+                                country_event = {
+                                    id = aoe_espionage_actions.40
+                                    days = 300
+                                    random = 100
+                                }
                             }
                         }
                         save_event_target_as = "espionage_pirate_system"
                         starbase = {
-                            set_owner = event_target:espionage_pirate_band
+                            set_owner = event_target:espionage_pirate_country
                             set_starbase_module = {
                                 slot = 1
                                 module = "gun_battery"
@@ -5891,6 +5960,9 @@ try_manipulate_relationship = {
                             set_starbase_module = {
                                 slot = 6
                                 module = "missile_battery"
+                            }
+                            fleet = {
+                                set_fleet_flag = "espionage_pirate_starbase"
                             }
                         }
                     }

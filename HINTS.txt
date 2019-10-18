@@ -249,10 +249,12 @@ any_relation = {
         has_research_agreement = root
         has_non_aggression_pact = root
         is_guaranteeing = root
+        has_diplo_migration_treaty = root
     }
 }
 
 remove_all_buildings = yes
+repair_ship = yes
 
 add_trust = {
     who = prev
@@ -265,6 +267,8 @@ add_threat = {
 
 auto_move_to_planet = {}
 has_access_fleet = root.owner
+has_galactic_wonders = yes
+can_build_megastructures = yes
 destroy_country = yes
 
 relative_power = {

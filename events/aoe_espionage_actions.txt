@@ -6874,7 +6874,7 @@ country_event = {
     picture = {
         trigger = {
             event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_commit_sabotage = yes
+                is_intelligencer_has_purpose_manipulate_relationship = yes
             }
         }
         picture = GFX_aoe_espionage_manipulate_relationship_information
@@ -7675,37 +7675,6 @@ country_event = {
 }
 
 country_event = {
-    id = aoe_espionage_actions.25
-    is_triggered_only = yes
-    hide_window = yes
-
-    trigger = {
-        is_ai = yes
-    }
-
-    immediate = {
-        if = {
-            limit = {
-                check_variable = {
-                    which = "espionage_data_technology_count"
-                    value = 0
-                }
-            }
-            set_variable = {
-                which = "espionage_data_technology_count"
-                value = 1
-            }
-        }
-        else = {
-            change_variable = {
-                which = "espionage_data_technology_count"
-                value = 1
-            }
-        }
-    }
-}
-
-country_event = {
     id = aoe_espionage_actions.30
     title = aoe_espionage_actions.30.title
     show_sound = event_red_alert
@@ -7769,5 +7738,320 @@ fleet_event = {
         clear_fleet_actions = this
         destroy_fleet = this
         log = ">>> aoe_espionage_actions.30: dormant marauders fleet destroyed"
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.40
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = event_target:espionage_pirate_country
+        exists = event_target:espionage_pirate_planet
+        exists = event_target:espionage_target_planet
+        event_target:espionage_pirate_planet = {
+            solar_system = {
+                exists = starbase
+                starbase = {
+                    exists = owner
+                    owner = {
+                        is_same_value = event_target:espionage_pirate_country
+                    }
+                    # is_disabled = no
+                }
+            }
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {
+                    which = "espionage_pirate_evasion_counter"
+                    value > 0
+                }
+            }
+            change_variable = {
+                which = "espionage_pirate_evasion_counter"
+                value = 1
+            }
+        }
+        else = {
+            set_variable = {
+                which = "espionage_pirate_evasion_counter"
+                value = 1
+            }
+        }
+        set_variable = {
+            which = "espionage_pirate_fleet_counter"
+            value = 1
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = "espionage_pirate_evasion_counter"
+                    value > 10
+                }
+            }
+            subtract_variable = {
+                which = "espionage_pirate_evasion_counter"
+                value = 10
+            }
+            change_variable = {
+                which = "espionage_pirate_fleet_counter"
+                value = 1
+            }
+        }
+        set_variable = {
+            which = "espionage_pirate_balance_counter"
+            value = 0
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = "espionage_pirate_fleet_counter"
+                    value > 0
+                }
+            }
+            subtract_variable = {
+                which = "espionage_pirate_fleet_counter"
+                value = 1
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "espionage_pirate_fleet_counter"
+                        value > 0
+                    }
+                }
+                change_variable = {
+                    which = "espionage_pirate_balance_counter"
+                    value = 1
+                }
+            }
+            create_leader = {
+                class = admiral
+                species = owner_main_species
+                name = random
+                skill = 1
+                traits = {
+                    trait = random_trait
+                }
+            }
+            last_created_leader = {
+                random_list = {
+                    20 = {
+                        add_skill = 1
+                    }
+                    20 = {
+                        add_skill = 2
+                    }
+                    20 = {
+                        add_skill = 3
+                    }
+                    20 = {
+                        add_skill = 4
+                    }
+                    20 = {}
+                }
+            }
+            create_fleet = {
+                name = "NAME_Pirate_Fleet"
+                effect = {
+                    set_owner = event_target:espionage_pirate_country
+                    if = {
+                        limit = {
+                            root = {
+                                check_variable = {
+                                    which = "espionage_pirate_evasion_counter"
+                                    value = 2
+                                }
+                            }
+                        }
+                        create_pirate_ships_2 = yes
+                    }
+                    else_if = {
+                        limit = {
+                            root = {
+                                check_variable = {
+                                    which = "espionage_pirate_evasion_counter"
+                                    value = 3
+                                }
+                            }
+                        }
+                        create_pirate_ships_3 = yes
+                    }
+                    else_if = {
+                        limit = {
+                            root = {
+                                check_variable = {
+                                    which = "espionage_pirate_evasion_counter"
+                                    value = 4
+                                }
+                            }
+                        }
+                        create_pirate_ships_4 = yes
+                    }
+                    else_if = {
+                        limit = {
+                            root = {
+                                check_variable = {
+                                    which = "espionage_pirate_evasion_counter"
+                                    value = 5
+                                }
+                            }
+                        }
+                        create_pirate_ships_5 = yes
+                    }
+                    else_if = {
+                        limit = {
+                            root = {
+                                check_variable = {
+                                    which = "espionage_pirate_evasion_counter"
+                                    value = 6
+                                }
+                            }
+                        }
+                        create_pirate_ships_6 = yes
+                    }
+                    else_if = {
+                        limit = {
+                            root = {
+                                check_variable = {
+                                    which = "espionage_pirate_evasion_counter"
+                                    value = 7
+                                }
+                            }
+                        }
+                        create_pirate_ships_7 = yes
+                    }
+                    else_if = {
+                        limit = {
+                            root = {
+                                check_variable = {
+                                    which = "espionage_pirate_evasion_counter"
+                                    value = 8
+                                }
+                            }
+                        }
+                        create_pirate_ships_8 = yes
+                    }
+                    else_if = {
+                        limit = {
+                            root = {
+                                check_variable = {
+                                    which = "espionage_pirate_evasion_counter"
+                                    value = 9
+                                }
+                            }
+                        }
+                        create_pirate_ships_9 = yes
+                    }
+                    else_if = {
+                        limit = {
+                            root = {
+                                check_variable = {
+                                    which = "espionage_pirate_evasion_counter"
+                                    value = 10
+                                }
+                            }
+                        }
+                        create_pirate_ships_10 = yes
+                    }
+                    else = {
+                        create_pirate_ships_1 = yes
+                    }
+                    assign_leader = last_created_leader
+                    set_location = {
+                        target = event_target:espionage_pirate_planet.solar_system.star
+                        distance = 50
+                        angle = random
+                    }
+                    set_fleet_stance = aggressive
+                    set_aggro_range_measure_from = self
+                    set_aggro_range = 800
+                    auto_move_to_planet = {
+                        target = event_target:espionage_target_planet
+                        clear_auto_move_on_arrival = yes
+                    }
+                }
+                settings = {
+                    uses_naval_capacity = no
+                }
+            }
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = "espionage_pirate_balance_counter"
+                    value > 0
+                }
+            }
+            subtract_variable = {
+                which = "espionage_pirate_balance_counter"
+                value = 1
+            }
+            change_variable = {
+                which = "espionage_pirate_evasion_counter"
+                value = 10
+            }
+        }
+        country_event = {
+            id = aoe_espionage_actions.40
+            days = 1500
+            random = 300
+        }
+        log = ">>> aoe_espionage_actions.40: pirate fleet moved to the [event_target:espionage_origin_planet.GetName] planet"
+    }
+}
+
+# On ship disabled
+# This = Ship
+# From = Disabler Ship
+ship_event = {
+    id = aoe_espionage_actions.41
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = owner
+        owner = {
+            is_country_type = "rebellion_pirate"
+        }
+        fleet = {
+            has_fleet_flag = "espionage_pirate_starbase"
+        }
+    }
+
+    immediate = {
+        owner = {
+            country_event = {
+                id = aoe_espionage_actions.42
+                days = 1
+            }
+        }
+        fleet = {
+            destroy_fleet = this
+        }
+        log = ">>> aoe_espionage_actions.41: pirates starbase was destroyed by [From.owner.GetName]"
+    }
+}
+
+country_event = {
+    id = aoe_espionage_actions.42
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = this
+    }
+
+    immediate = {
+        every_owned_fleet = {
+            destroy_fleet = this
+        }
+        destroy_country = yes
+        log = ">>> aoe_espionage_actions.42: pirates country was destroyed"
     }
 }
