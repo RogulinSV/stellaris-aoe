@@ -1552,7 +1552,7 @@ country_event = {
                     }
                 }
                 set_intelligencer_on_assignment = {
-                    ARG1 = 10
+                    ARG1 = 901
                 }
                 if = {
                     limit = {
@@ -1563,7 +1563,7 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.20
-                            days = 9
+                            days = 900
                         }
                     }
                 }
@@ -1571,18 +1571,18 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.4
-                            days = 9
+                            days = 900
                         }
                     }
                 }
                 event_target:espionage_target_planet = {
                     set_timed_planet_flag = {
                         flag = "espionage_target_planet"
-                        days = 9
+                        days = 900
                     }
                     set_timed_planet_flag = {
                         flag = espionage_target_planet@root
-                        days = 9
+                        days = 900
                     }
                 }
                 log = ">>> espionage_actions.3: [Root.GetName] began 9-day operation on the planet [event_target:espionage_target_planet.GetName]"
@@ -1594,7 +1594,7 @@ country_event = {
                     }
                 }
                 set_intelligencer_on_assignment = {
-                    ARG1 = 9
+                    ARG1 = 801
                 }
                 if = {
                     limit = {
@@ -1605,7 +1605,7 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.20
-                            days = 8
+                            days = 800
                         }
                     }
                 }
@@ -1613,25 +1613,25 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.4
-                            days = 8
+                            days = 800
                         }
                     }
                 }
                 event_target:espionage_target_planet = {
                     set_timed_planet_flag = {
                         flag = "espionage_target_planet"
-                        days = 8
+                        days = 800
                     }
                     set_timed_planet_flag = {
                         flag = espionage_target_planet@root
-                        days = 8
+                        days = 800
                     }
                 }
                 log = ">>> espionage_actions.3: [Root.GetName] began 8-day operation on the planet [event_target:espionage_target_planet.GetName]"
             }
             else = {
                 set_intelligencer_on_assignment = {
-                    ARG1 = 8
+                    ARG1 = 701
                 }
                 if = {
                     limit = {
@@ -1642,7 +1642,7 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.20
-                            days = 7
+                            days = 700
                         }
                     }
                 }
@@ -1650,18 +1650,18 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.4
-                            days = 7
+                            days = 700
                         }
                     }
                 }
                 event_target:espionage_target_planet = {
                     set_timed_planet_flag = {
                         flag = "espionage_target_planet"
-                        days = 7
+                        days = 700
                     }
                     set_timed_planet_flag = {
                         flag = espionage_target_planet@root
-                        days = 7
+                        days = 700
                     }
                 }
                 log = ">>> espionage_actions.3: [Root.GetName] began 7-day operation on the planet [event_target:espionage_target_planet.GetName]"
@@ -1689,7 +1689,7 @@ country_event = {
                     }
                 }
                 set_intelligencer_on_assignment = {
-                    ARG1 = 7
+                    ARG1 = 601
                 }
                 if = {
                     limit = {
@@ -1700,7 +1700,7 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.20
-                            days = 6
+                            days = 600
                         }
                     }
                 }
@@ -1708,18 +1708,18 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.4
-                            days = 6
+                            days = 600
                         }
                     }
                 }
                 event_target:espionage_target_planet = {
                     set_timed_planet_flag = {
                         flag = "espionage_target_planet"
-                        days = 6
+                        days = 600
                     }
                     set_timed_planet_flag = {
                         flag = espionage_target_planet@root
-                        days = 6
+                        days = 600
                     }
                 }
                 log = ">>> espionage_actions.3: [Root.GetName] began 6-day operation on the planet [event_target:espionage_target_planet.GetName]"
@@ -1731,7 +1731,7 @@ country_event = {
                     }
                 }
                 set_intelligencer_on_assignment = {
-                    ARG1 = 6
+                    ARG1 = 501
                 }
                 if = {
                     limit = {
@@ -1742,7 +1742,7 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.20
-                            days = 5
+                            days = 500
                         }
                     }
                 }
@@ -1750,25 +1750,25 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.4
-                            days = 5
+                            days = 500
                         }
                     }
                 }
                 event_target:espionage_target_planet = {
                     set_timed_planet_flag = {
                         flag = "espionage_target_planet"
-                        days = 5
+                        days = 500
                     }
                     set_timed_planet_flag = {
                         flag = espionage_target_planet@root
-                        days = 5
+                        days = 500
                     }
                 }
                 log = ">>> espionage_actions.3: [Root.GetName] began 5-day operation on the planet [event_target:espionage_target_planet.GetName]"
             }
             else = {
                 set_intelligencer_on_assignment = {
-                    ARG1 = 5
+                    ARG1 = 401
                 }
                 if = {
                     limit = {
@@ -1787,18 +1787,18 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.4
-                            days = 4
+                            days = 400
                         }
                     }
                 }
                 event_target:espionage_target_planet = {
                     set_timed_planet_flag = {
                         flag = "espionage_target_planet"
-                        days = 4
+                        days = 400
                     }
                     set_timed_planet_flag = {
                         flag = espionage_target_planet@root
-                        days = 4
+                        days = 400
                     }
                 }
                 log = ">>> espionage_actions.3: [Root.GetName] began 4-day operation on the planet [event_target:espionage_target_planet.GetName]"
@@ -1826,7 +1826,7 @@ country_event = {
                     }
                 }
                 set_intelligencer_on_assignment = {
-                    ARG1 = 4
+                    ARG1 = 301
                 }
                 if = {
                     limit = {
@@ -1837,7 +1837,7 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.20
-                            days = 3
+                            days = 300
                         }
                     }
                 }
@@ -1845,18 +1845,18 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.4
-                            days = 3
+                            days = 300
                         }
                     }
                 }
                 event_target:espionage_target_planet = {
                     set_timed_planet_flag = {
                         flag = "espionage_target_planet"
-                        days = 3
+                        days = 300
                     }
                     set_timed_planet_flag = {
                         flag = espionage_target_planet@root
-                        days = 3
+                        days = 300
                     }
                 }
                 log = ">>> espionage_actions.3: [Root.GetName] began 3-day operation on the planet [event_target:espionage_target_planet.GetName]"
@@ -1868,7 +1868,7 @@ country_event = {
                     }
                 }
                 set_intelligencer_on_assignment = {
-                    ARG1 = 3
+                    ARG1 = 201
                 }
                 if = {
                     limit = {
@@ -1879,7 +1879,7 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.20
-                            days = 2
+                            days = 200
                         }
                     }
                 }
@@ -1887,25 +1887,25 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.4
-                            days = 2
+                            days = 200
                         }
                     }
                 }
                 event_target:espionage_target_planet = {
                     set_timed_planet_flag = {
                         flag = "espionage_target_planet"
-                        days = 2
+                        days = 200
                     }
                     set_timed_planet_flag = {
                         flag = espionage_target_planet@root
-                        days = 2
+                        days = 200
                     }
                 }
                 log = ">>> espionage_actions.3: [Root.GetName] began 2-day operation on the planet [event_target:espionage_target_planet.GetName]"
             }
             else = {
                 set_intelligencer_on_assignment = {
-                    ARG1 = 2
+                    ARG1 = 101
                 }
                 if = {
                     limit = {
@@ -1916,7 +1916,7 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.20
-                            days = 1
+                            days = 100
                         }
                     }
                 }
@@ -1924,18 +1924,18 @@ country_event = {
                     event_target:espionage_origin_country = {
                         country_event = {
                             id = aoe_espionage_actions.4
-                            days = 1
+                            days = 100
                         }
                     }
                 }
                 event_target:espionage_target_planet = {
                     set_timed_planet_flag = {
                         flag = "espionage_target_planet"
-                        days = 1
+                        days = 100
                     }
                     set_timed_planet_flag = {
                         flag = espionage_target_planet@root
-                        days = 1
+                        days = 100
                     }
                 }
                 log = ">>> espionage_actions.3: [Root.GetName] began 1-day operation on the planet [event_target:espionage_target_planet.GetName]"
