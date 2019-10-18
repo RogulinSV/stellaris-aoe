@@ -5390,6 +5390,14 @@ country_event = {
     hide_window = no
     location = event_target:espionage_origin_planet
 
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_not_ranked = yes
+            }
+        }
+        picture = GFX_aoe_espionage_promote_spy_rank_1
+    }
     desc = {
         trigger = {
             event_target:espionage_origin_spy = {
@@ -5399,6 +5407,14 @@ country_event = {
         text = aoe_espionage_actions.11.desc_01
     }
 
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_1 = yes
+            }
+        }
+        picture = GFX_aoe_espionage_promote_spy_rank_2
+    }
     desc = {
         trigger = {
             event_target:espionage_origin_spy = {
@@ -5408,6 +5424,14 @@ country_event = {
         text = aoe_espionage_actions.11.desc_02
     }
 
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_2 = yes
+            }
+        }
+        picture = GFX_aoe_espionage_promote_spy_rank_3
+    }
     desc = {
         trigger = {
             event_target:espionage_origin_spy = {
@@ -5417,6 +5441,14 @@ country_event = {
         text = aoe_espionage_actions.11.desc_03
     }
 
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_3 = yes
+            }
+        }
+        picture = GFX_aoe_espionage_promote_spy_rank_4
+    }
     desc = {
         trigger = {
             event_target:espionage_origin_spy = {
@@ -5426,6 +5458,14 @@ country_event = {
         text = aoe_espionage_actions.11.desc_04
     }
 
+    picture = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_rank_4 = yes
+            }
+        }
+        picture = GFX_aoe_espionage_promote_spy_rank_5
+    }
     desc = {
         trigger = {
             event_target:espionage_origin_spy = {
@@ -6747,128 +6787,8 @@ country_event = {
             event_target:espionage_origin_spy = {
                 is_intelligencer_has_purpose_broadcast_propaganda = yes
             }
-            NOT = {
-                exists = event_target:espionage_relationship_country_1
-            }
-        }
-        text = aoe_espionage_actions.24.desc_50
-    }
-    desc = {
-        trigger = {
-            event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_broadcast_propaganda = yes
-            }
-            exists = event_target:espionage_relationship_country_1
-            NOT = {
-                exists = event_target:espionage_relationship_country_2
-            }
         }
         text = aoe_espionage_actions.24.desc_51
-    }
-    desc = {
-        trigger = {
-            event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_broadcast_propaganda = yes
-            }
-            exists = event_target:espionage_relationship_country_2
-            NOT = {
-                exists = event_target:espionage_relationship_country_3
-            }
-        }
-        text = aoe_espionage_actions.24.desc_52
-    }
-    desc = {
-        trigger = {
-            event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_broadcast_propaganda = yes
-            }
-            exists = event_target:espionage_relationship_country_3
-            NOT = {
-                exists = event_target:espionage_relationship_country_4
-            }
-        }
-        text = aoe_espionage_actions.24.desc_53
-    }
-    desc = {
-        trigger = {
-            event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_broadcast_propaganda = yes
-            }
-            exists = event_target:espionage_relationship_country_4
-            NOT = {
-                exists = event_target:espionage_relationship_country_5
-            }
-        }
-        text = aoe_espionage_actions.24.desc_54
-    }
-    desc = {
-        trigger = {
-            event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_broadcast_propaganda = yes
-            }
-            exists = event_target:espionage_relationship_country_5
-            NOT = {
-                exists = event_target:espionage_relationship_country_6
-            }
-        }
-        text = aoe_espionage_actions.24.desc_55
-    }
-    desc = {
-        trigger = {
-            event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_broadcast_propaganda = yes
-            }
-            exists = event_target:espionage_relationship_country_6
-            NOT = {
-                exists = event_target:espionage_relationship_country_7
-            }
-        }
-        text = aoe_espionage_actions.24.desc_56
-    }
-    desc = {
-        trigger = {
-            event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_broadcast_propaganda = yes
-            }
-            exists = event_target:espionage_relationship_country_7
-            NOT = {
-                exists = event_target:espionage_relationship_country_8
-            }
-        }
-        text = aoe_espionage_actions.24.desc_57
-    }
-    desc = {
-        trigger = {
-            event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_broadcast_propaganda = yes
-            }
-            exists = event_target:espionage_relationship_country_8
-            NOT = {
-                exists = event_target:espionage_relationship_country_9
-            }
-        }
-        text = aoe_espionage_actions.24.desc_58
-    }
-    desc = {
-        trigger = {
-            event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_broadcast_propaganda = yes
-            }
-            exists = event_target:espionage_relationship_country_9
-            NOT = {
-                exists = event_target:espionage_relationship_country_10
-            }
-        }
-        text = aoe_espionage_actions.24.desc_59
-    }
-    desc = {
-        trigger = {
-            event_target:espionage_origin_spy = {
-                is_intelligencer_has_purpose_broadcast_propaganda = yes
-            }
-            exists = event_target:espionage_relationship_country_10
-        }
-        text = aoe_espionage_actions.24.desc_60
     }
 
     picture = {
@@ -6884,8 +6804,128 @@ country_event = {
             event_target:espionage_origin_spy = {
                 is_intelligencer_has_purpose_manipulate_relationship = yes
             }
+            NOT = {
+                exists = event_target:espionage_relationship_country_1
+            }
+        }
+        text = aoe_espionage_actions.24.desc_61
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            exists = event_target:espionage_relationship_country_1
+            NOT = {
+                exists = event_target:espionage_relationship_country_2
+            }
+        }
+        text = aoe_espionage_actions.24.desc_62
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            exists = event_target:espionage_relationship_country_2
+            NOT = {
+                exists = event_target:espionage_relationship_country_3
+            }
+        }
+        text = aoe_espionage_actions.24.desc_63
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            exists = event_target:espionage_relationship_country_3
+            NOT = {
+                exists = event_target:espionage_relationship_country_4
+            }
+        }
+        text = aoe_espionage_actions.24.desc_64
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            exists = event_target:espionage_relationship_country_4
+            NOT = {
+                exists = event_target:espionage_relationship_country_5
+            }
+        }
+        text = aoe_espionage_actions.24.desc_65
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            exists = event_target:espionage_relationship_country_5
+            NOT = {
+                exists = event_target:espionage_relationship_country_6
+            }
+        }
+        text = aoe_espionage_actions.24.desc_66
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            exists = event_target:espionage_relationship_country_6
+            NOT = {
+                exists = event_target:espionage_relationship_country_7
+            }
+        }
+        text = aoe_espionage_actions.24.desc_67
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            exists = event_target:espionage_relationship_country_7
+            NOT = {
+                exists = event_target:espionage_relationship_country_8
+            }
+        }
+        text = aoe_espionage_actions.24.desc_68
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            exists = event_target:espionage_relationship_country_8
+            NOT = {
+                exists = event_target:espionage_relationship_country_9
+            }
+        }
+        text = aoe_espionage_actions.24.desc_69
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            exists = event_target:espionage_relationship_country_9
+            NOT = {
+                exists = event_target:espionage_relationship_country_10
+            }
         }
         text = aoe_espionage_actions.24.desc_70
+    }
+    desc = {
+        trigger = {
+            event_target:espionage_origin_spy = {
+                is_intelligencer_has_purpose_manipulate_relationship = yes
+            }
+            exists = event_target:espionage_relationship_country_10
+        }
+        text = aoe_espionage_actions.24.desc_71
     }
 
     trigger = {
@@ -7469,6 +7509,32 @@ country_event = {
                 intelligence_gather_pop_ethics_data = {
                     ARG1 = xenophobe
                 }
+            }
+        }
+        else_if = {
+            limit = {
+                event_target:espionage_origin_spy = {
+                    is_intelligencer_has_purpose_manipulate_relationship = yes
+                }
+            }
+            event_target:espionage_target_country = {
+                intelligence_gather_relics_data = yes
+
+                set_variable = {
+                    which = "espionage_data_archaeological_sites_count"
+                    value = 0
+                }
+                every_planet_within_border = {
+                    limit = {
+                        exists = archaeological_site
+                    }
+                    prev = {
+                        change_variable = {
+                            which = "espionage_data_archaeological_sites_count"
+                            value = 1
+                        }
+                    }
+                }
 
                 set_variable = {
                     which = "espionage_data_relationship_count"
@@ -8033,6 +8099,16 @@ ship_event = {
         }
         fleet = {
             destroy_fleet = this
+        }
+        if = {
+            limit = {
+                from = {
+                    exists = owner
+                }
+            }
+            from.owner = {
+                large_artifact_reward = yes
+            }
         }
         log = ">>> aoe_espionage_actions.41: pirates starbase was destroyed by [From.owner.GetName]"
     }

@@ -366,8 +366,32 @@ spriteTypes = {
         alwaystransparent = yes
     }
     spriteType = {
-        name = "GFX_aoe_espionage_promote_spy"
-        texturefile = "gfx/event_pictures/espionage_promote_spy.dds"
+        name = "GFX_aoe_espionage_promote_spy_rank_1"
+        texturefile = "gfx/event_pictures/espionage_promote_spy_rank_1.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_promote_spy_rank_2"
+        texturefile = "gfx/event_pictures/espionage_promote_spy_rank_2.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_promote_spy_rank_3"
+        texturefile = "gfx/event_pictures/espionage_promote_spy_rank_3.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_promote_spy_rank_4"
+        texturefile = "gfx/event_pictures/espionage_promote_spy_rank_4.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_espionage_promote_spy_rank_5"
+        texturefile = "gfx/event_pictures/espionage_promote_spy_rank_5.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }

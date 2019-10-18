@@ -1,0 +1,272 @@
+intelligence_gather_relics_data = {
+    set_variable = {
+        which = "espionage_data_relics_count"
+        value = 0
+    }
+    set_variable = {
+        which = "espionage_data_relics_score"
+        value = 0
+    }
+
+    # Module (0) Stellaris: 20 relics discovered
+    if = {
+        limit = {
+            has_relic = "r_ancient_sword"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 200
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_contingency_core"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 5000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_cryo_core"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 5000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_dragon_trophy"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 1000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_galatron"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 20000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_galaxy"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 2000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_khans_throne"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 3000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_omnicodex"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 500
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_pox_sample"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 5000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_prethoryn_queen"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 5000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_reality_perforator"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 5000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_rubricator"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 1000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_severed_head"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 200
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_surveyor"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 200
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_the_defragmentor"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 1000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_the_last_baol"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 1000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_unbidden_warlock"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 5000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_war_forge"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 5000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_worm_scales"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 1000
+        }
+    }
+    if = {
+        limit = {
+            has_relic = "r_zro_crystal"
+        }
+        change_variable = {
+            which = "espionage_data_relics_count"
+            value = 1
+        }
+        change_variable = {
+            which = "espionage_data_relics_score"
+            value = 1000
+        }
+    }
+}

@@ -1902,11 +1902,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_dragon_trophy"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_dragon_trophy"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_dragon_trophy"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -1984,11 +1984,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_khans_throne"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_khans_throne"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_khans_throne"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -2066,11 +2066,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_worm_scales"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_worm_scales"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_worm_scales"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -2148,11 +2148,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_rubricator"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_rubricator"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_rubricator"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -2230,11 +2230,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_omnicodex"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_omnicodex"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_omnicodex"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -2312,11 +2312,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_galaxy"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_galaxy"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_galaxy"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -2394,11 +2394,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_surveyor"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_surveyor"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_surveyor"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -2476,33 +2476,10 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_galatron"
-                if = {
-                    limit = {
-                        any_owned_planet = {
-                            has_modifier = "galatron_modifier"
-                        }
-                    }
-                    every_owned_planet = {
-                        limit = {
-                            has_modifier = "galatron_modifier"
-                        }
-                        remove_modifier = "galatron_modifier"
-                        add_modifier = {
-                            modifier = "galatron_lost"
-                            days = 900
-                        }
-                    }
-                }
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_galatron"
-            }
-            event_target:espionage_origin_planet = {
-                add_modifier = {
-                    modifier = "galatron_modifier"
-                    days = -1
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_galatron"
                 }
             }
             event_target:espionage_target_country = {
@@ -2581,11 +2558,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_ancient_sword"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_ancient_sword"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_ancient_sword"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -2663,11 +2640,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_severed_head"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_severed_head"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_severed_head"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -2738,11 +2715,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_prethoryn_queen"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_prethoryn_queen"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_prethoryn_queen"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -2813,11 +2790,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_unbidden_warlock"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_unbidden_warlock"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_unbidden_warlock"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -2888,11 +2865,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_contingency_core"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_contingency_core"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_contingency_core"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -2956,11 +2933,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_zro_crystal"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_zro_crystal"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_zro_crystal"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -3024,11 +3001,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_the_last_baol"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_the_last_baol"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_the_last_baol"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -3092,11 +3069,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_the_defragmentor"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_the_defragmentor"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_the_defragmentor"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -3160,11 +3137,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_reality_perforator"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_reality_perforator"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_reality_perforator"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -3228,11 +3205,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_pox_sample"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_pox_sample"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_pox_sample"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -3296,11 +3273,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_cryo_core"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_cryo_core"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_cryo_core"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {
@@ -3364,11 +3341,11 @@ try_manipulate_relationship = {
                     }
                 }
             }
-            event_target:espionage_target_country = {
-                remove_relic = "r_war_forge"
-            }
             event_target:espionage_origin_country = {
-                add_relic = "r_war_forge"
+                steal_relic = {
+                    target = event_target:espionage_target_country
+                    relic = "r_war_forge"
+                }
             }
             event_target:espionage_target_country = {
                 create_message = {

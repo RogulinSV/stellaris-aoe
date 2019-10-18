@@ -215,6 +215,7 @@ every_planet_within_border = {
 }
 
 any_bordering_country = {}
+num_owned_relics > 0
 
 add_random_research_option = {
     add_progress = 0.99
