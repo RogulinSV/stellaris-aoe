@@ -21,7 +21,7 @@ trait_crystalline_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_CRYSTALLINE_SPECIES_EFFECT
 
     prerequisites = {
@@ -39,7 +39,7 @@ trait_crystalline_species = {
 
 trait_pc_crystalline_preference = {
     icon = "gfx/interface/icons/traits/trait_crystalline_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -67,7 +67,7 @@ trait_metalline_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_METALLINE_SPECIES_EFFECT
 
     prerequisites = {
@@ -85,7 +85,7 @@ trait_metalline_species = {
 
 trait_pc_metalline_preference = {
     icon = "gfx/interface/icons/traits/trait_metalline_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -113,7 +113,7 @@ trait_methanum_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_METHANUM_SPECIES_EFFECT
 
     prerequisites = {
@@ -131,7 +131,7 @@ trait_methanum_species = {
 
 trait_pc_methanum_preference = {
     icon = "gfx/interface/icons/traits/trait_methanum_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -159,7 +159,7 @@ trait_carbonium_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_CARBONIUM_SPECIES_EFFECT
 
     prerequisites = {
@@ -177,7 +177,7 @@ trait_carbonium_species = {
 
 trait_pc_carbonium_preference = {
     icon = "gfx/interface/icons/traits/trait_carbonium_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -205,7 +205,7 @@ trait_nitrogenium_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_NITROGENIUM_SPECIES_EFFECT
 
     prerequisites = {
@@ -223,7 +223,7 @@ trait_nitrogenium_species = {
 
 trait_pc_nitrogenium_preference = {
     icon = "gfx/interface/icons/traits/trait_nitrogenium_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -251,7 +251,7 @@ trait_sulphureum_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_SULPHUREUM_SPECIES_EFFECT
 
     prerequisites = {
@@ -269,7 +269,7 @@ trait_sulphureum_species = {
 
 trait_pc_sulphureum_preference = {
     icon = "gfx/interface/icons/traits/trait_sulphureum_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -297,7 +297,7 @@ trait_argonium_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_ARGONIUM_SPECIES_EFFECT
 
     prerequisites = {
@@ -315,7 +315,7 @@ trait_argonium_species = {
 
 trait_pc_argonium_preference = {
     icon = "gfx/interface/icons/traits/trait_argonium_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -343,7 +343,7 @@ trait_phosphorium_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_PHOSPHORIUM_SPECIES_EFFECT
 
     prerequisites = {
@@ -361,7 +361,7 @@ trait_phosphorium_species = {
 
 trait_pc_phosphorium_preference = {
     icon = "gfx/interface/icons/traits/trait_phosphorium_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -389,7 +389,7 @@ trait_ammonium_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_AMMONIUM_SPECIES_EFFECT
 
     prerequisites = {
@@ -407,7 +407,7 @@ trait_ammonium_species = {
 
 trait_pc_ammonium_preference = {
     icon = "gfx/interface/icons/traits/trait_ammonium_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -435,7 +435,7 @@ trait_mercurium_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_MERCURIUM_SPECIES_EFFECT
 
     prerequisites = {
@@ -453,7 +453,7 @@ trait_mercurium_species = {
 
 trait_pc_mercurium_preference = {
     icon = "gfx/interface/icons/traits/trait_mercurium_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -481,7 +481,7 @@ trait_barium_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_BARIUM_SPECIES_EFFECT
 
     prerequisites = {
@@ -499,7 +499,7 @@ trait_barium_species = {
 
 trait_pc_barium_preference = {
     icon = "gfx/interface/icons/traits/trait_barium_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -527,7 +527,7 @@ trait_chlorum_species = {
     forced_happiness = no
 
     opposites = {}
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     custom_tooltip = TRAIT_CHLORUM_SPECIES_EFFECT
 
     prerequisites = {
@@ -545,7 +545,7 @@ trait_chlorum_species = {
 
 trait_pc_chlorum_preference = {
     icon = "gfx/interface/icons/traits/trait_chlorum_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
     sorting_priority = 30
     initial = no
     randomized = no
@@ -563,7 +563,7 @@ trait_pc_chlorum_preference = {
 
 trait_pc_sandsea_preference = {
     icon = "gfx/interface/icons/traits/trait_sandsea_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -611,7 +611,7 @@ trait_pc_sandsea_preference = {
 
 trait_pc_oasis_preference = {
     icon = "gfx/interface/icons/traits/trait_oasis_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -659,7 +659,7 @@ trait_pc_oasis_preference = {
 
 trait_pc_geoprairie_preference = {
     icon = "gfx/interface/icons/traits/trait_geoprairie_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -707,7 +707,7 @@ trait_pc_geoprairie_preference = {
 
 trait_pc_desertislands_preference = {
     icon = "gfx/interface/icons/traits/trait_desertislands_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -755,7 +755,7 @@ trait_pc_desertislands_preference = {
 
 trait_pc_hadesert_preference = {
     icon = "gfx/interface/icons/traits/trait_hadesert_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -803,7 +803,7 @@ trait_pc_hadesert_preference = {
 
 trait_pc_greenlush_preference = {
     icon = "gfx/interface/icons/traits/trait_greenlush_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -851,7 +851,7 @@ trait_pc_greenlush_preference = {
 
 trait_pc_exogarden_preference = {
     icon = "gfx/interface/icons/traits/trait_exogarden_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -899,7 +899,7 @@ trait_pc_exogarden_preference = {
 
 trait_pc_xenovalley_preference = {
     icon = "gfx/interface/icons/traits/trait_xenovalley_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -947,7 +947,7 @@ trait_pc_xenovalley_preference = {
 
 trait_pc_floating_preference = {
     icon = "gfx/interface/icons/traits/trait_floating_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -995,7 +995,7 @@ trait_pc_floating_preference = {
 
 trait_pc_mangrove_preference = {
     icon = "gfx/interface/icons/traits/trait_mangrove_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1043,7 +1043,7 @@ trait_pc_mangrove_preference = {
 
 trait_pc_bioforge_preference = {
     icon = "gfx/interface/icons/traits/trait_bioforge_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1091,7 +1091,7 @@ trait_pc_bioforge_preference = {
 
 trait_pc_biolumen_preference = {
     icon = "gfx/interface/icons/traits/trait_biolumen_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1139,7 +1139,7 @@ trait_pc_biolumen_preference = {
 
 trait_pc_boreal_preference = {
     icon = "gfx/interface/icons/traits/trait_boreal_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1187,7 +1187,7 @@ trait_pc_boreal_preference = {
 
 trait_pc_irassia_preference = {
     icon = "gfx/interface/icons/traits/trait_irassia_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1235,7 +1235,7 @@ trait_pc_irassia_preference = {
 
 trait_pc_frozen_desert_preference = {
     icon = "gfx/interface/icons/traits/trait_frozen_desert_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1283,7 +1283,7 @@ trait_pc_frozen_desert_preference = {
 
 trait_pc_steppe_preference = {
     icon = "gfx/interface/icons/traits/trait_steppe_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1331,7 +1331,7 @@ trait_pc_steppe_preference = {
 
 trait_pc_tidallylocked_preference = {
     icon = "gfx/interface/icons/traits/trait_tidallylocked_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1379,7 +1379,7 @@ trait_pc_tidallylocked_preference = {
 
 trait_pc_geothermal_preference = {
     icon = "gfx/interface/icons/traits/trait_geothermal_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1427,7 +1427,7 @@ trait_pc_geothermal_preference = {
 
 trait_pc_subarctic_preference = {
     icon = "gfx/interface/icons/traits/trait_subarctic_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1475,7 +1475,7 @@ trait_pc_subarctic_preference = {
 
 trait_pc_glacial_preference = {
     icon = "gfx/interface/icons/traits/trait_glacial_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1523,7 +1523,7 @@ trait_pc_glacial_preference = {
 
 trait_pc_antarctic_preference = {
     icon = "gfx/interface/icons/traits/trait_antarctic_habitable_preference.dds"
-    allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+    allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
     sorting_priority = 30
     initial = yes
     randomized = yes
@@ -1875,7 +1875,7 @@ trait_marginalized_pop = {
     improves_leaders = no
     forced_happiness = no
 
-    allowed_archetypes = { BIOLOGICAL ROBOT MACHINE }
+    allowed_archetypes = { BIOLOGICAL LITHOID ROBOT MACHINE }
     custom_tooltip = TRAIT_MARGINALIZED_POP_EFFECT
 
     modifier = {
