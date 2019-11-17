@@ -1,0 +1,7439 @@
+absorber_mithril = {
+    icon = "GFX_sm_absorber_mithril"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_mithril"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_mithril"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = mithril
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            mithril = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_1"
+                }
+            }
+            mithril = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_2"
+                }
+            }
+            mithril = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_3"
+                }
+            }
+            mithril = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_4"
+                }
+            }
+            mithril = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_mithril_mining_5"
+                }
+            }
+            mithril = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_mithril_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_mithril"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_mithril"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_mithril"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_mithril"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_mithril"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_mithril"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_mithril"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_mithril"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_mithril"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_mithril"
+    custom_tooltip = "sm_absorber_mithril_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = mithril
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = mithril
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_mithril"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_orihalk = {
+    icon = "GFX_sm_absorber_orihalk"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_orihalk"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_orihalk"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = orihalk
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            orihalk = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_1"
+                }
+            }
+            orihalk = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_2"
+                }
+            }
+            orihalk = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_3"
+                }
+            }
+            orihalk = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_4"
+                }
+            }
+            orihalk = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_orihalk_mining_5"
+                }
+            }
+            orihalk = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_orihalk_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_orihalk"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_orihalk"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_orihalk"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_orihalk"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_orihalk"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_orihalk"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_orihalk"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_orihalk"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_orihalk"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_orihalk"
+    custom_tooltip = "sm_absorber_orihalk_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = orihalk
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = orihalk
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_orihalk"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_yuranic = {
+    icon = "GFX_sm_absorber_yuranic"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_yuranic"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_yuranic"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = yuranic
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            yuranic = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_1"
+                }
+            }
+            yuranic = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_2"
+                }
+            }
+            yuranic = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_3"
+                }
+            }
+            yuranic = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_4"
+                }
+            }
+            yuranic = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_yuranic_mining_5"
+                }
+            }
+            yuranic = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_yuranic_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_yuranic"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_yuranic"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_yuranic"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_yuranic"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_yuranic"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_yuranic"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_yuranic"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_yuranic"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_yuranic"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_yuranic"
+    custom_tooltip = "sm_absorber_yuranic_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = yuranic
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = yuranic
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_yuranic"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_adamantium = {
+    icon = "GFX_sm_absorber_adamantium"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_adamantium"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_adamantium"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = adamantium
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            adamantium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_1"
+                }
+            }
+            adamantium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_2"
+                }
+            }
+            adamantium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_3"
+                }
+            }
+            adamantium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_4"
+                }
+            }
+            adamantium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_adamantium_mining_5"
+                }
+            }
+            adamantium = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_adamantium_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_adamantium"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_adamantium"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_adamantium"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_adamantium"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_adamantium"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_adamantium"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_adamantium"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_adamantium"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_adamantium"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_adamantium"
+    custom_tooltip = "sm_absorber_adamantium_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = adamantium
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = adamantium
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_adamantium"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_vibranium = {
+    icon = "GFX_sm_absorber_vibranium"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_vibranium"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_vibranium"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = vibranium
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            vibranium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_1"
+                }
+            }
+            vibranium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_2"
+                }
+            }
+            vibranium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_3"
+                }
+            }
+            vibranium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_4"
+                }
+            }
+            vibranium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_vibranium_mining_5"
+                }
+            }
+            vibranium = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_vibranium_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_vibranium"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_vibranium"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_vibranium"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_vibranium"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_vibranium"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_vibranium"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_vibranium"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_vibranium"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_vibranium"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_vibranium"
+    custom_tooltip = "sm_absorber_vibranium_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = vibranium
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = vibranium
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_vibranium"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_cobaltium = {
+    icon = "GFX_sm_absorber_cobaltium"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_cobaltium"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_cobaltium"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = cobaltium
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            cobaltium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_1"
+                }
+            }
+            cobaltium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_2"
+                }
+            }
+            cobaltium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_3"
+                }
+            }
+            cobaltium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_4"
+                }
+            }
+            cobaltium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_cobaltium_mining_5"
+                }
+            }
+            cobaltium = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_cobaltium_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_cobaltium"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_cobaltium"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_cobaltium"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_cobaltium"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_cobaltium"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_cobaltium"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_cobaltium"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_cobaltium"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_cobaltium"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_cobaltium"
+    custom_tooltip = "sm_absorber_cobaltium_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = cobaltium
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = cobaltium
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_cobaltium"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_itildeen = {
+    icon = "GFX_sm_absorber_itildeen"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_itildeen"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_itildeen"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = itildeen
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            itildeen = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_1"
+                }
+            }
+            itildeen = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_2"
+                }
+            }
+            itildeen = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_3"
+                }
+            }
+            itildeen = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_4"
+                }
+            }
+            itildeen = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_itildeen_mining_5"
+                }
+            }
+            itildeen = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_itildeen_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_itildeen"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_itildeen"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_itildeen"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_itildeen"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_itildeen"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_itildeen"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_itildeen"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_itildeen"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_itildeen"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_itildeen"
+    custom_tooltip = "sm_absorber_itildeen_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = itildeen
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = itildeen
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_itildeen"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_satramene = {
+    icon = "GFX_sm_absorber_satramene"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_satramene"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_satramene"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = satramene
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            satramene = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_1"
+                }
+            }
+            satramene = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_2"
+                }
+            }
+            satramene = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_3"
+                }
+            }
+            satramene = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_4"
+                }
+            }
+            satramene = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_satramene_mining_5"
+                }
+            }
+            satramene = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_satramene_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_satramene"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_satramene"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_satramene"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_satramene"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_satramene"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_satramene"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_satramene"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_satramene"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_satramene"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_satramene"
+    custom_tooltip = "sm_absorber_satramene_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = satramene
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = satramene
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_satramene"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_lirium = {
+    icon = "GFX_sm_absorber_lirium"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_lirium"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_lirium"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = lirium
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            lirium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_1"
+                }
+            }
+            lirium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_2"
+                }
+            }
+            lirium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_3"
+                }
+            }
+            lirium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_4"
+                }
+            }
+            lirium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_lirium_mining_5"
+                }
+            }
+            lirium = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_lirium_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_lirium"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_lirium"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_lirium"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_lirium"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_lirium"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_lirium"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_lirium"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_lirium"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_lirium"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_lirium"
+    custom_tooltip = "sm_absorber_lirium_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = lirium
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = lirium
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_lirium"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_nevarrit = {
+    icon = "GFX_sm_absorber_nevarrit"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_nevarrit"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_nevarrit"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = nevarrit
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            nevarrit = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_1"
+                }
+            }
+            nevarrit = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_2"
+                }
+            }
+            nevarrit = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_3"
+                }
+            }
+            nevarrit = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_4"
+                }
+            }
+            nevarrit = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_nevarrit_mining_5"
+                }
+            }
+            nevarrit = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_nevarrit_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_nevarrit"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_nevarrit"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_nevarrit"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_nevarrit"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_nevarrit"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_nevarrit"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_nevarrit"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_nevarrit"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_nevarrit"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_nevarrit"
+    custom_tooltip = "sm_absorber_nevarrit_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = nevarrit
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = nevarrit
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_nevarrit"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_thiotimoline = {
+    icon = "GFX_sm_absorber_thiotimoline"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_thiotimoline"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_thiotimoline"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = thiotimoline
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            thiotimoline = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_1"
+                }
+            }
+            thiotimoline = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_2"
+                }
+            }
+            thiotimoline = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_3"
+                }
+            }
+            thiotimoline = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_4"
+                }
+            }
+            thiotimoline = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_thiotimoline_mining_5"
+                }
+            }
+            thiotimoline = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_thiotimoline_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_thiotimoline"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_thiotimoline"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_thiotimoline"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_thiotimoline"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_thiotimoline"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_thiotimoline"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_thiotimoline"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_thiotimoline"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_thiotimoline"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_thiotimoline"
+    custom_tooltip = "sm_absorber_thiotimoline_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = thiotimoline
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = thiotimoline
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_thiotimoline"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_unobtanium = {
+    icon = "GFX_sm_absorber_unobtanium"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_unobtanium"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_unobtanium"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = unobtanium
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            unobtanium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_1"
+                }
+            }
+            unobtanium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_2"
+                }
+            }
+            unobtanium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_3"
+                }
+            }
+            unobtanium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_4"
+                }
+            }
+            unobtanium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_unobtanium_mining_5"
+                }
+            }
+            unobtanium = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_unobtanium_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_unobtanium"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_unobtanium"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_unobtanium"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_unobtanium"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_unobtanium"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_unobtanium"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_unobtanium"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_unobtanium"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_unobtanium"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_unobtanium"
+    custom_tooltip = "sm_absorber_unobtanium_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = unobtanium
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = unobtanium
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_unobtanium"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_stalgrim = {
+    icon = "GFX_sm_absorber_stalgrim"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_stalgrim"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_stalgrim"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = stalgrim
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            stalgrim = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_1"
+                }
+            }
+            stalgrim = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_2"
+                }
+            }
+            stalgrim = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_3"
+                }
+            }
+            stalgrim = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_4"
+                }
+            }
+            stalgrim = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_stalgrim_mining_5"
+                }
+            }
+            stalgrim = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_stalgrim_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_stalgrim"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_stalgrim"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_stalgrim"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_stalgrim"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_stalgrim"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_stalgrim"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_stalgrim"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_stalgrim"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_stalgrim"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_stalgrim"
+    custom_tooltip = "sm_absorber_stalgrim_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = stalgrim
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = stalgrim
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_stalgrim"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_tiberium = {
+    icon = "GFX_sm_absorber_tiberium"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_tiberium"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_tiberium"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = tiberium
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            tiberium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_1"
+                }
+            }
+            tiberium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_2"
+                }
+            }
+            tiberium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_3"
+                }
+            }
+            tiberium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_4"
+                }
+            }
+            tiberium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tiberium_mining_5"
+                }
+            }
+            tiberium = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_tiberium_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_tiberium"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_tiberium"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_tiberium"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_tiberium"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_tiberium"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_tiberium"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_tiberium"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_tiberium"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_tiberium"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_tiberium"
+    custom_tooltip = "sm_absorber_tiberium_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = tiberium
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = tiberium
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_tiberium"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_elerium = {
+    icon = "GFX_sm_absorber_elerium"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_elerium"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_elerium"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = elerium
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            elerium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_1"
+                }
+            }
+            elerium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_2"
+                }
+            }
+            elerium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_3"
+                }
+            }
+            elerium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_4"
+                }
+            }
+            elerium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_elerium_mining_5"
+                }
+            }
+            elerium = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_elerium_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_elerium"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_elerium"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_elerium"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_elerium"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_elerium"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_elerium"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_elerium"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_elerium"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_elerium"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_elerium"
+    custom_tooltip = "sm_absorber_elerium_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = elerium
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = elerium
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_elerium"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_gravitoid = {
+    icon = "GFX_sm_absorber_gravitoid"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_gravitoid"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_gravitoid"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = gravitoid
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            gravitoid = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_1"
+                }
+            }
+            gravitoid = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_2"
+                }
+            }
+            gravitoid = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_3"
+                }
+            }
+            gravitoid = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_4"
+                }
+            }
+            gravitoid = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_gravitoid_mining_5"
+                }
+            }
+            gravitoid = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_gravitoid_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_gravitoid"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_gravitoid"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_gravitoid"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_gravitoid"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_gravitoid"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_gravitoid"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_gravitoid"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_gravitoid"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_gravitoid"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_gravitoid"
+    custom_tooltip = "sm_absorber_gravitoid_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = gravitoid
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = gravitoid
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_gravitoid"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_tylium = {
+    icon = "GFX_sm_absorber_tylium"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_tylium"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_tylium"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = tylium
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            tylium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_1"
+                }
+            }
+            tylium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_2"
+                }
+            }
+            tylium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_3"
+                }
+            }
+            tylium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_4"
+                }
+            }
+            tylium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_tylium_mining_5"
+                }
+            }
+            tylium = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_tylium_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_tylium"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_tylium"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_tylium"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_tylium"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_tylium"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_tylium"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_tylium"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_tylium"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_tylium"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_tylium"
+    custom_tooltip = "sm_absorber_tylium_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = tylium
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = tylium
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_tylium"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_chalcolivan = {
+    icon = "GFX_sm_absorber_chalcolivan"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_chalcolivan"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_chalcolivan"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = chalcolivan
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            chalcolivan = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_1"
+                }
+            }
+            chalcolivan = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_2"
+                }
+            }
+            chalcolivan = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_3"
+                }
+            }
+            chalcolivan = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_4"
+                }
+            }
+            chalcolivan = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_chalcolivan_mining_5"
+                }
+            }
+            chalcolivan = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_chalcolivan_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_chalcolivan"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_chalcolivan"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_chalcolivan"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_chalcolivan"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_chalcolivan"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_chalcolivan"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_chalcolivan"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_chalcolivan"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_chalcolivan"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_chalcolivan"
+    custom_tooltip = "sm_absorber_chalcolivan_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = chalcolivan
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = chalcolivan
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_chalcolivan"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_terrigen = {
+    icon = "GFX_sm_absorber_terrigen"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_terrigen"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_terrigen"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = terrigen
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            terrigen = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_1"
+                }
+            }
+            terrigen = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_2"
+                }
+            }
+            terrigen = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_3"
+                }
+            }
+            terrigen = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_4"
+                }
+            }
+            terrigen = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_terrigen_mining_5"
+                }
+            }
+            terrigen = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_terrigen_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_terrigen"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_terrigen"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_terrigen"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_terrigen"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_terrigen"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_terrigen"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_terrigen"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_terrigen"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_terrigen"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_terrigen"
+    custom_tooltip = "sm_absorber_terrigen_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = terrigen
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = terrigen
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_terrigen"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_corenite = {
+    icon = "GFX_sm_absorber_corenite"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_corenite"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_corenite"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = corenite
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            corenite = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_1"
+                }
+            }
+            corenite = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_2"
+                }
+            }
+            corenite = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_3"
+                }
+            }
+            corenite = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_4"
+                }
+            }
+            corenite = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_corenite_mining_5"
+                }
+            }
+            corenite = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_corenite_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_corenite"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_corenite"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_corenite"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_corenite"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_corenite"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_corenite"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_corenite"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_corenite"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_corenite"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_corenite"
+    custom_tooltip = "sm_absorber_corenite_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = corenite
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = corenite
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_corenite"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_energon = {
+    icon = "GFX_sm_absorber_energon"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_energon"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_energon"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = energon
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            energon = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_1"
+                }
+            }
+            energon = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_2"
+                }
+            }
+            energon = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_3"
+                }
+            }
+            energon = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_4"
+                }
+            }
+            energon = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_energon_mining_5"
+                }
+            }
+            energon = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_energon_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_energon"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_energon"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_energon"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_energon"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_energon"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_energon"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_energon"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_energon"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_energon"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_energon"
+    custom_tooltip = "sm_absorber_energon_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = energon
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = energon
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_energon"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_engos = {
+    icon = "GFX_sm_absorber_engos"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_engos"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_engos"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = engos
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            engos = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_1"
+                }
+            }
+            engos = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_2"
+                }
+            }
+            engos = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_3"
+                }
+            }
+            engos = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_4"
+                }
+            }
+            engos = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_engos_mining_5"
+                }
+            }
+            engos = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_engos_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_engos"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_engos"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_engos"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_engos"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_engos"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_engos"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_engos"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_engos"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_engos"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_engos"
+    custom_tooltip = "sm_absorber_engos_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = engos
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = engos
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_engos"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_helium = {
+    icon = "GFX_sm_absorber_helium"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_helium"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_helium"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = helium
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            helium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_1"
+                }
+            }
+            helium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_2"
+                }
+            }
+            helium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_3"
+                }
+            }
+            helium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_4"
+                }
+            }
+            helium = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_helium_mining_5"
+                }
+            }
+            helium = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_helium_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_helium"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_helium"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_helium"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_helium"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_helium"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_helium"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_helium"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_helium"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_helium"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_helium"
+    custom_tooltip = "sm_absorber_helium_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = helium
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = helium
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_helium"
+                count > 5
+            }
+        }
+    }
+}
+
+absorber_kryptonite = {
+    icon = "GFX_sm_absorber_kryptonite"
+    construction_days = 300
+    initial = no
+
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = "tech_mine_kryptonite"
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_sr_kryptonite"
+            solar_system = {
+                any_system_planet = {
+                    has_resource = {
+                        type = kryptonite
+                        amount > 0
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            star = {
+                is_inside_nebula = yes
+            }
+        }
+    }
+
+    resources = {
+        category = "starbase_buildings"
+        cost = {
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            kryptonite = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_1"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_1"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_1"
+                }
+            }
+            kryptonite = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_2"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_2"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_2"
+                }
+            }
+            kryptonite = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_3"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_3"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_3"
+                }
+            }
+            kryptonite = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_4"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_4"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_4"
+                }
+            }
+            kryptonite = 1
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_5"
+                }
+            }
+            alloys = 150
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_5"
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_kryptonite_mining_5"
+                }
+            }
+            kryptonite = 1
+        }
+    }
+
+    country_modifier = {
+        country_resource_max_kryptonite_add = 500
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_kryptonite"
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = "absorber_kryptonite"
+                count < 3
+            }
+        }
+        trade_value_add = 1
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_kryptonite"
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = "absorber_kryptonite"
+                count < 4
+            }
+        }
+        trade_value_add = 2
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_kryptonite"
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = "absorber_kryptonite"
+                count < 5
+            }
+        }
+        trade_value_add = 3
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_kryptonite"
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = "absorber_kryptonite"
+                count < 6
+            }
+        }
+        trade_value_add = 4
+    }
+
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = "absorber_kryptonite"
+                count >= 6
+            }
+        }
+        trade_value_add = 5
+    }
+
+    show_in_tech = "tech_mine_kryptonite"
+    custom_tooltip = "sm_absorber_kryptonite_desc_modifier"
+
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+
+    ai_weight = {
+        weight = 10
+
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = kryptonite
+                    value > 20
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = owner
+            owner = {
+                resource_stockpile_compare = {
+                    resource = kryptonite
+                    value >= 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = "absorber_kryptonite"
+                count > 5
+            }
+        }
+    }
+}

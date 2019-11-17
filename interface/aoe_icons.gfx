@@ -1,5 +1,105 @@
 spriteTypes = {
     spriteType = {
+        name = "GFX_broken_starbase_module"
+        texturefile = "gfx/interface/icons/modules/sb_broken_module.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_mithril"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_mithril.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_orihalk"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_orihalk.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_yuranic"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_yuranic.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_adamantium"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_adamantium.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_vibranium"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_vibranium.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_cobaltium"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_cobaltium.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_itildeen"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_itildeen.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_satramene"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_satramene.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_lirium"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_lirium.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_nevarrit"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_nevarrit.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_thiotimoline"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_thiotimoline.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_unobtanium"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_unobtanium.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_stalgrim"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_stalgrim.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_tiberium"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_tiberium.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_elerium"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_elerium.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_gravitoid"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_gravitoid.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_tylium"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_tylium.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_chalcolivan"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_chalcolivan.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_terrigen"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_terrigen.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_corenite"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_corenite.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_energon"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_energon.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_engos"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_engos.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_helium"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_helium.dds"
+    }
+    spriteType = {
+        name = "GFX_sm_absorber_kryptonite"
+        texturefile = "gfx/interface/icons/modules/sm_absorber_kryptonite.dds"
+    }
+    spriteType = {
         name = "GFX_message_solar_system_surveyed"
         texturefile = "gfx/interface/icons/message/message_solar_system_surveyed.dds"
     }
@@ -26,5 +126,9 @@ spriteTypes = {
     spriteType = {
         name = "GFX_message_spy_gained_energy"
         texturefile = "gfx/interface/icons/message/message_spy_gained_energy.dds"
+    }
+    spriteType = {
+        name = "GFX_message_spaceborn_monster"
+        texturefile = "gfx/interface/icons/message/message_spaceborn_monster_detected.dds"
     }
 }
