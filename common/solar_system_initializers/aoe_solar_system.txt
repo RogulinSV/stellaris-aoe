@@ -895,7 +895,7 @@ anthem_of_eternity = {
         }
 
         init_effect = {
-            effects_add_rich_resources_frozen_planet = yes
+            effects_add_rich_resources_arctic_planet = yes
         }
     }
 
@@ -963,6 +963,26 @@ anthem_of_eternity_neighbor_a = {
         init_effect = {
             prevent_anomaly = yes
             effects_add_rich_resources_star = yes
+            random_list = {
+                10 = {
+                    create_amoeba_fleet_1 = yes
+                }
+                8 = {
+                    create_amoeba_fleet_2 = yes
+                }
+                6 = {
+                    create_amoeba_fleet_3 = yes
+                }
+                4 = {
+                    create_amoeba_fleet_4 = yes
+                }
+                2 = {
+                    create_amoeba_fleet_5 = yes
+                }
+                1 = {
+                    create_amoeba_fleet_6 = yes
+                }
+            }
         }
     }
 
@@ -1387,6 +1407,26 @@ anthem_of_eternity_neighbor_b = {
         init_effect = {
             prevent_anomaly = yes
             effects_add_rich_resources_star = yes
+            random_list = {
+                10 = {
+                    create_amoeba_fleet_1 = yes
+                }
+                8 = {
+                    create_amoeba_fleet_2 = yes
+                }
+                6 = {
+                    create_amoeba_fleet_3 = yes
+                }
+                4 = {
+                    create_amoeba_fleet_4 = yes
+                }
+                2 = {
+                    create_amoeba_fleet_5 = yes
+                }
+                1 = {
+                    create_amoeba_fleet_6 = yes
+                }
+            }
         }
     }
 
@@ -1794,6 +1834,26 @@ anthem_of_eternity_neighbor_c = {
         init_effect = {
             prevent_anomaly = yes
             effects_add_rich_resources_star = yes
+            random_list = {
+                10 = {
+                    create_amoeba_fleet_1 = yes
+                }
+                8 = {
+                    create_amoeba_fleet_2 = yes
+                }
+                6 = {
+                    create_amoeba_fleet_3 = yes
+                }
+                4 = {
+                    create_amoeba_fleet_4 = yes
+                }
+                2 = {
+                    create_amoeba_fleet_5 = yes
+                }
+                1 = {
+                    create_amoeba_fleet_6 = yes
+                }
+            }
         }
     }
 
@@ -2295,6 +2355,26 @@ anthem_of_eternity_neighbor_d = {
         init_effect = {
             prevent_anomaly = yes
             effects_add_rich_resources_black_hole = yes
+            random_list = {
+                10 = {
+                    create_amoeba_fleet_1 = yes
+                }
+                8 = {
+                    create_amoeba_fleet_2 = yes
+                }
+                6 = {
+                    create_amoeba_fleet_3 = yes
+                }
+                4 = {
+                    create_amoeba_fleet_4 = yes
+                }
+                2 = {
+                    create_amoeba_fleet_5 = yes
+                }
+                1 = {
+                    create_amoeba_fleet_6 = yes
+                }
+            }
         }
     }
 
