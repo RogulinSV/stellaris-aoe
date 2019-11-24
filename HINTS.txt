@@ -1,11 +1,49 @@
 has_encountered_other_species = yes
 mid_game_years_passed >= 0
 end_game_years_passed >= 0
-num_ascension_perks > 0
-num_owned_planets > 0
-num_rare_techs > 0
-num_communications < 1
-num_uncleared_blockers < 1
+num_active_gateways >= 0
+num_ascension_perk_slots >= 0
+num_ascension_perks >= 0
+num_buildings >= 0
+num_communications >= 0
+num_consecrated_worlds >= 0
+num_districts >= 0
+num_free_districts >= 0
+num_gateways >= 0
+num_guaranteed_colonies >= 0
+num_lcluster_clues >= 0
+num_marauder_empires_to_spawn >= 0
+num_minerals >= 0
+num_modifiers >= 0
+num_moons >= 0
+num_owned_active_gateways >= 0
+num_owned_planets >= 0
+num_owned_relics >= 0
+num_pops >= 0
+num_pops_add >= 0
+num_rare_techs >= 0
+num_species >= 0
+num_starbases >= 0
+num_strategic_resources >= 0
+num_systems >= 0
+num_target_locators >= 0
+num_tech_alternatives_add >= 0
+num_traditions >= 0
+num_trait_points >= 0
+num_uncleared_blockers >= 0
+num_unique_species >= 0
+count_armies = {}
+count_country = {}
+count_fleet_ships = {}
+count_owned_pops = {}
+count_owned_ships = {}
+count_pop_factions = {}
+count_pops = {}
+count_ships = {}
+count_species = {}
+count_starbase_modules = {}
+count_starbase_sizes = {}
+count_system_ships = {}
 
 any_owned_planet = {
     num_unique_species > 9
@@ -14,6 +52,7 @@ any_owned_megastructure = {}
 every_owned_planet = {}
 random_owned_planet = {}
 any_owned_pop = {}
+has_hyperlane_to = ...
 
 num_buildings = { type = building_foundry_1 value >= 2 }
 
@@ -215,7 +254,6 @@ every_planet_within_border = {
 }
 
 any_bordering_country = {}
-num_owned_relics > 0
 
 add_random_research_option = {
     add_progress = 0.99
@@ -294,6 +332,28 @@ any_owned_fleet = {
 any_system = {
     distance = {
         source = root.capital_scope
-        max_distance <= 200
+        min_distance >= 250 #5
+        max_distance <= 500 #50
+    }
+}
+
+any_owned_fleet = {
+    is_in_combat = no
+    count_fleet_ships = {
+        count > 1
+        limit = {
+            OR = {
+                is_ship_size = corvette
+                is_ship_size = destroyer
+                is_ship_size = cruiser
+            }
+        }
+    }
+}
+
+any_playable_country = {
+    intel_level = {
+        level > low
+        system = prev
     }
 }

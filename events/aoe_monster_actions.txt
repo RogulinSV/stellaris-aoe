@@ -1,0 +1,1042 @@
+namespace = aoe_voidborn_monster_actions
+
+# Voidborn monsters appearance
+# Scope: country (combatant)
+# From: country (destroyed)
+# FromFrom = fleet 1 (combatant)
+# FromFromFrom = fleet 2 (destroyed)
+country_event = {
+    id = aoe_voidborn_monster_actions.1
+    title = aoe_voidborn_monster_actions.1.title
+    picture = GFX_aoe_voidborn_monster_appearance
+    show_sound = event_alien_signal
+    is_triggered_only = no
+    hide_window = no
+    location = fromfrom
+
+    desc = {
+        trigger = {
+            from = {
+                is_country_type = "crystal"
+            }
+        }
+        text = aoe_voidborn_monster_actions.1.desc_01
+    }
+    desc = {
+        trigger = {
+            from = {
+                is_country_type = "drone"
+            }
+        }
+        text = aoe_voidborn_monster_actions.1.desc_02
+    }
+    desc = {
+        trigger = {
+            from = {
+                is_country_type = "amoeba"
+            }
+        }
+        text = aoe_voidborn_monster_actions.1.desc_03
+    }
+
+    trigger = {
+        from = {
+            OR = {
+                is_country_type = "crystal"
+                is_country_type = "amoeba"
+                is_country_type = "drone"
+            }
+        }
+        NOR = {
+            has_event_chain = "voidborn_monster_chain"
+            has_country_flag = "voidborn_monster_suppressed"
+        }
+    }
+
+    option = {
+        name = aoe_voidborn_monster_actions.1.a
+        custom_tooltip = aoe_voidborn_monster_actions.1.a.tooltip
+        begin_event_chain = {
+            event_chain = "voidborn_monster_chain"
+            target = root
+        }
+    }
+}
+
+# Voidborn monsters suppressed
+country_event = {
+    id = aoe_voidborn_monster_actions.2
+    title = aoe_voidborn_monster_actions.2.title
+    desc = aoe_voidborn_monster_actions.2.desc
+    picture = GFX_aoe_voidborn_monster_suppression
+    show_sound = event_celebration
+    is_triggered_only = yes
+    hide_window = no
+
+    trigger = {
+        has_event_chain = "voidborn_monster_chain"
+        has_completed_event_chain_counter = {
+            event_chain = "voidborn_monster_chain"
+            counter = "voidborn_monster_crystal_counter"
+        }
+        has_completed_event_chain_counter = {
+            event_chain = "voidborn_monster_chain"
+            counter = "voidborn_monster_drone_counter"
+        }
+        has_completed_event_chain_counter = {
+            event_chain = "voidborn_monster_chain"
+            counter = "voidborn_monster_amoeba_counter"
+        }
+    }
+
+    immediate = {
+        end_event_chain = "voidborn_monster_chain"
+    }
+
+    option = {
+        name = aoe_voidborn_monster_actions.2.a
+        custom_tooltip = aoe_voidborn_monster_actions.2.a.tooltip
+        add_resource = {
+            unity = 1000
+        }
+        add_monthly_resource_mult = {
+            resource = unity
+            value = @tier5unityreward
+            min = @tier5unitymin
+            max = @tier5unitymax
+        }
+        hidden_effect = {
+            set_country_flag = "voidborn_monster_suppressed"
+        }
+    }
+}
+
+# Voidborn monsters system invasion
+country_event = {
+    id = aoe_voidborn_monster_actions.3
+    hide_window = yes
+
+    mean_time_to_happen = {
+        days = 900
+    }
+
+    trigger = {
+        has_event_chain = "voidborn_monster_chain"
+        NOT = {
+            has_country_flag = "voidborn_monster_suppressed"
+        }
+        NAND = {
+            has_special_project = "aoe_voidborn_monster_suppression_admiral_project"
+            has_special_project = "aoe_voidborn_monster_suppression_general_project"
+            has_special_project = "aoe_voidborn_monster_suppression_scientist_project"
+        }
+    }
+
+    immediate = {
+        random_system_within_border = {
+            limit = {
+                NOR = {
+                    is_same_value = root.capital_scope.solar_system
+                    has_star_flag = "voidborn_monster_crystal_starbase"
+                    has_star_flag = "voidborn_monster_drone_starbase"
+                    has_star_flag = "voidborn_monster_amoeba_starbase"
+                    any_ship_in_system = {
+                        fleet = {
+                            fleet_power >= 2000
+                        }
+                    }
+                }
+                any_system_planet = {
+                    is_star = no
+                    is_asteroid = no
+                }
+            }
+            random_list = {
+                10 = {
+                    modifier = {
+                        factor = 0
+                        root = {
+                            has_completed_event_chain_counter = {
+                                event_chain = "voidborn_monster_chain"
+                                counter = "voidborn_monster_crystal_counter"
+                            }
+                        }
+                    }
+                    set_star_flag = "voidborn_monster_crystal_starbase"
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        root = {
+                            has_completed_event_chain_counter = {
+                                event_chain = "voidborn_monster_chain"
+                                counter = "voidborn_monster_drone_counter"
+                            }
+                        }
+                    }
+                    set_star_flag = "voidborn_monster_drone_starbase"
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        root = {
+                            has_completed_event_chain_counter = {
+                                event_chain = "voidborn_monster_chain"
+                                counter = "voidborn_monster_amoeba_counter"
+                            }
+                        }
+                    }
+                    set_star_flag = "voidborn_monster_amoeba_starbase"
+                }
+            }
+            random_system_planet = {
+                limit = {
+                    is_star = no
+                    is_asteroid = no
+                }
+                set_planet_flag = "voidborn_monster_target_planet"
+                create_ambient_object = {
+                    type = "injured_queen_object"
+                }
+                last_created_ambient_object = {
+                    set_location = {
+                        target = prev
+                        distance = 50
+                        angle = random
+                    }
+                    set_ambient_object_flag = "voidborn_monster_ambient_object"
+                }
+                while = {
+                    count = 5
+                    create_ambient_object = {
+                        type = "dead_swarm_large_object"
+                    }
+                    last_created_ambient_object = {
+                        set_location = {
+                            target = prev
+                            distance = 10
+                            angle = random
+                        }
+                        set_ambient_object_flag = "voidborn_monster_ambient_object"
+                    }
+                }
+                while = {
+                    count = 7
+                    create_ambient_object = {
+                        type = "dead_swarm_large_object"
+                    }
+                    last_created_ambient_object = {
+                        set_location = {
+                            target = prev
+                            distance = 15
+                            angle = random
+                        }
+                        set_ambient_object_flag = "voidborn_monster_ambient_object"
+                    }
+                }
+                while = {
+                    count = 9
+                    create_ambient_object = {
+                        type = "dead_swarm_large_object"
+                    }
+                    last_created_ambient_object = {
+                        set_location = {
+                            target = prev
+                            distance = 20
+                            angle = random
+                        }
+                        set_ambient_object_flag = "voidborn_monster_ambient_object"
+                    }
+                }
+                random_list = {
+                    10 = {
+                        modifier = {
+                            factor = 0
+                            root = {
+                                has_special_project = "aoe_voidborn_monster_suppression_admiral_project"
+                            }
+                        }
+                        modifier = {
+                            factor = 2
+                            root = {
+                                NOR = {
+                                    any_owned_leader = {
+                                        leader_class = admiral
+                                    }
+                                    any_owned_fleet = {
+                                        is_ship_class = shipclass_military
+                                        fleet_size > 20
+                                    }
+                                }
+                            }
+                        }
+                        enable_special_project = {
+                            name = "aoe_voidborn_monster_suppression_admiral_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                    10 = {
+                        modifier = {
+                            factor = 0
+                            root = {
+                                has_special_project = "aoe_voidborn_monster_suppression_general_project"
+                            }
+                        }
+                        modifier = {
+                            factor = 2
+                            root = {
+                                NOR = {
+                                    any_owned_leader = {
+                                        leader_class = general
+                                    }
+                                    any_owned_fleet = {
+                                        is_ship_class = shipclass_transport
+                                        fleet_size > 10
+                                    }
+                                }
+                            }
+                        }
+                        enable_special_project = {
+                            name = "aoe_voidborn_monster_suppression_general_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                    10 = {
+                        modifier = {
+                            factor = 0
+                            root = {
+                                has_special_project = "aoe_voidborn_monster_suppression_scientist_project"
+                            }
+                        }
+                        modifier = {
+                            factor = 2
+                            root = {
+                                NOT = {
+                                    any_owned_leader = {
+                                        leader_class = scientist
+                                        has_level >= 2
+                                    }
+                                }
+                            }
+                        }
+                        enable_special_project = {
+                            name = "aoe_voidborn_monster_suppression_scientist_project"
+                            location = this
+                            owner = root
+                        }
+                    }
+                }
+                save_event_target_as = voidborn_monster_target_planet
+                root = {
+                    create_point_of_interest = {
+                        id = "voidborn_monster_coordinates"
+                        name = "voidborn_monster_coordinates_poi"
+                        desc = "voidborn_monster_coordinates_desc"
+                        event_chain = "voidborn_monster_chain"
+                        location = prev
+                    }
+                    create_message = {
+                        type = MESSAGE_VOIDBORN_MONSTER
+                        localization = MESSAGE_VOIDBORN_MONSTER_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = TARGET_PLANET scope = event_target:voidborn_monster_target_planet }
+                        variable = { type = name localization = TARGET_SYSTEM scope = event_target:voidborn_monster_target_planet.solar_system }
+                    }
+                }
+                planet_event = {
+                    id = aoe_voidborn_monster_actions.4
+                    days = 900
+                    random = 300
+                }
+            }
+        }
+    }
+}
+
+# Voidborn monsters starbase appearance
+# From: country
+planet_event = {
+    id = aoe_voidborn_monster_actions.4
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        has_planet_flag = "voidborn_monster_target_planet"
+    }
+
+    immediate = {
+        from = {
+            remove_point_of_interest = "voidborn_monster_coordinates"
+        }
+        remove_planet_flag = "voidborn_monster_target_planet"
+        solar_system = {
+            every_system_ambient_object = {
+                limit = {
+                    has_ambient_object_flag = "voidborn_monster_ambient_object"
+                }
+                destroy_ambient_object = this
+            }
+        }
+        solar_system = {
+            switch = {
+                trigger = has_star_flag
+                default = {
+                    random_list = {
+                        10 = {
+                            star = {
+                                create_crystal_starbase = yes
+                            }
+                            prev = {
+                                create_crystal_fleet = yes
+                            }
+                        }
+                        10 = {
+                            star = {
+                                create_drone_starbase = yes
+                            }
+                            prev = {
+                                create_drone_fleet = yes
+                            }
+                        }
+                        10 = {
+                            star = {
+                                create_amoeba_starbase = yes
+                            }
+                            prev = {
+                                create_amoeba_fleet = yes
+                            }
+                        }
+                    }
+                }
+                voidborn_monster_crystal_starbase = {
+                    star = {
+                        create_crystal_starbase = yes
+                    }
+                    prev = {
+                        create_crystal_fleet = yes
+                    }
+                }
+                voidborn_monster_drone_starbase = {
+                    star = {
+                        create_drone_starbase = yes
+                    }
+                    prev = {
+                        create_drone_fleet = yes
+                    }
+                }
+                voidborn_monster_amoeba_starbase = {
+                    star = {
+                        create_amoeba_starbase = yes
+                    }
+                    prev = {
+                        create_amoeba_fleet = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    exists = space_owner
+                }
+                space_owner = {
+                    country_event = {
+                        id = aoe_voidborn_monster_actions.21
+                    }
+                }
+            }
+        }
+
+        planet_event = {
+            id = aoe_voidborn_monster_actions.5
+            days = 300
+            random = 150
+        }
+    }
+}
+
+# Voidborn monsters fleet appearance
+planet_event = {
+    id = aoe_voidborn_monster_actions.5
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        solar_system = {
+            OR = {
+                has_star_flag = "voidborn_monster_crystal_starbase"
+                has_star_flag = "voidborn_monster_drone_starbase"
+                has_star_flag = "voidborn_monster_amoeba_starbase"
+            }
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_crystal_starbase"
+                }
+            }
+            set_variable = {
+                which = "fleet_power_index"
+                value = 0
+            }
+            solar_system = {
+                every_fleet_in_system = {
+                    limit = {
+                        is_crystal_owner = yes
+                        NOT = {
+                            is_crystal_starbase = yes
+                        }
+                    }
+                    count_fleet_power = {
+                        ARG1 = fleet_power_index
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "fleet_power_index"
+                        value < 10000
+                    }
+                }
+                create_crystal_fleet = yes
+            }
+            set_variable = {
+                which = "fleet_power_index"
+                value = 0
+            }
+        }
+        else_if = {
+            limit = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_drone_starbase"
+                }
+            }
+            set_variable = {
+                which = "fleet_power_index"
+                value = 0
+            }
+            solar_system = {
+                every_fleet_in_system = {
+                    limit = {
+                        is_drone_owner = yes
+                        NOT = {
+                            is_drone_starbase = yes
+                        }
+                    }
+                    count_fleet_power = {
+                        ARG1 = fleet_power_index
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "fleet_power_index"
+                        value < 10000
+                    }
+                }
+                create_drone_fleet = yes
+            }
+            set_variable = {
+                which = "fleet_power_index"
+                value = 0
+            }
+        }
+        else_if = {
+            limit = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_amoeba_starbase"
+                }
+            }
+            set_variable = {
+                which = "fleet_power_index"
+                value = 0
+            }
+            solar_system = {
+                every_fleet_in_system = {
+                    limit = {
+                        is_amoeba_owner = yes
+                        NOT = {
+                            is_amoeba_starbase = yes
+                        }
+                    }
+                    count_fleet_power = {
+                        ARG1 = fleet_power_index
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = "fleet_power_index"
+                        value < 10000
+                    }
+                }
+                create_amoeba_fleet = yes
+            }
+            set_variable = {
+                which = "fleet_power_index"
+                value = 0
+            }
+        }
+        else = {
+            break = yes
+        }
+        solar_system = {
+            if = {
+                limit = {
+                    exists = space_owner
+                }
+                space_owner = {
+                    country_event = {
+                        id = aoe_voidborn_monster_actions.21
+                    }
+                }
+            }
+        }
+
+        planet_event = {
+            id = aoe_voidborn_monster_actions.5
+            days = 900
+            random = 300
+        }
+    }
+}
+
+# Voidborn monsters starbase defeated
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+country_event = {
+    id = aoe_voidborn_monster_actions.6
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        fromfrom = {
+            OR = {
+                is_crystal_starbase = yes
+                is_drone_starbase = yes
+                is_amoeba_starbase = yes
+            }
+        }
+    }
+
+    immediate = {
+        fromfrom = {
+            solar_system = {
+                if = {
+                    limit = {
+                        has_star_flag = "voidborn_monster_crystal_starbase"
+                    }
+                    remove_star_flag = "voidborn_monster_crystal_starbase"
+                }
+                if = {
+                    limit = {
+                        has_star_flag = "voidborn_monster_drone_starbase"
+                    }
+                    remove_star_flag = "voidborn_monster_drone_starbase"
+                }
+                if = {
+                    limit = {
+                        has_star_flag = "voidborn_monster_amoeba_starbase"
+                    }
+                    remove_star_flag = "voidborn_monster_amoeba_starbase"
+                }
+            }
+        }
+    }
+}
+
+# Voidborn monsters fleet appearance notification
+# From: planet
+# FromFrom: country
+# Prev: country
+country_event = {
+    id = aoe_voidborn_monster_actions.21
+    title = aoe_voidborn_monster_actions.21.title
+    show_sound = event_space_amoeba
+    is_triggered_only = yes
+    location = from
+
+    picture = {
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_crystal_starbase"
+                }
+            }
+        }
+        picture = GFX_aoe_voidborn_monster_crystal_appearance
+    }
+    desc = {
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_crystal_starbase"
+                }
+            }
+        }
+        text = aoe_voidborn_monster_actions.21.desc_01
+    }
+
+    picture = {
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_drone_starbase"
+                }
+            }
+        }
+        picture = GFX_aoe_voidborn_monster_drone_appearance
+    }
+    desc = {
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_drone_starbase"
+                }
+            }
+        }
+        text = aoe_voidborn_monster_actions.21.desc_02
+    }
+
+    picture = {
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_amoeba_starbase"
+                }
+            }
+        }
+        picture = GFX_aoe_voidborn_monster_amoeba_appearance
+    }
+    desc = {
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_amoeba_starbase"
+                }
+            }
+        }
+        text = aoe_voidborn_monster_actions.21.desc_03
+    }
+
+    option = {
+        name = aoe_voidborn_monster_actions.21.a
+        custom_tooltip = aoe_voidborn_monster_actions.21.a.tooltip
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_crystal_starbase"
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_voidborn_monster_actions.21.b
+        custom_tooltip = aoe_voidborn_monster_actions.21.b.tooltip
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_drone_starbase"
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_voidborn_monster_actions.21.c
+        custom_tooltip = aoe_voidborn_monster_actions.21.c.tooltip
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_amoeba_starbase"
+                }
+            }
+        }
+    }
+}
+
+# Voidborn monsters special project completed
+# From: ship
+# FromFrom: planet
+# Prev: country
+country_event = {
+    id = aoe_voidborn_monster_actions.22
+    title = aoe_voidborn_monster_actions.22.title
+    picture = GFX_aoe_voidborn_monster_suppression_project_completed
+    show_sound = event_yellow_alert
+    is_triggered_only = yes
+    location = fromfrom
+
+    desc = {
+        trigger = {
+            fromfrom = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_crystal_starbase"
+                }
+            }
+        }
+        text = aoe_voidborn_monster_actions.22.desc_01
+    }
+
+    desc = {
+        trigger = {
+            fromfrom = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_drone_starbase"
+                }
+            }
+        }
+        text = aoe_voidborn_monster_actions.22.desc_02
+    }
+
+    desc = {
+        trigger = {
+            fromfrom = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_amoeba_starbase"
+                }
+            }
+        }
+        text = aoe_voidborn_monster_actions.22.desc_03
+    }
+
+    trigger = {
+        has_event_chain = "voidborn_monster_chain"
+    }
+
+    immediate = {
+        from = {
+            if = {
+                limit = {
+                    exists = leader
+                }
+                leader = {
+                    add_experience = 900
+                }
+            }
+        }
+    }
+
+    after = {
+        fromfrom = {
+            solar_system = {
+                if = {
+                    limit = {
+                        has_star_flag = "voidborn_monster_crystal_starbase"
+                    }
+                    
+                }
+                if = {
+                    limit = {
+                        has_star_flag = "voidborn_monster_drone_starbase"
+                    }
+                    
+                }
+                if = {
+                    limit = {
+                        has_star_flag = "voidborn_monster_amoeba_starbase"
+                    }
+                    remove_star_flag = "voidborn_monster_amoeba_starbase"
+                }
+            }
+        }
+        country_event = {
+            id = aoe_voidborn_monster_actions.2
+            days = 10
+            random = 8
+        }
+    }
+
+    option = {
+        name = aoe_voidborn_monster_actions.22.a
+        custom_tooltip = aoe_voidborn_monster_actions.22.a.tooltip
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_crystal_starbase"
+                }
+            }
+        }
+        add_event_chain_counter = {
+            event_chain = "voidborn_monster_chain"
+            counter = "voidborn_monster_crystal_counter"
+            amount = 1
+        }
+        hidden_effect = {
+            from = {
+                solar_system = {
+                    remove_star_flag = "voidborn_monster_crystal_starbase"
+                }
+            }
+            if = {
+                limit = {
+                    has_completed_event_chain_counter = {
+                        event_chain = "voidborn_monster_chain"
+                        counter = "voidborn_monster_crystal_counter"
+                    }
+                    NOT = {
+                        has_technology = "tech_voidborn_monster_crystal"
+                    }
+                }
+                give_technology = {
+                    tech = "tech_voidborn_monster_crystal"
+                    message = yes
+                }
+            }
+            else_if = {
+                limit = {
+                    NOR = {
+                        has_technology = "tech_voidborn_monster_crystal"
+                        has_tech_option = "tech_voidborn_monster_crystal"
+                    }
+                }
+                add_research_option = "tech_voidborn_monster_crystal"
+                add_tech_progress = {
+                    tech = "tech_voidborn_monster_crystal"
+                    progress = 0.05
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech_option = "tech_voidborn_monster_crystal"
+                }
+                add_tech_progress = {
+                    tech = "tech_voidborn_monster_crystal"
+                    progress = 0.08
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_voidborn_monster_actions.22.b
+        custom_tooltip = aoe_voidborn_monster_actions.22.b.tooltip
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_drone_starbase"
+                }
+            }
+        }
+        add_event_chain_counter = {
+            event_chain = "voidborn_monster_chain"
+            counter = "voidborn_monster_drone_counter"
+            amount = 1
+        }
+        hidden_effect = {
+            from = {
+                solar_system = {
+                    remove_star_flag = "voidborn_monster_drone_starbase"
+                }
+            }
+            if = {
+                limit = {
+                    has_completed_event_chain_counter = {
+                        event_chain = "voidborn_monster_chain"
+                        counter = "voidborn_monster_drone_counter"
+                    }
+                    NOT = {
+                        has_technology = "tech_voidborn_monster_drone"
+                    }
+                }
+                give_technology = {
+                    tech = "tech_voidborn_monster_drone"
+                    message = yes
+                }
+            }
+            else_if = {
+                limit = {
+                    NOR = {
+                        has_technology = "tech_voidborn_monster_drone"
+                        has_tech_option = "tech_voidborn_monster_drone"
+                    }
+                }
+                add_research_option = "tech_voidborn_monster_drone"
+                add_tech_progress = {
+                    tech = "tech_voidborn_monster_drone"
+                    progress = 0.05
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech_option = "tech_voidborn_monster_drone"
+                }
+                add_tech_progress = {
+                    tech = "tech_voidborn_monster_drone"
+                    progress = 0.08
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_voidborn_monster_actions.22.c
+        custom_tooltip = aoe_voidborn_monster_actions.22.c.tooltip
+        trigger = {
+            from = {
+                solar_system = {
+                    has_star_flag = "voidborn_monster_amoeba_starbase"
+                }
+            }
+        }
+        add_event_chain_counter = {
+            event_chain = "voidborn_monster_chain"
+            counter = "voidborn_monster_amoeba_counter"
+            amount = 1
+        }
+        hidden_effect = {
+            from = {
+                solar_system = {
+                    remove_star_flag = "voidborn_monster_amoeba_starbase"
+                }
+            }
+            if = {
+                limit = {
+                    has_completed_event_chain_counter = {
+                        event_chain = "voidborn_monster_chain"
+                        counter = "voidborn_monster_amoeba_counter"
+                    }
+                    NOT = {
+                        has_technology = "tech_voidborn_monster_amoeba"
+                    }
+                }
+                give_technology = {
+                    tech = "tech_voidborn_monster_amoeba"
+                    message = yes
+                }
+            }
+            else_if = {
+                limit = {
+                    NOR = {
+                        has_technology = "tech_voidborn_monster_amoeba"
+                        has_tech_option = "tech_voidborn_monster_amoeba"
+                    }
+                }
+                add_research_option = "tech_voidborn_monster_amoeba"
+                add_tech_progress = {
+                    tech = "tech_voidborn_monster_amoeba"
+                    progress = 0.05
+                }
+            }
+            else_if = {
+                limit = {
+                    has_tech_option = "tech_voidborn_monster_amoeba"
+                }
+                add_tech_progress = {
+                    tech = "tech_voidborn_monster_amoeba"
+                    progress = 0.08
+                }
+            }
+        }
+    }
+}

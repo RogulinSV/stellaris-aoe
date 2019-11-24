@@ -268,3 +268,13 @@
     tech_celestial_sculpting:0 "Преобразование §Tнеобитаемого§! мира"
     tech_celestial_sculpting_title:0 "Преобразование £planet£ §Tнеобитаемого§! мира"
     tech_celestial_sculpting_desc:0 "Преобразование £planet£ §Tнеобитаемого§! мира"
+
+    tech_voidborn_monster_crystal:0 "Управление §Sкристаллическими§! созданиями"
+    tech_voidborn_monster_crystal_title:0 "Управление §Sкристаллическими§! созданиями"
+    tech_voidborn_monster_crystal_desc:0 "Управление §Sкристаллическими§! созданиями"
+    tech_voidborn_monster_drone:0 "Управление §Lмеханическими§! созданиями"
+    tech_voidborn_monster_drone_title:0 "Управление §Lмеханическими§! созданиями"
+    tech_voidborn_monster_drone_desc:0 "Управление §Lмеханическими§! созданиями"
+    tech_voidborn_monster_amoeba:0 "Управление §Bорганическими§! созданиями"
+    tech_voidborn_monster_amoeba_title:0 "Управление §Bорганическими§! созданиями"
+    tech_voidborn_monster_amoeba_desc:0 "Управление §Bорганическими§! созданиями"

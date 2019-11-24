@@ -1,6 +1,7 @@
 ﻿l_russian:
     decision_planet_interstellar_research:0 "Межзвёздный поиск ресурсов"
     decision_planet_interstellar_research_desc:0 "Межзвёздный поиск полезных ресурсов"
+    decision_planet_interstellar_research_effects:0 "Межзвёздный поиск полезных ресурсов"
     decision_planet_interstellar_research_effects_short:0 "Межзвёздный поиск полезных ресурсов"
     decision_planet_intelligencer_training:0 "Подготовка тайных агентов"
     decision_planet_intelligencer_training_desc:0 "Подготовка тайных агентов разведки"
@@ -10,3 +11,7 @@
     decision_planet_intelligencer_disclosing_desc:0 "Разоблачение тайных агентов разведки"
     decision_planet_intelligencer_disclosing_effect:0 "Разоблачение тайных агентов разведки"
     decision_planet_intelligencer_disclosing_effects_short:0 "Разоблачение тайных агентов разведки"
+    decision_star_crystal_fleet_appearance:0 "Звёздные монстры"
+    decision_star_crystal_fleet_appearance_desc:0 "Звёздные монстры"
+    decision_star_crystal_fleet_appearance_effect:0 "Звёздные монстры"
+    decision_star_crystal_fleet_appearance_effect_short:0 "Звёздные монстры"

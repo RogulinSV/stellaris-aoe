@@ -23,3 +23,5 @@
     engos_deficit:0 "Дефицит газа энгоса"
     helium_deficit:0 "Дефицит газа гелиума"
     kryptonite_deficit:0 "Дефицит криптонитной руды"
+
+    amoeba_shield_boost:0 "Амёбная регенерация щитов"

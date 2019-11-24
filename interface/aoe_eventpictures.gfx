@@ -491,4 +491,58 @@ spriteTypes = {
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }
+    spriteType = {
+        name = "GFX_aoe_pirate_emergence"
+        texturefile = "gfx/event_pictures/pirate_emergence.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_voidborn_monster_appearance_chain"
+        texturefile = "gfx/event_pictures/voidborn_monster_appearance_chain.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_voidborn_monster_appearance"
+        texturefile = "gfx/event_pictures/voidborn_monster_appearance.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_voidborn_monster_suppression"
+        texturefile = "gfx/event_pictures/voidborn_monster_suppression.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_voidborn_monster_suppression_project"
+        texturefile = "gfx/event_pictures/voidborn_monster_suppression_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_voidborn_monster_suppression_project_completed"
+        texturefile = "gfx/event_pictures/voidborn_monster_suppression_project_completed.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_voidborn_monster_crystal_appearance"
+        texturefile = "gfx/event_pictures/voidborn_monster_crystal_appearance.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_voidborn_monster_drone_appearance"
+        texturefile = "gfx/event_pictures/voidborn_monster_drone_appearance.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_voidborn_monster_amoeba_appearance"
+        texturefile = "gfx/event_pictures/voidborn_monster_amoeba_appearance.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
 }

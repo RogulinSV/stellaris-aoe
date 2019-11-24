@@ -1,0 +1,15 @@
+voidborn_monster_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
+    picture = "GFX_aoe_voidborn_monster_appearance_chain"
+    counter = {
+        voidborn_monster_crystal_counter = {
+            max = 10
+        }
+        voidborn_monster_drone_counter = {
+            max = 10
+        }
+        voidborn_monster_amoeba_counter = {
+            max = 10
+        }
+    }
+}

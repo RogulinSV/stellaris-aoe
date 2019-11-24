@@ -2819,3 +2819,14 @@ message_type = {
     sound = "diplomatic_notification"
     ping = "ping_notification_yellow"
 }
+
+# Voidborn monster messages
+message_type = {
+    key = "MESSAGE_VOIDBORN_MONSTER"
+    icon = "GFX_message_voidborn_monster_detected"
+    icon_frame = 1
+
+    name = "MESSAGE_VOIDBORN_MONSTER_TITLE"
+    sound = "notification"
+    ping = "ping_notification_red"
+}

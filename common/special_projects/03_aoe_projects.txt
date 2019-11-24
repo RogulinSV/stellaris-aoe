@@ -1,0 +1,162 @@
+special_project = {
+    key = "aoe_voidborn_monster_suppression_admiral_project"
+    cost = 0
+    days_to_research = 100
+    timelimit = -1
+    picture = GFX_aoe_voidborn_monster_suppression_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_military = 20
+        leader = admiral
+    }
+
+    # Scope: country
+    # From: ship
+    # FromFrom: planet
+    abort_trigger = {
+        fromfrom = {
+            NOT = {
+                has_planet_flag = "voidborn_monster_target_planet"
+            }
+        }
+    }
+
+    # Scope: ship
+    # From: planet
+    # FromFrom: country
+    on_success = {
+        from = {
+            remove_planet_flag = "voidborn_monster_target_planet"
+            solar_system = {
+                every_system_ambient_object = {
+                    limit = {
+                        has_ambient_object_flag = "voidborn_monster_ambient_object"
+                    }
+                    destroy_ambient_object = this
+                }
+            }
+        }
+        fromfrom = {
+            remove_point_of_interest = "voidborn_monster_coordinates"
+            country_event = {
+                id = aoe_voidborn_monster_actions.22
+            }
+        }
+    }
+
+    # Scope: country
+    on_fail = {
+    }
+}
+
+special_project = {
+    key = "aoe_voidborn_monster_suppression_general_project"
+    cost = 0
+    days_to_research = 100
+    timelimit = -1
+    picture = GFX_aoe_voidborn_monster_suppression_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_transport = 10
+        leader = general
+    }
+
+    # Scope: country
+    # From: ship
+    # FromFrom: planet
+    abort_trigger = {
+        fromfrom = {
+            NOT = {
+                has_planet_flag = "voidborn_monster_target_planet"
+            }
+        }
+    }
+
+    # Scope: ship
+    # From: planet
+    # FromFrom: country
+    on_success = {
+        from = {
+            remove_planet_flag = "voidborn_monster_target_planet"
+            solar_system = {
+                every_system_ambient_object = {
+                    limit = {
+                        has_ambient_object_flag = "voidborn_monster_ambient_object"
+                    }
+                    destroy_ambient_object = this
+                }
+            }
+        }
+        fromfrom = {
+            remove_point_of_interest = "voidborn_monster_coordinates"
+            country_event = {
+                id = aoe_voidborn_monster_actions.22
+            }
+        }
+    }
+
+    # Scope: country
+    on_fail = {
+    }
+}
+
+special_project = {
+    key = "aoe_voidborn_monster_suppression_scientist_project"
+    cost = 0
+    days_to_research = 100
+    timelimit = -1
+    picture = GFX_aoe_voidborn_monster_suppression_project
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+        skill = 2
+    }
+
+    # Scope: country
+    # From: ship
+    # FromFrom: planet
+    abort_trigger = {
+        fromfrom = {
+            NOT = {
+                has_planet_flag = "voidborn_monster_target_planet"
+            }
+        }
+    }
+
+    # Scope: ship
+    # From: planet
+    # FromFrom: country
+    on_success = {
+        from = {
+            remove_planet_flag = "voidborn_monster_target_planet"
+            solar_system = {
+                every_system_ambient_object = {
+                    limit = {
+                        has_ambient_object_flag = "voidborn_monster_ambient_object"
+                    }
+                    destroy_ambient_object = this
+                }
+            }
+        }
+        fromfrom = {
+            remove_point_of_interest = "voidborn_monster_coordinates"
+            country_event = {
+                id = aoe_voidborn_monster_actions.22
+            }
+        }
+    }
+
+    # Scope: country
+    on_fail = {
+    }
+}

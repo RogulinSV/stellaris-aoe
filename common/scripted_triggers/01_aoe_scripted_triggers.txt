@@ -949,6 +949,50 @@ is_regular_country = {
     is_country_type = default
 }
 
+is_regular_empire = {
+    OR = {
+        is_country_type = default
+        is_lithoid_empire = yes
+        is_fallen_empire = yes
+        is_robot_empire = yes
+    }
+}
+
+is_pirate_empire = {
+    is_country_type = "rebellion_pirate"
+}
+
+# Scope: system
+is_desolated_system = {
+    NOT = {
+        exists = space_owner
+    }
+    NOR = {
+        has_star_flag = "pirates_spawned"
+        has_star_flag = "precursor_system"
+        has_star_flag = "enclave"
+        any_ship_in_system = {
+            is_ship_size = "constructor"
+            is_constructing = "starbase"
+        }
+        any_ship_in_system = {
+            fleet = {
+                fleet_power > 100
+            }
+        }
+        any_system_planet = {
+            is_colony = yes
+        }
+    }
+}
+
+# Scope: system
+is_bordering_system = {
+    any_neighbor_system = {
+        is_desolated_system = yes
+    }
+}
+
 # Scope: planet
 is_attacked_planet = {
     OR = {
@@ -1019,6 +1063,51 @@ is_malfunctioned_pop = {
 # Scope: pop
 is_marginalized_pop = {
     pop_has_trait = "trait_marginalized_pop"
+}
+
+# Scope: fleet
+is_crystal_owner = {
+    exists = owner
+    exists = event_target:crystal_country
+    owner = {
+        is_same_value = event_target:crystal_country
+    }
+}
+
+# Scope: fleet
+is_crystal_starbase = {
+    is_crystal_owner = yes
+    is_ship_size = "crystal_station_large"
+}
+
+# Scope: fleet
+is_drone_owner = {
+    exists = owner
+    exists = event_target:drone_country
+    owner = {
+        is_same_value = event_target:drone_country
+    }
+}
+
+# Scope: fleet
+is_drone_starbase = {
+    is_drone_owner = yes
+    is_ship_size = "homebase"
+}
+
+# Scope: fleet
+is_amoeba_owner = {
+    exists = owner
+    exists = event_target:amoeba_country
+    owner = {
+        is_same_value = event_target:amoeba_country
+    }
+}
+
+# Scope: fleet
+is_amoeba_starbase = {
+    is_amoeba_owner = yes
+    is_ship_size = "space_amoeba_centenarian"
 }
 
 # Scope: country

@@ -32,3 +32,10 @@
     aoe_barium_adaptation_project_DESC:0 "Научный проект по адаптации генома к климату £planet£ §Lбариевого§! мира"
     aoe_chlorum_adaptation_project:0 "§YХлорные§! миры: проект по адаптации генома"
     aoe_chlorum_adaptation_project_DESC:0 "Научный проект по адаптации генома к климату £planet£ §Yхлорного§! мира"
+
+    aoe_voidborn_monster_suppression_admiral_project:0 "Подавление звёздных монстров"
+    aoe_voidborn_monster_suppression_admiral_project_DESC:0 "Военный проект звёздного флота по подавлению скопления зарождающихся звёздных монстров"
+    aoe_voidborn_monster_suppression_general_project:0 "Подавление звёздных монстров"
+    aoe_voidborn_monster_suppression_general_project_DESC:0 "Военный проект звёздного десанта по подавлению скопления зарождающихся звёздных монстров"
+    aoe_voidborn_monster_suppression_scientist_project:0 "Подавление звёздных монстров"
+    aoe_voidborn_monster_suppression_scientist_project_DESC:0 "Научный проект по исследованию скопления зарождающихся звёздных монстров"

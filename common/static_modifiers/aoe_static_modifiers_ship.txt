@@ -1,0 +1,4 @@
+amoeba_shield_boost = {
+    ship_shield_mult = 4
+    ship_armor_regen_add_static = 2
+}

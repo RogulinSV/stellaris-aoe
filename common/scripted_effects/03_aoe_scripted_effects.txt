@@ -235,7 +235,7 @@ intelligence_gather_ship_data = {
 }
 
 # Scope: country
-# Arg1: shipclass_military shipclass_military_station shipclass_transport
+# Arg1: shipclass_military shipclass_military_station shipclass_transport shipclass_starbase
 intelligence_gather_shipclass_data = {
     set_variable = {
         which = espionage_data_ship_count_$ARG1$
@@ -277,7 +277,7 @@ intelligence_gather_fleet_data = {
 }
 
 # Scope: country
-# Arg1: outpost starport starhold starfortress citadel
+# Arg1: outpost starport starhold starfortress citadel stronghold headquarters
 intelligence_gather_starbase_data = {
     set_variable = {
         which = espionage_data_starbase_count_$ARG1$
@@ -355,7 +355,19 @@ intelligence_gather_leader_data = {
         value = 0
     }
 
-    every_pool_leader = {
+    # every_pool_leader = {
+    #     limit = {
+    #         leader_class = $ARG1$
+    #         has_level = $ARG2$
+    #     }
+    #     prev = {
+    #         change_variable = {
+    #             which = espionage_data_leader_count_$ARG1$_$ARG2$
+    #             value = 1
+    #         }
+    #     }
+    # }
+    every_owned_leader = {
         limit = {
             leader_class = $ARG1$
             has_level = $ARG2$
@@ -367,14 +379,23 @@ intelligence_gather_leader_data = {
             }
         }
     }
+}
+
+# Scope: country
+# Arg1: scientist admiral general
+intelligence_gather_any_leader_data = {
+    set_variable = {
+        which = espionage_data_leader_count_$ARG1$
+        value = 0
+    }
+
     every_owned_leader = {
         limit = {
             leader_class = $ARG1$
-            has_level = $ARG2$
         }
         prev = {
             change_variable = {
-                which = espionage_data_leader_count_$ARG1$_$ARG2$
+                which = espionage_data_leader_count_$ARG1$
                 value = 1
             }
         }
@@ -1807,6 +1828,130 @@ intelligence_gather_agreements_data = {
                     which = "espionage_data_agreements_count_opened_borders"
                     value = 1
                 }
+            }
+        }
+    }
+}
+
+# Scope: Country
+# Arg1: minerals energy ...
+# Arg2: 0..N
+withdraw_stockpile_resource = {
+    while = {
+        limit = {
+            resource_stockpile_compare = {
+                resource = $ARG1$
+                value > $ARG2$
+            }
+        }
+        if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 50000
+                }
+            }
+            add_resource = {
+                $ARG1$ = -50000
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 10000
+                }
+            }
+            add_resource = {
+                $ARG1$ = -10000
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 5000
+                }
+            }
+            add_resource = {
+                $ARG1$ = -5000
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 1000
+                }
+            }
+            add_resource = {
+                $ARG1$ = -1000
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 500
+                }
+            }
+            add_resource = {
+                $ARG1$ = -500
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 100
+                }
+            }
+            add_resource = {
+                $ARG1$ = -100
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 50
+                }
+            }
+            add_resource = {
+                $ARG1$ = -50
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 10
+                }
+            }
+            add_resource = {
+                $ARG1$ = -10
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 5
+                }
+            }
+            add_resource = {
+                $ARG1$ = -5
+            }
+        }
+        else_if = {
+            limit = {
+                resource_stockpile_compare = {
+                    resource = $ARG1$
+                    value >= 1
+                }
+            }
+            add_resource = {
+                $ARG1$ = -1
             }
         }
     }

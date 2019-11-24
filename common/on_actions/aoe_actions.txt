@@ -148,6 +148,24 @@ on_space_battle_won = {
         aoe_battle_actions.14
         # Won against Fallen Empire
         aoe_battle_actions.15
+        # Voidborn monsters appearance
+        aoe_voidborn_monster_actions.1
+    }
+}
+
+on_fleet_destroyed_victim = {
+    events = {
+        # Voidborn monsters starbase defeated
+        aoe_voidborn_monster_actions.6
+    }
+}
+
+on_fleet_destroyed_perp = {
+    events = {
+        # Pirate patrol fleet won the battle
+        aoe_pirate_actions.11
+        # Country`s fleet won the battle against pirates fleet
+        aoe_pirate_actions.12
     }
 }
 
@@ -155,5 +173,12 @@ on_ship_disabled = {
     events = {
         # Rebellion station disabled
         aoe_espionage_actions.41
+    }
+}
+
+on_entering_system = {
+    events = {
+        # Pirate system encountered
+        aoe_pirate_actions.15
     }
 }

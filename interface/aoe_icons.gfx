@@ -128,7 +128,7 @@ spriteTypes = {
         texturefile = "gfx/interface/icons/message/message_spy_gained_energy.dds"
     }
     spriteType = {
-        name = "GFX_message_spaceborn_monster"
-        texturefile = "gfx/interface/icons/message/message_spaceborn_monster_detected.dds"
+        name = "GFX_message_voidborn_monster_detected"
+        texturefile = "gfx/interface/icons/message/message_voidborn_monster_detected.dds"
     }
 }

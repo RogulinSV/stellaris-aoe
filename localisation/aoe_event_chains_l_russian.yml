@@ -68,3 +68,9 @@
     celestial_cold_worlds_surveyed:0 "Исследовано холодных £planet£ §Tнеобитаемых§! миров"
     celestial_frozen_worlds_surveyed:0 "Исследовано замёрзших £planet£ §Tнеобитаемых§! миров"
     celestial_gas_giant_worlds_surveyed:0 "Исследовано газовых £planet£ §Tнеобитаемых§! миров"
+
+    voidborn_monster_chain_title:0 "Обитатели межзвёздного войда"
+    voidborn_monster_chain_desc:0 "Военная программа исследования и подавления скоплений §Sкристаллических§! монстров £military_power_boss£, §Lмеханических§! монстров £military_power_boss£, §Bорганических§! монстров £military_power_boss£"
+    voidborn_monster_crystal_counter:0 "Исследовано §Sкристаллических§! монстров £military_power_boss£"
+    voidborn_monster_drone_counter:0 "Исследовано §Lмеханических§! монстров £military_power_boss£"
+    voidborn_monster_amoeba_counter:0 "Исследовано §Bорганических§! монстров £military_power_boss£"
