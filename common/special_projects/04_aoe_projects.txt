@@ -1,0 +1,412 @@
+special_project = {
+    key = "aoe_replicant_leader_appearance_admiral_project"
+    cost = 0
+    days_to_research = 30
+    timelimit = 300
+    picture = GFX_aoe_replicant_leader_appearance_project
+    icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_military = 1
+        leader = admiral
+    }
+
+    # Scope: country
+    # From: fleet
+    # FromFrom: ship
+    # Prev: country
+    abort_trigger = {
+        always = no
+    }
+
+    # Scope: ship
+    # From: broken ship
+    # Prev: ship
+    on_success = {
+        from = {
+            random_list = {
+                10 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            exists = event_target:replicant_leader
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:replicant_leader = {
+                            has_level = 1
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        event_target:replicant_leader = {
+                            has_level = 3
+                        }
+                    }
+                    modifier = {
+                        factor = 1.5
+                        event_target:replicant_leader = {
+                            has_level = 4
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:replicant_leader = {
+                            has_level >= 5
+                        }
+                    }
+                    event_target:replicant_leader = {
+                        if = {
+                            limit = {
+                                NOT = {
+                                    has_trait = "leader_trait_fanatical"
+                                }
+                            }
+                            add_trait = "leader_trait_fanatical"
+                        }
+                    }
+                    fleet = {
+                        set_event_locked = no
+                    }
+                    owner = {
+                        country_event = {
+                            id = aoe_pirate_actions.2
+                        }
+                    }
+                }
+                10 = {
+                    if = {
+                        limit = {
+                            exists = event_target:replicant_leader
+                        }
+                        event_target:replicant_leader = {
+                            exile_leader_as = "replicant_leader"
+                        }
+                    }
+                    owner = {
+                        country_event = {
+                            id = aoe_pirate_actions.3
+                            days = 600
+                            random = 300
+                        }
+                    }
+                    fleet = {
+                        set_event_locked = no
+                        destroy_fleet = this
+                    }
+                }
+            }
+        }
+    }
+
+    # Scope: country
+    # From: fleet
+    # FromFrom: ship
+    # Prev: country
+    on_fail = {
+        fromfrom = {
+            if = {
+                limit = {
+                    exists = event_target:replicant_leader
+                }
+                event_target:replicant_leader = {
+                    exile_leader_as = "replicant_leader"
+                }
+            }
+            owner = {
+                country_event = {
+                    id = aoe_pirate_actions.3
+                    days = 300
+                    random = 150
+                }
+            }
+            fleet = {
+                set_event_locked = no
+                destroy_fleet = this
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_replicant_leader_appearance_general_project"
+    cost = 0
+    days_to_research = 30
+    timelimit = 300
+    picture = GFX_aoe_replicant_leader_appearance_project
+    icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_transport = 1
+        leader = general
+    }
+
+    # Scope: country
+    # From: fleet
+    # FromFrom: ship
+    # Prev: country
+    abort_trigger = {
+        always = no
+    }
+
+    # Scope: ship
+    # From: broken ship
+    # Prev: ship
+    on_success = {
+        from = {
+            random_list = {
+                10 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            exists = event_target:replicant_leader
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        event_target:replicant_leader = {
+                            has_level = 1
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        event_target:replicant_leader = {
+                            has_level = 3
+                        }
+                    }
+                    modifier = {
+                        factor = 1.5
+                        event_target:replicant_leader = {
+                            has_level = 4
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        event_target:replicant_leader = {
+                            has_level >= 5
+                        }
+                    }
+                    event_target:replicant_leader = {
+                        if = {
+                            limit = {
+                                NOT = {
+                                    has_trait = "leader_trait_fanatical"
+                                }
+                            }
+                            add_trait = "leader_trait_fanatical"
+                        }
+                    }
+                    fleet = {
+                        set_event_locked = no
+                    }
+                    owner = {
+                        country_event = {
+                            id = aoe_pirate_actions.2
+                        }
+                    }
+                }
+                10 = {
+                    if = {
+                        limit = {
+                            exists = event_target:replicant_leader
+                        }
+                        event_target:replicant_leader = {
+                            exile_leader_as = "replicant_leader"
+                        }
+                    }
+                    owner = {
+                        country_event = {
+                            id = aoe_pirate_actions.3
+                            days = 600
+                            random = 300
+                        }
+                    }
+                    fleet = {
+                        set_event_locked = no
+                        destroy_fleet = this
+                    }
+                }
+            }
+        }
+    }
+
+    # Scope: country
+    # From: fleet
+    # FromFrom: ship
+    # Prev: country
+    on_fail = {
+        fromfrom = {
+            if = {
+                limit = {
+                    exists = event_target:replicant_leader
+                }
+                event_target:replicant_leader = {
+                    exile_leader_as = "replicant_leader"
+                }
+            }
+            owner = {
+                country_event = {
+                    id = aoe_pirate_actions.3
+                    days = 300
+                    random = 150
+                }
+            }
+            fleet = {
+                set_event_locked = no
+                destroy_fleet = this
+            }
+        }
+    }
+}
+
+special_project = {
+    key = "aoe_replicant_leader_appearance_scientist_project"
+    cost = 0
+    days_to_research = 30
+    timelimit = 300
+    picture = GFX_aoe_replicant_leader_appearance_project
+    icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    # Scope: country
+    # From: fleet
+    # FromFrom: ship
+    # Prev: country
+    abort_trigger = {
+        always = no
+    }
+
+    # Scope: ship
+    # From: broken ship
+    # Prev: ship
+    on_success = {
+        random_list = {
+            10 = {
+                modifier = {
+                    factor = 0.5
+                    exists = leader
+                    leader = {
+                        has_level = 1
+                    }
+                }
+                modifier = {
+                    factor = 1.25
+                    exists = leader
+                    leader = {
+                        has_level = 3
+                    }
+                }
+                modifier = {
+                    factor = 1.5
+                    exists = leader
+                    leader = {
+                        has_level = 4
+                    }
+                }
+                modifier = {
+                    factor = 2
+                    exists = leader
+                    leader = {
+                        has_level >= 5
+                    }
+                }
+                modifier = {
+                    factor = 0.8
+                    exists = event_target:replicant_leader
+                    event_target:replicant_leader = {
+                        has_level = 2
+                    }
+                }
+                modifier = {
+                    factor = 0.7
+                    exists = event_target:replicant_leader
+                    event_target:replicant_leader = {
+                        has_level = 3
+                    }
+                }
+                modifier = {
+                    factor = 0.6
+                    exists = event_target:replicant_leader
+                    event_target:replicant_leader = {
+                        has_level = 4
+                    }
+                }
+                modifier = {
+                    factor = 0.5
+                    exists = event_target:replicant_leader
+                    event_target:replicant_leader = {
+                        has_level >= 5
+                    }
+                }
+                fleet = {
+                    set_event_locked = no
+                }
+                owner = {
+                    country_event = {
+                        id = aoe_pirate_actions.2
+                    }
+                }
+            }
+            10 = {
+                if = {
+                    limit = {
+                        exists = event_target:replicant_leader
+                    }
+                    event_target:replicant_leader = {
+                        exile_leader_as = "replicant_leader"
+                    }
+                }
+                owner = {
+                    country_event = {
+                        id = aoe_pirate_actions.3
+                        days = 600
+                        random = 300
+                    }
+                }
+                fleet = {
+                    set_event_locked = no
+                    destroy_fleet = this
+                }
+            }
+        }
+    }
+
+    # Scope: country
+    # From: fleet
+    # FromFrom: ship
+    # Prev: country
+    on_fail = {
+        fromfrom = {
+            if = {
+                limit = {
+                    exists = event_target:replicant_leader
+                }
+                event_target:replicant_leader = {
+                    exile_leader_as = "replicant_leader"
+                }
+            }
+            owner = {
+                country_event = {
+                    id = aoe_pirate_actions.3
+                    days = 300
+                    random = 150
+                }
+            }
+            fleet = {
+                set_event_locked = no
+                destroy_fleet = this
+            }
+        }
+    }
+}

@@ -6699,7 +6699,7 @@ country_event = {
         every_country = {
             limit = {
                 OR = {
-                    is_country_type = "rebellion_pirate"
+                    is_country_type = "replicant"
                     is_country_type = "enclave"
                     is_regular_country = yes
                     is_fallen_empire = yes
@@ -8085,74 +8085,5 @@ country_event = {
             random = 300
         }
         log = ">>> aoe_espionage_actions.40: pirate fleet moved to the [event_target:espionage_origin_planet.GetName] planet"
-    }
-}
-
-# On ship disabled
-# This = Ship
-# From = Disabler Ship
-ship_event = {
-    id = aoe_espionage_actions.41
-    is_triggered_only = yes
-    hide_window = yes
-
-    trigger = {
-        exists = owner
-        owner = {
-            is_country_type = "rebellion_pirate"
-        }
-        fleet = {
-            has_fleet_flag = "espionage_pirate_starbase"
-        }
-    }
-
-    immediate = {
-        owner = {
-            country_event = {
-                id = aoe_espionage_actions.42
-                days = 1
-            }
-        }
-        fleet = {
-            solar_system = {
-                every_system_ambient_object = {
-                    limit = {
-                        has_ambient_object_flag = "rebellion_pirate_ambient_object"
-                    }
-                    destroy_ambient_object = this
-                }
-            }
-            destroy_fleet = this
-        }
-        if = {
-            limit = {
-                from = {
-                    exists = owner
-                }
-            }
-            from.owner = {
-                small_artifact_reward = yes
-            }
-        }
-        log = ">>> aoe_espionage_actions.41: pirates starbase was destroyed by [From.owner.GetName]"
-    }
-}
-
-country_event = {
-    id = aoe_espionage_actions.42
-    is_triggered_only = yes
-    hide_window = yes
-
-    trigger = {
-        is_country_type = "rebellion_pirate"
-        num_starbases = 0
-        count_owned_ships = {
-            count = 0
-        }
-    }
-
-    immediate = {
-        destroy_country = yes
-        log = ">>> aoe_espionage_actions.42: pirates country was destroyed"
     }
 }

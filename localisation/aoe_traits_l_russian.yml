@@ -227,3 +227,6 @@
     trait_marginalized_pop:0 "Социальная маргинализация"
     trait_marginalized_pop_desc:0 "Социальная маргинализация"
     TRAIT_MARGINALIZED_POP_EFFECT:0 "Социальная маргинализация"
+
+    leader_trait_fanatical:0 "Фанатик"
+    leader_trait_fanatical_desc:0 "Этот лидер отличаюется исступленной религиозностью, крайней нетерпимостью к другим традициям и верованиям"

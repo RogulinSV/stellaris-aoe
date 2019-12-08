@@ -1,0 +1,45 @@
+room_selector = {
+    default = "default_room"
+
+    game_setup = {
+        "replicant_starbase_room_1" = {
+            is_country_type = "replicant"
+        }
+        "replicant_starbase_room_2" = {
+            is_country_type = "replicant"
+        }
+        "replicant_starbase_room_3" = {
+            is_country_type = "replicant"
+        }
+        "replicant_starbase_room_4" = {
+            is_country_type = "replicant"
+        }
+    }
+
+    ruler = {
+        "replicant_starbase_room_1" = {
+            exists = owner
+            owner = {
+                is_country_type = "replicant"
+            }
+        }
+        "replicant_starbase_room_2" = {
+            exists = owner
+            owner = {
+                is_country_type = "replicant"
+            }
+        }
+        "replicant_starbase_room_3" = {
+            exists = owner
+            owner = {
+                is_country_type = "replicant"
+            }
+        }
+        "replicant_starbase_room_4" = {
+            exists = owner
+            owner = {
+                is_country_type = "replicant"
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-rebellion_pirate_fleet_patrol_effect = {
+replicant_fleet_patrol_effect = {
     fleet_event = {
         id = aoe_pirate_actions.20
         days = 30
@@ -6,7 +6,7 @@ rebellion_pirate_fleet_patrol_effect = {
     }
 }
 
-rebellion_pirate_fleet_repair_effect = {
+replicant_fleet_repair_effect = {
     if = {
         limit = {
             exists = owner
@@ -29,7 +29,7 @@ rebellion_pirate_fleet_repair_effect = {
     }
 }
 
-rebellion_pirate_fleet_destroy_effect = {
+replicant_fleet_destroy_effect = {
     fleet_event = {
         id = aoe_pirate_actions.22
         days = 50
@@ -37,7 +37,7 @@ rebellion_pirate_fleet_destroy_effect = {
     }
 }
 
-rebellion_pirate_fleet_dismiss_effect = {
+replicant_fleet_dismiss_effect = {
     if = {
         limit = {
             exists = leader
@@ -67,14 +67,6 @@ rebellion_pirate_fleet_dismiss_effect = {
     fleet_event = {
         id = aoe_pirate_actions.23
         days = 30
-    }
-}
-
-spaceborn_monster_fleet_swarm_effect = {
-    fleet_event = {
-        id = aoe_pirate_actions.24
-        days = 20
-        random = 5
     }
 }
 

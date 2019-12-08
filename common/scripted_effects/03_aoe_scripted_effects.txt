@@ -355,18 +355,6 @@ intelligence_gather_leader_data = {
         value = 0
     }
 
-    # every_pool_leader = {
-    #     limit = {
-    #         leader_class = $ARG1$
-    #         has_level = $ARG2$
-    #     }
-    #     prev = {
-    #         change_variable = {
-    #             which = espionage_data_leader_count_$ARG1$_$ARG2$
-    #             value = 1
-    #         }
-    #     }
-    # }
     every_owned_leader = {
         limit = {
             leader_class = $ARG1$

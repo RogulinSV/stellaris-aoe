@@ -1,10 +1,10 @@
-rebellion_pirate = {
+replicant = {
     minimalist_contacts_list_profile = yes
     attack_unarmed_orbital_stations = yes
     can_have_their_comms_shared = yes
     can_planets_be_attacked = yes
     can_own_empty_planets = yes
-    scaled_difficulty_bonuses = 2
+    scaled_difficulty_bonuses = 3
     share_communications = no
     share_survey_data = no
     custom_diplomacy = yes

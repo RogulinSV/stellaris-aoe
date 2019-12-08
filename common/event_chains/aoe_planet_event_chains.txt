@@ -217,13 +217,3 @@ celestial_worlds_chain = {
         }
     }
 }
-
-# %RESOURCE%_worlds_chain = {
-#     icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
-#     picture = "GFX_aoe_%RESOURCE%_worlds"
-#     counter = {
-#         %RESOURCE%_worlds_surveyed = {
-#             max = 10
-#         }
-#     }
-# }

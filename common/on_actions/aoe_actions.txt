@@ -162,23 +162,23 @@ on_fleet_destroyed_victim = {
 
 on_fleet_destroyed_perp = {
     events = {
-        # Pirate patrol fleet won the battle
-        aoe_pirate_actions.11
-        # Country`s fleet won the battle against pirates fleet
-        aoe_pirate_actions.12
+        # Replicant combat fleet won the battle
+        aoe_pirate_actions.15
+        # The fleet of random country won the battle against replicants fleet
+        aoe_pirate_actions.16
     }
 }
 
 on_ship_disabled = {
     events = {
-        # Rebellion station disabled
-        aoe_espionage_actions.41
+        # Replicant station disabled
+        aoe_pirate_actions.4
     }
 }
 
 on_entering_system = {
     events = {
-        # Pirate system encountered
-        aoe_pirate_actions.15
+        # Random country encountered with a replicant country
+        aoe_pirate_actions.17
     }
 }
