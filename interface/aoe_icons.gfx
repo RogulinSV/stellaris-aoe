@@ -131,4 +131,12 @@ spriteTypes = {
         name = "GFX_message_voidborn_monster_detected"
         texturefile = "gfx/interface/icons/message/message_voidborn_monster_detected.dds"
     }
+    spriteType = {
+        name = "GFX_message_replicant_pop"
+        texturefile = "gfx/interface/icons/message/message_replicant_pop.dds"
+    }
+    spriteType = {
+        name = "GFX_message_replicant_spy"
+        texturefile = "gfx/interface/icons/message/message_replicant_spy.dds"
+    }
 }

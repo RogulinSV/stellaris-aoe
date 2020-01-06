@@ -169,10 +169,19 @@ on_fleet_destroyed_perp = {
     }
 }
 
+on_ship_destroyed_victim = {
+    events = {
+        # Replicant last ship of fleet destroyed
+        aoe_pirate_actions.18
+    }
+}
+
 on_ship_disabled = {
     events = {
         # Replicant station disabled
         aoe_pirate_actions.4
+        # Replicant escape ship disabled
+        aoe_pirate_actions.19
     }
 }
 

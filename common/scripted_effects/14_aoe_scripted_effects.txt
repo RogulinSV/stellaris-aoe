@@ -70,6 +70,323 @@ replicant_fleet_dismiss_effect = {
     }
 }
 
+replicant_fleet_research_effect = {
+    solar_system = {
+        every_system_ambient_object = {
+            limit = {
+                has_ambient_object_flag = "replicant_ambient_object"
+            }
+            destroy_ambient_object = this
+        }
+    }
+    if = {
+        limit = {
+            exists = owner
+            exists = orbit
+        }
+        create_ambient_object = {
+            type = horror_spawn_object
+            use_3d_location = yes
+            duration = 10
+        }
+        last_created_ambient_object = {
+            set_ambient_object_flag = "replicant_ambient_object"
+            set_location = {
+                target = prev.orbit
+                distance = 20
+                angle = random
+                direction = in_system
+            }
+        }
+        create_ambient_object = {
+            type = voidspawn_spawn_animation_object
+            entity_face_object = orbit.solar_system.star
+        }
+        last_created_ambient_object = {
+            set_ambient_object_flag = "replicant_ambient_object"
+            set_location = {
+                target = prev.orbit
+                distance = 2.2
+                direction = in_system
+            }
+        }
+    }
+    fleet_event = {
+        id = aoe_pirate_actions.24
+        days = 300
+        random = 100
+    }
+}
+
+replicant_digsite_random_events = {
+    random_list = {
+        100 = {
+            fleet_event = {
+                id = aoe_pirate_actions.57
+            }
+        }
+    }
+}
+
+create_pirate_science_fleet = {
+    if = {
+        limit = {
+            exists = event_target:replicant_country
+        }
+        event_target:replicant_country = {
+            set_variable = {
+                which = replicant_force
+                value = $FORCE$
+            }
+            create_leader = {
+                class = admiral
+                species = owner_species
+                name = random
+                skill = 1
+                immortal = yes
+                traits = {
+                    trait = "leader_trait_fanatical"
+                    trait = random_trait
+                }
+            }
+            last_created_leader = {
+                random_list = {
+                    5 = {
+                        add_skill = 4
+                    }
+                    4 = {
+                        add_skill = 3
+                    }
+                    3 = {
+                        add_skill = 2
+                    }
+                    2 = {
+                        add_skill = 1
+                    }
+                    1 = {
+                    }
+                }
+            }
+            create_fleet = {
+                effect = {
+                    set_owner = prev
+                    random_list = {
+                        1 = {
+                            # 1
+                            modifier = {
+                                factor = 0
+                                prev = {
+                                    check_variable = {
+                                        which = replicant_force
+                                        value > 1
+                                    }
+                                }
+                            }
+                            set_name = "NAME_Pirate_Science_Fleet_1"
+                            set_fleet_flag = "replicant_fleet_power_1"
+                            create_pirate_ships_1 = yes
+                        }
+                        1 = {
+                            # 1 2
+                            modifier = {
+                                factor = 0
+                                prev = {
+                                    check_variable = {
+                                        which = replicant_force
+                                        value > 2
+                                    }
+                                }
+                            }
+                            set_name = "NAME_Pirate_Science_Fleet_2"
+                            set_fleet_flag = "replicant_fleet_power_2"
+                            create_pirate_ships_2 = yes
+                        }
+                        1 = {
+                            # 1 2 3
+                            modifier = {
+                                factor = 0
+                                prev = {
+                                    check_variable = {
+                                        which = replicant_force
+                                        value > 3
+                                    }
+                                }
+                            }
+                            set_name = "NAME_Pirate_Science_Fleet_3"
+                            set_fleet_flag = "replicant_fleet_power_3"
+                            create_pirate_ships_3 = yes
+                        }
+                        1 = {
+                            # 2 3 4
+                            modifier = {
+                                factor = 0
+                                prev = {
+                                    OR = {
+                                        check_variable = {
+                                            which = replicant_force
+                                            value > 4
+                                        }
+                                        check_variable = {
+                                            which = replicant_force
+                                            value < 2
+                                        }
+                                    }
+                                }
+                            }
+                            set_name = "NAME_Pirate_Science_Fleet_4"
+                            set_fleet_flag = "replicant_fleet_power_4"
+                            create_pirate_ships_4 = yes
+                        }
+                        1 = {
+                            # 3 4 5
+                            modifier = {
+                                factor = 0
+                                prev = {
+                                    OR = {
+                                        check_variable = {
+                                            which = replicant_force
+                                            value > 5
+                                        }
+                                        check_variable = {
+                                            which = replicant_force
+                                            value < 3
+                                        }
+                                    }
+                                }
+                            }
+                            set_name = "NAME_Pirate_Science_Fleet_5"
+                            set_fleet_flag = "replicant_fleet_power_5"
+                            create_pirate_ships_5 = yes
+                        }
+                        1 = {
+                            # 4 5 6
+                            modifier = {
+                                factor = 0
+                                prev = {
+                                    OR = {
+                                        check_variable = {
+                                            which = replicant_force
+                                            value > 6
+                                        }
+                                        check_variable = {
+                                            which = replicant_force
+                                            value < 4
+                                        }
+                                    }
+                                }
+                            }
+                            set_name = "NAME_Pirate_Science_Fleet_6"
+                            set_fleet_flag = "replicant_fleet_power_6"
+                            create_pirate_ships_6 = yes
+                        }
+                        1 = {
+                            # 5 6 7
+                            modifier = {
+                                factor = 0
+                                prev = {
+                                    OR = {
+                                        check_variable = {
+                                            which = replicant_force
+                                            value > 7
+                                        }
+                                        check_variable = {
+                                            which = replicant_force
+                                            value < 5
+                                        }
+                                    }
+                                }
+                            }
+                            set_name = "NAME_Pirate_Science_Fleet_7"
+                            set_fleet_flag = "replicant_fleet_power_7"
+                            create_pirate_ships_7 = yes
+                        }
+                        1 = {
+                            # 6 7 8
+                            modifier = {
+                                factor = 0
+                                prev = {
+                                    check_variable = {
+                                        which = replicant_force
+                                        value < 6
+                                    }
+                                }
+                            }
+                            set_name = "NAME_Pirate_Science_Fleet_8"
+                            set_fleet_flag = "replicant_fleet_power_8"
+                            create_pirate_ships_8 = yes
+                        }
+                        1 = {
+                            # 7 8
+                            modifier = {
+                                factor = 0
+                                prev = {
+                                    check_variable = {
+                                        which = replicant_force
+                                        value < 7
+                                    }
+                                }
+                            }
+                            set_name = "NAME_Pirate_Science_Fleet_9"
+                            set_fleet_flag = "replicant_fleet_power_9"
+                            create_pirate_ships_9 = yes
+                        }
+                        1 = {
+                            # 8
+                            modifier = {
+                                factor = 0
+                                prev = {
+                                    check_variable = {
+                                        which = replicant_force
+                                        value < 8
+                                    }
+                                }
+                            }
+                            set_name = "NAME_Pirate_Science_Fleet_10"
+                            set_fleet_flag = "replicant_fleet_power_10"
+                            create_pirate_ships_10 = yes
+                        }
+                    }
+                    assign_leader = last_created_leader
+                    set_fleet_stance = passive
+                    set_aggro_range_measure_from = self
+                    set_aggro_range = 100
+                    set_fleet_flag = "replicant_fleet_role_researching"
+                }
+                settings = {
+                    uses_naval_capacity = no
+                }
+            }
+            set_variable = {
+                which = replicant_force
+                value = 0
+            }
+            random_owned_starbase = {
+                fleet.solar_system.star = {
+                    last_created_fleet = {
+                        set_location = {
+                            target = prev
+                            distance = 10
+                            angle = random
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    exists = event_target:replicant_digsite
+                }
+                last_created_fleet = {
+                    auto_move_to_planet = {
+                        target = event_target:replicant_digsite
+                        clear_auto_move_on_arrival = no
+                        arrival_effect = replicant_fleet_research_effect
+                    }
+                }
+            }
+        }
+    }
+}
+
 create_pirate_ships_11 = {
     create_ship_design = {
         design = "NAME_Pirate_Galleon"

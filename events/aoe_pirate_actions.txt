@@ -48,10 +48,11 @@ ship_event = {
                     who = owner
                     distance >= 5
                 }
-            }
-            solar_system = {
-                NOT = {
-                    exists = space_owner
+                exists = solar_system
+                solar_system = {
+                    NOT = {
+                        exists = space_owner
+                    }
                 }
             }
         }
@@ -63,10 +64,11 @@ ship_event = {
                     who = owner
                     distance >= 10
                 }
-            }
-            solar_system = {
-                NOT = {
-                    exists = space_owner
+                exists = solar_system
+                solar_system = {
+                    NOT = {
+                        exists = space_owner
+                    }
                 }
             }
         }
@@ -78,10 +80,11 @@ ship_event = {
                     who = owner
                     distance >= 20
                 }
-            }
-            solar_system = {
-                NOT = {
-                    exists = space_owner
+                exists = solar_system
+                solar_system = {
+                    NOT = {
+                        exists = space_owner
+                    }
                 }
             }
         }
@@ -93,10 +96,11 @@ ship_event = {
                     who = owner
                     distance >= 40
                 }
-            }
-            solar_system = {
-                NOT = {
-                    exists = space_owner
+                exists = solar_system
+                solar_system = {
+                    NOT = {
+                        exists = space_owner
+                    }
                 }
             }
         }
@@ -108,10 +112,11 @@ ship_event = {
                     who = owner
                     distance >= 80
                 }
-            }
-            solar_system = {
-                NOT = {
-                    exists = space_owner
+                exists = solar_system
+                solar_system = {
+                    NOT = {
+                        exists = space_owner
+                    }
                 }
             }
         }
@@ -123,10 +128,11 @@ ship_event = {
                     who = owner
                     distance >= 150
                 }
-            }
-            solar_system = {
-                NOT = {
-                    exists = space_owner
+                exists = solar_system
+                solar_system = {
+                    NOT = {
+                        exists = space_owner
+                    }
                 }
             }
         }
@@ -134,10 +140,11 @@ ship_event = {
             factor = 0.75
             fleet = {
                 num_ships = 2
-            }
-            solar_system = {
-                NOT = {
-                    exists = space_owner
+                exists = solar_system
+                solar_system = {
+                    NOT = {
+                        exists = space_owner
+                    }
                 }
             }
         }
@@ -145,10 +152,11 @@ ship_event = {
             factor = 0.5
             fleet = {
                 num_ships = 1
-            }
-            solar_system = {
-                NOT = {
-                    exists = space_owner
+                exists = solar_system
+                solar_system = {
+                    NOT = {
+                        exists = space_owner
+                    }
                 }
             }
         }
@@ -189,7 +197,7 @@ ship_event = {
     }
 
     immediate = {
-        reduce_hp_percent = 50
+        reduce_hp_percent = 90
         fleet = {
             set_event_locked = yes
         }
@@ -201,8 +209,7 @@ ship_event = {
         }
         leader = {
             save_event_target_as = "replicant_leader"
-            # exile_leader_as = "replicant_leader"
-            # set_leader = replicant_leader
+            exile_leader_as = "replicant_leader"
         }
     }
 
@@ -261,17 +268,9 @@ ship_event = {
     }
 
     option = {
-        name = aoe_pirate_actions.1.z
-        custom_tooltip = aoe_pirate_actions.1.z.tooltip
+        name = aoe_pirate_actions.1.d
+        custom_tooltip = aoe_pirate_actions.1.d.tooltip
         hidden_effect = {
-            if = {
-                limit = {
-                    exists = event_target:replicant_leader
-                }
-                event_target:replicant_leader = {
-                    exile_leader_as = "replicant_leader"
-                }
-            }
             owner = {
                 country_event = {
                     id = aoe_pirate_actions.3
@@ -288,13 +287,15 @@ ship_event = {
 }
 
 # Replicant leader disclosure
+# From: ship
+# FromFrom: disabled ship
 country_event = {
     id = aoe_pirate_actions.2
     title = aoe_pirate_actions.2.title
     picture = GFX_aoe_replicant_leader_disclosure
     show_sound = event_bad_omen
     is_triggered_only = yes
-    location = from
+    location = fromfrom
 
     desc = {
         trigger = {
@@ -332,9 +333,11 @@ country_event = {
         custom_tooltip = aoe_pirate_actions.2.a.tooltip
         trigger = {
             event_target:replicant_leader = {
-                OR = {
-                    is_organic = yes
-                    is_lithoid = yes
+                species = {
+                    OR = {
+                        is_archetype = BIOLOGICAL
+                        is_archetype = LITHOID
+                    }
                 }
             }
             any_owned_planet = {
@@ -352,12 +355,10 @@ country_event = {
             minerals = -500
         }
         hidden_effect = {
-            event_target:replicant_leader = {
-                if = {
-                    limit = {
-                        has_trait = "leader_trait_fanatical"
-                    }
-                    remove_trait = "leader_trait_fanatical"
+            fromfrom.fleet = {
+                set_leader = replicant_leader
+                leader = {
+                    unassign_leader = this
                 }
             }
         }
@@ -368,7 +369,12 @@ country_event = {
         custom_tooltip = aoe_pirate_actions.2.b.tooltip
         trigger = {
             event_target:replicant_leader = {
-                is_robot = yes
+                species = {
+                    OR = {
+                        is_archetype = ROBOT
+                        is_archetype = MACHINE
+                    }
+                }
             }
             any_owned_planet = {
                 has_building = "building_maintenance_depot"
@@ -382,12 +388,10 @@ country_event = {
             energy = -500
         }
         hidden_effect = {
-            event_target:replicant_leader = {
-                if = {
-                    limit = {
-                        has_trait = "leader_trait_fanatical"
-                    }
-                    remove_trait = "leader_trait_fanatical"
+            fromfrom.fleet = {
+                set_leader = replicant_leader
+                leader = {
+                    unassign_leader = this
                 }
             }
         }
@@ -400,24 +404,17 @@ country_event = {
             random_list = {
                 5 = {
                     event_target:replicant_leader = {
-                        if = {
-                            limit = {
-                                has_trait = "leader_trait_fanatical"
-                            }
-                            remove_trait = "leader_trait_fanatical"
-                        }
-                    }
-                }
-                5 = {
-                    modifier = {
-                        factor = 2
-                        event_target:replicant_leader = {
-                            has_trait = "leader_trait_fanatical"
-                        }
-                    }
-                    event_target:replicant_leader = {
                         kill_leader = {
                             show_notification = yes
+                        }
+                    }
+                    random = {
+                        chance = 50
+                        from = {
+                            reduce_hp_percent = 90
+                        }
+                        fromfrom = {
+                            destroy_ship = this
                         }
                     }
                 }
@@ -431,24 +428,13 @@ country_event = {
                     event_target:replicant_leader = {
                         add_trait = "leader_trait_fanatical"
                     }
+                    fromfrom.fleet = {
+                        set_leader = replicant_leader
+                        leader = {
+                            unassign_leader = this
+                        }
+                    }
                 }
-            }
-        }
-    }
-
-    option = {
-        name = aoe_pirate_actions.2.d
-        custom_tooltip = aoe_pirate_actions.2.d.tooltip
-        trigger = {
-            event_target:replicant_leader = {
-                NOT = {
-                    has_trait = "leader_trait_fanatical"
-                }
-            }
-        }
-        hidden_effect = {
-            event_target:replicant_leader = {
-                add_trait = "leader_trait_fanatical"
             }
         }
     }
@@ -551,6 +537,7 @@ country_event = {
                             }
                         }
                         effect = {
+                            save_event_target_as = "replicant_country"
                             set_country_flag = replicant_country@root
                             if = {
                                 limit = {
@@ -917,6 +904,56 @@ country_event = {
                         }
                     }
                 }
+                # Creating dig site
+                random_system = {
+                    limit = {
+                        distance = {
+                            source = prev
+                            min_distance >= 10
+                            max_distance <= 50
+                        }
+                        NOR = {
+                            is_occupied_system = yes
+                            any_neighbor_system = {
+                                exists = starbase
+                                starbase = {
+                                    exists = owner
+                                    owner = {
+                                        is_country_type = "replicant"
+                                    }
+                                }
+                            }
+                        }
+                        any_system_planet = {
+                            planet_size >= 10
+                            has_anomaly = no
+                            is_colony = no
+                            is_asteroid = no
+                            is_star = no
+                            NOT = {
+                                exists = archaeological_site
+                            }
+                        }
+                    }
+                    random_system_planet = {
+                        limit = {
+                            planet_size >= 10
+                            has_anomaly = no
+                            is_colony = no
+                            is_asteroid = no
+                            is_star = no
+                            NOT = {
+                                exists = archaeological_site
+                            }
+                        }
+                        save_event_target_as = "replicant_digsite"
+                        planet_event = {
+                            id = aoe_pirate_actions.40
+                            days = 150
+                            random = 90
+                        }
+                    }
+                }
             }
         }
         # Updating hostility
@@ -962,14 +999,51 @@ country_event = {
                 establish_communications_no_message = prev
             }
         }
+        set_relation_flag = {
+            who = event_target:replicant_country
+            flag = progenitor
+        }
+        # Beginning event chain
+        begin_event_chain = {
+            event_chain = "replicant_chain"
+            target = root
+        }
+        set_country_flag = "replicant_progenitor"
     }
 
     option = {
         name = "aoe_pirate_actions.3.a"
         custom_tooltip = "aoe_pirate_actions.3.a.tooltip"
-        capital_scope = {
-            planet_crime_add = 25
-            planet_stability_add = -5
+        trigger = {
+            has_resource = {
+                type = unity
+                amount > 200
+            }
+        }
+        add_resource = {
+            unity = -200
+        }
+    }
+
+    option = {
+        name = "aoe_pirate_actions.3.b"
+        custom_tooltip = "aoe_pirate_actions.3.b.tooltip"
+        modify_species = {
+            species = this
+            add_trait = "trait_fanatical"
+        }
+        hidden_effect = {
+            every_owned_pop = {
+                limit = {
+                    NOT = {
+                        pop_has_trait = "trait_fanatical"
+                    }
+                }
+                modify_species = {
+                    species = this
+                    add_trait = "trait_fanatical"
+                }
+            }
         }
     }
 }
@@ -1012,8 +1086,60 @@ ship_event = {
                                 has_fleet_flag = "replicant_starbase"
                             }
                         }
-                        count < 2
+                        count = 1
                     }
+                }
+            }
+            random_country = {
+                limit = {
+                    has_relation_flag = {
+                        who = root.owner
+                        flag = progenitor
+                    }
+                }
+                remove_relation_flag = {
+                    who = root.owner
+                    flag = progenitor
+                }
+                remove_country_flag = "replicant_progenitor"
+                if = {
+                    limit = {
+                        has_trait = "trait_fanatical"
+                    }
+                    modify_species = {
+                        species = this
+                        remove_trait = "trait_fanatical"
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        pop_has_trait = "trait_fanatical"
+                    }
+                    modify_species = {
+                        species = this
+                        remove_trait = "trait_fanatical"
+                    }
+                }
+                if = {
+                    limit = {
+                        has_point_of_interest = {
+                            poi = "replicant_coordinates"
+                        }
+                        root = {
+                            is_point_of_interest = {
+                                id = "replicant_coordinates"
+                                owner = prev
+                                event_chain = "replicant_chain"
+                            }
+                        }
+                    }
+                    remove_point_of_interest = "replicant_coordinates"
+                }
+                if = {
+                    limit = {
+                        has_event_chain = "replicant_chain"
+                    }
+                    end_event_chain = "replicant_chain"
                 }
             }
             owner = {
@@ -1032,6 +1158,43 @@ ship_event = {
             }
         }
         else = {
+            random_country = {
+                limit = {
+                    has_relation_flag = {
+                        who = root.owner
+                        flag = progenitor
+                    }
+                }
+                if = {
+                    limit = {
+                        has_point_of_interest = {
+                            poi = "replicant_coordinates"
+                        }
+                        root = {
+                            is_point_of_interest = {
+                                id = "replicant_coordinates"
+                                owner = prev
+                                event_chain = "replicant_chain"
+                            }
+                        }
+                    }
+                    remove_point_of_interest = "replicant_coordinates"
+                    root.owner = {
+                        random_owned_starbase = {
+                            save_event_target_as = "replicant_coordinates"
+                        }
+                        prev = {
+                            create_point_of_interest = {
+                                id = "replicant_coordinates"
+                                name = "replicant_coordinates_poi"
+                                desc = "replicant_coordinates_desc"
+                                event_chain = "replicant_chain"
+                                location = event_target:replicant_coordinates
+                            }
+                        }
+                    }
+                }
+            }
             fleet = {
                 destroy_fleet = this
             }
@@ -1052,7 +1215,7 @@ ship_event = {
     }
 }
 
-# Replicant country disappearance celebration
+# Replicant country disappearance
 country_event = {
     id = aoe_pirate_actions.5
     title = aoe_pirate_actions.5.title
@@ -1060,9 +1223,966 @@ country_event = {
     picture = GFX_aoe_replicant_country_disappearance
     show_sound = event_celebration
     is_triggered_only = yes
+    location = fromfrom
 
     immediate = {
         great_artifact_reward = yes
+    }
+
+    option = {
+        name = "aoe_pirate_actions.5.a"
+        custom_tooltip = "aoe_pirate_actions.5.a.tooltip"
+    }
+}
+
+# Replicant pop appearance
+planet_event = {
+    id = aoe_pirate_actions.6
+    title = aoe_pirate_actions.6.title
+    desc = aoe_pirate_actions.6.desc
+    picture = GFX_aoe_replicant_pop_appearance
+    show_sound = event_public_unrest
+    location = root
+    # force_open = yes
+
+    mean_time_to_happen = {
+        days = 1200
+
+        modifier = {
+            factor = 0.8
+            planet_stability < @stabilitylevel2
+        }
+        modifier = {
+            factor = 0.8
+            planet_stability < @stabilitylevel1
+        }
+        modifier = {
+            factor = 0.75
+            is_recent_criminal_planet = yes
+        }
+        modifier = {
+            factor = 0.5
+            is_recent_unrest_planet = yes
+        }
+    }
+
+    pre_triggers = {
+        has_owner = yes
+        has_ground_combat = no
+        is_occupied_flag = no
+    }
+
+    trigger = {
+        is_colony = yes
+        num_pops > 0
+        any_country = {
+            is_country_type = "replicant"
+            has_country_flag = replicant_country@root.owner
+            NOT = {
+                has_country_flag = "replicant_leader_general_exhausted"
+            }
+        }
+        NOR = {
+            has_planet_flag = "replicant_pop_cooldown"
+            has_modifier = "planet_replicant_pressure"
+            has_modifier = "planet_replicant_exposure"
+        }
+    }
+
+    immediate = {
+        random_list = {
+            1 = {
+                modifier = {
+                    factor = 0
+                    count_pops = {
+                        limit = {
+                            NOT = {
+                                has_pop_flag = "replicant_pop"
+                            }
+                        }
+                        count < 1
+                    }
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 20
+                }
+                set_variable = {
+                    which = "replicant_pop_count"
+                    value = 1
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    count_pops = {
+                        limit = {
+                            NOT = {
+                                has_pop_flag = "replicant_pop"
+                            }
+                        }
+                        count < 2
+                    }
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 20
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 40
+                }
+                set_variable = {
+                    which = "replicant_pop_count"
+                    value = 2
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    count_pops = {
+                        limit = {
+                            NOT = {
+                                has_pop_flag = "replicant_pop"
+                            }
+                        }
+                        count < 3
+                    }
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 20
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 40
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 60
+                }
+                set_variable = {
+                    which = "replicant_pop_count"
+                    value = 3
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    count_pops = {
+                        limit = {
+                            NOT = {
+                                has_pop_flag = "replicant_pop"
+                            }
+                        }
+                        count < 4
+                    }
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 20
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 40
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 60
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 80
+                }
+                set_variable = {
+                    which = "replicant_pop_count"
+                    value = 4
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    count_pops = {
+                        limit = {
+                            NOT = {
+                                has_pop_flag = "replicant_pop"
+                            }
+                        }
+                        count < 5
+                    }
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 20
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 40
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 60
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 80
+                }
+                modifier = {
+                    add = 1
+                    num_pops >= 100
+                }
+                set_variable = {
+                    which = "replicant_pop_count"
+                    value = 5
+                }
+            }
+        }
+        create_pop = {
+            species = owner_main_species
+        }
+        last_created_pop = {
+            set_pop_flag = "replicant_leader"
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = "replicant_pop_count"
+                    value > 0
+                }
+            }
+            subtract_variable = {
+                which = "replicant_pop_count"
+                value = 1
+            }
+            random_owned_pop = {
+                limit = {
+                    NOT = {
+                        has_pop_flag = "replicant_pop"
+                    }
+                }
+                set_pop_flag = "replicant_pop"
+                unemploy_pop = yes
+                clear_pop_category = yes
+            }
+        }
+        add_modifier = {
+            modifier = "planet_replicant_pressure"
+            days = -1
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.6.a
+        custom_tooltip = aoe_pirate_actions.6.a.tooltip
+        trigger = {
+            owner = {
+                has_resource = {
+                    type = influence
+                    amount > 5
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                influence = -5
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    count_pops = {
+                        limit = {
+                            has_pop_flag = "replicant_pop"
+                        }
+                        count = 2
+                    }
+                }
+                planet_event = {
+                    id = aoe_pirate_actions.7
+                    days = 700
+                    random = 200
+                }
+            }
+            else_if = {
+                limit = {
+                    count_pops = {
+                        limit = {
+                            has_pop_flag = "replicant_pop"
+                        }
+                        count = 3
+                    }
+                }
+                planet_event = {
+                    id = aoe_pirate_actions.7
+                    days = 500
+                    random = 150
+                }
+            }
+            else_if = {
+                limit = {
+                    count_pops = {
+                        limit = {
+                            has_pop_flag = "replicant_pop"
+                        }
+                        count = 4
+                    }
+                }
+                planet_event = {
+                    id = aoe_pirate_actions.7
+                    days = 300
+                    random = 100
+                }
+            }
+            else_if = {
+                limit = {
+                    count_pops = {
+                        limit = {
+                            has_pop_flag = "replicant_pop"
+                        }
+                        count >= 5
+                    }
+                }
+                planet_event = {
+                    id = aoe_pirate_actions.7
+                    days = 100
+                    random = 50
+                }
+            }
+            else = {
+                planet_event = {
+                    id = aoe_pirate_actions.7
+                    days = 900
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.6.b
+        custom_tooltip = aoe_pirate_actions.6.b.tooltip
+        hidden_effect = {
+            planet_event = {
+                id = aoe_pirate_actions.7
+                days = 300
+                random = 290
+            }
+        }
+    }
+}
+
+# Replicant pop disappearance
+planet_event = {
+    id = aoe_pirate_actions.7
+    title = aoe_pirate_actions.7.title
+    desc = aoe_pirate_actions.7.desc
+    picture = GFX_aoe_replicant_pop_disappearance
+    show_sound = event_ground_battle
+    is_triggered_only = yes
+    location = root
+
+    trigger = {
+        has_modifier = "planet_replicant_pressure"
+    }
+
+    immediate = {
+        remove_modifier = "planet_replicant_pressure"
+
+        random_list = {
+            1 = {
+                set_variable = {
+                    which = replicant_pop_leader_level
+                    value = 1
+                }
+            }
+            2 = {
+                set_variable = {
+                    which = replicant_pop_leader_level
+                    value = 2
+                }
+            }
+            4 = {
+                set_variable = {
+                    which = replicant_pop_leader_level
+                    value = 3
+                }
+            }
+            2 = {
+                set_variable = {
+                    which = replicant_pop_leader_level
+                    value = 4
+                }
+            }
+            1 = {
+                set_variable = {
+                    which = replicant_pop_leader_level
+                    value = 5
+                }
+            }
+        }
+        random_owned_pop = {
+            limit = {
+                has_pop_flag = "replicant_leader"
+            }
+            remove_pop_flag = "replicant_leader"
+
+            while = {
+                limit = {
+                    prev = {
+                        check_variable = {
+                            which = replicant_pop_leader_level
+                            value > 0
+                        }
+                    }
+                }
+                prev = {
+                    subtract_variable = {
+                        which = replicant_pop_leader_level
+                        value = 1
+                    }
+                }
+                promote_intelligencer = yes
+            }
+            save_event_target_as = "espionage_origin_spy"
+            prev = {
+                save_event_target_as = "espionage_target_planet"
+                owner = {
+                    save_event_target_as = "espionage_target_country"
+                }
+            }
+            random_country = {
+                limit = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@root.owner
+                }
+                save_event_target_as = "espionage_origin_country"
+                try_commit_sabotage = yes
+            }
+            kill_pop = yes
+            root.owner = {
+                create_message = {
+                    type = MESSAGE_REPLICANT_SPY
+                    localization = MESSAGE_REPLICANT_SPY_ESCAPED_LOCALISATION
+                    days = 30
+                    target = this
+                    variable = { type = name localization = ORIGIN_PLANET scope = root }
+                    variable = { type = name localization = ORIGIN_SYSTEM scope = root.solar_system }
+                }
+            }
+        }
+
+        every_owned_pop = {
+            limit = {
+                has_pop_flag = "replicant_pop"
+            }
+            remove_pop_flag = "replicant_pop"
+
+            if = {
+                limit = {
+                    OR = {
+                        is_organic = yes
+                        is_lithoid = yes
+                    }
+                }
+                if = {
+                    limit = {
+                        is_deprivated_pop = no
+                    }
+                    pop_provoke_deprivation = yes
+                    root.owner = {
+                        create_message = {
+                            type = MESSAGE_REPLICANT_POP
+                            localization = MESSAGE_REPLICANT_POP_DEPRIVATED_LOCALISATION
+                            days = 30
+                            target = this
+                            variable = { type = name localization = ORIGIN_PLANET scope = root }
+                            variable = { type = name localization = ORIGIN_SYSTEM scope = root.solar_system }
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        is_frustrated_pop = no
+                    }
+                    pop_provoke_frustration = yes
+                    root.owner = {
+                        create_message = {
+                            type = MESSAGE_REPLICANT_POP
+                            localization = MESSAGE_REPLICANT_POP_FRUSTRATED_LOCALISATION
+                            days = 30
+                            target = this
+                            variable = { type = name localization = ORIGIN_PLANET scope = root }
+                            variable = { type = name localization = ORIGIN_SYSTEM scope = root.solar_system }
+                        }
+                    }
+                }
+                else = {
+                    kill_pop = yes
+                    root.owner = {
+                        create_message = {
+                            type = MESSAGE_REPLICANT_POP
+                            localization = MESSAGE_REPLICANT_POP_DISAPPEARED_LOCALISATION
+                            days = 30
+                            target = this
+                            variable = { type = name localization = ORIGIN_PLANET scope = root }
+                            variable = { type = name localization = ORIGIN_SYSTEM scope = root.solar_system }
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    is_robot = yes
+                }
+                if = {
+                    limit = {
+                        is_malfunctioned_pop = no
+                    }
+                    pop_provoke_malfunction = yes
+                    root.owner = {
+                        create_message = {
+                            type = MESSAGE_REPLICANT_POP
+                            localization = MESSAGE_REPLICANT_POP_MULFUNCTIONED_LOCALISATION
+                            days = 30
+                            target = this
+                            variable = { type = name localization = ORIGIN_PLANET scope = root }
+                            variable = { type = name localization = ORIGIN_SYSTEM scope = root.solar_system }
+                        }
+                    }
+                }
+                else = {
+                    kill_pop = yes
+                    root.owner = {
+                        create_message = {
+                            type = MESSAGE_REPLICANT_POP
+                            localization = MESSAGE_REPLICANT_POP_DISAPPEARED_LOCALISATION
+                            days = 30
+                            target = this
+                            variable = { type = name localization = ORIGIN_PLANET scope = root }
+                            variable = { type = name localization = ORIGIN_SYSTEM scope = root.solar_system }
+                        }
+                    }
+                }
+            }
+            else = {
+                kill_pop = yes
+                root.owner = {
+                    create_message = {
+                        type = MESSAGE_REPLICANT_POP
+                        localization = MESSAGE_REPLICANT_POP_DISAPPEARED_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = ORIGIN_PLANET scope = root }
+                        variable = { type = name localization = ORIGIN_SYSTEM scope = root.solar_system }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.7.a
+        custom_tooltip = aoe_pirate_actions.7.a.tooltip
+    }
+
+    option = {
+        name = aoe_pirate_actions.7.b
+        custom_tooltip = aoe_pirate_actions.7.b.tooltip
+        trigger = {
+            any_owned_pop = {
+                OR = {
+                    is_deprivated_pop = yes
+                    is_frustrated_pop = yes
+                }
+            }
+            OR = {
+                has_building = "building_clinic"
+                has_building = "building_hospital"
+            }
+            owner = {
+                has_resource = {
+                    type = minerals
+                    amount > 300
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                minerals = -300
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                2 = {
+                    set_variable = {
+                        which = "replicant_pop_count"
+                        value = 1
+                    }
+                }
+                4 = {
+                    modifier = {
+                        factor = 0
+                        count_pops = {
+                            limit = {
+                                OR = {
+                                    is_deprivated_pop = yes
+                                    is_frustrated_pop = yes
+                                }
+                            }
+                            count < 2
+                        }
+                    }
+                    set_variable = {
+                        which = "replicant_pop_count"
+                        value = 2
+                    }
+                }
+                6 = {
+                    modifier = {
+                        factor = 0
+                        count_pops = {
+                            limit = {
+                                OR = {
+                                    is_deprivated_pop = yes
+                                    is_frustrated_pop = yes
+                                }
+                            }
+                            count < 3
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        NOT = {
+                            has_building = "building_hospital"
+                        }
+                    }
+                    set_variable = {
+                        which = "replicant_pop_count"
+                        value = 3
+                    }
+                }
+                4 = {
+                    modifier = {
+                        factor = 0
+                        count_pops = {
+                            limit = {
+                                OR = {
+                                    is_deprivated_pop = yes
+                                    is_frustrated_pop = yes
+                                }
+                            }
+                            count < 4
+                        }
+                    }
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_building = "building_hospital"
+                        }
+                    }
+                    set_variable = {
+                        which = "replicant_pop_count"
+                        value = 4
+                    }
+                }
+                2 = {
+                    modifier = {
+                        factor = 0
+                        count_pops = {
+                            limit = {
+                                OR = {
+                                    is_deprivated_pop = yes
+                                    is_frustrated_pop = yes
+                                }
+                            }
+                            count < 5
+                        }
+                    }
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_building = "building_hospital"
+                        }
+                    }
+                    set_variable = {
+                        which = "replicant_pop_count"
+                        value = 5
+                    }
+                }
+            }
+            while = {
+                limit = {
+                    check_variable = {
+                        which = "replicant_pop_count"
+                        value > 0
+                    }
+                }
+                subtract_variable = {
+                    which = "replicant_pop_count"
+                    value = 1
+                }
+                random_owned_pop = {
+                    limit = {
+                        OR = {
+                            is_deprivated_pop = yes
+                            is_frustrated_pop = yes
+                        }
+                    }
+                    wipe_pop_deviations = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.7.c
+        custom_tooltip = aoe_pirate_actions.7.c.tooltip
+        trigger = {
+            any_owned_pop = {
+                is_malfunctioned_pop = yes
+            }
+            has_building = "building_maintenance_depot"
+            owner = {
+                has_resource = {
+                    type = energy
+                    amount > 300
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                energy = -300
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                2 = {
+                    set_variable = {
+                        which = "replicant_pop_count"
+                        value = 1
+                    }
+                }
+                4 = {
+                    modifier = {
+                        factor = 0
+                        count_pops = {
+                            limit = {
+                                is_malfunctioned_pop = yes
+                            }
+                            count < 2
+                        }
+                    }
+                    set_variable = {
+                        which = "replicant_pop_count"
+                        value = 2
+                    }
+                }
+                6 = {
+                    modifier = {
+                        factor = 0
+                        count_pops = {
+                            limit = {
+                                is_malfunctioned_pop = yes
+                            }
+                            count < 3
+                        }
+                    }
+                    set_variable = {
+                        which = "replicant_pop_count"
+                        value = 3
+                    }
+                }
+                4 = {
+                    modifier = {
+                        factor = 0
+                        count_pops = {
+                            limit = {
+                                is_malfunctioned_pop = yes
+                            }
+                            count < 4
+                        }
+                    }
+                    set_variable = {
+                        which = "replicant_pop_count"
+                        value = 4
+                    }
+                }
+                2 = {
+                    modifier = {
+                        factor = 0
+                        count_pops = {
+                            limit = {
+                                is_malfunctioned_pop = yes
+                            }
+                            count < 5
+                        }
+                    }
+                    set_variable = {
+                        which = "replicant_pop_count"
+                        value = 5
+                    }
+                }
+            }
+            while = {
+                limit = {
+                    check_variable = {
+                        which = "replicant_pop_count"
+                        value > 0
+                    }
+                }
+                subtract_variable = {
+                    which = "replicant_pop_count"
+                    value = 1
+                }
+                random_owned_pop = {
+                    limit = {
+                        is_malfunctioned_pop = yes
+                    }
+                    wipe_pop_deviations = yes
+                }
+            }
+        }
+    }
+}
+
+# Replicant pop disclosure
+planet_event = {
+    id = aoe_pirate_actions.8
+    title = aoe_pirate_actions.8.title
+    desc = aoe_pirate_actions.8.desc
+    picture = GFX_aoe_replicant_pop_disclosure
+    show_sound = event_mystic_reveal
+    is_triggered_only = yes
+    location = root
+
+    trigger = {
+        exists = owner
+        has_modifier = "planet_replicant_pressure"
+        has_modifier = "planet_replicant_exposure"
+    }
+
+    immediate = {
+        every_owned_pop = {
+            limit = {
+                has_pop_flag = "replicant_pop"
+            }
+            remove_pop_flag = "replicant_pop"
+        }
+        remove_modifier = "planet_replicant_pressure"
+    }
+
+    option = {
+        name = aoe_pirate_actions.8.a
+        custom_tooltip = aoe_pirate_actions.8.a.tooltip
+        owner = {
+            add_resource = {
+                unity = 100
+            }
+        }
+        hidden_effect = {
+            random_owned_pop = {
+                limit = {
+                    has_pop_flag = "replicant_leader"
+                }
+                remove_pop_flag = "replicant_leader"
+                kill_pop = yes
+                root.owner = {
+                    create_message = {
+                        type = MESSAGE_REPLICANT_SPY
+                        localization = MESSAGE_REPLICANT_SPY_ESCAPED_LOCALISATION
+                        days = 30
+                        target = this
+                        variable = { type = name localization = ORIGIN_PLANET scope = root }
+                        variable = { type = name localization = ORIGIN_SYSTEM scope = root.solar_system }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.8.b
+        custom_tooltip = aoe_pirate_actions.8.b.tooltip
+        trigger = {
+            any_owned_pop = {
+                has_pop_flag = "replicant_leader"
+            }
+            owner = {
+                has_event_chain = "replicant_chain"
+                NOR = {
+                    has_special_project = "aoe_replicant_leader_rescue_general_project"
+                    has_completed_event_chain_counter = {
+                        event_chain = "replicant_chain"
+                        counter = "replicant_leader_general_saved_counter"
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            enable_special_project = {
+                name = "aoe_replicant_leader_rescue_general_project"
+                location = this
+                owner = root.owner
+            }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.8.c
+        custom_tooltip = aoe_pirate_actions.8.c.tooltip
+        trigger = {
+            any_owned_pop = {
+                has_pop_flag = "replicant_leader"
+            }
+            owner = {
+                has_event_chain = "replicant_chain"
+                has_special_project = "aoe_replicant_leader_rescue_general_project"
+            }
+        }
+        hidden_effect = {
+            owner = {
+                abort_special_project = "aoe_replicant_leader_rescue_general_project"
+            }
+            enable_special_project = {
+                name = "aoe_replicant_leader_rescue_general_project"
+                location = this
+                owner = root.owner
+            }
+        }
+    }
+}
+
+# Contacts with replicants established
+# From: Replicant Country
+# This: Country
+country_event = {
+    id = aoe_pirate_actions.9
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            is_country_type = "replicant"
+            has_country_flag = replicant_country@root
+            any_owned_starbase = {
+                always = yes
+            }
+        }
+        has_event_chain = "replicant_chain"
+    }
+
+    immediate = {
+        from = {
+            random_owned_starbase = {
+                save_event_target_as = "replicant_coordinates"
+            }
+        }
+        create_point_of_interest = {
+            id = "replicant_coordinates"
+            name = "replicant_coordinates_poi"
+            desc = "replicant_coordinates_desc"
+            event_chain = "replicant_chain"
+            location = event_target:replicant_coordinates
+        }
     }
 }
 
@@ -1666,6 +2786,9 @@ country_event = {
 
     trigger = {
         is_country_type = "replicant"
+        NOT = {
+            has_country_flag = "replicant_leader_admiral_exhausted"
+        }
         any_owned_starbase = {
             fleet.solar_system = {
                 closest_system = {
@@ -1679,6 +2802,9 @@ country_event = {
                             use_bypasses = no
                             min_jumps = 1
                             max_jumps = 5
+                        }
+                        NOT = {
+                            has_star_flag = replicant_target_system@root
                         }
                     }
                 }
@@ -1701,7 +2827,11 @@ country_event = {
                             min_jumps = 1
                             max_jumps = 5
                         }
+                        NOT = {
+                            has_star_flag = replicant_target_system@root
+                        }
                     }
+                    log = ">>> aoe_pirate_actions.11: system [This.GetName] was selected"
                     save_event_target_as = replicant_target_system
                     set_timed_star_flag = {
                         flag = replicant_target_system@root
@@ -1714,6 +2844,7 @@ country_event = {
                         save_event_target_as = replicant_system
                     }
                     space_owner = {
+                        log = ">>> aoe_pirate_actions.11: country [This.GetName] was selected"
                         save_event_target_as = replicant_target_country
                         set_timed_country_flag = {
                             flag = replicant_target_country@root
@@ -1742,6 +2873,13 @@ country_event = {
                                         }
                                     }
                                 }
+                                modifier = {
+                                    factor = 0
+                                    has_country_resource = {
+                                        type = food
+                                        amount < 1
+                                    }
+                                }
                                 set_country_flag = "replicant_demand_food_resources"
                                 intelligence_gather_resource_data = {
                                     ARG1 = food
@@ -1751,7 +2889,7 @@ country_event = {
                                 modifier = {
                                     factor = 0
                                     has_country_resource = {
-                                        type = food
+                                        type = minerals
                                         amount < 1
                                     }
                                 }
@@ -2110,7 +3248,7 @@ country_event = {
 
     picture_event_data = {
         portrait = event_target:replicant_country
-        room = replicant_starbase_room_4
+        room = replicant_starbase_1_room
     }
 
     desc = {
@@ -4395,6 +5533,179 @@ ship_event = {
     }
 }
 
+# Replicant last ship of fleet destroyed
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+country_event = {
+    id = aoe_pirate_actions.18
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        is_country_type = "replicant"
+        fromfrom = {
+            exists = leader
+            fleet = {
+                num_ships = 0
+            }
+        }
+    }
+
+    immediate = {
+        random_list = {
+            65 = {}
+            35 = {
+                modifier = {
+                    factor = 0
+                    NOT = {
+                        any_owned_starbase = {
+                            always = yes
+                        }
+                    }
+                }
+                modifier = {
+                    factor = 1.1
+                    fromfrom.leader = {
+                        has_level = 2
+                    }
+                }
+                modifier = {
+                    factor = 1.2
+                    fromfrom.leader = {
+                        has_level = 3
+                    }
+                }
+                modifier = {
+                    factor = 1.3
+                    fromfrom.leader = {
+                        has_level = 4
+                    }
+                }
+                modifier = {
+                    factor = 1.4
+                    fromfrom.leader = {
+                        has_level = 5
+                    }
+                }
+                modifier = {
+                    factor = 1.5
+                    fromfrom.leader = {
+                        has_level > 5
+                    }
+                }
+                fromfrom = {
+                    leader = {
+                        exile_leader_as = replicant_leader_escaped
+                    }
+                }
+                random_owned_starbase = {
+                    fleet.solar_system = {
+                        star = {
+                            save_event_target_as = replicant_fleet_target
+                        }
+                    }
+                }
+                create_fleet = {
+                    name = "NAME_Pirate_Escape_Fleet"
+                    effect = {
+                        set_owner = prev
+                        create_ship_design = {
+                            design = "NAME_Dagger"
+                        }
+                        create_ship = {
+                            name = "NAME_Pirate_Escape_Ship"
+                            design = last_created_design
+                            effect = {
+                                set_disable_at_health = 0.05
+                                set_ship_flag = "replicant_ship_escaped"
+                            }
+                        }
+                        set_location = {
+                            target = fromfrom
+                            distance = 75
+                            angle = random
+                        }
+                        set_fleet_stance = passive
+                        set_aggro_range_measure_from = self
+                        set_aggro_range = 1
+                        set_leader = replicant_leader_escaped
+                        add_modifier = {
+                            modifier = "escape_speed_boost"
+                            days = 10
+                        }
+                        auto_move_to_planet = {
+                            target = event_target:replicant_fleet_target
+                            arrival_effect = replicant_fleet_dismiss_effect
+                            clear_auto_move_on_arrival = no
+                        }
+                    }
+                    settings = {
+                        is_boss = yes
+                        spawn_debris = yes
+                        uses_naval_capacity = no
+                    }
+                }
+                log = ">>> aoe_pirate_actions.18: escape fleet created at [FromFrom.solar_system.GetName] system and moving to the [event_target:replicant_fleet_target.GetName] system"
+            }
+        }
+    }
+}
+
+# Replicant escape ship with admiral disabled
+# This = Ship
+# From = Disabler ship
+ship_event = {
+    id = aoe_pirate_actions.19
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        has_ship_flag = "replicant_ship_escaped"
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                from = {
+                    exists = owner
+                }
+                exists = owner
+                owner = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@from.owner
+                }
+            }
+            from = {
+                owner = {
+                    country_event = {
+                        id = aoe_pirate_actions.30
+                        days = 2
+                    }
+                }
+            }
+        }
+        else = {
+            set_disabled = no
+            fleet = {
+                if = {
+                    limit = {
+                        exists = leader
+                    }
+                    leader = {
+                        kill_leader = {
+                            show_notification = no
+                        }
+                    }
+                }
+                set_event_locked = no
+                destroy_fleet = this
+            }
+        }
+    }
+}
+
 # Replicant defensive fleet actions
 fleet_event = {
     id = aoe_pirate_actions.20
@@ -4911,6 +6222,7 @@ fleet_event = {
     }
 
     immediate = {
+        log = ">>> aoe_pirate_actions.22: fleet moving"
         # We are in the target system and in the system exists any mining station
         if = {
             limit = {
@@ -5212,5 +6524,1030 @@ fleet_event = {
 
     immediate = {
         delete_fleet = this
+    }
+}
+
+# Replicant research fleet actions
+fleet_event = {
+    id = aoe_pirate_actions.24
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = this
+        exists = owner
+        has_fleet_flag = "replicant_fleet_role_researching"
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                exists = orbit
+            }
+            solar_system = {
+                random_system_planet = {
+                    limit = {
+                        is_star = no
+                        NOT = {
+                            is_same_value = root.orbit
+                        }
+                    }
+                    save_event_target_as = replicant_fleet_target
+                }
+            }
+            auto_move_to_planet = {
+                target = event_target:replicant_fleet_target
+                clear_auto_move_on_arrival = no
+                arrival_effect = replicant_fleet_research_effect
+            }
+        }
+        else = {
+            solar_system = {
+                random_system_planet = {
+                    limit = {
+                        is_star = no
+                    }
+                    save_event_target_as = replicant_fleet_target
+                }
+            }
+            auto_move_to_planet = {
+                target = event_target:replicant_fleet_target
+                clear_auto_move_on_arrival = no
+                arrival_effect = replicant_fleet_research_effect
+            }
+        }
+    }
+}
+
+# Replicant admiral rescue project
+# From: Disabled ship
+country_event = {
+    id = aoe_pirate_actions.30
+    title = aoe_pirate_actions.30.title
+    show_sound = event_radio_chatter
+    is_triggered_only = yes
+    diplomatic = yes
+
+    desc = aoe_pirate_actions.30.desc_01
+    desc = aoe_pirate_actions.30.desc_02
+    desc = aoe_pirate_actions.30.desc_03
+
+    picture_event_data = {
+        portrait = from.owner
+        room = replicant_starbase_2_room
+    }
+
+    option = {
+        name = aoe_pirate_actions.30.a
+        custom_tooltip = aoe_pirate_actions.30.a.tooltip
+        trigger = {
+            has_event_chain = "replicant_chain"
+            NOR = {
+                has_special_project = "aoe_replicant_leader_rescue_admiral_project"
+                has_completed_event_chain_counter = {
+                    event_chain = "replicant_chain"
+                    counter = "replicant_leader_admiral_saved_counter"
+                }
+            }
+        }
+        hidden_effect = {
+            from = {
+                enable_special_project = {
+                    name = "aoe_replicant_leader_rescue_admiral_project"
+                    location = this
+                    owner = root
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.30.b
+        custom_tooltip = aoe_pirate_actions.30.b.tooltip
+        trigger = {
+            has_event_chain = "replicant_chain"
+            has_special_project = "aoe_replicant_leader_rescue_admiral_project"
+        }
+        hidden_effect = {
+            abort_special_project = "aoe_replicant_leader_rescue_admiral_project"
+            from = {
+                enable_special_project = {
+                    name = "aoe_replicant_leader_rescue_admiral_project"
+                    location = this
+                    owner = root
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.30.c
+        custom_tooltip = aoe_pirate_actions.30.c.tooltip
+        hidden_effect = {
+            from = {
+                set_disabled = no
+                fleet = {
+                    if = {
+                        limit = {
+                            exists = leader
+                        }
+                        leader = {
+                            kill_leader = {
+                                show_notification = no
+                            }
+                        }
+                    }
+                    set_event_locked = no
+                    destroy_fleet = this
+                }
+            }
+        }
+    }
+}
+
+# Replicant admiral saved
+# FromFrom: Disabled ship
+country_event = {
+    id = aoe_pirate_actions.31
+    title = aoe_pirate_actions.31.title
+    desc = aoe_pirate_actions.31.desc
+    show_sound = event_mystic_reveal_light
+    is_triggered_only = yes
+    diplomatic = yes
+
+    picture_event_data = {
+        portrait = fromfrom.owner
+        room = replicant_starbase_3_room
+    }
+
+    option = {
+        name = aoe_pirate_actions.31.a
+        custom_tooltip = aoe_pirate_actions.31.a.tooltip
+        trigger = {
+            has_event_chain = "replicant_chain"
+            NOT = {
+                has_completed_event_chain_counter = {
+                    event_chain = "replicant_chain"
+                    counter = "replicant_leader_admiral_saved_counter"
+                }
+            }
+            fromfrom = {
+                exists = leader
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                65 = {
+                    capital_scope = {
+                        create_pop = {
+                            species = fromfrom.leader.species
+                        }
+                        if = {
+                            limit = {
+                                root.owner_species = {
+                                    has_citizenship_type = {
+                                        country = root
+                                        type = citizenship_slavery
+                                    }
+                                }
+                            }
+                            last_created_pop = {
+                                set_citizenship_type = {
+                                    type = citizenship_slavery
+                                    cooldown = yes
+                                }
+                            }
+                        }
+                    }
+                    fromfrom = {
+                        set_disabled = no
+                        fleet = {
+                            leader = {
+                                kill_leader = {
+                                    show_notification = no
+                                }
+                            }
+                            set_event_locked = no
+                            set_owner = root
+                        }
+                    }
+                }
+                35 = {
+                    fromfrom = {
+                        set_disabled = no
+                        fleet = {
+                            set_event_locked = no
+                            set_owner = root
+                        }
+                    }
+                }
+            }
+            add_event_chain_counter = {
+                event_chain = "replicant_chain"
+                counter = "replicant_leader_admiral_saved_counter"
+                amount = 1
+            }
+            if = {
+                limit = {
+                    has_completed_event_chain_counter = {
+                        event_chain = "replicant_chain"
+                        counter = "replicant_leader_admiral_saved_counter"
+                    }
+                }
+                random_country = {
+                    limit = {
+                        is_country_type = "replicant"
+                        has_country_flag = replicant_country@root
+                    }
+                    set_country_flag = "replicant_leader_admiral_exhausted"
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.31.b
+        custom_tooltip = aoe_pirate_actions.31.b.tooltip
+        hidden_effect = {
+            fromfrom = {
+                set_disabled = no
+                fleet = {
+                    if = {
+                        limit = {
+                            exists = leader
+                        }
+                        leader = {
+                            kill_leader = {
+                                show_notification = no
+                            }
+                        }
+                    }
+                    set_event_locked = no
+                    set_owner = root
+                }
+            }
+        }
+    }
+}
+
+# Replicant general revealed
+# From: planet
+country_event = {
+    id = aoe_pirate_actions.32
+    title = aoe_pirate_actions.32.title
+    show_sound = event_mystic_reveal_light
+    is_triggered_only = yes
+    diplomatic = yes
+
+    desc = aoe_pirate_actions.32.desc_01
+    desc = aoe_pirate_actions.32.desc_02
+    desc = aoe_pirate_actions.32.desc_03
+
+    picture_event_data = {
+        portrait = root
+        room = replicant_hideout_1_room
+    }
+
+    immediate = {
+        from = {
+            set_timed_planet_flag = {
+                flag = "replicant_pop_cooldown"
+                days = 1200
+            }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.32.a
+        custom_tooltip = aoe_pirate_actions.32.a.tooltip
+        trigger = {
+            has_event_chain = "replicant_chain"
+            NOT = {
+                has_completed_event_chain_counter = {
+                    event_chain = "replicant_chain"
+                    counter = "replicant_leader_general_saved_counter"
+                }
+            }
+            from = {
+                any_owned_pop = {
+                    has_pop_flag = "replicant_leader"
+                }
+            }
+        }
+        hidden_effect = {
+            random_list = {
+                75 = {
+                    from = {
+                        random_owned_pop = {
+                            limit = {
+                                has_pop_flag = "replicant_leader"
+                            }
+                            remove_pop_flag = "replicant_leader"
+                        }
+                    }
+                }
+                25 = {
+                    from = {
+                        random_owned_pop = {
+                            limit = {
+                                has_pop_flag = "replicant_leader"
+                            }
+                            remove_pop_flag = "replicant_leader"
+                            kill_pop = yes
+                        }
+                        owner = {
+                            create_leader = {
+                                class = general
+                                name = random
+                                species = owner_main_species
+                                skill = 1
+                                traits = {
+                                    trait = random
+                                }
+                            }
+                            last_created_leader = {
+                                add_experience = 500
+                            }
+                        }
+                    }
+                }
+            }
+            add_event_chain_counter = {
+                event_chain = "replicant_chain"
+                counter = "replicant_leader_general_saved_counter"
+                amount = 1
+            }
+            if = {
+                limit = {
+                    has_completed_event_chain_counter = {
+                        event_chain = "replicant_chain"
+                        counter = "replicant_leader_general_saved_counter"
+                    }
+                }
+                random_country = {
+                    limit = {
+                        is_country_type = "replicant"
+                        has_country_flag = replicant_country@root
+                    }
+                    set_country_flag = "replicant_leader_general_exhausted"
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.32.b
+        custom_tooltip = aoe_pirate_actions.32.b.tooltip
+        add_resource = {
+            influence = 100
+        }
+        hidden_effect = {
+            from = {
+                random_owned_pop = {
+                    limit = {
+                        has_pop_flag = "replicant_leader"
+                    }
+                    remove_pop_flag = "replicant_leader"
+                    kill_pop = yes
+                }
+            }
+        }
+    }
+}
+
+# Replicant general escaped
+# FromFrom: planet
+country_event = {
+    id = aoe_pirate_actions.33
+    title = aoe_pirate_actions.33.title
+    show_sound = event_ship_thrusters
+    is_triggered_only = yes
+    diplomatic = yes
+
+    desc = aoe_pirate_actions.33.desc_01
+    desc = aoe_pirate_actions.33.desc_02
+    desc = aoe_pirate_actions.33.desc_03
+
+    picture_event_data = {
+        portrait = root
+        room = replicant_starbase_3_room
+    }
+
+    trigger = {
+        fromfrom = {
+            any_owned_pop = {
+                has_pop_flag = "replicant_leader"
+            }
+        }
+    }
+
+    immediate = {
+        fromfrom = {
+            random_owned_pop = {
+                limit = {
+                    has_pop_flag = "replicant_leader"
+                }
+                remove_pop_flag = "replicant_leader"
+                kill_pop = yes
+            }
+        }
+        create_message = {
+            type = MESSAGE_REPLICANT_SPY
+            localization = MESSAGE_REPLICANT_SPY_ESCAPED_LOCALISATION
+            days = 30
+            target = this
+            variable = { type = name localization = ORIGIN_PLANET scope = fromfrom }
+            variable = { type = name localization = ORIGIN_SYSTEM scope = fromfrom.solar_system }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.33.a
+        custom_tooltip = aoe_pirate_actions.33.a.tooltip
+    }
+}
+
+# Replicant digsite appearance
+# From: country
+planet_event = {
+    id = aoe_pirate_actions.40
+    is_triggered_only = yes
+    fire_only_once = yes
+    hide_window = yes
+
+    trigger = {
+        exists = event_target:replicant_country
+        exists = event_target:replicant_digsite
+    }
+
+    immediate = {
+        create_archaeological_site = "replicant_digsite"
+        create_pirate_science_fleet = {
+            FORCE = 1
+        }
+    }
+}
+
+# Replicant digsite became visible
+# From: site
+country_event = {
+    id = aoe_pirate_actions.41
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        any_country = {
+            is_country_type = "replicant"
+            has_country_flag = replicant_country@root
+        }
+    }
+
+    immediate = {
+        random_country = {
+            limit = {
+                is_country_type = "replicant"
+                has_country_flag = replicant_country@root
+            }
+            save_event_target_as = "replicant_country"
+        }
+        from.planet = {
+            save_event_target_as = "replicant_digsite"
+        }
+        country_event = {
+            id = aoe_pirate_actions.42
+            days = 30
+            random = 20
+        }
+    }
+}
+
+# Replicant country warning about digsite
+country_event = {
+    id = aoe_pirate_actions.42
+    title = aoe_pirate_actions.42.title
+    show_sound = event_radio_chatter
+    is_triggered_only = yes
+    diplomatic = yes
+
+    desc = {
+        trigger = {
+            event_target:replicant_digsite = {
+                solar_system = {
+                    any_ship_in_system = {
+                        exists = owner
+                        owner = {
+                            is_same_value = root
+                        }
+                    }
+                }
+            }
+        }
+        text = aoe_pirate_actions.42.desc_01
+    }
+
+    desc = {
+        trigger = {
+            event_target:replicant_digsite = {
+                solar_system = {
+                    any_ship_in_system = {
+                        exists = owner
+                        owner = {
+                            is_same_value = event_target:replicant_country
+                        }
+                    }
+                }
+            }
+        }
+        text = aoe_pirate_actions.42.desc_02
+    }
+
+    desc = {
+        trigger = {
+            event_target:replicant_digsite = {
+                solar_system = {
+                    NOT = {
+                        any_ship_in_system = {
+                            exists = owner
+                            owner = {
+                                OR = {
+                                    is_same_value = root
+                                    is_same_value = event_target:replicant_country
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        text = aoe_pirate_actions.42.desc_03
+    }
+
+    picture_event_data = {
+        portrait = event_target:replicant_country
+        room = replicant_starbase_1_room
+    }
+
+    trigger = {
+        exists = event_target:replicant_country
+        exists = event_target:replicant_digsite
+    }
+
+    option = {
+        name = aoe_pirate_actions.42.a
+        custom_tooltip = aoe_pirate_actions.42.a.tooltip
+        response_text = aoe_pirate_actions.42.a.response
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists_pirate_science_fleet = no
+                }
+                create_pirate_science_fleet = {
+                    FORCE = 2
+                }
+            }
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.42.b
+        custom_tooltip = aoe_pirate_actions.42.b.tooltip
+        response_text = aoe_pirate_actions.42.b.response
+        trigger = {
+            has_resource = {
+                type = unity
+                amount >= 100
+            }
+        }
+        add_resource = {
+            unity = -100
+        }
+    }
+}
+
+fleet_event = {
+    id = aoe_pirate_actions.51
+    title = aoe_pirate_actions.51.title
+    desc = aoe_pirate_actions.51.desc
+    picture = GFX_aoe_replicant_digsite_1
+    show_sound = event_ship_thrusters
+    is_triggered_only = yes
+    location = from
+    archaeology = yes
+
+    immediate = {
+        fromfrom = {
+            set_site_progress_locked = yes
+        }
+        if = {
+            limit = {
+                any_country = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@root.owner
+                }
+            }
+            random_country = {
+                limit = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@root.owner
+                }
+                save_event_target_as = "replicant_country"
+            }
+            if = {
+                limit = {
+                    exists_pirate_science_fleet = no
+                }
+                fromfrom.planet = {
+                    save_event_target_as = "replicant_digsite"
+                }
+                create_pirate_science_fleet = {
+                    FORCE = 3
+                }
+            }
+        }
+    }
+
+    after = {
+        fromfrom = {
+            set_site_progress_locked = no
+        }
+    }
+
+    option = {
+        name = site_success
+        allow = {
+            owner = {
+                resource_stockpile_compare = {
+                    resource = energy
+                    value >= 500
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                energy = -500
+            }
+        }
+        fromfrom = {
+            add_stage_clues = 3
+        }
+    }
+
+    option = {
+        name = site_delay
+        fromfrom = {
+            add_stage_clues = -3
+        }
+    }
+}
+
+fleet_event = {
+    id = aoe_pirate_actions.52
+    title = aoe_pirate_actions.52.title
+    desc = aoe_pirate_actions.52.desc
+    picture = GFX_aoe_replicant_digsite_2
+    show_sound = event_ship_bridge
+    is_triggered_only = yes
+    location = from
+    archaeology = yes
+
+    immediate = {
+        fromfrom = {
+            set_site_progress_locked = yes
+        }
+        if = {
+            limit = {
+                any_country = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@root.owner
+                }
+            }
+            random_country = {
+                limit = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@root.owner
+                }
+                save_event_target_as = "replicant_country"
+            }
+            if = {
+                limit = {
+                    exists_pirate_science_fleet = no
+                }
+                fromfrom.planet = {
+                    save_event_target_as = "replicant_digsite"
+                }
+                create_pirate_science_fleet = {
+                    FORCE = 4
+                }
+            }
+        }
+    }
+
+    after = {
+        fromfrom = {
+            set_site_progress_locked = no
+        }
+    }
+
+    option = {
+        name = site_success
+        allow = {
+            owner = {
+                resource_stockpile_compare = {
+                    resource = allows
+                    value >= 300
+                }
+            }
+        }
+        owner = {
+            add_resource = {
+                allows = -300
+            }
+        }
+        fromfrom = {
+            add_stage_clues = 2
+        }
+    }
+
+    option = {
+        name = site_delay
+        fromfrom = {
+            add_stage_clues = -2
+        }
+    }
+}
+
+fleet_event = {
+    id = aoe_pirate_actions.53
+    title = aoe_pirate_actions.53.title
+    desc = aoe_pirate_actions.53.desc
+    picture = GFX_aoe_replicant_digsite_3
+    show_sound = event_dangerous_animals
+    is_triggered_only = yes
+    location = from
+    archaeology = yes
+
+    immediate = {
+        fromfrom = {
+            set_site_progress_locked = yes
+        }
+        if = {
+            limit = {
+                any_country = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@root.owner
+                }
+            }
+            random_country = {
+                limit = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@root.owner
+                }
+                save_event_target_as = "replicant_country"
+            }
+            if = {
+                limit = {
+                    exists_pirate_science_fleet = no
+                }
+                fromfrom.planet = {
+                    save_event_target_as = "replicant_digsite"
+                }
+                create_pirate_science_fleet = {
+                    FORCE = 5
+                }
+            }
+        }
+    }
+
+    after = {
+        fromfrom = {
+            set_site_progress_locked = no
+        }
+    }
+
+    option = {
+        name = site_success
+        allow = {
+            leader = {
+                has_level >= 3
+            }
+        }
+        fromfrom = {
+            add_stage_clues = 1
+        }
+    }
+
+    option = {
+        name = site_delay
+        fromfrom = {
+            add_stage_clues = -1
+        }
+    }
+}
+
+fleet_event = {
+    id = aoe_pirate_actions.54
+    title = aoe_pirate_actions.54.title
+    desc = aoe_pirate_actions.54.desc
+    picture = GFX_aoe_replicant_digsite_4
+    show_sound = event_collapsing_ruins
+    is_triggered_only = yes
+    location = from
+    archaeology = yes
+
+    immediate = {
+        fromfrom = {
+            set_site_progress_locked = yes
+        }
+    }
+
+    after = {
+        fromfrom = {
+            set_site_progress_locked = no
+        }
+        if = {
+            limit = {
+                any_country = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@root.owner
+                }
+            }
+            random_country = {
+                limit = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@root.owner
+                }
+                save_event_target_as = "replicant_country"
+            }
+            if = {
+                limit = {
+                    exists_pirate_science_fleet = no
+                }
+                fromfrom.planet = {
+                    save_event_target_as = "replicant_digsite"
+                }
+                create_pirate_science_fleet = {
+                    FORCE = 6
+                }
+            }
+        }
+    }
+
+    option = {
+        name = site_success
+        allow = {
+            leader = {
+                has_level >= 4
+            }
+        }
+        fromfrom = {
+            add_stage_clues = 2
+        }
+        small_artifact_reward = yes
+    }
+
+    option = {
+        name = site_delay
+        fromfrom = {
+            add_stage_clues = -2
+        }
+    }
+}
+
+fleet_event = {
+    id = aoe_pirate_actions.55
+    title = aoe_pirate_actions.55.title
+    desc = aoe_pirate_actions.55.desc
+    picture = GFX_aoe_replicant_digsite_5
+    show_sound = event_mystic_reveal
+    is_triggered_only = yes
+    location = from
+    archaeology = yes
+
+    immediate = {
+        fromfrom = {
+            set_site_progress_locked = yes
+        }
+    }
+
+    after = {
+        fromfrom = {
+            set_site_progress_locked = no
+        }
+        if = {
+            limit = {
+                any_country = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@root.owner
+                }
+            }
+            random_country = {
+                limit = {
+                    is_country_type = "replicant"
+                    has_country_flag = replicant_country@root.owner
+                }
+                save_event_target_as = "replicant_country"
+            }
+            if = {
+                limit = {
+                    exists_pirate_science_fleet = no
+                }
+                fromfrom.planet = {
+                    save_event_target_as = "replicant_digsite"
+                }
+                create_pirate_science_fleet = {
+                    FORCE = 7
+                }
+            }
+        }
+    }
+
+    option = {
+        name = site_success
+        allow = {
+            leader = {
+                has_level >= 5
+            }
+        }
+        fromfrom = {
+            add_stage_clues = 1
+        }
+        medium_artifact_reward = yes
+    }
+
+    option = {
+        name = site_delay
+        fromfrom = {
+            add_stage_clues = -2
+        }
+    }
+}
+
+fleet_event = {
+    id = aoe_pirate_actions.56
+    title = aoe_pirate_actions.56.title
+    desc = aoe_pirate_actions.56.desc
+    picture = GFX_aoe_replicant_digsite_6
+    show_sound = event_finding_loot
+    is_triggered_only = yes
+    location = from
+    archaeology = yes
+
+    immediate = {
+        fromfrom = {
+            set_site_progress_locked = yes
+        }
+        solar_system = {
+            every_system_ambient_object = {
+                limit = {
+                    has_ambient_object_flag = "replicant_ambient_object"
+                }
+                destroy_ambient_object = this
+            }
+        }
+    }
+
+    after = {
+        fromfrom = {
+            set_site_progress_locked = no
+        }
+    }
+
+    option = {
+        name = site_success
+        large_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = aoe_pirate_actions.57
+    title = aoe_pirate_actions.57.title
+    desc = aoe_pirate_actions.57.desc
+    picture = GFX_aoe_replicant_digsite_7
+    show_sound = event_screams
+    is_triggered_only = yes
+    location = from
+    archaeology = yes
+
+    immediate = {
+        fromfrom = {
+            set_site_progress_locked = yes
+        }
+        leader = {
+            kill_leader = {
+                show_notification = yes
+            }
+        }
+        destroy_fleet = this
+    }
+
+    after = {
+        fromfrom = {
+            set_site_progress_locked = no
+        }
+    }
+
+    option = {
+        name = aoe_pirate_actions.57.a
+        custom_tooltip = aoe_pirate_actions.57.a.tooltip
     }
 }

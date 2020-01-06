@@ -492,8 +492,116 @@ spriteTypes = {
         alwaystransparent = yes
     }
     spriteType = {
-        name = "GFX_aoe_pirate_emergence"
-        texturefile = "gfx/event_pictures/pirate_emergence.dds"
+        name = "GFX_aoe_replicant_chain"
+        texturefile = "gfx/event_pictures/replicant_chain.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_leader_appearance"
+        texturefile = "gfx/event_pictures/replicant_leader_appearance.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_leader_appearance_project"
+        texturefile = "gfx/event_pictures/replicant_leader_appearance_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_leader_rescue_admiral_project"
+        texturefile = "gfx/event_pictures/replicant_leader_rescue_admiral_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_leader_rescue_general_project"
+        texturefile = "gfx/event_pictures/replicant_leader_rescue_general_project.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_leader_disclosure"
+        texturefile = "gfx/event_pictures/replicant_leader_disclosure.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_country_appearance"
+        texturefile = "gfx/event_pictures/replicant_country_appearance.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_country_disappearance"
+        texturefile = "gfx/event_pictures/replicant_country_disappearance.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_pop_appearance"
+        texturefile = "gfx/event_pictures/replicant_pop_appearance.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_pop_disappearance"
+        texturefile = "gfx/event_pictures/replicant_pop_disappearance.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_pop_disclosure"
+        texturefile = "gfx/event_pictures/replicant_pop_disclosure.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_digsite"
+        texturefile = "gfx/event_pictures/replicant_digsite_0.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_digsite_1"
+        texturefile = "gfx/event_pictures/replicant_digsite_1.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_digsite_2"
+        texturefile = "gfx/event_pictures/replicant_digsite_2.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_digsite_3"
+        texturefile = "gfx/event_pictures/replicant_digsite_3.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_digsite_4"
+        texturefile = "gfx/event_pictures/replicant_digsite_4.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_digsite_5"
+        texturefile = "gfx/event_pictures/replicant_digsite_5.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_digsite_6"
+        texturefile = "gfx/event_pictures/replicant_digsite_6.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_aoe_replicant_digsite_7"
+        texturefile = "gfx/event_pictures/replicant_digsite_7.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
     }

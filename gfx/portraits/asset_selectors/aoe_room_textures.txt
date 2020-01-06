@@ -2,44 +2,50 @@ room_selector = {
     default = "default_room"
 
     game_setup = {
-        "replicant_starbase_room_1" = {
-            is_country_type = "replicant"
+        "espionage_starbase_1_room" = {
+            always = no
         }
-        "replicant_starbase_room_2" = {
-            is_country_type = "replicant"
+        "espionage_starbase_2_room" = {
+            always = no
         }
-        "replicant_starbase_room_3" = {
-            is_country_type = "replicant"
+        "replicant_starbase_1_room" = {
+            always = no
         }
-        "replicant_starbase_room_4" = {
-            is_country_type = "replicant"
+        "replicant_starbase_2_room" = {
+            always = no
+        }
+        "replicant_starbase_3_room" = {
+            always = no
+        }
+        "replicant_hideout_1_room" = {
+            always = no
+        }
+        "replicant_hideout_2_room" = {
+            always = no
         }
     }
 
     ruler = {
-        "replicant_starbase_room_1" = {
-            exists = owner
-            owner = {
-                is_country_type = "replicant"
-            }
+        "espionage_starbase_1_room" = {
+            always = no
         }
-        "replicant_starbase_room_2" = {
-            exists = owner
-            owner = {
-                is_country_type = "replicant"
-            }
+        "espionage_starbase_2_room" = {
+            always = no
         }
-        "replicant_starbase_room_3" = {
-            exists = owner
-            owner = {
-                is_country_type = "replicant"
-            }
+        "replicant_starbase_1_room" = {
+            always = no
         }
-        "replicant_starbase_room_4" = {
-            exists = owner
-            owner = {
-                is_country_type = "replicant"
-            }
+        "replicant_starbase_2_room" = {
+            always = no
+        }
+        "replicant_starbase_3_room" = {
+            always = no
+        }
+        "replicant_hideout_1_room" = {
+            always = no
+        }
+        "replicant_hideout_2_room" = {
+            always = no
         }
     }
 }

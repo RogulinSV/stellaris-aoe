@@ -74,3 +74,7 @@
     voidborn_monster_crystal_counter:0 "Исследовано §Sкристаллических§! монстров £military_power_boss£"
     voidborn_monster_drone_counter:0 "Исследовано §Lмеханических§! монстров £military_power_boss£"
     voidborn_monster_amoeba_counter:0 "Исследовано §Bорганических§! монстров £military_power_boss£"
+    replicant_chain_title:0 "Таинственный £military_power_boss£ §Pорден репликантов§!"
+    replicant_chain_desc:0 "Программа социального изучения и военного подавления таинственного £military_power_boss£ §Pордена репликантов§!"
+    replicant_leader_admiral_saved_counter:0 "Спасено адмиралов £military_power_boss£ §Pордена репликантов§!"
+    replicant_leader_general_saved_counter:0 "Разоблачено генералов £military_power_boss£ §Pордена репликантов§!"

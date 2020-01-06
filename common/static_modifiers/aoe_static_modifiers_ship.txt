@@ -2,3 +2,9 @@ amoeba_shield_boost = {
     ship_shield_mult = 4
     ship_armor_regen_add_static = 2
 }
+
+escape_speed_boost = {
+    ship_speed_mult = 0.5
+    ship_evasion_mult = 0.25
+    ship_shield_mult = 5
+}

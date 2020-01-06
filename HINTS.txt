@@ -363,6 +363,21 @@ pop_percentage = {
     limit = { is_robot_pop = yes }
 }
 
+resettle_pop = {
+    pop = this
+    planet = owner.capital_scope
+}
+
+is_ideal_planet_class = {
+    who = ROOT
+    status = yes
+}
+
+surveyed = {
+    set_surveyed = yes
+    surveyor = root.owner
+}
+
 is_organic_species = yes
 is_robot_pop = no
 is_sapient = no

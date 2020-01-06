@@ -1612,7 +1612,7 @@ message_type = {
 
 message_type = {
     key = "MESSAGE_SPY_STOLE_MINERALS"
-    icon = "GFX_message_spy_stole_minerals"
+    icon = "GFX_message_spy_default"
     icon_frame = 1
 
     name = "MESSAGE_SPY_STOLE_MINERALS_TITLE"
@@ -1622,7 +1622,7 @@ message_type = {
 
 message_type = {
     key = "MESSAGE_SPY_GAINED_MINERALS"
-    icon = "GFX_message_spy_gained_minerals"
+    icon = "GFX_message_spy_default"
     icon_frame = 1
 
     name = "MESSAGE_SPY_GAINED_MINERALS_TITLE"
@@ -1632,7 +1632,7 @@ message_type = {
 
 message_type = {
     key = "MESSAGE_SPY_STOLE_ENERGY"
-    icon = "GFX_message_spy_stole_energy"
+    icon = "GFX_message_spy_default"
     icon_frame = 1
 
     name = "MESSAGE_SPY_STOLE_ENERGY_TITLE"
@@ -1642,7 +1642,7 @@ message_type = {
 
 message_type = {
     key = "MESSAGE_SPY_GAINED_ENERGY"
-    icon = "GFX_message_spy_gained_energy"
+    icon = "GFX_message_spy_default"
     icon_frame = 1
 
     name = "MESSAGE_SPY_GAINED_ENERGY_TITLE"
@@ -2829,4 +2829,24 @@ message_type = {
     name = "MESSAGE_VOIDBORN_MONSTER_TITLE"
     sound = "notification"
     ping = "ping_notification_red"
+}
+
+# Replicant messages
+message_type = {
+    key = "MESSAGE_REPLICANT_SPY"
+    icon = "GFX_message_replicant_spy"
+    icon_frame = 1
+
+    name = "MESSAGE_REPLICANT_SPY_TITLE"
+    sound = "notification"
+    ping = "ping_notification_red"
+}
+message_type = {
+    key = "MESSAGE_REPLICANT_POP"
+    icon = "GFX_message_replicant_pop"
+    icon_frame = 1
+
+    name = "MESSAGE_REPLICANT_POP_TITLE"
+    sound = "notification"
+    ping = "ping_notification_yellow"
 }

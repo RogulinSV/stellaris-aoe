@@ -3,3 +3,7 @@
     planet_interstellar_research_desc:0 "Межзвёздный поиск ресурсов"
     planet_intelligencer_training:0 "Подготовка межпланетных шпионов"
     planet_intelligencer_training_desc:0 "Подготовка межпланетных шпионов"
+    planet_replicant_pressure:0 "Влияние ордена репликантов"
+    planet_replicant_pressure_desc:0 "Влияние ордена репликантов"
+    planet_replicant_exposure:0 "Сопротивление ордену репликантов"
+    planet_replicant_exposure_desc:0 "Сопротивление ордену репликантов"

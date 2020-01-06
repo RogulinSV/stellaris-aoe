@@ -990,6 +990,17 @@ is_bordering_system = {
     }
 }
 
+# Scope: system
+is_occupied_system = {
+    OR = {
+        exists = space_owner
+        has_star_flag = "hostile_system"
+        has_star_flag = "guardian"
+        has_star_flag = "enclave"
+        has_star_flag = "primitive_system"
+    }
+}
+
 # Scope: planet
 is_attacked_planet = {
     OR = {
@@ -1009,7 +1020,7 @@ is_captured_planet = {
 # Scope: planet
 is_unrest_planet = {
     OR = {
-        has_planet_flag = "recent_unrest_event"
+        has_planet_flag = "unrest_terror"
         has_modifier = "riots_averted"
         has_modifier = "spiritualist_unrest"
         has_modifier = "authoritarian_unrest"
