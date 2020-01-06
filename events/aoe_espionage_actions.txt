@@ -16,33 +16,33 @@ planet_event = {
     }
 
     immediate = {
-        random_pop = {
+        random_owned_pop = {
             limit = {
                 is_unassignment_intelligencer = yes
             }
-            # weights = {
-            #     base = 1
-            #     modifier = {
-            #         mult = 2
-            #         is_intelligencer_has_rank_1 = yes
-            #     }
-                # modifier = {
-                #     mult = 4
-                #     is_intelligencer_has_rank_2 = yes
-                # }
-                # modifier = {
-                #     mult = 6
-                #     is_intelligencer_has_rank_3 = yes
-                # }
-                # modifier = {
-                #     mult = 8
-                #     is_intelligencer_has_rank_4 = yes
-                # }
-                # modifier = {
-                #     mult = 10
-                #     is_intelligencer_has_rank_5 = yes
-                # }
-            # }
+            weights = {
+                base = 1
+                modifier = {
+                    mult = 2
+                    is_intelligencer_has_rank_1 = yes
+                }
+                modifier = {
+                    mult = 4
+                    is_intelligencer_has_rank_2 = yes
+                }
+                modifier = {
+                    mult = 6
+                    is_intelligencer_has_rank_3 = yes
+                }
+                modifier = {
+                    mult = 8
+                    is_intelligencer_has_rank_4 = yes
+                }
+                modifier = {
+                    mult = 10
+                    is_intelligencer_has_rank_5 = yes
+                }
+            }
             save_event_target_as = "espionage_origin_spy"
         }
         owner = {
@@ -151,10 +151,7 @@ country_event = {
 
     picture_event_data = {
         portrait = root
-        planet_background = root
-        graphical_culture = root
-        city_level = root
-        room = root.ruler
+        room = espionage_starbase_1_room
     }
 
     desc = {
@@ -504,10 +501,7 @@ country_event = {
 
     picture_event_data = {
         portrait = root
-        planet_background = root
-        graphical_culture = root
-        city_level = root
-        room = root.ruler
+        room = espionage_starbase_1_room
     }
 
     trigger = {
@@ -1002,10 +996,7 @@ country_event = {
 
     picture_event_data = {
         portrait = event_target:espionage_target_country
-        planet_background = event_target:espionage_target_country
-        graphical_culture = event_target:espionage_target_country
-        city_level = event_target:espionage_target_country
-        room = event_target:espionage_target_country.ruler
+        room = espionage_starbase_2_room
     }
 
     trigger = {
@@ -1487,10 +1478,7 @@ country_event = {
 
     picture_event_data = {
         portrait = event_target:espionage_target_country
-        planet_background = event_target:espionage_target_country
-        graphical_culture = event_target:espionage_target_country
-        city_level = event_target:espionage_target_country
-        room = event_target:espionage_target_country.ruler
+        room = espionage_starbase_2_room
     }
 
     trigger = {
