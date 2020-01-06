@@ -1,0 +1,68 @@
+replicant_digsite = {
+    desc = replicant_digsite_desc
+    picture = GFX_aoe_replicant_digsite
+    stages = 6
+    max_instances = 1
+
+    allow = {
+        is_ship_class = shipclass_science_ship
+        exists = leader
+        leader = {
+            leader_class = scientist
+            has_level >= 3
+        }
+    }
+
+    visible = {
+        has_event_chain = "replicant_chain"
+        default_site_visible_trigger = yes
+    }
+
+    on_visible = {
+        country_event = {
+            id = aoe_pirate_actions.41
+            days = 30
+        }
+    }
+
+    stage = {
+        difficulty = { min = 1 max = 2 }
+        icon = GFX_archaeology_runes_F1
+        event = aoe_pirate_actions.51
+    }
+    stage = {
+        difficulty = { min = 2 max = 3 }
+        icon = GFX_archaeology_runes_F2
+        event = aoe_pirate_actions.52
+    }
+    stage = {
+        difficulty = { min = 3 max = 4 }
+        icon = GFX_archaeology_runes_F3
+        event = aoe_pirate_actions.53
+    }
+    stage = {
+        difficulty = { min = 4 max = 5 }
+        icon = GFX_archaeology_runes_F4
+        event = aoe_pirate_actions.54
+    }
+    stage = {
+        difficulty = { min = 5 max = 6 }
+        icon = GFX_archaeology_runes_F5
+        event = aoe_pirate_actions.55
+    }
+    stage = {
+        difficulty = { min = 6 max = 7 }
+        icon = GFX_archaeology_runes_F6
+        event = aoe_pirate_actions.56
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = {
+                RANDOM_EVENTS = "replicant_digsite_random_events"
+            }
+        }
+    }
+
+    weight = 0
+}

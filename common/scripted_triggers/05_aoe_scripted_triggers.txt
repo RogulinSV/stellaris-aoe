@@ -1,0 +1,20 @@
+exists_pirate_science_fleet = {
+    exists = event_target:replicant_country
+    event_target:replicant_country = {
+        any_owned_fleet = {
+            has_fleet_flag = "replicant_fleet_role_researching"
+        }
+    }
+}
+
+exists_pirate_science_fleet_in_system = {
+    any_ship_in_system = {
+        exists = owner
+        owner = {
+            is_country_type = "replicant"
+        }
+        fleet = {
+            has_fleet_flag = "replicant_fleet_role_researching"
+        }
+    }
+}

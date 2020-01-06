@@ -1,0 +1,12 @@
+replicant_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
+    picture = "GFX_aoe_replicant_chain"
+    counter = {
+        replicant_leader_admiral_saved_counter = {
+            max = 10
+        }
+        replicant_leader_general_saved_counter = {
+            max = 20
+        }
+    }
+}

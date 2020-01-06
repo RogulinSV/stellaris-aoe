@@ -1,0 +1,246 @@
+@cost_resource = 100
+@cost_unity = 10
+
+decision_planet_replicant_exposure = {
+    owned_planets_only = yes
+    sound = event_administrative_work
+    icon = decision_replicant_exposure
+    enactment_time = 100
+
+    resources = {
+        category = decisions
+        cost = {
+            energy = @cost_resource
+            minerals = @cost_resource
+            unity = @cost_unity
+        }
+    }
+
+    potential = {
+        exists = owner
+        owner = {
+            has_country_flag = "replicant_progenitor"
+        }
+    }
+
+    allow = {
+        has_modifier = "planet_replicant_pressure"
+        any_owned_pop = {
+            has_pop_flag = "replicant_leader"
+        }
+    }
+
+    effect = {
+        custom_tooltip = decision_planet_replicant_exposure_effect
+        hidden_effect = {
+            random_list = {
+                4 = {
+                    add_modifier = {
+                        modifier = "planet_replicant_exposure"
+                        days = 250
+                    }
+                }
+                3 = {
+                    add_modifier = {
+                        modifier = "planet_replicant_exposure"
+                        days = 500
+                    }
+                }
+                2 = {
+                    add_modifier = {
+                        modifier = "planet_replicant_exposure"
+                        days = 750
+                    }
+                }
+                1 = {
+                    add_modifier = {
+                        modifier = "planet_replicant_exposure"
+                        days = 900
+                    }
+                }
+            }
+            planet_event = {
+                id = aoe_pirate_actions.8
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+}
+
+decision_planet_pop_deviations_healing = {
+    owned_planets_only = yes
+    sound = event_laboratory_sound
+    icon = decision_pop_deviations_healing
+    enactment_time = 300
+
+    resources = {
+        category = decisions
+        cost = {
+            minerals = @cost_resource
+        }
+    }
+
+    potential = {
+        any_owned_pop = {
+            OR = {
+                is_deprivated_pop = yes
+                is_frustrated_pop = yes
+            }
+        }
+    }
+
+    allow = {
+        OR = {
+            has_building = "building_clinic"
+            has_building = "building_hospital"
+        }
+    }
+
+    effect = {
+        custom_tooltip = decision_planet_pop_deviations_healing_effect
+        hidden_effect = {
+            random_owned_pop = {
+                limit = {
+                    OR = {
+                        is_deprivated_pop = yes
+                        is_frustrated_pop = yes
+                    }
+                }
+                wipe_pop_deviations = yes
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 2
+            count_pops = {
+                limit = {
+                    OR = {
+                        is_deprivated_pop = yes
+                        is_frustrated_pop = yes
+                    }
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 3
+            count_pops = {
+                limit = {
+                    OR = {
+                        is_deprivated_pop = yes
+                        is_frustrated_pop = yes
+                    }
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 5
+            count_pops = {
+                limit = {
+                    OR = {
+                        is_deprivated_pop = yes
+                        is_frustrated_pop = yes
+                    }
+                }
+                count > 9
+            }
+        }
+        modifier = {
+            factor = 10
+            count_pops = {
+                limit = {
+                    OR = {
+                        is_deprivated_pop = yes
+                        is_frustrated_pop = yes
+                    }
+                }
+                count > 14
+            }
+        }
+    }
+}
+
+decision_planet_robot_deviations_healing = {
+    owned_planets_only = yes
+    sound = event_engineered_evolution
+    icon = decision_robot_deviations_healing
+    enactment_time = 150
+
+    resources = {
+        category = decisions
+        cost = {
+            energy = @cost_resource
+        }
+    }
+
+    potential = {
+        any_owned_pop = {
+            is_malfunctioned_pop = yes
+        }
+    }
+
+    allow = {
+        has_building = "building_maintenance_depot"
+    }
+
+    effect = {
+        custom_tooltip = decision_planet_robot_deviations_healing_effect
+        hidden_effect = {
+            random_owned_pop = {
+                limit = {
+                    is_malfunctioned_pop = yes
+                }
+                wipe_pop_deviations = yes
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 1
+
+        modifier = {
+            factor = 2
+            count_pops = {
+                limit = {
+                    is_malfunctioned_pop = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 3
+            count_pops = {
+                limit = {
+                    is_malfunctioned_pop = yes
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 5
+            count_pops = {
+                limit = {
+                    is_malfunctioned_pop = yes
+                }
+                count > 9
+            }
+        }
+        modifier = {
+            factor = 10
+            count_pops = {
+                limit = {
+                    is_malfunctioned_pop = yes
+                }
+                count > 14
+            }
+        }
+    }
+}

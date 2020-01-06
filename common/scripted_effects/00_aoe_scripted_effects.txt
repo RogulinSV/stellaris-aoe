@@ -1,0 +1,145 @@
+create_crystal_fleet_01 = {
+    create_crystal_country = yes
+    event_target:crystal_country = {
+        create_fleet = {
+            name = "NAME_Great_Space_Organism"
+            effect = {
+                set_owner = prev
+                create_ship = {
+                    name = "NAME_Beta"
+                    design = "NAME_Great_Space_Organism"
+                }
+                set_location = {
+                    target = prevprev
+                    distance = 20
+                    angle = random
+                }
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_crystal_fleet_02 = {
+    create_amoeba_country = yes
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Spectral_Wraith_450THz"
+            effect = {
+                set_owner = prev
+                create_ship = {
+                    name = "NAME_Beta"
+                    design = "NAME_Spectral_Wraith_450THz"
+                }
+                set_location = {
+                    target = prevprev
+                    distance = 20
+                    angle = random
+                }
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_crystal_fleet_03 = {
+    create_amoeba_country = yes
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Wraith_650THz"
+            effect = {
+                set_owner = prev
+                create_ship = {
+                    name = "NAME_Wraith_650THz"
+                    design = "NAME_Spectral_Wraith_650THz"
+                }
+                set_location = {
+                    target = prevprev
+                    distance = 20
+                    angle = random
+                }
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_crystal_fleet_04 = {
+    create_amoeba_country = yes
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Ancient_Guardian"
+            effect = {
+                set_owner = prev
+                create_ship = {
+                    name = ""
+                    design = "NAME_Ancient_Guardian"
+                    graphical_culture = "ancient"
+                }
+                set_location = {
+                    target = prevprev
+                    distance = 20
+                    angle = random
+                }
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_crystal_fleet_05 = {
+    create_amoeba_country = yes
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Ancient_Sentinel"
+            effect = {
+                set_owner = prev
+                create_ship = {
+                    name = ""
+                    design = "NAME_Ancient_Sentinel"
+                    graphical_culture = "ancient"
+                }
+                set_location = {
+                    target = prevprev
+                    distance = 20
+                    angle = random
+                }
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
+
+create_crystal_fleet_06 = {
+    create_amoeba_country = yes
+    event_target:amoeba_country = {
+        create_fleet = {
+            name = "NAME_Adopted_Amoeba_Centenarian"
+            effect = {
+                set_owner = prev
+                create_ship = {
+                    name = "NAME_Adopted_Amoeba_Centenarian"
+                    design = "NAME_Adopted_Amoeba_Centenarian"
+                }
+                set_location = {
+                    target = prevprev
+                    distance = 20
+                    angle = random
+                }
+                set_fleet_stance = aggressive
+                set_aggro_range_measure_from = self
+                set_aggro_range = 150
+            }
+        }
+    }
+}
